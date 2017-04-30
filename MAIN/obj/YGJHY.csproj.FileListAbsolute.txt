@@ -1,0 +1,55 @@
+E:\五矿营钢厚板检验室资料\wkyg_code\MAIN\bin\Bn\YGJHY.exe
+E:\五矿营钢厚板检验室资料\wkyg_code\MAIN\bin\Bn\YGJHY.pdb
+E:\五矿营钢厚板检验室资料\wkyg_code\MAIN\bin\Bn\CommonClass.dll
+E:\五矿营钢厚板检验室资料\wkyg_code\MAIN\bin\Bn\CommonClass.pdb
+E:\五矿营钢厚板检验室资料\wkyg_code\MAIN\obj\Debug\ResolveAssemblyReference.cache
+E:\五矿营钢厚板检验室资料\wkyg_code\MAIN\obj\Debug\MAIN.MainMenu.resources
+E:\五矿营钢厚板检验室资料\wkyg_code\MAIN\obj\Debug\YGJHY.Properties.Resources.resources
+E:\五矿营钢厚板检验室资料\wkyg_code\MAIN\obj\Debug\YGJHY.csproj.GenerateResource.Cache
+E:\五矿营钢厚板检验室资料\wkyg_code\MAIN\obj\Debug\YGJHY.exe.licenses
+E:\五矿营钢厚板检验室资料\wkyg_code\MAIN\obj\Debug\YGJHY.exe
+E:\五矿营钢厚板检验室资料\wkyg_code\MAIN\obj\Debug\YGJHY.pdb
+E:\五矿营钢厚板检验室资料\wkyg_code\MAIN\bin\Debug\YGJHY.exe
+E:\五矿营钢厚板检验室资料\wkyg_code\MAIN\bin\Debug\YGJHY.pdb
+E:\五矿营钢厚板检验室资料\wkyg_code\MAIN\bin\Debug\CommonClass.dll
+E:\五矿营钢厚板检验室资料\wkyg_code\MAIN\bin\Debug\CommonClass.pdb
+E:\五矿营钢厚板检验室资料\wkyg_code\MAIN\obj\Release\ResolveAssemblyReference.cache
+E:\五矿营钢厚板检验室资料\wkyg_code\MAIN\obj\Release\MAIN.MainMenu.resources
+E:\五矿营钢厚板检验室资料\wkyg_code\MAIN\obj\Release\YGJHY.Properties.Resources.resources
+E:\五矿营钢厚板检验室资料\wkyg_code\MAIN\obj\Release\YGJHY.csproj.GenerateResource.Cache
+E:\五矿营钢厚板检验室资料\wkyg_code\MAIN\obj\Release\YGJHY.exe.licenses
+E:\五矿营钢厚板检验室资料\wkyg_code\MAIN\obj\Release\YGJHY.exe
+E:\五矿营钢厚板检验室资料\wkyg_code\MAIN\obj\Release\YGJHY.pdb
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301115\wkyg_code\MAIN\bin\Debug\YGJHY.exe
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301115\wkyg_code\MAIN\bin\Debug\YGJHY.pdb
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301115\wkyg_code\MAIN\bin\Debug\CommonClass.dll
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301115\wkyg_code\MAIN\bin\Debug\CommonClass.pdb
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301115\wkyg_code\MAIN\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301115\wkyg_code\MAIN\obj\Release\MAIN.MainMenu.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301115\wkyg_code\MAIN\obj\Release\YGJHY.Properties.Resources.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301115\wkyg_code\MAIN\obj\Release\YGJHY.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301115\wkyg_code\MAIN\obj\Release\YGJHY.exe.licenses
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301115\wkyg_code\MAIN\obj\Release\YGJHY.exe
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301115\wkyg_code\MAIN\obj\Release\YGJHY.pdb
+C:\Documents and Settings\Blue\桌面\wkyg_code201006101730\wkyg_code201006101730\wkyg_code\MAIN\bin\Debug\YGJHY.exe
+C:\Documents and Settings\Blue\桌面\wkyg_code201006101730\wkyg_code201006101730\wkyg_code\MAIN\bin\Debug\YGJHY.pdb
+C:\Documents and Settings\Blue\桌面\wkyg_code201006101730\wkyg_code201006101730\wkyg_code\MAIN\bin\Debug\CommonClass.dll
+C:\Documents and Settings\Blue\桌面\wkyg_code201006101730\wkyg_code201006101730\wkyg_code\MAIN\bin\Debug\CommonClass.pdb
+C:\Documents and Settings\Blue\桌面\wkyg_code201006101730\wkyg_code201006101730\wkyg_code\MAIN\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Blue\桌面\wkyg_code201006101730\wkyg_code201006101730\wkyg_code\MAIN\obj\Release\MAIN.MainMenu.resources
+C:\Documents and Settings\Blue\桌面\wkyg_code201006101730\wkyg_code201006101730\wkyg_code\MAIN\obj\Release\YGJHY.Properties.Resources.resources
+C:\Documents and Settings\Blue\桌面\wkyg_code201006101730\wkyg_code201006101730\wkyg_code\MAIN\obj\Release\YGJHY.csproj.GenerateResource.Cache
+C:\Documents and Settings\Blue\桌面\wkyg_code201006101730\wkyg_code201006101730\wkyg_code\MAIN\obj\Release\YGJHY.exe.licenses
+C:\Documents and Settings\Blue\桌面\wkyg_code201006101730\wkyg_code201006101730\wkyg_code\MAIN\obj\Release\YGJHY.exe
+C:\Documents and Settings\Blue\桌面\wkyg_code201006101730\wkyg_code201006101730\wkyg_code\MAIN\obj\Release\YGJHY.pdb
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006110800\wkyg_code201006110800\wkyg_code201006101730\wkyg_code\MAIN\bin\Debug\YGJHY.exe
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006110800\wkyg_code201006110800\wkyg_code201006101730\wkyg_code\MAIN\bin\Debug\YGJHY.pdb
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006110800\wkyg_code201006110800\wkyg_code201006101730\wkyg_code\MAIN\bin\Debug\CommonClass.dll
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006110800\wkyg_code201006110800\wkyg_code201006101730\wkyg_code\MAIN\bin\Debug\CommonClass.pdb
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006110800\wkyg_code201006110800\wkyg_code201006101730\wkyg_code\MAIN\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006110800\wkyg_code201006110800\wkyg_code201006101730\wkyg_code\MAIN\obj\Release\MAIN.MainMenu.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006110800\wkyg_code201006110800\wkyg_code201006101730\wkyg_code\MAIN\obj\Release\YGJHY.Properties.Resources.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006110800\wkyg_code201006110800\wkyg_code201006101730\wkyg_code\MAIN\obj\Release\YGJHY.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006110800\wkyg_code201006110800\wkyg_code201006101730\wkyg_code\MAIN\obj\Release\YGJHY.exe.licenses
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006110800\wkyg_code201006110800\wkyg_code201006101730\wkyg_code\MAIN\obj\Release\YGJHY.exe
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006110800\wkyg_code201006110800\wkyg_code201006101730\wkyg_code\MAIN\obj\Release\YGJHY.pdb

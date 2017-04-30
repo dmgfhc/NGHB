@@ -1,0 +1,78 @@
+E:\moban beta\new oFlxGridPrj200904031136\DownLoad\bin\Debug\DownLoad.exe
+E:\moban beta\new oFlxGridPrj200904031136\DownLoad\bin\Debug\DownLoad.pdb
+E:\moban beta\new oFlxGridPrj200904031136\DownLoad\obj\Debug\ResolveAssemblyReference.cache
+E:\moban beta\new oFlxGridPrj200904031136\DownLoad\obj\Debug\DownLoad.Properties.Resources.resources
+E:\moban beta\new oFlxGridPrj200904031136\DownLoad\obj\Debug\DownLoad.csproj.GenerateResource.Cache
+E:\moban beta\new oFlxGridPrj200904031136\DownLoad\obj\Debug\DownLoad.exe
+E:\moban beta\new oFlxGridPrj200904031136\DownLoad\obj\Debug\DownLoad.pdb
+E:\moban beta\new oFlxGridPrj200904201250\DownLoad\bin\Debug\DownLoad.exe
+E:\moban beta\new oFlxGridPrj200904201250\DownLoad\bin\Debug\DownLoad.pdb
+E:\moban beta\new oFlxGridPrj200904201250\DownLoad\obj\Debug\ResolveAssemblyReference.cache
+E:\moban beta\new oFlxGridPrj200904201250\DownLoad\obj\Debug\DownLoad.Properties.Resources.resources
+E:\moban beta\new oFlxGridPrj200904201250\DownLoad\obj\Debug\DownLoad.csproj.GenerateResource.Cache
+E:\moban beta\new oFlxGridPrj200904201250\DownLoad\obj\Debug\DownLoad.exe
+E:\moban beta\new oFlxGridPrj200904201250\DownLoad\obj\Debug\DownLoad.pdb
+E:\moban beta\new oFlxGridPrj200904201250\DownLoad\obj\Debug\DownLoad.DownLoadMain.resources
+E:\desktop\CYEDM\DownLoad\bin\Debug\DownLoad.exe
+E:\desktop\CYEDM\DownLoad\bin\Debug\DownLoad.pdb
+E:\desktop\CYEDM\DownLoad\obj\Debug\ResolveAssemblyReference.cache
+E:\desktop\CYEDM\DownLoad\obj\Debug\DownLoad.DownLoadMain.resources
+E:\desktop\CYEDM\DownLoad\obj\Debug\DownLoad.Properties.Resources.resources
+E:\desktop\CYEDM\DownLoad\obj\Debug\DownLoad.csproj.GenerateResource.Cache
+E:\desktop\CYEDM\DownLoad\obj\Debug\DownLoad.exe
+E:\desktop\CYEDM\DownLoad\obj\Debug\DownLoad.pdb
+E:\desktop\CYEDM\DownLoad\obj\Debug\DownLoad.exe.licenses
+E:\五矿营钢厚板检验室资料\wkyg_code\DownLoad\obj\Debug\ResolveAssemblyReference.cache
+E:\五矿营钢厚板检验室资料\wkyg_code\DownLoad\obj\Debug\DownLoad.DownLoadMain.resources
+E:\五矿营钢厚板检验室资料\wkyg_code\DownLoad\obj\Debug\DownLoad.Properties.Resources.resources
+E:\五矿营钢厚板检验室资料\wkyg_code\DownLoad\obj\Debug\DownLoad.csproj.GenerateResource.Cache
+E:\五矿营钢厚板检验室资料\wkyg_code\DownLoad\obj\Debug\DownLoad.exe.licenses
+E:\五矿营钢厚板检验室资料\wkyg_code\DownLoad\obj\Debug\DownLoad.exe
+E:\五矿营钢厚板检验室资料\wkyg_code\DownLoad\obj\Debug\DownLoad.pdb
+D:\desktop\营钢\wkyg_code\DownLoad\bin\Debug\DownLoad.exe
+D:\desktop\营钢\wkyg_code\DownLoad\bin\Debug\DownLoad.pdb
+D:\desktop\营钢\wkyg_code\DownLoad\obj\Debug\ResolveAssemblyReference.cache
+D:\desktop\营钢\wkyg_code\DownLoad\obj\Debug\DownLoad.DownLoadMain.resources
+D:\desktop\营钢\wkyg_code\DownLoad\obj\Debug\DownLoad.Properties.Resources.resources
+D:\desktop\营钢\wkyg_code\DownLoad\obj\Debug\DownLoad.csproj.GenerateResource.Cache
+D:\desktop\营钢\wkyg_code\DownLoad\obj\Debug\DownLoad.exe.licenses
+D:\desktop\营钢\wkyg_code\DownLoad\obj\Debug\DownLoad.exe
+D:\desktop\营钢\wkyg_code\DownLoad\obj\Debug\DownLoad.pdb
+E:\五矿营钢厚板检验室资料\wkyg_code\DownLoad\bin\Release\DownLoad.exe
+E:\五矿营钢厚板检验室资料\wkyg_code\DownLoad\bin\Release\DownLoad.pdb
+E:\五矿营钢厚板检验室资料\wkyg_code\DownLoad\bin\DeBug\DownLoad.exe
+E:\五矿营钢厚板检验室资料\wkyg_code\DownLoad\bin\DeBug\DownLoad.pdb
+E:\五矿营钢厚板检验室资料\wkyg_code\DownLoad\obj\Release\ResolveAssemblyReference.cache
+E:\五矿营钢厚板检验室资料\wkyg_code\DownLoad\obj\Release\DownLoad.DownLoadMain.resources
+E:\五矿营钢厚板检验室资料\wkyg_code\DownLoad\obj\Release\DownLoad.Properties.Resources.resources
+E:\五矿营钢厚板检验室资料\wkyg_code\DownLoad\obj\Release\DownLoad.csproj.GenerateResource.Cache
+E:\五矿营钢厚板检验室资料\wkyg_code\DownLoad\obj\Release\DownLoad.exe.licenses
+E:\五矿营钢厚板检验室资料\wkyg_code\DownLoad\obj\Release\DownLoad.exe
+E:\五矿营钢厚板检验室资料\wkyg_code\DownLoad\obj\Release\DownLoad.pdb
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301115\wkyg_code\DownLoad\bin\DeBug\DownLoad.exe
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301115\wkyg_code\DownLoad\bin\DeBug\DownLoad.pdb
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301115\wkyg_code\DownLoad\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301115\wkyg_code\DownLoad\obj\Release\DownLoad.DownLoadMain.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301115\wkyg_code\DownLoad\obj\Release\DownLoad.Properties.Resources.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301115\wkyg_code\DownLoad\obj\Release\DownLoad.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301115\wkyg_code\DownLoad\obj\Release\DownLoad.exe.licenses
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301115\wkyg_code\DownLoad\obj\Release\DownLoad.exe
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301115\wkyg_code\DownLoad\obj\Release\DownLoad.pdb
+C:\Documents and Settings\Blue\桌面\wkyg_code201006101730\wkyg_code201006101730\wkyg_code\DownLoad\bin\DeBug\DownLoad.exe
+C:\Documents and Settings\Blue\桌面\wkyg_code201006101730\wkyg_code201006101730\wkyg_code\DownLoad\bin\DeBug\DownLoad.pdb
+C:\Documents and Settings\Blue\桌面\wkyg_code201006101730\wkyg_code201006101730\wkyg_code\DownLoad\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Blue\桌面\wkyg_code201006101730\wkyg_code201006101730\wkyg_code\DownLoad\obj\Release\DownLoad.DownLoadMain.resources
+C:\Documents and Settings\Blue\桌面\wkyg_code201006101730\wkyg_code201006101730\wkyg_code\DownLoad\obj\Release\DownLoad.Properties.Resources.resources
+C:\Documents and Settings\Blue\桌面\wkyg_code201006101730\wkyg_code201006101730\wkyg_code\DownLoad\obj\Release\DownLoad.csproj.GenerateResource.Cache
+C:\Documents and Settings\Blue\桌面\wkyg_code201006101730\wkyg_code201006101730\wkyg_code\DownLoad\obj\Release\DownLoad.exe.licenses
+C:\Documents and Settings\Blue\桌面\wkyg_code201006101730\wkyg_code201006101730\wkyg_code\DownLoad\obj\Release\DownLoad.exe
+C:\Documents and Settings\Blue\桌面\wkyg_code201006101730\wkyg_code201006101730\wkyg_code\DownLoad\obj\Release\DownLoad.pdb
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006110800\wkyg_code201006110800\wkyg_code201006101730\wkyg_code\DownLoad\bin\DeBug\DownLoad.exe
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006110800\wkyg_code201006110800\wkyg_code201006101730\wkyg_code\DownLoad\bin\DeBug\DownLoad.pdb
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006110800\wkyg_code201006110800\wkyg_code201006101730\wkyg_code\DownLoad\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006110800\wkyg_code201006110800\wkyg_code201006101730\wkyg_code\DownLoad\obj\Release\DownLoad.DownLoadMain.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006110800\wkyg_code201006110800\wkyg_code201006101730\wkyg_code\DownLoad\obj\Release\DownLoad.Properties.Resources.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006110800\wkyg_code201006110800\wkyg_code201006101730\wkyg_code\DownLoad\obj\Release\DownLoad.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006110800\wkyg_code201006110800\wkyg_code201006101730\wkyg_code\DownLoad\obj\Release\DownLoad.exe.licenses
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006110800\wkyg_code201006110800\wkyg_code201006101730\wkyg_code\DownLoad\obj\Release\DownLoad.exe
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006110800\wkyg_code201006110800\wkyg_code201006101730\wkyg_code\DownLoad\obj\Release\DownLoad.pdb

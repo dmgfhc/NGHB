@@ -1,0 +1,12 @@
+F:\wkyg_code\DownLoad\bin\Debug\DownLoad.exe
+F:\wkyg_code\DownLoad\bin\Debug\DownLoad.pdb
+F:\wkyg_code\DownLoad\obj\Debug\ResolveAssemblyReference.cache
+F:\wkyg_code\DownLoad\obj\Debug\DownLoad.DownLoadMain.resources
+F:\wkyg_code\DownLoad\obj\Debug\DownLoad.Properties.Resources.resources
+F:\wkyg_code\DownLoad\obj\Debug\GenerateResource-ResGen.read.1.tlog
+F:\wkyg_code\DownLoad\obj\Debug\GenerateResource-ResGen.read.4.tlog
+F:\wkyg_code\DownLoad\obj\Debug\GenerateResource-ResGen.write.1.tlog
+F:\wkyg_code\DownLoad\obj\Debug\GenerateResource-ResGen.write.4.tlog
+F:\wkyg_code\DownLoad\obj\Debug\DownLoad.exe.licenses
+F:\wkyg_code\DownLoad\obj\Debug\DownLoad.exe
+F:\wkyg_code\DownLoad\obj\Debug\DownLoad.pdb

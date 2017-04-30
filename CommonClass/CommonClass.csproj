@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F1BE543B-BDD6-4873-969E-F2F6B181D805}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CommonClass</RootNamespace>
+    <AssemblyName>CommonClass</AssemblyName>
+    <MyType>Windows</MyType>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>CommonClass.xml</DocumentationFile>
+    <NOWARN>1591</NOWARN>
+    <WarningLevel>0</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>CommonClass.xml</DocumentationFile>
+    <NOWARN>1591</NOWARN>
+    <WarningLevel>0</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FarPoint.CalcEngine, Version=5.0.3522.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\GrapeCity\Spread.WinForms.5.dotNet35\v5.0.3522\Bin\FarPoint.CalcEngine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FarPoint.Excel, Version=5.0.3522.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\GrapeCity\Spread.WinForms.5.dotNet35\v5.0.3522\Bin\FarPoint.Excel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FarPoint.PDF, Version=5.0.3522.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\GrapeCity\Spread.WinForms.5.dotNet35\v5.0.3522\Bin\FarPoint.PDF.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FarPoint.PluginCalendar.WinForms, Version=5.0.3522.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\GrapeCity\Spread.WinForms.5.dotNet35\v5.0.3522\Bin\FarPoint.PluginCalendar.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FarPoint.SpreadDesigner, Version=5.0.3522.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <ExecutableExtension>.exe</ExecutableExtension>
+      <HintPath>D:\Program Files\GrapeCity\Spread.WinForms.5.dotNet35\v5.0.3522\Bin\FarPoint.SpreadDesigner.exe</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.Win, Version=5.0.3522.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\GrapeCity\Spread.WinForms.5.dotNet35\v5.0.3522\Bin\FarPoint.Win.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FarPoint.Win.Chart, Version=5.0.3522.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\GrapeCity\Spread.WinForms.5.dotNet35\v5.0.3522\Bin\FarPoint.Win.Chart.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FarPoint.Win.Chart.Design, Version=5.0.3522.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\GrapeCity\Spread.WinForms.5.dotNet35\v5.0.3522\Bin\FarPoint.Win.Chart.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FarPoint.Win.Design, Version=5.0.3522.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\GrapeCity\Spread.WinForms.5.dotNet35\v5.0.3522\Bin\FarPoint.Win.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FarPoint.Win.Ink, Version=5.0.3522.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\GrapeCity\Spread.WinForms.5.dotNet35\v5.0.3522\Bin\FarPoint.Win.Ink.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FarPoint.Win.Spread, Version=5.0.3522.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\GrapeCity\Spread.WinForms.5.dotNet35\v5.0.3522\Bin\FarPoint.Win.Spread.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FarPoint.Win.Spread.Design, Version=5.0.3522.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\GrapeCity\Spread.WinForms.5.dotNet35\v5.0.3522\Bin\FarPoint.Win.Spread.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FarPoint.Win.Spread.Html, Version=5.0.3522.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\GrapeCity\Spread.WinForms.5.dotNet35\v5.0.3522\Bin\FarPoint.Win.Spread.Html.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FarPoint.Win.TextRenderer, Version=5.0.3522.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\GrapeCity\Spread.WinForms.5.dotNet35\v5.0.3522\Bin\FarPoint.Win.TextRenderer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="mscorlib">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="adodb, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="policy.5.0.FarPoint.Win, Version=5.0.3522.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\GrapeCity\Spread.WinForms.5.dotNet35\v5.0.3522\Bin\policy.5.0.FarPoint.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="policy.5.0.FarPoint.Win.Spread, Version=5.0.3522.2008, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\GrapeCity\Spread.WinForms.5.dotNet35\v5.0.3522\Bin\policy.5.0.FarPoint.Win.Spread.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BASCLASS\GeneralCommon.cs" />
+    <Compile Include="BASCLASS\JOBHelper.cs" />
+    <Compile Include="BASCLASS\JOBVALOBJ.cs" />
+    <Compile Include="BASCLASS\MasterCommon.cs" />
+    <Compile Include="BASCLASS\Md5.cs" />
+    <Compile Include="BASCLASS\ReadConfig.cs" />
+    <Compile Include="BASCLASS\ReferCommon.cs" />
+    <Compile Include="BASCLASS\SecuritySet.cs" />
+    <Compile Include="BASCLASS\SpreadCommon.cs" />
+    <Compile Include="BASCLASS\Win32ApiCommon.cs" />
+    <Compile Include="BASFORM\FORMBASE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASFORM\PopupForm.Designer.cs">
+      <DependentUpon>PopupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASFORM\PopupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COMFORM\ConfirmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COMFORM\EditDlg.Designer.cs">
+      <DependentUpon>EditDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="COMFORM\EditDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COMFORM\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COMFORM\Spread_ColSort.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COMFORM\tEditor.Designer.cs">
+      <DependentUpon>tEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="COMFORM\tEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COMFORM\UserID_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COMFORM\UserID_Del.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataDic\CeriUDate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataDic\CeriUDate.Designer.cs">
+      <DependentUpon>CeriUDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataDic\DataDic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataDic\DataDicCommon.cs" />
+    <Compile Include="DataDic\F4COMN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataDic\F4COMR.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataDic\F4ETCN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataDic\F4ETCR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataDic\MaskedDate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataDic\MixComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataDic\MixComboBox.Designer.cs">
+      <DependentUpon>MixComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataDic\NumBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Application.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UTIL\BaseManu.cs" />
+    <Compile Include="UTIL\Com.cs" />
+    <Compile Include="UTIL\FormatValidate.cs" />
+    <Compile Include="UTIL\Mathx.cs" />
+    <Compile Include="UTIL\Query.cs" />
+    <Compile Include="UTIL\SmpBox.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BASFORM\FORMBASE.resx">
+      <DependentUpon>FORMBASE.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASFORM\PopupForm.resx">
+      <DependentUpon>PopupForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COMFORM\ConfirmLogin.resx">
+      <DependentUpon>ConfirmLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COMFORM\EditDlg.resx">
+      <DependentUpon>EditDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COMFORM\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COMFORM\Spread_ColSort.resx">
+      <DependentUpon>Spread_ColSort.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COMFORM\tEditor.resx">
+      <DependentUpon>tEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COMFORM\UserID_Add.resx">
+      <DependentUpon>UserID_Add.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COMFORM\UserID_Del.resx">
+      <DependentUpon>UserID_Del.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataDic\CeriUDate.resx">
+      <DependentUpon>CeriUDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataDic\DataDic.resx">
+      <DependentUpon>DataDic.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataDic\F4COMN.resx">
+      <DependentUpon>F4COMN.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataDic\F4COMR.resx">
+      <DependentUpon>F4COMR.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataDic\F4ETCN.resx">
+      <DependentUpon>F4ETCN.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataDic\F4ETCR.resx">
+      <DependentUpon>F4ETCR.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataDic\MixComboBox.resx">
+      <DependentUpon>MixComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataDic\NumBox.resx">
+      <DependentUpon>NumBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="修改记录.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Import Project="$(MSBuildBinPath)/Microsoft.CSharp.targets" />
+</Project>

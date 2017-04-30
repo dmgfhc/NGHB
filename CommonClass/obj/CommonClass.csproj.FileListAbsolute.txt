@@ -1,0 +1,351 @@
+D:\工程项目\模版\oFlxGridPrj\oFlxGridPrj\CommonClass\bin\Release\CommonClass.dll
+D:\工程项目\模版\oFlxGridPrj\oFlxGridPrj\CommonClass\bin\Release\CommonClass.pdb
+D:\工程项目\模版\oFlxGridPrj\oFlxGridPrj\CommonClass\bin\Release\C1.Win.C1FlexGrid.2.dll
+D:\工程项目\模版\oFlxGridPrj\oFlxGridPrj\CommonClass\bin\Release\C1.Win.C1FlexGrid.2.xml
+D:\工程项目\模版\oFlxGridPrj\oFlxGridPrj\CommonClass\obj\Release\ResolveAssemblyReference.cache
+D:\工程项目\模版\oFlxGridPrj\oFlxGridPrj\CommonClass\obj\Release\CommonClass.FORMBASE.resources
+D:\工程项目\模版\oFlxGridPrj\oFlxGridPrj\CommonClass\obj\Release\CommonClass.csproj.GenerateResource.Cache
+D:\工程项目\模版\oFlxGridPrj\oFlxGridPrj\CommonClass\obj\Release\CommonClass.dll
+D:\工程项目\模版\oFlxGridPrj\oFlxGridPrj\CommonClass\obj\Release\CommonClass.pdb
+D:\工程项目\模版\oFlxGridPrj\oFlxGridPrj\CommonClass\bin\Debug\CommonClass.dll
+D:\工程项目\模版\oFlxGridPrj\oFlxGridPrj\CommonClass\bin\Debug\CommonClass.pdb
+D:\工程项目\模版\oFlxGridPrj\oFlxGridPrj\CommonClass\bin\Debug\C1.Win.C1FlexGrid.2.dll
+D:\工程项目\模版\oFlxGridPrj\oFlxGridPrj\CommonClass\bin\Debug\C1.Win.C1FlexGrid.2.xml
+D:\工程项目\模版\oFlxGridPrj\oFlxGridPrj\CommonClass\obj\Debug\ResolveAssemblyReference.cache
+D:\工程项目\模版\oFlxGridPrj\oFlxGridPrj\CommonClass\obj\Debug\CommonClass.FORMBASE.resources
+D:\工程项目\模版\oFlxGridPrj\oFlxGridPrj\CommonClass\obj\Debug\CommonClass.csproj.GenerateResource.Cache
+D:\工程项目\模版\oFlxGridPrj\oFlxGridPrj\CommonClass\obj\Debug\CommonClass.dll
+D:\工程项目\模版\oFlxGridPrj\oFlxGridPrj\CommonClass\obj\Debug\CommonClass.pdb
+E:\工程项目\C#模板\oFlxGridPrj\CommonClass\bin\Debug\CommonClass.dll
+E:\工程项目\C#模板\oFlxGridPrj\CommonClass\bin\Debug\CommonClass.pdb
+E:\工程项目\C#模板\oFlxGridPrj\CommonClass\obj\Debug\ResolveAssemblyReference.cache
+E:\工程项目\C#模板\oFlxGridPrj\CommonClass\obj\Debug\CommonClass.FORMBASE.resources
+E:\工程项目\C#模板\oFlxGridPrj\CommonClass\obj\Debug\CommonClass.csproj.GenerateResource.Cache
+E:\工程项目\C#模板\oFlxGridPrj\CommonClass\obj\Debug\CommonClass.dll
+E:\工程项目\C#模板\oFlxGridPrj\CommonClass\obj\Debug\CommonClass.pdb
+E:\工程项目\我的\营口\中试基地\计量质量\程序\营销\oFlxGridPrj\CommonClass\bin\Debug\CommonClass.dll
+E:\工程项目\我的\营口\中试基地\计量质量\程序\营销\oFlxGridPrj\CommonClass\bin\Debug\CommonClass.pdb
+E:\工程项目\我的\营口\中试基地\计量质量\程序\营销\oFlxGridPrj\CommonClass\obj\Debug\ResolveAssemblyReference.cache
+E:\工程项目\我的\营口\中试基地\计量质量\程序\营销\oFlxGridPrj\CommonClass\obj\Debug\CommonClass.FORMBASE.resources
+E:\工程项目\我的\营口\中试基地\计量质量\程序\营销\oFlxGridPrj\CommonClass\obj\Debug\CommonClass.csproj.GenerateResource.Cache
+E:\工程项目\我的\营口\中试基地\计量质量\程序\营销\oFlxGridPrj\CommonClass\obj\Debug\CommonClass.dll
+E:\工程项目\我的\营口\中试基地\计量质量\程序\营销\oFlxGridPrj\CommonClass\obj\Debug\CommonClass.pdb
+E:\moban beta\oFlxGridPrj200902271530\CommonClass\obj\Debug\ResolveAssemblyReference.cache
+E:\moban beta\oFlxGridPrj200902271530\CommonClass\obj\Debug\CommonClass.F4COMR.resources
+E:\moban beta\oFlxGridPrj200902271530\CommonClass\obj\Debug\CommonClass.F4COMW.resources
+E:\moban beta\oFlxGridPrj200902271530\CommonClass\obj\Debug\CommonClass.DataDic.resources
+E:\moban beta\oFlxGridPrj200902271530\CommonClass\obj\Debug\CommonClass.FORMBASE.resources
+E:\moban beta\oFlxGridPrj200902271530\CommonClass\obj\Debug\CommonClass.csproj.GenerateResource.Cache
+E:\moban beta\oFlxGridPrj200902271530\CommonClass\obj\Debug\CommonClass.dll.licenses
+E:\moban beta\oFlxGridPrj200902271530\CommonClass\bin\Debug\CommonClass.dll
+E:\moban beta\oFlxGridPrj200902271530\CommonClass\bin\Debug\CommonClass.pdb
+E:\moban beta\oFlxGridPrj200902271530\CommonClass\obj\Debug\CommonClass.dll
+E:\moban beta\oFlxGridPrj200902271530\CommonClass\obj\Debug\CommonClass.pdb
+E:\moban beta\new oFlxGridPrj200902271530\CommonClass\bin\Debug\CommonClass.dll
+E:\moban beta\new oFlxGridPrj200902271530\CommonClass\bin\Debug\CommonClass.pdb
+E:\moban beta\new oFlxGridPrj200902271530\CommonClass\obj\Debug\ResolveAssemblyReference.cache
+E:\moban beta\new oFlxGridPrj200902271530\CommonClass\obj\Debug\CommonClass.MAINBASE.resources
+E:\moban beta\new oFlxGridPrj200902271530\CommonClass\obj\Debug\CommonClass.ConfirmLogin.resources
+E:\moban beta\new oFlxGridPrj200902271530\CommonClass\obj\Debug\CommonClass.Login.resources
+E:\moban beta\new oFlxGridPrj200902271530\CommonClass\obj\Debug\CommonClass.UserID_Add.resources
+E:\moban beta\new oFlxGridPrj200902271530\CommonClass\obj\Debug\CommonClass.UserID_Del.resources
+E:\moban beta\new oFlxGridPrj200902271530\CommonClass\obj\Debug\CommonClass.F4COMR.resources
+E:\moban beta\new oFlxGridPrj200902271530\CommonClass\obj\Debug\CommonClass.F4COMW.resources
+E:\moban beta\new oFlxGridPrj200902271530\CommonClass\obj\Debug\CommonClass.DataDic.resources
+E:\moban beta\new oFlxGridPrj200902271530\CommonClass\obj\Debug\CommonClass.FORMBASE.resources
+E:\moban beta\new oFlxGridPrj200902271530\CommonClass\obj\Debug\CommonClass.csproj.GenerateResource.Cache
+E:\moban beta\new oFlxGridPrj200902271530\CommonClass\obj\Debug\CommonClass.dll.licenses
+E:\moban beta\new oFlxGridPrj200902271530\CommonClass\obj\Debug\CommonClass.dll
+E:\moban beta\new oFlxGridPrj200902271530\CommonClass\obj\Debug\CommonClass.pdb
+E:\moban beta\oFlxGridPrj200903301830\CommonClass\bin\Debug\CommonClass.dll
+E:\moban beta\oFlxGridPrj200903301830\CommonClass\bin\Debug\CommonClass.pdb
+E:\moban beta\oFlxGridPrj200903301830\CommonClass\obj\Debug\ResolveAssemblyReference.cache
+E:\moban beta\oFlxGridPrj200903301830\CommonClass\obj\Debug\CommonClass.MAINBASE.resources
+E:\moban beta\oFlxGridPrj200903301830\CommonClass\obj\Debug\CommonClass.ConfirmLogin.resources
+E:\moban beta\oFlxGridPrj200903301830\CommonClass\obj\Debug\CommonClass.Login.resources
+E:\moban beta\oFlxGridPrj200903301830\CommonClass\obj\Debug\CommonClass.UserID_Add.resources
+E:\moban beta\oFlxGridPrj200903301830\CommonClass\obj\Debug\CommonClass.UserID_Del.resources
+E:\moban beta\oFlxGridPrj200903301830\CommonClass\obj\Debug\CommonClass.F4COMR.resources
+E:\moban beta\oFlxGridPrj200903301830\CommonClass\obj\Debug\CommonClass.F4COMW.resources
+E:\moban beta\oFlxGridPrj200903301830\CommonClass\obj\Debug\CommonClass.DataDic.resources
+E:\moban beta\oFlxGridPrj200903301830\CommonClass\obj\Debug\CommonClass.FORMBASE.resources
+E:\moban beta\oFlxGridPrj200903301830\CommonClass\obj\Debug\CommonClass.csproj.GenerateResource.Cache
+E:\moban beta\oFlxGridPrj200903301830\CommonClass\obj\Debug\CommonClass.dll.licenses
+E:\moban beta\oFlxGridPrj200903301830\CommonClass\obj\Debug\CommonClass.dll
+E:\moban beta\oFlxGridPrj200903301830\CommonClass\obj\Debug\CommonClass.pdb
+E:\moban beta\new oFlxGridPrj200903301830\CommonClass\obj\Debug\ResolveAssemblyReference.cache
+E:\moban beta\new oFlxGridPrj200903301830\CommonClass\obj\Debug\CommonClass.MAINBASE.resources
+E:\moban beta\new oFlxGridPrj200903301830\CommonClass\obj\Debug\CommonClass.ConfirmLogin.resources
+E:\moban beta\new oFlxGridPrj200903301830\CommonClass\obj\Debug\CommonClass.Login.resources
+E:\moban beta\new oFlxGridPrj200903301830\CommonClass\obj\Debug\CommonClass.UserID_Add.resources
+E:\moban beta\new oFlxGridPrj200903301830\CommonClass\obj\Debug\CommonClass.UserID_Del.resources
+E:\moban beta\new oFlxGridPrj200903301830\CommonClass\obj\Debug\CommonClass.F4COMR.resources
+E:\moban beta\new oFlxGridPrj200903301830\CommonClass\obj\Debug\CommonClass.F4COMW.resources
+E:\moban beta\new oFlxGridPrj200903301830\CommonClass\obj\Debug\CommonClass.DataDic.resources
+E:\moban beta\new oFlxGridPrj200903301830\CommonClass\obj\Debug\CommonClass.FORMBASE.resources
+E:\moban beta\new oFlxGridPrj200903301830\CommonClass\obj\Debug\CommonClass.csproj.GenerateResource.Cache
+E:\moban beta\new oFlxGridPrj200903301830\CommonClass\obj\Debug\CommonClass.dll.licenses
+E:\moban beta\new oFlxGridPrj200903301830\CommonClass\obj\Debug\CommonClass.dll
+E:\moban beta\new oFlxGridPrj200903301830\CommonClass\obj\Debug\CommonClass.pdb
+E:\moban beta\new oFlxGridPrj200903301830\CommonClass\bin\Debug\CommonClass.dll
+E:\moban beta\new oFlxGridPrj200903301830\CommonClass\bin\Debug\CommonClass.pdb
+E:\moban beta\new oFlxGridPrj200903301830\CommonClass\obj\Debug\CommonClass.DataDic_New.resources
+E:\moban beta\new oFlxGridPrj200904021900\CommonClass\bin\Debug\CommonClass.dll
+E:\moban beta\new oFlxGridPrj200904021900\CommonClass\bin\Debug\CommonClass.pdb
+E:\moban beta\new oFlxGridPrj200904021900\CommonClass\obj\Debug\ResolveAssemblyReference.cache
+E:\moban beta\new oFlxGridPrj200904021900\CommonClass\obj\Debug\CommonClass.MAINBASE.resources
+E:\moban beta\new oFlxGridPrj200904021900\CommonClass\obj\Debug\CommonClass.ConfirmLogin.resources
+E:\moban beta\new oFlxGridPrj200904021900\CommonClass\obj\Debug\CommonClass.Login.resources
+E:\moban beta\new oFlxGridPrj200904021900\CommonClass\obj\Debug\CommonClass.UserID_Add.resources
+E:\moban beta\new oFlxGridPrj200904021900\CommonClass\obj\Debug\CommonClass.UserID_Del.resources
+E:\moban beta\new oFlxGridPrj200904021900\CommonClass\obj\Debug\CommonClass.DataDic_New.resources
+E:\moban beta\new oFlxGridPrj200904021900\CommonClass\obj\Debug\CommonClass.F4COMR.resources
+E:\moban beta\new oFlxGridPrj200904021900\CommonClass\obj\Debug\CommonClass.F4COMW.resources
+E:\moban beta\new oFlxGridPrj200904021900\CommonClass\obj\Debug\CommonClass.DataDic.resources
+E:\moban beta\new oFlxGridPrj200904021900\CommonClass\obj\Debug\CommonClass.FORMBASE.resources
+E:\moban beta\new oFlxGridPrj200904021900\CommonClass\obj\Debug\CommonClass.csproj.GenerateResource.Cache
+E:\moban beta\new oFlxGridPrj200904021900\CommonClass\obj\Debug\CommonClass.dll.licenses
+E:\moban beta\new oFlxGridPrj200904021900\CommonClass\obj\Debug\CommonClass.dll
+E:\moban beta\new oFlxGridPrj200904021900\CommonClass\obj\Debug\CommonClass.pdb
+E:\moban beta\new oFlxGridPrj200904031136\CommonClass\bin\Debug\CommonClass.dll
+E:\moban beta\new oFlxGridPrj200904031136\CommonClass\bin\Debug\CommonClass.pdb
+E:\moban beta\new oFlxGridPrj200904031136\CommonClass\obj\Debug\ResolveAssemblyReference.cache
+E:\moban beta\new oFlxGridPrj200904031136\CommonClass\obj\Debug\CommonClass.MAINBASE.resources
+E:\moban beta\new oFlxGridPrj200904031136\CommonClass\obj\Debug\CommonClass.ConfirmLogin.resources
+E:\moban beta\new oFlxGridPrj200904031136\CommonClass\obj\Debug\CommonClass.Login.resources
+E:\moban beta\new oFlxGridPrj200904031136\CommonClass\obj\Debug\CommonClass.UserID_Add.resources
+E:\moban beta\new oFlxGridPrj200904031136\CommonClass\obj\Debug\CommonClass.UserID_Del.resources
+E:\moban beta\new oFlxGridPrj200904031136\CommonClass\obj\Debug\CommonClass.DataDic_New.resources
+E:\moban beta\new oFlxGridPrj200904031136\CommonClass\obj\Debug\CommonClass.F4COMR.resources
+E:\moban beta\new oFlxGridPrj200904031136\CommonClass\obj\Debug\CommonClass.F4COMW.resources
+E:\moban beta\new oFlxGridPrj200904031136\CommonClass\obj\Debug\CommonClass.DataDic.resources
+E:\moban beta\new oFlxGridPrj200904031136\CommonClass\obj\Debug\CommonClass.FORMBASE.resources
+E:\moban beta\new oFlxGridPrj200904031136\CommonClass\obj\Debug\CommonClass.csproj.GenerateResource.Cache
+E:\moban beta\new oFlxGridPrj200904031136\CommonClass\obj\Debug\CommonClass.dll.licenses
+E:\moban beta\new oFlxGridPrj200904031136\CommonClass\obj\Debug\CommonClass.dll
+E:\moban beta\new oFlxGridPrj200904031136\CommonClass\obj\Debug\CommonClass.pdb
+E:\desktop\new oFlxGridPrj200904031136\CommonClass\bin\Debug\CommonClass.dll
+E:\desktop\new oFlxGridPrj200904031136\CommonClass\bin\Debug\CommonClass.pdb
+E:\desktop\new oFlxGridPrj200904031136\CommonClass\bin\Debug\C1.Win.C1Command.2.dll
+E:\desktop\new oFlxGridPrj200904031136\CommonClass\bin\Debug\C1.Win.C1FlexGrid.2.dll
+E:\desktop\new oFlxGridPrj200904031136\CommonClass\bin\Debug\C1.Win.C1FlexGrid.Classic.2.dll
+E:\desktop\new oFlxGridPrj200904031136\CommonClass\bin\Debug\C1.Win.C1Input.2.dll
+E:\desktop\new oFlxGridPrj200904031136\CommonClass\bin\Debug\C1.Win.C1InputPanel.2.dll
+E:\desktop\new oFlxGridPrj200904031136\CommonClass\bin\Debug\C1.Win.C1List.2.dll
+E:\desktop\new oFlxGridPrj200904031136\CommonClass\bin\Debug\C1.Win.C1Sizer.2.dll
+E:\desktop\new oFlxGridPrj200904031136\CommonClass\bin\Debug\C1.Win.C1TrueDBGrid.2.dll
+E:\desktop\new oFlxGridPrj200904031136\CommonClass\bin\Debug\C1.Win.C1List.2.xml
+E:\desktop\new oFlxGridPrj200904031136\CommonClass\bin\Debug\C1.Win.C1InputPanel.2.xml
+E:\desktop\new oFlxGridPrj200904031136\CommonClass\bin\Debug\C1.Win.C1Sizer.2.xml
+E:\desktop\new oFlxGridPrj200904031136\CommonClass\bin\Debug\C1.Win.C1Command.2.xml
+E:\desktop\new oFlxGridPrj200904031136\CommonClass\bin\Debug\C1.Win.C1Input.2.xml
+E:\desktop\new oFlxGridPrj200904031136\CommonClass\bin\Debug\C1.Win.C1FlexGrid.2.xml
+E:\desktop\new oFlxGridPrj200904031136\CommonClass\bin\Debug\C1.Win.C1TrueDBGrid.2.xml
+E:\desktop\new oFlxGridPrj200904031136\CommonClass\obj\Debug\ResolveAssemblyReference.cache
+E:\desktop\new oFlxGridPrj200904031136\CommonClass\obj\Debug\CommonClass.MAINBASE.resources
+E:\desktop\new oFlxGridPrj200904031136\CommonClass\obj\Debug\CommonClass.ConfirmLogin.resources
+E:\desktop\new oFlxGridPrj200904031136\CommonClass\obj\Debug\CommonClass.Login.resources
+E:\desktop\new oFlxGridPrj200904031136\CommonClass\obj\Debug\CommonClass.UserID_Add.resources
+E:\desktop\new oFlxGridPrj200904031136\CommonClass\obj\Debug\CommonClass.UserID_Del.resources
+E:\desktop\new oFlxGridPrj200904031136\CommonClass\obj\Debug\CommonClass.DataDic_New.resources
+E:\desktop\new oFlxGridPrj200904031136\CommonClass\obj\Debug\CommonClass.F4COMR.resources
+E:\desktop\new oFlxGridPrj200904031136\CommonClass\obj\Debug\CommonClass.F4COMW.resources
+E:\desktop\new oFlxGridPrj200904031136\CommonClass\obj\Debug\CommonClass.DataDic.resources
+E:\desktop\new oFlxGridPrj200904031136\CommonClass\obj\Debug\CommonClass.FORMBASE.resources
+E:\desktop\new oFlxGridPrj200904031136\CommonClass\obj\Debug\CommonClass.csproj.GenerateResource.Cache
+E:\desktop\new oFlxGridPrj200904031136\CommonClass\obj\Debug\CommonClass.dll.licenses
+E:\desktop\new oFlxGridPrj200904031136\CommonClass\obj\Debug\CommonClass.dll
+E:\desktop\new oFlxGridPrj200904031136\CommonClass\obj\Debug\CommonClass.pdb
+E:\desktop\CYEDM\CommonClass\bin\Debug\CommonClass.dll
+E:\desktop\CYEDM\CommonClass\bin\Debug\CommonClass.pdb
+E:\desktop\CYEDM\CommonClass\bin\Debug\C1.Win.C1Command.2.dll
+E:\desktop\CYEDM\CommonClass\bin\Debug\C1.Win.C1FlexGrid.2.dll
+E:\desktop\CYEDM\CommonClass\bin\Debug\C1.Win.C1FlexGrid.Classic.2.dll
+E:\desktop\CYEDM\CommonClass\bin\Debug\C1.Win.C1Input.2.dll
+E:\desktop\CYEDM\CommonClass\bin\Debug\C1.Win.C1InputPanel.2.dll
+E:\desktop\CYEDM\CommonClass\bin\Debug\C1.Win.C1List.2.dll
+E:\desktop\CYEDM\CommonClass\bin\Debug\C1.Win.C1Sizer.2.dll
+E:\desktop\CYEDM\CommonClass\bin\Debug\C1.Win.C1TrueDBGrid.2.dll
+E:\desktop\CYEDM\CommonClass\bin\Debug\C1.Win.C1List.2.xml
+E:\desktop\CYEDM\CommonClass\bin\Debug\C1.Win.C1InputPanel.2.xml
+E:\desktop\CYEDM\CommonClass\bin\Debug\C1.Win.C1Sizer.2.xml
+E:\desktop\CYEDM\CommonClass\bin\Debug\C1.Win.C1Command.2.xml
+E:\desktop\CYEDM\CommonClass\bin\Debug\C1.Win.C1Input.2.xml
+E:\desktop\CYEDM\CommonClass\bin\Debug\C1.Win.C1FlexGrid.2.xml
+E:\desktop\CYEDM\CommonClass\bin\Debug\C1.Win.C1TrueDBGrid.2.xml
+E:\desktop\CYEDM\CommonClass\obj\Debug\ResolveAssemblyReference.cache
+E:\desktop\CYEDM\CommonClass\obj\Debug\CommonClass.MAINBASE.resources
+E:\desktop\CYEDM\CommonClass\obj\Debug\CommonClass.ConfirmLogin.resources
+E:\desktop\CYEDM\CommonClass\obj\Debug\CommonClass.Login.resources
+E:\desktop\CYEDM\CommonClass\obj\Debug\CommonClass.UserID_Add.resources
+E:\desktop\CYEDM\CommonClass\obj\Debug\CommonClass.UserID_Del.resources
+E:\desktop\CYEDM\CommonClass\obj\Debug\CommonClass.DataDic_New.resources
+E:\desktop\CYEDM\CommonClass\obj\Debug\CommonClass.F4COMR.resources
+E:\desktop\CYEDM\CommonClass\obj\Debug\CommonClass.F4COMW.resources
+E:\desktop\CYEDM\CommonClass\obj\Debug\CommonClass.DataDic.resources
+E:\desktop\CYEDM\CommonClass\obj\Debug\CommonClass.FORMBASE.resources
+E:\desktop\CYEDM\CommonClass\obj\Debug\CommonClass.csproj.GenerateResource.Cache
+E:\desktop\CYEDM\CommonClass\obj\Debug\CommonClass.dll.licenses
+E:\desktop\CYEDM\CommonClass\obj\Debug\CommonClass.dll
+E:\desktop\CYEDM\CommonClass\obj\Debug\CommonClass.pdb
+E:\CYEDM0904281126\CommonClass\bin\Debug\CommonClass.dll
+E:\CYEDM0904281126\CommonClass\bin\Debug\CommonClass.pdb
+E:\CYEDM0904281126\CommonClass\obj\Debug\ResolveAssemblyReference.cache
+E:\CYEDM0904281126\CommonClass\obj\Debug\CommonClass.MAINBASE.resources
+E:\CYEDM0904281126\CommonClass\obj\Debug\CommonClass.ConfirmLogin.resources
+E:\CYEDM0904281126\CommonClass\obj\Debug\CommonClass.Login.resources
+E:\CYEDM0904281126\CommonClass\obj\Debug\CommonClass.UserID_Add.resources
+E:\CYEDM0904281126\CommonClass\obj\Debug\CommonClass.UserID_Del.resources
+E:\CYEDM0904281126\CommonClass\obj\Debug\CommonClass.DataDic_New.resources
+E:\CYEDM0904281126\CommonClass\obj\Debug\CommonClass.F4COMR.resources
+E:\CYEDM0904281126\CommonClass\obj\Debug\CommonClass.F4COMW.resources
+E:\CYEDM0904281126\CommonClass\obj\Debug\CommonClass.DataDic.resources
+E:\CYEDM0904281126\CommonClass\obj\Debug\CommonClass.FORMBASE.resources
+E:\CYEDM0904281126\CommonClass\obj\Debug\CommonClass.csproj.GenerateResource.Cache
+E:\CYEDM0904281126\CommonClass\obj\Debug\CommonClass.dll.licenses
+E:\CYEDM0904281126\CommonClass\obj\Debug\CommonClass.dll
+E:\CYEDM0904281126\CommonClass\obj\Debug\CommonClass.pdb
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\obj\Debug\ResolveAssemblyReference.cache
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\obj\Debug\CommonClass.MAINBASE.resources
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\obj\Debug\CommonClass.ConfirmLogin.resources
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\obj\Debug\CommonClass.Login.resources
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\obj\Debug\CommonClass.UserID_Add.resources
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\obj\Debug\CommonClass.UserID_Del.resources
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\obj\Debug\CommonClass.DataDic_New.resources
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\obj\Debug\CommonClass.F4COMR.resources
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\obj\Debug\CommonClass.F4COMW.resources
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\obj\Debug\CommonClass.DataDic.resources
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\obj\Debug\CommonClass.FORMBASE.resources
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\obj\Debug\CommonClass.csproj.GenerateResource.Cache
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\obj\Debug\CommonClass.dll.licenses
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\obj\Debug\CommonClass.dll
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\obj\Debug\CommonClass.pdb
+D:\desktop\营钢\wkyg_code\CommonClass\bin\Debug\CommonClass.dll
+D:\desktop\营钢\wkyg_code\CommonClass\bin\Debug\CommonClass.pdb
+D:\desktop\营钢\wkyg_code\CommonClass\obj\Debug\ResolveAssemblyReference.cache
+D:\desktop\营钢\wkyg_code\CommonClass\obj\Debug\CommonClass.MAINBASE.resources
+D:\desktop\营钢\wkyg_code\CommonClass\obj\Debug\CommonClass.ConfirmLogin.resources
+D:\desktop\营钢\wkyg_code\CommonClass\obj\Debug\CommonClass.Login.resources
+D:\desktop\营钢\wkyg_code\CommonClass\obj\Debug\CommonClass.UserID_Add.resources
+D:\desktop\营钢\wkyg_code\CommonClass\obj\Debug\CommonClass.UserID_Del.resources
+D:\desktop\营钢\wkyg_code\CommonClass\obj\Debug\CommonClass.DataDic_New.resources
+D:\desktop\营钢\wkyg_code\CommonClass\obj\Debug\CommonClass.F4COMR.resources
+D:\desktop\营钢\wkyg_code\CommonClass\obj\Debug\CommonClass.F4COMW.resources
+D:\desktop\营钢\wkyg_code\CommonClass\obj\Debug\CommonClass.DataDic.resources
+D:\desktop\营钢\wkyg_code\CommonClass\obj\Debug\CommonClass.FORMBASE.resources
+D:\desktop\营钢\wkyg_code\CommonClass\obj\Debug\CommonClass.csproj.GenerateResource.Cache
+D:\desktop\营钢\wkyg_code\CommonClass\obj\Debug\CommonClass.dll.licenses
+D:\desktop\营钢\wkyg_code\CommonClass\obj\Debug\CommonClass.dll
+D:\desktop\营钢\wkyg_code\CommonClass\obj\Debug\CommonClass.pdb
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\bin\Release\CommonClass.dll
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\bin\Release\CommonClass.pdb
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\bin\Bin\CommonClass.dll
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\bin\Bin\CommonClass.pdb
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\Debug\CommonClass.dll
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\Debug\CommonClass.pdb
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\bin\Debug\CommonClass.dll
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\bin\Debug\CommonClass.pdb
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\obj\Release\ResolveAssemblyReference.cache
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\obj\Release\CommonClass.MAINBASE.resources
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\obj\Release\CommonClass.ConfirmLogin.resources
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\obj\Release\CommonClass.Login.resources
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\obj\Release\CommonClass.UserID_Add.resources
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\obj\Release\CommonClass.UserID_Del.resources
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\obj\Release\CommonClass.DataDic_New.resources
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\obj\Release\CommonClass.F4COMR.resources
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\obj\Release\CommonClass.F4COMW.resources
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\obj\Release\CommonClass.DataDic.resources
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\obj\Release\CommonClass.FORMBASE.resources
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\obj\Release\CommonClass.csproj.GenerateResource.Cache
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\obj\Release\CommonClass.dll.licenses
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\obj\Release\CommonClass.dll
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\obj\Release\CommonClass.pdb
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301115\wkyg_code\CommonClass\bin\Debug\CommonClass.dll
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301115\wkyg_code\CommonClass\bin\Debug\CommonClass.pdb
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301115\wkyg_code\CommonClass\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301115\wkyg_code\CommonClass\obj\Release\CommonClass.MAINBASE.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301115\wkyg_code\CommonClass\obj\Release\CommonClass.ConfirmLogin.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301115\wkyg_code\CommonClass\obj\Release\CommonClass.Login.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301115\wkyg_code\CommonClass\obj\Release\CommonClass.UserID_Add.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301115\wkyg_code\CommonClass\obj\Release\CommonClass.UserID_Del.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301115\wkyg_code\CommonClass\obj\Release\CommonClass.DataDic_New.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301115\wkyg_code\CommonClass\obj\Release\CommonClass.F4COMR.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301115\wkyg_code\CommonClass\obj\Release\CommonClass.F4COMW.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301115\wkyg_code\CommonClass\obj\Release\CommonClass.DataDic.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301115\wkyg_code\CommonClass\obj\Release\CommonClass.FORMBASE.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301115\wkyg_code\CommonClass\obj\Release\CommonClass.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301115\wkyg_code\CommonClass\obj\Release\CommonClass.dll.licenses
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301115\wkyg_code\CommonClass\obj\Release\CommonClass.dll
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301115\wkyg_code\CommonClass\obj\Release\CommonClass.pdb
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301730\wkyg_code\CommonClass\bin\Debug\CommonClass.dll
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301730\wkyg_code\CommonClass\bin\Debug\CommonClass.pdb
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301730\wkyg_code\CommonClass\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301730\wkyg_code\CommonClass\obj\Release\CommonClass.MAINBASE.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301730\wkyg_code\CommonClass\obj\Release\CommonClass.ConfirmLogin.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301730\wkyg_code\CommonClass\obj\Release\CommonClass.Login.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301730\wkyg_code\CommonClass\obj\Release\CommonClass.UserID_Add.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301730\wkyg_code\CommonClass\obj\Release\CommonClass.UserID_Del.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301730\wkyg_code\CommonClass\obj\Release\CommonClass.DataDic_New.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301730\wkyg_code\CommonClass\obj\Release\CommonClass.F4COMR.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301730\wkyg_code\CommonClass\obj\Release\CommonClass.F4COMW.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301730\wkyg_code\CommonClass\obj\Release\CommonClass.DataDic.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301730\wkyg_code\CommonClass\obj\Release\CommonClass.FORMBASE.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301730\wkyg_code\CommonClass\obj\Release\CommonClass.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301730\wkyg_code\CommonClass\obj\Release\CommonClass.dll.licenses
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301730\wkyg_code\CommonClass\obj\Release\CommonClass.dll
+C:\Documents and Settings\Administrator\桌面\wkyg_code201005301730\wkyg_code\CommonClass\obj\Release\CommonClass.pdb
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006091500\wkyg_code\CommonClass\bin\Debug\CommonClass.dll
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006091500\wkyg_code\CommonClass\bin\Debug\CommonClass.pdb
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006091500\wkyg_code\CommonClass\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006091500\wkyg_code\CommonClass\obj\Release\CommonClass.MAINBASE.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006091500\wkyg_code\CommonClass\obj\Release\CommonClass.ConfirmLogin.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006091500\wkyg_code\CommonClass\obj\Release\CommonClass.Login.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006091500\wkyg_code\CommonClass\obj\Release\CommonClass.UserID_Add.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006091500\wkyg_code\CommonClass\obj\Release\CommonClass.UserID_Del.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006091500\wkyg_code\CommonClass\obj\Release\CommonClass.DataDic_New.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006091500\wkyg_code\CommonClass\obj\Release\CommonClass.F4COMR.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006091500\wkyg_code\CommonClass\obj\Release\CommonClass.F4COMW.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006091500\wkyg_code\CommonClass\obj\Release\CommonClass.DataDic.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006091500\wkyg_code\CommonClass\obj\Release\CommonClass.FORMBASE.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006091500\wkyg_code\CommonClass\obj\Release\CommonClass.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006091500\wkyg_code\CommonClass\obj\Release\CommonClass.dll.licenses
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006091500\wkyg_code\CommonClass\obj\Release\CommonClass.dll
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006091500\wkyg_code\CommonClass\obj\Release\CommonClass.pdb
+C:\Documents and Settings\Blue\桌面\wkyg_code201006101730\wkyg_code201006101730\wkyg_code\CommonClass\bin\Debug\CommonClass.dll
+C:\Documents and Settings\Blue\桌面\wkyg_code201006101730\wkyg_code201006101730\wkyg_code\CommonClass\bin\Debug\CommonClass.pdb
+C:\Documents and Settings\Blue\桌面\wkyg_code201006101730\wkyg_code201006101730\wkyg_code\CommonClass\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Blue\桌面\wkyg_code201006101730\wkyg_code201006101730\wkyg_code\CommonClass\obj\Release\CommonClass.MAINBASE.resources
+C:\Documents and Settings\Blue\桌面\wkyg_code201006101730\wkyg_code201006101730\wkyg_code\CommonClass\obj\Release\CommonClass.ConfirmLogin.resources
+C:\Documents and Settings\Blue\桌面\wkyg_code201006101730\wkyg_code201006101730\wkyg_code\CommonClass\obj\Release\CommonClass.Login.resources
+C:\Documents and Settings\Blue\桌面\wkyg_code201006101730\wkyg_code201006101730\wkyg_code\CommonClass\obj\Release\CommonClass.UserID_Add.resources
+C:\Documents and Settings\Blue\桌面\wkyg_code201006101730\wkyg_code201006101730\wkyg_code\CommonClass\obj\Release\CommonClass.UserID_Del.resources
+C:\Documents and Settings\Blue\桌面\wkyg_code201006101730\wkyg_code201006101730\wkyg_code\CommonClass\obj\Release\CommonClass.DataDic_New.resources
+C:\Documents and Settings\Blue\桌面\wkyg_code201006101730\wkyg_code201006101730\wkyg_code\CommonClass\obj\Release\CommonClass.F4COMR.resources
+C:\Documents and Settings\Blue\桌面\wkyg_code201006101730\wkyg_code201006101730\wkyg_code\CommonClass\obj\Release\CommonClass.F4COMW.resources
+C:\Documents and Settings\Blue\桌面\wkyg_code201006101730\wkyg_code201006101730\wkyg_code\CommonClass\obj\Release\CommonClass.DataDic.resources
+C:\Documents and Settings\Blue\桌面\wkyg_code201006101730\wkyg_code201006101730\wkyg_code\CommonClass\obj\Release\CommonClass.FORMBASE.resources
+C:\Documents and Settings\Blue\桌面\wkyg_code201006101730\wkyg_code201006101730\wkyg_code\CommonClass\obj\Release\CommonClass.csproj.GenerateResource.Cache
+C:\Documents and Settings\Blue\桌面\wkyg_code201006101730\wkyg_code201006101730\wkyg_code\CommonClass\obj\Release\CommonClass.dll.licenses
+C:\Documents and Settings\Blue\桌面\wkyg_code201006101730\wkyg_code201006101730\wkyg_code\CommonClass\obj\Release\CommonClass.dll
+C:\Documents and Settings\Blue\桌面\wkyg_code201006101730\wkyg_code201006101730\wkyg_code\CommonClass\obj\Release\CommonClass.pdb
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006110800\wkyg_code201006110800\wkyg_code201006101730\wkyg_code\CommonClass\bin\Debug\CommonClass.dll
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006110800\wkyg_code201006110800\wkyg_code201006101730\wkyg_code\CommonClass\bin\Debug\CommonClass.pdb
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006110800\wkyg_code201006110800\wkyg_code201006101730\wkyg_code\CommonClass\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006110800\wkyg_code201006110800\wkyg_code201006101730\wkyg_code\CommonClass\obj\Release\CommonClass.MAINBASE.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006110800\wkyg_code201006110800\wkyg_code201006101730\wkyg_code\CommonClass\obj\Release\CommonClass.ConfirmLogin.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006110800\wkyg_code201006110800\wkyg_code201006101730\wkyg_code\CommonClass\obj\Release\CommonClass.Login.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006110800\wkyg_code201006110800\wkyg_code201006101730\wkyg_code\CommonClass\obj\Release\CommonClass.UserID_Add.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006110800\wkyg_code201006110800\wkyg_code201006101730\wkyg_code\CommonClass\obj\Release\CommonClass.UserID_Del.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006110800\wkyg_code201006110800\wkyg_code201006101730\wkyg_code\CommonClass\obj\Release\CommonClass.DataDic_New.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006110800\wkyg_code201006110800\wkyg_code201006101730\wkyg_code\CommonClass\obj\Release\CommonClass.F4COMR.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006110800\wkyg_code201006110800\wkyg_code201006101730\wkyg_code\CommonClass\obj\Release\CommonClass.F4COMW.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006110800\wkyg_code201006110800\wkyg_code201006101730\wkyg_code\CommonClass\obj\Release\CommonClass.DataDic.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006110800\wkyg_code201006110800\wkyg_code201006101730\wkyg_code\CommonClass\obj\Release\CommonClass.FORMBASE.resources
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006110800\wkyg_code201006110800\wkyg_code201006101730\wkyg_code\CommonClass\obj\Release\CommonClass.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006110800\wkyg_code201006110800\wkyg_code201006101730\wkyg_code\CommonClass\obj\Release\CommonClass.dll.licenses
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006110800\wkyg_code201006110800\wkyg_code201006101730\wkyg_code\CommonClass\obj\Release\CommonClass.dll
+C:\Documents and Settings\Administrator\桌面\wkyg_code201006110800\wkyg_code201006110800\wkyg_code201006101730\wkyg_code\CommonClass\obj\Release\CommonClass.pdb
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\obj\Release\CommonClass.FlexGrid_User.resources
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\obj\Debug\CommonClass.FlexGrid_User.resources
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\obj\Release\CommonClass.csproj.ResolveComReference.cache
+E:\五矿营钢厚板检验室资料\wkyg_code\CommonClass\obj\Debug\CommonClass.csproj.ResolveComReference.cache

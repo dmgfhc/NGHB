@@ -1,0 +1,1644 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="ContextMenu1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="Mnu_Acopy.Text" xml:space="preserve">
+    <value>Screen Copy</value>
+  </data>
+  <data name="Mnu_Mcopy.Text" xml:space="preserve">
+    <value>Master Copy</value>
+  </data>
+  <data name="Mnu_Scopy.Text" xml:space="preserve">
+    <value>Spread Copy</value>
+  </data>
+  <metadata name="ContextMenu2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>143, 17</value>
+  </metadata>
+  <data name="Mnu_Apaste.Text" xml:space="preserve">
+    <value>Screen Paste</value>
+  </data>
+  <data name="Mnu_Mpaste.Text" xml:space="preserve">
+    <value>Master Paste</value>
+  </data>
+  <data name="Mnu_Spaste.Text" xml:space="preserve">
+    <value>Spread Paste</value>
+  </data>
+  <metadata name="ImageList0.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>269, 17</value>
+  </metadata>
+  <data name="ImageList0.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAC2
+        GwAAAk1TRnQBSQFMAgEBDAEAAWwBAAFsAQABKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        AwABoAMAAXgDAAEBAQABCAYAAUsYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
+        AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
+        AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
+        AWYDAAGZAwABzAIAATMDAAIzAgABMwFmAgABMwGZAgABMwHMAgABMwH/AgABZgMAAWYBMwIAAmYCAAFm
+        AZkCAAFmAcwCAAFmAf8CAAGZAwABmQEzAgABmQFmAgACmQIAAZkBzAIAAZkB/wIAAcwDAAHMATMCAAHM
+        AWYCAAHMAZkCAALMAgABzAH/AgAB/wFmAgAB/wGZAgAB/wHMAQABMwH/AgAB/wEAATMBAAEzAQABZgEA
+        ATMBAAGZAQABMwEAAcwBAAEzAQAB/wEAAf8BMwIAAzMBAAIzAWYBAAIzAZkBAAIzAcwBAAIzAf8BAAEz
+        AWYCAAEzAWYBMwEAATMCZgEAATMBZgGZAQABMwFmAcwBAAEzAWYB/wEAATMBmQIAATMBmQEzAQABMwGZ
+        AWYBAAEzApkBAAEzAZkBzAEAATMBmQH/AQABMwHMAgABMwHMATMBAAEzAcwBZgEAATMBzAGZAQABMwLM
+        AQABMwHMAf8BAAEzAf8BMwEAATMB/wFmAQABMwH/AZkBAAEzAf8BzAEAATMC/wEAAWYDAAFmAQABMwEA
+        AWYBAAFmAQABZgEAAZkBAAFmAQABzAEAAWYBAAH/AQABZgEzAgABZgIzAQABZgEzAWYBAAFmATMBmQEA
+        AWYBMwHMAQABZgEzAf8BAAJmAgACZgEzAQADZgEAAmYBmQEAAmYBzAEAAWYBmQIAAWYBmQEzAQABZgGZ
+        AWYBAAFmApkBAAFmAZkBzAEAAWYBmQH/AQABZgHMAgABZgHMATMBAAFmAcwBmQEAAWYCzAEAAWYBzAH/
+        AQABZgH/AgABZgH/ATMBAAFmAf8BmQEAAWYB/wHMAQABzAEAAf8BAAH/AQABzAEAApkCAAGZATMBmQEA
+        AZkBAAGZAQABmQEAAcwBAAGZAwABmQIzAQABmQEAAWYBAAGZATMBzAEAAZkBAAH/AQABmQFmAgABmQFm
+        ATMBAAGZATMBZgEAAZkBZgGZAQABmQFmAcwBAAGZATMB/wEAApkBMwEAApkBZgEAA5kBAAKZAcwBAAKZ
+        Af8BAAGZAcwCAAGZAcwBMwEAAWYBzAFmAQABmQHMAZkBAAGZAswBAAGZAcwB/wEAAZkB/wIAAZkB/wEz
+        AQABmQHMAWYBAAGZAf8BmQEAAZkB/wHMAQABmQL/AQABzAMAAZkBAAEzAQABzAEAAWYBAAHMAQABmQEA
+        AcwBAAHMAQABmQEzAgABzAIzAQABzAEzAWYBAAHMATMBmQEAAcwBMwHMAQABzAEzAf8BAAHMAWYCAAHM
+        AWYBMwEAAZkCZgEAAcwBZgGZAQABzAFmAcwBAAGZAWYB/wEAAcwBmQIAAcwBmQEzAQABzAGZAWYBAAHM
+        ApkBAAHMAZkBzAEAAcwBmQH/AQACzAIAAswBMwEAAswBZgEAAswBmQEAA8wBAALMAf8BAAHMAf8CAAHM
+        Af8BMwEAAZkB/wFmAQABzAH/AZkBAAHMAf8BzAEAAcwC/wEAAcwBAAEzAQAB/wEAAWYBAAH/AQABmQEA
+        AcwBMwIAAf8CMwEAAf8BMwFmAQAB/wEzAZkBAAH/ATMBzAEAAf8BMwH/AQAB/wFmAgAB/wFmATMBAAHM
+        AmYBAAH/AWYBmQEAAf8BZgHMAQABzAFmAf8BAAH/AZkCAAH/AZkBMwEAAf8BmQFmAQAB/wKZAQAB/wGZ
+        AcwBAAH/AZkB/wEAAf8BzAIAAf8BzAEzAQAB/wHMAWYBAAH/AcwBmQEAAf8CzAEAAf8BzAH/AQAC/wEz
+        AQABzAH/AWYBAAL/AZkBAAL/AcwBAAJmAf8BAAFmAf8BZgEAAWYC/wEAAf8CZgEAAf8BZgH/AQAC/wFm
+        AQABIQEAAaUBAANfAQADdwEAA4YBAAOWAQADywEAA7IBAAPXAQAD3QEAA+MBAAPqAQAD8QEAA/gBAAHw
+        AfsB/wEAAaQCoAEAA4ADAAH/AgAB/wMAAv8BAAH/AwAB/wEAAf8BAAL/AgAD//8A/wD/AP8A/wD/AP8A
+        /wD/AP8A/wD/AP8A/wD/AP8A/wD/ANMA/xv/G24bAe0lGw3tERsB9xjsFRsM7SIbA+0jGwHtCwcB7REb
+        Ae8X9wHsEhsE7QrvBO0fGwHtAbwB7ALtIRsB7QH/AvMC8ALzAvAB8wEHAe0RGwHvAfcB7BTvAfcB7BEb
+        Ae0C7wHtAbwD8QLwAbwEBwHvAe0B7wLtHhsB7QG8A+wC7RcbCe0B/wHwAvMC8ALzAvABBwHtERsB7wH3
+        AewTGwHvAfcB7BEbAe0B8QEHAe8B9APxAvAB7QG8Au0BBwHvAe0B7wLtFhsJ7QHwAu0D7APtFBsB7QcH
+        Ae0B/wLwAvMC8ALzAfABBwHtERsB7wH3AewTGwHvAfcB7BEbAe0B8QEHAe8B9ATxAfAB7QG8Au0BBwHv
+        Ae0B7wLtFhsB7QPxBPIB7QHwAZIH7RQbAe0B8QYHAe0B/wHzAvAC8wLwAvMBBwHtERsB7wH3AewMGwb3
+        ARsB7wH3AewRGwHtAfEBBwHvAfQD8QLwArwDBwPvAu0WGwHtA/EB7QPyAe0B8ASSBO0UGwHtAfEBvAUH
+        Ae0B/wLzAvAC8wLwAfMBBwHtERsB7wH3AewCGw/3AhsB7wH3AewRGwHtAfEDBwn0AbwD7wLtFhsB7QPx
+        Au0C8gHtAfEE9wOSAe0UGwHtAfICvAQHAe0B/wHwAvMC8ALzAvABBwHtERsB7wH3AewDGwj3ARsE9wMb
+        Ae8B9wHsERsB7QLxEe0VGwbtAe8B7QHxAe0B8gTvA/cB7RQbAe0B8gW8AQcB7QH/AvAC8wLwAvMB8AEH
+        Ae0RGwHvAfcB7AQbBvcBGwT3BBsB7wH3AewRGwHtAfEB7Q7/A+0UGwHtCO8C7QHyAe8B7QXvAe0UGwHt
+        AfIC8AO8AQcB7QH/AfMC8ALzAvAC8wEHAe0RGwHvAfcB7AUbBPcBGwb3AxsB7wH3AewRGwHtAbwC/wy8
+        Av8BvAHtFBsB7QnvAe0B8wEHAe0CBwPvAe0UGwHtAfID8AO8Ae0B/wLzAvAC8wLwAgcB7REbAe8B9wHs
+        BhsC9wEbBPcGGwHvAfcB7BEbAe0BvAH/Du0B/wG8Ae0UGwHtCbwB7QH0AbwB7QUHAe0UGwHtAfMD8AO8
+        Ae0B/wHwAvMC8ALzBO0RGwHvAfcB7AYbAfcBGwT3ARsB9wUbAe8B9wHsEhsB7QG8Ae0M9AHtAbwB7RUb
+        Ae0J8wHtAfQB8AS8AgcB7RQbAe0B8wHxA/ACvAHtAf8C8ALzAvAB8wHtAfAC7REbAe8B9wHsBRsB9wEb
+        BPcBGwL3BRsB7wH3AewTGwLtAf8B8QHsAe0F7AHtAbwB7ALtFhsB7QH/B/MC7QH/AfEE8AK8Ae0UGwHt
+        AfMC8QTwAe0H/wEHA+0SGwHvAfcB7AQbAfcBGwT3ARsE9wQbAe8B9wHsFBsB7QH/AfEI/wHwAewB7Rgb
+        Bu0B8wHtAfAB7QH/BPED8AHtFBsB7QHzA/ED8AvtExsB7wH3AewDGwH3ARsE9wEbBvcDGwHvAfcB7BQb
+        Ae0B/wHxBuwC7QHwAu0ZGwHtAgcBvALtArwB7QH/BPID8QHtFBsB7QHzBfEE8AS8AQcB7RUbAe8B9wHs
+        AhsB9wEbBPcCGwf3AhsB7wH3AewUGwHtAf8B8QT/AfEE8AHsAe0ZGwHtAwcB7QO8Au0C/wXyAe0UGwHt
+        AfME8QbvA7wBBwHtFRsB7wH3AewCGwX3BBsG9wIbAe8B9wHsFBsB7QH/AfIB7AHtAuwB8QbtGRsB7QYH
+        A7wC7QL/A/IB7RQbAe0B9APxB+0B7wK8AQcB7RUbAe8B9wHsExsB7wH3AewUGwHtAf8B8gT/AfEB7QH0
+        AfIBBwHtGhsB7QcHBLwC7QL/AfIB7RQbAe0B9ALzAe0BBwG8AfAB8QHyAfMB9AHtAvIBvAHtFRsB7wH3
+        AewTGwHvAfcB7BQbAe0B/wHyBOwB8QHtAfIBBwHtGxsB7QgHBbwC7QH/Ae0UGwbtAQcBvAHwAfEB8wbt
+        FRsB7wH3FewB9wHsFBsB7QH/AfIE/wHxAe0BBwHtHBsB7QoHBbwC7RobAe0B/wHwAfEB7RsbAe8X9wHs
+        FBsB7Qb/AfQC7R0bEu0aGwHtAv8B8AHtGxsY7wHsFRsI7UsbA+3/G/8b/xv/G2EbAu0GGwLtHhsC7QYb
+        Au0fGwLtBhsC7UMbAu0BBwHsAu0CGwLtAfIBvALtGhsC7QEHAewC7QIbAu0B8gEHAu0bGwLtAQcB7ALt
+        AhsC7QHxAQcC7RwbDe0WGwLtAgcB8QEHApIC7QPyA7wC7RYbAu0CBwHxAQcCkgLtA/IDBwLtFxsC7QIH
+        AfEBBwKSAu0D8QMHAu0aGwHtAfAKvAHtFBsC7QIHA/EDBwHtBPIEvAHtFBsC7QIHA/EDBwHtBPIEBwHt
+        FRsC7QIHA/EDBwHtBPEEBwHtGhsB7QH/AfMC8ALzAvAC8wG8Ae0SGwLtAgcBkgH/A/EDBwHtBPIEvAHt
+        EhsC7QIHAZIB/wPxAwcB7QTyBAcB7RMbAu0CBwGSAf8D8QMHAe0E8QQHAe0aGwHtAf8C8wLwAvMC8AHz
+        AbwB7REbAe0CBwLxAZIB/wPxAwcB7QTyBLwB7REbAe0CBwLxAZIB/wPxAwcB7QTyBAcB7RIbAe0CBwLx
+        AZIB/wPxAwcB7QTxBAcB7RobAe0B/wHwAvMC8ALzAvABvAHtERsB7QH/A/EBkgH/AvEB/wHxAgcB7QPy
+        Av8DvAHtERsB7QH/A/EBkgH/AvEB/wHxAgcB7QPyAv8DBwHtEhsB7QH/A/EBkgH/AvEB/wHxAgcB7QPx
+        Av8DBwHtGhsB7QH/AvAC8wLwAvMB8AG8Ae0RGwHtAf8D8QGSA/8BkgHsAvEB7QHyBv8BvAHtERsB7QH/
+        A/EBkgP/AZIB7ALxAe0B8gb/AQcB7RIbAe0B/wPxAZID/wGSAewC8QHtAfEG/wEHAe0SGwntAf8B8wLw
+        AvMC8ALzAbwB7REbAe0B/wPxAZIB/wKSAfEBBwKSAu0G/wLtERsB7QH/A/EBkgH/ApIB8QEHApIC7Qb/
+        Au0SGwHtAf8D8QGSAf8CkgHxAQcCkgbtAv8C7RIbAe0B8Aa8Ae0B/wLzAvAC8wLwAfMBvAHtERsB7QH/
+        AfEC/wHsAZID8QMHAZIB7ALtAv8C7RMbAe0B/wHxAv8B7AGSA/EDBwGSAewC7QL/Au0UGwHtAf8B8QL/
+        AewBkgPxAwcB7QXvAu0UGwHtAf8B8wLwAvMB8AHtAf8B8ALzAvAC8wLwAbwB7REbAe0C/wOSAf8D8QQH
+        A5ID7RQbAe0C/wOSAf8D8QQHA5ID7RUbAe0C/wOSAf8D8QMHAe0G7wHtFBsB7QH/AvMC8ALzAe0B/wLw
+        AvMC8ALzAfABvAHtERsB7QHxAZIC8QGSAf8D8QQHAZIB8QEHAZIC7RQbAe0B8QGSAvEBkgH/A/EEBwGS
+        AfEBBwGSAewC7RQbAe0B8QGSAvEBkgH/A/EEBwTtAe8BBwHvAe0TGwHtAf8B8ALzAvAB8wHtAf8B8wLw
+        AvMC8ALzAbwB7REbAe0B/wPxAZIB/wPxBAcBkgHxAQcB7QHvAe0UGwHtAf8D8QGSAf8D8QQHAZIB8QIH
+        AZIB7QG8Ae0TGwHtAf8D8QGSAf8D8QQHAZIB8QIHAe0DBwHtEhsB7QH/AvAC8wLwAe0B/wLzAvAC8wLw
+        AQcBvAHtERsB7QH/A/EBkgH/AvEC/wMHAZIB8QHtAu8G7Q8bAe0B/wPxAZIB/wLxAv8DBwbtArwB7RIb
+        Ae0B/wPxAZIB/wLxAv8DBwGSAfEB7QEHAZIB7QIHAe0SGwHtAf8B8wLwAvMB8AHtAf8B8ALzAvAC8wTt
+        ERsB7QH/A/EBkgf/AQcBkgHtCO8B7Q8bAe0B/wPxAZIH/wEHAe0IvAHtERsB7QH/A/EBkgf/AQcBkgLt
+        AQcBkgHtArwB7RIbAe0B/wLzAvAC8wHtAf8C8ALzAvAB8wHtAfAC7REbAe0B/wPxApIG/wGSAe0J7wHt
+        DxsB7QH/A/ECkgb/AZIB7Qm8Ae0QGwHtAf8D8QKSBv8BkgHtAfEB7QEHAe0D8AHtEhsB7QH/AfAC8wLw
+        AfMB7Qf/AQcD7RIbAe0B/wHxBP8CkgL/ApIB7Qq8Ae0PGwHtAf8B8QT/ApIC/wKSAf8B7QrxAe0PGwHt
+        Af8B8QT/ApIC/wKSAe0B8AHxAu0C8QLwAe0SGwHtAf8C8ALzAvAL7RMbAe0I/wKSA/8B7QnzAe0PGwHt
+        CP8CkgP/Ae0J/wHtEBsB7Qj/ApIB/wHtCPEB7RMbAe0B/wHzAvAC8wLwAvMBvAHtGhsC7QT/ApIC/wKS
+        Av8B7QjzAe0QGwLtBP8CkgL/ApIB/wHtB/8B9AHtEhsC7QT/ApIC/wHtCfEB7RMbAe0B/wLzAvAC8wLw
+        AQcBvAHtHBsC7QKSBv8CkgLtAvMG7RIbAu0Ckgb/AZIG7QL/Ae0VGwLtApIF/wHtBvEC7RQbAe0B/wHw
+        AvMC8ALzBO0eGwLtBv8C7QIbAe0B8wHtGRsC7Qb/Au0EGwHtAf8B7RgbAu0G/wHtAvED7RYbAe0B/wLw
+        AvMC8AHzAe0B8ALtIBsC7QL/Au0FGwLtGxsC7QL/Au0GGwLtGxsC7QL/Au0BGwHtAfEB7RgbAe0H/wEH
+        A+0jGwLtCBsB7R0bAu0IGwHtHhsC7QQbAu0YGwvtfBsB7f8b/xv/G5kbAm1pGwNtMRsBbQH3AewBbWcb
+        AW0DBwFtJxsJbQHxAfcB7ARtFBsVbRcbDO0YGwFtAbwBbQIHDm0YGwFtAfEGkgFtAfEB9wHsAW0EkgFt
+        ExsBbQHxEgcBbRYbAe0BBwHwA/IB8QHwAbwBBwLvAfcB7RcbAW0FBwLvA20IkgFtFxsBbQH/AvED8AFt
+        AfEB9wHsAW0B8AO8AZIBbRMbAW0B/wLxAbwM/wLxAQcBbRUbAe0B7wHxAfIE/wLyAfEB8gIHAZIB7Rcb
+        Bm0C7wL3A20EvAGSAW0WGwVtAvABbQHxAfcB7AFtA/ACvAGSAW0TGwFtAf8C8QEHC/EB/wLxAQcBbRUb
+        Ae0CBwH0Av8B7wL/AfIB7wG8AfIBBwHvAe0YGwFtBP8DbQKSAu0CbQK8AZIBbRQbAm0FkgJtAfEB9wHs
+        AW0EkgHwAbwBkgFtExsBbQH/AvEBBwvxAf8C8QEHAW0VGwHtAgcB9AL/Ae8C/wHyAe8BvAHyAQcB7wHt
+        GBsBbQf/A20D7AFtAfABkgFtExsBbQKSBfMCkgFtAewBbQXzAvABkgFtExsBbQH/AvEBBwvxAf8C8QEH
+        AW0VGwHtAgcB9AL/Ae8C/wHyAe8BvAHyAQcB7wHtGBsBbQr/BG0B8AGSAW0SGwFtAbwC8wFtAf8D8QLz
+        AZIBbQjwAZIBbRMbAW0B/wLxAQcL8QH/AvEBBwFtFRsB7QIHAfQC/wHvAv8B8gHvAbwB8gEHAe8B7Rgb
+        AW0B/wH0C/8C8AGSAW0SGwFtAbwB8wH/AW0B/wHyA/EB8wGSAW0GkgLwAZIBbRMbAW0B/wLxAQcL8QH/
+        AvEBBwFtFRsB7QIHAfMC/wHvAv8B8gHvAfAB8gEHAe8B7RgbAW0B/wL0Cv8C8AGSAW0RGwFtAbwB8wL/
+        AW0B/wHzAu8CkgHzAZIBbQXzAvABkgFtExsBbQH/AvEBBwvxAf8C8QEHAW0VGwHtAgcB9AL/Ae8C/wHy
+        Ae8BvAHyAQcB7wHtGBsBbQH/A/QI/wPwAZIBbREbAW0BvAHzAv8BbQH/AfIF8wGSAW0D8QTwAZIBbRMb
+        AW0B/wLxAQcL8QH/AvEBBwFtFRsB7QIHAfQC/wHvAv8B8gHvAbwB8gEHAe8B7RgbAW0B/wT0Bv8B8QPw
+        AZIBbREbAW0BvAHzAv8BbQH/BfIB8wGSAW0FkgLwAZIBbRMbAW0B/wLxDAcBvALxAQcBbRUbAe0CBwH0
+        Av8B7wL/AfIB7wG8AfIBBwHvAe0YGwFtAf8C8wT0A/8D8QLwAZIBbREbAW0BvAHzAv8BbQH/BfIB8wGS
+        AW0F8wHxAfABkgFtExsBbQH/EfEBBwFtFRsB7QIHAfMC/wHvAv8B8gHvAbwB8gEHAe8B7RgbAW0B/wPz
+        BPQB/wXxAfABkgFtERsBbQG8AfMC/wFtAf8B8wLvApIB8wGSAW0H8QGSAW0TGwFtAf8R8QEHAW0VGwHt
+        AQcB8QEHA/8B7wHzAfIB8QHvAgcB7wHtGBsBbQH/BPMD9AfxAZIBbRIbAW0BvAHzAf8BbQH/BfMBkgFt
+        BpIC8QGSAW0TGwFtAf8R8QEHAW0VGwHtAQcB8Qf/AfEBvAIHAe8B7RgbAW0B/wXzA/IG8QGSAW0SGwFt
+        AbwC8wFtAf8B8wLyAvMBkgFtBvMC8QGSAW0TGwFtAf8C8QEHDP8C8QEHAW0UGxLtFxsBbQH/A/MH8gTx
+        AZIBbRMbAW0CvAXzArwBbQXyBO8BkgFtExsBbQH/AvEBBwttAf8C8QEHAW0UGwHtAZIB7wEHAfAD8gHx
+        AfABvAEHAu8B9wKSAe0XGwFtAf8E8wbyBO8BkgFtFBsCbQW8Am0FkgHyBm0TGwFtAf8C8QEHC20B/wLx
+        AQcBbRQbAe0B7wIHAfQC/wEHAf8B8wHyAQcBvAMHAe8B7RcbAW0B/wPzAfIB8wXyBm0WGwVtB/MB8gFt
+        Af8B8wG8AW0UGwFtAf8C8QEHBW0E8QJtAf8C8QEHAW0UGwHtAe8CBwH0Av8BBwH/AfQB8gEHAbwDBwHv
+        Ae0XGwFtAf8G8wTyAW0B/wHzAbwBbRgbAW0B/wbzBPIBbQHzAbwBbRUbAW0B/wLxAQcFbQTxAm0B/wLx
+        AQcBbRUbAe0BBwHxB/8B8QG8AgcB7wHtGBsBbQH/CPMC8gFtAfMBvAFtGRsBbQH/CPMC8gFtAbwBbRYb
+        AW0B/wLxAQcFbQEHA/ECbQH/AfEBBwFtFxsE7QPvB+0ZGwFtAf8J8wHyAW0BvAFtGhsBbQv/Am0XGwFt
+        A/8B8QVtBAcCbQHxAQcBbRobAe0B8gP/AfQB8gHxAbwB7RsbAW0L/wJtHBsMbRgbEm0bGwHtAfIE/wHy
+        AfEBvAHtHBsMbW8bCO3/G/EbAUIBTQE+BwABPgMAASgDAAGgAwABeAMAAQEBAAEBBQABYAEJFgAD//8A
+        /wD/AP8A/wD/AP8A/wD/AGoACw==
+</value>
+  </data>
+  <metadata name="MainMenu1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>551, 17</value>
+  </metadata>
+  <data name="Mnu_Clear.Text" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="Mnu_Refer.Text" xml:space="preserve">
+    <value>Refer</value>
+  </data>
+  <data name="MenuItem38.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="Mnu_Save.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Mnu_Delete.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="MenuItem39.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="Mnu_RowIns.Text" xml:space="preserve">
+    <value>RowIns</value>
+  </data>
+  <data name="Mnu_RowDel.Text" xml:space="preserve">
+    <value>RowDel</value>
+  </data>
+  <data name="Mnu_RowCan.Text" xml:space="preserve">
+    <value>RowCan</value>
+  </data>
+  <data name="MenuItem40.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="Mnu_ScreenCopy.Text" xml:space="preserve">
+    <value>Screen Copy</value>
+  </data>
+  <data name="Mnu_MasterCopy.Text" xml:space="preserve">
+    <value>Master Copy</value>
+  </data>
+  <data name="Mnu_SheetCopy.Text" xml:space="preserve">
+    <value>Sheet Copy</value>
+  </data>
+  <data name="Mnu_Copy.Text" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="Mnu_ScreenPaste.Text" xml:space="preserve">
+    <value>Screen Paste</value>
+  </data>
+  <data name="Mnu_MasterPaste.Text" xml:space="preserve">
+    <value>Master Paste</value>
+  </data>
+  <data name="Mnu_SheetPaste.Text" xml:space="preserve">
+    <value>Sheet Paste</value>
+  </data>
+  <data name="Mnu_Paste.Text" xml:space="preserve">
+    <value>Paste</value>
+  </data>
+  <data name="MenuItem41.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="Mnu_Excel.Text" xml:space="preserve">
+    <value>Excel</value>
+  </data>
+  <data name="Mnu_Print.Text" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="MenuItem42.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="Mnu_Exit.Text" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="Mnu_Control.Text" xml:space="preserve">
+    <value>Control_Key</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Mnu_Control.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="MenuItem17.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="MenuItem2.Text" xml:space="preserve">
+    <value>PLSQLGE</value>
+  </data>
+  <data name="MenuItem20.Text" xml:space="preserve">
+    <value>PLSQLCO</value>
+  </data>
+  <data name="MenuItem5.Text" xml:space="preserve">
+    <value>FORMBASE</value>
+  </data>
+  <data name="MenuItem1.Text" xml:space="preserve">
+    <value>Prototype</value>
+  </data>
+  <data name="MenuItem1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="mnu_ABA001OC.Text" xml:space="preserve">
+    <value>用户管理—AFA0010C</value>
+  </data>
+  <data name="mnu_ABA002OC.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnu_WZA0030C.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mnu_WZA0040C.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="menuItem27.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="menuItem48.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MenuItem3.Text" xml:space="preserve">
+    <value>安全管理</value>
+  </data>
+  <data name="Mnu_Horiz.Text" xml:space="preserve">
+    <value>水平排列</value>
+  </data>
+  <data name="Mnu_Vertical.Text" xml:space="preserve">
+    <value>垂直排列</value>
+  </data>
+  <data name="Mnu_Cascade.Text" xml:space="preserve">
+    <value>层叠排列</value>
+  </data>
+  <data name="Mnu_Windows.Text" xml:space="preserve">
+    <value>窗口管理</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="MainMenu1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <metadata name="tme_current.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>658, 17</value>
+  </metadata>
+  <metadata name="ContextMenu3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>778, 17</value>
+  </metadata>
+  <data name="Mnu_ColumnSort.Text" xml:space="preserve">
+    <value>Columns Sorting</value>
+  </data>
+  <data name="MenuItem11.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="Mnu_FrozenSetting.Text" xml:space="preserve">
+    <value>Cloumns Frozen Setting</value>
+  </data>
+  <data name="Mnu_FrozenCancel.Text" xml:space="preserve">
+    <value>Columns Frozen Cancel</value>
+  </data>
+  <data name="MenuItem13.Text" xml:space="preserve">
+    <value>RowIns</value>
+  </data>
+  <data name="MenuItem14.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="MenuItem15.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="MenuItem16.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="MenuItem18.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="MenuItem19.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <metadata name="MainMenu2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 54</value>
+  </metadata>
+  <data name="MenuItem22.Text" xml:space="preserve">
+    <value>标准</value>
+  </data>
+  <data name="MainMenu2.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <metadata name="ImageList2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>250, 54</value>
+  </metadata>
+  <data name="ImageList2.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAC0
+        JwAAAk1TRnQBSQFMAgEBDQEAAWwBAAFsAQABKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        AwABoAMAAXgDAAEBAQABCAYAAUsYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
+        AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
+        AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
+        AWYDAAGZAwABzAIAATMDAAIzAgABMwFmAgABMwGZAgABMwHMAgABMwH/AgABZgMAAWYBMwIAAmYCAAFm
+        AZkCAAFmAcwCAAFmAf8CAAGZAwABmQEzAgABmQFmAgACmQIAAZkBzAIAAZkB/wIAAcwDAAHMATMCAAHM
+        AWYCAAHMAZkCAALMAgABzAH/AgAB/wFmAgAB/wGZAgAB/wHMAQABMwH/AgAB/wEAATMBAAEzAQABZgEA
+        ATMBAAGZAQABMwEAAcwBAAEzAQAB/wEAAf8BMwIAAzMBAAIzAWYBAAIzAZkBAAIzAcwBAAIzAf8BAAEz
+        AWYCAAEzAWYBMwEAATMCZgEAATMBZgGZAQABMwFmAcwBAAEzAWYB/wEAATMBmQIAATMBmQEzAQABMwGZ
+        AWYBAAEzApkBAAEzAZkBzAEAATMBmQH/AQABMwHMAgABMwHMATMBAAEzAcwBZgEAATMBzAGZAQABMwLM
+        AQABMwHMAf8BAAEzAf8BMwEAATMB/wFmAQABMwH/AZkBAAEzAf8BzAEAATMC/wEAAWYDAAFmAQABMwEA
+        AWYBAAFmAQABZgEAAZkBAAFmAQABzAEAAWYBAAH/AQABZgEzAgABZgIzAQABZgEzAWYBAAFmATMBmQEA
+        AWYBMwHMAQABZgEzAf8BAAJmAgACZgEzAQADZgEAAmYBmQEAAmYBzAEAAWYBmQIAAWYBmQEzAQABZgGZ
+        AWYBAAFmApkBAAFmAZkBzAEAAWYBmQH/AQABZgHMAgABZgHMATMBAAFmAcwBmQEAAWYCzAEAAWYBzAH/
+        AQABZgH/AgABZgH/ATMBAAFmAf8BmQEAAWYB/wHMAQABzAEAAf8BAAH/AQABzAEAApkCAAGZATMBmQEA
+        AZkBAAGZAQABmQEAAcwBAAGZAwABmQIzAQABmQEAAWYBAAGZATMBzAEAAZkBAAH/AQABmQFmAgABmQFm
+        ATMBAAGZATMBZgEAAZkBZgGZAQABmQFmAcwBAAGZATMB/wEAApkBMwEAApkBZgEAA5kBAAKZAcwBAAKZ
+        Af8BAAGZAcwCAAGZAcwBMwEAAWYBzAFmAQABmQHMAZkBAAGZAswBAAGZAcwB/wEAAZkB/wIAAZkB/wEz
+        AQABmQHMAWYBAAGZAf8BmQEAAZkB/wHMAQABmQL/AQABzAMAAZkBAAEzAQABzAEAAWYBAAHMAQABmQEA
+        AcwBAAHMAQABmQEzAgABzAIzAQABzAEzAWYBAAHMATMBmQEAAcwBMwHMAQABzAEzAf8BAAHMAWYCAAHM
+        AWYBMwEAAZkCZgEAAcwBZgGZAQABzAFmAcwBAAGZAWYB/wEAAcwBmQIAAcwBmQEzAQABzAGZAWYBAAHM
+        ApkBAAHMAZkBzAEAAcwBmQH/AQACzAIAAswBMwEAAswBZgEAAswBmQEAA8wBAALMAf8BAAHMAf8CAAHM
+        Af8BMwEAAZkB/wFmAQABzAH/AZkBAAHMAf8BzAEAAcwC/wEAAcwBAAEzAQAB/wEAAWYBAAH/AQABmQEA
+        AcwBMwIAAf8CMwEAAf8BMwFmAQAB/wEzAZkBAAH/ATMBzAEAAf8BMwH/AQAB/wFmAgAB/wFmATMBAAHM
+        AmYBAAH/AWYBmQEAAf8BZgHMAQABzAFmAf8BAAH/AZkCAAH/AZkBMwEAAf8BmQFmAQAB/wKZAQAB/wGZ
+        AcwBAAH/AZkB/wEAAf8BzAIAAf8BzAEzAQAB/wHMAWYBAAH/AcwBmQEAAf8CzAEAAf8BzAH/AQAC/wEz
+        AQABzAH/AWYBAAL/AZkBAAL/AcwBAAJmAf8BAAFmAf8BZgEAAWYC/wEAAf8CZgEAAf8BZgH/AQAC/wFm
+        AQABIQEAAaUBAANfAQADdwEAA4YBAAOWAQADywEAA7IBAAPXAQAD3QEAA+MBAAPqAQAD8QEAA/gBAAHw
+        AfsB/wEAAaQCoAEAA4ADAAH/AgAB/wMAAv8BAAH/AwAB/wEAAf8BAAL/AgAD/wEAKBt4ACgbeAAUGwHw
+        Ext4ABMbAfAB7wG8AfARG3gAExsBvAHtAe8CBwHwDxt4ABMbAbwB7QHvAvcB7wK8DRt4AAsbAfIB8Ae8
+        Ae0B7wH3Au0C7wEHAbwB8AobeAALGwHwAQcB7wYHAe0B7wH3BO0B9wLvCht4AAsbAbwCBwK8AQcBvAHw
+        AbwB7QLvAZIF7QH3Cht4AAsbAbwBBwG8AvEBBwG8AfEB8AHtAQcB7wSSAu0B9wobeAALGwG8AgcC8AH3
+        Ae8BvAHwAe0BvAHvBPcCkgHvCht4AAobAfAB7wGSA/cBkgH3Ae8BBwHtAbwBBwPvAvcBkgHvCht4AAkb
+        AfABkgjvAZIB7QG8AQcF7wH3Ae8KG3gACRsBvAHtCe8B7QHwAQcC7wEHBO8KG3gACRsBvAHtAQcHvAEH
+        Ae0B8AYHAu8KG3gACRsBvAHtAfEE8wLyAfMB8AHtAvEDvAIHAu8KG3gACRsB8AGSAfIB8wXyAfAB7wHt
+        AfEB8gPxArwBBwHvCht4AAobAfABBwHvA/cB7wMHAe0B8QHyBfEBBwHvCht4AAsbAbwEBwH3Ae8CBwHt
+        AfAC8gTxAbwB7wobeAALGwG8BAcB7wMHAfcBBwHwAvIB8wHyAfEBvAEHCht4AAsbAbwMBwHwAfEC8gHw
+        AQcKG3gACxsBvAgHAbwFBwHxAfIB8AEHCht4AAsbAbwKBwK8BQcB7wobeAALGwG8Au8OBwLvCht4AAsb
+        AfABBxHvCht4AAwbEvAKG3gAKBt4ACgbeAAoG3gAKBt4AP8b8xsN8BEbGfAVGwzwHBsM8B8bAbwBBwzv
+        AfAPGwHwAQcX7wEHAbwRGwHwAbwBBwzvArwB8BYbAfABvAEHDO8CvAHwHBsBvAsHAe8B7QG8DxsB8AEH
+        AfcBkhT3AZIB7wG8EBsBvALvAvcK7wGSAfcC7wG8FBsBvALvAvcK7wGSAfcC7wG8FBsHvAIHA/EC8AHx
+        AfIB8AHxAfABBwHtAbwPGwHwAQcB9wHsAe8SBwHvAZIB7wG8DxsB8ATvAQcC8AO8BQcB7wKSAfcB7xMb
+        AfAE7wEHAvADvAUHAe8CkgH3Ae8TGwHwA+8BBwTvAQcB8gHxAvIC8QLyAfEB8AEHAe0BvA8bAfABBwGS
+        AewBvBHwAbwB7wGSAe8BvA8bAbwB7QMHBfEBvAH3AQcE7wGSAfcBkgH3ExsBvAHtAwcF8QG8AfcBBwTv
+        AZIB9wGSAfcTGwG8Ae0B7wMHA+8BBwHyAvEC8gLxAvIB8QEHAe0BvA8bAfABBwGSAewBvAsbB/AB7wGS
+        Ae8BvA8bAbwB7QG8AgcB8gTxAbwB9wEHAe8B9wLvAvcBkgH3ExsBvAHtAbwCBwHyBPEBvAH3AQcB7wH3
+        Au8C9wGSAfcTGwG8Ae0BBwG8BgcC8gLxAvIC8QHyAfEBBwHtAbwPGwHwAQcBkgHsAbwB8gHwCbwBBwTv
+        AbwBGgHvAZIB7wG8DxsBvAHtAbwBBwG8AfED8gLxA7wCBwLvAfcBkgH3ExsBvAHtAbwBBwG8AfED8gLx
+        A7wCBwLvAfcBkgH3ExsBvAHtAbwB8AYHA/IB8QPyAvEB8AEHAe0BvA8bAfABBwGSAewBvAHwAQcK7wP3
+        Ae8BvAHwAe8BkgHvAbwPGwG8Ae0CvAIHCPEB8AEHAfcB7wH3AZIB9xMbAbwB7QK8AgcI8QHwAQcB9wHv
+        AfcBkgH3ExsBvAHtAbwB8AK8BAcB8gHxAvIC8QLyAfEB8AEHAe0BvA8bAfABBwGSAewBvAEbAbwB7wb3
+        Ae8BBwHvAvcB7wG8ARsB8AHvAZIB7wG8DxsBvAHtArwBBwHvCQcC7wH3AZIB7QH3ExsBvAHtArwBBwHv
+        CQcC7wH3AZIB7QH3ExsBvAHtAbwB8AS8AgcB8gHwAfEC8gLxAvIB8QEHAe0BvA8bAfABBwGSAewBvAIb
+        AbwB7wT3Ae8BBwHvA/cBvAIbAfAB7wGSAe8BvA8bAbwB7QEHAfAB8gz0AfIBBwGSAe8TGwG8Ae0BBwHw
+        AfIM9AHyAQcBkgHvExsBvAHtAfAB8QHwA7wCBwHyAfMC8QLyAfAB8QHyAfEBBwHtAbwPGwHwAQcBkgHs
+        AbwEGwHvAvcB7wEbAe8E9wHvAbwBGwHwAe8BkgHvAbwPGwG8Ae0BvALzAfEKvAEHAfQB8wEHAe8TGwG8
+        Ae0BvALzAfEKvAEHAfQB8wEHAe8TGwG8Ae0B8AHxAvACvAIHAfIB8wHyAvEB8gHzAfEB8AIHAe0BvA8b
+        AfABBwGSAewBvAQbAfAC7wG8A/cB7wHwBBsB8AHvAZIB7wG8DxsBvAHtAbwB8AHvDO0B7wK8Ae8TGwG8
+        Ae0BvAHwAe8M7QHvArwB7xMbAbwB7QHwAfEC8AK8AgcB8gHwAvIC8QHzAfEB7wKSAe0BvA8bAfABBwGS
+        AewBvAQbAfABvAEHAe8C9wHvAgcEGwHwAe8BkgHvAbwRGwLvAQcB8QHzCvIC7wEHAbwVGwLvAQcB8QHz
+        CvIC7wEHAbwTGwG8Ae0B8ALxAvABvAIHAfIB8QHyAvMB8gHxAfABBwHvAfcBkgHwDxsB8AEHAZIB7AG8
+        BBsBvAEHAe8C9wHvAQcC7wQbAfAB7wGSAe8BvBEbAbwB7wEHAfIB8QHvBvcB7wEHAe0BkgHvAbwWGwG8
+        Ae8BBwHyAfEB7wb3Ae8BBwHtAZIB7wG8FBsBvAHtAfEB8gLxAvACBwHxAfIE8wHyAQcB9wGSAe8B8BAb
+        AfABBwGSAewBvAIbAbwDBwHvAfcB7wIHAe8B9wHvAbwCGwHwAe8BkgHvAbwSGwK8AfIJ8QEHAewB9wG8
+        GBsCvAHyCfEBBwHsAfcBvBUbAbwB7QHxAfID8QHwAgcH7wL3Ae8BvBEbAfABBwGSAewBvAEbAbwBBwHw
+        Ae8C9wHvAfAB7wT3Ae8BvAEbAfAB7wGSAe8BvBIbArwB8gHxBAcD7wIHAe0B7wG8GBsCvAHyAfEEBwPv
+        AgcB7QHvAbwVGwG8Ae0B8QHyA/EB8AG8BwcC7wEHAfASGwHwAQcBkgHsArwCBwHvAvcBBwG8ARsB7wT3
+        Ae8BBwG8AfAB7wGSAe8BvBIbArwB8gHxBPABvAQHAewB7wG8GBsCvAHyAfEE8AG8BAcB7AHvAbwVGwG8
+        Ae0B8QHyAvEBvAEHBe8BBwK8AQcB7wG8ExsB8AEHAZIB7AK8AgcC7wEHAbwCGwG8AQcE7wEHAbwB8AHv
+        AZIB7wG8EhsCvALyAbwCBwG8AfEE7wHtAe8BvBgbArwC8gG8AgcBvAHxBO8B7QHvAbwVGwG8Ae0B8QHy
+        AfEBvAfvAQcBvAHwAQcB7wG8ExsB8AEHAZIB7AG8ARsF8AQbBvABGwHwAe8BkgHvAbwSGwK8AvIBvAIH
+        AbwB8QHvAgcC7wG8GRsCvALyAbwCBwG8AfEB7wIHAu8BvBYbAbwB7QG8AfEBvALvAgcBvALwAwcBvAEH
+        Ae8BvBMbAfABBwGSAewBBxK8Ae8BkgHvAbwSGwK8AvIEBwHxAe8DBwG8GhsCvALyBAcB8QHvAwcBvBcb
+        AfAB9wIHA+8BBwHwA/EBBwTvAQcBvBMbAfABBwH3Ae0T9wKSAe8BvBIbArwH8gLvAQcBvBsbArwH8gLv
+        AQcBvBkbBrwBBwHwAfIB8AHvBbwB8BQbAfABBwHvCZIB9wHvAvcF7wH3ApIB9wHvAbwSGwK8AfEC8gLz
+        AfIB8QH3Ae8BvBwbArwB8QLyAvMB8gHxAfcB7wG8IBsBBwHwAfEBvAHvAfAZGwHwGQcBvBMbAbwHBwHv
+        AbweGwG8BwcB7wG8IRsB8AEHAu8B8BwbGPAVGwjwIBsI8CQbAvD/G/8b/xsgGwLwBhsC8B4bAvAGGwLw
+        HxsC8AYbAvBDGwHwAbwBBwHvAbwB8AIbAfABvAIHAbwB8BobAfABvAEHAe8BvAHwAhsB8AG8AgcBvAHw
+        GxsB8AG8AQcB7wLwAhsC8AIHAbwB8BwbDfAWGwHwAbwD7wL3Ae8CvAIHAfADBwK8FhsB8AG8A+8C9wHv
+        ArwCBwHwAQcB7wEHArwXGwHwAbwBBwLvAfcC7wK8AQcB7wIHAe8BBwG8AfAZGwG8AQcM7wHwExsB8AG8
+        AQcB7wMHAe8C9wHvAQcBvAHwAfIB8AG8AQcB7wH3AfATGwHwAbwBBwHvAwcB7wL3Ae8BBwG8AfAB8gIH
+        Au8B9wHwFBsB8AG8AQcB7wMHAe8C9wHvAQcCvAHwAbwBBwLvAQcBvBgbAbwCBwm8AQcB7QG8ERsB8AG8
+        AQcB7wEHAbwC8QHwAwcB7wG8AfEC8gHwArwBBwHtAbwRGwHwAbwBBwHvAQcBvALxAfADBwHvAbwB8QLy
+        AwcB7wHtAbwSGwK8AQcC7wG8AfAB8QHwAbwBBwLvAQcD8QG8AwcB7wG8GBsCvAHxAfII8QG8Ae0BvBAb
+        AbwDBwHvAQcD8QHwAwcB7wG8A/IB8AK8AQcB7QG8EBsBvAMHAe8BBwPxAfADBwHvAbwD8gQHAe0BvBEb
+        AbwFBwH0AfIB8QHwAbwBBwHvAQcBvAPxAbwDBwHvAbwYGwK8A/IC8QLyA/EBvAHtAbwPGwG8AwcB8AEH
+        AbwB8gHxAfIB8QG8AgcB7wG8A/IB8QHwAbwBBwHtAbwPGwG8AwcB8AEHAbwB8gHxAfIB8QG8AgcB7wG8
+        A/IB8AMHAe0BvBAbAbwBBwK8AfABvAEHAf8B8gLxAbwBBwHvAQcBvAPxAfADBwHvAbwYGwK8AfIB8QLy
+        AvEC8gLxAbwB7QG8DxsCvALwAfECvAPyAfEBvAEHAbwB7wHwAvMB/wHzAfEB8AEHAe0BvA8bArwB8QHw
+        AfECvAPyAfEB8AK8Ae8BvAHyAfMB/wHzAfEBvAEHAe0BvBAbAbwBBwH0AfIB8QG8AQcB/wHzAfIB8QK8
+        AgcBvALyAfQB8wHxAbwBBwHvAbwRGwe8AQcBvAHyAvEC8gLxAvIB8QG8Ae0BvA8bArwB8gLxArwD8gEH
+        Ae8BBwG8Ae8BvAH0BP8B8gEHAe0BvA8bArwB8gLxArwD8gEHAe8BBwG8Ae8BvAHzA/8B9AHyAQcB7QG8
+        EBsBvAEHAf8B8gHxAbwBBwH/AfMB8QEHAe8BvAMHAvIC8wH0AfMC7wG8EBsB8AH3Bu8B9wEHAvIC8QLy
+        AvEB8gHxAbwB7QG8DxsCvAHyAfEB8gK8AfAEBwLvAZIB7wHxAfQC/wH0AfEB7wH3AfAPGwK8AfIB8QHy
+        ArwB8AQHAu8BkgHvAfEB9AL/AfQB8QHvAfcB8BAbAbwBBwH/AfMB8gG8AQcB8wQHAe8E9wLvAQcC8QH3
+        Ae8BvBAbAbwB7QEHArwBBwK8AgcD8gLxAvID8QG8Ae0BvA8bArwC8gHzAfAC7wPwAwcB9wLtAe8B9AHy
+        AQcB7wLwEBsCvALyAfMB8ALvAfAB8QHwAwcB9wLtAe8B9AHyAQcB7wLwERsBvAEHAf8C8wHwAfcBBwHw
+        AfEB8AG8AQcB7wL3BO8B9wHvAvARGwG8Ae0B8gHzAvEC8gIHAfIB8QLyAvEC8gLxAbwB7QG8DxsCvAHz
+        Af8B7wH3AQcD8QHwBAcB7wL3ApIB7wG8EhsCvAHzAf8B7wH3AQcE8QG8AwcB7wL3ApIB7wG8ExsBvAEH
+        Af8B8wEHAfcB7wH/AfIB8QHwAbwBBwHvAvcE7wH3Ae8TGwG8Ae0B8wH0AfIC8QHyAfABvAHyAfAB8QLy
+        AvEC8gHxAbwB7QG8DxsBvAIHAZIDvAHyAvEB8AMHAe8DBwGSAe0B7wG8EhsBvAIHAZIDvAHyAvEB8AcH
+        AZIB7AHtAe8BvBIbAbwBBwHxAQcCvAEHAf8B8gHxAfABvAMHAfcC7QGSAe8BBwHvAe0BvBEbAbwB7QHx
+        A/IB8AHxArwB8gHzAvEC8gHwAfEC8gG8Ae0BvA8bArwB8gLxArwB8gPxAfAGBwGSAe8BBwG8EhsCvAHy
+        AvECvAHyAvEB8AG8BwcB9wPvEhsBvAEHAf8B8gHxAbwBBwH/AfIC8QG8BAcBvAEHA+8CBwHvAbwQGwG8
+        Ae0C8gHxAfIB8wHxAgcB8gHzAfIC8QHyAfMB8QK8AQcB7QG8DxsCvAHyAvECvAPyAfQB8wG8AwcE7wX3
+        Ae8BvA0bArwB8gLxArwD8gH0AfMBvAEHAe8B9wSSAe8CBwH3AbwQGwG8AQcB/wHyAfEBvAEHAf8C8wL0
+        BQcBkgHvAfcB7wIHAe8BvBAbAbwB7QLzAvEB8wHyAbwBBwHyAfAC8gLxAfMB8QHvApIB7QG8DxsCvAHy
+        AvECvAHyBP8C9AEHAvcI7wEHAbwNGwK8AfIC8QK8AfIE/wL0AQcB7wYHAbwCBwG8DxsBvAEHAf8B8gHx
+        AbwBBwHzBP8B9AHzAQcB7wH3Ae0B7wH3Ae8BBwG8AQcBvBAbAbwB7QLzAfIC8QHyAfABvAHyAfEB8gLz
+        AvIB8AEHA/cB8A8bArwB8gHxAfIB8AEHAbwB8wH0Av8B9AHzAe8B9wnvAQcBvA0bArwB8gHxAfIB8AEH
+        AbwB8wH0Av8B9AHzAQcB7wEHCrwOGwG8AQcB/wLyAfACBwHyAfQC/wHzAfEBBwHvAQcB7QLvAQcC8AEH
+        AbwQGwG8Ae0B8QHzAvIC8QK8AfEG8gEHAfcBkgHvAbwQGwK8AvIC9AHzAfICvAHxAfICvAHvAgcHvAIH
+        AbwNGwK8AvIC9AHzAfICvAHxAfICvAHwAgcI8QK8AfANGwG8AQcB/wHzAvQC8wLwAfEB8gG8Au8BBwG8
+        AfcB7wG8AvABvAEHAbwQGwG8Ae0B8QHyAfEC8gHxAbwBBwHvAQcD7wIHA+8BvBEbArwB8AHxA/8B9ALw
+        ArwC8AHxArwH8gHwAQcBvA0bArwB8AHxA/8B9ALwArwC8AHyAbwB8Ab0AfMB8AK8DhsBvAEHAvIB9AP/
+        AfEB8AK8AfAB7wEHAfAB8QG8AfAC8QHwAfcBvBEbAbwB7QHyAfMC8QLyAfEB8AG8AfADBwXwExsB8AIH
+        AfED8gG8AfAC8gHwAbwB8QG8AQcB8AHzAfIB8QPwAbwBBwG8DhsB8AIHAfED8gG8AfAC8gHwAbwB8AEH
+        AbwD8gHzAvQB8QG8AfAQGwG8AQcBvAHxA/IC8AHxAfICBwHwBfEB8AG8Ae8B8BEbAbwB7QHyAfMB8gLx
+        AvIB8QG8AwcBvBkbAfACvAMHAfIB8wL/AfMB8gEHAu8BBwHwAfEGBwG8DxsB8AK8AwcB8gHzAv8B8wHy
+        Au8EBwG8AvIBBwG8EhsDvAEHAu8B8QHzAfQB/wHyArwC8QO8AgcBvBIbAbwB7QHxA/IC8QHyAfAC7wH3
+        Ae8BvBsbAfABvAEHAe8C8wL/AvMB7wEHArwEBwO8AfASGwHwAbwBBwHvAvMC/wLzAe8BBwO8AwcCvBUb
+        AfABvALvAfEB8wH0Af8B8gG8AQcCvAH3Ae8BBwG8AfATGwG8Ae0B8gHzAvIB8wHyAfEBvAHvAQcBkgHv
+        AbwdGwHwAbwBBwG8AvEBvAEHAbwB8AIbAbwCBwG8GBsB8AG8AQcBvALxAbwBBwG8AfADGwG8Au8B8Bgb
+        AfABvAEHAbwB8QHyAwcBvAEHAe0BvAHwFRsBvAHtAfEF8gHwAQcBkgH3Ae8BvCAbAvACBwLwBRsDvBob
+        AvACBwLwBRsB8AK8GxsB8AG8AgcD8AG8AQcB7QG8FhsB8AHvBwcD7wG8IxsC8CYbAvAoGwHwBBsBvAH3
+        AfAXGwvwfBsB8P8b/xtYGwLwaRsCvAHwMRsBBwHtAewBB2cbAbwBkgHsAfcBByYbAfAIvAEHAfcBkgLs
+        Ae8CvBQbFbwXGwzwFxsBvAHsBPcOvBcbAfABBwGSB+wB7QL3AewB6wLsAe0BvBIbAbwB7ALtEuwBvBUb
+        AbwBBwvvAbwWGwG8AW0E7wPtBOwG7QGSAQcWGwG8Au8FkgLsAvcB7QHsAe0CkgLsAbwRGwG8AW0B7wEH
+        EO8BkgFtAbwUGwG8AgcBvATwAbwCBwLvAfcB7wG8FRsBvAHsAfcC7wH3AewC7QHsAusD7AHtApIB7QHs
+        AZIWGwHvAfcD7wIHAe8B7QHvAfcC7QMHAe8B7QFtAbwRGwG8AW0B8AHxArwM8gHxAbwB7wFtAbwTGwEa
+        AQcB7wG8AfIC9ALzAfIB8QHwAbwCBwH3Ae8BvBUbAQcB9wLtA5IB7QLsAe0D7AH3Ae8BBwHvAe0B7BQb
+        AbwBBwGSA+wBkgLvAfcB7wH3Au0B7wO8AQcB7QFtAbwRGwG8AW0B8AHyAfABvAvyAfMB8gHwAe8BbQG8
+        ExsBvALvAbwB8wH/AfMB8gHzAf8B8gPwAQcC7wG8FhsBBwLvAfEB8gG8AfcC7QbsAu8BkgHsEhsB8AEH
+        AZIB7QH3Ae8D9wLtAfcB7wLtAfcDBwG8AQcB7QFtAbwRGwG8AW0B8AHyAfABBwvxAfMB8gHwAe8BbQG8
+        ExsBvAIHAbwB9AH/AfMB8gHzAf8B8gK8AfABBwHvAQcBvBYbAbwBBwHwA/8B8gHxAbwC7QTsAe0B9wGS
+        AewRGwHwAQcD9wEHAfAB8QHwAbwB7wGSAuwB7QHvBfABBwHtAW0BvBEbAbwBbQHwAfIB8AEHC/EB8wHy
+        AfAB7wFtAbwTGwG8AgcBvAH0Af8B8wHyAfMB/wHyArwB8QEHAe8BBwG8FhsBvAEHAfAG/wLyAQcB9wLs
+        Ae0B9wGSAewRGwEHAu8B8QG8AQcBvAHyAfEB8gHxAQcBkgFtAe8BBwS8AfABBwHtAW0BvBEbAbwBbQHw
+        AfIB8AEHC/EB8wHyAfAB7wFtAbwTGwG8AgcBvAH0Af8B8wHyAfMB/wHyArwB8QEHAe8BBwG8FhsBvAEH
+        AfAI/wH0AfMC8gHwAQcBkgHsERsBBwHvAQcB9AHxAQcBvAHyA/EBvAH3AW0B7QXvAbwBBwHtAW0BvBEb
+        AbwBbQHwAfIB8AEHC/EB8wHyAfAB7wFtAbwTGwG8AgcBvAHzAf8B8wHyAfMB/wHyArwB8QEHAe8BBwG8
+        FhsBvAEHAbwC9Ar/AfEBBwGSAewQGwG8Au8B8gH/AfIBBwG8AfID7wEHAbwB7QHsAQcD8gLxAQcB9wFt
+        AbwRGwG8AW0B8AHyAfABBwvxAfMB8gHwAe8BbQG8ExsBvAIHAbwB9AH/AfMB8gHzAf8B8gK8AfEBBwHv
+        AQcBvBYbAbwBBwG8A/QI/wLxAQcBkgHsEBsBvALvAfMB/wHyAQcBvAHzBPIB8QGSAewB7wTxAfABvAH3
+        AW0BvBEbAbwBbQHwAfIB8AEHC/EB8wHyAfAB7wFtAbwTGwG8AgcBvAH0Af8B8wHyAfMB/wHyArwB8AEH
+        Ae8BBwG8FhsBvAEHAbwF9AT/AfQB8gLwAQcBkgHsEBsBvALvAfMB/wHyAQcBvAHzBPIB8QGSAuwDkgHv
+        ArwB9wFtAbwRGwG8AW0B8AHyAfAMBwG8AvAB7wFtAbwTGwG8AgcBvAH0Af8B8wHyAfMB/wHyArwB8AEH
+        Ae8BBwG8FhsBvAEHAbwB9AHzBPQC/wH0AfID8QG8AfcB7BAbAbwC7wHzAf8B8gEHAbwB8wLyAfEB8gHx
+        AZIB7AEHBPIB8QG8AfcBbQG8ERsBvAFtAfAB8g/xAfAB7wFtAbwTGwG8AgcBvAHzAf8B8wHyAfMB/wHy
+        ArwB8QEHAe8BBwG8FhsBvAEHAbwD8wT0AfMB8gTxAbwB9wHsEBsBvALvAfIB/wHyAQcBvAHyAgcB7wEH
+        AbwB7QHsAQcB8QPwAfEBvAH3AW0BvBEbAbwBbQHwAfIP8QHwAe8BbQG8ExsBvAIHAvAB9AH/AfMB8QH0
+        AfMB8AMHAe8BBwG8FhsBvAEHAbwE8wH0AvMB8gXxAbwB9wHsERsBBwHvAQcB8wHxAQcBvAHzA/IBvAH3
+        AW0B7QXvArwB9wFtAbwRGwG8AW0B8AHyAvEM8gHxAfAB7wFtAbwTGwG8Ae8BBwHwAfID8wHyAfMB8gHw
+        AwcC7wG8FhsBvAEHAbwF8wTyBPEBvAH3AewRGwEHAu8B8gHwAQcBvAPzAfIBvAGSAewBvAPxA/ABBwH3
+        AW0BvBEbAbwBbQHwAfIB8AG8C/EB8wHyAfAB7wFtAbwTGwHvApIC7wQHA+8C9wOSAe8B8BUbAbwBBwG8
+        BPMF8gHxA/ABBwH3AewRGwHwAQcB7wIHAfAB8QLyAfEBBwH3Ae0BBwG8AfAB8QHwA+8B9wHtAW0BvBEb
+        AbwBbQHwAfIB8AHvC+wB8QHyAfAB7wFtAbwTGwH3AZIB7wEHAbwE8AK8AQcC7wL3AZIB7wG8FRsBvAEH
+        AbwE8wXyAbwD7wH3AuwSGwHwAQcBkgH3Ae8DBwHvAfcBkgH3AwcBvAEHAewC7QPsAbwRGwG8AW0B8AHy
+        AfAB7wVtBOwCbQHwAfIB8AHvAW0BvBMbAu8BBwG8AfMB9AHzAvIB8wHxAbwEBwLvAbwVGwG8AQcBvAXz
+        BPIBBwHtAZIB7QLsAe0UGwG8AQcB9wHtAZIB9wHvAQcBvAHwBPEBBwFtAgcB9wHtAbwSGwG8AW0B8AHy
+        AfAB7wRtAewDBwHvAewBbQHwAfIB8AHvAW0BvBMbAQcB7wEHAfAC/wH0AvMB/wHyAfAEBwHvAQcB8BUb
+        AbwBBwG8AfQF8wPyAQcB7QHwAQcC9wEHFhsC7wEHAvAB8gPzA/IBvAFtAgcB7wEHExsBvAFtAfAB8gHw
+        Ae8EbQHsAfAC8QEHAewBbQHwAfIBvAH3AewBvBMbARoCBwG8A/MC8gHzAfEBvAMHAe8BBwG8AfIVGwG8
+        AQcBvAH0B/MB8gEHAZIB8gEHAe8BBxcbAgcB8gnzAfABbQH3Ae8BBxQbAbwBbQHxAfMB8QEHBG0B7AEH
+        AfAB8QEHAewBbQLwAe8B9wG8FRsBvAEHAu8BBwHwAfEB8AG8AgcB7wH3Ae8BBwG8FxsBvAEHAbwB9Ajz
+        AQcB7QEHAfcBBwHwFxsBvAEHAbwJ8QEHAW0B7QEHAfAUGwG8AW0BBwHxAfAB7wRtAesD7wGSAewBbQPv
+        AQcXGwHwAbwB7QG8AfMB9AHzAfIB8AG8AQcB7wG8AfAYGwG8AgcJ8gEHAewB7QEHAfAZGwEHAfcJkgHt
+        AewBBwHwFRsBvAHsAe0BkgLtDOwB9wEHGRsB8AHvAfAB8gLzAfIB8AG8AgcbGwEHAfcL7QG8HBsMvBgb
+        EbwB8BsbAfAG7wH3Ae8B8BwbDPBvGwfw/xtSGwFCAU0BPgcAAT4DAAEoAwABoAMAAXgDAAEBAQABAQUA
+        AWABCRYAA///AP8A/wD/AP8A/wD/AP8A/wBqAAs=
+</value>
+  </data>
+  <metadata name="ImageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>363, 54</value>
+  </metadata>
+  <data name="ImageList1.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAADc
+        KAAAAk1TRnQBSQFMAgEBDAEAAXQBAAF0AQABKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        AwABoAMAAXgDAAEBAQABCAYAAUsYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
+        AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
+        AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
+        AWYDAAGZAwABzAIAATMDAAIzAgABMwFmAgABMwGZAgABMwHMAgABMwH/AgABZgMAAWYBMwIAAmYCAAFm
+        AZkCAAFmAcwCAAFmAf8CAAGZAwABmQEzAgABmQFmAgACmQIAAZkBzAIAAZkB/wIAAcwDAAHMATMCAAHM
+        AWYCAAHMAZkCAALMAgABzAH/AgAB/wFmAgAB/wGZAgAB/wHMAQABMwH/AgAB/wEAATMBAAEzAQABZgEA
+        ATMBAAGZAQABMwEAAcwBAAEzAQAB/wEAAf8BMwIAAzMBAAIzAWYBAAIzAZkBAAIzAcwBAAIzAf8BAAEz
+        AWYCAAEzAWYBMwEAATMCZgEAATMBZgGZAQABMwFmAcwBAAEzAWYB/wEAATMBmQIAATMBmQEzAQABMwGZ
+        AWYBAAEzApkBAAEzAZkBzAEAATMBmQH/AQABMwHMAgABMwHMATMBAAEzAcwBZgEAATMBzAGZAQABMwLM
+        AQABMwHMAf8BAAEzAf8BMwEAATMB/wFmAQABMwH/AZkBAAEzAf8BzAEAATMC/wEAAWYDAAFmAQABMwEA
+        AWYBAAFmAQABZgEAAZkBAAFmAQABzAEAAWYBAAH/AQABZgEzAgABZgIzAQABZgEzAWYBAAFmATMBmQEA
+        AWYBMwHMAQABZgEzAf8BAAJmAgACZgEzAQADZgEAAmYBmQEAAmYBzAEAAWYBmQIAAWYBmQEzAQABZgGZ
+        AWYBAAFmApkBAAFmAZkBzAEAAWYBmQH/AQABZgHMAgABZgHMATMBAAFmAcwBmQEAAWYCzAEAAWYBzAH/
+        AQABZgH/AgABZgH/ATMBAAFmAf8BmQEAAWYB/wHMAQABzAEAAf8BAAH/AQABzAEAApkCAAGZATMBmQEA
+        AZkBAAGZAQABmQEAAcwBAAGZAwABmQIzAQABmQEAAWYBAAGZATMBzAEAAZkBAAH/AQABmQFmAgABmQFm
+        ATMBAAGZATMBZgEAAZkBZgGZAQABmQFmAcwBAAGZATMB/wEAApkBMwEAApkBZgEAA5kBAAKZAcwBAAKZ
+        Af8BAAGZAcwCAAGZAcwBMwEAAWYBzAFmAQABmQHMAZkBAAGZAswBAAGZAcwB/wEAAZkB/wIAAZkB/wEz
+        AQABmQHMAWYBAAGZAf8BmQEAAZkB/wHMAQABmQL/AQABzAMAAZkBAAEzAQABzAEAAWYBAAHMAQABmQEA
+        AcwBAAHMAQABmQEzAgABzAIzAQABzAEzAWYBAAHMATMBmQEAAcwBMwHMAQABzAEzAf8BAAHMAWYCAAHM
+        AWYBMwEAAZkCZgEAAcwBZgGZAQABzAFmAcwBAAGZAWYB/wEAAcwBmQIAAcwBmQEzAQABzAGZAWYBAAHM
+        ApkBAAHMAZkBzAEAAcwBmQH/AQACzAIAAswBMwEAAswBZgEAAswBmQEAA8wBAALMAf8BAAHMAf8CAAHM
+        Af8BMwEAAZkB/wFmAQABzAH/AZkBAAHMAf8BzAEAAcwC/wEAAcwBAAEzAQAB/wEAAWYBAAH/AQABmQEA
+        AcwBMwIAAf8CMwEAAf8BMwFmAQAB/wEzAZkBAAH/ATMBzAEAAf8BMwH/AQAB/wFmAgAB/wFmATMBAAHM
+        AmYBAAH/AWYBmQEAAf8BZgHMAQABzAFmAf8BAAH/AZkCAAH/AZkBMwEAAf8BmQFmAQAB/wKZAQAB/wGZ
+        AcwBAAH/AZkB/wEAAf8BzAIAAf8BzAEzAQAB/wHMAWYBAAH/AcwBmQEAAf8CzAEAAf8BzAH/AQAC/wEz
+        AQABzAH/AWYBAAL/AZkBAAL/AcwBAAJmAf8BAAFmAf8BZgEAAWYC/wEAAf8CZgEAAf8BZgH/AQAC/wFm
+        AQABIQEAAaUBAANfAQADdwEAA4YBAAOWAQADywEAA7IBAAPXAQAD3QEAA+MBAAPqAQAD8QEAA/gBAAHw
+        AfsB/wEAAaQCoAEAA4ADAAH/AgAB/wMAAv8BAAH/AwAB/wEAAf8BAAL/AgAD//8A/wD/AP8A/wD/AP8A
+        /wD/AP8A/wD/AP8A/wD/AP8A/wD/ANMA/xvNGwEHJBsB8AG8DAcB8BAbAQgBBxbvAbwB8BQbAfAMBwHw
+        HxsBBwERARwBvAHwIRsB7wHrChIBEwFDAQcPGwGYAXIBTxZJAXIB7xEbAfABBwHvARwCEwkSAW0B7QHv
+        AQcdGwHvAQABFAHrAe0BByAbAfcL7AHqAQAB7w8bAZgBTwMnEwIBJwFPAZgRGwHvAesCEwFtBm4B6wNt
+        AxMB6gHvAfAbGwHvAQACSwFKAeoB7wEHAbwVGwHwB+8C7AEHArsCCAO7AQgBmAFyAQAB7w8bAZgBTwEn
+        ASETTwECAScBTwGYERsDbQHqAQcBeQV0BHMBbgFKARMBEgFDAQcTGwHwAQcG7wHsAQABbwFMASoBJAFE
+        AeoB7QHvAQcTGwEHAUMG6gEVAW0BBwEIAsEBCAPBAQgBBwHsAQAB7w8bAZgBTwEnASETmAECAScBTwGY
+        ERsBEgLsAesBGwF5BHQDcwFuAXMDbgFtAQAB7xMbAQcB7AHqBW0B6gEAAXQBUgIrAiQBSwETAW0TGwHv
+        AQAB6wHsAm4C7AHqAesBBwHBAQgDwQEIAsEBCAHsAQAB7w8bAZgBTwEnASEBBwsbBggBmAECAScBTwGY
+        ERsBEgHsARwB7AH2AZkBeQN0A3MBbgFzAm4BcwHrAQAB7xMbAQcB7AHrAu8B7QH3Ae8B7AEAAXQCUgFM
+        AysBIwEUExsB7wEAARwFmQFzAewBBwHBAggCwQIIAsEBcgEAAe8PGwGYAU8BJwEhAQcBGwkIAZgBUARP
+        Ae0BmAECAScBTwGYERsBEgHsARwBdAEbBZkEHAF0AXMCHAHrAQAB7xMbAQcB7AHtAvEBbQGSAfAB7wEA
+        AXQFUgExASoBShMbAe8BAAEcBZkC7AEHAsECCALBAQgCwQFyAQAB7w8bAZgBTwEnASEBBwEIAZcITwJJ
+        AicBAgFPAZgBmQECAScBTwGYERsBEgHsAZkCHAEICBoBmQN0AesBAAHvExsB9wHrAewC7wERARMB9wHv
+        AQABdAZSAQMBShMbAe8BAAEcBZkC7AEHAQgDwQEIAsEBCAEHAewBAAHvDxsBmAFPAScBIQEHARsBmAFP
+        BicBTwFQAUkCJwFPAZgBGwEIAQIBJwFPAZgRGwESAewBmQ8cAesBAAHvEhsBvAESAhECQwERARQB6wHs
+        AQABdAZSAUsBShMbAe8BAAEcBZkC7AEHAggCwQIIAsEBuwHsAQAB7w8bAZgBTwEnASEBBwIbAe8BSQQn
+        AUkBlwFPAycB9wHwARsBCAECAScBTwGYERsBEgHsAZkBGwz0ARoBmQHrAQAB7xEbAQcBDwFxBpYBcQFD
+        AQABdAFzAksDUgFLAUoTGwHvAQABHAWZAuwBBwHBAQgDwQIIAsEBcgEAAe8PGwGYAU8BJwEhAQcDGwHw
+        AUkCJwFJAfABTwQnAU8BmAEbAQgBAgEnAU8BmBEbARIB7QEbAfILmQEaAhsBHAEAAe8RGwHvAQABcQed
+        AXEBAAF0AXMBSwFSAlMBUgFLAUoTGwHvAQABHAWZAuwBBwLBAggCwQIIAQcB7AEAAe8PGwGYAU8BJwEh
+        AQcEGwGZAlABHAMnAVABmQQbAQgBAgEnAU8BmBEbARIB7QEcAUMMAAESAe8BHAEAAe8RGwHvAQABkQe6
+        AZEBAAF0AXMBSwFSA1kBUQFKExsB7wEAARwCGgOZAuwBBwEIA8EBCAHBAZ0BSQEPAQ4BAAHvDxsBmAFP
+        AScBIQEHBBsBmQFzAXIBTwInAU8CcgQbAQgBAgEnAU8BmBEbAe8B7AHqARIL8wEHAewBEgHqAfASGwHv
+        AQABnQfBAZ0BAAF5AnoEWQFRAUoTGwHvAQABHAMaApkC7AEHAggCwgIIAZ0BbQEUAREBDwEHDxsBmAFP
+        AScBIQEHAxsBvAFyAk8CJwNPAUkBvAMbAQgBAgEnAU8BmBIbAe8BEgEVAf8BGQEJB7UBGQGRARQBEgGZ
+        ExsBBwEPBbsCwQGdAUkBAAF5BXoBWQFRAUoTGwHvAQABHAQaAZkC7AHvAvEC8ALxAe0BFQEPARMBvBAb
+        AZgBTwEnASEBBwIbAe8B6gFyAU8BAgEnAUkBcgFPAQIBJwFJAZgCGwEIAQIBJwFPAZgSGwHwAe0B6gH/
+        AxkB3QYJAa4BbQHtARoUGwG8AeoBFQFDAhUCbAHsAesBAAF5BnoBUQFKExsB7wEAARwFGgEcAW0BEwUS
+        ARQCEQESAe8RGwGYAU8BJwEhAQcBGwGYAXIBHAFJAicBTwGZAUkEJwFPAZgBGwEIAQIBJwFPAZgTGwEc
+        AW0B/wEZAQkC1gS1AQkBGQGRAesB9xYbAfcBbQHrAvcBQwESAe0BkgEAARwGegFzARITGwHvAQAB7wUa
+        AZkGHAFzAUsBFQHsAbwBGhEbAZgBTwEnASEBBwKYAZcBTwEnAQIBTwH3ARsBTwQnAQIBcgGYAQgBAgEn
+        AU8BmBMbARwBbQH/ARkFCQG7ArUBuwGuAesB9xYbAQcC7AEHAbwBbQHsAQcB7wERAW0BHAF5BHoBcwES
+        ExsB7wEAAZkDGgEcAe0FcwEcApkBdAETARwTGwGYAU8BJwEhAQcB7wFyAVACTwFyAZgB8AEbAZgBcgRP
+        AXIB7wEIAQIBJwFPAZgTGwEcAW0B/wEZBAkBuwHrARICbQEVAW0B7xYbAQcC7AIHAe8BBwG8AQcB9wHt
+        AusBHAF5AnoBcwESExsB7wEAAZkCGgEcAW0C6gRtAXMCmQF5ARMBHBMbAZgBTwEnASEBBwHwAQgDmQEI
+        AfACGwHwAQgEmQEIAfABCAECAScBTwGYExsBHAFtAf8BGQQJAe8B7AGRAboBiwHqAZIBvBYbAQcC7AQH
+        A7wBBwHvAewB6wHqAnkBcwESExsB7wEAAe0B7wHsARIBbQHtAfcD7wHsAW0B7AGTAe0BEwEcExsBmAFP
+        AScBIQHtEe8B7QECAScBTwGYExsBHAFtAf8BGQQJAe8B7AGRAboBbAHvAfAXGwEHAuwHBwK8AQcB7wGS
+        AewBcwFtARITGwEHAUMB6gFtAeoBFAFtAZIBvALxAe8BbQISAeoBbQHqAe8TGwGYAU8CJxNJAicBTwGY
+        ExsBHAFtAf8B9AHzAxkBBwGuAWwB7AHvAfAYGwEHAesBbQLtBZIF9wHsAW0CFRMbAfAG7wHrAe8B8gEH
+        AUMBkgTvAQcB8BMbAZgBTxcnAU8BmBMbAe8B6wK8BAcBkgESAeoB7xobAQcB6wETA+oKbQESARQBEhob
+        AesBkgEHAe0BEQEHGRsBCAGXF08BcgHvExsB8AHvBuoBEgFtAZIB8BobAfABvBEHGhsB7wFtARQB6gEH
+        GxsYCAG8FhsHBwG8AfBJGwO8/xv/G/8bIBsCvAYbAQcBvAHwHRsCvAYbAQcBvAHwHRsB8AK8BhsCvAHw
+        QRsB8AEHAe8CbQH3AQcC8AG8ARwBEgFtAZIBvAHwGBsB8AEHAe8CbQH3AQcC8AG8ARwBEgHqAZIBvAHw
+        GhsBBwGSAW0B6gIHAvACBwFtAesBkgEHGxsB8AG8DAcB8BQbAfABBwH3Am0B7AHrAeoBEgH3AZIB7AHr
+        AQcB9wLrAfcB7wHwFBsB8AEHAfcCbQHsAesB6gESAfcBkgHsAesBmQHtAW4B6wH3Ae8B8BUbAfABBwHv
+        AusB7AHrARIBbQKSAesBbQGSAewBbQHrAe8BBwHwGBsB7wHrChIBEwFDAQcTGwEHAe0B6wFtAvcBBwHv
+        AuwBEwFtAfcBBwEZAQkBuwGRAW0BQwEHExsBBwHtAesBbQL3AQcB7wLsARMB6wGSAQcBGgKTAW4B6gFD
+        AQcTGwHwAQcB7QFtAeoB7QHvAQcB7wHsAesB6gFtAfcB7wG8AQcB9wHtAuoB7xgbAfcL7AHqAQAB7xAb
+        AfABBwHvAesBbQHsAe8C8QHwAwcBEwHsAfACGQIJAbsBkQEAAe8QGwHwAQcB7wHrAW0B7AHvAvEB8AMH
+        ARQB7AMaA5QBbgEAAe8RGwHwAe8B9wHsAW0B7AH3AbwB8QHwAbwBBwHtAW0B7AHwAvEBvAEHAe8B7QET
+        ARwYGwH3Ae0BBwK7AQgDuwGYArsBcgEAAe8PGwG8Ae8B6wFtAe0BkgHvA/EB8AMHARIB9wMZAwkBtQEA
+        Ae8PGwG8Ae8B6wFtAe0BkgHvA/EB8AMHARIB7QMaA5QBbwEAAe8QGwG8Ae8BbQHrAewB9wHvAfQB8gHx
+        AfABvAEHAZIB7AHtA/EBvAMHARIBHBgbAfcB7QEHAsECCALBAwgBcgEAAe8PGwHvAuwBkgG8AQcBvAHy
+        AfEB8gHxAbwCBwESAfcCGQHzARkCCQG1AQAB7w8bAe8C7AGSAbwBBwG8AfIB8QHyAfEBvAIHARIB7QIa
+        ARsBmgKUAW8BAAHvEBsB7wFtAfcB7wEHAbwBBwH/AfIC8QG8AQcBkgHsAe0D8QHwAwcBEgEcGBsB9wHt
+        AQcBCALBAggCwQEIAQcB7AEAAe8PGwH3Ae0BBwHwAfECvAPyAfEB8AK8ARIB9wIZAv8BGQEJAbUBAAHv
+        DxsB9wHtAQcB8AHxArwD8gHxAfACvAESAZIBGgEbAfQBGwG9AZoBdAEAAe8QGwEcAeoB9AHyAfEBvAEH
+        Af8B8wHyAfECvAH3AewB7QLyAfQB8wHxAbwBBwESARwQGwHwB5kC7AEHAggDwQEIAsEBCAHsAQAB7w8b
+        AfcB7QEHAvECvAPyAQcB7wEHAbwBEwHtAfME/wEZAZEBAAHvDxsB9wHtAQcC8QK8A/IBBwHvAQcBvAET
+        Ae0B8wH2A/8BGgFzAQAB7xAbARwBbQH/AfIB8QG8AQcB/wHzAfEBBwHvAbwB9wHrAewCvAHwAfEB8wHy
+        AfcBEwEcEBsBBwERARQFEwFDAW0BBwHBAQgDwQIIAsEBcgEAAe8PGwH3Ae0BBwHxAfICvAHwBAcC7wEV
+        AeoB7wHxAf8B9AHyAe8BEgEQAQcPGwH3Ae0BBwHxAfICvAHwBAcC7wEVAeoB7wHxAf8B9AHyAe8BEgEQ
+        AQcQGwEcAW0B/wHzAfIBvAEHAfMEBwHvAe0BEwERAxUBbQHvAQcBFQETAe8QGwHvAQAB7AGSBO0BbQHs
+        AQcCwQIIAsEBCALBAXIBAAHvDxsB9wHtAQcB8gHzAfAC7wPwAwcB7QFtARQBEgHyAe8BbQHqAe8BvBAb
+        AfcB7QEHAfIB8wHwAu8D8AMHAe0BbQEUARIB8gHvAW0B6gHvAbwRGwEcAW0B/wLzAfAB9wEHAfAB8QHw
+        AbwBBwGSAW0BSgN0AUsBFAEVArwB8BAbAe8BAAEHAcIBwQEIAsEBkQHsAQcBCAPBAQgCwQEIAQcB7AEA
+        Ae8PGwH3Ae0BvAH/Ae8B9wEHA/EB8AQHAe8BkgHsARABDgEUAZISGwH3Ae0BvAH/Ae8B9wEHA/EB8AQH
+        Ae8BkgHsARABDgEVAe0TGwEcAW0B/wHzAQcB9wHvAf8B8gHxAfABvAEHAZIB6wFLBHQBSwESAfASGwHv
+        AQABBwHCAcECCAHBAZ0BkQEHAggCwQIIA8EBcgEAAe8PGwH3AewB9wGSA7wB8gLxAfAHBwGSAQ8BFAH3
+        EhsB9wHsAfcBkgO8AfIC8QHwBwcBkgHrAREBFAEHEhsBHAHqAfEBBwK8AQcB/wHyAfEB8AG8AgcB7AEV
+        AgABEAFRAXkBcwEAAe8RGwHvAQABBwHCAsECCAGdAZEBBwHBAQgDwQIIAsEBcgEAAe8PGwH3Ae0BBwLx
+        ArwB8gLxAfABvAUHAfcBDwGQAZEBkgTwDhsB9wHtAQcC8QK8AfIC8QHwAbwGBwHvAewCSgESAfARGwEc
+        AW0B/wHyAfEBvAEHAf8B8gLxAbwFBwH3AewBbQFRAXkBdAESAfcQGwHvAQABBwHwAQgCwQEIAe0B7AEH
+        AsECCALBAggB7wHsAQAB7w8bAfcB7QEHAvECvAPyAfQB8wG8AwcB7AFsArMBbAMRARAB6gHvDRsB9wHt
+        AQcC8QK8A/IB9AHzAbwBBwH3ARMBEAMRAUoBUQFSAREB7wHwDxsBHAFtAf8B8gHxAbwBBwH/AvMC9AMH
+        Ae8BkgEPAe0B7AFuAXQBeQESARwQGwHvAQABBwHCAcEBCALBAZEB7AEHAQgDwQEIAcEBnQFsARABDgEA
+        Ae8PGwH3Ae0BBwLxArwB8gT/AvQBBwHsAa4BswLbAbkDswGLAa4B9w0bAfcB7QEHAvECvAHyBP8C9AH3
+        AW0BSwRSAVgBWQFSAUoBHAHwDhsBHAFtAf8B8gHxAbwBBwHzBP8B9AHzAQcB7AEUAQAB7QHrAW4BdAGa
+        ARIBHBAbAe8BAAEHAcIBwQIIAcECkQEHAQgBwgHBAcICCAGYAW0BFQIQAQcPGwH3Ae0BBwHxAfIB8AEH
+        AbwB8wH0Av8B9AHzAewB6wGzB9sBswGRAfcNGwH3Ae0BBwHxAfIB8AEHAbwB8wH0Av8B9AHzAfcB6wFR
+        B1kBUgFzAe8B8A0bARwBbQH/AvIB8AIHAfIB9AL/AfMB8QHtAesBcwEAAW0CcwF5AZoBEgEcEBsB7wEA
+        AQcBwgLBAQgBwQGdAXIB9wYHAewBFQEQARMBBwHwDxsB9wHtAQcB8gL0AfMB8gK8AfEB8gK8AesBkQG6
+        B9sBugGRAfcNGwH3Ae0BBwHyAvQB8wHyArwB8QHyArwBBwFzAXQHmgF6AXMB7AG8DRsBHAFtAf8B8wL0
+        AvMC8AHxAfIBvAHsAesBdAGTAUMB6gF0ApoBdAFtAe8QGwHvAQABBwHwAQgCwQEIAZIBbQESAW0CEgHq
+        Am0BEgEVAeoB9xEbAe8B7QHvAQcB9AL/AfQC8AK8AvAB7wGSAboH4QG6AZEB9w0bAe8B7QHvAQcB9AL/
+        AfQC8AK8AvABBwHtARwHwwGZAe0B7wHwDRsB7wHrArwB8wP/AfEB8AG8AQcB7wHrAXQCmgJ0ApoBkwER
+        ARwBGhAbAe8BAAEHAcICCALBAbsD9wFtAeoB7ATvAQcB8BEbAbwB7wHsAesB7wG8AfEB8gG8AfAC8gHw
+        AbwB8AGSAesBugLhBLoBkQHrAfcNGwG8Ae8B7AHrAe8BvAHxAfIBvAHwAvIB8AG8Ae8C7APvAZkCwwHv
+        Ae0B7wG8DhsBvAHvAesB7AHvAfAC8gLwAfEB8AHsAXMBmQWaAnQBFQEHERsB7wEAAQcBwgHBAggCwQEI
+        Ae8BkgJtAfcYGwHwAQcB7wPsAfcB8gHzAv8B8wHyAfcB6wHqAW0CugGQA2wB6gHrAe8OGwHwAQcB7wPs
+        AfcB8gHzAv8B8wHyAewCEwNtAewBHAGZAW0B7wHwEBsB8AHvAfcD7AHtAfAB8wL0AQcB7QF0ApoCdAFz
+        Am4B7wHwERsB7wEAAQcBwgLBAggBwQGdAuoBEQESAfcbGwEHAe0B6wFtAQcBvALzAbwBBwFtAesB7QH3
+        AW0BkAFtAewD7wEHARoRGwEHAe0B6wFtAQcBvALzAbwBBwJtAe0C7wHtAm0B7AHvAfATGwHwAQcB7QFt
+        AeoB7wHwAfMB9AEHAuwCHAFDARIB7AHtAQcTGwHvAQABBwHzA8IB8AEIAZEBFAHrARAB6gHvHBsB8AEH
+        AfcBbQHrAu8B6wFtAfcBBwLwAe8BEgHqAfcXGwHwAQcB9wFtAesC7wHrAW0B9wEHAfACGwEHAW0B6gHv
+        FxsB8AEHAe8B6wHsAe8BBwFtAesC7AFuAQAB7QEHAfAUGwHvAQAB9wUHAe8B6wIRARMBHAHwHhsB8AEH
+        Ae8C7AHvAQcB8AQbAe8B7QHvGRsB8AEHAe8C7AHvAQcB8AQbAQcB7QGSAfAaGwEHAfcB7AFtAgcBvAEc
+        ARIBAAHvFhsBBwERARIF6gESARQBQwERARwB8CIbArwIGwLwHBsCvAgbAvAcGwHwArwDGwHwARwBEAEH
+        FxsLB3wbAbz/G/8bVxsB8AK8aRsBvAEHAbwwGwHwAfcBEwFDAe8B8GUbAfABBwFtARMB6wHvJhsB8AgH
+        AfcB7AJKARMB7AIHExsB8BUHAfAVGwHwDAcB8BYbAQcBQwJzAusN7wEHAfAWGwHwAe8B6wYSARQBbQFz
+        AVIBSgEVAWYBEgFtAe8B8BEbAQcBQxITARQBQwEHFBsB8AHvAesIbQHqAhIB7wHwFRsB7wEAAW4DcwIS
+        ARMBFQJDARIGbAHrAe8WGwHvAu0FtAGLARMBbgF0AUsBFAGRArQBrgFDAQcRGwHvAQACUAJPC1ACTwJJ
+        AQAB7xMbAfAB7wHtAZIB7wQHAu8B9wG1AbQBrgHrARwBGhQbAQcBFQFLAVECcwNKARUCEAFmAYYBiwS0
+        Aa4BbRUbAfAB7AFtAe0B9wG1AgkBtAESAXMBdAFLAW0B9wMJAa4BAAHvERsB7wEAAXMBeAKXDHgCcgFs
+        AQAB7xMbAbwB7AHtAfAB8wT/AfQB8gLdAQkBuwGuAewB7xQbAfAB7wFtARMBEgNtA0oBSwETARQB6gGR
+        AfcCCQHsARMTGwHwAe8B9wFtAWYCEgFsApEB7AHtAXMBSwFtAZEECQGuAQAB7xEbAe8BAAFzAXgClwN4
+        CJcBeAJyAWwBAAHvExsBBwHsAe0B3QH0Af8D9AH/AfMD3QEJAe0B7AH3FhsBkgHrAewBBwG8Ae8B7AHq
+        AW0BSwJKAUQBEgEUAZEBuwGRARMSGwEaAe8B6gFsAZEDtAGRAa4B6gHrAXQBUQFtAZED3AIJAa4BAAHv
+        ERsB7wEAAXMBeAGXAXEDeASXBHIBeAJyAWwBAAHvExsBBwHsAe0BCQH0Af8B9ALzAf8BGQIJAfEBCQH3
+        AewB9xYbAQcBkgHvAv8B9AHxAbwB7wISBEoBEwG0AZEBExEbAfAB7wHrArQBugEJAuEB3AG0AZEB6gFL
+        AUoBkQHcA+ECCQGuAQAB7xEbAe8BAAFzAXgBlwFxBXgDlwNyAXgCcgFsAQAB7xMbAQcB7AHtAQkB9AH/
+        AfQC8wH/ARkCCQHxAQkB9wHsAfcWGwEHAZIB7wX/AfQC8AHvAesCFAETAe0BkQETERsB7wHsAbQB4QG7
+        AfcBuwMZAeEB3AGRAQ4BkQcJAa4BAAHvERsB7wEAAXMBeAGXAXEGeASXAXIBeAJyAWwBAAHvExsBBwHs
+        Ae0BCQH0Af8B9ALzAf8BGQIJAfEBCQH3AewB9xYbAQcBkgHvCP8B9AHyAvEBuwEJAZEBExAbARoB9wGR
+        AbQB4QEHAZIB7wEZAgkC3AG0AQ4BkQTWAdwCCQGuAQAB7xEbAe8BAAFzAXgBlwFxBngElwFyAXgCcgFs
+        AQAB7xMbAQcB7AHtAQkB9AH/AfQC8wH/ARkCCQHxAQkB9wHsAfcWGwEHAZIB7wz/Ad0BCQGRARMQGwEH
+        AZEBtAHhAf8BvAGSAfcB4QLcAbsBugHcAbQBEwG0BOECCQGuAQAB7xEbAe8BAAFzAXgBlwFxB3gElwF4
+        AnIBbAEAAe8TGwEHAewB7QEJAfQB/wH0ARkB9AH/ARkCCQHxAQkB9wHsAfcWGwEHAZIB7wH/AfQI/wH0
+        AwkBkQETEBsBBwGRAbQB4QH/AbwBkgHvARkF4QG0ARMBkQYJAa4BAAHvERsB7wEAAXMBeAGXAXEGeAWX
+        AXgCcgFsAQAB7xMbAQcB7AHtAQkB9AH/AfQBGQH0Af8BGQIJAfEBCQH3AewB9xYbAQcBkgHvA/QG/wH0
+        ARkDCQGRARMQGwEHAZEBtAHhAf8BvAGSAe8FGQHhAbQBFAGLA7QBtQIJAa4BAAHvERsB7wEAAXMBeAGX
+        DHEBeAKXAWwBAAHvExsBBwHsAe0BCQH0Af8B9AEZAfQB/wEZAgkB8QEJAfcB7AH3FhsBBwGSAe8B9AHz
+        AfQF/wH0AfEECQGRARMQGwEHAZEBtAHhAf8BvAGSAe8FGQHhAbQBEwGRBOECCQGuAQAB7xEbAe8BAAFz
+        CngElwF4ApcBbAEAAe8TGwEHAewB7QEJAfQB/wH0ARkB9AH/ARkCCQHxAQkB9wHsAfcWGwEHAZIB7wEZ
+        AfMBGQHzAfQC/wH0AxkDCQGRARMQGwEHAZEBtAHhAf8BvAGSAe8BGQLcAbUBCQHcAbQBEgH3AhkECQGu
+        AQAB7xEbAe8BAA94A5cBbAEAAe8TGwEHAewB7QLdAv8B9AEZAf8B9AEZAwkB9wHsAfcWGwEHAZIB7wIZ
+        AvMBGQL0BRkCCQGRARMQGwEaAfcBkQG0AeEBBwGSAe8BGQThAbQBDgGRBLUDCQGuAQAB7xEbAe8BABF4
+        AZcBbAEAAe8TGwH3AesB7AEHBvEB8AEHA7UB7AFtAe0WGwEHAZIB7wMZAvMIGQEJAZEBExEbAe8B7AG0
+        AeEBCQH3AbsDGQHhAdwBtAERAbsF3AIJAa4BAAHvERsB7wEABHgLeQJ4AZcBbAEAAe8TGwETAUMBFAES
+        BuoBEgMTAhQBQwFtAQcVGwEHAZIB7w0ZAQkBkQETERsB8AHvAesCtAG7AQkD4QG6AZEBiwH3AQkCGQEJ
+        BLQBrgEAAe8RGwHvAQADeAGXCxQBeQF4AZcBbAEAAe8TGwETAW0BtQH3Ae8EBwLvAfcBkgO0AW0B6wEH
+        FRsBBwGSAe8JGQEJAbUCtAHPAa4BExIbARoB7wFtAa4BkQO0AZECkAG0BAkBuwERARIB6gFmAkMBBxEb
+        Ae8BAAN4AXIEEAERAxQBFQERARABcwF4AZcBbAEAAe8TGwESAZECCQHzAf8B9APzAfIB3QQJAuwBBxUb
+        AQcBkgHvCRkBtQHqAW0CZgEVARITGwHwAe8B9wHrAWwB6gFtAWwBkQG7BNwBCQG7AQAB7QH3AesB6gHv
+        AfARGwHvAQADeAFyBBABFQN4AXIBFQEQAXMBeAGXAXEBAAHvExsBbQHsAQkB3QL/AvQC/wHzAfIB3QMJ
+        AuwBBxUbAQcBkgHvCRkB9wESAQcBtAFsAW0B9xUbAfAB7AHrAZIB7wG7BxkBuwEAAboBtAHsAe8TGwHv
+        AQADeAFyBBABFAN+AXgBFAEQAXMBeAGXAXEBQwEHExsB7wHsAe0B7wEHAbwB8QHzAfICBwHvAvcBtQLs
+        ARwB8BUbAQcBkgHvCRkB9wHqAeEBtAHsAe8B8BYbAfcB7QG8B/MCGQG7AQABrgHsAe8B8BMbAe8BAAN4
+        AXIEEAEUA3gBcwEVARABcwF4AXIBbQHvAfATGwHwAe8B7AHqAUMB6wEHAd0BvANtARIBFAFtAesBHAEa
+        FhsBBwGSAe8B9APzAxkB8wEZAfcBEwG6AewB7wHwFxsB7wHtAe8HBwG8AQcBkgEAAeoB7wHwFBsB7wEA
+        AXMBeAFyAXEEDwERA3IBEgERAQ8CcgHrAe8WGwHwAQcB7QEAAfcB8gH0AfMBvAEHAe8B7AETAe8BBwHw
+        FxsBBwGSAfcB8Ai8Ae0BFQETAe8B8BgbAfAB7wFtCeoBEgERARwB8BUbAQcBEQEUAhMBFAVDAxQBFQJD
+        ARQB6wHvAfAYGwEHAREB9wG8A/ABBwHvAewBbRsbAe8BbQkUARUBEwEHGxsB8AG8CwcYGxEHAbwB8Bob
+        AQcB6gYUAW0B7xsbAfAMvG8bCLz/G1EbAUIBTQE+BwABPgMAASgDAAGgAwABeAMAAQEBAAEBBQABYAEJ
+        FgAD//8A/wD/AP8A/wD/AP8A/wD/AGoACw==
+</value>
+  </data>
+  <data name="MenuTool.Appearance" type="System.Windows.Forms.ToolBarAppearance, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="Btn_Clear.ImageIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Btn_Clear.ToolTipText" xml:space="preserve">
+    <value>清屏</value>
+  </data>
+  <data name="Btn_Refer.ImageIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="Btn_Refer.ToolTipText" xml:space="preserve">
+    <value>查询</value>
+  </data>
+  <data name="Btn_Save.ImageIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="Btn_Save.ToolTipText" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="Btn_Delete.ImageIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="Btn_Delete.ToolTipText" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="Btn_RowIns.ImageIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="Btn_RowIns.ToolTipText" xml:space="preserve">
+    <value>行插入</value>
+  </data>
+  <data name="Btn_RowDel.ImageIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="Btn_RowDel.ToolTipText" xml:space="preserve">
+    <value>行删除</value>
+  </data>
+  <data name="Btn_RowCan.ImageIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="Btn_RowCan.ToolTipText" xml:space="preserve">
+    <value>行取消</value>
+  </data>
+  <data name="Btn_Copy.ImageIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="Btn_Copy.ToolTipText" xml:space="preserve">
+    <value>复制</value>
+  </data>
+  <data name="Btn_Paste.ImageIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="Btn_Paste.ToolTipText" xml:space="preserve">
+    <value>粘贴</value>
+  </data>
+  <data name="Btn_Excel.ImageIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="Btn_Excel.ToolTipText" xml:space="preserve">
+    <value>导入Excel</value>
+  </data>
+  <data name="Btn_Print.ImageIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="Btn_Print.ToolTipText" xml:space="preserve">
+    <value>打印</value>
+  </data>
+  <data name="Btn_Exit.ImageIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="Btn_Exit.ToolTipText" xml:space="preserve">
+    <value>退出</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="MenuTool.ButtonSize" type="System.Drawing.Size, System.Drawing">
+    <value>47, 36</value>
+  </data>
+  <data name="MenuTool.DropDownArrows" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MenuTool.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="MenuTool.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="MenuTool.ShowToolTips" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MenuTool.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1024, 43</value>
+  </data>
+  <data name="MenuTool.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;MenuTool.Name" xml:space="preserve">
+    <value>MenuTool</value>
+  </data>
+  <data name="&gt;&gt;MenuTool.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuTool.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MenuTool.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="StatusBar1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9.75pt, style=Bold</value>
+  </data>
+  <data name="StatusBar1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="StatusBar1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 579</value>
+  </data>
+  <data name="StatusBarPanel1.Name" xml:space="preserve">
+    <value>StatusBarPanel1</value>
+  </data>
+  <data name="StatusBarPanel1.Width" type="System.Int32, mscorlib">
+    <value>600</value>
+  </data>
+  <data name="StatusBarPanel2.Alignment" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="StatusBarPanel2.Name" xml:space="preserve">
+    <value>StatusBarPanel2</value>
+  </data>
+  <data name="StatusBarPanel2.Width" type="System.Int32, mscorlib">
+    <value>170</value>
+  </data>
+  <data name="StatusBarPanel3.Alignment" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="StatusBarPanel3.Name" xml:space="preserve">
+    <value>StatusBarPanel3</value>
+  </data>
+  <data name="StatusBarPanel3.Width" type="System.Int32, mscorlib">
+    <value>170</value>
+  </data>
+  <data name="StatusBarPanel4.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAHBQAAAEAIAA4CQAAFgAAACgAAAAcAAAAKAAAAAEAIAAAAAAAEAkAAMQOAADEDgAAAAAAAAAA
+        AAD///8A////AP///wD///8A////AOD0/QEb5f4JAPD+JQDt/kkA6P54Atb7qQeq9s4OZe7jFTDo7BgX
+        5+sZFufgEkjsygaw9qMA6P1zAPD+RQDx/yHS+/4I////AP///wD///8A////AP///wD///8A////AP//
+        /wD///8A////AM7V+gY1j/MpCZb0aQif9bEGr/bbA8j68gHj/PsA6/3+Atz7/weu9v8QXO3/GCHo/xgY
+        5/4TQuv6CZv18AHi/NcA8P6rAO3+YizO+iLM3PsE////AP///wD///8A////AP///wD///8A09P6AYuN
+        8xdCVO1cFizpsBUt6eUVKen5FTDp/hJJ7P8MfPH/Bbv4/wDn/f8A7v3/A9H5/wyB8f8WLun/GRXm/xUy
+        6f8KkvT+AOT9+QDt/uEGtfemPXLwUIyD8hL///8A////AP///wD///8A1e79AT+b9B4ObO97DH3x1wyE
+        8foNd/D+EVPs/hYq6P8ZFOf/GBrn/xJE6/8ImfT/AeP8/wDx/f8B3/z/C4vy/xYr6P8aEeb/FS/p/weo
+        9v8A8P7+Ad77+Ax/8c8YGuZuST7qFv///wD///8A////ACHi/BIC2Pt7Ad374gHm/PsB5/3/AeL8/wPS
+        +f8Hp/X/EVXt/xgZ5/8ZE+f/Fizo/wqQ8v8A8P7/APD+/wLX+v8Ob+//GBvn/xkR5/8RS+z/AN/8/wDx
+        /f4Ex/j7Ek3s2RkR5mnEwfgN////ALr6/QoB3ftwCKn16w198f4NffH+CKP1/wPQ+v8A6/3/APD+/wHj
+        /P8KjvP/FS7o/xkT5v8ZF+b/CZr0/wDt/f8A8f7/A8n5/xJN6/8ZFOb/GRLm/wqT9P8A8f3/AOz9/gmY
+        9P4WJOjhGhLmXL++9wcDz/kvDXLwxBUs6f0YFef/GBXn/xck6P8RUuz/Bqz2/wDn/f8A8f//At77/wx/
+        8P8XIuf/GhDm/xM+6/8Ex/n/APL//wDo/f8MgvH/Fx3n/xoP5v8RV+3/AOL8/wDy/v8Fv/f/FT7q/BoS
+        5rMaE+cjEFrtcxci6PAaEuf/GhPn/xoT5/8aEub/GRTm/xQ46v8Jm/T/AOb9/wDw/v8Dzvn/ElPt/xkU
+        5v8YG+f/DILy/wDq/v8A8f7/B7L2/xUw6P8ZEub/FDTp/wTJ+f8A9P//A9T6/xJU7P8ZFOfpGhPnYxcd
+        57EZE+f9GhPn/xoU5/8aFOf/GhTn/xoT5/8ZE+b/FDrq/waw9/8A7/7/AO7+/wqS9P8YG+b/GRPn/xFN
+        7f8C1fv/APP//wPV+v8OcO//EVHs/xBg7f8Exvj/APP//wLe/P8QZO7/GRXn+hkU57EYFufNGhPn/xoU
+        5/8aFOf/GhTn/xoU5/8aFOf/GhLm/xgZ5v8NbvD/AeH8/wD0//8FvPj/Fyfo/xkT5/8UOer/BML5/wDz
+        //8A7P3/Adj7/wPS+v8C1Pr/AOf9/wDy//8B5Pz/DnDv/xgY5/4ZFOfZGBXnzhoT5/8aFOf/GhTn/xoU
+        5/8aFOf/GhTn/xoT5v8ZE+b/E0Xr/wTH+f8A9f//Bcn4/xct6P8ZE+f/FDjq/wTA+f8A8///AOz9/wHY
+        +/8D0fr/AtL6/wDl/f8A8v//AeX8/w5y8P8YGef9GRPn2Bgc57EaE+f9GhTn/xoU5/8aFOf/GhTn/xoU
+        5/8aFOf/GhPn/xQ96/8GwPn/APT+/war9v8XIuf/GRPn/xNG6/8Dz/n/APP//wHX+/8NcPD/Ek7t/xBb
+        7f8FwPj/APP//wHg/P8PZ+//GRfn+hoT564WJ+h0GhPn8BoU5/8aFOf/GhTn/xoU5/8aFOf/GhPn/xkT
+        5/8UROv/Bcb5/wHa+/8OaO//GBbm/xgX5/8Oc/D/AOb8/wDy/v8Gtff/FTLp/xkS5v8WLuj/BML4/wD0
+        //8C1/v/EFjt/xkU5+kaE+djEzzqLxkV58MaFOf9GhTn/xoU5/8aE+f/GBnn/xga5/8YF+f/EGXu/wXD
+        +P8Lg/H/Fijo/xkR5v8UM+n/Bbn3/wDx/v8A6f3/DIfy/xce5/8aD+b/Ekvr/wHd+/8A8///BML5/xNC
+        6/wZEuayGhPnIr3G+QsZF+dvGhTn6hoU5/8aFOf/GhDn/xQ16v8SSOz/FTHp/wyA8v8PaO//Fijo/xkU
+        5/8aEuf/C4Ty/wDp/f8A8v//A8z6/xJQ7P8YFOf/Gg/m/wyB8f8A7v3/AO7+/wme9f8WKOjgGhLmXL27
+        9wb///8Aw8T4EhgZ53wYFOfiGBbn/BUz6f8KkPP/B672/xBU7v8WJ+j/GRHn/xkU5/8XJOj/DHvw/wDq
+        /f8A8f7/Adn8/w5z8P8YHOf/GRHn/xQ46v8C1Pr/APH+/gPJ+vsRUe3aGRHmasK/9w7///8A////ANfY
+        +gFGSeweGBfnehgZ59cTPev6CZTz/gat9v8TR+z/GBvn/xkZ5/8UO+r/C4vy/wLd+/8A8f7/AeD8/wqO
+        8/8WLOn/GhLn/xck6P8Kk/P/AO7+/gHd/PgLf/LPFxvobUc96hb///8A////AP///wD///8A0tP6AYmI
+        8hdBUOxaFyHnrxFU7eQOa+/6FjDo/hNH6/8OdfD/BrP2/wHj/P8A7v7/AtP6/wuF8v8VMOr/GRTn/xco
+        6P8Nf/H+At37+QDt/uEGsvemPG7wUImA8hH///8A////AP///wD///8A////AP///wD///8Ay9f6BjWL
+        8igJnfRnB6z1rAeu9tsEx/nzAeH8+wDr/f4B3fz/BrD2/w9f7v8XIuj/GBfn/hQ56vsLjPLxAtv62ADw
+        /qoA7P5hLcr4I8vZ+wT///8A////AP///wD///8A////AP///wD///8A////AP///wDd8/0B0vT9CQDv
+        /iIA7v5JAOr9egPQ+qgJofXNEGTu4hUz6esYF+fqGRXn4BND68sIp/WlAeP8dQDu/kUA7/8gz/v+CP//
+        /wD///8A////AP///wD///8A////APgAA/DwAADwwAAAcIAAADCAAAAQAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAABCAAAAwwAAAcPAAAPD4AAPw
+</value>
+  </data>
+  <data name="StatusBarPanel4.Name" xml:space="preserve">
+    <value>StatusBarPanel4</value>
+  </data>
+  <data name="StatusBarPanel4.Width" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="statusBarPanel5.Alignment" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="statusBarPanel5.Name" xml:space="preserve">
+    <value>statusBarPanel5</value>
+  </data>
+  <data name="StatusBar1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1024, 22</value>
+  </data>
+  <data name="StatusBar1.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="StatusBar1.Text" xml:space="preserve">
+    <value>StatusBar1</value>
+  </data>
+  <data name="&gt;&gt;StatusBar1.Name" xml:space="preserve">
+    <value>StatusBar1</value>
+  </data>
+  <data name="&gt;&gt;StatusBar1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;StatusBar1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;StatusBar1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>75</value>
+  </metadata>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1024, 601</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9.75pt</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAAAAAAAACoDAAAFgAAACgAAAAgAAAAQAAAAAEAGAAAAAAAgAwAAAAAAAAAAAAAAAAAAAAA
+        AAB8fHyHh4f///9pa2tra2v///+ysrJmZmbKysr///92d3dsbnBsb29sbm+4t7f///+YmJhxcHJsam1w
+        c3SFhof////Ky8trbW5ucHFucHFucHHz8/P///////////////9zc3OGh4jHyMhhY2RfYWH///+urq5b
+        XFzIycnv7u5SU1Okpqb39/dWWFmGhob///9oaGheXl7///9UVFRUVFT///+en6BcXl/Y2dien59aXF3W
+        19f///////////////91dXWEhod3eXp3eXpeYWH///+urq5cXV3Fxsb////f4OClp6dcXl+Zmpvv7+//
+        //9sbGxeXl7////X19fT09P///+goaJcXl/R0tKgoaJbXV7a2dn///////////////93d3djZmeho6OV
+        l5hbXV3///+urq5bXV3HyMj29vZSUlJucXL///+bmpyHh4f///9paGhdX1////9TVVdSVVX///+dn59c
+        Xl/Z2dmfoaJaXV7X19f///////////////9sbGxWVlb19fWEhIRTU1P///+oqKhRUVHCwsL///9jY2Nb
+        W1tbW1tSUlKkpKT///+Hh4daWlpZWVlbW1tzcnP///++vr5ZWVlfX19ZWVlbW1vs7Oz/////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////S1OmrrOGTlNuMjd2Y
+        m+G4uOPq6fP/////////////////////////////////////////////////////////////////////
+        //////////////////+0teJFSs4EDsQIEsoOFM8OGc0PGssNGMwJFcwEDskUHb9tdNLm5u7/////////
+        //////////////////////////////////////////////////////////+yueIYHcQKENAXIM0dJs8a
+        I84UHs0SG8wQG8wSHM0XH84cJc8bJM8TGtEDCctNUsv4+Pj/////////////////////////////////
+        //////////////////////9LUcwEDc0aJM0cJs8MHM0DDscmKshiZdd+hNmGh9x5edtLUs4MF8IGEs0X
+        IM0dJ80UHs4ADMSusOD///////////////////////////////////////////////0iKMgSGswdJ8wV
+        Hs4JD8R5ftby8fH////////////////////////////Jyec/R8gGDswcJc0dJc8ADMiJitL/////////
+        //////////////////////////////8uMsYSHsweJs8MFsw+SMj///r/////////////////////////
+        ///////////////////AwuIME8YZIdAeJ84EC8yfoNr///////////////////////////////9wcNAM
+        GcgfJdALFs1iZ9H////////////////////////////////////////////////////////8/PcYHcQQ
+        Gc8TG9AAAMbb3e3////////////////////////j4/ABCsYeJs8TH8xLTcn/////////////////////
+        ///////////////////////////////////////////08/hcY9ppcdtgbdeCf9b/////////////////
+        //////9RWs0VHc8cJc8IFMf///3MzMrOz87g4OD////////////////JycnPz8/Pz8/Pz8/Pz8/Pz8/P
+        z8/Pz8/Pz8/U1NHg4NLg39Li49X///////////////////////////4DDsAcJNIRG8yNjOO0sqlUV1hi
+        ZGVgYmNcXl+wsrL///////9UVFRiZGViZGVaXF1hY2VgY2RVU1ZTU1VRVFVVV1heYGJiZGVhY2RXWVrY
+        2Nj////////////////Iy+kKEs8dKMsFEMzo6fPw8OyOj49lZmdtb3Ftb3BaXF3Iycn///9fX19tb3Fk
+        ZmfX2NlfYWJucHD////////////i4+OAgYFoamtucHFsbm9gYmP///////////////+eo+MPGcsbJs4P
+        FsH///////////9/gYFpa2tucHFsbm9gYmP///9hYmJtb3BqbG2Bg4S2t7dcXl+hoaH/////////////
+        //9tb3Bsbm9tb3BnaWqPkJH///////////+PkdsRGs0cJM0dJsn////////////7+vpbXl1tb3Btb3Bo
+        amuanJxqbG1sbm9ydHVeYGG3uLmBgoNYWlvi4+P////S0tLg4OC2t7hmaWptb3Ftb3FcX2DV1dX/////
+        //+Um98QGc0bJNAaIcP///////////////+9vb1gY2Rtb3FucHFnaWptb3BnaWqtrq+UlJRZW1zY2dlg
+        YWNqa2z///+EhIROTk5ZWVlgYGBgYGBgYGBfX19XV1f+/v7///+xtOYNGMkcJdIEEMT///v/////////
+        //////94eXpqbGxucHFucHFucHFnaWqenqD///9eX2B0dnfCw8RWV1idnZ3/////////////////////
+        ///////+/v7////////u6/UADsgdKMwLFsyztuT////////////////19vVXWlpkZ2hlZ2hlZ2heYWKV
+        l5j////ExcZSVFWdnp+ztLWenZ6pqaqpqaqpqaqpqaqpqaqpqaqpqaqpqaqhoaH///////8kK8YaIs8Y
+        Ic41PMf////////////////////Pzs6vr6+ysrKysrKvr6/Ly8v///////+0tLSrq6uwsLCxsbCvr6+z
+        s7Czs7Czs7CysrCur66ur66vr66srKzBwcH///+dotwKFsoeJ80FEcuvst7/////////////////////
+        ///////////////////////////////////////////////08vj29vr29fns6/b/////////////////
+        //////////8hI8MWItEbJ8sDC8nj4/D/////////////////////////////////////////////////
+        //////////90eMwABcoKD84AAMZyd9f////////////////////////////i4+8AB8cdJs4bJc0HD8bI
+        yer///////////////////////////////////////////////////9fZ9UIEsseJs8UH8suNcf/////
+        //////////////////////////////+1t+QACcQcJNAdJM8CDcZhZtP///f/////////////////////
+        ///////////////JzOUkKMgOGc0eJs8TH8sXHsf///v/////////////////////////////////////
+        //++wOYBDMQWIM8eJc8THsoDCclUWM2nq+He4O7+/vv///709fbLzOqNjtwlLcQEEcscIs4dJtANFM4u
+        MsP///v////////////////////////////////////////////////y8fQzNscCEM4YINIdJs4VH84N
+        F8wJE8gGEcUGEMUHEcYJFckQGswZI88dJs8UHM8AC8N2e9X/////////////////////////////////
+        //////////////////////////////+4ueAwNckBDscRGMwXHNAaIs0bI9EaJNAaItEZIcwQHM4LFM0E
+        DsNfZdHv8PP/////////////////////////////////////////////////////////////////////
+        ///////v7vKipOJsctRFS882OMstNMk3PsxUV9WAg926vef///7/////////////////////////////
+        //////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>南钢厚板MES-轧钢生产管制（中板）</value>
+  </data>
+  <data name="&gt;&gt;ContextMenu1.Name" xml:space="preserve">
+    <value>ContextMenu1</value>
+  </data>
+  <data name="&gt;&gt;ContextMenu1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenu, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Acopy.Name" xml:space="preserve">
+    <value>Mnu_Acopy</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Acopy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Mcopy.Name" xml:space="preserve">
+    <value>Mnu_Mcopy</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Mcopy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Scopy.Name" xml:space="preserve">
+    <value>Mnu_Scopy</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Scopy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ContextMenu2.Name" xml:space="preserve">
+    <value>ContextMenu2</value>
+  </data>
+  <data name="&gt;&gt;ContextMenu2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenu, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Apaste.Name" xml:space="preserve">
+    <value>Mnu_Apaste</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Apaste.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Mpaste.Name" xml:space="preserve">
+    <value>Mnu_Mpaste</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Mpaste.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Spaste.Name" xml:space="preserve">
+    <value>Mnu_Spaste</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Spaste.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ImageList0.Name" xml:space="preserve">
+    <value>ImageList0</value>
+  </data>
+  <data name="&gt;&gt;ImageList0.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MainMenu1.Name" xml:space="preserve">
+    <value>MainMenu1</value>
+  </data>
+  <data name="&gt;&gt;MainMenu1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MainMenu, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Control.Name" xml:space="preserve">
+    <value>Mnu_Control</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Control.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Clear.Name" xml:space="preserve">
+    <value>Mnu_Clear</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Clear.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Refer.Name" xml:space="preserve">
+    <value>Mnu_Refer</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Refer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem38.Name" xml:space="preserve">
+    <value>MenuItem38</value>
+  </data>
+  <data name="&gt;&gt;MenuItem38.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Save.Name" xml:space="preserve">
+    <value>Mnu_Save</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Save.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Delete.Name" xml:space="preserve">
+    <value>Mnu_Delete</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Delete.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem39.Name" xml:space="preserve">
+    <value>MenuItem39</value>
+  </data>
+  <data name="&gt;&gt;MenuItem39.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Mnu_RowIns.Name" xml:space="preserve">
+    <value>Mnu_RowIns</value>
+  </data>
+  <data name="&gt;&gt;Mnu_RowIns.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Mnu_RowDel.Name" xml:space="preserve">
+    <value>Mnu_RowDel</value>
+  </data>
+  <data name="&gt;&gt;Mnu_RowDel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Mnu_RowCan.Name" xml:space="preserve">
+    <value>Mnu_RowCan</value>
+  </data>
+  <data name="&gt;&gt;Mnu_RowCan.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem40.Name" xml:space="preserve">
+    <value>MenuItem40</value>
+  </data>
+  <data name="&gt;&gt;MenuItem40.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Copy.Name" xml:space="preserve">
+    <value>Mnu_Copy</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Copy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Mnu_ScreenCopy.Name" xml:space="preserve">
+    <value>Mnu_ScreenCopy</value>
+  </data>
+  <data name="&gt;&gt;Mnu_ScreenCopy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Mnu_MasterCopy.Name" xml:space="preserve">
+    <value>Mnu_MasterCopy</value>
+  </data>
+  <data name="&gt;&gt;Mnu_MasterCopy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Mnu_SheetCopy.Name" xml:space="preserve">
+    <value>Mnu_SheetCopy</value>
+  </data>
+  <data name="&gt;&gt;Mnu_SheetCopy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Paste.Name" xml:space="preserve">
+    <value>Mnu_Paste</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Paste.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Mnu_ScreenPaste.Name" xml:space="preserve">
+    <value>Mnu_ScreenPaste</value>
+  </data>
+  <data name="&gt;&gt;Mnu_ScreenPaste.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Mnu_MasterPaste.Name" xml:space="preserve">
+    <value>Mnu_MasterPaste</value>
+  </data>
+  <data name="&gt;&gt;Mnu_MasterPaste.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Mnu_SheetPaste.Name" xml:space="preserve">
+    <value>Mnu_SheetPaste</value>
+  </data>
+  <data name="&gt;&gt;Mnu_SheetPaste.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem41.Name" xml:space="preserve">
+    <value>MenuItem41</value>
+  </data>
+  <data name="&gt;&gt;MenuItem41.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Excel.Name" xml:space="preserve">
+    <value>Mnu_Excel</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Excel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Print.Name" xml:space="preserve">
+    <value>Mnu_Print</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Print.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem42.Name" xml:space="preserve">
+    <value>MenuItem42</value>
+  </data>
+  <data name="&gt;&gt;MenuItem42.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Exit.Name" xml:space="preserve">
+    <value>Mnu_Exit</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Exit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem1.Name" xml:space="preserve">
+    <value>MenuItem1</value>
+  </data>
+  <data name="&gt;&gt;MenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem17.Name" xml:space="preserve">
+    <value>MenuItem17</value>
+  </data>
+  <data name="&gt;&gt;MenuItem17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem2.Name" xml:space="preserve">
+    <value>MenuItem2</value>
+  </data>
+  <data name="&gt;&gt;MenuItem2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem20.Name" xml:space="preserve">
+    <value>MenuItem20</value>
+  </data>
+  <data name="&gt;&gt;MenuItem20.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem5.Name" xml:space="preserve">
+    <value>MenuItem5</value>
+  </data>
+  <data name="&gt;&gt;MenuItem5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem3.Name" xml:space="preserve">
+    <value>MenuItem3</value>
+  </data>
+  <data name="&gt;&gt;MenuItem3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnu_ABA001OC.Name" xml:space="preserve">
+    <value>mnu_ABA001OC</value>
+  </data>
+  <data name="&gt;&gt;mnu_ABA001OC.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnu_ABA002OC.Name" xml:space="preserve">
+    <value>mnu_ABA002OC</value>
+  </data>
+  <data name="&gt;&gt;mnu_ABA002OC.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnu_WZA0030C.Name" xml:space="preserve">
+    <value>mnu_WZA0030C</value>
+  </data>
+  <data name="&gt;&gt;mnu_WZA0030C.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mnu_WZA0040C.Name" xml:space="preserve">
+    <value>mnu_WZA0040C</value>
+  </data>
+  <data name="&gt;&gt;mnu_WZA0040C.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem27.Name" xml:space="preserve">
+    <value>menuItem27</value>
+  </data>
+  <data name="&gt;&gt;menuItem27.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem48.Name" xml:space="preserve">
+    <value>menuItem48</value>
+  </data>
+  <data name="&gt;&gt;menuItem48.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Windows.Name" xml:space="preserve">
+    <value>Mnu_Windows</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Windows.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Horiz.Name" xml:space="preserve">
+    <value>Mnu_Horiz</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Horiz.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Vertical.Name" xml:space="preserve">
+    <value>Mnu_Vertical</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Vertical.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Cascade.Name" xml:space="preserve">
+    <value>Mnu_Cascade</value>
+  </data>
+  <data name="&gt;&gt;Mnu_Cascade.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tme_current.Name" xml:space="preserve">
+    <value>tme_current</value>
+  </data>
+  <data name="&gt;&gt;tme_current.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ContextMenu3.Name" xml:space="preserve">
+    <value>ContextMenu3</value>
+  </data>
+  <data name="&gt;&gt;ContextMenu3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenu, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Mnu_ColumnSort.Name" xml:space="preserve">
+    <value>Mnu_ColumnSort</value>
+  </data>
+  <data name="&gt;&gt;Mnu_ColumnSort.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem11.Name" xml:space="preserve">
+    <value>MenuItem11</value>
+  </data>
+  <data name="&gt;&gt;MenuItem11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Mnu_FrozenSetting.Name" xml:space="preserve">
+    <value>Mnu_FrozenSetting</value>
+  </data>
+  <data name="&gt;&gt;Mnu_FrozenSetting.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Mnu_FrozenCancel.Name" xml:space="preserve">
+    <value>Mnu_FrozenCancel</value>
+  </data>
+  <data name="&gt;&gt;Mnu_FrozenCancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem13.Name" xml:space="preserve">
+    <value>MenuItem13</value>
+  </data>
+  <data name="&gt;&gt;MenuItem13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem14.Name" xml:space="preserve">
+    <value>MenuItem14</value>
+  </data>
+  <data name="&gt;&gt;MenuItem14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem15.Name" xml:space="preserve">
+    <value>MenuItem15</value>
+  </data>
+  <data name="&gt;&gt;MenuItem15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem16.Name" xml:space="preserve">
+    <value>MenuItem16</value>
+  </data>
+  <data name="&gt;&gt;MenuItem16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem18.Name" xml:space="preserve">
+    <value>MenuItem18</value>
+  </data>
+  <data name="&gt;&gt;MenuItem18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem19.Name" xml:space="preserve">
+    <value>MenuItem19</value>
+  </data>
+  <data name="&gt;&gt;MenuItem19.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MainMenu2.Name" xml:space="preserve">
+    <value>MainMenu2</value>
+  </data>
+  <data name="&gt;&gt;MainMenu2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MainMenu, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem22.Name" xml:space="preserve">
+    <value>MenuItem22</value>
+  </data>
+  <data name="&gt;&gt;MenuItem22.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ImageList2.Name" xml:space="preserve">
+    <value>ImageList2</value>
+  </data>
+  <data name="&gt;&gt;ImageList2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ImageList1.Name" xml:space="preserve">
+    <value>ImageList1</value>
+  </data>
+  <data name="&gt;&gt;ImageList1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Btn_Clear.Name" xml:space="preserve">
+    <value>Btn_Clear</value>
+  </data>
+  <data name="&gt;&gt;Btn_Clear.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBarButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Btn_Refer.Name" xml:space="preserve">
+    <value>Btn_Refer</value>
+  </data>
+  <data name="&gt;&gt;Btn_Refer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBarButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Sep1.Name" xml:space="preserve">
+    <value>Sep1</value>
+  </data>
+  <data name="&gt;&gt;Sep1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBarButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Btn_Save.Name" xml:space="preserve">
+    <value>Btn_Save</value>
+  </data>
+  <data name="&gt;&gt;Btn_Save.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBarButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Btn_Delete.Name" xml:space="preserve">
+    <value>Btn_Delete</value>
+  </data>
+  <data name="&gt;&gt;Btn_Delete.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBarButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Sep2.Name" xml:space="preserve">
+    <value>Sep2</value>
+  </data>
+  <data name="&gt;&gt;Sep2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBarButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Btn_RowIns.Name" xml:space="preserve">
+    <value>Btn_RowIns</value>
+  </data>
+  <data name="&gt;&gt;Btn_RowIns.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBarButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Btn_RowDel.Name" xml:space="preserve">
+    <value>Btn_RowDel</value>
+  </data>
+  <data name="&gt;&gt;Btn_RowDel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBarButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Btn_RowCan.Name" xml:space="preserve">
+    <value>Btn_RowCan</value>
+  </data>
+  <data name="&gt;&gt;Btn_RowCan.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBarButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Sep3.Name" xml:space="preserve">
+    <value>Sep3</value>
+  </data>
+  <data name="&gt;&gt;Sep3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBarButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Btn_Copy.Name" xml:space="preserve">
+    <value>Btn_Copy</value>
+  </data>
+  <data name="&gt;&gt;Btn_Copy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBarButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Btn_Paste.Name" xml:space="preserve">
+    <value>Btn_Paste</value>
+  </data>
+  <data name="&gt;&gt;Btn_Paste.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBarButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Sep4.Name" xml:space="preserve">
+    <value>Sep4</value>
+  </data>
+  <data name="&gt;&gt;Sep4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBarButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Btn_Excel.Name" xml:space="preserve">
+    <value>Btn_Excel</value>
+  </data>
+  <data name="&gt;&gt;Btn_Excel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBarButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Btn_Print.Name" xml:space="preserve">
+    <value>Btn_Print</value>
+  </data>
+  <data name="&gt;&gt;Btn_Print.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBarButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Sep5.Name" xml:space="preserve">
+    <value>Sep5</value>
+  </data>
+  <data name="&gt;&gt;Sep5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBarButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Btn_Exit.Name" xml:space="preserve">
+    <value>Btn_Exit</value>
+  </data>
+  <data name="&gt;&gt;Btn_Exit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolBarButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;StatusBarPanel1.Name" xml:space="preserve">
+    <value>StatusBarPanel1</value>
+  </data>
+  <data name="&gt;&gt;StatusBarPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusBarPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;StatusBarPanel2.Name" xml:space="preserve">
+    <value>StatusBarPanel2</value>
+  </data>
+  <data name="&gt;&gt;StatusBarPanel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusBarPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;StatusBarPanel3.Name" xml:space="preserve">
+    <value>StatusBarPanel3</value>
+  </data>
+  <data name="&gt;&gt;StatusBarPanel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusBarPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;StatusBarPanel4.Name" xml:space="preserve">
+    <value>StatusBarPanel4</value>
+  </data>
+  <data name="&gt;&gt;StatusBarPanel4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusBarPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statusBarPanel5.Name" xml:space="preserve">
+    <value>statusBarPanel5</value>
+  </data>
+  <data name="&gt;&gt;statusBarPanel5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusBarPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainMenu</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

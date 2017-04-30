@@ -1,0 +1,11 @@
+E:\PCS\五矿炼钢检化验\wkyg_code_liangang\MAIN\bin\Debug\LGJHY.exe
+E:\PCS\五矿炼钢检化验\wkyg_code_liangang\MAIN\bin\Debug\LGJHY.pdb
+E:\PCS\五矿炼钢检化验\wkyg_code_liangang\MAIN\bin\Debug\CommonClass.dll
+E:\PCS\五矿炼钢检化验\wkyg_code_liangang\MAIN\bin\Debug\CommonClass.pdb
+E:\PCS\五矿炼钢检化验\wkyg_code_liangang\MAIN\obj\Release\ResolveAssemblyReference.cache
+E:\PCS\五矿炼钢检化验\wkyg_code_liangang\MAIN\obj\Release\MAIN.MainMenu.resources
+E:\PCS\五矿炼钢检化验\wkyg_code_liangang\MAIN\obj\Release\YGJHY.Properties.Resources.resources
+E:\PCS\五矿炼钢检化验\wkyg_code_liangang\MAIN\obj\Release\LGJHY.csproj.GenerateResource.Cache
+E:\PCS\五矿炼钢检化验\wkyg_code_liangang\MAIN\obj\Release\LGJHY.exe.licenses
+E:\PCS\五矿炼钢检化验\wkyg_code_liangang\MAIN\obj\Release\LGJHY.exe
+E:\PCS\五矿炼钢检化验\wkyg_code_liangang\MAIN\obj\Release\LGJHY.pdb

@@ -1,0 +1,896 @@
+E:\包含源码\NGHB\WG\bin\Debug\WG.exe.config
+E:\包含源码\NGHB\WG\bin\Debug\WG.exe.manifest
+E:\包含源码\NGHB\WG\bin\Debug\WG.application
+E:\包含源码\NGHB\WG\bin\Debug\WG.exe
+E:\包含源码\NGHB\WG\bin\Debug\WG.pdb
+E:\包含源码\NGHB\WG\bin\Debug\BDM.xml
+E:\包含源码\NGHB\WG\bin\Debug\CommonClass.dll
+E:\包含源码\NGHB\WG\bin\Debug\FarPoint.SpreadDesigner.exe
+E:\包含源码\NGHB\WG\bin\Debug\FarPoint.Win.TextRenderer.dll
+E:\包含源码\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.dll
+E:\包含源码\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.Spread.dll
+E:\包含源码\NGHB\WG\bin\Debug\CommonClass.pdb
+E:\包含源码\NGHB\WG\bin\Debug\CommonClass.xml
+E:\包含源码\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.config
+E:\包含源码\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.Spread.config
+E:\包含源码\NGHB\WG\obj\Debug\ResolveAssemblyReference.cache
+E:\包含源码\NGHB\WG\obj\Debug\WG.csproj.ResolveComReference.cache
+E:\包含源码\NGHB\WG\obj\Debug\WG.MainMenu.resources
+E:\包含源码\NGHB\WG\obj\Debug\WG.Properties.Resources.resources
+E:\包含源码\NGHB\WG\obj\Debug\GenerateResource.read.1.tlog
+E:\包含源码\NGHB\WG\obj\Debug\GenerateResource.write.1.tlog
+E:\包含源码\NGHB\WG\obj\Debug\WG.exe.licenses
+E:\包含源码\NGHB\WG\obj\Debug\WG.exe.manifest
+E:\包含源码\NGHB\WG\obj\Debug\WG.application
+E:\包含源码\NGHB\WG\obj\Debug\WG.exe
+E:\包含源码\NGHB\WG\obj\Debug\WG.pdb
+E:\源码备份\svn正式版\NGHB\WG\bin\Debug\WG.exe.config
+E:\源码备份\svn正式版\NGHB\WG\bin\Debug\WG.exe.manifest
+E:\源码备份\svn正式版\NGHB\WG\bin\Debug\WG.application
+E:\源码备份\svn正式版\NGHB\WG\bin\Debug\WG.exe
+E:\源码备份\svn正式版\NGHB\WG\bin\Debug\WG.pdb
+E:\源码备份\svn正式版\NGHB\WG\bin\Debug\BDM.xml
+E:\源码备份\svn正式版\NGHB\WG\bin\Debug\CommonClass.dll
+E:\源码备份\svn正式版\NGHB\WG\bin\Debug\FarPoint.SpreadDesigner.exe
+E:\源码备份\svn正式版\NGHB\WG\bin\Debug\FarPoint.Win.TextRenderer.dll
+E:\源码备份\svn正式版\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.dll
+E:\源码备份\svn正式版\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.Spread.dll
+E:\源码备份\svn正式版\NGHB\WG\bin\Debug\CommonClass.pdb
+E:\源码备份\svn正式版\NGHB\WG\bin\Debug\CommonClass.xml
+E:\源码备份\svn正式版\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.config
+E:\源码备份\svn正式版\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.Spread.config
+E:\源码备份\svn正式版\NGHB\WG\obj\Debug\ResolveAssemblyReference.cache
+E:\源码备份\svn正式版\NGHB\WG\obj\Debug\WG.csproj.ResolveComReference.cache
+E:\源码备份\svn正式版\NGHB\WG\obj\Debug\WG.MainMenu.resources
+E:\源码备份\svn正式版\NGHB\WG\obj\Debug\WG.Properties.Resources.resources
+E:\源码备份\svn正式版\NGHB\WG\obj\Debug\GenerateResource.read.1.tlog
+E:\源码备份\svn正式版\NGHB\WG\obj\Debug\GenerateResource.write.1.tlog
+E:\源码备份\svn正式版\NGHB\WG\obj\Debug\WG.exe.licenses
+E:\源码备份\svn正式版\NGHB\WG\obj\Debug\WG.exe.manifest
+E:\源码备份\svn正式版\NGHB\WG\obj\Debug\WG.application
+E:\源码备份\svn正式版\NGHB\WG\obj\Debug\WG.exe
+E:\源码备份\svn正式版\NGHB\WG\obj\Debug\WG.pdb
+E:\源码备份\复件 svn正式版\NGHB\WG\bin\Debug\WG.exe.config
+E:\源码备份\复件 svn正式版\NGHB\WG\bin\Debug\WG.exe.manifest
+E:\源码备份\复件 svn正式版\NGHB\WG\bin\Debug\WG.application
+E:\源码备份\复件 svn正式版\NGHB\WG\bin\Debug\WG.exe
+E:\源码备份\复件 svn正式版\NGHB\WG\bin\Debug\WG.pdb
+E:\源码备份\复件 svn正式版\NGHB\WG\bin\Debug\BDM.xml
+E:\源码备份\复件 svn正式版\NGHB\WG\bin\Debug\CommonClass.dll
+E:\源码备份\复件 svn正式版\NGHB\WG\bin\Debug\FarPoint.SpreadDesigner.exe
+E:\源码备份\复件 svn正式版\NGHB\WG\bin\Debug\FarPoint.Win.TextRenderer.dll
+E:\源码备份\复件 svn正式版\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.dll
+E:\源码备份\复件 svn正式版\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.Spread.dll
+E:\源码备份\复件 svn正式版\NGHB\WG\bin\Debug\CommonClass.pdb
+E:\源码备份\复件 svn正式版\NGHB\WG\bin\Debug\CommonClass.xml
+E:\源码备份\复件 svn正式版\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.config
+E:\源码备份\复件 svn正式版\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.Spread.config
+E:\源码备份\复件 svn正式版\NGHB\WG\obj\Debug\ResolveAssemblyReference.cache
+E:\源码备份\复件 svn正式版\NGHB\WG\obj\Debug\WG.csproj.ResolveComReference.cache
+E:\源码备份\复件 svn正式版\NGHB\WG\obj\Debug\WG.MainMenu.resources
+E:\源码备份\复件 svn正式版\NGHB\WG\obj\Debug\WG.Properties.Resources.resources
+E:\源码备份\复件 svn正式版\NGHB\WG\obj\Debug\GenerateResource.read.1.tlog
+E:\源码备份\复件 svn正式版\NGHB\WG\obj\Debug\GenerateResource.write.1.tlog
+E:\源码备份\复件 svn正式版\NGHB\WG\obj\Debug\WG.exe.licenses
+E:\源码备份\复件 svn正式版\NGHB\WG\obj\Debug\WG.exe.manifest
+E:\源码备份\复件 svn正式版\NGHB\WG\obj\Debug\WG.application
+E:\源码备份\复件 svn正式版\NGHB\WG\obj\Debug\WG.exe
+E:\源码备份\复件 svn正式版\NGHB\WG\obj\Debug\WG.pdb
+E:\源码备份\0924\NGHB\WG\bin\Debug\WG.exe.config
+E:\源码备份\0924\NGHB\WG\bin\Debug\WG.exe.manifest
+E:\源码备份\0924\NGHB\WG\bin\Debug\WG.application
+E:\源码备份\0924\NGHB\WG\bin\Debug\WG.exe
+E:\源码备份\0924\NGHB\WG\bin\Debug\WG.pdb
+E:\源码备份\0924\NGHB\WG\bin\Debug\BDM.xml
+E:\源码备份\0924\NGHB\WG\bin\Debug\CommonClass.dll
+E:\源码备份\0924\NGHB\WG\bin\Debug\FarPoint.SpreadDesigner.exe
+E:\源码备份\0924\NGHB\WG\bin\Debug\FarPoint.Win.TextRenderer.dll
+E:\源码备份\0924\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.dll
+E:\源码备份\0924\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.Spread.dll
+E:\源码备份\0924\NGHB\WG\bin\Debug\CommonClass.pdb
+E:\源码备份\0924\NGHB\WG\bin\Debug\CommonClass.xml
+E:\源码备份\0924\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.config
+E:\源码备份\0924\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.Spread.config
+E:\源码备份\0924\NGHB\WG\obj\Debug\ResolveAssemblyReference.cache
+E:\源码备份\0924\NGHB\WG\obj\Debug\WG.csproj.ResolveComReference.cache
+E:\源码备份\0924\NGHB\WG\obj\Debug\WG.MainMenu.resources
+E:\源码备份\0924\NGHB\WG\obj\Debug\WG.Properties.Resources.resources
+E:\源码备份\0924\NGHB\WG\obj\Debug\GenerateResource.read.1.tlog
+E:\源码备份\0924\NGHB\WG\obj\Debug\GenerateResource.write.1.tlog
+E:\源码备份\0924\NGHB\WG\obj\Debug\WG.exe.licenses
+E:\源码备份\0924\NGHB\WG\obj\Debug\WG.exe.manifest
+E:\源码备份\0924\NGHB\WG\obj\Debug\WG.application
+E:\源码备份\0924\NGHB\WG\obj\Debug\WG.exe
+E:\源码备份\0924\NGHB\WG\obj\Debug\WG.pdb
+E:\源码备份\0924\NGHB\WG\obj\Debug\WG.WGE2020C.resources
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\SVN0924\NGHB\WG\bin\Debug\WG.exe.config
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\SVN0924\NGHB\WG\obj\Debug\WG.csproj.ResolveComReference.cache
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\SVN0924\NGHB\WG\obj\Debug\WG.exe
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\SVN0924\NGHB\WG\obj\Debug\WG.pdb
+C:\Documents and Settings\Administrator\桌面\NGHB\WG\bin\Debug\WG.exe.config
+C:\Documents and Settings\Administrator\桌面\NGHB\WG\obj\Debug\WG.csproj.ResolveComReference.cache
+C:\Documents and Settings\Administrator\桌面\NGHB\WG\obj\Debug\WG.exe
+C:\Documents and Settings\Administrator\桌面\NGHB\WG\obj\Debug\WG.pdb
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\SVN宽厚板平台最新版1009\NGHB\WG\bin\Debug\WG.exe.config
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\SVN宽厚板平台最新版1009\NGHB\WG\obj\Debug\WG.csproj.ResolveComReference.cache
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\SVN宽厚板平台最新版1009\NGHB\WG\obj\Debug\WG.exe
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\SVN宽厚板平台最新版1009\NGHB\WG\obj\Debug\WG.pdb
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\SVN宽厚板平台最新版1009\NGHB\WG\bin\Debug\WG.exe.manifest
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\SVN宽厚板平台最新版1009\NGHB\WG\bin\Debug\WG.application
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\SVN宽厚板平台最新版1009\NGHB\WG\bin\Debug\WG.exe
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\SVN宽厚板平台最新版1009\NGHB\WG\bin\Debug\WG.pdb
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\SVN宽厚板平台最新版1009\NGHB\WG\bin\Debug\BDM.xml
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\SVN宽厚板平台最新版1009\NGHB\WG\bin\Debug\CommonClass.dll
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\SVN宽厚板平台最新版1009\NGHB\WG\bin\Debug\FarPoint.SpreadDesigner.exe
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\SVN宽厚板平台最新版1009\NGHB\WG\bin\Debug\FarPoint.Win.TextRenderer.dll
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\SVN宽厚板平台最新版1009\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.dll
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\SVN宽厚板平台最新版1009\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.Spread.dll
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\SVN宽厚板平台最新版1009\NGHB\WG\bin\Debug\CommonClass.pdb
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\SVN宽厚板平台最新版1009\NGHB\WG\bin\Debug\CommonClass.xml
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\SVN宽厚板平台最新版1009\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.config
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\SVN宽厚板平台最新版1009\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.Spread.config
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\SVN宽厚板平台最新版1009\NGHB\WG\obj\Debug\ResolveAssemblyReference.cache
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\SVN宽厚板平台最新版1009\NGHB\WG\obj\Debug\WG.WGE2020C.resources
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\SVN宽厚板平台最新版1009\NGHB\WG\obj\Debug\WG.MainMenu.resources
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\SVN宽厚板平台最新版1009\NGHB\WG\obj\Debug\WG.Properties.Resources.resources
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\SVN宽厚板平台最新版1009\NGHB\WG\obj\Debug\GenerateResource.read.1.tlog
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\SVN宽厚板平台最新版1009\NGHB\WG\obj\Debug\GenerateResource.write.1.tlog
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\SVN宽厚板平台最新版1009\NGHB\WG\obj\Debug\WG.exe.licenses
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\SVN宽厚板平台最新版1009\NGHB\WG\obj\Debug\WG.exe.manifest
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\SVN宽厚板平台最新版1009\NGHB\WG\obj\Debug\WG.application
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\1016版本\NGHB\WG\bin\Debug\WG.exe.config
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\1016版本\NGHB\WG\obj\Debug\WG.csproj.ResolveComReference.cache
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\1016版本\NGHB\WG\obj\Debug\WG.exe
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\1016版本\NGHB\WG\obj\Debug\WG.pdb
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\1016版本\NGHB\WG\bin\Debug\WG.exe.manifest
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\1016版本\NGHB\WG\bin\Debug\WG.application
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\1016版本\NGHB\WG\bin\Debug\WG.exe
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\1016版本\NGHB\WG\bin\Debug\WG.pdb
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\1016版本\NGHB\WG\bin\Debug\BDM.xml
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\1016版本\NGHB\WG\bin\Debug\CommonClass.dll
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\1016版本\NGHB\WG\bin\Debug\FarPoint.SpreadDesigner.exe
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\1016版本\NGHB\WG\bin\Debug\FarPoint.Win.TextRenderer.dll
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\1016版本\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.dll
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\1016版本\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.Spread.dll
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\1016版本\NGHB\WG\bin\Debug\CommonClass.pdb
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\1016版本\NGHB\WG\bin\Debug\CommonClass.xml
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\1016版本\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.config
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\1016版本\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.Spread.config
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\1016版本\NGHB\WG\obj\Debug\ResolveAssemblyReference.cache
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\1016版本\NGHB\WG\obj\Debug\WG.WGE2020C.resources
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\1016版本\NGHB\WG\obj\Debug\WG.MainMenu.resources
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\1016版本\NGHB\WG\obj\Debug\WG.Properties.Resources.resources
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\1016版本\NGHB\WG\obj\Debug\GenerateResource.read.1.tlog
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\1016版本\NGHB\WG\obj\Debug\GenerateResource.write.1.tlog
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\1016版本\NGHB\WG\obj\Debug\WG.exe.licenses
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\1016版本\NGHB\WG\obj\Debug\WG.exe.manifest
+D:\mes\KHBMES\trunk\02.Developement Repository\06.Coding\1016版本\NGHB\WG\obj\Debug\WG.application
+D:\000000\NGHB\WG\bin\Debug\WG.exe.config
+D:\000000\NGHB\WG\bin\Debug\WG.exe.manifest
+D:\000000\NGHB\WG\bin\Debug\WG.application
+D:\000000\NGHB\WG\bin\Debug\WG.exe
+D:\000000\NGHB\WG\bin\Debug\WG.pdb
+D:\000000\NGHB\WG\bin\Debug\BDM.xml
+D:\000000\NGHB\WG\bin\Debug\CommonClass.dll
+D:\000000\NGHB\WG\bin\Debug\FarPoint.SpreadDesigner.exe
+D:\000000\NGHB\WG\bin\Debug\FarPoint.Win.TextRenderer.dll
+D:\000000\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.dll
+D:\000000\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.Spread.dll
+D:\000000\NGHB\WG\bin\Debug\CommonClass.pdb
+D:\000000\NGHB\WG\bin\Debug\CommonClass.xml
+D:\000000\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.config
+D:\000000\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.Spread.config
+D:\000000\NGHB\WG\obj\Debug\ResolveAssemblyReference.cache
+D:\000000\NGHB\WG\obj\Debug\WG.csproj.ResolveComReference.cache
+D:\000000\NGHB\WG\obj\Debug\WG.WGE2020C.resources
+D:\000000\NGHB\WG\obj\Debug\WG.MainMenu.resources
+D:\000000\NGHB\WG\obj\Debug\WG.Properties.Resources.resources
+D:\000000\NGHB\WG\obj\Debug\GenerateResource.read.1.tlog
+D:\000000\NGHB\WG\obj\Debug\GenerateResource.write.1.tlog
+D:\000000\NGHB\WG\obj\Debug\WG.exe.licenses
+D:\000000\NGHB\WG\obj\Debug\WG.exe.manifest
+D:\000000\NGHB\WG\obj\Debug\WG.application
+D:\000000\NGHB\WG\obj\Debug\WG.exe
+D:\000000\NGHB\WG\obj\Debug\WG.pdb
+E:\源码备份\svn1018\NGHB\WG\bin\Debug\WG.exe.config
+E:\源码备份\svn1018\NGHB\WG\bin\Debug\WG.exe.manifest
+E:\源码备份\svn1018\NGHB\WG\bin\Debug\WG.application
+E:\源码备份\svn1018\NGHB\WG\bin\Debug\WG.exe
+E:\源码备份\svn1018\NGHB\WG\bin\Debug\WG.pdb
+E:\源码备份\svn1018\NGHB\WG\bin\Debug\BDM.xml
+E:\源码备份\svn1018\NGHB\WG\bin\Debug\CommonClass.dll
+E:\源码备份\svn1018\NGHB\WG\bin\Debug\FarPoint.SpreadDesigner.exe
+E:\源码备份\svn1018\NGHB\WG\bin\Debug\FarPoint.Win.TextRenderer.dll
+E:\源码备份\svn1018\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.dll
+E:\源码备份\svn1018\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.Spread.dll
+E:\源码备份\svn1018\NGHB\WG\bin\Debug\CommonClass.pdb
+E:\源码备份\svn1018\NGHB\WG\bin\Debug\CommonClass.xml
+E:\源码备份\svn1018\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.config
+E:\源码备份\svn1018\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.Spread.config
+E:\源码备份\svn1018\NGHB\WG\obj\Debug\ResolveAssemblyReference.cache
+E:\源码备份\svn1018\NGHB\WG\obj\Debug\WG.csproj.ResolveComReference.cache
+E:\源码备份\svn1018\NGHB\WG\obj\Debug\WG.WGE2020C.resources
+E:\源码备份\svn1018\NGHB\WG\obj\Debug\WG.MainMenu.resources
+E:\源码备份\svn1018\NGHB\WG\obj\Debug\WG.Properties.Resources.resources
+E:\源码备份\svn1018\NGHB\WG\obj\Debug\GenerateResource.read.1.tlog
+E:\源码备份\svn1018\NGHB\WG\obj\Debug\GenerateResource.write.1.tlog
+E:\源码备份\svn1018\NGHB\WG\obj\Debug\WG.exe.licenses
+E:\源码备份\svn1018\NGHB\WG\obj\Debug\WG.exe.manifest
+E:\源码备份\svn1018\NGHB\WG\obj\Debug\WG.application
+E:\源码备份\svn1018\NGHB\WG\obj\Debug\WG.exe
+E:\源码备份\svn1018\NGHB\WG\obj\Debug\WG.pdb
+E:\源码备份\svn1019版本\NGHB\WG\bin\Debug\WG.exe.config
+E:\源码备份\svn1019版本\NGHB\WG\bin\Debug\WG.exe.manifest
+E:\源码备份\svn1019版本\NGHB\WG\bin\Debug\WG.application
+E:\源码备份\svn1019版本\NGHB\WG\bin\Debug\WG.exe
+E:\源码备份\svn1019版本\NGHB\WG\bin\Debug\WG.pdb
+E:\源码备份\svn1019版本\NGHB\WG\bin\Debug\BDM.xml
+E:\源码备份\svn1019版本\NGHB\WG\bin\Debug\CommonClass.dll
+E:\源码备份\svn1019版本\NGHB\WG\bin\Debug\FarPoint.SpreadDesigner.exe
+E:\源码备份\svn1019版本\NGHB\WG\bin\Debug\FarPoint.Win.TextRenderer.dll
+E:\源码备份\svn1019版本\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.dll
+E:\源码备份\svn1019版本\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.Spread.dll
+E:\源码备份\svn1019版本\NGHB\WG\bin\Debug\CommonClass.pdb
+E:\源码备份\svn1019版本\NGHB\WG\bin\Debug\CommonClass.xml
+E:\源码备份\svn1019版本\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.config
+E:\源码备份\svn1019版本\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.Spread.config
+E:\源码备份\svn1019版本\NGHB\WG\obj\Debug\ResolveAssemblyReference.cache
+E:\源码备份\svn1019版本\NGHB\WG\obj\Debug\WG.csproj.ResolveComReference.cache
+E:\源码备份\svn1019版本\NGHB\WG\obj\Debug\WG.WGE2020C.resources
+E:\源码备份\svn1019版本\NGHB\WG\obj\Debug\WG.MainMenu.resources
+E:\源码备份\svn1019版本\NGHB\WG\obj\Debug\WG.Properties.Resources.resources
+E:\源码备份\svn1019版本\NGHB\WG\obj\Debug\GenerateResource.read.1.tlog
+E:\源码备份\svn1019版本\NGHB\WG\obj\Debug\GenerateResource.write.1.tlog
+E:\源码备份\svn1019版本\NGHB\WG\obj\Debug\WG.exe.licenses
+E:\源码备份\svn1019版本\NGHB\WG\obj\Debug\WG.exe.manifest
+E:\源码备份\svn1019版本\NGHB\WG\obj\Debug\WG.application
+E:\源码备份\svn1019版本\NGHB\WG\obj\Debug\WG.exe
+E:\源码备份\svn1019版本\NGHB\WG\obj\Debug\WG.pdb
+E:\源码备份\svn1023\NGHB\WG\bin\Debug\WG.exe.config
+E:\源码备份\svn1023\NGHB\WG\bin\Debug\WG.exe.manifest
+E:\源码备份\svn1023\NGHB\WG\bin\Debug\WG.application
+E:\源码备份\svn1023\NGHB\WG\bin\Debug\WG.exe
+E:\源码备份\svn1023\NGHB\WG\bin\Debug\WG.pdb
+E:\源码备份\svn1023\NGHB\WG\bin\Debug\BDM.xml
+E:\源码备份\svn1023\NGHB\WG\bin\Debug\CommonClass.dll
+E:\源码备份\svn1023\NGHB\WG\bin\Debug\FarPoint.SpreadDesigner.exe
+E:\源码备份\svn1023\NGHB\WG\bin\Debug\FarPoint.Win.TextRenderer.dll
+E:\源码备份\svn1023\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.dll
+E:\源码备份\svn1023\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.Spread.dll
+E:\源码备份\svn1023\NGHB\WG\bin\Debug\CommonClass.pdb
+E:\源码备份\svn1023\NGHB\WG\bin\Debug\CommonClass.xml
+E:\源码备份\svn1023\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.config
+E:\源码备份\svn1023\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.Spread.config
+E:\源码备份\svn1023\NGHB\WG\obj\Debug\ResolveAssemblyReference.cache
+E:\源码备份\svn1023\NGHB\WG\obj\Debug\WG.csproj.ResolveComReference.cache
+E:\源码备份\svn1023\NGHB\WG\obj\Debug\WG.WGE2020C.resources
+E:\源码备份\svn1023\NGHB\WG\obj\Debug\WG.MainMenu.resources
+E:\源码备份\svn1023\NGHB\WG\obj\Debug\WG.Properties.Resources.resources
+E:\源码备份\svn1023\NGHB\WG\obj\Debug\GenerateResource.read.1.tlog
+E:\源码备份\svn1023\NGHB\WG\obj\Debug\GenerateResource.write.1.tlog
+E:\源码备份\svn1023\NGHB\WG\obj\Debug\WG.exe.licenses
+E:\源码备份\svn1023\NGHB\WG\obj\Debug\WG.exe.manifest
+E:\源码备份\svn1023\NGHB\WG\obj\Debug\WG.application
+E:\源码备份\svn1023\NGHB\WG\obj\Debug\WG.exe
+E:\源码备份\svn1023\NGHB\WG\obj\Debug\WG.pdb
+D:\NGHB\NGHB\WG\bin\Debug\WG.exe.config
+D:\NGHB\NGHB\WG\bin\Debug\WG.exe.manifest
+D:\NGHB\NGHB\WG\bin\Debug\WG.application
+D:\NGHB\NGHB\WG\bin\Debug\WG.exe
+D:\NGHB\NGHB\WG\bin\Debug\WG.pdb
+D:\NGHB\NGHB\WG\bin\Debug\BDM.xml
+D:\NGHB\NGHB\WG\bin\Debug\CommonClass.dll
+D:\NGHB\NGHB\WG\bin\Debug\FarPoint.SpreadDesigner.exe
+D:\NGHB\NGHB\WG\bin\Debug\FarPoint.Win.TextRenderer.dll
+D:\NGHB\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.dll
+D:\NGHB\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.Spread.dll
+D:\NGHB\NGHB\WG\bin\Debug\CommonClass.pdb
+D:\NGHB\NGHB\WG\bin\Debug\CommonClass.xml
+D:\NGHB\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.config
+D:\NGHB\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.Spread.config
+D:\NGHB\NGHB\WG\obj\Debug\ResolveAssemblyReference.cache
+D:\NGHB\NGHB\WG\obj\Debug\WG.csproj.ResolveComReference.cache
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGC2020C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGC2030C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGC2040C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGC2050C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGC2051C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGC2060C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGC3020C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGE2030C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGE2020C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.MainMenu.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.Properties.Resources.resources
+D:\NGHB\NGHB\WG\obj\Debug\GenerateResource.read.1.tlog
+D:\NGHB\NGHB\WG\obj\Debug\GenerateResource.write.1.tlog
+D:\NGHB\NGHB\WG\obj\Debug\WG.exe.licenses
+D:\NGHB\NGHB\WG\obj\Debug\WG.exe.manifest
+D:\NGHB\NGHB\WG\obj\Debug\WG.application
+D:\NGHB\NGHB\WG\obj\Debug\WG.exe
+D:\NGHB\NGHB\WG\obj\Debug\WG.pdb
+E:\nghb1112\NGHB\WG\bin\Debug\WG.exe.config
+E:\nghb1112\NGHB\WG\bin\Debug\WG.exe.manifest
+E:\nghb1112\NGHB\WG\bin\Debug\WG.application
+E:\nghb1112\NGHB\WG\bin\Debug\WG.exe
+E:\nghb1112\NGHB\WG\bin\Debug\WG.pdb
+E:\nghb1112\NGHB\WG\bin\Debug\BDM.xml
+E:\nghb1112\NGHB\WG\bin\Debug\CommonClass.dll
+E:\nghb1112\NGHB\WG\bin\Debug\FarPoint.SpreadDesigner.exe
+E:\nghb1112\NGHB\WG\bin\Debug\FarPoint.Win.TextRenderer.dll
+E:\nghb1112\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.dll
+E:\nghb1112\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.Spread.dll
+E:\nghb1112\NGHB\WG\bin\Debug\CommonClass.pdb
+E:\nghb1112\NGHB\WG\bin\Debug\CommonClass.xml
+E:\nghb1112\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.config
+E:\nghb1112\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.Spread.config
+E:\nghb1112\NGHB\WG\obj\Debug\ResolveAssemblyReference.cache
+E:\nghb1112\NGHB\WG\obj\Debug\WG.csproj.ResolveComReference.cache
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGA2010C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGA2011C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGA2012C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGA2013C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGB2011C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGB2015C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGB2016C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGB2040C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGB3010C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGB3011C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGC2012C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGC2013C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGC2020C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGC2030C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGC2037C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGC2038C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGC2040C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGC2041C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGC2050C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGC2051C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGC2060C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGC2200C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGC2410C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGC2430C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGC2901C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGC3020C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGD2071C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGE2021C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGE2030C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGE2031C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGE2040C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGE2050C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGE2060C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGF2010C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGF2020C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGF2030C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGF2040C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGF2050C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGT1090C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.WGE2020C.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.MainMenu.resources
+E:\nghb1112\NGHB\WG\obj\Debug\WG.Properties.Resources.resources
+E:\nghb1112\NGHB\WG\obj\Debug\GenerateResource.read.1.tlog
+E:\nghb1112\NGHB\WG\obj\Debug\GenerateResource.write.1.tlog
+E:\nghb1112\NGHB\WG\obj\Debug\WG.exe.licenses
+E:\nghb1112\NGHB\WG\obj\Debug\WG.exe.manifest
+E:\nghb1112\NGHB\WG\obj\Debug\WG.application
+E:\nghb1112\NGHB\WG\obj\Debug\WG.exe
+E:\nghb1112\NGHB\WG\obj\Debug\WG.pdb
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\bin\Debug\WG.exe.config
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\bin\Debug\WG.exe.manifest
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\bin\Debug\WG.application
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\bin\Debug\WG.exe
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\bin\Debug\WG.pdb
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\bin\Debug\BDM.xml
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\bin\Debug\CommonClass.dll
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\bin\Debug\FarPoint.SpreadDesigner.exe
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\bin\Debug\FarPoint.Win.TextRenderer.dll
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.dll
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.Spread.dll
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\bin\Debug\CommonClass.pdb
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\bin\Debug\CommonClass.xml
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.config
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.Spread.config
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\ResolveAssemblyReference.cache
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.csproj.ResolveComReference.cache
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGB3010C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGB3011C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGC2020C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGC2030C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGC2037C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGC2040C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGC2041C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGC2050C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGC2051C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGC2060C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGC2410C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGC2430C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGC3020C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGD2071C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGE2030C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGT1010C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGT1020C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGT1030C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGT1040C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGT2010C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGT2011C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGT3020C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGE2020C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.MainMenu.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.Properties.Resources.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\GenerateResource.read.1.tlog
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\GenerateResource.write.1.tlog
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.exe.licenses
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.exe.manifest
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.application
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.exe
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.pdb
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGE1010C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGE1020C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGT1010C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGT1020C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGT1030C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGT1040C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGT2010C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGT2011C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGT3010C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGT3020C.resources
+D:\NGHB\NGHB\WG\obj\Debug\Interop.VBIDE.dll
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGE2010C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGT2020C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGB1010C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGB1020C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\Interop.Excel.dll
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\Interop.VBIDE.dll
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGB1010C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGB1020C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGB1030C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGB1040C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGB1050C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGE1010C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGE1020C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGE1030C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGE1040C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGE2010C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGF1010C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGF1020C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGF1030C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGF1040C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGF1050C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGT2020C.resources
+D:\4700mm开发平台(Final)\NGHB\NGHB\WG\obj\Debug\WG.WGT3010C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGB1030C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGB1040C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGB1050C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGE1030C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGE1040C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGF1010C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGF1020C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGF1030C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGF1040C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGF1050C.resources
+D:\4米7开发平台\NGHB\WG\bin\Debug\WG.exe.config
+D:\4米7开发平台\NGHB\WG\obj\Debug\Interop.VBIDE.dll
+D:\4米7开发平台\NGHB\WG\obj\Debug\WG.csproj.ResolveComReference.cache
+D:\4米7开发平台\NGHB\WG\obj\Debug\WG.exe
+D:\4米7开发平台\NGHB\WG\obj\Debug\WG.pdb
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGF1080C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGC1010C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGC1020C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGC1030C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGC2010C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGC3010C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGC3030C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGE3010C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGE4010C.resources
+D:\NGHB\NGHB\WG\obj\Debug\WG.WGE4020C.resources
+D:\NGHB1\NGHB\WG\bin\Debug\WG.exe.config
+D:\NGHB1\NGHB\WG\obj\Debug\Interop.VBIDE.dll
+D:\NGHB1\NGHB\WG\obj\Debug\WG.csproj.ResolveComReference.cache
+D:\NGHB1\NGHB\WG\obj\Debug\WG.exe
+D:\NGHB1\NGHB\WG\obj\Debug\WG.pdb
+D:\NGHB1\NGHB\WG\bin\Debug\WG.exe.manifest
+D:\NGHB1\NGHB\WG\bin\Debug\WG.application
+D:\NGHB1\NGHB\WG\bin\Debug\WG.exe
+D:\NGHB1\NGHB\WG\bin\Debug\WG.pdb
+D:\NGHB1\NGHB\WG\bin\Debug\BDM.xml
+D:\NGHB1\NGHB\WG\bin\Debug\CommonClass.dll
+D:\NGHB1\NGHB\WG\bin\Debug\FarPoint.SpreadDesigner.exe
+D:\NGHB1\NGHB\WG\bin\Debug\FarPoint.Win.TextRenderer.dll
+D:\NGHB1\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.dll
+D:\NGHB1\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.Spread.dll
+D:\NGHB1\NGHB\WG\bin\Debug\CommonClass.pdb
+D:\NGHB1\NGHB\WG\bin\Debug\CommonClass.xml
+D:\NGHB1\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.config
+D:\NGHB1\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.Spread.config
+D:\NGHB1\NGHB\WG\obj\Debug\ResolveAssemblyReference.cache
+D:\NGHB1\NGHB\WG\obj\Debug\WG.MainMenu.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.Properties.Resources.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGB1010C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGB1020C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGB1030C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGB1040C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGB1050C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGC1010C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGC1020C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGC1030C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGC2010C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGC2020C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGC2030C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGC2040C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGC2050C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGC2051C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGC2060C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGC3010C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGC3030C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGC3020C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGE1010C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGE1020C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGE1030C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGE1040C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGE2010C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGE2020C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGE2030C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGE3010C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGE4010C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGE4020C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGF1010C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGF1020C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGF1030C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGF1040C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGF1050C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGF1080C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGT1010C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGT1020C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGT1030C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGT1040C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGT2010C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGT2011C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGT2020C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGT3010C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGT3020C.resources
+D:\NGHB1\NGHB\WG\obj\Debug\GenerateResource.read.1.tlog
+D:\NGHB1\NGHB\WG\obj\Debug\GenerateResource.write.1.tlog
+D:\NGHB1\NGHB\WG\obj\Debug\WG.exe.licenses
+D:\NGHB1\NGHB\WG\obj\Debug\WG.exe.manifest
+D:\NGHB1\NGHB\WG\obj\Debug\WG.application
+D:\NGHB1\NGHB\WG\obj\Debug\WG.WGE4011C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\bin\Debug\WG.exe.config
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\Interop.VBIDE.dll
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.csproj.ResolveComReference.cache
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.exe
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.pdb
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.MainMenu.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.Properties.Resources.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGB1010C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGB1020C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGB1030C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGB1040C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGB1050C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGC1010C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGC1020C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGC1030C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGC2010C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGC2020C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGC2030C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGC2040C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGC2050C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGC2051C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGC2060C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGC3010C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGC3030C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGC3020C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGE1010C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGE1020C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGE1030C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGE1040C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGE2010C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGE2020C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGE2030C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGE3010C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGF1010C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGF1020C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGF1030C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGF1040C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGF1050C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGF1080C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGT1010C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGT1020C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGT1030C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGT1040C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGT2010C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGT2011C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGT2020C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGT3010C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGT3020C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.exe.licenses
+C:\Users\HANCHAO\Desktop\NGHB\WG\bin\Debug\WG.exe.manifest
+C:\Users\HANCHAO\Desktop\NGHB\WG\bin\Debug\WG.application
+C:\Users\HANCHAO\Desktop\NGHB\WG\bin\Debug\WG.exe
+C:\Users\HANCHAO\Desktop\NGHB\WG\bin\Debug\WG.pdb
+C:\Users\HANCHAO\Desktop\NGHB\WG\bin\Debug\BDM.xml
+C:\Users\HANCHAO\Desktop\NGHB\WG\bin\Debug\CommonClass.dll
+C:\Users\HANCHAO\Desktop\NGHB\WG\bin\Debug\FarPoint.SpreadDesigner.exe
+C:\Users\HANCHAO\Desktop\NGHB\WG\bin\Debug\FarPoint.Win.TextRenderer.dll
+C:\Users\HANCHAO\Desktop\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.dll
+C:\Users\HANCHAO\Desktop\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.Spread.dll
+C:\Users\HANCHAO\Desktop\NGHB\WG\bin\Debug\CommonClass.pdb
+C:\Users\HANCHAO\Desktop\NGHB\WG\bin\Debug\CommonClass.xml
+C:\Users\HANCHAO\Desktop\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.config
+C:\Users\HANCHAO\Desktop\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.Spread.config
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGB1060C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.exe.manifest
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.application
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGF1060C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGE4030C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.WGE4040C.resources
+C:\Users\HANCHAO\Desktop\NGHB\WG\obj\Debug\WG.YardDetail.resources
+D:\SVN\nghb\NGHB\WG\bin\Debug\WG.exe.config
+D:\SVN\nghb\NGHB\WG\obj\Debug\Interop.VBIDE.dll
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.csproj.ResolveComReference.cache
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.exe
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.pdb
+D:\SVN\nghb\NGHB\WG\bin\Debug\WG.exe.manifest
+D:\SVN\nghb\NGHB\WG\bin\Debug\WG.application
+D:\SVN\nghb\NGHB\WG\bin\Debug\WG.exe
+D:\SVN\nghb\NGHB\WG\bin\Debug\WG.pdb
+D:\SVN\nghb\NGHB\WG\bin\Debug\BDM.xml
+D:\SVN\nghb\NGHB\WG\bin\Debug\CommonClass.dll
+D:\SVN\nghb\NGHB\WG\bin\Debug\FarPoint.SpreadDesigner.exe
+D:\SVN\nghb\NGHB\WG\bin\Debug\FarPoint.Win.TextRenderer.dll
+D:\SVN\nghb\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.dll
+D:\SVN\nghb\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.Spread.dll
+D:\SVN\nghb\NGHB\WG\bin\Debug\CommonClass.pdb
+D:\SVN\nghb\NGHB\WG\bin\Debug\CommonClass.xml
+D:\SVN\nghb\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.config
+D:\SVN\nghb\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.Spread.config
+D:\SVN\nghb\NGHB\WG\obj\Debug\ResolveAssemblyReference.cache
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.MainMenu.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.Properties.Resources.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGB1010C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGB1020C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGB1030C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGB1040C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGB1050C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGB1060C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGC1010C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGC1020C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGC1030C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGC2010C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGC2020C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGC2030C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGC2040C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGC2050C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGC2051C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGC2060C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGC3010C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGC3030C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGC3020C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGE1010C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGE1020C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGE1030C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGE1040C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGE2010C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGE2020C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGE2030C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGE3010C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGE4030C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGE4040C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.YardDetail.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGF1010C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGF1020C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGF1030C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGF1040C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGF1050C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGF1060C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGF1080C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGT1010C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGT1020C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGT1030C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGT1040C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGT1050C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGT2010C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGT2011C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGT2020C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGT2030C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGT3010C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGT3020C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\GenerateResource.read.1.tlog
+D:\SVN\nghb\NGHB\WG\obj\Debug\GenerateResource.write.1.tlog
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.exe.licenses
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.exe.manifest
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.application
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGC2070C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGT1060C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGA1010C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGA1020C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGA1030C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGA1040C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGA1050C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGT2021C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGT2012C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGT2040C.resources
+D:\SVN\nghb\NGHB\WG\obj\Debug\WG.WGF1070C.resources
+D:\SVN\NHGB\WG\bin\Debug\WG.exe.config
+D:\SVN\NHGB\WG\obj\Debug\Interop.VBIDE.dll
+D:\SVN\NHGB\WG\obj\Debug\WG.csproj.ResolveComReference.cache
+D:\SVN\NHGB\WG\obj\Debug\WG.exe
+D:\SVN\NHGB\WG\obj\Debug\WG.pdb
+D:\SVN\NHGB\WG\obj\Debug\WG.csprojResolveAssemblyReference.cache
+D:\SVN\NHGB\WG\obj\Debug\WG.MainMenu.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.Properties.Resources.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGA1010C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGA1020C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGA1030C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGA1040C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGA1050C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGB1010C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGB1020C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGB1030C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGB1040C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGB1050C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGB1060C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGC1010C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGC1020C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGC1030C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGC2010C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGC2020C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGC2030C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGC2040C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGC2050C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGC2051C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGC2060C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGC2070C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGC3010C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGC3030C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGC3020C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGE1010C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGE1020C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGE1030C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGE1040C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGE2010C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGE2020C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGE2030C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGE3010C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGE4030C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGE4040C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.YardDetail.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGF1010C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGF1020C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGF1030C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGF1040C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGF1050C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGF1060C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGF1070C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGF1080C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGT1010C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGT1020C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGT1030C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGT1040C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGT1050C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGT1060C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGT2010C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGT2011C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGT2012C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGT2020C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGT2021C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGT2030C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGT2040C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGT3010C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGT3020C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.csproj.GenerateResource.Cache
+D:\SVN\NHGB\WG\obj\Debug\WG.exe.licenses
+D:\SVN\NHGB\WG\bin\Debug\WG.exe.manifest
+D:\SVN\NHGB\WG\bin\Debug\WG.application
+D:\SVN\NHGB\WG\bin\Debug\WG.exe
+D:\SVN\NHGB\WG\bin\Debug\WG.pdb
+D:\SVN\NHGB\WG\bin\Debug\BDM.xml
+D:\SVN\NHGB\WG\bin\Debug\CommonClass.dll
+D:\SVN\NHGB\WG\bin\Debug\FarPoint.SpreadDesigner.exe
+D:\SVN\NHGB\WG\bin\Debug\FarPoint.Win.TextRenderer.dll
+D:\SVN\NHGB\WG\bin\Debug\policy.5.0.FarPoint.Win.dll
+D:\SVN\NHGB\WG\bin\Debug\policy.5.0.FarPoint.Win.Spread.dll
+D:\SVN\NHGB\WG\bin\Debug\CommonClass.pdb
+D:\SVN\NHGB\WG\bin\Debug\CommonClass.xml
+D:\SVN\NHGB\WG\bin\Debug\policy.5.0.FarPoint.Win.config
+D:\SVN\NHGB\WG\bin\Debug\policy.5.0.FarPoint.Win.Spread.config
+D:\SVN\NHGB\WG\obj\Debug\WG.WGA1031C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGT1070C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.exe.manifest
+D:\SVN\NHGB\WG\obj\Debug\WG.application
+D:\SVN\NHGB\WG\obj\Debug\WG.WGA1011C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGC2035C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGC2052C.resources
+D:\SVN\NHGB\WG\obj\Debug\WG.WGC3031C.resources
+D:\SVN\VS平台迁移\NGHB\WG\bin\Debug\WG.exe.config
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\Interop.VBIDE.dll
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.csproj.ResolveComReference.cache
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.exe
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.pdb
+D:\SVN\VS平台迁移\NGHB\WG\bin\Debug\WG.exe.manifest
+D:\SVN\VS平台迁移\NGHB\WG\bin\Debug\WG.application
+D:\SVN\VS平台迁移\NGHB\WG\bin\Debug\WG.exe
+D:\SVN\VS平台迁移\NGHB\WG\bin\Debug\WG.pdb
+D:\SVN\VS平台迁移\NGHB\WG\bin\Debug\BDM.xml
+D:\SVN\VS平台迁移\NGHB\WG\bin\Debug\CommonClass.dll
+D:\SVN\VS平台迁移\NGHB\WG\bin\Debug\FarPoint.SpreadDesigner.exe
+D:\SVN\VS平台迁移\NGHB\WG\bin\Debug\FarPoint.Win.TextRenderer.dll
+D:\SVN\VS平台迁移\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.dll
+D:\SVN\VS平台迁移\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.Spread.dll
+D:\SVN\VS平台迁移\NGHB\WG\bin\Debug\CommonClass.pdb
+D:\SVN\VS平台迁移\NGHB\WG\bin\Debug\CommonClass.xml
+D:\SVN\VS平台迁移\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.config
+D:\SVN\VS平台迁移\NGHB\WG\bin\Debug\policy.5.0.FarPoint.Win.Spread.config
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.csprojResolveAssemblyReference.cache
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.MainMenu.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.Properties.Resources.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGA1010C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGA1011C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGA1020C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGA1030C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGA1031C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGA1040C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGA1050C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGB1010C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGB1020C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGB1030C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGB1040C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGB1050C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGB1060C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGC1010C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGC1020C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGC1030C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGC2010C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGC2020C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGC2030C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGC2035C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGC2040C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGC2050C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGC2051C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGC2052C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGC2060C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGC2070C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGC3010C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGC3030C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGC3020C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGC3031C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGE1010C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGE1020C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGE1030C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGE1040C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGE2010C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGE2020C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGE2030C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGE3010C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGE4030C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGE4040C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.YardDetail.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGF1010C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGF1020C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGF1030C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGF1040C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGF1050C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGF1060C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGF1070C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGF1080C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGT1010C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGT1020C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGT1030C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGT1040C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGT1050C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGT1060C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGT1070C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGT2010C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGT2011C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGT2012C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGT2020C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGT2021C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGT2030C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGT2040C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGT3010C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.WGT3020C.resources
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.csproj.GenerateResource.Cache
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.exe.licenses
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.exe.manifest
+D:\SVN\VS平台迁移\NGHB\WG\obj\Debug\WG.application

@@ -1,0 +1,442 @@
+F:\TGTQ\AZ\obj\Debug\ResolveAssemblyReference.cache
+F:\TGTQ\AZ\obj\Debug\WZ.csproj.ResolveComReference.cache
+F:\TGTQ\AZ\obj\Debug\WZ.FORM_BUTTONS.resources
+F:\TGTQ\AZ\obj\Debug\WZ.FORM_ITEMS.resources
+F:\TGTQ\AZ\obj\Debug\WZ.WEC0000C.resources
+F:\TGTQ\AZ\obj\Debug\WZ.WEC0010C.resources
+F:\TGTQ\AZ\obj\Debug\WZ.WED1010C.resources
+F:\TGTQ\AZ\obj\Debug\WZ.WEF1065C.resources
+F:\TGTQ\AZ\obj\Debug\WZ.WEF1066C.resources
+F:\TGTQ\AZ\obj\Debug\WZ.ABD0010C.resources
+F:\TGTQ\AZ\obj\Debug\WZ.ACA1030C.resources
+F:\TGTQ\AZ\obj\Debug\WZ.ACB5070C.resources
+F:\TGTQ\AZ\obj\Debug\WZ.AFE2010C.resources
+F:\TGTQ\AZ\obj\Debug\WZ.AGC2050C.resources
+F:\TGTQ\AZ\obj\Debug\WZ.AQB0150C.resources
+F:\TGTQ\AZ\obj\Debug\WZ.AZA1111C.resources
+F:\TGTQ\AZ\obj\Debug\WZ.AZC1030C.resources
+F:\TGTQ\AZ\obj\Debug\WZ.BBS2468C.resources
+F:\TGTQ\AZ\obj\Debug\WZ.KKK1010C.resources
+F:\TGTQ\AZ\obj\Debug\WZ.KKK2060C.resources
+F:\TGTQ\AZ\obj\Debug\WZ.MainMenu.resources
+F:\TGTQ\AZ\obj\Debug\GenerateResource.read.1.tlog
+F:\TGTQ\AZ\obj\Debug\GenerateResource.write.1.tlog
+F:\TGTQ\AZ\bin\Debug\CommonClass.dll
+F:\TGTQ\AZ\bin\Debug\FarPoint.SpreadDesigner.exe
+F:\TGTQ\AZ\bin\Debug\FarPoint.Win.TextRenderer.dll
+F:\TGTQ\AZ\bin\Debug\policy.5.0.FarPoint.Win.dll
+F:\TGTQ\AZ\bin\Debug\policy.5.0.FarPoint.Win.Spread.dll
+F:\TGTQ\AZ\bin\Debug\CommonClass.pdb
+F:\TGTQ\AZ\bin\Debug\CommonClass.xml
+F:\TGTQ\AZ\bin\Debug\policy.5.0.FarPoint.Win.config
+F:\TGTQ\AZ\bin\Debug\policy.5.0.FarPoint.Win.Spread.config
+F:\TGTQ\AZ\obj\Debug\WZ.WZA0010C.resources
+F:\TGTQ\AZ\obj\Debug\WZ.WZA0020C.resources
+F:\TGTQ\AZ\obj\Debug\WZ.WZA0030C.resources
+F:\TGTQ\AZ\obj\Debug\WZ.WZA0040C.resources
+F:\TGTQ\AZ\obj\Debug\WZ.WZA0050C.resources
+F:\TGTQ\AZ\obj\Debug\WZ.WZB0010C.resources
+F:\TGTQ\AZ\obj\Debug\WZ.WZB0020C.resources
+F:\TGTQ\AZ\obj\Debug\WZ.WZB0030C.resources
+F:\TGTQ\AZ\obj\Debug\WZ.WZB0040C.resources
+F:\TGTQ\AZ\obj\Debug\WZ.WZC0060C.resources
+F:\TGTQ\AZ\obj\Debug\WZ.WZC0010C.resources
+F:\TGTQ\AZ\obj\Debug\WZ.WZC0020C.resources
+F:\TGTQ\AZ\obj\Debug\WZ.WZC0030C.resources
+F:\TGTQ\AZ\obj\Debug\WZ.WZC0040C.resources
+F:\TGTQ\AZ\obj\Debug\WZ.WZC0050C.resources
+F:\TGTQ\AZ\bin\Debug\WZ.exe.config
+F:\TGTQ\AZ\bin\Debug\WZ.exe.manifest
+F:\TGTQ\AZ\bin\Debug\WZ.application
+F:\TGTQ\AZ\bin\Debug\WZ.exe
+F:\TGTQ\AZ\bin\Debug\WZ.pdb
+F:\TGTQ\AZ\bin\Debug\WZ.xml
+F:\TGTQ\AZ\obj\Debug\WZ.Properties.Resources.resources
+F:\TGTQ\AZ\obj\Debug\WZ.exe.licenses
+F:\TGTQ\AZ\obj\Debug\WZ.exe.manifest
+F:\TGTQ\AZ\obj\Debug\WZ.application
+F:\TGTQ\AZ\obj\Debug\WZ.exe
+F:\TGTQ\AZ\obj\Debug\WZ.pdb
+F:\TGTQ\WZ\bin\Debug\WZ.exe.config
+F:\TGTQ\WZ\bin\Debug\WZ.exe.manifest
+F:\TGTQ\WZ\bin\Debug\WZ.application
+F:\TGTQ\WZ\bin\Debug\WZ.exe
+F:\TGTQ\WZ\bin\Debug\WZ.pdb
+F:\TGTQ\WZ\bin\Debug\WZ.xml
+F:\TGTQ\WZ\bin\Debug\CommonClass.dll
+F:\TGTQ\WZ\bin\Debug\FarPoint.SpreadDesigner.exe
+F:\TGTQ\WZ\bin\Debug\FarPoint.Win.TextRenderer.dll
+F:\TGTQ\WZ\bin\Debug\policy.5.0.FarPoint.Win.dll
+F:\TGTQ\WZ\bin\Debug\policy.5.0.FarPoint.Win.Spread.dll
+F:\TGTQ\WZ\bin\Debug\policy.5.0.FarPoint.Win.config
+F:\TGTQ\WZ\bin\Debug\policy.5.0.FarPoint.Win.Spread.config
+F:\TGTQ\WZ\obj\Debug\ResolveAssemblyReference.cache
+F:\TGTQ\WZ\obj\Debug\WZ.csproj.ResolveComReference.cache
+F:\TGTQ\WZ\obj\Debug\WZ.WZA0020C.resources
+F:\TGTQ\WZ\obj\Debug\WZ.WZA0030C.resources
+F:\TGTQ\WZ\obj\Debug\WZ.WZA0040C.resources
+F:\TGTQ\WZ\obj\Debug\WZ.WZA0050C.resources
+F:\TGTQ\WZ\obj\Debug\WZ.FORM_BUTTONS.resources
+F:\TGTQ\WZ\obj\Debug\WZ.FORM_ITEMS.resources
+F:\TGTQ\WZ\obj\Debug\WZ.WZA0010C.resources
+F:\TGTQ\WZ\obj\Debug\WZ.WZB0010C.resources
+F:\TGTQ\WZ\obj\Debug\WZ.WZB0020C.resources
+F:\TGTQ\WZ\obj\Debug\WZ.WZB0030C.resources
+F:\TGTQ\WZ\obj\Debug\WZ.WZB0040C.resources
+F:\TGTQ\WZ\obj\Debug\WZ.WZC0060C.resources
+F:\TGTQ\WZ\obj\Debug\WZ.WZC0010C.resources
+F:\TGTQ\WZ\obj\Debug\WZ.WZC0020C.resources
+F:\TGTQ\WZ\obj\Debug\WZ.WZC0030C.resources
+F:\TGTQ\WZ\obj\Debug\WZ.WZC0040C.resources
+F:\TGTQ\WZ\obj\Debug\WZ.WZC0050C.resources
+F:\TGTQ\WZ\obj\Debug\WZ.WEC0000C.resources
+F:\TGTQ\WZ\obj\Debug\WZ.WEC0010C.resources
+F:\TGTQ\WZ\obj\Debug\WZ.WED1010C.resources
+F:\TGTQ\WZ\obj\Debug\WZ.WEF1065C.resources
+F:\TGTQ\WZ\obj\Debug\WZ.WEF1066C.resources
+F:\TGTQ\WZ\obj\Debug\WZ.ABD0010C.resources
+F:\TGTQ\WZ\obj\Debug\WZ.MainMenu.resources
+F:\TGTQ\WZ\obj\Debug\WZ.Properties.Resources.resources
+F:\TGTQ\WZ\obj\Debug\GenerateResource.read.1.tlog
+F:\TGTQ\WZ\obj\Debug\GenerateResource.write.1.tlog
+F:\TGTQ\WZ\obj\Debug\WZ.exe.licenses
+F:\TGTQ\WZ\obj\Debug\WZ.exe.manifest
+F:\TGTQ\WZ\obj\Debug\WZ.application
+F:\TGTQ\WZ\obj\Debug\WZ.exe
+F:\TGTQ\WZ\obj\Debug\WZ.pdb
+F:\TGTQ\WZ\obj\Debug\WZ.WZA1030C.resources
+F:\TGTQ\WZ\obj\Debug\WZ.WZB5070C.resources
+F:\TGTQ\WZ\obj\Debug\WZ.WZE2010C.resources
+F:\TGTQ\WZ\obj\Debug\WZ.WZC2050C.resources
+F:\TGTQ\WZ\obj\Debug\WZ.WZB0150C.resources
+F:\TGTQ\WZ\obj\Debug\WZ.WZA1111C.resources
+F:\TGTQ\WZ\obj\Debug\WZ.WZC1030C.resources
+F:\TGTQ\WZ\obj\Debug\WZ.WZS2468C.resources
+F:\TGTQ\WZ\obj\Debug\WZ.WZK1010C.resources
+F:\TGTQ\WZ\obj\Debug\WZ.WZK2060C.resources
+E:\复件 NGHB2\NGHB\WZ\bin\Debug\WZ.exe.config
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.csproj.ResolveComReference.cache
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.exe
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.pdb
+E:\复件 NGHB2\NGHB\WZ\bin\Debug\WZ.exe.manifest
+E:\复件 NGHB2\NGHB\WZ\bin\Debug\WZ.application
+E:\复件 NGHB2\NGHB\WZ\bin\Debug\WZ.exe
+E:\复件 NGHB2\NGHB\WZ\bin\Debug\WZ.pdb
+E:\复件 NGHB2\NGHB\WZ\bin\Debug\WZ.xml
+E:\复件 NGHB2\NGHB\WZ\bin\Debug\CommonClass.dll
+E:\复件 NGHB2\NGHB\WZ\bin\Debug\FarPoint.SpreadDesigner.exe
+E:\复件 NGHB2\NGHB\WZ\bin\Debug\FarPoint.Win.TextRenderer.dll
+E:\复件 NGHB2\NGHB\WZ\bin\Debug\policy.5.0.FarPoint.Win.dll
+E:\复件 NGHB2\NGHB\WZ\bin\Debug\policy.5.0.FarPoint.Win.Spread.dll
+E:\复件 NGHB2\NGHB\WZ\bin\Debug\policy.5.0.FarPoint.Win.config
+E:\复件 NGHB2\NGHB\WZ\bin\Debug\policy.5.0.FarPoint.Win.Spread.config
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\ResolveAssemblyReference.cache
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.WZA0020C.resources
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.WZA0030C.resources
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.WZA0040C.resources
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.WZA0050C.resources
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.FORM_BUTTONS.resources
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.FORM_ITEMS.resources
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.WZA0010C.resources
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.WZB0010C.resources
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.WZB0020C.resources
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.WZB0030C.resources
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.WZB0040C.resources
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.WZC0060C.resources
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.WZC0010C.resources
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.WZC0020C.resources
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.WZC0030C.resources
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.WZC0040C.resources
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.WZC0050C.resources
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.WEC0000C.resources
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.WEC0010C.resources
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.WED1010C.resources
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.WEF1065C.resources
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.WEF1066C.resources
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.ABD0010C.resources
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.WZA1030C.resources
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.WZB5070C.resources
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.WZE2010C.resources
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.WZC2050C.resources
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.WZB0150C.resources
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.WZA1111C.resources
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.WZC1030C.resources
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.WZS2468C.resources
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.WZK1010C.resources
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.WZK2060C.resources
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.MainMenu.resources
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.Properties.Resources.resources
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\GenerateResource.read.1.tlog
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\GenerateResource.write.1.tlog
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.exe.licenses
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.exe.manifest
+E:\复件 NGHB2\NGHB\WZ\obj\Debug\WZ.application
+E:\复件 NGHB2\NGHB\WZ\bin\Debug\CommonClass.pdb
+E:\复件 NGHB2\NGHB\WZ\bin\Debug\CommonClass.xml
+D:\NGHB02\NGHB\WZ\bin\Debug\WZ.exe.config
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.csproj.ResolveComReference.cache
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.exe
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.pdb
+D:\NGHB02\NGHB\WZ\bin\Debug\WZ.exe.manifest
+D:\NGHB02\NGHB\WZ\bin\Debug\WZ.application
+D:\NGHB02\NGHB\WZ\bin\Debug\WZ.exe
+D:\NGHB02\NGHB\WZ\bin\Debug\WZ.pdb
+D:\NGHB02\NGHB\WZ\bin\Debug\WZ.xml
+D:\NGHB02\NGHB\WZ\bin\Debug\CommonClass.dll
+D:\NGHB02\NGHB\WZ\bin\Debug\FarPoint.SpreadDesigner.exe
+D:\NGHB02\NGHB\WZ\bin\Debug\FarPoint.Win.TextRenderer.dll
+D:\NGHB02\NGHB\WZ\bin\Debug\policy.5.0.FarPoint.Win.dll
+D:\NGHB02\NGHB\WZ\bin\Debug\policy.5.0.FarPoint.Win.Spread.dll
+D:\NGHB02\NGHB\WZ\bin\Debug\CommonClass.pdb
+D:\NGHB02\NGHB\WZ\bin\Debug\CommonClass.xml
+D:\NGHB02\NGHB\WZ\bin\Debug\policy.5.0.FarPoint.Win.config
+D:\NGHB02\NGHB\WZ\bin\Debug\policy.5.0.FarPoint.Win.Spread.config
+D:\NGHB02\NGHB\WZ\obj\Debug\ResolveAssemblyReference.cache
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.WZA0020C.resources
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.WZA0030C.resources
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.WZA0040C.resources
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.WZA0050C.resources
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.FORM_BUTTONS.resources
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.FORM_ITEMS.resources
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.WZA0010C.resources
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.WZB0010C.resources
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.WZB0020C.resources
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.WZB0030C.resources
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.WZB0040C.resources
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.WZC0060C.resources
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.WZC0010C.resources
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.WZC0020C.resources
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.WZC0030C.resources
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.WZC0040C.resources
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.WZC0050C.resources
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.WEC0000C.resources
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.WEC0010C.resources
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.WED1010C.resources
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.WEF1065C.resources
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.WEF1066C.resources
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.ABD0010C.resources
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.WZA1030C.resources
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.WZB5070C.resources
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.WZE2010C.resources
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.WZC2050C.resources
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.WZB0150C.resources
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.WZA1111C.resources
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.WZC1030C.resources
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.WZS2468C.resources
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.WZK1010C.resources
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.WZK2060C.resources
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.MainMenu.resources
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.Properties.Resources.resources
+D:\NGHB02\NGHB\WZ\obj\Debug\GenerateResource.read.1.tlog
+D:\NGHB02\NGHB\WZ\obj\Debug\GenerateResource.write.1.tlog
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.exe.licenses
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.exe.manifest
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.application
+D:\NGHB02\NGHB\WZ\obj\Debug\WZ.WZC0070C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\ResolveAssemblyReference.cache
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.csproj.ResolveComReference.cache
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WZA0020C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WZA0030C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WZA0040C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WZA0050C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.FORM_BUTTONS.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.FORM_ITEMS.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WZA0010C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WZB0010C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WZB0020C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WZB0030C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WZB0040C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WZC0060C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WZC0010C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WZC0020C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WZC0030C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WZC0040C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WZC0050C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WEC0000C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WEC0010C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WED1010C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WEF1065C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WEF1066C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WZC0070C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.ABD0010C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WZA1030C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WZB5070C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WZE2010C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WZC2050C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WZB0150C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WZA1111C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WZC1030C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WZS2468C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WZK1010C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WZK2060C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.MainMenu.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.Properties.Resources.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\GenerateResource.read.1.tlog
+D:\SVN\nghb\NGHB\WZ\obj\Debug\GenerateResource.write.1.tlog
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.exe.licenses
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.exe
+D:\NGHB1030\NGHB\WZ\bin\Debug\WZ.exe.config
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.csproj.ResolveComReference.cache
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.exe
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.pdb
+D:\NGHB1030\NGHB\WZ\bin\Debug\WZ.exe.manifest
+D:\NGHB1030\NGHB\WZ\bin\Debug\WZ.application
+D:\NGHB1030\NGHB\WZ\bin\Debug\WZ.exe
+D:\NGHB1030\NGHB\WZ\bin\Debug\WZ.pdb
+D:\NGHB1030\NGHB\WZ\bin\Debug\WZ.xml
+D:\NGHB1030\NGHB\WZ\bin\Debug\CommonClass.dll
+D:\NGHB1030\NGHB\WZ\bin\Debug\FarPoint.SpreadDesigner.exe
+D:\NGHB1030\NGHB\WZ\bin\Debug\FarPoint.Win.TextRenderer.dll
+D:\NGHB1030\NGHB\WZ\bin\Debug\policy.5.0.FarPoint.Win.dll
+D:\NGHB1030\NGHB\WZ\bin\Debug\policy.5.0.FarPoint.Win.Spread.dll
+D:\NGHB1030\NGHB\WZ\bin\Debug\CommonClass.pdb
+D:\NGHB1030\NGHB\WZ\bin\Debug\CommonClass.xml
+D:\NGHB1030\NGHB\WZ\bin\Debug\policy.5.0.FarPoint.Win.config
+D:\NGHB1030\NGHB\WZ\bin\Debug\policy.5.0.FarPoint.Win.Spread.config
+D:\NGHB1030\NGHB\WZ\obj\Debug\ResolveAssemblyReference.cache
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WZA0020C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WZA0030C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WZA0040C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WZA0050C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.FORM_BUTTONS.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.FORM_ITEMS.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WZA0010C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WZA0060C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WZB0010C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WZB0020C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WZB0030C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WZB0040C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WZB0050C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WZC0060C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WZC0010C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WZC0020C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WZC0030C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WZC0040C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WZC0050C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WEC0000C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WEC0010C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WED1010C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WEF1065C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WEF1066C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WZC0070C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.ABD0010C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WZA1030C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WZB5070C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WZE2010C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WZC2050C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WZB0150C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WZA1111C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WZC1030C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WZS2468C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WZK1010C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WZK2060C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.MainMenu.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.Properties.Resources.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WZF0010C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WZF0020C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WZF0030C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WZF0040C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WZF0050C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WZF0060C.resources
+D:\NGHB1030\NGHB\WZ\obj\Debug\GenerateResource.read.1.tlog
+D:\NGHB1030\NGHB\WZ\obj\Debug\GenerateResource.write.1.tlog
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.exe.licenses
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.exe.manifest
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.application
+D:\NGHB1030\NGHB\WZ\obj\Debug\WZ.WZF0070C.resources
+D:\SVN\nghb\NGHB\WZ\bin\Debug\WZ.exe.config
+D:\SVN\nghb\NGHB\WZ\bin\Debug\WZ.exe.manifest
+D:\SVN\nghb\NGHB\WZ\bin\Debug\WZ.application
+D:\SVN\nghb\NGHB\WZ\bin\Debug\WZ.exe
+D:\SVN\nghb\NGHB\WZ\bin\Debug\WZ.pdb
+D:\SVN\nghb\NGHB\WZ\bin\Debug\WZ.xml
+D:\SVN\nghb\NGHB\WZ\bin\Debug\CommonClass.dll
+D:\SVN\nghb\NGHB\WZ\bin\Debug\FarPoint.SpreadDesigner.exe
+D:\SVN\nghb\NGHB\WZ\bin\Debug\FarPoint.Win.TextRenderer.dll
+D:\SVN\nghb\NGHB\WZ\bin\Debug\policy.5.0.FarPoint.Win.dll
+D:\SVN\nghb\NGHB\WZ\bin\Debug\policy.5.0.FarPoint.Win.Spread.dll
+D:\SVN\nghb\NGHB\WZ\bin\Debug\CommonClass.pdb
+D:\SVN\nghb\NGHB\WZ\bin\Debug\CommonClass.xml
+D:\SVN\nghb\NGHB\WZ\bin\Debug\policy.5.0.FarPoint.Win.config
+D:\SVN\nghb\NGHB\WZ\bin\Debug\policy.5.0.FarPoint.Win.Spread.config
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WZA0060C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WZB0050C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WZF0010C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WZF0020C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WZF0030C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WZF0040C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WZF0050C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WZF0060C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.WZF0070C.resources
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.exe.manifest
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.application
+D:\SVN\nghb\NGHB\WZ\obj\Debug\WZ.pdb
+C:\Users\ydk\Desktop\NGHB\WZ\bin\Debug\WZ.exe.config
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.csproj.ResolveComReference.cache
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.exe
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.pdb
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WZA0020C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WZA0030C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WZA0040C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WZA0050C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.FORM_BUTTONS.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.FORM_ITEMS.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WZA0010C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WZA0060C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WZB0010C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WZB0020C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WZB0030C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WZB0040C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WZB0050C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WZC0060C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WZC0010C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WZC0020C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WZC0030C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WZC0040C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WZC0050C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WEC0000C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WEC0010C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WED1010C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WEF1065C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WEF1066C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WZC0070C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.ABD0010C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WZA1030C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WZB5070C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WZE2010C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WZC2050C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WZB0150C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WZA1111C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WZC1030C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WZS2468C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WZK1010C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WZK2060C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.MainMenu.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.Properties.Resources.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WZF0010C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WZF0020C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WZF0030C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WZF0040C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WZF0050C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WZF0060C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.WZF0070C.resources
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.exe.licenses
+C:\Users\ydk\Desktop\NGHB\WZ\bin\Debug\WZ.exe.manifest
+C:\Users\ydk\Desktop\NGHB\WZ\bin\Debug\WZ.application
+C:\Users\ydk\Desktop\NGHB\WZ\bin\Debug\WZ.exe
+C:\Users\ydk\Desktop\NGHB\WZ\bin\Debug\WZ.pdb
+C:\Users\ydk\Desktop\NGHB\WZ\bin\Debug\WZ.xml
+C:\Users\ydk\Desktop\NGHB\WZ\bin\Debug\CommonClass.dll
+C:\Users\ydk\Desktop\NGHB\WZ\bin\Debug\FarPoint.SpreadDesigner.exe
+C:\Users\ydk\Desktop\NGHB\WZ\bin\Debug\FarPoint.Win.TextRenderer.dll
+C:\Users\ydk\Desktop\NGHB\WZ\bin\Debug\policy.5.0.FarPoint.Win.dll
+C:\Users\ydk\Desktop\NGHB\WZ\bin\Debug\policy.5.0.FarPoint.Win.Spread.dll
+C:\Users\ydk\Desktop\NGHB\WZ\bin\Debug\CommonClass.pdb
+C:\Users\ydk\Desktop\NGHB\WZ\bin\Debug\CommonClass.xml
+C:\Users\ydk\Desktop\NGHB\WZ\bin\Debug\policy.5.0.FarPoint.Win.config
+C:\Users\ydk\Desktop\NGHB\WZ\bin\Debug\policy.5.0.FarPoint.Win.Spread.config
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.exe.manifest
+C:\Users\ydk\Desktop\NGHB\WZ\obj\Debug\WZ.application

@@ -1,0 +1,3 @@
+ public static void Gp_DateSetting()
+public static bool GF_Print
+public static bool Gf_Sp_Openexcel(FarPoint.Win.Spread.FpSpread oSpread) -- formbase

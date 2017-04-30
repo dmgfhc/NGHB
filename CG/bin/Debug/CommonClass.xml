@@ -1,0 +1,1929 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CommonClass</name>
+    </assembly>
+    <members>
+        <member name="M:CommonClass.GeneralCommon.GF_DbConnect">
+            <summary>
+            进行数据库连接，成功返回true，失败返回false。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.GeneralCommon.getIPAddress">
+            <summary>
+            获得本机局域网IP地址 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.GeneralCommon.Gf_ComnNameFind(ADODB.Connection,System.String,System.String,System.Int32)">
+            <summary>
+            根据传入的Cd_Mana_No及Code在公共代码表中找出对应的名称
+            nameType=1 CD_SHORT_NAME
+            nameType=2 CD_NAME
+            nameType=3 CD_FULL_ENG
+            default CD_NAME
+            </summary>
+            <param name="Conn"></param>
+            <param name="Cd_Mana_No"></param>
+            <param name="Code"></param>
+            <param name="nameType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.GeneralCommon.Gf_ComboAdd(System.Windows.Forms.ComboBox,System.String)">
+            <summary>
+            向Combox控件中加载从sql语句得到的结果。
+            </summary>
+            <param name="Cbo"></param>
+            <param name="sQuery"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.GeneralCommon.Gf_GetDateStr(System.String)">
+            <summary>
+            将字符串转换成日期或时间格式
+            </summary>
+            <param name="DateStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.GeneralCommon.Gf_MessConfirm(System.String,System.String,System.String)">
+            <summary>
+            显示一个消息框，等待用户点击某个按钮，然后返回指示被点击按钮的值
+            弹出待Yse和No按钮的对话框，供用户选择。
+            </summary>
+            <param name="sMsg"></param>
+            <param name="sIcon"></param>
+            <param name="sTitle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.GeneralCommon.Gp_CopyModel(System.String)">
+            <summary>
+            报表模板的复制功能。
+            FileName：报表的名称。
+            </summary>
+            <param name="FileName"></param>
+        </member>
+        <member name="M:CommonClass.GeneralCommon.Gf_FloatFind(ADODB.Connection,System.String)">
+            <summary>
+            自定义sql语句，返回一个double类型的值
+            </summary>
+            <param name="Conn"></param>
+            <param name="sQuery"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.GeneralCommon.Gf_Pgm_Authoritybtn(System.String)">
+            <summary>
+            页面按钮的权限。
+            </summary>
+            <param name="sPgmID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.GeneralCommon.Gf_ArrayPlReturn(System.String)">
+            <summary>
+            传入一个sql语句，返回一个二位数组
+            </summary>
+            <param name="sQuery"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.GeneralCommon.Gf_CodeFind(ADODB.Connection,System.String)">
+            <summary>
+            根据传入的select语句返回一个字符型的值
+            </summary>
+            <param name="Conn"></param>
+            <param name="sQuery"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.GeneralCommon.Gp_FormCenter(System.Windows.Forms.Form)">
+            <summary>
+            窗体居中.
+            </summary>
+            <param name="Fm"></param>
+        </member>
+        <member name="M:CommonClass.GeneralCommon.Gp_FormLoc_Get(System.Windows.Forms.Form,System.String)">
+            <summary>
+            页面打开时，从文件STEELPIA.INI读取页面的位置信息。
+            </summary>
+            <param name="oForm"></param>
+            <param name="fType"></param>
+        </member>
+        <member name="M:CommonClass.GeneralCommon.Gp_FormLoc_Set(System.Windows.Forms.Form,System.String)">
+            <summary>
+            关闭页面时，将当前页面位置信息（TOP，LEFT，HEIGHT，WIDTH）写入文件STEELPIA.INI。
+            </summary>
+            <param name="oForm"></param>
+            <param name="fType"></param>
+        </member>
+        <member name="M:CommonClass.GeneralCommon.Gf_Pgm_Authority(System.String)">
+            <summary>
+            根据程序代码读取权限：查询，插入，修改，删除。其中使用了本类的UserID变量
+            </summary>
+            <param name="sPgmID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.GeneralCommon.Gf_Mc_Authority(System.String,Microsoft.VisualBasic.Collection,Microsoft.VisualBasic.Collection)">
+            <summary>
+            根据当前画面的权限，处理MC的权限。
+            </summary>
+            <param name="sAuthority"></param>
+            <param name="Mc"></param>
+            <param name="Sc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.GeneralCommon.Gf_Sc_Authority(System.String,System.String)">
+            <summary>
+            根据当前画面的权限，处理当前画面Sc的权限
+            </summary>
+            <param name="sAuthority"></param>
+            <param name="iType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.GeneralCommon.Gf_IsFormLode(System.String)">
+            <summary>
+            判断当前画面是否已经加载。
+            </summary>
+            <param name="sFormID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.GeneralCommon.Gf_IsFormLoad(System.String)">
+            <summary>
+             判断当前画面是否已经加载。
+            </summary>
+            <param name="sFormID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.GeneralCommon.Gf_ExecProcedure(ADODB.Connection,System.String,System.Object[])">
+            <summary>
+            自定义调用后台程序
+            </summary>
+            <param name="Conn"></param>
+            <param name="Proce_Name"></param>
+            <param name="Para_Info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.GeneralCommon.Gf_ExecProcedureQ(ADODB.Connection,System.String,System.Object[])">
+            <summary>
+            自定义调用后台程序
+            </summary>
+            <param name="Conn"></param>
+            <param name="Proce_Name"></param>
+            <param name="Para_Info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.GeneralCommon.Gf_ExecSql(ADODB.Connection,System.String)">
+            <summary>
+             执行传入的sql语句，成功返回true，失败返回false。
+            </summary>
+            <param name="Conn"></param>
+            <param name="sQuery"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.GeneralCommon.Gf_ExecProcedureRe(ADODB.Connection,System.String,System.Int32,System.Object[])">
+            <summary>
+            调用后台程序，获取后台程序返回的一个或多个值。
+            </summary>
+            <param name="Conn"></param>
+            <param name="Proce_Name"></param>
+            <param name="OutPut_Cnt"></param>
+            <param name="Para_Info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.GeneralCommon.Gp_FormMenuSetting(System.String,System.String,System.String)">
+            <summary>
+            根据传入的权限对当前窗体设置工具栏的状态。
+            </summary>
+            <param name="FormType"></param>
+            <param name="ButtonType"></param>
+            <param name="sAuthority"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.GeneralCommon.Gp_FormMenuSetting(System.Windows.Forms.Form,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="Fm"></param>
+            <param name="FormType"></param>
+            <param name="ButtonType"></param>
+            <param name="sAuthority"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.GeneralCommon.Gp_MenuStatus(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="FormType"></param>
+            <param name="ButtonType"></param>
+            <param name="sAuthority"></param>
+        </member>
+        <member name="M:CommonClass.GeneralCommon.Gf_DateTime_Chk(System.String)">
+            <summary>
+            检查传入的字符串是否是合法的日期格式。
+            </summary>
+            <param name="DateTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.GeneralCommon.Gp_DateSetting">
+            <summary>
+            将日期格式及时间格式写入注册表。
+            </summary>
+        </member>
+        <member name="M:CommonClass.GeneralCommon.Gp_OpenRecordset(System.String,ADODB.Connection,ADODB.Recordset)">
+            <summary>
+            根据传入的sql语句，打开一个数据集。调用该函数后，请自行关闭GeneralCommon中的M_CN1
+            </summary>
+            <param name="sSql"></param>
+            <param name="Conn"></param>
+            <param name="AdoRs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.GeneralCommon.GF_GetPrintLog(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="sReportNameLog"></param>
+            <param name="sBillNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.GeneralCommon.Gf_ComboCdFind(System.Windows.Forms.ComboBox)">
+            <summary>
+            根据传入的combox，利用它的tag作为CD_MANA_NO，利用它的Text作为CD_NAME，从BBB_CD查询相应的cd，并将cd作为结果返回。
+            </summary>
+            <param name="Ctrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.GeneralCommon.Gf_ComboCdFind(System.String,System.String)">
+            <summary>
+            利用manu_no作为CD_MANA_NO，利用cd_name作为CD_NAME，从BBB_CD查询相应的cd，并将cd作为结果返回。
+            </summary>
+            <param name="manu_no"></param>
+            <param name="cd_name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.GeneralCommon.Gf_RowUpdate(FarPoint.Win.Spread.FpSpread,System.Int32)">
+            <summary>
+            如果传入的spread的当前行的行头没有“增加”“删除”“修改”，那么在当前行头添加“修改”标示。
+            当前行就是传入的iRow。
+            </summary>
+            <param name="ss"></param>
+            <param name="iRow"></param>
+        </member>
+        <member name="M:CommonClass.MasterCommon.Gf_Ms_ExecQuery(ADODB.Connection,System.String,Microsoft.VisualBasic.Collection)">
+            <summary>
+            根据传入的squery，执行squery中对应的后台程序，执行成功返回true，否则返回false。
+            </summary>
+            <param name="Conn"></param>
+            <param name="sQuery"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.MasterCommon.Gf_Mc_InsertRecord(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            向表中插入操作记录。20130228
+            </summary>
+            <param name="IP_ADDRESS"></param>
+            <param name="USERID"></param>
+            <param name="PGMID"></param>
+            <param name="OP_TYPE"></param>
+            <param name="OP_CONTENT"></param>
+            <param name="OP_RLT"></param>
+            <param name="INS_TIME"></param>
+            <param name="ERR_DESC"></param>
+        </member>
+        <member name="M:CommonClass.MasterCommon.Gf_Ms_MakeQuery(System.String,System.String,Microsoft.VisualBasic.Collection)">
+            <summary>
+            函数生成字符串sQuery，sQuery用于Gf_Ms_ExecQuery，Gf_Ms_Display函数，实现增删改查。
+            </summary>
+            <param name="ProcedureName"></param>
+            <param name="iType"></param>
+            <param name="Retcol"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.MasterCommon.Gp_Ms_ControlLock(Microsoft.VisualBasic.Collection,System.Boolean)">
+            <summary>
+            将lControl集合中的控件的Enabled按Tf的值反向激活。
+            </summary>
+            <param name="lControl"></param>
+            <param name="Tf"></param>
+        </member>
+        <member name="M:CommonClass.MasterCommon.Gp_Ms_NeceColor(Microsoft.VisualBasic.Collection)">
+            <summary>
+            将nControl集合中的BackColor置成Color.FromArgb(255, 255, 255, 192)。
+            </summary>
+            <param name="nControl"></param>
+        </member>
+        <member name="M:CommonClass.MasterCommon.Gp_Ms_Collection(System.Object,System.String,System.String,System.String,System.String,System.String,System.String,System.String,Microsoft.VisualBasic.Collection,Microsoft.VisualBasic.Collection,Microsoft.VisualBasic.Collection,Microsoft.VisualBasic.Collection,Microsoft.VisualBasic.Collection,Microsoft.VisualBasic.Collection,Microsoft.VisualBasic.Collection)">
+            <summary>
+            根据控件oBjectName的pctl等的值分别将oBjectName加入到pControl等集合中
+            </summary>
+            <param name="oBjectName"></param>
+            <param name="pctl"></param>
+            <param name="nctl"></param>
+            <param name="mctl"></param>
+            <param name="ictl"></param>
+            <param name="rctl"></param>
+            <param name="actl"></param>
+            <param name="lctl"></param>
+            <param name="pControl"></param>
+            <param name="nControl"></param>
+            <param name="mControl"></param>
+            <param name="iControl"></param>
+            <param name="rControl"></param>
+            <param name="aControl"></param>
+            <param name="lControl"></param>
+        </member>
+        <member name="M:CommonClass.MasterCommon.Gp_Ms_Collection(System.Object,System.String,System.String,System.String,System.String,System.String,System.String,System.String,Microsoft.VisualBasic.Collection,Microsoft.VisualBasic.Collection,Microsoft.VisualBasic.Collection,Microsoft.VisualBasic.Collection,Microsoft.VisualBasic.Collection,Microsoft.VisualBasic.Collection,Microsoft.VisualBasic.Collection,Microsoft.VisualBasic.Collection)">
+            <summary>
+            根据控件oBjectName的pctl等的值分别将oBjectName加入到pControl等集合中。
+            </summary>
+            <param name="oBjectName"></param>
+            <param name="pctl"></param>
+            <param name="nctl"></param>
+            <param name="mctl"></param>
+            <param name="ictl"></param>
+            <param name="rctl"></param>
+            <param name="actl"></param>
+            <param name="lctl"></param>
+            <param name="pControl"></param>
+            <param name="nControl"></param>
+            <param name="mControl"></param>
+            <param name="iControl"></param>
+            <param name="rControl"></param>
+            <param name="aControl"></param>
+            <param name="lControl"></param>
+            <param name="npControl"></param>
+        </member>
+        <member name="M:CommonClass.MasterCommon.Gp_Ms_Cls(Microsoft.VisualBasic.Collection)">
+            <summary>
+            将MC集合中控件的值清空。清空时，根据不同的控件属性进行。
+            </summary>
+            <param name="Mc"></param>
+        </member>
+        <member name="M:CommonClass.MasterCommon.Gf_Ms_Copy(Microsoft.VisualBasic.Collection)">
+            <summary>
+            将MC["rControl"]的值赋值于Mc["cControl"]，实现复制功能。
+            </summary>
+            <param name="Mc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.MasterCommon.Gf_Ms_FormPaste(Microsoft.VisualBasic.Collection,Microsoft.VisualBasic.Collection)">
+            <summary>
+            判断当前的Mc是否能够进行粘贴动作。
+            </summary>
+            <param name="Mc"></param>
+            <param name="Sc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.MasterCommon.Gf_Ms_Paste(ADODB.Connection,Microsoft.VisualBasic.Collection,Microsoft.VisualBasic.Collection)">
+            <summary>
+            判断当前的Mc是否能够进行粘贴动作。
+            </summary>
+            <param name="Mc"></param>
+            <param name="Sc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.MasterCommon.Gf_Ms_NeceCheck(Microsoft.VisualBasic.Collection)">
+            <summary>
+            检查Retcol集合中是否有控件的值为空
+            </summary>
+            <param name="Retcol"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.MasterCommon.Gf_Ms_NeceCheck2(Microsoft.VisualBasic.Collection)">
+            <summary>
+            检查Retcol集合中设置MaxLength属性的值是否有足够的长度。
+            </summary>
+            <param name="Retcol"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.MasterCommon.Gf_Ms_Refer(ADODB.Connection,Microsoft.VisualBasic.Collection,Microsoft.VisualBasic.Collection,Microsoft.VisualBasic.Collection,System.Boolean)">
+            <summary>
+            根据传入的MC进行查询
+            1必输项的检查
+            2个别控件的长度检查
+            3生成查询语句
+            4调用Gf_Ms_Display ，显示处理
+            </summary>
+            <param name="Conn"></param>
+            <param name="Mc"></param>
+            <param name="npCheckControl"></param>
+            <param name="mCheckControl"></param>
+            <param name="MsgChk"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.MasterCommon.Gf_Ms_Display(ADODB.Connection,System.String,Microsoft.VisualBasic.Collection,Microsoft.VisualBasic.Collection)">
+            <summary>
+            根据传入的sql语句，进行查询，将查询结果写入Retcol每个控件中。
+            写入时根据Retcol中各控件的属性进行赋值。
+            </summary>
+            <param name="Conn"></param>
+            <param name="sQuery"></param>
+            <param name="Retcol"></param>
+            <param name="Lockcon"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.MasterCommon.Gf_Ms_Del(ADODB.Connection,Microsoft.VisualBasic.Collection)">
+            <summary>
+            对Mc进行删除操作。
+            </summary>
+            <param name="Conn"></param>
+            <param name="Mc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.MasterCommon.Gf_Ms_Process(ADODB.Connection,Microsoft.VisualBasic.Collection,System.String)">
+            <summary>
+            根据Mc的控件enable属性进行判断是进行插入还是修改动作。
+            
+            </summary>
+            <param name="Conn"></param>
+            <param name="Mc"></param>
+            <param name="sAuthority"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.MasterCommon.Gf_Ms_AllDel(ADODB.Connection,Microsoft.VisualBasic.Collection,Microsoft.VisualBasic.Collection)">
+            <summary>
+            
+            </summary>
+            <param name="Conn"></param>
+            <param name="Sc"></param>
+            <param name="Mc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.MasterCommon.Gf_Ms_Locked(System.Windows.Forms.Control,System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="ObjectName"></param>
+            <param name="sAuthority"></param>
+            <param name="Locked"></param>
+        </member>
+        <member name="M:CommonClass.MasterCommon.Gf_Ms_EnableChangedF(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonClass.MasterCommon.Gf_Ms_EnableChangedT(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_Setting(FarPoint.Win.Spread.FpSpread,System.Boolean,System.Boolean)">
+            <summary>
+            设置spread行头高度，列宽度，锁定的背景色及删除
+            oSpread：Spread对象
+            LocColChk：是否锁定
+            SortColChk：是否排序
+            </summary>
+            <param name="oSpread"></param>
+            <param name="LocColChk"></param>
+            <param name="SortColChk"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_ReadOnlySet(FarPoint.Win.Spread.FpSpread)">
+            <summary>
+            未用。
+            </summary>
+            <param name="oSpread"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_ColGet(FarPoint.Win.Spread.FpSpread,System.String,System.String)">
+            <summary>
+            spread列宽记忆功能，从文件中读取当前列的宽度。
+            oSpread：Spread对象
+            sEcname：当前页面名称。
+            sType：
+            </summary>
+            <param name="oSpread"></param>
+            <param name="sEcname"></param>
+            <param name="sType"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_ColSet(FarPoint.Win.Spread.FpSpread,System.String,System.String)">
+            <summary>
+            将列的宽度设置到文件中
+            oSpread：Spread对象
+            sEcname：当前页面名称
+            sType：
+            </summary>
+            <param name="oSpread"></param>
+            <param name="sEcname"></param>
+            <param name="sType"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_ColHidden(FarPoint.Win.Spread.FpSpread,System.Int32,System.Boolean)">
+            <summary>
+            spread列隐藏
+            oSpread：Spread对象。
+            ColNum：隐藏列位置。
+            HiddenType：是否隐藏。
+            </summary>
+            <param name="oSpread"></param>
+            <param name="ColNum"></param>
+            <param name="HiddenType"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_AutoInsert(Microsoft.VisualBasic.Collection)">
+            <summary>
+             未用
+            </summary>
+            <param name="Sc"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_InAuthority(Microsoft.VisualBasic.Collection,System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="Sc"></param>
+            <param name="Auth_Col"></param>
+            <param name="iType"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_InsertRow(FarPoint.Win.Spread.FpSpread,System.Int64,System.String)">
+            <summary>
+            未用
+            </summary>
+            <param name="oSpread"></param>
+            <param name="iRow"></param>
+            <param name="RowHeader"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gf_Sp_ProceExist(FarPoint.Win.Spread.FpSpread,System.Boolean)">
+            <summary>
+            检查Spread当前是否有“增加”“修改”“删除”的操作
+            如果有以上操作，并且Tf为true时，当执行“查询”等其他操作时，系统会向终端用户反馈一个信息，提示“忽视目前进行当中的资料，继续进行吗”
+            如果选择“yes”，那么会执行“查询”等其他操作，否则会不进行操作。
+            如果Tf为false时，则不向终端用户反馈一个信息。
+            oSpread：Spread对象
+            Tf：是否向用户提示。
+            </summary>
+            <param name="oSpread"></param>
+            <param name="Tf"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_CellColor(FarPoint.Win.Spread.FpSpread,System.Int32,System.Int32,System.Drawing.Color,System.Drawing.Color)">
+            <summary>
+            设置单元格的背景颜色和字体颜色
+            oSpread：Spread对象
+            iCol：列号
+            iRow：行数
+            fColor：字体颜色
+            bColor：背景颜色
+            </summary>
+            <param name="oSpread"></param>
+            <param name="iCol"></param>
+            <param name="iRow"></param>
+            <param name="fColor"></param>
+            <param name="bColor"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_ColColor(FarPoint.Win.Spread.FpSpread,System.Int32,System.Drawing.Color,System.Drawing.Color)">
+            <summary>
+            设置Spread当前列的字体及背景颜色。
+            oSpread：Spread对象
+            iCol：列数
+            fColor：字体颜色
+            bColor：背景颜色
+            </summary>
+            <param name="oSpread"></param>
+            <param name="iCol"></param>
+            <param name="fColor"></param>
+            <param name="bColor"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_HdColColor(FarPoint.Win.Spread.FpSpread,System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="oSpread"></param>
+            <param name="iCol"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_RowColor(FarPoint.Win.Spread.FpSpread,System.Int32,System.Drawing.Color,System.Drawing.Color)">
+            <summary>
+            调用Gp_Sp_BlockColor（）函数，设置Spread整行的字体及背景颜色。
+            oSpread：Spread对象
+            iRow：行数
+            fColor：字体颜色
+            bColor：背景颜色
+            </summary>
+            <param name="oSpread"></param>
+            <param name="iRow"></param>
+            <param name="fColor"></param>
+            <param name="bColor"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_BlockColor(FarPoint.Win.Spread.FpSpread,System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Color,System.Drawing.Color)">
+            <summary>
+            设置Spread指定区域的字体及背景颜色
+            iCol1:开始列数
+            iCol2:结束列数
+            iRow1：开始行数
+            iRow2：结束行数
+            fColor:字体颜色
+            bColor:背景颜色
+            </summary>
+            <param name="oSpread"></param>
+            <param name="iCol1"></param>
+            <param name="iCol2"></param>
+            <param name="iRow1"></param>
+            <param name="iRow2"></param>
+            <param name="fColor"></param>
+            <param name="bColor"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_BlockLock(FarPoint.Win.Spread.FpSpread,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            对Spread当前区域进行锁定。
+            oSpread：Spread对象
+            iCol1：开始列数
+            iCol2：结束列数
+            iRow1：开始行数
+            iRow2：结束行数
+            LockType：
+            </summary>
+            <param name="oSpread"></param>
+            <param name="iCol1"></param>
+            <param name="iCol2"></param>
+            <param name="iRow1"></param>
+            <param name="iRow2"></param>
+            <param name="LockType"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_ActiveCell(FarPoint.Win.Spread.FpSpread,System.Int64,System.Int64)">
+            <summary>
+            激活当前单元格。
+            oSpread：当前Spread对象。
+            iCol：列数
+            iRow：行数
+            </summary>
+            <param name="oSpread"></param>
+            <param name="iCol"></param>
+            <param name="iRow"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_getColumnindex(FarPoint.Win.Spread.FpSpread,System.String)">
+            <summary>
+            根据Spread的列标题获取该列名的列号
+            oSpread：当前Spread对象。
+            columnName：Spread行头列标题。
+            </summary>
+            <param name="oSpread"></param>
+            <param name="columnName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_Move(System.Int32,Microsoft.VisualBasic.Collection,Microsoft.VisualBasic.Collection)">
+            <summary>
+            将MC中a控件的值写入对应的Spread的所在行iCount的列中。
+            </summary>
+            <param name="iCount"></param>
+            <param name="Sc"></param>
+            <param name="Mc"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_Ins(Microsoft.VisualBasic.Collection)">
+            <summary>
+            未用
+            </summary>
+            <param name="Sc"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gf_Sp_Cls(Microsoft.VisualBasic.Collection)">
+            <summary>
+            将当前Sc的Spread对象清空
+            Sc：Sc集合。
+            </summary>
+            <param name="Sc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_Collection(FarPoint.Win.Spread.FpSpread,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,Microsoft.VisualBasic.Collection,Microsoft.VisualBasic.Collection,Microsoft.VisualBasic.Collection,Microsoft.VisualBasic.Collection,Microsoft.VisualBasic.Collection,Microsoft.VisualBasic.Collection)">
+            <summary>
+            根据pctl等的值将oSpread的列num加入对应的Collection中。
+            </summary>
+            <param name="oSpread"></param>
+            <param name="Num"></param>
+            <param name="pcol"></param>
+            <param name="ncol"></param>
+            <param name="mcol"></param>
+            <param name="iCol"></param>
+            <param name="acol"></param>
+            <param name="lCol"></param>
+            <param name="pColumn"></param>
+            <param name="nColumn"></param>
+            <param name="mColumn"></param>
+            <param name="iColumn"></param>
+            <param name="aColumn"></param>
+            <param name="lColumn"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_ColSort(FarPoint.Win.Spread.FpSpread,System.Windows.Forms.ComboBox,System.Windows.Forms.ComboBox@,System.Windows.Forms.ComboBox@)">
+            <summary>
+            未用
+            </summary>
+            <param name="oSpread"></param>
+            <param name="Cbo_First"></param>
+            <param name="Cbo_Second"></param>
+            <param name="Cbo_Third"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_ColLock(FarPoint.Win.Spread.FpSpread,System.Int32,System.Boolean)">
+            <summary>
+            根据LockType，将Spread的列锁定。
+            oSpread：Spread对象
+            ColNum：列行数
+            LockType：是否锁定（true/false）
+            </summary>
+            <param name="oSpread"></param>
+            <param name="ColNum"></param>
+            <param name="LockType"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gf_Sp_Change(Microsoft.VisualBasic.Collection,Microsoft.VisualBasic.Collection)">
+            <summary>
+            未用。
+            </summary>
+            <param name="Proc_Sc"></param>
+            <param name="Sc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_ClipCopy(FarPoint.Win.Spread.FpSpread,System.Int32)">
+            <summary>
+            未用
+            </summary>
+            <param name="oSpread"></param>
+            <param name="iRow"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_ClipPaste(System.Object,System.Int64)">
+            <summary>
+            未用。
+            </summary>
+            <param name="oSpread"></param>
+            <param name="iRow"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_Copy(Microsoft.VisualBasic.Collection)">
+            <summary>
+            未用。
+            </summary>
+            <param name="Sc"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_Paste(Microsoft.VisualBasic.Collection)">
+            <summary>
+            未用。
+            </summary>
+            <param name="Sc"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_Del(Microsoft.VisualBasic.Collection)">
+            <summary>
+            点击工具栏删除按钮时，在当前Sc的Spread的当前行标示“删除”标志。
+            Sc：Sc集合。
+            </summary>
+            <param name="Sc"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_UpdateMark(FarPoint.Win.Spread.FpSpread,System.Boolean)">
+            <summary>
+             未用
+            </summary>
+            <param name="oSpread"></param>
+            <param name="Mode"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_EventMark(System.Object)">
+            <summary>
+            未用
+            </summary>
+            <param name="oSpread"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_Cancel(ADODB.Connection,Microsoft.VisualBasic.Collection)">
+            <summary>
+            将当前的Spread操作（新增、修改、删除）取消
+            新增：取消当前行
+            修改：重新查询
+            删除：删除
+            </summary>
+            <param name="Conn"></param>
+            <param name="Sc"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_Cancel(ADODB.Connection,Microsoft.VisualBasic.Collection,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Conn"></param>
+            <param name="Sc"></param>
+            <param name="rowid"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gf_Sp_MakeQuery(FarPoint.Win.Spread.FpSpread,System.String,System.String,Microsoft.VisualBasic.Collection,System.Int32)">
+            <summary>
+             函数生成字符串sQuery，sQuery用于Gf_Sp_ExecQuery，Gf_Ms_Display函数，实现增删改查。
+            </summary>
+            <param name="oSpread"></param>
+            <param name="ProcedureName"></param>
+            <param name="iType"></param>
+            <param name="QueryColumn"></param>
+            <param name="iRow"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_OneRowDisplay(ADODB.Connection,System.String,FarPoint.Win.Spread.FpSpread,System.Int32)">
+            <summary>
+            调用sQuery字符串，调用后台函数。。进行查询，
+            </summary>
+            <param name="Conn"></param>
+            <param name="sQuery"></param>
+            <param name="oSpread"></param>
+            <param name="iRow"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.SetLockColor(FarPoint.Win.Spread.FpSpread,System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Color)">
+            <summary>
+            未用
+            </summary>
+            <param name="oSpread"></param>
+            <param name="StartRow"></param>
+            <param name="EndRow"></param>
+            <param name="StartCol"></param>
+            <param name="EndCol"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gf_Sp_DoQuery(FarPoint.Win.Spread.FpSpread,System.String,Microsoft.VisualBasic.Collection,System.Boolean)">
+            <summary>
+            未用
+            </summary>
+            <param name="oSpread"></param>
+            <param name="sQuery"></param>
+            <param name="lColumn"></param>
+            <param name="MsgChk"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gf_Sp_Display(ADODB.Connection,FarPoint.Win.Spread.FpSpread,System.String,Microsoft.VisualBasic.Collection,System.Boolean)">
+            <summary>
+            调用传入的参数sQuery进行查询，对
+            </summary>
+            <param name="Conn"></param>
+            <param name="oSpread"></param>
+            <param name="sQuery"></param>
+            <param name="lColumn"></param>
+            <param name="MsgChk"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gf_Sp_Refer(ADODB.Connection,Microsoft.VisualBasic.Collection,Microsoft.VisualBasic.Collection,Microsoft.VisualBasic.Collection,Microsoft.VisualBasic.Collection,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="Conn"></param>
+            <param name="Sc"></param>
+            <param name="Mc"></param>
+            <param name="nCheckControl"></param>
+            <param name="mCheckControl"></param>
+            <param name="MsgChk"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.test(ADODB.Connection,FarPoint.Win.Spread.FpSpread,System.String,Microsoft.VisualBasic.Collection,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="Conn"></param>
+            <param name="oSpread"></param>
+            <param name="sQuery"></param>
+            <param name="lColumn"></param>
+            <param name="MsgChk"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gf_Sp_Process(ADODB.Connection,Microsoft.VisualBasic.Collection,Microsoft.VisualBasic.Collection,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="Conn"></param>
+            <param name="Sc"></param>
+            <param name="Mc"></param>
+            <param name="RefChek"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gf_Sp_InsertRecord(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            向表中插入操作记录。
+            </summary>
+            <param name="IP_ADDRESS"></param>
+            <param name="USERID"></param>
+            <param name="PGMID"></param>
+            <param name="OP_TYPE"></param>
+            <param name="OP_CONTENT"></param>
+            <param name="OP_RLT"></param>
+            <param name="INS_TIME"></param>
+            <param name="ERR_DESC"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gf_Sp_NeceCheck(FarPoint.Win.Spread.FpSpread,System.Int32,Microsoft.VisualBasic.Collection)">
+            <summary>
+            
+            </summary>
+            <param name="oSpread"></param>
+            <param name="iRow"></param>
+            <param name="iCol"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gf_Sp_NeceCheck2(FarPoint.Win.Spread.FpSpread,Microsoft.VisualBasic.Collection,System.Int32,Microsoft.VisualBasic.Collection)">
+            <summary>
+            
+            </summary>
+            <param name="oSpread"></param>
+            <param name="mColumn"></param>
+            <param name="iRow"></param>
+            <param name="iCol"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_Excel(FarPoint.Win.Spread.FpSpread)">
+            <summary>
+            
+            </summary>
+            <param name="oSpread"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_EvenRowBackcolor(FarPoint.Win.Spread.FpSpread,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="oSpread"></param>
+            <param name="MaxCnt"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gf_Sp_ColSum(FarPoint.Win.Spread.FpSpread,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="oSpread"></param>
+            <param name="iCol"></param>
+            <param name="Start_Row"></param>
+            <param name="End_Row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gf_Sp_RowSum(FarPoint.Win.Spread.FpSpread,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="oSpread"></param>
+            <param name="iRow"></param>
+            <param name="Start_Col"></param>
+            <param name="End_Col"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_CollectionLock(System.Object,Microsoft.VisualBasic.Collection,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="oSpread"></param>
+            <param name="lColumn"></param>
+            <param name="LockType"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gf_Sp_DelProcess(ADODB.Connection,Microsoft.VisualBasic.Collection)">
+            <summary>
+            
+            </summary>
+            <param name="Conn"></param>
+            <param name="Sc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gf_Sp_RcvData(FarPoint.Win.Spread.FpSpread,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="oSpread"></param>
+            <param name="iCol"></param>
+            <param name="iRow"></param>
+            <param name="iSheetIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_SendData(FarPoint.Win.Spread.FpSpread,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            根据oSpread的iCol列的类型，将Indata写入oSpread的Cell【iRow，iCol】
+            </summary>
+            <param name="oSpread"></param>
+            <param name="Indata"></param>
+            <param name="iCol"></param>
+            <param name="iRow"></param>
+            <param name="iSheetIndex"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_DeleteRow(FarPoint.Win.Spread.FpSpread,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="oSpread"></param>
+            <param name="iRow"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gf_Sp_ComboAdd(ADODB.Connection,FarPoint.Win.Spread.FpSpread,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Conn"></param>
+            <param name="oSpread"></param>
+            <param name="sQuery"></param>
+            <param name="iCol"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gf_Sp_ComboAddNew(ADODB.Connection,FarPoint.Win.Spread.FpSpread,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Conn"></param>
+            <param name="oSpread"></param>
+            <param name="sQuery"></param>
+            <param name="iCol"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gf_Sp_RcvDataById(FarPoint.Win.Spread.FpSpread,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="ospread"></param>
+            <param name="colID"></param>
+            <param name="iRow"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_Sort(FarPoint.Win.Spread.FpSpread,System.Int32,System.Int32,System.Boolean,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="sPname"></param>
+            <param name="Col"></param>
+            <param name="Row"></param>
+            <param name="CL"></param>
+            <param name="Key_Col"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_UpdateMark(FarPoint.Win.Spread.FpSpread,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="oSpread"></param>
+            <param name="iRow"></param>
+            <param name="iCow"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_UpdateMarkAll(FarPoint.Win.Spread.FpSpread,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="oSpread"></param>
+            <param name="mark"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_InAuthority2(Microsoft.VisualBasic.Collection,System.Int32,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Sc"></param>
+            <param name="Auth_Col"></param>
+            <param name="iType"></param>
+            <param name="iRow"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_RowLock(FarPoint.Win.Spread.FpSpread,System.Int32,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="oSpread"></param>
+            <param name="RowNum"></param>
+            <param name="LockType"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_RowLock(FarPoint.Win.Spread.FpSpread,System.Int32,System.Int64,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="oSpread"></param>
+            <param name="RowNum"></param>
+            <param name="RowNum2"></param>
+            <param name="LockType"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gp_Sp_CellLock(FarPoint.Win.Spread.FpSpread,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="oSpread"></param>
+            <param name="ColNum"></param>
+            <param name="RowNum"></param>
+            <param name="LockType"></param>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gf_Sp_MutiComboAdd(ADODB.Connection,FarPoint.Win.Spread.FpSpread,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Conn1"></param>
+            <param name="oSpread"></param>
+            <param name="sQuery"></param>
+            <param name="iCol"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.SpreadCommon.Gf_Sp_MutiComboAdd(ADODB.Connection,FarPoint.Win.Spread.FpSpread,System.String,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Conn1"></param>
+            <param name="oSpread"></param>
+            <param name="sCusCode"></param>
+            <param name="iRow"></param>
+            <param name="iCol"></param>
+            <returns></returns>
+        </member>
+        <member name="F:CommonClass.FORMBASE.sAuthority_btn">
+            //////////////1022
+        </member>
+        <member name="F:CommonClass.FORMBASE.ss_default_width">
+            ///////////////1022
+        </member>
+        <member name="M:CommonClass.FORMBASE.form_Load(System.Object,System.EventArgs)">
+            <summary>
+            页面加载事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonClass.FORMBASE.p_ConFormat(System.Windows.Forms.Control,System.Windows.Forms.Form)">
+            <summary>
+            格式化页面中的各种控件
+            Ctrl：页面中的控件
+            frm：当前页面
+            </summary>
+            <param name="Ctrl"></param>
+            <param name="frm"></param>
+        </member>
+        <!-- 对于成员“M:CommonClass.FORMBASE.form_Closing(System.Object,System.ComponentModel.CancelEventArgs)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:CommonClass.FORMBASE.form_Closed(System.Object,System.EventArgs)”忽略有格式错误的 XML 注释 -->
+        <member name="M:CommonClass.FORMBASE.form_Activated(System.Object,System.EventArgs)">
+            <summary>
+            窗体激活事件：根据激活窗体设置工具栏状态。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <!-- 对于成员“M:CommonClass.FORMBASE.Form_Define”忽略有格式错误的 XML 注释 -->
+        <member name="M:CommonClass.FORMBASE.p_McFor(Microsoft.VisualBasic.Collection)">
+            <summary>
+            格式化Mc
+            Mc：Mc集合
+            </summary>
+            <param name="Mc"></param>
+        </member>
+        <member name="M:CommonClass.FORMBASE.p_ScFor(Microsoft.VisualBasic.Collection)">
+            <summary>
+            格式化Sc
+            Sc：Sc集合
+            </summary>
+            <param name="Sc"></param>
+        </member>
+        <member name="M:CommonClass.FORMBASE.p_SetColumnRowCount(FarPoint.Win.Spread.FpSpread,System.Int32)">
+            <summary>
+            未用
+            </summary>
+            <param name="ospread"></param>
+            <param name="rowCount"></param>
+        </member>
+        <member name="M:CommonClass.FORMBASE.Form_Cls">
+            <summary>
+            页面清空函数。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.FORMBASE.Form_Ref">
+            <summary>
+            查询函数，根据页面不同类型调用p_ref进行相应的查询动作
+            </summary>
+        </member>
+        <member name="M:CommonClass.FORMBASE.Form_Pro">
+            <summary>
+            保存函数，根据页面不同类型调用p_pro进行相应的保存动作。
+            </summary>
+        </member>
+        <member name="M:CommonClass.FORMBASE.Form_Del">
+            <summary>
+            删除函数，根据页面不同类型调用p_del进行相应的删除动作。
+            </summary>
+        </member>
+        <member name="M:CommonClass.FORMBASE.Spread_Ins">
+            <summary>
+            Spread行插入操作，对非lock列解锁，对lock列进行锁定，并根据"authority"列的值，将操作者的UserId写入新插入行的相应位置上。
+            </summary>
+        </member>
+        <member name="M:CommonClass.FORMBASE.Spread_Del">
+            <summary>
+            Spread行删除：点击工具栏删除按钮时，在当前Sc的Spread的当前行标识“删除”标志。
+            </summary>
+        </member>
+        <member name="M:CommonClass.FORMBASE.Spread_Can">
+            <summary>
+            Spread行取消操作：将当前的Spread操作（新增、修改、删除）取消
+            </summary>
+        </member>
+        <member name="M:CommonClass.FORMBASE.Form_Cpy">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CommonClass.FORMBASE.Spread_Cpy">
+            <summary>
+            将所要复制的Spread内容黏贴在剪贴板上，并记录所要复制内容的行数。
+            </summary>
+        </member>
+        <member name="M:CommonClass.FORMBASE.Form_Pst">
+            <summary>
+            未用
+            </summary>
+        </member>
+        <member name="M:CommonClass.FORMBASE.Master_Pst">
+            <summary>
+            判断当前页面是否具有进行“黏贴”的条件，并设置画面的权限
+            </summary>
+        </member>
+        <member name="M:CommonClass.FORMBASE.Spread_Pst">
+            <summary>
+            将所要复制的Spread内容从剪贴板复制到Spread相应的行中，并记录所要复制内容的行数。
+            </summary>
+        </member>
+        <member name="M:CommonClass.FORMBASE.Spread_Exc">
+            <summary>
+            调用 SpreadCommon.Gp_Sp_Excel，将将Spread表单内容导出到客户端Excel表格中。
+            </summary>
+        </member>
+        <member name="M:CommonClass.FORMBASE.ss_CellClickEvent(System.Object,FarPoint.Win.Spread.CellClickEventArgs)">
+            <summary>
+            Spread单元格单击事件。单击列头根据(bool)Sc["sort"]是否为true对Spread列进行排序;点击CheckBox控件时，根据当前单元格是否被锁定及当前操作者的权限设置行头添加“修改”标志。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonClass.FORMBASE.copyDoMySelf(FarPoint.Win.Spread.FpSpread)">
+            <summary>
+            
+            </summary>
+            <param name="ss1"></param>20130502BEGIN
+        </member>
+        <member name="M:CommonClass.FORMBASE.ss_KeyUp(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Spread单元格KeyUp事件，按下“Enter”键，当前活动单元格右移、换行或自动新增一行；同时按住“control-v"时进行粘贴。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <!-- 对于成员“M:CommonClass.FORMBASE.ss_KeyDownEvent(System.Object,System.Windows.Forms.KeyEventArgs)”忽略有格式错误的 XML 注释 -->
+        <member name="M:CommonClass.FORMBASE.ss_LeaveCell(System.Object,FarPoint.Win.Spread.LeaveCellEventArgs)">
+            <summary>
+            Spread单元格LeaveCell事件，当Spread单元格光标离开时，判断内容是否改变，如果改变，在行头添加“修改”标志。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonClass.FORMBASE.ss_EditChange(System.Object,FarPoint.Win.Spread.EditorNotifyEventArgs)">
+            <summary>
+            Spread单元格EditChange事件，当修改单元格内容时在行头添加“修改”标志。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonClass.FORMBASE.ss_DragDropBlockCompleted(System.Object,FarPoint.Win.Spread.DragDropBlockCompletedEventArgs)">
+            <summary>
+            未用
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonClass.FORMBASE.ss_DragFillBlockCompleted(System.Object,FarPoint.Win.Spread.DragFillBlockCompletedEventArgs)">
+            <summary>
+            未用
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonClass.FORMBASE.ss_ComboDropDown(System.Object,FarPoint.Win.Spread.EditorNotifyEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonClass.FORMBASE.ss_ClipboardPasting(System.Object,FarPoint.Win.Spread.ClipboardPastingEventArgs)">
+            <summary>
+            未用
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonClass.FORMBASE.p_SubFormInit">
+            <summary>
+            
+            </summary>
+        </member>
+        <!-- 对于成员“M:CommonClass.FORMBASE.p_McIni(Microsoft.VisualBasic.Collection,System.Boolean)”忽略有格式错误的 XML 注释 -->
+        <member name="M:CommonClass.FORMBASE.p_ScIni(FarPoint.Win.Spread.FpSpread,Microsoft.VisualBasic.Collection,System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            初始化Sc
+            ospread:Spread对象
+            Sc：Sc集合。
+            iAuthority：记录当前操作者在当前Spread的列号。
+            bSort：Spread是否具有排序功能。
+            bLock：Spread是否锁定
+            </summary>
+            <param name="ospread"></param>
+            <param name="Sc"></param>
+            <param name="iAuthority"></param>
+            <param name="bSort"></param>
+            <param name="bLock"></param>
+        </member>
+        <member name="M:CommonClass.FORMBASE.p_SetMc(System.String,System.Windows.Forms.Control,System.String,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            根据控件类型初始化控件，并且定义属性，调用
+            Gp_Ms_Collection（）将控件放入Mc中。
+            sname：控件代表的字段名
+            Ctrl：控件
+            sAttr：控件属性
+            sLenth：控件长度
+            sComboComText:combox的公共代码的代码管理号
+            sComboxJoin：combox的公共代码的筛选条件
+            sComboCusText：combox的自定义查询语句
+            McSeq：Mc的序列号
+            </summary>
+            <param name="sname"></param>
+            <param name="Ctrl"></param>
+            <param name="sAttr"></param>
+            <param name="sLenth"></param>
+            <param name="sComboComText"></param>
+            <param name="sComboxJoin"></param>
+            <param name="sComboCusText"></param>
+            <param name="McSeq"></param>
+        </member>
+        <member name="M:CommonClass.FORMBASE.p_SetSc(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32)">
+             <summary>
+            初始化当前Spread，将spread各列加载到初始化的Sc中
+            sColName：spread当前列列头显示的文字
+            sType：Spread当前列的类型
+            sLenth：Spread当前列的长度
+            sAttr：属性
+            sComCode：ON或OE列的公共代码的代码管理号
+            sJoin：ON或OE列的公共代码的筛选条件
+            sCusCode：ON或OE列的自定义查询语句
+            ScSeq：Sc的序列号
+            iHeaderRow：Spread列头行数。
+             </summary>
+             <param name="sColName"></param>
+             <param name="sType"></param>
+             <param name="sLenth"></param>
+             <param name="sAttr"></param>
+             <param name="sComCode"></param>
+             <param name="sJoin"></param>
+             <param name="sCusCode"></param>
+             <param name="sCombineCol"></param>
+             <param name="sCombineName"></param>
+             <param name="ScSeq"></param>
+             <param name="iHeaderRow"></param>
+        </member>
+        <member name="M:CommonClass.FORMBASE.p_spanSpread(System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Spread合并列头，并设置列名.
+            sColName：列头名称;
+            sStartCol：起始列;
+            sEndCol：结束列;
+            ScSeq:Spread序列号;
+            iHeaderRow:开始合并处的单元格行索引;
+            iSpanRows:合并的行数;
+            </summary>
+            <param name="sColName"></param>
+            <param name="sStartCol"></param>
+            <param name="sEndCol"></param>
+            <param name="ScSeq"></param>
+            <param name="iHeaderRow"></param>
+            <param name="iSpanRows"></param>
+        </member>
+        <member name="M:CommonClass.FORMBASE.p_Ref(System.Int32,System.Int32,System.Boolean,System.Boolean)">
+             <summary>
+            根据mc查询sc，假如mc有返回值，那么还对mc进行查询
+            iMcSeq：Mc集合序列号 
+            iScSeq：Sc集合顺序序列号
+            menu：查询完成后，是否设置画面的权限
+            MsgChk：无数据时，是否提示“无数据”。
+             </summary>
+             <param name="iMcSeq"></param>
+             <param name="iScSeq"></param>
+             <param name="menu"></param>
+             <param name="msgchk"></param>
+             <returns></returns>
+        </member>
+        <member name="M:CommonClass.FORMBASE.p_pro(System.Int32,System.Int32,System.Boolean,System.Boolean)">
+             <summary>
+            根据mc保存sc,并判断mc是否有返回值,如果有需要对mc进行保存。
+            iMcSeq:Mc集合序列号
+            iScSeq:Sc集合序列号
+            menu:保存完成后，是否进行权限设置
+            RefChek：数据保存后是否刷新，true：不刷新。false：刷新。
+             </summary>
+             <param name="iMcSeq"></param>
+             <param name="iScSeq"></param>
+             <param name="menu"></param>
+             <param name="refchk"></param>
+             <returns></returns>
+        </member>
+        <member name="M:CommonClass.FORMBASE.p_Pro(System.Int32,System.Int32,System.Boolean,System.Boolean)">
+             <summary>
+            根据mc保存sc,并判断mc是否有返回值,如果有需要对mc进行保存。
+            iMcSeq:Mc集合序列号
+            iScSeq:Sc集合序列号
+            menu:保存完成后，是否进行权限设置
+            RefChek：数据保存后是否刷新，true：不刷新。false：刷新。
+             </summary>
+             <param name="iMcSeq"></param>
+             <param name="iScSeq"></param>
+             <param name="menu"></param>
+             <param name="refchk"></param>
+             <returns></returns>
+        </member>
+        <member name="M:CommonClass.FORMBASE.p_del(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            对mc，sc进行删除删除
+            iMcSeq:Mc 序号
+            iScSeq：Sc序号
+            menu：删除完成后，重新设置当前页面的权限。
+            </summary>
+            <param name="iMcSeq"></param>
+            <param name="iScSeq"></param>
+            <param name="menu"></param>
+        </member>
+        <member name="M:CommonClass.FORMBASE.Gf_Sp_CheckMaxMin(FarPoint.Win.Spread.FpSpread,System.String,System.String)">
+            <summary>
+            未用
+            </summary>
+            <param name="ospread"></param>
+            <param name="sMaxid"></param>
+            <param name="sMinId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.FORMBASE.Gf_Sp_ColColorSet(System.String,FarPoint.Win.Spread.FpSpread,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="sKey"></param>
+            <param name="oSpread"></param>
+            <param name="sColId"></param>
+        </member>
+        <member name="M:CommonClass.FORMBASE.Gf_Sp_Openexcel(FarPoint.Win.Spread.FpSpread)">
+            <summary>
+            
+            </summary>
+            <param name="oSpread"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.FORMBASE.Mnu_ColumnSort_Click(System.Object,System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonClass.FORMBASE.Mnu_FrozenSetting_Click(System.Object,System.EventArgs)">
+            <summary>
+             设置Spread列锁定以及锁定的位置。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonClass.FORMBASE.Mnu_FrozenCancel_Click(System.Object,System.EventArgs)">
+            <summary>
+            解除列锁定
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonClass.FORMBASE.ctrl_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+            <summary>
+            定义快捷键处理查询
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonClass.FORMBASE.p_SetSc(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="sColName"></param>
+            <param name="sType"></param>
+            <param name="sLenth"></param>
+            <param name="sAttr"></param>
+            <param name="sComCode"></param>
+            <param name="sJoin"></param>
+            <param name="sCusCode"></param>
+            <param name="ScSeq"></param>
+            <param name="iHeaderRow"></param>
+            <param name="HAlign"></param>
+        </member>
+        <member name="M:CommonClass.FORMBASE.p_SetMc(System.String,System.Windows.Forms.TextBox,System.String,System.String,System.String,System.String,System.String,System.Int32,System.Boolean)">
+            ///////////////////////20130228
+        </member>
+        <member name="M:CommonClass.FORMBASE.p_SetSc(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="sColName"></param>
+            <param name="sType"></param>
+            <param name="sLenth"></param>
+            <param name="sAttr"></param>
+            <param name="sComCode"></param>
+            <param name="sJoin"></param>
+            <param name="sCusCode"></param>
+            <param name="ScSeq"></param>
+            <param name="iHeaderRow"></param>
+            <param name="HAlign"></param>
+            <param name="iRecord"></param>
+        </member>
+        <member name="F:CommonClass.CeriUDate.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:CommonClass.CeriUDate.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:CommonClass.CeriUDate.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="F:CommonClass.DataDic.m_isSpreadCaller">
+            <summary>
+            调用者是否是Spread
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:CommonClass.DataDic.m_ActiveColumnIndex">
+            <summary>
+            用于窗体打开后设置where条件的Spread活动列
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:CommonClass.DataDic.m_rControl">
+            <summary>
+            输入源，也是保存选择结果的目的地
+            调用者是Spread时：输入列的集合
+            调用者是Master时:输入控件的集和
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:CommonClass.DataDic.m_fControl">
+            <summary>
+            结果集中对应rControl的列的名字，用于拼Where语句
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:CommonClass.DataDic.m_SpreadObj">
+            <summary>
+            调用者是Spread时需要指明SpreadObj
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:CommonClass.DataDic.m_sQuery">
+            <summary>
+            用于产生Result中结果集的Select语句
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:CommonClass.DataDic.m_sProc">
+            <summary>
+            用于产生Result中结果集的存储过程名称
+            存储过程的参数从rControl中获得
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:CommonClass.DataDic.m_sFilter">
+            <summary>
+            过滤条件
+            对QuerySQL:筛选条件
+            对Procedure:最开始的参数
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:CommonClass.DataDic.DataDic_Load(System.Object,System.EventArgs)">
+             <summary>
+             DataDic窗体加载事件。
+            1设置页面的位置信息。
+            2调用ComposeWhereSQL（），生成完整where语句。
+            3 调用ssResult_Init（），ssWhere_Init（）函数，初始化窗体，将sql语句传到数据库执行，并将结果返回到窗体中。
+             </summary>
+             <param name="sender"></param>
+             <param name="e"></param>
+        </member>
+        <member name="M:CommonClass.DataDic.Dispose_Contrls">
+            <summary>
+            释放DataDic用到的资源。
+            </summary>
+        </member>
+        <member name="M:CommonClass.DataDic.DataDic_Activated(System.Object,System.EventArgs)">
+            <summary>
+            DataDic窗体激活事件。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonClass.DataDic.DataDic_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            DataDic控件KeyDown事件。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonClass.DataDic.DataDic_KeyUp(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            DataDic控件KeyUp事件。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonClass.DataDic.DataDic_Resize(System.Object,System.EventArgs)">
+            <summary>
+            DataDic窗体尺寸发生变化时，调整窗体上各控件的尺寸。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonClass.DataDic.DataDic_Closing(System.Object,System.ComponentModel.CancelEventArgs)">
+            <summary>
+            关闭DataDic窗体前，保存DataDic窗体上两个spread的各列的宽度。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonClass.DataDic.ssWhere_Init(System.Int32)">
+            <summary>
+            WhereSpread的初始化设置
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:CommonClass.DataDic.ssResult_Init(System.Int32)">
+            <summary>
+            ResultSpread的初始化设置
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:CommonClass.DataDic.ReComposeWhereSQL">
+            <summary>
+            得到sql语句完整的where条件。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.DataDic.ComposeWhereSQL">
+            <summary>
+            组成完整where条件。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.DataDic.cmd_refresh_ClickEvent(System.Object,System.EventArgs)">
+            <summary>
+            DataDic窗体refresh事件。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonClass.DataDic.cmd_selection_ClickEvent(System.Object,System.EventArgs)">
+            <summary>
+            DataDic窗体selection事件。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonClass.DataDic.cmd_close_ClickEvent(System.Object,System.EventArgs)">
+            <summary>
+            DataDic窗体close事件。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonClass.DataDic.ssResult_CellDoubleClick(System.Object,FarPoint.Win.Spread.CellClickEventArgs)">
+            <summary>
+            DataDic窗体ssResult对象的CellDoubleClick事件。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonClass.DataDic.ssResult_ColWidthChange(System.Object,FarPoint.Win.Spread.ColumnWidthChangedEventArgs)">
+            <summary>
+            DataDic窗体ssResult对象的ColWidthChange事件。用于保持ssResult对象与ssWhere对象列的宽度的一致。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonClass.DataDic.ssResult_DblClick(System.Object,System.EventArgs)">
+            <summary>
+            DataDic窗体ssResult对象的DblClick事件。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonClass.DataDic.ssResult_KeyUpEvent(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            DataDic窗体ssResult对象的KeyUpEvent事件。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonClass.DataDic.ssWhere_ColWidthChange(System.Object,FarPoint.Win.Spread.ColumnWidthChangedEventArgs)">
+            <summary>
+            DataDic窗体ssWhere对象的ColWidthChange事件。用于保持ssResult对象与ssWhere对象列的宽度的一致。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonClass.DataDic.ssWhere_KeyDownEvent(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            DataDic窗体ssWhere对象的KeyDownEvent事件。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonClass.DataDic.Gf_DD_ReSelctDisp(ADODB.Connection,System.String,System.Boolean)">
+            <summary>
+            调用ssResult_Init（），ssWhere_Init（）函数，初始化窗体，将sql语句传到数据库执行，并将结果返回到窗体中。
+            </summary>
+            <param name="Conn"></param>
+            <param name="sQuery"></param>
+            <param name="MsgChk"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.DataDic.DataDic_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            DataDic窗体FormClosing事件。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonClass.DataDic.DataDic_FormClosed(System.Object,System.Windows.Forms.FormClosedEventArgs)">
+            <summary>
+            DataDic窗体FormClosing事件。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonClass.DataDicCommon.Gf_Spread_DD(System.Windows.Forms.Control,Microsoft.VisualBasic.Collection,Microsoft.VisualBasic.Collection,System.String,System.String,System.Int32,System.String,System.Int32,System.String,Microsoft.VisualBasic.Collection)">
+            1023
+        </member>
+        <member name="M:CommonClass.DataDicCommon.Gf_CDLengthFind(ADODB.Connection,System.String)">
+            1023
+        </member>
+        <member name="M:CommonClass.DataDicCommon.Gf_CommNameFind(ADODB.Connection,System.String,System.String,System.String)">
+            <summary>
+            根据传入的参数，得到sql语句，调用Gf_CodeFind（）
+            方法，得到CD_SHORT_NAME或CD_NAME或CD_SHORT_ENG或CD_FULL_ENG的值。
+            </summary>
+            <param name="Conn"></param>
+            <param name="Cd_Mana_No"></param>
+            <param name="Code"></param>
+            <param name="nameType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.DataDicCommon.Gf_EmpNameFind(ADODB.Connection,System.String)">
+            <summary>
+            根据传入的参数，得到sql语句，调用Gf_CodeFind（）方法，得到EMP_NAME的值。
+            </summary>
+            <param name="Conn"></param>
+            <param name="Code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.DataDicCommon.Gf_PgmNameFind(ADODB.Connection,System.String)">
+            <summary>
+            根据传入的参数，得到sql语句，调用Gf_CodeFind（）方法，得到PGM_NAME的值。
+            </summary>
+            <param name="Conn"></param>
+            <param name="Code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.DataDicCommon.Gf_CustNameFind(ADODB.Connection,System.String)">
+            <summary>
+            根据传入的参数，得到sql语句，调用Gf_CodeFind（）方法，得到CUST_NM的值。
+            </summary>
+            <param name="Conn"></param>
+            <param name="Code"></param>
+            <returns></returns>
+            未用
+        </member>
+        <member name="M:CommonClass.DataDicCommon.Gf_ApplyNameFind(ADODB.Connection,System.String)">
+            <summary>
+            根据传入的参数，得到sql语句，调用Gf_CodeFind（）方法，得到APLY_ITEM_NAME的值。
+            </summary>
+            <param name="Conn"></param>
+            <param name="Apply_Item"></param>
+            <returns></returns>
+            未用
+        </member>
+        <member name="M:CommonClass.DataDicCommon.Gf_CommonCodeSQL">
+            <summary>
+            得到不带where条件的sql语句。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.F4COMN.F4EventProc(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            F4点击事件。按下“F4”时，显示数据字典。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonClass.F4COMN.F4COMN_MouseDoubleClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonClass.F4COMN.GetFilter">
+            <summary>
+            得到sql语句查询条件。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.F4COMN.GetQuery">
+            <summary>
+            调用Gf_CommonCodeSQL() 方法，利用BBB_CD表结构得到不带where条件的sql语句。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.F4COMN.Dispose(System.Boolean)">
+            <summary>
+            窗体关闭时，调用该方法，关闭所有组建。
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:CommonClass.F4COMR.GetFilter">
+            <summary>
+            根据sJoin属性的长度得到where条件。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.F4COMR.GetQuery">
+            <summary>
+            调用Gf_CommonCodeSQL() 方法，利用BBB_CD表结构得到不带where条件的sql语句。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.F4COMR.CD_KeyUp(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            F4COMR控件KeyUp事件。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonClass.F4COMR.F4COMR_SizeChanged(System.Object,System.EventArgs)">
+            <summary>
+            F4COMR控件内容改变事件。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonClass.F4COMR.Dispose(System.Boolean)">
+            <summary>
+            窗体关闭时，调用该方法，释放所有组建
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:CommonClass.F4ETCN.GetFilter">
+            <summary>
+            得到sJoin属性的值。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.F4ETCN.GetQuery">
+            <summary>
+            得到sSqletc属性值。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.F4ETCN.Dispose(System.Boolean)">
+            <summary>
+            窗体关闭时，调用该方法，释放所有组建
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:CommonClass.F4ETCR.KeyUpEventProc(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            F4点击事件。按下“F4”时，显示数据字典。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CommonClass.F4ETCR.GetFilter">
+            <summary>
+            得到sJoin属性值。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.F4ETCR.GetQuery">
+            <summary>
+            得到sSqletc属性值。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CommonClass.F4ETCR.Dispose(System.Boolean)">
+            <summary>
+            窗体关闭时，调用该方法，关闭所有组建。
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="F:CommonClass.MixComboBox.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:CommonClass.MixComboBox.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:CommonClass.MixComboBox.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="T:My.Resources.Resources">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:My.Resources.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:My.Resources.Resources.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+    </members>
+</doc>
