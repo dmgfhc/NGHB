@@ -43,9 +43,12 @@ using CommonClass;
 ///-- 程序头注释结束++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ///-------------------------------------------------------------------------------
 
-namespace CG {
-    public partial class CGC2010C: CommonClass.FORMBASE {
-        public CGC2010C() {
+namespace CG
+{
+    public partial class CGC2010C : CommonClass.FORMBASE
+    {
+        public CGC2010C()
+        {
             InitializeComponent();
         }
         Collection Mc1 = new Collection();
@@ -80,7 +83,8 @@ namespace CG {
 
 
 
-        protected override void p_SubFormInit() {
+        protected override void p_SubFormInit()
+        {
 
             int imcseq;
             p_McIni(Mc1, true);
@@ -304,8 +308,10 @@ namespace CG {
 
 
 
-        private void CHK_A_Click() {
-            if (CHK_A.Checked) {
+        private void CHK_A_Clk()
+        {
+            if (CHK_A.Checked)
+            {
                 TXT_EXCEPTION.Text = "A";
                 CHK_B.Checked = false;
                 CHK_C.Checked = false;
@@ -313,7 +319,8 @@ namespace CG {
                 CHK_B.ForeColor = Color.Black;
                 CHK_C.ForeColor = Color.Black;
             }
-            if (!CHK_A.Checked & !CHK_B.Checked & !CHK_C.Checked) {
+            if (!CHK_A.Checked & !CHK_B.Checked & !CHK_C.Checked)
+            {
                 CHK_A.ForeColor = Color.Black;
                 CHK_B.ForeColor = Color.Black;
                 CHK_C.ForeColor = Color.Black;
@@ -321,8 +328,10 @@ namespace CG {
             }
         }
 
-        private void CHK_B_Click() {
-            if (CHK_B.Checked) {
+        private void CHK_B_Clk()
+        {
+            if (CHK_B.Checked)
+            {
                 TXT_EXCEPTION.Text = "B";
                 CHK_A.Checked = false;
                 CHK_C.Checked = false;
@@ -330,7 +339,8 @@ namespace CG {
                 CHK_A.ForeColor = Color.Black;
                 CHK_C.ForeColor = Color.Black;
             }
-            if (!CHK_A.Checked & !CHK_B.Checked & !CHK_C.Checked) {
+            if (!CHK_A.Checked & !CHK_B.Checked & !CHK_C.Checked)
+            {
                 CHK_A.ForeColor = Color.Black;
                 CHK_B.ForeColor = Color.Black;
                 CHK_C.ForeColor = Color.Black;
@@ -338,8 +348,10 @@ namespace CG {
             }
         }
 
-        private void chk_c_Click() {
-            if (CHK_C.Checked) {
+        private void chk_c_Clk()
+        {
+            if (CHK_C.Checked)
+            {
                 TXT_EXCEPTION.Text = "C";
                 CHK_A.Checked = false;
                 CHK_B.Checked = false;
@@ -347,7 +359,8 @@ namespace CG {
                 CHK_A.ForeColor = Color.Black;
                 CHK_B.ForeColor = Color.Black;
             }
-            if (!CHK_A.Checked & !CHK_B.Checked & !CHK_C.Checked) {
+            if (!CHK_A.Checked & !CHK_B.Checked & !CHK_C.Checked)
+            {
                 CHK_A.ForeColor = Color.Black;
                 CHK_B.ForeColor = Color.Black;
                 CHK_C.ForeColor = Color.Black;
@@ -355,7 +368,7 @@ namespace CG {
             }
         }
 
-        private void CHK_CR_CD_Click() {
+        private void CHK_CR_CD_Clk() {
             if (!CHK_CR_CD.Checked) {
                 if (!CHK_NON_CR_CD.Checked) {
                     //          CHK_CR_CD.Value = ssCBChecked
@@ -369,15 +382,18 @@ namespace CG {
             TXT_CR_CD.Text = "1";
 
             CHK_CR_CD.ForeColor = Color.Red;
-            CHK_CR_CD..Checked = true;
+            CHK_CR_CD.Checked = true;
 
             CHK_NON_CR_CD.ForeColor = Color.Black;
             CHK_NON_CR_CD.Checked = false;
         }
 
-        private void CHK_NON_CR_CD_Click() {
-            if (!CHK_NON_CR_CD.Checked) {
-                if (!CHK_CR_CD.Checked) {
+        private void CHK_NON_CR_CD_Clk()
+        {
+            if (!CHK_NON_CR_CD.Checked)
+            {
+                if (!CHK_CR_CD.Checked)
+                {
                     //          CHK_NON_CR_CD.Value = ssCBChecked
                     TXT_CR_CD.Text = "";
                     CHK_NON_CR_CD.ForeColor = Color.Black;
@@ -395,10 +411,13 @@ namespace CG {
             CHK_CR_CD.Checked = false;
         }
 
-        private void Chk_Rolling_Auto_Click() {
+        private void Chk_Rolling_Auto_Clk()
+        {
 
-            if (!CHK_ROLLING_AUTO.Checked) {
-                if (!CHK_ROLLING_OP.Checked) {
+            if (!CHK_ROLLING_AUTO.Checked)
+            {
+                if (!CHK_ROLLING_OP.Checked)
+                {
                     TXT_ROLLING_METHOD.Text = "";
                     CHK_ROLLING_AUTO.ForeColor = Color.Black;
                     CHK_ROLLING_OP.ForeColor = Color.Black;
@@ -416,10 +435,13 @@ namespace CG {
 
         }
 
-        private void Chk_Rolling_Op_Click() {
+        private void Chk_Rolling_Op_Clk()
+        {
 
-            if (!CHK_ROLLING_OP.Checked) {
-                if (!CHK_ROLLING_AUTO.Checked) {
+            if (!CHK_ROLLING_OP.Checked)
+            {
+                if (!CHK_ROLLING_AUTO.Checked)
+                {
                     TXT_ROLLING_METHOD.Text = "";
                     CHK_ROLLING_OP.ForeColor = Color.Black;
                     CHK_ROLLING_AUTO.ForeColor = Color.Black;
@@ -437,39 +459,52 @@ namespace CG {
 
         }
 
-        private void cmd_LPass_Click() {
+        private void cmd_LPass_Clk()
+        {
+            string SMESG;
 
-            if (TXT_MILL_END_TIME.Text != "" && TXT_MILL_END_TIME.Text.Substring(0, 1) != "2") {
+            if (TXT_MILL_END_TIME.Text != "" && TXT_MILL_END_TIME.Text.Substring(0, 1) != "2")
+            {
                 SMESG = " 请输入终轧时间...！";
                 GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "提示");
                 return;
             }
 
-            if (GeneralCommon.Gf_MessConfirm("您确定板坯号 " + txt_SlabNo.Text + "仅通过精轧机吗？", "Q", "空过指示确定")) {
-                if (Gp_Process_Exec("A") == "") {
+            if (GeneralCommon.Gf_MessConfirm("您确定板坯号 " + txt_SlabNo.Text + "仅通过精轧机吗？", "Q", "空过指示确定"))
+            {
+                if (Gp_Process_Exec("A") == "")
+                {
                     GeneralCommon.Gp_MsgBoxDisplay("空过处理完成 ！", "I", "空过");
                     Form_Ref();
                     TXT_MILL_END_TIME.Text = "";
-                } else {
+                }
+                else
+                {
                     GeneralCommon.Gp_MsgBoxDisplay("空过处理失败，请确认 ！", "I", "空过");
                 }
             }
 
         }
 
-        private void cmd_Pass_Click() {
-            if (GeneralCommon.Gf_MessConfirm("您确定要对板坯号" + txt_SlabNo.Text + "做轧废处理吗？", "Q", "轧废指示确定")) {
-                if (Gp_Process_Exec("B") == "") {
+        private void cmd_Pass_Clk()
+        {
+            if (GeneralCommon.Gf_MessConfirm("您确定要对板坯号" + txt_SlabNo.Text + "做轧废处理吗？", "Q", "轧废指示确定"))
+            {
+                if (Gp_Process_Exec("B") == "")
+                {
                     GeneralCommon.Gp_MsgBoxDisplay("轧废处理完成 ！", "I", "空过");
                     Form_Ref();
-                } else {
+                }
+                else
+                {
                     GeneralCommon.Gp_MsgBoxDisplay("轧废处理失败，请确认 ！", "I", "空过");
                 }
             }
         }
 
         //调用后台包程序
-        private string Gp_Process_Exec(string Process_Type) {
+        private string Gp_Process_Exec(string Process_Type)
+        {
 
             string[] Para1 = new string[2];
             string[] Para2 = new string[5];
@@ -477,10 +512,14 @@ namespace CG {
             // 发送
             Para1[0] = txt_SlabNo.Text.Trim();
             Para1[1] = TXT_CB.Text.Trim();
-            if (Process_Type == "A") {
-                if (GeneralCommon.Gf_ExecProcedure(GeneralCommon.M_CN1, "CGC2010C.P_PASS", Para1)) {
+            if (Process_Type == "A")
+            {
+                if (GeneralCommon.Gf_ExecProcedure(GeneralCommon.M_CN1, "CGC2010C.P_PASS", Para1))
+                {
                     return "";
-                } else {
+                }
+                else
+                {
                     return "空过处理失败";
                 }
             }
@@ -492,10 +531,14 @@ namespace CG {
             Para2[3] = TXT_EMP1.Text.Trim();
             Para2[4] = TXT_CB.Text.Trim();
 
-            if (Process_Type == "B") {
-                if (GeneralCommon.Gf_ExecProcedure(GeneralCommon.M_CN1, "CGC2010C.P_SCRAP", Para2)) {
+            if (Process_Type == "B")
+            {
+                if (GeneralCommon.Gf_ExecProcedure(GeneralCommon.M_CN1, "CGC2010C.P_SCRAP", Para2))
+                {
                     return "";
-                } else {
+                }
+                else
+                {
                     return "轧废处理失败";
                 }
             }
@@ -503,7 +546,8 @@ namespace CG {
             return "";
         }
 
-        private void CGC2010C_Load(object sender, EventArgs e) {
+        private void CGC2010C_Load(object sender, EventArgs e)
+        {
             base.sSvrPgmPkgName = "CGC2010NC";
             Form_Define();
 
@@ -520,18 +564,22 @@ namespace CG {
             unlockSpread(ss3);
             unlockSpread(ss4);
 
-            if (base.sAuthority.Substring(0, 3) == "111") {
+            if (base.sAuthority.Substring(0, 3) == "111")
+            {
                 cmd_Pass.Enabled = true;
                 //SSCommand1.Enabled = true;
                 cmd_LPass.Enabled = true;
-            } else {
+            }
+            else
+            {
                 cmd_Pass.Enabled = false;
                 //SSCommand1.Enabled = false;
                 cmd_LPass.Enabled = false;
             }
         }
 
-        public override bool Form_Cls() {
+        public override bool Form_Cls()
+        {
             base.Form_Cls();
             CHK_A.Checked = false;
             CHK_B.Checked = false;
@@ -563,16 +611,8 @@ namespace CG {
                 if (ss2.ActiveSheet.RowCount <= 0) return; //防止报错 VB没有这段代码
 
                 if (ss2.ActiveSheet.Cells[0, 0].Text.ToString() != "") {
-                    txt_SlabNo.Text = ss2.ActiveSheet.Cells[0, 0].Text.ToString();
 
-                    if (p_Ref(1, 0, true, false) & p_Ref(2, 1, true, false)) {
-
-                        TXT_MILL_STA_TIME.Text = Gf_DTSet("", "X");
-                        TXT_SHIFT.Text = Gf_ShiftSet3("");
-                        TXT_GROUP.Text = Gf_GroupSet(TXT_SHIFT.Text, Gf_DTSet("", "X"));
-                        TXT_EMP1.Text = GeneralCommon.sUserID;
-
-                    }
+                    ss2_DblClk(0, 0);
 
                 } else {
                     txt_SlabNo.Text = "";
@@ -597,12 +637,12 @@ namespace CG {
                             SpreadCommon.Gp_Sp_BlockColor(ss2, SS2_UST_FL, SS2_UST_FL, iRow - 1, iRow - 1, Color.Fuchsia, Color.White);
                         }
                         //是否定制配送
-                        sFlag = ss2.ActiveSheet.Cells[iRow - 1, SS2_FLAG].Text.ToString().Trim();
+                        sFlag = ss2.ActiveSheet.Cells[iRow - 1, SS2_FLAG_FL].Text.ToString().Trim();
                         if (sFlag == "Y") {
                             SpreadCommon.Gp_Sp_BlockColor(ss2, SS2_SLAB_NO, SS2_SLAB_NO, iRow - 1, iRow - 1, SSP4.BackColor, Color.White);
                         }
                         //是否出口订单
-                        sexport = ss2.ActiveSheet.Cells[iRow - 1, SS2_EXPORT].Text.ToString().Trim();
+                        sexport = ss2.ActiveSheet.Cells[iRow - 1, SS2_EXPORT_FL].Text.ToString().Trim();
                         if (sexport == "Y") {
                             SpreadCommon.Gp_Sp_BlockColor(ss2, SS2_SLAB_NO, SS2_SLAB_NO, iRow - 1, iRow - 1, SSP1.BackColor, Color.White);
                         }
@@ -623,301 +663,36 @@ namespace CG {
                 if (ss3.ActiveSheet.RowCount <= 0) return; //防止报错 VB版本没有这段代码
                 if (ss3.ActiveSheet.Cells[0, 0].Text.ToString() != "") {
 
-                    txt_SlabNo.Text = ss3.ActiveSheet.Cells[0, 0].Text.ToString();
-
-                    if (p_Ref(4, 0, true, false) & p_Ref(2, 1, true, false)) {}
+                    ss3_DblClk(0, 0);
 
                 }
 
             }
+
+            txt_millTemp.Enabled = false;
+            //txt_millTemp.ReadOnly = true;
+            txt_millTemp_min.Enabled = false;
+            //txt_millTemp_min.ReadOnly = true;
+            txt_millTemp_max.Enabled = false;
+            //txt_millTemp_max.ReadOnly = true;
 
             //    Call MDIMain.FormMenuSetting(Me, FormType, "RE", sAuthority)
         }
 
-
-
-
-
-
-
-
-
-
-
-        private void CHK_CR_CD_Clk() {
-            if (!CHK_CR_CD.Checked) {
-                if (!CHK_NON_CR_CD.Checked) {
-                    //          CHK_CR_CD.Value = ssCBChecked
-                    TXT_CR_CD.Text = "";
-                    CHK_CR_CD.ForeColor = Color.Black;
-                    CHK_NON_CR_CD.ForeColor = Color.Black;
-                }
-                return;
-            }
-
-            TXT_CR_CD.Text = "1";
-            CHK_CR_CD.ForeColor = Color.Red;
-            CHK_CR_CD.Checked = true;
-            CHK_NON_CR_CD.ForeColor = Color.Gray;
-            CHK_NON_CR_CD.Checked = false;
-        }
-
-
-        private void CHK_NON_CR_CD_Clk() {
-            if (!CHK_NON_CR_CD.Checked) {
-                if (!CHK_CR_CD.Checked) {
-                    //          CHK_NON_CR_CD.Value = ssCBChecked
-                    TXT_CR_CD.Text = "";
-                    CHK_NON_CR_CD.ForeColor = Color.Black;
-                    CHK_CR_CD.ForeColor = Color.Black;
-                }
-                return;
-            }
-
-            TXT_CR_CD.Text = "0";
-
-            CHK_NON_CR_CD.ForeColor = Color.Red;
-            CHK_NON_CR_CD.Checked = true;
-
-            CHK_CR_CD.ForeColor = Color.Gray;
-            CHK_CR_CD.Checked = false;
-        }
-
-        private void Chk_Rolling_Auto_Clk() {
-
-            if (!CHK_ROLLING_AUTO.Checked) {
-                if (!CHK_ROLLING_OP.Checked) {
-                    TXT_ROLLING_METHOD.Text = "";
-                    CHK_ROLLING_AUTO.ForeColor = Color.Black;
-                    CHK_ROLLING_OP.ForeColor = Color.Black;
-                }
-                return;
-            }
-
-            TXT_ROLLING_METHOD.Text = "0";
-
-            CHK_ROLLING_AUTO.ForeColor = Color.Red;
-            CHK_ROLLING_AUTO.Checked = true;
-
-            CHK_ROLLING_OP.ForeColor = Color.Gray;
-            CHK_ROLLING_OP.Checked = false;
-
-        }
-
-        private void Chk_Rolling_Op_Clk() {
-
-            if (!CHK_ROLLING_OP.Checked) {
-                if (!CHK_ROLLING_AUTO.Checked) {
-                    TXT_ROLLING_METHOD.Text = "";
-                    CHK_ROLLING_OP.ForeColor = Color.Black;
-                    CHK_ROLLING_AUTO.ForeColor = Color.Black;
-                }
-                return;
-            }
-
-            TXT_ROLLING_METHOD.Text = "1";
-
-            CHK_ROLLING_OP.ForeColor = Color.Red;
-            CHK_ROLLING_OP.Checked = true;
-
-            CHK_ROLLING_AUTO.ForeColor = Color.Gray;
-            CHK_ROLLING_AUTO.Checked = false;
-
-        }
-
-        private void cmd_LPass_Clk() {
-
-            if (GeneralCommon.Gf_MessConfirm("您确定板坯号 " + txt_SlabNo.Text + "仅通过粗轧机吗？", "Q", "空过指示确定")) {
-                if (Gp_Process_Exec("A") == "") {
-                    GeneralCommon.Gp_MsgBoxDisplay("空过处理完成 ！", "I", "空过");
-                    Form_Ref();
-                } else {
-                    GeneralCommon.Gp_MsgBoxDisplay("空过处理失败，请确认 ！", "I", "空过");
-                }
-            }
-
-        }
-
-        private void cmd_Pass_Clk() {
-            if (GeneralCommon.Gf_MessConfirm("您确定要对板坯号" + txt_SlabNo.Text + "做轧废处理吗？", "Q", "轧废指示确定")) {
-                if (Gp_Process_Exec("B") == "") {
-                    GeneralCommon.Gp_MsgBoxDisplay("轧废处理完成 ！", "I", "空过");
-                    Form_Ref();
-                } else {
-                    GeneralCommon.Gp_MsgBoxDisplay("轧废处理失败，请确认 ！", "I", "空过");
-                }
-            }
-        }
-
-        //调用后台包程序
-        private string Gp_Process_Exec(string Process_Type) {
-
-            string[] Para1 = new string[2];
-            string[] Para2 = new string[5];
-
-            // 发送
-            Para1[0] = txt_SlabNo.Text.Trim();
-            Para1[1] = TXT_CB.Text.Trim();
-            if (Process_Type == "A") {
-                if (GeneralCommon.Gf_ExecProcedure(GeneralCommon.M_CN1, "CGc2000C.P_PASS", Para1)) {
-                    return "";
-                } else {
-                    return "空过处理失败";
-                }
-            }
-
-            // 取消
-            Para2[0] = txt_SlabNo.Text.Trim();
-            Para2[1] = TXT_SHIFT.Text.Trim();
-            Para2[2] = TXT_GROUP.Text.Trim();
-            Para2[3] = TXT_EMP1.Text.Trim();
-            Para2[4] = TXT_CB.Text.Trim();
-
-            if (Process_Type == "B") {
-                if (GeneralCommon.Gf_ExecProcedure(GeneralCommon.M_CN1, "CGC2010C.P_SCRAP", Para2)) {
-                    return "";
-                } else {
-                    return "轧废处理失败";
-                }
-            }
-
-            return "";
-        }
-
-
-        private void CGC2000C_Load(object sender, EventArgs e) {
-            base.sSvrPgmPkgName = "CGC2000NC";
-            Form_Define();
-
-            tab1.SelectedIndex = 0;
-
-            Form_Ref();
-
-            TXT_SHIFT.Text = Gf_ShiftSet3("");
-            TXT_GROUP.Text = Gf_GroupSet(TXT_SHIFT.Text.Trim(), Gf_DTSet("", "X"));
-            TXT_EMP1.Text = GeneralCommon.sUserID;
-
-            unlockSpread(ss1);
-            unlockSpread(ss2);
-            unlockSpread(ss3);
-            unlockSpread(ss4);
-
-            if (base.sAuthority.Substring(0, 3) == "111") {
-                cmd_Pass.Enabled = true;
-                //SSCommand1.Enabled = true;
-                cmd_LPass.Enabled = true;
-            } else {
-                cmd_Pass.Enabled = false;
-                //SSCommand1.Enabled = false;
-                cmd_LPass.Enabled = false;
-            }
-        }
-
-        public override void Form_Ref() {
-
-            int iRow;
-            int iCol;
-            string sCurDate;
-            string sDel_To_Date;
-            string sUrgnt_Fl;
-            string sUst_Fl;
-            string sFlag;
-            string sexport;
-            string sOrdcnt;
-
-            sCurDate = DateTime.Now.ToString("yyyyMM");
-
-            if (tab1.SelectedIndex == 0) {
-
-                p_Ref(0, 2, true, false);
-                p_Ref(0, 4, true, false);
-
-                if (ss2.ActiveSheet.RowCount <= 0) return; //防止报错 VB没有这段代码
-
-                if (ss2.ActiveSheet.Cells[0, 0].Text.ToString() != "") {
-                    txt_SlabNo.Text = ss2.ActiveSheet.Cells[0, 0].Text.ToString();
-
-                    if (p_Ref(1, 0, true, false) & p_Ref(2, 1, true, false)) {
-
-                        TXT_MILL_STA_TIME.Text = Gf_DTSet("", "X");
-                        TXT_SHIFT.Text = Gf_ShiftSet3("");
-                        TXT_GROUP.Text = Gf_GroupSet(TXT_SHIFT.Text, Gf_DTSet("", "X"));
-                        TXT_EMP1.Text = GeneralCommon.sUserID;
-
-                    }
-
-                } else {
-                    txt_SlabNo.Text = "";
-                }
-                //超交货期用红色显示 add by liqian 2012-06-11
-                {
-                    for (iRow = 1; iRow <= ss2.ActiveSheet.RowCount; iRow++) {
-                        sDel_To_Date = ss2.ActiveSheet.Cells[iRow - 1, SS2_DEL_TO_DATE].Text.ToString().Substring(0, 6);
-                        sUrgnt_Fl = ss2.ActiveSheet.Cells[iRow - 1, SS2_URGNT_FL].Text.ToString().Trim();
-                        if (Convert.ToDouble(sDel_To_Date) < Convert.ToDouble(sCurDate)) {
-                            SpreadCommon.Gp_Sp_BlockColor(ss2, 0, ss2.ActiveSheet.ColumnCount - 1, iRow - 1, iRow - 1, Color.Red, Color.White);
-                        }
-                        //紧急订单绿色显示 add by liqian 2012-08-15
-                        if (sUrgnt_Fl == "Y") {
-                            SpreadCommon.Gp_Sp_BlockColor(ss2, 0, ss2.ActiveSheet.ColumnCount - 1, iRow - 1, iRow - 1, Color.Green, Color.White);
-
-                        }
-                        //是否探伤 add by liqian 2013-04-08
-                        sUst_Fl = ss2.ActiveSheet.Cells[iRow - 1, SS2_UST_FL].Text.ToString().Trim();
-                        if (sUst_Fl == "是") {
-                            SpreadCommon.Gp_Sp_BlockColor(ss2, SS2_SLAB_NO, SS2_SLAB_NO, iRow - 1, iRow - 1, Color.Fuchsia, Color.White);
-                            SpreadCommon.Gp_Sp_BlockColor(ss2, SS2_UST_FL, SS2_UST_FL, iRow - 1, iRow - 1, Color.Fuchsia, Color.White);
-                        }
-                        //是否定制配送
-                        sFlag = ss2.ActiveSheet.Cells[iRow - 1, SS2_FLAG].Text.ToString().Trim();
-                        if (sFlag == "Y") {
-                            SpreadCommon.Gp_Sp_BlockColor(ss2, SS2_SLAB_NO, SS2_SLAB_NO, iRow - 1, iRow - 1, SSP4.BackColor, Color.White);
-                        }
-                        //是否出口订单
-                        sexport = ss2.ActiveSheet.Cells[iRow - 1, SS2_EXPORT].Text.ToString().Trim();
-                        if (sexport == "Y") {
-                            SpreadCommon.Gp_Sp_BlockColor(ss2, SS2_SLAB_NO, SS2_SLAB_NO, iRow - 1, iRow - 1, SSP1.BackColor, Color.White);
-                        }
-                        //是否一坯多订单
-                        //ss2.ActiveSheet.Cells[iRow - 1, SS2_ORD_CNT].Value.ToString();
-                        sOrdcnt = ss2.ActiveSheet.Cells[iRow - 1, SS2_ORD_CNT].Text.ToString();
-                        if (sOrdcnt != "" && Convert.ToInt32(sOrdcnt) > 1) //解决为空导致无法转换报错的问题
-                        {
-                            SpreadCommon.Gp_Sp_BlockColor(ss2, 0, ss2.ActiveSheet.ColumnCount - 1, iRow - 1, iRow - 1, Color.Black, SSP2.BackColor);
-
-                        }
-                    }
-                }
-
-            } else if (tab1.SelectedIndex == 1) {
-
-                p_Ref(3, 3, true, false);
-                if (ss3.ActiveSheet.RowCount <= 0) return; //防止报错 VB版本没有这段代码
-                if (ss3.ActiveSheet.Cells[0, 0].Text.ToString() != "") {
-
-                    txt_SlabNo.Text = ss3.ActiveSheet.Cells[0, 0].Text.ToString();
-
-                    if (p_Ref(4, 0, true, false) & p_Ref(2, 1, true, false)) {}
-
-                }
-
-            }
-
-            //    Call MDIMain.FormMenuSetting(Me, FormType, "RE", sAuthority)
-        }
-
-
-        public override void Form_Pro() {
+        public override void Form_Pro()
+        {
 
             String SMESG;
 
-            if (!Gp_DateCheck(TXT_MILL_STA_TIME.Text, "")) {
+            if (!Gp_DateCheck(TXT_MILL_STA_TIME.Text, ""))
+            {
                 SMESG = " 请正确输入开轧时间 ！";
                 GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "");
                 return;
             }
 
-            if (!Gp_DateCheck(TXT_MILL_END_TIME.Text, "")) {
+            if (!Gp_DateCheck(TXT_MILL_END_TIME.Text, ""))
+            {
                 SMESG = " 请正确输入终轧时间 ！";
                 GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "");
                 return;
@@ -1018,8 +793,28 @@ namespace CG {
 
         }
 
-        private void ss2_Clk(int col, int row) {
-            if (ss2.ActiveSheet.RowCount > 0) {
+        private void ss2_Clk(int col, int row)
+        {
+            if (ss2.ActiveSheet.RowCount > 0)
+            {
+                txt_SlabNo.Text = ss2.ActiveSheet.Cells[row, 0].Text.ToString();
+                p_Ref(1, 0, true, false);
+                p_Ref(2, 1, true, false);
+
+                TXT_MILL_STA_TIME.Text = Gf_DTSet("", "X");
+                //TXT_MILL_END_TIME.RawData = Gf_DTSet(M_CN1, , "X")
+
+                TXT_SHIFT.Text = Gf_ShiftSet3("");
+                TXT_GROUP.Text = Gf_GroupSet(TXT_SHIFT.Text, Gf_DTSet("", "X"));
+                TXT_EMP1.Text = GeneralCommon.sUserID;
+
+            }
+        }
+
+        private void ss2_DblClk(int col, int row)
+        {
+            if (ss2.ActiveSheet.RowCount > 0)
+            {
                 txt_SlabNo.Text = ss2.ActiveSheet.Cells[row, 0].Text.ToString();
                 p_Ref(1, 0, true, false);
                 p_Ref(2, 1, true, false);
@@ -1033,92 +828,119 @@ namespace CG {
             }
         }
 
-        private void ss2_DblClk(int col, int row) {
-            if (ss2.ActiveSheet.RowCount > 0) {
-                txt_SlabNo.Text = ss2.ActiveSheet.Cells[row, 0].Text.ToString();
-                p_Ref(1, 0, true, false);
-                p_Ref(2, 1, true, false);
-                TXT_MILL_STA_TIME.Text = Gf_DTSet("", "X");
-                //TXT_MILL_END_TIME.RawData = Gf_DTSet(M_CN1, , "X")
 
-                TXT_SHIFT.Text = Gf_ShiftSet3("");
-                TXT_GROUP.Text = Gf_GroupSet(TXT_SHIFT.Text, Gf_DTSet("", "X"));
-                TXT_EMP1.Text = GeneralCommon.sUserID;
-
-            }
-        }
-
-        private void ss3_DblClk(int col, int row) {
-            if (ss3.ActiveSheet.RowCount > 0) {
+        private void ss3_DblClk(int col, int row)
+        {
+            if (ss3.ActiveSheet.RowCount > 0)
+            {
                 txt_SlabNo.Text = ss3.ActiveSheet.Cells[row, 0].Text.ToString();
                 p_Ref(4, 0, true, false);
                 p_Ref(2, 1, true, false);
 
+                txt_millTemp.Enabled = false;
+                //txt_millTemp.ReadOnly = true;
+                txt_millTemp_min.Enabled = false;
+                //txt_millTemp_min.ReadOnly = true;
+                txt_millTemp_max.Enabled = false;
+                //txt_millTemp_max.ReadOnly = true;
+
             }
         }
 
-        //Private void SSCommand1_Click(){}
-        //发现控件被移出，该功能不实现，具体实现方式请参考VB CGC2000C该事件内容
 
-        private void tab1_Clk() {
-            if (tab1.SelectedIndex == 1) {
+
+        //Private void SSCommand1_Click(){}
+        //发现控件被移出，该功能不实现，具体实现方式请参考VB CGC2010C该事件内容
+
+        private void tab1_Clk()
+        {
+            if (tab1.SelectedIndex == 1)
+            {
                 TXT_SHIFT.Text = Gf_ShiftSet3("");
-                if (TXT_SHIFT.Text == "1") {
+                if (TXT_SHIFT.Text == "1")
+                {
                     txt_RstFormDate.Text = Gf_DTSet("", "X").Substring(0, 8) + "000001";
                     txt_RstToDate.Text = Gf_DTSet("", "X").Substring(0, 8) + "081459";
-                } else if (TXT_SHIFT.Text == "2") {
+                }
+                else if (TXT_SHIFT.Text == "2")
+                {
                     txt_RstFormDate.Text = Gf_DTSet("", "X").Substring(0, 8) + "081500";
                     txt_RstToDate.Text = Gf_DTSet("", "X").Substring(0, 8) + "155959";
-                } else if (TXT_SHIFT.Text == "3") {
+                }
+                else if (TXT_SHIFT.Text == "3")
+                {
                     txt_RstFormDate.Text = Gf_DTSet("", "X").Substring(0, 8) + "160000";
                     txt_RstToDate.Text = Gf_DTSet("", "X").Substring(0, 8) + "235959";
                 }
-            } else if (tab1.SelectedIndex == 0) {
+            }
+            else if (tab1.SelectedIndex == 0)
+            {
                 TXT_MILL_STA_TIME.Text = Gf_DTSet("", "X");
                 //Format(Now, "YYYYMMDDHHMMSS")
             }
         }
 
 
-        private void TXT_MILL_STA_TIME_DblClk() {
+        private void TXT_MILL_STA_TIME_DblClk()
+        {
             TXT_MILL_STA_TIME.Text = Gf_DTSet("", "X");
             //Format(Now, "YYYYMMDDHHMMSS")
         }
 
-        private void TXT_MILL_END_TIME_DblClk() {
+        private void TXT_MILL_END_TIME_DblClk()
+        {
             TXT_MILL_END_TIME.Text = Gf_DTSet("", "X");
             //Format(Now, "YYYYMMDDHHMMSS")
         }
 
-        private void txt_RstFormDate_DblClk() {
+        private void txt_RstFormDate_DblClk()
+        {
             txt_RstFormDate.Text = Gf_DTSet("", "X");
             txt_RstToDate.Text = Gf_DTSet("", "X");
         }
 
+        private void txt_millTemp_max_MouseMove(TextBox e) {
+         
+            toolTip1.SetToolTip(e, "终轧温度最大偏差");
+        }
 
-        #
-        region 公共方法
+        private void txt_millTemp_min_MouseMove(TextBox e) {
+            toolTip1.SetToolTip(e, "终轧温度最小偏差");
+        }
 
-        public bool Gp_DateCheck(string DateCheck, string sDTChk) {
+        private void txt_millTemp_MouseMove(TextBox e) {
+            toolTip1.SetToolTip(e, "终轧目标温度");
+        }
+
+
+        #region 公共方法
+
+        public bool Gp_DateCheck(string DateCheck, string sDTChk)
+        {
             sDTChk = "M";
             string iDateCheck;
             string iDateMatch;
             string iDate;
             System.DateTime iCheck;
 
-            if (sDTChk == "M") {
+            if (sDTChk == "M")
+            {
                 iDateCheck = DateCheck;
-            } else {
+            }
+            else
+            {
                 iDateCheck = DateCheck.Replace("-", "");
                 iDateCheck = iDateCheck.Replace(" ", "");
                 iDateCheck = iDateCheck.Replace(":", "");
             }
 
-            if (Convert.ToInt32(iDateCheck.Substring(0, 4)) > 2020 | Convert.ToInt32(iDateCheck.Substring(0, 4)) < 2000) {
+            if (Convert.ToInt32(iDateCheck.Substring(0, 4)) > 2020 | Convert.ToInt32(iDateCheck.Substring(0, 4)) < 2000)
+            {
                 return false;
             }
 
-            switch (iDateCheck.Length) {
+            switch (iDateCheck.Length)
+            {
                 case 8:
                     iDate = iDateCheck.Substring(0, 4) + "-" + iDateCheck.Substring(4, 2) + "-" + iDateCheck.Substring(6, 2);
                     iCheck = Convert.ToDateTime(iDate.Substring(1, 10));
@@ -1138,13 +960,15 @@ namespace CG {
 
             iDateMatch = iCheck.ToString("yyyyMM");
 
-            if (iDateMatch != iDateCheck.Substring(0, 8)) {
+            if (iDateMatch != iDateCheck.Substring(0, 8))
+            {
                 return false;
             }
             return true;
         }
 
-        public string Gf_ShiftSet3(string WKDATE) {
+        public string Gf_ShiftSet3(string WKDATE)
+        {
 
 
             if (GeneralCommon.M_CN1.State == 0)
@@ -1153,18 +977,25 @@ namespace CG {
             string sQuery;
             sQuery = "SELECT TO_CHAR(SYSDATE,'HH24MI') FROM DUAL";
             ADODB.Recordset AdoRs = new ADODB.Recordset();
-            try {
-                if (WKDATE != "") {
+            try
+            {
+                if (WKDATE != "")
+                {
                     return WKDATE;
                 }
                 AdoRs.Open(sQuery, GeneralCommon.M_CN1, ADODB.CursorTypeEnum.adOpenStatic, ADODB.LockTypeEnum.adLockReadOnly);
 
-                if (!AdoRs.BOF && !AdoRs.EOF) {
+                if (!AdoRs.BOF && !AdoRs.EOF)
+                {
                     //RltValue = true;
-                    while (!AdoRs.EOF) {
-                        if (AdoRs.Fields[0].Value.ToString() == "") {
+                    while (!AdoRs.EOF)
+                    {
+                        if (AdoRs.Fields[0].Value.ToString() == "")
+                        {
                             Shift_HH = "";
-                        } else {
+                        }
+                        else
+                        {
                             Shift_HH = AdoRs.Fields[0].Value.ToString();
                         }
                         AdoRs.MoveNext();
@@ -1173,21 +1004,29 @@ namespace CG {
                 GeneralCommon.M_CN1.Close();
                 AdoRs = null;
 
-                if (Convert.ToInt32(Shift_HH) < 800) {
+                if (Convert.ToInt32(Shift_HH) < 800)
+                {
                     return "1";
-                } else if (Convert.ToInt32(Shift_HH) < 1600) {
+                }
+                else if (Convert.ToInt32(Shift_HH) < 1600)
+                {
                     return "2";
-                } else {
+                }
+                else
+                {
                     return "3";
                 }
-            } catch (Exception ex) {
+            }
+            catch (Exception ex)
+            {
                 if (GeneralCommon.M_CN1.State != 0) GeneralCommon.M_CN1.Close();
                 AdoRs = null;
                 return "0";
             }
         }
 
-        public string Gf_GroupSet(string shift, string setDate) {
+        public string Gf_GroupSet(string shift, string setDate)
+        {
 
             if (GeneralCommon.M_CN1.State == 0)
                 if (!GeneralCommon.GF_DbConnect()) return "";
@@ -1197,15 +1036,21 @@ namespace CG {
             sQuery = "SELECT Gf_Groupset('C3'," + shift + ",SUBSTR('" + setDate + "',1,8)) FROM DUAL";
 
             ADODB.Recordset AdoRs = new ADODB.Recordset();
-            try {
+            try
+            {
                 AdoRs.Open(sQuery, GeneralCommon.M_CN1, ADODB.CursorTypeEnum.adOpenStatic, ADODB.LockTypeEnum.adLockReadOnly);
 
-                if (!AdoRs.BOF && !AdoRs.EOF) {
+                if (!AdoRs.BOF && !AdoRs.EOF)
+                {
                     //RltValue = true;
-                    while (!AdoRs.EOF) {
-                        if (AdoRs.Fields[0].Value.ToString() == "") {
+                    while (!AdoRs.EOF)
+                    {
+                        if (AdoRs.Fields[0].Value.ToString() == "")
+                        {
                             group = "";
-                        } else {
+                        }
+                        else
+                        {
                             group = AdoRs.Fields[0].Value.ToString();
                         }
                         AdoRs.MoveNext();
@@ -1217,7 +1062,9 @@ namespace CG {
                 AdoRs = null;
 
                 return group;
-            } catch (Exception ex) {
+            }
+            catch (Exception ex)
+            {
                 if (GeneralCommon.M_CN1.State != 0) GeneralCommon.M_CN1.Close();
                 AdoRs = null;
                 return "";
@@ -1225,7 +1072,8 @@ namespace CG {
         }
 
         //日期格式
-        public string Gf_DTSet(string DTCheck, string DTFlag) {
+        public string Gf_DTSet(string DTCheck, string DTFlag)
+        {
             DTCheck = "S";
             DTFlag = "C";
 
@@ -1233,7 +1081,8 @@ namespace CG {
             int sQuery_Len = 0;
             string time = "";
 
-            switch (DTCheck) {
+            switch (DTCheck)
+            {
                 case "S":
                     sQuery = "SELECT TO_CHAR(SYSDATE,'YYYYMMDDHH24MISS') FROM DUAL";
                     sQuery_Len = 14;
@@ -1264,8 +1113,10 @@ namespace CG {
                     break;
             }
 
-            if (DTFlag == "C") {
-                if (DTCheck == "T") {
+            if (DTFlag == "C")
+            {
+                if (DTCheck == "T")
+                {
                     return DateTime.Now.ToString("HHmmss");
                 }
                 return (DateTime.Now.ToString("yyyyMMddHHmmss")).Substring(0, sQuery_Len);
@@ -1275,20 +1126,28 @@ namespace CG {
                 if (!GeneralCommon.GF_DbConnect()) return "00000000000000";
 
             ADODB.Recordset AdoRs = new ADODB.Recordset();
-            try {
+            try
+            {
                 AdoRs.Open(sQuery, GeneralCommon.M_CN1, ADODB.CursorTypeEnum.adOpenStatic, ADODB.LockTypeEnum.adLockReadOnly);
 
-                if (!AdoRs.BOF && !AdoRs.EOF) {
+                if (!AdoRs.BOF && !AdoRs.EOF)
+                {
                     //RltValue = true;
-                    while (!AdoRs.EOF) {
-                        if (AdoRs.Fields[0].Value.ToString() == "") {
+                    while (!AdoRs.EOF)
+                    {
+                        if (AdoRs.Fields[0].Value.ToString() == "")
+                        {
                             time = "";
-                        } else {
+                        }
+                        else
+                        {
                             time = AdoRs.Fields[0].Value.ToString();
                         }
                         AdoRs.MoveNext();
                     }
-                } else {
+                }
+                else
+                {
                     time = "00000000000000";
 
                 }
@@ -1298,7 +1157,9 @@ namespace CG {
                 AdoRs = null;
 
                 return time;
-            } catch (Exception ex) {
+            }
+            catch (Exception ex)
+            {
                 if (GeneralCommon.M_CN1.State != 0) GeneralCommon.M_CN1.Close();
                 AdoRs = null;
                 return "00000000000000";
@@ -1306,66 +1167,80 @@ namespace CG {
         }
 
         //unlock spread L column
-        public void unlockSpread(FpSpread e) {
+        public void unlockSpread(FpSpread e)
+        {
             int columnCount = e.Sheets[0].ColumnCount;
-            for (int i = 0; i < columnCount; i++) {
+            for (int i = 0; i < columnCount; i++)
+            {
                 e.ActiveSheet.Columns[i].Locked = false;
             }
         }
 
-        #
-        endregion
+        #endregion
 
-        private void CHK_CR_CD_CheckedChanged(object sender, EventArgs e) {
+        private void CHK_CR_CD_CheckedChanged(object sender, EventArgs e)
+        {
             CHK_CR_CD_Clk();
         }
 
-        private void CHK_NON_CR_CD_CheckedChanged(object sender, EventArgs e) {
+        private void CHK_NON_CR_CD_CheckedChanged(object sender, EventArgs e)
+        {
             CHK_NON_CR_CD_Clk();
         }
 
-        private void CHK_ROLLING_AUTO_CheckedChanged(object sender, EventArgs e) {
+        private void CHK_ROLLING_AUTO_CheckedChanged(object sender, EventArgs e)
+        {
             Chk_Rolling_Auto_Clk();
         }
 
-        private void CHK_ROLLING_OP_CheckedChanged(object sender, EventArgs e) {
+        private void CHK_ROLLING_OP_CheckedChanged(object sender, EventArgs e)
+        {
             Chk_Rolling_Op_Clk();
         }
 
-        private void cmd_LPass_Click(object sender, EventArgs e) {
+        private void cmd_LPass_Click(object sender, EventArgs e)
+        {
             cmd_LPass_Clk();
         }
 
-        private void cmd_Pass_Click(object sender, EventArgs e) {
+        private void cmd_Pass_Click(object sender, EventArgs e)
+        {
             cmd_Pass_Clk();
 
         }
 
-        private void ss2_CellClick(object sender, CellClickEventArgs e) {
+        private void ss2_CellClick(object sender, CellClickEventArgs e)
+        {
             ss2_Clk(e.Column, e.Row);
         }
 
-        private void ss2_CellDoubleClick(object sender, CellClickEventArgs e) {
+        private void ss2_CellDoubleClick(object sender, CellClickEventArgs e)
+        {
             ss2_DblClk(e.Column, e.Row);
         }
 
-        private void ss3_CellDoubleClick(object sender, CellClickEventArgs e) {
+        private void ss3_CellDoubleClick(object sender, CellClickEventArgs e)
+        {
             ss3_DblClk(e.Column, e.Row);
         }
 
-        private void tab1_SelectedIndexChanged(object sender, EventArgs e) {
+        private void tab1_SelectedIndexChanged(object sender, EventArgs e)
+        {
             tab1_Clk();
         }
 
-        private void TXT_MILL_STA_TIME_DoubleClick(object sender, EventArgs e) {
+        private void TXT_MILL_STA_TIME_DoubleClick(object sender, EventArgs e)
+        {
             TXT_MILL_STA_TIME_DblClk();
         }
 
-        private void TXT_MILL_END_TIME_DoubleClick(object sender, EventArgs e) {
+        private void TXT_MILL_END_TIME_DoubleClick(object sender, EventArgs e)
+        {
             TXT_MILL_END_TIME_DblClk();
         }
 
-        private void txt_RstFormDate_DoubleClick(object sender, EventArgs e) {
+        private void txt_RstFormDate_DoubleClick(object sender, EventArgs e)
+        {
             txt_RstFormDate_DblClk();
         }
 

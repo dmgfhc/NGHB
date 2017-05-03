@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            CommonClass.BControlFiledSetting bControlFiledSetting4 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting1 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting2 = new CommonClass.BControlFiledSetting();
-            CommonClass.BControlFiledSetting bControlFiledSetting3 = new CommonClass.BControlFiledSetting();
             this.TXT_EMP2 = new CommonClass.F4ETCR();
             this.TXT_EMP1 = new CommonClass.F4ETCR();
             this.TXT_EMP3 = new CommonClass.F4ETCR();
@@ -50,6 +51,7 @@
             this.txt_RstFormDate = new CommonClass.MaskedDate();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.TXT_CB = new System.Windows.Forms.TextBox();
             this.txt_RmFinTmp = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.txt_RollingSize = new System.Windows.Forms.TextBox();
@@ -145,7 +147,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.TXT_CB = new System.Windows.Forms.TextBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tab1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -174,9 +176,9 @@
             // 
             // TXT_EMP2
             // 
-            bControlFiledSetting1.ColumnID = "EMP_ID";
-            bControlFiledSetting1.TargetControl = this.TXT_EMP2;
-            this.TXT_EMP2.CustomSetting.Add(bControlFiledSetting1);
+            bControlFiledSetting4.ColumnID = "EMP_ID";
+            bControlFiledSetting4.TargetControl = this.TXT_EMP2;
+            this.TXT_EMP2.CustomSetting.Add(bControlFiledSetting4);
             this.TXT_EMP2.InputControl = this.TXT_EMP2;
             this.TXT_EMP2.Location = new System.Drawing.Point(972, 44);
             this.TXT_EMP2.MaxLength = 7;
@@ -190,9 +192,9 @@
             // 
             // TXT_EMP1
             // 
-            bControlFiledSetting2.ColumnID = "EMP_ID";
-            bControlFiledSetting2.TargetControl = this.TXT_EMP1;
-            this.TXT_EMP1.CustomSetting.Add(bControlFiledSetting2);
+            bControlFiledSetting1.ColumnID = "EMP_ID";
+            bControlFiledSetting1.TargetControl = this.TXT_EMP1;
+            this.TXT_EMP1.CustomSetting.Add(bControlFiledSetting1);
             this.TXT_EMP1.InputControl = this.TXT_EMP1;
             this.TXT_EMP1.Location = new System.Drawing.Point(912, 44);
             this.TXT_EMP1.MaxLength = 7;
@@ -206,9 +208,9 @@
             // 
             // TXT_EMP3
             // 
-            bControlFiledSetting3.ColumnID = "EMP_ID";
-            bControlFiledSetting3.TargetControl = this.TXT_EMP3;
-            this.TXT_EMP3.CustomSetting.Add(bControlFiledSetting3);
+            bControlFiledSetting2.ColumnID = "EMP_ID";
+            bControlFiledSetting2.TargetControl = this.TXT_EMP3;
+            this.TXT_EMP3.CustomSetting.Add(bControlFiledSetting2);
             this.TXT_EMP3.InputControl = this.TXT_EMP3;
             this.TXT_EMP3.Location = new System.Drawing.Point(1032, 44);
             this.TXT_EMP3.MaxLength = 7;
@@ -398,6 +400,15 @@
             this.groupBox4.Size = new System.Drawing.Size(1134, 49);
             this.groupBox4.TabIndex = 100;
             this.groupBox4.TabStop = false;
+            // 
+            // TXT_CB
+            // 
+            this.TXT_CB.Location = new System.Drawing.Point(1095, 18);
+            this.TXT_CB.Name = "TXT_CB";
+            this.TXT_CB.Size = new System.Drawing.Size(31, 22);
+            this.TXT_CB.TabIndex = 32;
+            this.TXT_CB.Text = "CB";
+            this.TXT_CB.Visible = false;
             // 
             // txt_RmFinTmp
             // 
@@ -1508,15 +1519,6 @@
             this.label2.Text = "冷却平均温度";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // TXT_CB
-            // 
-            this.TXT_CB.Location = new System.Drawing.Point(1095, 18);
-            this.TXT_CB.Name = "TXT_CB";
-            this.TXT_CB.Size = new System.Drawing.Size(31, 22);
-            this.TXT_CB.TabIndex = 32;
-            this.TXT_CB.Text = "CB";
-            this.TXT_CB.Visible = false;
-            // 
             // CGC2010C
             // 
             this.ClientSize = new System.Drawing.Size(1138, 620);
@@ -1524,7 +1526,6 @@
             this.Controls.Add(this.panel1);
             this.Name = "CGC2010C";
             this.Text = "精轧作业实绩查询及修改界面_CGC2010C";
-            this.Load += new System.EventHandler(this.CGC2000C_Load);
             this.tab1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -1676,6 +1677,7 @@
         private CommonClass.NumBox SDB_CR_STAGE3_THK;
         private CommonClass.NumBox SDB_CR_STAGE3_TEMP;
         private System.Windows.Forms.TextBox TXT_CB;
+        private System.Windows.Forms.ToolTip toolTip1;
 
     }
 }

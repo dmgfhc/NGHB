@@ -108,3 +108,8 @@ D:\github\NGHB\CG\obj\Debug\CG.csproj.GenerateResource.Cache
 D:\github\NGHB\CG\obj\Debug\CG.exe.licenses
 D:\github\NGHB\CG\obj\Debug\CG.exe.manifest
 D:\github\NGHB\CG\obj\Debug\CG.application
+C:\Users\HAN\Desktop\github\NGHB\CG\bin\Debug\CG.exe.config
+C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\Interop.VBIDE.dll
+C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.csproj.ResolveComReference.cache
+C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.exe
+C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.pdb
