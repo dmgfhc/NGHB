@@ -105,6 +105,8 @@
             this.ss1 = new FarPoint.Win.Spread.FpSpread();
             this.ss1_Sheet1 = new FarPoint.Win.Spread.SheetView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.SDB_CR_STAGE3_THK = new CommonClass.NumBox();
+            this.SDB_CR_STAGE3_TEMP = new CommonClass.NumBox();
             this.txt_millTemp = new CommonClass.NumBox();
             this.txt_millTemp_max = new CommonClass.NumBox();
             this.txt_millTemp_min = new CommonClass.NumBox();
@@ -143,8 +145,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.SDB_CR_STAGE3_THK = new CommonClass.NumBox();
-            this.SDB_CR_STAGE3_TEMP = new CommonClass.NumBox();
+            this.TXT_CB = new System.Windows.Forms.TextBox();
             this.tab1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -379,6 +380,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.TXT_CB);
             this.groupBox4.Controls.Add(this.txt_RmFinTmp);
             this.groupBox4.Controls.Add(this.label26);
             this.groupBox4.Controls.Add(this.txt_RollingSize);
@@ -1032,6 +1034,34 @@
             this.groupBox3.TabIndex = 97;
             this.groupBox3.TabStop = false;
             // 
+            // SDB_CR_STAGE3_THK
+            // 
+            this.SDB_CR_STAGE3_THK.Location = new System.Drawing.Point(457, 142);
+            this.SDB_CR_STAGE3_THK.MaxLength = 4;
+            this.SDB_CR_STAGE3_THK.Name = "SDB_CR_STAGE3_THK";
+            this.SDB_CR_STAGE3_THK.NumValue = 0D;
+            this.SDB_CR_STAGE3_THK.Scale = 0;
+            this.SDB_CR_STAGE3_THK.ShowZero = true;
+            this.SDB_CR_STAGE3_THK.Size = new System.Drawing.Size(45, 22);
+            this.SDB_CR_STAGE3_THK.TabIndex = 618;
+            this.SDB_CR_STAGE3_THK.Text = "0";
+            this.SDB_CR_STAGE3_THK.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.SDB_CR_STAGE3_THK.Visible = false;
+            // 
+            // SDB_CR_STAGE3_TEMP
+            // 
+            this.SDB_CR_STAGE3_TEMP.Location = new System.Drawing.Point(457, 114);
+            this.SDB_CR_STAGE3_TEMP.MaxLength = 4;
+            this.SDB_CR_STAGE3_TEMP.Name = "SDB_CR_STAGE3_TEMP";
+            this.SDB_CR_STAGE3_TEMP.NumValue = 0D;
+            this.SDB_CR_STAGE3_TEMP.Scale = 0;
+            this.SDB_CR_STAGE3_TEMP.ShowZero = true;
+            this.SDB_CR_STAGE3_TEMP.Size = new System.Drawing.Size(45, 22);
+            this.SDB_CR_STAGE3_TEMP.TabIndex = 613;
+            this.SDB_CR_STAGE3_TEMP.Text = "0";
+            this.SDB_CR_STAGE3_TEMP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.SDB_CR_STAGE3_TEMP.Visible = false;
+            // 
             // txt_millTemp
             // 
             this.txt_millTemp.Location = new System.Drawing.Point(259, 76);
@@ -1478,33 +1508,14 @@
             this.label2.Text = "冷却平均温度";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // SDB_CR_STAGE3_THK
+            // TXT_CB
             // 
-            this.SDB_CR_STAGE3_THK.Location = new System.Drawing.Point(457, 142);
-            this.SDB_CR_STAGE3_THK.MaxLength = 4;
-            this.SDB_CR_STAGE3_THK.Name = "SDB_CR_STAGE3_THK";
-            this.SDB_CR_STAGE3_THK.NumValue = 0D;
-            this.SDB_CR_STAGE3_THK.Scale = 0;
-            this.SDB_CR_STAGE3_THK.ShowZero = true;
-            this.SDB_CR_STAGE3_THK.Size = new System.Drawing.Size(45, 22);
-            this.SDB_CR_STAGE3_THK.TabIndex = 618;
-            this.SDB_CR_STAGE3_THK.Text = "0";
-            this.SDB_CR_STAGE3_THK.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.SDB_CR_STAGE3_THK.Visible = false;
-            // 
-            // SDB_CR_STAGE3_TEMP
-            // 
-            this.SDB_CR_STAGE3_TEMP.Location = new System.Drawing.Point(457, 114);
-            this.SDB_CR_STAGE3_TEMP.MaxLength = 4;
-            this.SDB_CR_STAGE3_TEMP.Name = "SDB_CR_STAGE3_TEMP";
-            this.SDB_CR_STAGE3_TEMP.NumValue = 0D;
-            this.SDB_CR_STAGE3_TEMP.Scale = 0;
-            this.SDB_CR_STAGE3_TEMP.ShowZero = true;
-            this.SDB_CR_STAGE3_TEMP.Size = new System.Drawing.Size(45, 22);
-            this.SDB_CR_STAGE3_TEMP.TabIndex = 613;
-            this.SDB_CR_STAGE3_TEMP.Text = "0";
-            this.SDB_CR_STAGE3_TEMP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.SDB_CR_STAGE3_TEMP.Visible = false;
+            this.TXT_CB.Location = new System.Drawing.Point(1095, 18);
+            this.TXT_CB.Name = "TXT_CB";
+            this.TXT_CB.Size = new System.Drawing.Size(31, 22);
+            this.TXT_CB.TabIndex = 32;
+            this.TXT_CB.Text = "CB";
+            this.TXT_CB.Visible = false;
             // 
             // CGC2010C
             // 
@@ -1664,6 +1675,7 @@
         private CommonClass.NumBox txt_millTemp;
         private CommonClass.NumBox SDB_CR_STAGE3_THK;
         private CommonClass.NumBox SDB_CR_STAGE3_TEMP;
+        private System.Windows.Forms.TextBox TXT_CB;
 
     }
 }

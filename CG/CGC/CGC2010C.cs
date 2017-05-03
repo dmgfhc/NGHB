@@ -73,9 +73,9 @@ namespace CG {
         //是否探伤 add by liqian 2013-04-08
         const int SS2_DEL_TO_DATE = 27;
         //超交货期用红色显示 add by liqian 2012-06-11
-        const int SS2_URGNT_FL = 28;//紧急订单绿色标记显示 add by liqian 2012-08-15
-        const int SS2_FLAG_FL = 29;//定制配送
-        const int SS2_EXPORT_FL = 30;//出口订单
+        const int SS2_URGNT_FL = 28; //紧急订单绿色标记显示 add by liqian 2012-08-15
+        const int SS2_FLAG_FL = 29; //定制配送
+        const int SS2_EXPORT_FL = 30; //出口订单
         const int SS2_ORD_CNT = 31;
 
 
@@ -91,12 +91,12 @@ namespace CG {
             p_SetMc(txt_RollingSize, "RL", "", "", "", imcseq, ""); //3
             p_SetMc(txt_RmFinTmp, "RL", "", "", "", imcseq, ""); //4
             p_SetMc(txt_Stlgrd, "RL", "", "", "", imcseq, ""); //5
-           
+
             //2010.09.09 015725 加热轧/热处理交货状态显示
             p_SetMc(txt_HTM, "RL", "", "", "", imcseq, ""); //6
             p_SetMc(txt_CrCd, "RL", "", "", "", imcseq, ""); //7
             p_SetMc(txt_TrimFl, "RL", "", "", "", imcseq, ""); //8
-            
+
             //Control1 rolling order
             p_SetMc(txt_CrMillRatet3, "RL", "", "", "", imcseq, ""); //9
             p_SetMc(txt_CrMillRatet4, "RL", "", "", "", imcseq, ""); //10
@@ -104,18 +104,18 @@ namespace CG {
             p_SetMc(txt_CrMillTmpt3, "RL", "", "", "", imcseq, ""); //12
             p_SetMc(txt_CrMillTmpt4, "RL", "", "", "", imcseq, ""); //13
             p_SetMc(txt_CrMillTmpt5, "RL", "", "", "", imcseq, ""); //14
-            
+
             //cooling order
             p_SetMc(txt_CoolMth, "RL", "", "", "", imcseq, ""); //15
             p_SetMc(txt_CoolSpeed, "RL", "", "", "", imcseq, ""); //16
             p_SetMc(txt_CoolTemp, "RL", "", "", "", imcseq, ""); //17
-            
+
             //Cooling result
             p_SetMc(SDB_COOL_AVE_TEMP, "IR", "", "", "", imcseq, ""); //18
             p_SetMc(SDB_COOL_EXT_TEMP, "IR", "", "", "", imcseq, ""); //19
             p_SetMc(SDB_COOL_ENT_TEMP, "IR", "", "", "", imcseq, ""); //20
             p_SetMc(SDB_COOL_WGT, "IR", "", "", "", imcseq, ""); //21
-            
+
             //Control1ed rolling result
             p_SetMc(TXT_CR_CD, "IR", "", "", "", imcseq, ""); //22
             p_SetMc(TXT_ROLLING_METHOD, "IR", "", "", "", imcseq, ""); //23
@@ -207,9 +207,9 @@ namespace CG {
             p_SetMc("轧制结束温度", txt_LastTemp, "NIR", "", "", "", "", imcseq); //35
             p_SetMc("班次", TXT_SHIFT, "NIR", "", "", "", "", imcseq); //36
             p_SetMc("班别", TXT_GROUP, "NIR", "", "", "", "", imcseq); //37
-            p_SetMc("作业人员1",TXT_EMP1, "NIR", "", "", "", "", imcseq); //38
-            p_SetMc("作业人员2",TXT_EMP2, "NIR", "", "", "", "", imcseq); //39
-            p_SetMc("作业人员3",TXT_EMP3, "NIR", "", "", "", "", imcseq); //40
+            p_SetMc("作业人员1", TXT_EMP1, "NIR", "", "", "", "", imcseq); //38
+            p_SetMc("作业人员2", TXT_EMP2, "NIR", "", "", "", "", imcseq); //39
+            p_SetMc("作业人员3", TXT_EMP3, "NIR", "", "", "", "", imcseq); //40
             p_SetMc(txt_Roll_Stlgrd, "RL", "", "", "", imcseq, ""); //41
 
             //Added by guoli at 20080806232000
@@ -301,6 +301,348 @@ namespace CG {
             p_SetSc("成品规格", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //3
 
         }
+
+
+
+        private void CHK_A_Click() {
+            if (CHK_A.Checked) {
+                TXT_EXCEPTION.Text = "A";
+                CHK_B.Checked = false;
+                CHK_C.Checked = false;
+                CHK_A.ForeColor = Color.Red;
+                CHK_B.ForeColor = Color.Black;
+                CHK_C.ForeColor = Color.Black;
+            }
+            if (!CHK_A.Checked & !CHK_B.Checked & !CHK_C.Checked) {
+                CHK_A.ForeColor = Color.Black;
+                CHK_B.ForeColor = Color.Black;
+                CHK_C.ForeColor = Color.Black;
+                TXT_EXCEPTION.Text = "";
+            }
+        }
+
+        private void CHK_B_Click() {
+            if (CHK_B.Checked) {
+                TXT_EXCEPTION.Text = "B";
+                CHK_A.Checked = false;
+                CHK_C.Checked = false;
+                CHK_B.ForeColor = Color.Red;
+                CHK_A.ForeColor = Color.Black;
+                CHK_C.ForeColor = Color.Black;
+            }
+            if (!CHK_A.Checked & !CHK_B.Checked & !CHK_C.Checked) {
+                CHK_A.ForeColor = Color.Black;
+                CHK_B.ForeColor = Color.Black;
+                CHK_C.ForeColor = Color.Black;
+                TXT_EXCEPTION.Text = "";
+            }
+        }
+
+        private void chk_c_Click() {
+            if (CHK_C.Checked) {
+                TXT_EXCEPTION.Text = "C";
+                CHK_A.Checked = false;
+                CHK_B.Checked = false;
+                CHK_C.ForeColor = Color.Red;
+                CHK_A.ForeColor = Color.Black;
+                CHK_B.ForeColor = Color.Black;
+            }
+            if (!CHK_A.Checked & !CHK_B.Checked & !CHK_C.Checked) {
+                CHK_A.ForeColor = Color.Black;
+                CHK_B.ForeColor = Color.Black;
+                CHK_C.ForeColor = Color.Black;
+                TXT_EXCEPTION.Text = "";
+            }
+        }
+
+        private void CHK_CR_CD_Click() {
+            if (!CHK_CR_CD.Checked) {
+                if (!CHK_NON_CR_CD.Checked) {
+                    //          CHK_CR_CD.Value = ssCBChecked
+                    TXT_CR_CD.Text = "";
+                    CHK_CR_CD.ForeColor = Color.Black;
+                    CHK_NON_CR_CD.ForeColor = Color.Black;
+                }
+                return;
+            }
+
+            TXT_CR_CD.Text = "1";
+
+            CHK_CR_CD.ForeColor = Color.Red;
+            CHK_CR_CD..Checked = true;
+
+            CHK_NON_CR_CD.ForeColor = Color.Black;
+            CHK_NON_CR_CD.Checked = false;
+        }
+
+        private void CHK_NON_CR_CD_Click() {
+            if (!CHK_NON_CR_CD.Checked) {
+                if (!CHK_CR_CD.Checked) {
+                    //          CHK_NON_CR_CD.Value = ssCBChecked
+                    TXT_CR_CD.Text = "";
+                    CHK_NON_CR_CD.ForeColor = Color.Black;
+                    CHK_CR_CD.ForeColor = Color.Black;
+                }
+                return;
+            }
+
+            TXT_CR_CD.Text = "0";
+
+            CHK_NON_CR_CD.ForeColor = Color.Red;
+            CHK_NON_CR_CD.Checked = true;
+
+            CHK_CR_CD.ForeColor = Color.Black;
+            CHK_CR_CD.Checked = false;
+        }
+
+        private void Chk_Rolling_Auto_Click() {
+
+            if (!CHK_ROLLING_AUTO.Checked) {
+                if (!CHK_ROLLING_OP.Checked) {
+                    TXT_ROLLING_METHOD.Text = "";
+                    CHK_ROLLING_AUTO.ForeColor = Color.Black;
+                    CHK_ROLLING_OP.ForeColor = Color.Black;
+                }
+                return;
+            }
+
+            TXT_ROLLING_METHOD.Text = "0";
+
+            CHK_ROLLING_AUTO.ForeColor = Color.Red;
+            CHK_ROLLING_AUTO.Checked = true;
+
+            CHK_ROLLING_OP.ForeColor = Color.Black;
+            CHK_ROLLING_OP.Checked = false;
+
+        }
+
+        private void Chk_Rolling_Op_Click() {
+
+            if (!CHK_ROLLING_OP.Checked) {
+                if (!CHK_ROLLING_AUTO.Checked) {
+                    TXT_ROLLING_METHOD.Text = "";
+                    CHK_ROLLING_OP.ForeColor = Color.Black;
+                    CHK_ROLLING_AUTO.ForeColor = Color.Black;
+                }
+                return;
+            }
+
+            TXT_ROLLING_METHOD.Text = "1";
+
+            CHK_ROLLING_OP.ForeColor = Color.Red;
+            CHK_ROLLING_OP.Checked = true;
+
+            CHK_ROLLING_AUTO.ForeColor = Color.Black;
+            CHK_ROLLING_AUTO.Checked = false;
+
+        }
+
+        private void cmd_LPass_Click() {
+
+            if (TXT_MILL_END_TIME.Text != "" && TXT_MILL_END_TIME.Text.Substring(0, 1) != "2") {
+                SMESG = " 请输入终轧时间...！";
+                GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "提示");
+                return;
+            }
+
+            if (GeneralCommon.Gf_MessConfirm("您确定板坯号 " + txt_SlabNo.Text + "仅通过精轧机吗？", "Q", "空过指示确定")) {
+                if (Gp_Process_Exec("A") == "") {
+                    GeneralCommon.Gp_MsgBoxDisplay("空过处理完成 ！", "I", "空过");
+                    Form_Ref();
+                    TXT_MILL_END_TIME.Text = "";
+                } else {
+                    GeneralCommon.Gp_MsgBoxDisplay("空过处理失败，请确认 ！", "I", "空过");
+                }
+            }
+
+        }
+
+        private void cmd_Pass_Click() {
+            if (GeneralCommon.Gf_MessConfirm("您确定要对板坯号" + txt_SlabNo.Text + "做轧废处理吗？", "Q", "轧废指示确定")) {
+                if (Gp_Process_Exec("B") == "") {
+                    GeneralCommon.Gp_MsgBoxDisplay("轧废处理完成 ！", "I", "空过");
+                    Form_Ref();
+                } else {
+                    GeneralCommon.Gp_MsgBoxDisplay("轧废处理失败，请确认 ！", "I", "空过");
+                }
+            }
+        }
+
+        //调用后台包程序
+        private string Gp_Process_Exec(string Process_Type) {
+
+            string[] Para1 = new string[2];
+            string[] Para2 = new string[5];
+
+            // 发送
+            Para1[0] = txt_SlabNo.Text.Trim();
+            Para1[1] = TXT_CB.Text.Trim();
+            if (Process_Type == "A") {
+                if (GeneralCommon.Gf_ExecProcedure(GeneralCommon.M_CN1, "CGC2010C.P_PASS", Para1)) {
+                    return "";
+                } else {
+                    return "空过处理失败";
+                }
+            }
+
+            // 取消
+            Para2[0] = txt_SlabNo.Text.Trim();
+            Para2[1] = TXT_SHIFT.Text.Trim();
+            Para2[2] = TXT_GROUP.Text.Trim();
+            Para2[3] = TXT_EMP1.Text.Trim();
+            Para2[4] = TXT_CB.Text.Trim();
+
+            if (Process_Type == "B") {
+                if (GeneralCommon.Gf_ExecProcedure(GeneralCommon.M_CN1, "CGC2010C.P_SCRAP", Para2)) {
+                    return "";
+                } else {
+                    return "轧废处理失败";
+                }
+            }
+
+            return "";
+        }
+
+        private void CGC2010C_Load(object sender, EventArgs e) {
+            base.sSvrPgmPkgName = "CGC2010NC";
+            Form_Define();
+
+            tab1.SelectedIndex = 0;
+
+            Form_Ref();
+
+            TXT_SHIFT.Text = Gf_ShiftSet3("");
+            TXT_GROUP.Text = Gf_GroupSet(TXT_SHIFT.Text.Trim(), Gf_DTSet("", "X"));
+            TXT_EMP1.Text = GeneralCommon.sUserID;
+
+            unlockSpread(ss1);
+            unlockSpread(ss2);
+            unlockSpread(ss3);
+            unlockSpread(ss4);
+
+            if (base.sAuthority.Substring(0, 3) == "111") {
+                cmd_Pass.Enabled = true;
+                //SSCommand1.Enabled = true;
+                cmd_LPass.Enabled = true;
+            } else {
+                cmd_Pass.Enabled = false;
+                //SSCommand1.Enabled = false;
+                cmd_LPass.Enabled = false;
+            }
+        }
+
+        public override bool Form_Cls() {
+            base.Form_Cls();
+            CHK_A.Checked = false;
+            CHK_B.Checked = false;
+            CHK_C.Checked = false;
+
+            TXT_EXCEPTION.Text = "";
+            return true;
+        }
+
+        public override void Form_Ref() {
+
+            int iRow;
+            int iCol;
+            string sCurDate;
+            string sDel_To_Date;
+            string sUrgnt_Fl;
+            string sUst_Fl;
+            string sFlag;
+            string sexport;
+            string sOrdcnt;
+
+            sCurDate = DateTime.Now.ToString("yyyyMM");
+
+            if (tab1.SelectedIndex == 0) {
+
+                p_Ref(0, 2, true, false);
+                p_Ref(0, 4, true, false);
+
+                if (ss2.ActiveSheet.RowCount <= 0) return; //防止报错 VB没有这段代码
+
+                if (ss2.ActiveSheet.Cells[0, 0].Text.ToString() != "") {
+                    txt_SlabNo.Text = ss2.ActiveSheet.Cells[0, 0].Text.ToString();
+
+                    if (p_Ref(1, 0, true, false) & p_Ref(2, 1, true, false)) {
+
+                        TXT_MILL_STA_TIME.Text = Gf_DTSet("", "X");
+                        TXT_SHIFT.Text = Gf_ShiftSet3("");
+                        TXT_GROUP.Text = Gf_GroupSet(TXT_SHIFT.Text, Gf_DTSet("", "X"));
+                        TXT_EMP1.Text = GeneralCommon.sUserID;
+
+                    }
+
+                } else {
+                    txt_SlabNo.Text = "";
+                }
+                //超交货期用红色显示 add by liqian 2012-06-11
+                {
+                    for (iRow = 1; iRow <= ss2.ActiveSheet.RowCount; iRow++) {
+                        sDel_To_Date = ss2.ActiveSheet.Cells[iRow - 1, SS2_DEL_TO_DATE].Text.ToString().Substring(0, 6);
+                        sUrgnt_Fl = ss2.ActiveSheet.Cells[iRow - 1, SS2_URGNT_FL].Text.ToString().Trim();
+                        if (Convert.ToDouble(sDel_To_Date) < Convert.ToDouble(sCurDate)) {
+                            SpreadCommon.Gp_Sp_BlockColor(ss2, 0, ss2.ActiveSheet.ColumnCount - 1, iRow - 1, iRow - 1, Color.Red, Color.White);
+                        }
+                        //紧急订单绿色显示 add by liqian 2012-08-15
+                        if (sUrgnt_Fl == "Y") {
+                            SpreadCommon.Gp_Sp_BlockColor(ss2, 0, ss2.ActiveSheet.ColumnCount - 1, iRow - 1, iRow - 1, Color.Green, Color.White);
+
+                        }
+                        //是否探伤 add by liqian 2013-04-08
+                        sUst_Fl = ss2.ActiveSheet.Cells[iRow - 1, SS2_UST_FL].Text.ToString().Trim();
+                        if (sUst_Fl == "是") {
+                            SpreadCommon.Gp_Sp_BlockColor(ss2, SS2_SLAB_NO, SS2_SLAB_NO, iRow - 1, iRow - 1, Color.Fuchsia, Color.White);
+                            SpreadCommon.Gp_Sp_BlockColor(ss2, SS2_UST_FL, SS2_UST_FL, iRow - 1, iRow - 1, Color.Fuchsia, Color.White);
+                        }
+                        //是否定制配送
+                        sFlag = ss2.ActiveSheet.Cells[iRow - 1, SS2_FLAG].Text.ToString().Trim();
+                        if (sFlag == "Y") {
+                            SpreadCommon.Gp_Sp_BlockColor(ss2, SS2_SLAB_NO, SS2_SLAB_NO, iRow - 1, iRow - 1, SSP4.BackColor, Color.White);
+                        }
+                        //是否出口订单
+                        sexport = ss2.ActiveSheet.Cells[iRow - 1, SS2_EXPORT].Text.ToString().Trim();
+                        if (sexport == "Y") {
+                            SpreadCommon.Gp_Sp_BlockColor(ss2, SS2_SLAB_NO, SS2_SLAB_NO, iRow - 1, iRow - 1, SSP1.BackColor, Color.White);
+                        }
+                        //是否一坯多订单
+                        //ss2.ActiveSheet.Cells[iRow - 1, SS2_ORD_CNT].Value.ToString();
+                        sOrdcnt = ss2.ActiveSheet.Cells[iRow - 1, SS2_ORD_CNT].Text.ToString();
+                        if (sOrdcnt != "" && Convert.ToInt32(sOrdcnt) > 1) //解决为空导致无法转换报错的问题
+                        {
+                            SpreadCommon.Gp_Sp_BlockColor(ss2, 0, ss2.ActiveSheet.ColumnCount - 1, iRow - 1, iRow - 1, Color.Black, SSP2.BackColor);
+
+                        }
+                    }
+                }
+
+            } else if (tab1.SelectedIndex == 1) {
+
+                p_Ref(3, 3, true, false);
+                if (ss3.ActiveSheet.RowCount <= 0) return; //防止报错 VB版本没有这段代码
+                if (ss3.ActiveSheet.Cells[0, 0].Text.ToString() != "") {
+
+                    txt_SlabNo.Text = ss3.ActiveSheet.Cells[0, 0].Text.ToString();
+
+                    if (p_Ref(4, 0, true, false) & p_Ref(2, 1, true, false)) {}
+
+                }
+
+            }
+
+            //    Call MDIMain.FormMenuSetting(Me, FormType, "RE", sAuthority)
+        }
+
+
+
+
+
+
+
+
+
+
 
         private void CHK_CR_CD_Clk() {
             if (!CHK_CR_CD.Checked) {
@@ -396,17 +738,12 @@ namespace CG {
 
         }
 
-        private void cmd_Pass_Clk()
-        {
-            if (GeneralCommon.Gf_MessConfirm("您确定要对板坯号" + txt_SlabNo.Text + "做轧废处理吗？", "Q", "轧废指示确定"))
-            {
-                if (Gp_Process_Exec("B") == "")
-                {
+        private void cmd_Pass_Clk() {
+            if (GeneralCommon.Gf_MessConfirm("您确定要对板坯号" + txt_SlabNo.Text + "做轧废处理吗？", "Q", "轧废指示确定")) {
+                if (Gp_Process_Exec("B") == "") {
                     GeneralCommon.Gp_MsgBoxDisplay("轧废处理完成 ！", "I", "空过");
                     Form_Ref();
-                }
-                else
-                {
+                } else {
                     GeneralCommon.Gp_MsgBoxDisplay("轧废处理失败，请确认 ！", "I", "空过");
                 }
             }
@@ -495,7 +832,7 @@ namespace CG {
                 p_Ref(0, 2, true, false);
                 p_Ref(0, 4, true, false);
 
-                if (ss2.ActiveSheet.RowCount <= 0) return;//防止报错 VB没有这段代码
+                if (ss2.ActiveSheet.RowCount <= 0) return; //防止报错 VB没有这段代码
 
                 if (ss2.ActiveSheet.Cells[0, 0].Text.ToString() != "") {
                     txt_SlabNo.Text = ss2.ActiveSheet.Cells[0, 0].Text.ToString();
@@ -516,7 +853,7 @@ namespace CG {
                 {
                     for (iRow = 1; iRow <= ss2.ActiveSheet.RowCount; iRow++) {
                         sDel_To_Date = ss2.ActiveSheet.Cells[iRow - 1, SS2_DEL_TO_DATE].Text.ToString().Substring(0, 6);
-                        sUrgnt_Fl = ss2.ActiveSheet.Cells[iRow-1, SS2_URGNT_FL].Text.ToString().Trim();
+                        sUrgnt_Fl = ss2.ActiveSheet.Cells[iRow - 1, SS2_URGNT_FL].Text.ToString().Trim();
                         if (Convert.ToDouble(sDel_To_Date) < Convert.ToDouble(sCurDate)) {
                             SpreadCommon.Gp_Sp_BlockColor(ss2, 0, ss2.ActiveSheet.ColumnCount - 1, iRow - 1, iRow - 1, Color.Red, Color.White);
                         }
@@ -544,7 +881,7 @@ namespace CG {
                         //是否一坯多订单
                         //ss2.ActiveSheet.Cells[iRow - 1, SS2_ORD_CNT].Value.ToString();
                         sOrdcnt = ss2.ActiveSheet.Cells[iRow - 1, SS2_ORD_CNT].Text.ToString();
-                        if (sOrdcnt!=""&&Convert.ToInt32(sOrdcnt) > 1)//解决为空导致无法转换报错的问题
+                        if (sOrdcnt != "" && Convert.ToInt32(sOrdcnt) > 1) //解决为空导致无法转换报错的问题
                         {
                             SpreadCommon.Gp_Sp_BlockColor(ss2, 0, ss2.ActiveSheet.ColumnCount - 1, iRow - 1, iRow - 1, Color.Black, SSP2.BackColor);
 
@@ -555,7 +892,7 @@ namespace CG {
             } else if (tab1.SelectedIndex == 1) {
 
                 p_Ref(3, 3, true, false);
-                if (ss3.ActiveSheet.RowCount <= 0) return;//防止报错 VB版本没有这段代码
+                if (ss3.ActiveSheet.RowCount <= 0) return; //防止报错 VB版本没有这段代码
                 if (ss3.ActiveSheet.Cells[0, 0].Text.ToString() != "") {
 
                     txt_SlabNo.Text = ss3.ActiveSheet.Cells[0, 0].Text.ToString();
@@ -759,7 +1096,8 @@ namespace CG {
         }
 
 
-        #region 公共方法
+        #
+        region 公共方法
 
         public bool Gp_DateCheck(string DateCheck, string sDTChk) {
             sDTChk = "M";
@@ -975,71 +1313,59 @@ namespace CG {
             }
         }
 
-        #endregion
+        #
+        endregion
 
-        private void CHK_CR_CD_CheckedChanged(object sender, EventArgs e)
-        {
+        private void CHK_CR_CD_CheckedChanged(object sender, EventArgs e) {
             CHK_CR_CD_Clk();
         }
 
-        private void CHK_NON_CR_CD_CheckedChanged(object sender, EventArgs e)
-        {
+        private void CHK_NON_CR_CD_CheckedChanged(object sender, EventArgs e) {
             CHK_NON_CR_CD_Clk();
         }
 
-        private void CHK_ROLLING_AUTO_CheckedChanged(object sender, EventArgs e)
-        {
+        private void CHK_ROLLING_AUTO_CheckedChanged(object sender, EventArgs e) {
             Chk_Rolling_Auto_Clk();
         }
 
-        private void CHK_ROLLING_OP_CheckedChanged(object sender, EventArgs e)
-        {
+        private void CHK_ROLLING_OP_CheckedChanged(object sender, EventArgs e) {
             Chk_Rolling_Op_Clk();
         }
 
-        private void cmd_LPass_Click(object sender, EventArgs e)
-        {
+        private void cmd_LPass_Click(object sender, EventArgs e) {
             cmd_LPass_Clk();
         }
 
-        private void cmd_Pass_Click(object sender, EventArgs e)
-        {
+        private void cmd_Pass_Click(object sender, EventArgs e) {
             cmd_Pass_Clk();
 
         }
 
-        private void ss2_CellClick(object sender, CellClickEventArgs e)
-        {
+        private void ss2_CellClick(object sender, CellClickEventArgs e) {
             ss2_Clk(e.Column, e.Row);
         }
 
-        private void ss2_CellDoubleClick(object sender, CellClickEventArgs e)
-        {
+        private void ss2_CellDoubleClick(object sender, CellClickEventArgs e) {
             ss2_DblClk(e.Column, e.Row);
         }
 
-        private void ss3_CellDoubleClick(object sender, CellClickEventArgs e)
-        {
+        private void ss3_CellDoubleClick(object sender, CellClickEventArgs e) {
             ss3_DblClk(e.Column, e.Row);
         }
 
-        private void tab1_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        private void tab1_SelectedIndexChanged(object sender, EventArgs e) {
             tab1_Clk();
         }
 
-        private void TXT_MILL_STA_TIME_DoubleClick(object sender, EventArgs e)
-        {
+        private void TXT_MILL_STA_TIME_DoubleClick(object sender, EventArgs e) {
             TXT_MILL_STA_TIME_DblClk();
         }
 
-        private void TXT_MILL_END_TIME_DoubleClick(object sender, EventArgs e)
-        {
+        private void TXT_MILL_END_TIME_DoubleClick(object sender, EventArgs e) {
             TXT_MILL_END_TIME_DblClk();
         }
 
-        private void txt_RstFormDate_DoubleClick(object sender, EventArgs e)
-        {
+        private void txt_RstFormDate_DoubleClick(object sender, EventArgs e) {
             txt_RstFormDate_DblClk();
         }
 
