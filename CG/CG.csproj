@@ -297,6 +297,12 @@
     <Compile Include="CGC\CGC2010C.Designer.cs">
       <DependentUpon>CGC2010C.cs</DependentUpon>
     </Compile>
+    <Compile Include="CGC\CGC2020C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CGC\CGC2020C.Designer.cs">
+      <DependentUpon>CGC2020C.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu\MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -727,6 +733,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CGC\CGC2010C.resx">
       <DependentUpon>CGC2010C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CGC\CGC2020C.resx">
+      <DependentUpon>CGC2020C.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
