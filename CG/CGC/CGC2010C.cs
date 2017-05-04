@@ -145,10 +145,10 @@ namespace CG
             p_SetMc(txt_Roll_Stlgrd, "R", "", "", "", imcseq, ""); //41
 
             //Added by guoli at 20080806232000
-            p_SetMc(txt_millTemp, "LR", "", "", "", imcseq, ""); //42
-            p_SetMc(txt_millTemp_min, "LR", "", "", "", imcseq, ""); //43
-            p_SetMc(txt_millTemp_max, "LR", "", "", "", imcseq, ""); //44
-            p_SetMc(TXT_EXCEPTION, "IRL", "", "", "", imcseq, ""); //45
+            p_SetMc(txt_millTemp, "RL", "", "", "", imcseq, ""); //42
+            p_SetMc(txt_millTemp_min, "RL", "", "", "", imcseq, ""); //43
+            p_SetMc(txt_millTemp_max, "RL", "", "", "", imcseq, ""); //44
+            p_SetMc(TXT_EXCEPTION, "IL", "", "", "", imcseq, ""); //45
 
             p_McIni(Mc2, false);
             imcseq = 2;
@@ -220,7 +220,7 @@ namespace CG
             p_SetMc(txt_millTemp, "LR", "", "", "", imcseq, ""); //42
             p_SetMc(txt_millTemp_min, "LR", "", "", "", imcseq, ""); //43
             p_SetMc(txt_millTemp_max, "LR", "", "", "", imcseq, ""); //44
-            p_SetMc(TXT_EXCEPTION, "IRL", "", "", "", imcseq, ""); //45
+            p_SetMc(TXT_EXCEPTION, "IL", "", "", "", imcseq, ""); //45
 
 
             int iheadrow;
@@ -348,7 +348,7 @@ namespace CG
             }
         }
 
-        private void chk_c_Clk()
+        private void CHK_C_Clk()
         {
             if (CHK_C.Checked)
             {
@@ -847,8 +847,6 @@ namespace CG
             }
         }
 
-
-
         //Private void SSCommand1_Click(){}
         //发现控件被移出，该功能不实现，具体实现方式请参考VB CGC2010C该事件内容
 
@@ -898,20 +896,6 @@ namespace CG
             txt_RstFormDate.Text = Gf_DTSet("", "X");
             txt_RstToDate.Text = Gf_DTSet("", "X");
         }
-
-        private void txt_millTemp_max_MouseMove(TextBox e) {
-         
-            toolTip1.SetToolTip(e, "终轧温度最大偏差");
-        }
-
-        private void txt_millTemp_min_MouseMove(TextBox e) {
-            toolTip1.SetToolTip(e, "终轧温度最小偏差");
-        }
-
-        private void txt_millTemp_MouseMove(TextBox e) {
-            toolTip1.SetToolTip(e, "终轧目标温度");
-        }
-
 
         #region 公共方法
 
@@ -1178,6 +1162,22 @@ namespace CG
 
         #endregion
 
+
+        private void CHK_A_CheckedChanged(object sender, EventArgs e)
+        {
+            CHK_A_Clk();
+        }
+
+        private void CHK_B_CheckedChanged(object sender, EventArgs e)
+        {
+            CHK_B_Clk();
+        }
+
+        private void CHK_C_CheckedChanged(object sender, EventArgs e)
+        {
+            CHK_C_Clk();
+        }
+
         private void CHK_CR_CD_CheckedChanged(object sender, EventArgs e)
         {
             CHK_CR_CD_Clk();
@@ -1197,7 +1197,6 @@ namespace CG
         {
             Chk_Rolling_Op_Clk();
         }
-
         private void cmd_LPass_Click(object sender, EventArgs e)
         {
             cmd_LPass_Clk();
@@ -1223,7 +1222,6 @@ namespace CG
         {
             ss3_DblClk(e.Column, e.Row);
         }
-
         private void tab1_SelectedIndexChanged(object sender, EventArgs e)
         {
             tab1_Clk();
@@ -1242,6 +1240,21 @@ namespace CG
         private void txt_RstFormDate_DoubleClick(object sender, EventArgs e)
         {
             txt_RstFormDate_DblClk();
+        }
+
+        private void txt_millTemp_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(txt_millTemp, "终轧目标温度");
+        }
+
+        private void txt_millTemp_min_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(txt_millTemp_min, "终轧温度最小偏差");
+        }
+
+        private void txt_millTemp_max_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(txt_millTemp_max, "终轧温度最大偏差");
         }
 
 

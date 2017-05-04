@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            CommonClass.BControlFiledSetting bControlFiledSetting4 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting1 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting2 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting3 = new CommonClass.BControlFiledSetting();
             this.TXT_EMP2 = new CommonClass.F4ETCR();
             this.TXT_EMP1 = new CommonClass.F4ETCR();
             this.TXT_EMP3 = new CommonClass.F4ETCR();
@@ -176,9 +176,9 @@
             // 
             // TXT_EMP2
             // 
-            bControlFiledSetting4.ColumnID = "EMP_ID";
-            bControlFiledSetting4.TargetControl = this.TXT_EMP2;
-            this.TXT_EMP2.CustomSetting.Add(bControlFiledSetting4);
+            bControlFiledSetting1.ColumnID = "EMP_ID";
+            bControlFiledSetting1.TargetControl = this.TXT_EMP2;
+            this.TXT_EMP2.CustomSetting.Add(bControlFiledSetting1);
             this.TXT_EMP2.InputControl = this.TXT_EMP2;
             this.TXT_EMP2.Location = new System.Drawing.Point(972, 44);
             this.TXT_EMP2.MaxLength = 7;
@@ -192,9 +192,9 @@
             // 
             // TXT_EMP1
             // 
-            bControlFiledSetting1.ColumnID = "EMP_ID";
-            bControlFiledSetting1.TargetControl = this.TXT_EMP1;
-            this.TXT_EMP1.CustomSetting.Add(bControlFiledSetting1);
+            bControlFiledSetting2.ColumnID = "EMP_ID";
+            bControlFiledSetting2.TargetControl = this.TXT_EMP1;
+            this.TXT_EMP1.CustomSetting.Add(bControlFiledSetting2);
             this.TXT_EMP1.InputControl = this.TXT_EMP1;
             this.TXT_EMP1.Location = new System.Drawing.Point(912, 44);
             this.TXT_EMP1.MaxLength = 7;
@@ -208,9 +208,9 @@
             // 
             // TXT_EMP3
             // 
-            bControlFiledSetting2.ColumnID = "EMP_ID";
-            bControlFiledSetting2.TargetControl = this.TXT_EMP3;
-            this.TXT_EMP3.CustomSetting.Add(bControlFiledSetting2);
+            bControlFiledSetting3.ColumnID = "EMP_ID";
+            bControlFiledSetting3.TargetControl = this.TXT_EMP3;
+            this.TXT_EMP3.CustomSetting.Add(bControlFiledSetting3);
             this.TXT_EMP3.InputControl = this.TXT_EMP3;
             this.TXT_EMP3.Location = new System.Drawing.Point(1032, 44);
             this.TXT_EMP3.MaxLength = 7;
@@ -312,11 +312,12 @@
             // groupBox10
             // 
             this.groupBox10.Controls.Add(this.ss3);
-            this.groupBox10.Location = new System.Drawing.Point(4, 43);
+            this.groupBox10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox10.Location = new System.Drawing.Point(3, 46);
             this.groupBox10.Margin = new System.Windows.Forms.Padding(0);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Padding = new System.Windows.Forms.Padding(0);
-            this.groupBox10.Size = new System.Drawing.Size(1026, 192);
+            this.groupBox10.Size = new System.Drawing.Size(1124, 155);
             this.groupBox10.TabIndex = 497;
             this.groupBox10.TabStop = false;
             // 
@@ -328,7 +329,7 @@
             this.ss3.Name = "ss3";
             this.ss3.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
             this.ss3_Sheet1});
-            this.ss3.Size = new System.Drawing.Size(1026, 177);
+            this.ss3.Size = new System.Drawing.Size(1124, 140);
             this.ss3.TabIndex = 4;
             this.ss3.CellDoubleClick += new FarPoint.Win.Spread.CellClickEventHandler(this.ss3_CellDoubleClick);
             // 
@@ -341,11 +342,12 @@
             // 
             this.groupBox11.Controls.Add(this.txt_RstToDate);
             this.groupBox11.Controls.Add(this.txt_RstFormDate);
+            this.groupBox11.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox11.Location = new System.Drawing.Point(3, 3);
             this.groupBox11.Margin = new System.Windows.Forms.Padding(0);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Padding = new System.Windows.Forms.Padding(0);
-            this.groupBox11.Size = new System.Drawing.Size(1024, 43);
+            this.groupBox11.Size = new System.Drawing.Size(1124, 43);
             this.groupBox11.TabIndex = 496;
             this.groupBox11.TabStop = false;
             // 
@@ -547,6 +549,7 @@
             this.CHK_C.TabIndex = 616;
             this.CHK_C.Text = "工艺超下限值";
             this.CHK_C.UseVisualStyleBackColor = true;
+            this.CHK_C.CheckedChanged += new System.EventHandler(this.CHK_C_CheckedChanged);
             // 
             // CHK_B
             // 
@@ -557,6 +560,7 @@
             this.CHK_B.TabIndex = 615;
             this.CHK_B.Text = "工艺超上限值";
             this.CHK_B.UseVisualStyleBackColor = true;
+            this.CHK_B.CheckedChanged += new System.EventHandler(this.CHK_B_CheckedChanged);
             // 
             // CHK_A
             // 
@@ -567,6 +571,7 @@
             this.CHK_A.TabIndex = 614;
             this.CHK_A.Text = "工艺正常";
             this.CHK_A.UseVisualStyleBackColor = true;
+            this.CHK_A.CheckedChanged += new System.EventHandler(this.CHK_A_CheckedChanged);
             // 
             // SDB_CR_STAGE2_TEMP
             // 
@@ -1085,6 +1090,7 @@
             this.txt_millTemp.TabIndex = 623;
             this.txt_millTemp.Text = "0";
             this.txt_millTemp.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_millTemp.MouseHover += new System.EventHandler(this.txt_millTemp_MouseHover);
             // 
             // txt_millTemp_max
             // 
@@ -1098,6 +1104,7 @@
             this.txt_millTemp_max.TabIndex = 622;
             this.txt_millTemp_max.Text = "0";
             this.txt_millTemp_max.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_millTemp_max.MouseHover += new System.EventHandler(this.txt_millTemp_max_MouseHover);
             // 
             // txt_millTemp_min
             // 
@@ -1111,6 +1118,7 @@
             this.txt_millTemp_min.TabIndex = 621;
             this.txt_millTemp_min.Text = "0";
             this.txt_millTemp_min.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_millTemp_min.MouseHover += new System.EventHandler(this.txt_millTemp_min_MouseHover);
             // 
             // label28
             // 
@@ -1526,6 +1534,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "CGC2010C";
             this.Text = "精轧作业实绩查询及修改界面_CGC2010C";
+            this.Load += new System.EventHandler(this.CGC2010C_Load);
             this.tab1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);

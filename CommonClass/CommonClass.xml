@@ -1114,8 +1114,8 @@
             <param name="Ctrl"></param>
             <param name="frm"></param>
         </member>
-        <!-- 对于成员“M:CommonClass.FORMBASE.form_Closing(System.Object,System.ComponentModel.CancelEventArgs)”忽略有格式错误的 XML 注释 -->
-        <!-- 对于成员“M:CommonClass.FORMBASE.form_Closed(System.Object,System.EventArgs)”忽略有格式错误的 XML 注释 -->
+        <!-- Badly formed XML comment ignored for member "M:CommonClass.FORMBASE.form_Closing(System.Object,System.ComponentModel.CancelEventArgs)" -->
+        <!-- Badly formed XML comment ignored for member "M:CommonClass.FORMBASE.form_Closed(System.Object,System.EventArgs)" -->
         <member name="M:CommonClass.FORMBASE.form_Activated(System.Object,System.EventArgs)">
             <summary>
             窗体激活事件：根据激活窗体设置工具栏状态。
@@ -1123,7 +1123,7 @@
             <param name="sender"></param>
             <param name="e"></param>
         </member>
-        <!-- 对于成员“M:CommonClass.FORMBASE.Form_Define”忽略有格式错误的 XML 注释 -->
+        <!-- Badly formed XML comment ignored for member "M:CommonClass.FORMBASE.Form_Define" -->
         <member name="M:CommonClass.FORMBASE.p_McFor(Microsoft.VisualBasic.Collection)">
             <summary>
             格式化Mc
@@ -1231,7 +1231,7 @@
             <param name="sender"></param>
             <param name="e"></param>
         </member>
-        <!-- 对于成员“M:CommonClass.FORMBASE.ss_KeyDownEvent(System.Object,System.Windows.Forms.KeyEventArgs)”忽略有格式错误的 XML 注释 -->
+        <!-- Badly formed XML comment ignored for member "M:CommonClass.FORMBASE.ss_KeyDownEvent(System.Object,System.Windows.Forms.KeyEventArgs)" -->
         <member name="M:CommonClass.FORMBASE.ss_LeaveCell(System.Object,FarPoint.Win.Spread.LeaveCellEventArgs)">
             <summary>
             Spread单元格LeaveCell事件，当Spread单元格光标离开时，判断内容是否改变，如果改变，在行头添加“修改”标志。
@@ -1279,7 +1279,7 @@
             
             </summary>
         </member>
-        <!-- 对于成员“M:CommonClass.FORMBASE.p_McIni(Microsoft.VisualBasic.Collection,System.Boolean)”忽略有格式错误的 XML 注释 -->
+        <!-- Badly formed XML comment ignored for member "M:CommonClass.FORMBASE.p_McIni(Microsoft.VisualBasic.Collection,System.Boolean)" -->
         <member name="M:CommonClass.FORMBASE.p_ScIni(FarPoint.Win.Spread.FpSpread,Microsoft.VisualBasic.Collection,System.Int32,System.Boolean,System.Boolean)">
             <summary>
             初始化Sc

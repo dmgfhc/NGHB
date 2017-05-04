@@ -117,26 +117,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CK.exe" size="99328">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CK.exe" size="99840">
       <assemblyIdentity name="CK" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>KxB8M7HxSXEIyeN7YEj6zEogoYk=</dsig:DigestValue>
+        <dsig:DigestValue>CmGXoaBw0V2sCT+JAc/7iIt+uqs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CommonClass.dll" size="285696">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CommonClass.dll" size="286208">
       <assemblyIdentity name="CommonClass" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>oKPE7kk0HnspbOYbAm1X8RmOPmk=</dsig:DigestValue>
+        <dsig:DigestValue>hJQu0y0dN8JZzSb2ORkIGTD5Fhw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -165,14 +165,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="zh-Hans\Microsoft.VisualBasic.PowerPacks.Vs.resources.dll" size="42904">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="zh-Hans\Microsoft.VisualBasic.PowerPacks.Vs.resources.dll" size="61008">
       <assemblyIdentity name="Microsoft.VisualBasic.PowerPacks.Vs.resources" version="10.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="zh-Hans" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>coNMH7x5D5/487IRtH162t/YNFA=</dsig:DigestValue>
+        <dsig:DigestValue>zQRcEWbIZy0SooIem7hJ4qMjOzE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

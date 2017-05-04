@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            CommonClass.BControlFiledSetting bControlFiledSetting3 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting1 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting2 = new CommonClass.BControlFiledSetting();
             this.TXT_EMP2 = new CommonClass.F4ETCR();
             this.TXT_EMP1 = new CommonClass.F4ETCR();
             this.tab1 = new System.Windows.Forms.TabControl();
@@ -169,9 +169,9 @@
             // 
             // TXT_EMP2
             // 
-            bControlFiledSetting3.ColumnID = "EMP_ID";
-            bControlFiledSetting3.TargetControl = this.TXT_EMP2;
-            this.TXT_EMP2.CustomSetting.Add(bControlFiledSetting3);
+            bControlFiledSetting1.ColumnID = "EMP_ID";
+            bControlFiledSetting1.TargetControl = this.TXT_EMP2;
+            this.TXT_EMP2.CustomSetting.Add(bControlFiledSetting1);
             this.TXT_EMP2.InputControl = this.TXT_EMP2;
             this.TXT_EMP2.Location = new System.Drawing.Point(972, 44);
             this.TXT_EMP2.MaxLength = 7;
@@ -185,9 +185,9 @@
             // 
             // TXT_EMP1
             // 
-            bControlFiledSetting1.ColumnID = "EMP_ID";
-            bControlFiledSetting1.TargetControl = this.TXT_EMP1;
-            this.TXT_EMP1.CustomSetting.Add(bControlFiledSetting1);
+            bControlFiledSetting2.ColumnID = "EMP_ID";
+            bControlFiledSetting2.TargetControl = this.TXT_EMP1;
+            this.TXT_EMP1.CustomSetting.Add(bControlFiledSetting2);
             this.TXT_EMP1.InputControl = this.TXT_EMP1;
             this.TXT_EMP1.Location = new System.Drawing.Point(912, 44);
             this.TXT_EMP1.MaxLength = 7;
@@ -289,11 +289,12 @@
             // groupBox10
             // 
             this.groupBox10.Controls.Add(this.ss3);
-            this.groupBox10.Location = new System.Drawing.Point(4, 43);
+            this.groupBox10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox10.Location = new System.Drawing.Point(3, 46);
             this.groupBox10.Margin = new System.Windows.Forms.Padding(0);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Padding = new System.Windows.Forms.Padding(0);
-            this.groupBox10.Size = new System.Drawing.Size(1026, 192);
+            this.groupBox10.Size = new System.Drawing.Size(1039, 172);
             this.groupBox10.TabIndex = 497;
             this.groupBox10.TabStop = false;
             // 
@@ -305,7 +306,7 @@
             this.ss3.Name = "ss3";
             this.ss3.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
             this.ss3_Sheet1});
-            this.ss3.Size = new System.Drawing.Size(1026, 177);
+            this.ss3.Size = new System.Drawing.Size(1039, 157);
             this.ss3.TabIndex = 4;
             this.ss3.CellDoubleClick += new FarPoint.Win.Spread.CellClickEventHandler(this.ss3_CellDoubleClick);
             // 
@@ -318,11 +319,12 @@
             // 
             this.groupBox11.Controls.Add(this.txt_RstToDate);
             this.groupBox11.Controls.Add(this.txt_RstFormDate);
+            this.groupBox11.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox11.Location = new System.Drawing.Point(3, 3);
             this.groupBox11.Margin = new System.Windows.Forms.Padding(0);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Padding = new System.Windows.Forms.Padding(0);
-            this.groupBox11.Size = new System.Drawing.Size(1024, 43);
+            this.groupBox11.Size = new System.Drawing.Size(1039, 43);
             this.groupBox11.TabIndex = 496;
             this.groupBox11.TabStop = false;
             // 

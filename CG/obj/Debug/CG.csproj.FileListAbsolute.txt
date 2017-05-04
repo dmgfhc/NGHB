@@ -113,3 +113,4 @@ C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\Interop.VBIDE.dll
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.csproj.ResolveComReference.cache
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.exe
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.pdb
+D:\github\NGHB\CG\obj\Debug\CG.CGC2010C.resources
