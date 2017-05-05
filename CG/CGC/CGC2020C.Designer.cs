@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            CommonClass.BControlFiledSetting bControlFiledSetting2 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting1 = new CommonClass.BControlFiledSetting();
             this.TXT_HL_EMP = new CommonClass.F4ETCR();
-            this.tab1 = new System.Windows.Forms.TabControl();
+            this.Tab1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.ss1 = new FarPoint.Win.Spread.FpSpread();
@@ -42,10 +42,22 @@
             this.ss2 = new FarPoint.Win.Spread.FpSpread();
             this.ss2_Sheet1 = new FarPoint.Win.Spread.SheetView();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.label23 = new System.Windows.Forms.Label();
             this.txt_RstToDate = new CommonClass.MaskedDate();
             this.txt_RstFormDate = new CommonClass.MaskedDate();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.SSP1 = new System.Windows.Forms.Button();
+            this.SSP5 = new System.Windows.Forms.Button();
+            this.SSP4 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             this.TXT_SIZE = new System.Windows.Forms.TextBox();
             this.SDB_HL_PASS_CNT = new CommonClass.NumBox();
             this.SDB_HL_EX_POS = new CommonClass.NumBox();
@@ -88,18 +100,7 @@
             this.ULabel43 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_RollingNo = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.SSP4 = new System.Windows.Forms.Button();
-            this.SSP1 = new System.Windows.Forms.Button();
-            this.SSP5 = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.tab1.SuspendLayout();
+            this.Tab1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -121,9 +122,9 @@
             // 
             // TXT_HL_EMP
             // 
-            bControlFiledSetting2.ColumnID = "EMP_ID";
-            bControlFiledSetting2.TargetControl = this.TXT_HL_EMP;
-            this.TXT_HL_EMP.CustomSetting.Add(bControlFiledSetting2);
+            bControlFiledSetting1.ColumnID = "EMP_ID";
+            bControlFiledSetting1.TargetControl = this.TXT_HL_EMP;
+            this.TXT_HL_EMP.CustomSetting.Add(bControlFiledSetting1);
             this.TXT_HL_EMP.InputControl = this.TXT_HL_EMP;
             this.TXT_HL_EMP.Location = new System.Drawing.Point(1005, 100);
             this.TXT_HL_EMP.MaxLength = 7;
@@ -135,17 +136,17 @@
             this.TXT_HL_EMP.TabIndex = 580;
             this.TXT_HL_EMP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // tab1
+            // Tab1
             // 
-            this.tab1.Controls.Add(this.tabPage1);
-            this.tab1.Controls.Add(this.tabPage2);
-            this.tab1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tab1.Location = new System.Drawing.Point(0, 210);
-            this.tab1.Name = "tab1";
-            this.tab1.SelectedIndex = 0;
-            this.tab1.Size = new System.Drawing.Size(1138, 410);
-            this.tab1.TabIndex = 97;
-            this.tab1.SelectedIndexChanged += new System.EventHandler(this.tab1_SelectedIndexChanged);
+            this.Tab1.Controls.Add(this.tabPage1);
+            this.Tab1.Controls.Add(this.tabPage2);
+            this.Tab1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Tab1.Location = new System.Drawing.Point(0, 210);
+            this.Tab1.Name = "Tab1";
+            this.Tab1.SelectedIndex = 0;
+            this.Tab1.Size = new System.Drawing.Size(1138, 410);
+            this.Tab1.TabIndex = 97;
+            this.Tab1.SelectedIndexChanged += new System.EventHandler(this.Tab1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -185,8 +186,7 @@
             this.ss1_Sheet1});
             this.ss1.Size = new System.Drawing.Size(771, 377);
             this.ss1.TabIndex = 5;
-            this.ss1.CellClick += new FarPoint.Win.Spread.CellClickEventHandler(this.ss2_CellClick);
-            this.ss1.CellDoubleClick += new FarPoint.Win.Spread.CellClickEventHandler(this.ss2_CellDoubleClick);
+            this.ss1.CellDoubleClick += new FarPoint.Win.Spread.CellClickEventHandler(this.ss1_CellDoubleClick);
             // 
             // ss1_Sheet1
             // 
@@ -244,7 +244,7 @@
             this.ss2_Sheet1});
             this.ss2.Size = new System.Drawing.Size(1124, 319);
             this.ss2.TabIndex = 4;
-            this.ss2.CellDoubleClick += new FarPoint.Win.Spread.CellClickEventHandler(this.ss3_CellDoubleClick);
+            this.ss2.CellDoubleClick += new FarPoint.Win.Spread.CellClickEventHandler(this.ss2_CellDoubleClick);
             // 
             // ss2_Sheet1
             // 
@@ -253,6 +253,7 @@
             // 
             // groupBox11
             // 
+            this.groupBox11.Controls.Add(this.label23);
             this.groupBox11.Controls.Add(this.txt_RstToDate);
             this.groupBox11.Controls.Add(this.txt_RstFormDate);
             this.groupBox11.Dock = System.Windows.Forms.DockStyle.Top;
@@ -264,9 +265,19 @@
             this.groupBox11.TabIndex = 496;
             this.groupBox11.TabStop = false;
             // 
+            // label23
+            // 
+            this.label23.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label23.Location = new System.Drawing.Point(5, 18);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(87, 22);
+            this.label23.TabIndex = 641;
+            this.label23.Text = "矫直时间";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // txt_RstToDate
             // 
-            this.txt_RstToDate.Location = new System.Drawing.Point(150, 15);
+            this.txt_RstToDate.Location = new System.Drawing.Point(246, 18);
             this.txt_RstToDate.Mask = "0000-00-00 90:00:00";
             this.txt_RstToDate.Name = "txt_RstToDate";
             this.txt_RstToDate.Size = new System.Drawing.Size(142, 22);
@@ -274,7 +285,7 @@
             // 
             // txt_RstFormDate
             // 
-            this.txt_RstFormDate.Location = new System.Drawing.Point(2, 15);
+            this.txt_RstFormDate.Location = new System.Drawing.Point(98, 18);
             this.txt_RstFormDate.Mask = "0000-00-00 90:00:00";
             this.txt_RstFormDate.Name = "txt_RstFormDate";
             this.txt_RstFormDate.Size = new System.Drawing.Size(142, 22);
@@ -345,15 +356,129 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "热矫直实绩";
             // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(614, 107);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(21, 13);
+            this.label22.TabIndex = 640;
+            this.label22.Text = "mm";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(614, 81);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(21, 13);
+            this.label21.TabIndex = 639;
+            this.label21.Text = "Mn";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(614, 51);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(28, 13);
+            this.label20.TabIndex = 638;
+            this.label20.Text = "m/s";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(614, 19);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(28, 13);
+            this.label19.TabIndex = 637;
+            this.label19.Text = "m/s";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(866, 81);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(21, 13);
+            this.label18.TabIndex = 636;
+            this.label18.Text = "mm";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(866, 47);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(21, 13);
+            this.label16.TabIndex = 635;
+            this.label16.Text = "mm";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(866, 19);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(21, 13);
+            this.label11.TabIndex = 31;
+            this.label11.Text = "mm";
+            // 
+            // SSP1
+            // 
+            this.SSP1.BackColor = System.Drawing.Color.Magenta;
+            this.SSP1.Font = new System.Drawing.Font("宋体", 8.75F);
+            this.SSP1.ForeColor = System.Drawing.Color.White;
+            this.SSP1.Location = new System.Drawing.Point(429, 132);
+            this.SSP1.Margin = new System.Windows.Forms.Padding(0);
+            this.SSP1.Name = "SSP1";
+            this.SSP1.Size = new System.Drawing.Size(70, 24);
+            this.SSP1.TabIndex = 634;
+            this.SSP1.Text = "出口订单";
+            this.SSP1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.SSP1.UseVisualStyleBackColor = false;
+            // 
+            // SSP5
+            // 
+            this.SSP5.BackColor = System.Drawing.Color.Blue;
+            this.SSP5.Font = new System.Drawing.Font("宋体", 8.75F);
+            this.SSP5.ForeColor = System.Drawing.Color.White;
+            this.SSP5.Location = new System.Drawing.Point(512, 132);
+            this.SSP5.Margin = new System.Windows.Forms.Padding(0);
+            this.SSP5.Name = "SSP5";
+            this.SSP5.Size = new System.Drawing.Size(70, 23);
+            this.SSP5.TabIndex = 633;
+            this.SSP5.Text = "定制配送";
+            this.SSP5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.SSP5.UseVisualStyleBackColor = false;
+            // 
+            // SSP4
+            // 
+            this.SSP4.BackColor = System.Drawing.Color.Tomato;
+            this.SSP4.Font = new System.Drawing.Font("宋体", 12.75F);
+            this.SSP4.ForeColor = System.Drawing.Color.Blue;
+            this.SSP4.Location = new System.Drawing.Point(262, 114);
+            this.SSP4.Margin = new System.Windows.Forms.Padding(0);
+            this.SSP4.Name = "SSP4";
+            this.SSP4.Size = new System.Drawing.Size(150, 37);
+            this.SSP4.TabIndex = 632;
+            this.SSP4.Text = "重点订单";
+            this.SSP4.UseVisualStyleBackColor = false;
+            // 
+            // label10
+            // 
+            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label10.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label10.Location = new System.Drawing.Point(12, 57);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(102, 41);
+            this.label10.TabIndex = 631;
+            this.label10.Text = "轧制规格";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // TXT_SIZE
             // 
             this.TXT_SIZE.BackColor = System.Drawing.Color.Yellow;
-            this.TXT_SIZE.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.TXT_SIZE.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.TXT_SIZE.ForeColor = System.Drawing.Color.Red;
             this.TXT_SIZE.Location = new System.Drawing.Point(12, 105);
-            this.TXT_SIZE.Multiline = true;
             this.TXT_SIZE.Name = "TXT_SIZE";
-            this.TXT_SIZE.Size = new System.Drawing.Size(227, 46);
+            this.TXT_SIZE.Size = new System.Drawing.Size(227, 31);
             this.TXT_SIZE.TabIndex = 630;
             // 
             // SDB_HL_PASS_CNT
@@ -684,7 +809,7 @@
             this.TXT_HL_WORK_DAT.Name = "TXT_HL_WORK_DAT";
             this.TXT_HL_WORK_DAT.Size = new System.Drawing.Size(142, 22);
             this.TXT_HL_WORK_DAT.TabIndex = 481;
-            this.TXT_HL_WORK_DAT.DoubleClick += new System.EventHandler(this.TXT_MILL_STA_TIME_DoubleClick);
+            this.TXT_HL_WORK_DAT.DoubleClick += new System.EventHandler(this.TXT_HL_WORK_DAT_DoubleClick);
             // 
             // label17
             // 
@@ -719,7 +844,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(934, 24);
+            this.label24.Location = new System.Drawing.Point(934, 18);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(20, 13);
             this.label24.TabIndex = 30;
@@ -797,130 +922,15 @@
             this.txt_RollingNo.Size = new System.Drawing.Size(115, 22);
             this.txt_RollingNo.TabIndex = 11;
             // 
-            // label10
-            // 
-            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label10.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label10.Location = new System.Drawing.Point(12, 57);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(102, 41);
-            this.label10.TabIndex = 631;
-            this.label10.Text = "轧制规格";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // SSP4
-            // 
-            this.SSP4.BackColor = System.Drawing.Color.Tomato;
-            this.SSP4.Font = new System.Drawing.Font("宋体", 12.75F);
-            this.SSP4.ForeColor = System.Drawing.Color.Blue;
-            this.SSP4.Location = new System.Drawing.Point(262, 114);
-            this.SSP4.Margin = new System.Windows.Forms.Padding(0);
-            this.SSP4.Name = "SSP4";
-            this.SSP4.Size = new System.Drawing.Size(150, 37);
-            this.SSP4.TabIndex = 632;
-            this.SSP4.Text = "重点订单";
-            this.SSP4.UseVisualStyleBackColor = false;
-            // 
-            // SSP1
-            // 
-            this.SSP1.BackColor = System.Drawing.Color.Magenta;
-            this.SSP1.Font = new System.Drawing.Font("宋体", 8.75F);
-            this.SSP1.ForeColor = System.Drawing.Color.White;
-            this.SSP1.Location = new System.Drawing.Point(429, 132);
-            this.SSP1.Margin = new System.Windows.Forms.Padding(0);
-            this.SSP1.Name = "SSP1";
-            this.SSP1.Size = new System.Drawing.Size(70, 24);
-            this.SSP1.TabIndex = 634;
-            this.SSP1.Text = "出口订单";
-            this.SSP1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.SSP1.UseVisualStyleBackColor = false;
-            // 
-            // SSP5
-            // 
-            this.SSP5.BackColor = System.Drawing.Color.Blue;
-            this.SSP5.Font = new System.Drawing.Font("宋体", 8.75F);
-            this.SSP5.ForeColor = System.Drawing.Color.White;
-            this.SSP5.Location = new System.Drawing.Point(512, 132);
-            this.SSP5.Margin = new System.Windows.Forms.Padding(0);
-            this.SSP5.Name = "SSP5";
-            this.SSP5.Size = new System.Drawing.Size(70, 23);
-            this.SSP5.TabIndex = 633;
-            this.SSP5.Text = "定制配送";
-            this.SSP5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.SSP5.UseVisualStyleBackColor = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(866, 19);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(21, 13);
-            this.label11.TabIndex = 31;
-            this.label11.Text = "mm";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(866, 47);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(21, 13);
-            this.label16.TabIndex = 635;
-            this.label16.Text = "mm";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(866, 81);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(21, 13);
-            this.label18.TabIndex = 636;
-            this.label18.Text = "mm";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(614, 19);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(28, 13);
-            this.label19.TabIndex = 637;
-            this.label19.Text = "m/s";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(614, 51);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(28, 13);
-            this.label20.TabIndex = 638;
-            this.label20.Text = "m/s";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(614, 81);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(21, 13);
-            this.label21.TabIndex = 639;
-            this.label21.Text = "Mn";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(614, 107);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(21, 13);
-            this.label22.TabIndex = 640;
-            this.label22.Text = "mm";
-            // 
             // CGC2020C
             // 
             this.ClientSize = new System.Drawing.Size(1138, 620);
-            this.Controls.Add(this.tab1);
+            this.Controls.Add(this.Tab1);
             this.Controls.Add(this.panel1);
             this.Name = "CGC2020C";
             this.Text = "热矫直实绩查询及修改界面_CGC2020C";
-            this.Load += new System.EventHandler(this.CGC2010C_Load);
-            this.tab1.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.CGC2020C_Load);
+            this.Tab1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -947,7 +957,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tab1;
+        private System.Windows.Forms.TabControl Tab1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private FarPoint.Win.Spread.FpSpread ss1;
@@ -1017,6 +1027,7 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label23;
 
     }
 }
