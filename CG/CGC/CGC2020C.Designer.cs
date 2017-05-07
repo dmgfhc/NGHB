@@ -696,6 +696,7 @@
             this.CHK_B.Size = new System.Drawing.Size(130, 17);
             this.CHK_B.TabIndex = 615;
             this.CHK_B.Text = "返红工艺超上限值";
+            this.CHK_B.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.CHK_B.UseVisualStyleBackColor = true;
             this.CHK_B.CheckedChanged += new System.EventHandler(this.CHK_B_CheckedChanged);
             // 
