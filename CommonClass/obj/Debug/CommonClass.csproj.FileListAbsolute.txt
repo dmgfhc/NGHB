@@ -58,3 +58,4 @@ D:\github\NGHB\CommonClass\obj\Debug\CommonClass.csproj.GenerateResource.Cache
 D:\github\NGHB\CommonClass\obj\Debug\CommonClass.dll.licenses
 D:\github\NGHB\CommonClass\obj\Debug\CommonClass.dll
 D:\github\NGHB\CommonClass\obj\Debug\CommonClass.pdb
+D:\github\NGHB\CommonClass\obj\Debug\CommonClass.csprojResolveAssemblyReference.cache

@@ -92,7 +92,7 @@ namespace CG
             p_SetMc("作业人员", TXT_HL_EMP, "NIR", "", "", "", "", imcseq); //17
             //p_SetMc(SDB_PLATE_THK,"R","","","",imcseq,"");//20
             p_SetMc(TXT_SIZE, "R", "", "", "", imcseq, ""); //18
-            p_SetMc(TXT_EXCEPTION, "IR", "", "", "", imcseq, ""); //19
+            p_SetMc(TXT_EXCEPTION, "I", "", "", "", imcseq, ""); //19
 
             p_McIni(Mc2, false);
             imcseq = 2;
@@ -175,11 +175,6 @@ namespace CG
             TXT_HL_SHIFT.Text = Gf_ShiftSet3("");
             TXT_HL_GROUP.Text = Gf_GroupSet(TXT_HL_SHIFT.Text.Trim(), Gf_DTSet("", "X"));
             TXT_HL_EMP.Text = GeneralCommon.sUserID;
-
-            unlockSpread(ss1);
-            unlockSpread(ss1);
-            unlockSpread(ss2);
-            unlockSpread(ss3);
         }
 
         public override bool Form_Cls()
@@ -200,6 +195,9 @@ namespace CG
             string simpcont;
             string sFlag;
             string sexport;
+
+            unlockSpread(ss1);
+
 
             if (Tab1.SelectedIndex == 0) {
                 p_Ref(0, 1, true, false);
@@ -238,6 +236,8 @@ namespace CG
             } else if (Tab1.SelectedIndex == 1) {
                 p_Ref(2, 2,true,false);
             }
+
+            lockSpread(ss1);
 
         }
 
@@ -650,6 +650,15 @@ namespace CG
             for (int i = 0; i < columnCount; i++)
             {
                 e.ActiveSheet.Columns[i].Locked = false;
+            }
+        }
+
+        public void lockSpread(FpSpread e)
+        {
+            int columnCount = e.Sheets[0].ColumnCount;
+            for (int i = 0; i < columnCount; i++)
+            {
+                e.ActiveSheet.Columns[i].Locked = true;
             }
         }
 

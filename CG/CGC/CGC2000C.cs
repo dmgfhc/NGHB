@@ -414,11 +414,6 @@ namespace CG {
             TXT_GROUP.Text = Gf_GroupSet(TXT_SHIFT.Text.Trim(), Gf_DTSet("", "X"));
             TXT_EMP1.Text = GeneralCommon.sUserID;
 
-            unlockSpread(ss1);
-            unlockSpread(ss2);
-            unlockSpread(ss3);
-            unlockSpread(ss4);
-
             if (base.sAuthority.Substring(0, 3) == "111") {
                 cmd_Pass.Enabled = true;
                 //SSCommand1.Enabled = true;
@@ -441,6 +436,10 @@ namespace CG {
             string sFlag;
             string sexport;
             string sOrdcnt;
+
+
+            unlockSpread(ss2);
+
 
             sCurDate = DateTime.Now.ToString("yyyyMM");
 
@@ -519,6 +518,8 @@ namespace CG {
                 }
 
             }
+
+            lockSpread(ss2);
 
             //    Call MDIMain.FormMenuSetting(Me, FormType, "RE", sAuthority)
         }
@@ -926,6 +927,15 @@ namespace CG {
             int columnCount = e.Sheets[0].ColumnCount;
             for (int i = 0; i < columnCount; i++) {
                 e.ActiveSheet.Columns[i].Locked = false;
+            }
+        }
+
+        public void lockSpread(FpSpread e)
+        {
+            int columnCount = e.Sheets[0].ColumnCount;
+            for (int i = 0; i < columnCount; i++)
+            {
+                e.ActiveSheet.Columns[i].Locked = true;
             }
         }
 

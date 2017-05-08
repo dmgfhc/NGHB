@@ -478,7 +478,7 @@
             this.TXT_SIZE.ForeColor = System.Drawing.Color.Red;
             this.TXT_SIZE.Location = new System.Drawing.Point(12, 105);
             this.TXT_SIZE.Name = "TXT_SIZE";
-            this.TXT_SIZE.Size = new System.Drawing.Size(227, 31);
+            this.TXT_SIZE.Size = new System.Drawing.Size(247, 31);
             this.TXT_SIZE.TabIndex = 630;
             // 
             // SDB_HL_PASS_CNT
