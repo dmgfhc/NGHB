@@ -181,7 +181,7 @@
             this.TXT_EMP2.CustomSetting.Add(bControlFiledSetting1);
             this.TXT_EMP2.InputControl = this.TXT_EMP2;
             this.TXT_EMP2.Location = new System.Drawing.Point(972, 44);
-            this.TXT_EMP2.MaxLength = 7;
+            this.TXT_EMP2.MaxLength = 8;
             this.TXT_EMP2.Name = "TXT_EMP2";
             this.TXT_EMP2.Size = new System.Drawing.Size(54, 22);
             this.TXT_EMP2.sJoin = "";
@@ -197,7 +197,7 @@
             this.TXT_EMP1.CustomSetting.Add(bControlFiledSetting2);
             this.TXT_EMP1.InputControl = this.TXT_EMP1;
             this.TXT_EMP1.Location = new System.Drawing.Point(912, 44);
-            this.TXT_EMP1.MaxLength = 7;
+            this.TXT_EMP1.MaxLength = 8;
             this.TXT_EMP1.Name = "TXT_EMP1";
             this.TXT_EMP1.Size = new System.Drawing.Size(54, 22);
             this.TXT_EMP1.sJoin = "";
@@ -213,7 +213,7 @@
             this.TXT_EMP3.CustomSetting.Add(bControlFiledSetting3);
             this.TXT_EMP3.InputControl = this.TXT_EMP3;
             this.TXT_EMP3.Location = new System.Drawing.Point(1032, 44);
-            this.TXT_EMP3.MaxLength = 7;
+            this.TXT_EMP3.MaxLength = 8;
             this.TXT_EMP3.Name = "TXT_EMP3";
             this.TXT_EMP3.Size = new System.Drawing.Size(54, 22);
             this.TXT_EMP3.sJoin = "";

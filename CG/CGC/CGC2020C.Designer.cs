@@ -127,7 +127,7 @@
             this.TXT_HL_EMP.CustomSetting.Add(bControlFiledSetting1);
             this.TXT_HL_EMP.InputControl = this.TXT_HL_EMP;
             this.TXT_HL_EMP.Location = new System.Drawing.Point(1005, 100);
-            this.TXT_HL_EMP.MaxLength = 7;
+            this.TXT_HL_EMP.MaxLength = 8;
             this.TXT_HL_EMP.Name = "TXT_HL_EMP";
             this.TXT_HL_EMP.Size = new System.Drawing.Size(104, 22);
             this.TXT_HL_EMP.sJoin = "";
