@@ -845,7 +845,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(934, 18);
+            this.label24.Location = new System.Drawing.Point(980, 18);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(20, 13);
             this.label24.TabIndex = 30;
@@ -854,15 +854,16 @@
             // txt_RollingTmp
             // 
             this.txt_RollingTmp.Enabled = false;
-            this.txt_RollingTmp.Location = new System.Drawing.Point(851, 15);
+            this.txt_RollingTmp.Location = new System.Drawing.Point(897, 15);
             this.txt_RollingTmp.Name = "txt_RollingTmp";
             this.txt_RollingTmp.Size = new System.Drawing.Size(77, 22);
             this.txt_RollingTmp.TabIndex = 29;
+            this.txt_RollingTmp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
             // 
             this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label7.Location = new System.Drawing.Point(748, 15);
+            this.label7.Location = new System.Drawing.Point(794, 15);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(97, 22);
             this.label7.TabIndex = 28;
@@ -872,15 +873,16 @@
             // txt_Stlgrd
             // 
             this.txt_Stlgrd.Enabled = false;
-            this.txt_Stlgrd.Location = new System.Drawing.Point(568, 15);
+            this.txt_Stlgrd.Location = new System.Drawing.Point(614, 15);
             this.txt_Stlgrd.Name = "txt_Stlgrd";
             this.txt_Stlgrd.Size = new System.Drawing.Size(174, 22);
             this.txt_Stlgrd.TabIndex = 27;
+            this.txt_Stlgrd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
             // 
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label6.Location = new System.Drawing.Point(465, 15);
+            this.label6.Location = new System.Drawing.Point(511, 15);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(97, 22);
             this.label6.TabIndex = 26;
@@ -892,8 +894,9 @@
             this.txt_RollingSize.Enabled = false;
             this.txt_RollingSize.Location = new System.Drawing.Point(325, 15);
             this.txt_RollingSize.Name = "txt_RollingSize";
-            this.txt_RollingSize.Size = new System.Drawing.Size(134, 22);
+            this.txt_RollingSize.Size = new System.Drawing.Size(180, 22);
             this.txt_RollingSize.TabIndex = 25;
+            this.txt_RollingSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ULabel43
             // 

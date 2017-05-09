@@ -96,8 +96,8 @@ namespace CG
 
             p_McIni(Mc2, false);
             imcseq = 2;
-            p_SetMc("矫直实绩开始时间", txt_RstFormDate, "PN", "", "", "", "", imcseq);
-            p_SetMc("矫直实绩结束时间", txt_RstToDate, "PN", "", "", "", "", imcseq);
+            p_SetMc("矫直实绩开始时间", txt_RstFormDate, "P", "", "", "", "", imcseq);
+            p_SetMc("矫直实绩结束时间", txt_RstToDate, "P", "", "", "", "", imcseq);
 
             int iheadrow;
             int iscseq;
