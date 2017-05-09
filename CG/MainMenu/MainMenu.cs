@@ -2391,7 +2391,7 @@ namespace CG
         {
             if (!GeneralCommon.Gf_IsFormLoad("WGC3010C"))
             {
-                WGC3010C WGC3010C = new WGC3010C();
+                CGD2050C WGC3010C = new CGD2050C();
                 WGC3010C.MdiParent = this;
                 WGC3010C.Show();
                 WGC3010C.WindowState = FormWindowState.Maximized;
