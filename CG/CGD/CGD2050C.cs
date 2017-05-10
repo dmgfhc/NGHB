@@ -177,11 +177,11 @@ namespace CG
             //41-45
             p_SetMc("备注", TXT_REMARK, "IR", "", "", "", "", imcseq);
             p_SetMc("判定等级", TXT_SURF_GRD, "RNI", "", "", "", "", imcseq);
-            p_SetMc("判废原因", f4ETCR_SCRAP, "RI", "", "", "", "", imcseq);
-            p_SetMc("原始标准号", TXT_ORG_STDSPEC, "R", "", "", "", "", imcseq);
+            p_SetMc("判废原因", txt_Scrap_code, "RI", "", "", "", "", imcseq);
+            p_SetMc("原始标准号", txt_stdspec, "R", "", "", "", "", imcseq);
             p_SetMc("改判标准号", TEXT_STDSPEC, "I", "", "", "", "", imcseq);
             //46-50F4ETCN_STDSPEC
-            p_SetMc("改判原因", f4ETCR_CHG_GRD_RES, "RI", "3", "", "", "", imcseq);
+            p_SetMc("改判原因", TXT_INSP_FLAW_NAME2, "RI", "3", "", "", "", imcseq);
             p_SetMc("责任单位", f4ETCR_CHG_GRD_DEP, "RI", "3", "", "", "", imcseq);
             p_SetMc("余材原因", f4ETCN_WOO_RSN, "RI", "2", "", "", "", imcseq);
             p_SetMc("订单用途", f4ETCR_ENDUSE_CD, "RI", "3", "", "", "", imcseq);
@@ -308,15 +308,15 @@ namespace CG
             TXT_B_FLAW_NAME1.Text = "";
             TXT_T_FLAW_NAME.Text = "";
             TXT_T_FLAW_NAME1.Text = "";
-            TXT_SCRAP.Text = "";
-            TXT_CHG_GRD_RES.Text = "";
+            txt_Scrap_name.Text = "";
+            TXT_INSP_FLAW2.Text = "";
             TXT_ENDUSE_CD.Text = "";
             f4ETCR_B_FLAW_CD.Text = "";
             f4ETCR_B_FLAW_CD1.Text = "";
             f4ETCR_T_FLAW_CD.Text = "";
             f4ETCR_T_FLAW_CD1.Text = "";
-            f4ETCR_SCRAP.Text = "";
-            f4ETCR_CHG_GRD_RES.Text = "";
+            txt_Scrap_code.Text = "";
+            TXT_INSP_FLAW_NAME2.Text = "";
 
             //当单击表单时，按照单击行所对应钢板号查询钢板探伤详细信息
             TXT_PLATE_NO_EDT.Text = ss1_Sheet1.Cells[e.Row, iSs1_Plate_No].Text;
@@ -348,15 +348,15 @@ namespace CG
        (GeneralCommon.M_CN1, "SELECT CD_SHORT_NAME FROM ZP_CD T WHERE CD_MANA_NO = 'G0002' AND T.CD =" + "'" + f4ETCR_T_FLAW_CD1.Text + "'");
 
 
-            if (f4ETCR_SCRAP.Text != "")
-                TXT_SCRAP.Text =
+            if (txt_Scrap_code.Text != "")
+                txt_Scrap_name.Text =
            GeneralCommon.Gf_CodeFind
-       (GeneralCommon.M_CN1, "SELECT CD_SHORT_NAME FROM ZP_CD T WHERE CD_MANA_NO = 'G0017' AND T.CD =" + "'" + f4ETCR_SCRAP.Text + "'");
+       (GeneralCommon.M_CN1, "SELECT CD_SHORT_NAME FROM ZP_CD T WHERE CD_MANA_NO = 'G0017' AND T.CD =" + "'" + txt_Scrap_code.Text + "'");
 
-            if (f4ETCR_CHG_GRD_RES.Text != "")
-                TXT_CHG_GRD_RES.Text =
+            if (TXT_INSP_FLAW_NAME2.Text != "")
+                TXT_INSP_FLAW2.Text =
            GeneralCommon.Gf_CodeFind
-       (GeneralCommon.M_CN1, "SELECT CD_SHORT_NAME FROM ZP_CD T WHERE CD_MANA_NO = 'G0002' AND T.CD =" + "'" + f4ETCR_CHG_GRD_RES.Text + "'");
+       (GeneralCommon.M_CN1, "SELECT CD_SHORT_NAME FROM ZP_CD T WHERE CD_MANA_NO = 'G0002' AND T.CD =" + "'" + TXT_INSP_FLAW_NAME2.Text + "'");
 
         }
 
@@ -460,14 +460,14 @@ namespace CG
 
         private void f4ETCR_SCRAP_KeyUp(object sender, KeyEventArgs e)
         {
-            f4ETCR_SCRAP.Text = f4ETCR_SCRAP.Text.ToUpper();
-            f4ETCR_SCRAP.SelectionStart = f4ETCR_SCRAP.Text.Length;
+            txt_Scrap_code.Text = txt_Scrap_code.Text.ToUpper();
+            txt_Scrap_code.SelectionStart = txt_Scrap_code.Text.Length;
         }
 
         private void f4ETCR_CHG_GRD_RES_KeyUp(object sender, KeyEventArgs e)
         {
-            f4ETCR_CHG_GRD_RES.Text = f4ETCR_CHG_GRD_RES.Text.ToUpper();
-            f4ETCR_CHG_GRD_RES.SelectionStart = f4ETCR_CHG_GRD_RES.Text.Length;
+            TXT_INSP_FLAW_NAME2.Text = TXT_INSP_FLAW_NAME2.Text.ToUpper();
+            TXT_INSP_FLAW_NAME2.SelectionStart = TXT_INSP_FLAW_NAME2.Text.Length;
         }
 
         private void f4ETCR_ENDUSE_CD_KeyUp(object sender, KeyEventArgs e)
