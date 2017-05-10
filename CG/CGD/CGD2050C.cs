@@ -140,14 +140,14 @@ namespace CG
             p_SetMc("上表小缺陷1代码", f4ETCR_T_FLAW_CD1, "IR", "3", "", "", "", imcseq);
             //11-15
          //   p_SetMc("上表小缺陷1名称", TXT_T_FLAW_NAME1, "L", "", "", "", "", imcseq);
-            p_SetMc("上表面判定", TXT_T_GRID_GRD, "IR", "", "", "", "", imcseq);
-            p_SetMc("上表面面积比", SDB_T_GRID_YRD, "IR", "", "", "", "", imcseq);
-            p_SetMc("上表面深度", SDB_T_GRID_DEEP, "IR", "", "", "", "", imcseq);
-            p_SetMc("下表面判定", TXT_B_GRID_GRD, "IR", "", "", "", "", imcseq);
+            p_SetMc("上表面判定", TXT_TOP_GRID_GRD, "IR", "", "", "", "", imcseq);
+            p_SetMc("上表面面积比", SDB_TOP_GRID_YRD, "IR", "", "", "", "", imcseq);
+            p_SetMc("上表面深度", SDB_TOP_GRID_DEEP, "IR", "", "", "", "", imcseq);
+            p_SetMc("下表面判定", TXT_BOT_GRID_GRD, "IR", "", "", "", "", imcseq);
             //16-20
-            p_SetMc("下表面面积比", SDB_B_GRID_YRD, "IR", "", "", "", "", imcseq);
-            p_SetMc("下表面深度", SDB_B_GRID_DEEP, "IR", "", "", "", "", imcseq);
-            p_SetMc("修磨时间", MDATE_GRID_DATE, "IR", "", "", "", "", imcseq);
+            p_SetMc("下表面面积比", SDB_BOT_GRID_YRD, "IR", "", "", "", "", imcseq);
+            p_SetMc("下表面深度", SDB_BOT_GRID_DEEP, "IR", "", "", "", "", imcseq);
+            p_SetMc("修磨时间", TXT_GRID_TIME, "IR", "", "", "", "", imcseq);
             p_SetMc("厚度", SDB_THK, "RNI", "", "", "", "", imcseq);
             p_SetMc("宽度", SDB_WID, "RNI", "", "", "", "", imcseq);
             //21-25
@@ -202,16 +202,16 @@ namespace CG
             //base.sSvrPgmPkgName = "PKG_LIQIAN_TEST";
             Form_Define();
             f4ETCR_CUR_INV.Text = "HB";
-            TXT_T_GRID_GRD.Enabled = false;
-            SDB_T_GRID_YRD.Enabled = false;
-            SDB_T_GRID_DEEP.Enabled = false;
-            TXT_B_GRID_GRD.Enabled = false;
-            SDB_B_GRID_YRD.Enabled = false;
-            SDB_B_GRID_DEEP.Enabled = false;
-            MDATE_GRID_DATE.Enabled = false;
+            TXT_TOP_GRID_GRD.Enabled = false;
+            SDB_TOP_GRID_YRD.Enabled = false;
+            SDB_TOP_GRID_DEEP.Enabled = false;
+            TXT_BOT_GRID_GRD.Enabled = false;
+            SDB_BOT_GRID_YRD.Enabled = false;
+            SDB_BOT_GRID_DEEP.Enabled = false;
+            TXT_GRID_TIME.Enabled = false;
             LISTB_T_GRID_GRD.Enabled= false;
             LISTB_B_GRID_GRD.Enabled = false;
-            MDATE_GRID_DATE.Enabled = false;
+            TXT_GRID_TIME.Enabled = false;
 
             label41.Visible = false;
 
@@ -239,7 +239,7 @@ namespace CG
             TXT_EMP_CD.Text = GeneralCommon.sUserID;
 
             //确保修磨时间已经输入
-            if (MDATE_GRID_DATE.Text == "    -  -     :  :" && CHK_CL_FL.Checked == true)
+            if (TXT_GRID_TIME.Text == "    -  -     :  :" && CHK_CL_FL.Checked == true)
             {
                 GeneralCommon.Gp_MsgBoxDisplay("请输入修磨时间", "I", "");
 
@@ -250,7 +250,7 @@ namespace CG
             {
                 if (CHK_CL_FL.Checked == true)
                 {
-                    if (TXT_T_GRID_GRD.Text == "N" || TXT_B_GRID_GRD.Text == "N")
+                    if (TXT_TOP_GRID_GRD.Text == "N" || TXT_BOT_GRID_GRD.Text == "N")
                     {
                         GeneralCommon.Gp_MsgBoxDisplay("修磨不合格不允许判定正品！", "I", "");
                         return;
@@ -267,12 +267,12 @@ namespace CG
         #region //列表选择（判定结果）
         private void LISTB_T_GRID_GRD_Click(object sender, EventArgs e)
         {
-            TXT_T_GRID_GRD.Text = Convert.ToString(LISTB_T_GRID_GRD.SelectedItem).Substring(0, 1);
+            TXT_TOP_GRID_GRD.Text = Convert.ToString(LISTB_T_GRID_GRD.SelectedItem).Substring(0, 1);
         }
 
         private void LISTB_B_GRID_GRD_Click(object sender, EventArgs e)
         {
-            TXT_B_GRID_GRD.Text = Convert.ToString(LISTB_B_GRID_GRD.SelectedItem).Substring(0, 1);
+            TXT_BOT_GRID_GRD.Text = Convert.ToString(LISTB_B_GRID_GRD.SelectedItem).Substring(0, 1);
         }
 
         private void LISTB_SURF_GRD13_Click(object sender, EventArgs e)
@@ -425,11 +425,6 @@ namespace CG
 
 
         }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
 //以下事件用于将F4控件代码小写转换成大写
         private void f4ETCR_B_FLAW_CD_KeyUp(object sender, KeyEventArgs e)
         {
@@ -499,6 +494,11 @@ namespace CG
             {
                 label41.Visible = false;
             }
+        }
+
+        private void numBox4_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         
