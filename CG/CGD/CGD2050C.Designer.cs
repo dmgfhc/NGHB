@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            CommonClass.BControlFiledSetting bControlFiledSetting17 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting18 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting1 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting2 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting3 = new CommonClass.BControlFiledSetting();
@@ -42,8 +44,6 @@
             CommonClass.BControlFiledSetting bControlFiledSetting12 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting13 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting14 = new CommonClass.BControlFiledSetting();
-            CommonClass.BControlFiledSetting bControlFiledSetting15 = new CommonClass.BControlFiledSetting();
-            CommonClass.BControlFiledSetting bControlFiledSetting16 = new CommonClass.BControlFiledSetting();
             this.TXT_INSP_FLAW_NAME2 = new CommonClass.F4ETCR();
             this.TXT_INSP_FLAW2 = new System.Windows.Forms.TextBox();
             this.TXT_SIZE_KND = new CommonClass.F4ETCR();
@@ -69,8 +69,8 @@
             this.cmd_Off = new System.Windows.Forms.Button();
             this.txt_ResonCd = new System.Windows.Forms.TextBox();
             this.txtCl = new System.Windows.Forms.CheckBox();
-            this.txtGrid = new System.Windows.Forms.CheckBox();
-            this.txtGas = new System.Windows.Forms.CheckBox();
+            this.txtGrid1 = new System.Windows.Forms.CheckBox();
+            this.txtGas1 = new System.Windows.Forms.CheckBox();
             this.chkCl = new System.Windows.Forms.CheckBox();
             this.chkGrid = new System.Windows.Forms.CheckBox();
             this.chkGas = new System.Windows.Forms.CheckBox();
@@ -186,14 +186,12 @@
             this.COM_PF = new System.Windows.Forms.ComboBox();
             this.txt_stdspec = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.opt_CHK_PRD_GRD5 = new System.Windows.Forms.RadioButton();
             this.opt_CHK_PRD_GRD4 = new System.Windows.Forms.RadioButton();
             this.opt_CHK_PRD_GRD2 = new System.Windows.Forms.RadioButton();
             this.opt_CHK_PRD_GRD1 = new System.Windows.Forms.RadioButton();
             this.opt_CHK_PRD_GRD3 = new System.Windows.Forms.RadioButton();
             this.opt_CHK_PRD_GRD0 = new System.Windows.Forms.RadioButton();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.opt_CHK_SUR_GRD1 = new System.Windows.Forms.RadioButton();
             this.opt_CHK_SUR_GRD0 = new System.Windows.Forms.RadioButton();
             this.label20 = new System.Windows.Forms.Label();
@@ -258,29 +256,33 @@
             this.label42 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
+            this.txtGrid = new System.Windows.Forms.TextBox();
+            this.txtGas = new System.Windows.Forms.TextBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ss1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ss1_Sheet1)).BeginInit();
             this.groupBox9.SuspendLayout();
             this.panel4.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
             // TXT_INSP_FLAW_NAME2
             // 
-            bControlFiledSetting1.ColumnID = "T.CD_SHORT_NAME";
-            bControlFiledSetting1.TargetControl = this.TXT_INSP_FLAW_NAME2;
-            bControlFiledSetting2.ColumnID = "T.CD";
-            bControlFiledSetting2.TargetControl = this.TXT_INSP_FLAW2;
-            this.TXT_INSP_FLAW_NAME2.CustomSetting.Add(bControlFiledSetting1);
-            this.TXT_INSP_FLAW_NAME2.CustomSetting.Add(bControlFiledSetting2);
+            bControlFiledSetting17.ColumnID = "T.CD_SHORT_NAME";
+            bControlFiledSetting17.TargetControl = this.TXT_INSP_FLAW_NAME2;
+            bControlFiledSetting18.ColumnID = "T.CD";
+            bControlFiledSetting18.TargetControl = this.TXT_INSP_FLAW2;
+            this.TXT_INSP_FLAW_NAME2.CustomSetting.Add(bControlFiledSetting17);
+            this.TXT_INSP_FLAW_NAME2.CustomSetting.Add(bControlFiledSetting18);
             this.TXT_INSP_FLAW_NAME2.InputControl = this.TXT_INSP_FLAW_NAME2;
             this.TXT_INSP_FLAW_NAME2.Location = new System.Drawing.Point(89, 215);
             this.TXT_INSP_FLAW_NAME2.Name = "TXT_INSP_FLAW_NAME2";
@@ -302,12 +304,12 @@
             // 
             // TXT_SIZE_KND
             // 
-            bControlFiledSetting3.ColumnID = "T.CD";
-            bControlFiledSetting3.TargetControl = this.TXT_SIZE_KND;
-            bControlFiledSetting4.ColumnID = "T.CD_SHORT_NAME";
-            bControlFiledSetting4.TargetControl = this.TXT_SIZE_KND_NAME;
-            this.TXT_SIZE_KND.CustomSetting.Add(bControlFiledSetting3);
-            this.TXT_SIZE_KND.CustomSetting.Add(bControlFiledSetting4);
+            bControlFiledSetting1.ColumnID = "T.CD";
+            bControlFiledSetting1.TargetControl = this.TXT_SIZE_KND;
+            bControlFiledSetting2.ColumnID = "T.CD_SHORT_NAME";
+            bControlFiledSetting2.TargetControl = this.TXT_SIZE_KND_NAME;
+            this.TXT_SIZE_KND.CustomSetting.Add(bControlFiledSetting1);
+            this.TXT_SIZE_KND.CustomSetting.Add(bControlFiledSetting2);
             this.TXT_SIZE_KND.InputControl = this.TXT_SIZE_KND;
             this.TXT_SIZE_KND.Location = new System.Drawing.Point(94, 260);
             this.TXT_SIZE_KND.Name = "TXT_SIZE_KND";
@@ -327,12 +329,12 @@
             // 
             // TXT_INSP_FLAW_NAME3
             // 
-            bControlFiledSetting5.ColumnID = "T.CD_SHORT_NAME";
-            bControlFiledSetting5.TargetControl = this.TXT_INSP_FLAW_NAME3;
-            bControlFiledSetting6.ColumnID = "T.CD";
-            bControlFiledSetting6.TargetControl = this.TXT_INSP_FLAW3;
-            this.TXT_INSP_FLAW_NAME3.CustomSetting.Add(bControlFiledSetting5);
-            this.TXT_INSP_FLAW_NAME3.CustomSetting.Add(bControlFiledSetting6);
+            bControlFiledSetting3.ColumnID = "T.CD_SHORT_NAME";
+            bControlFiledSetting3.TargetControl = this.TXT_INSP_FLAW_NAME3;
+            bControlFiledSetting4.ColumnID = "T.CD";
+            bControlFiledSetting4.TargetControl = this.TXT_INSP_FLAW3;
+            this.TXT_INSP_FLAW_NAME3.CustomSetting.Add(bControlFiledSetting3);
+            this.TXT_INSP_FLAW_NAME3.CustomSetting.Add(bControlFiledSetting4);
             this.TXT_INSP_FLAW_NAME3.InputControl = this.TXT_INSP_FLAW_NAME3;
             this.TXT_INSP_FLAW_NAME3.Location = new System.Drawing.Point(89, 18);
             this.TXT_INSP_FLAW_NAME3.Name = "TXT_INSP_FLAW_NAME3";
@@ -353,12 +355,12 @@
             // 
             // TXT_INSP_FLAW_NAME0
             // 
-            bControlFiledSetting7.ColumnID = "T.CD_SHORT_NAME";
-            bControlFiledSetting7.TargetControl = this.TXT_INSP_FLAW_NAME0;
-            bControlFiledSetting8.ColumnID = "T.CD";
-            bControlFiledSetting8.TargetControl = this.TXT_INSP_FLAW0;
-            this.TXT_INSP_FLAW_NAME0.CustomSetting.Add(bControlFiledSetting7);
-            this.TXT_INSP_FLAW_NAME0.CustomSetting.Add(bControlFiledSetting8);
+            bControlFiledSetting5.ColumnID = "T.CD_SHORT_NAME";
+            bControlFiledSetting5.TargetControl = this.TXT_INSP_FLAW_NAME0;
+            bControlFiledSetting6.ColumnID = "T.CD";
+            bControlFiledSetting6.TargetControl = this.TXT_INSP_FLAW0;
+            this.TXT_INSP_FLAW_NAME0.CustomSetting.Add(bControlFiledSetting5);
+            this.TXT_INSP_FLAW_NAME0.CustomSetting.Add(bControlFiledSetting6);
             this.TXT_INSP_FLAW_NAME0.InputControl = this.TXT_INSP_FLAW_NAME0;
             this.TXT_INSP_FLAW_NAME0.Location = new System.Drawing.Point(89, 49);
             this.TXT_INSP_FLAW_NAME0.Name = "TXT_INSP_FLAW_NAME0";
@@ -379,9 +381,9 @@
             // 
             // TXT_INSP_MAN
             // 
-            bControlFiledSetting9.ColumnID = "CD";
-            bControlFiledSetting9.TargetControl = this.TXT_INSP_MAN;
-            this.TXT_INSP_MAN.CustomSetting.Add(bControlFiledSetting9);
+            bControlFiledSetting7.ColumnID = "CD";
+            bControlFiledSetting7.TargetControl = this.TXT_INSP_MAN;
+            this.TXT_INSP_MAN.CustomSetting.Add(bControlFiledSetting7);
             this.TXT_INSP_MAN.InputControl = this.TXT_INSP_MAN;
             this.TXT_INSP_MAN.Location = new System.Drawing.Point(92, 18);
             this.TXT_INSP_MAN.MaxLength = 7;
@@ -395,9 +397,9 @@
             // 
             // TXT_INSP_MAN_TAIL
             // 
-            bControlFiledSetting10.ColumnID = "CD";
-            bControlFiledSetting10.TargetControl = this.TXT_INSP_MAN_TAIL;
-            this.TXT_INSP_MAN_TAIL.CustomSetting.Add(bControlFiledSetting10);
+            bControlFiledSetting8.ColumnID = "CD";
+            bControlFiledSetting8.TargetControl = this.TXT_INSP_MAN_TAIL;
+            this.TXT_INSP_MAN_TAIL.CustomSetting.Add(bControlFiledSetting8);
             this.TXT_INSP_MAN_TAIL.InputControl = this.TXT_INSP_MAN_TAIL;
             this.TXT_INSP_MAN_TAIL.Location = new System.Drawing.Point(265, 18);
             this.TXT_INSP_MAN_TAIL.MaxLength = 7;
@@ -411,12 +413,12 @@
             // 
             // txt_Scrap_code
             // 
-            bControlFiledSetting11.ColumnID = "T.CD";
-            bControlFiledSetting11.TargetControl = this.txt_Scrap_code;
-            bControlFiledSetting12.ColumnID = "T.CD_SHORT_NAME";
-            bControlFiledSetting12.TargetControl = this.txt_Scrap_name;
-            this.txt_Scrap_code.CustomSetting.Add(bControlFiledSetting11);
-            this.txt_Scrap_code.CustomSetting.Add(bControlFiledSetting12);
+            bControlFiledSetting9.ColumnID = "T.CD";
+            bControlFiledSetting9.TargetControl = this.txt_Scrap_code;
+            bControlFiledSetting10.ColumnID = "T.CD_SHORT_NAME";
+            bControlFiledSetting10.TargetControl = this.txt_Scrap_name;
+            this.txt_Scrap_code.CustomSetting.Add(bControlFiledSetting9);
+            this.txt_Scrap_code.CustomSetting.Add(bControlFiledSetting10);
             this.txt_Scrap_code.Enabled = false;
             this.txt_Scrap_code.InputControl = this.txt_Scrap_code;
             this.txt_Scrap_code.Location = new System.Drawing.Point(200, 118);
@@ -439,12 +441,12 @@
             // 
             // txt_Color_code
             // 
-            bControlFiledSetting13.ColumnID = "T.CD";
-            bControlFiledSetting13.TargetControl = this.txt_Color_code;
-            bControlFiledSetting14.ColumnID = "T.CD_SHORT_NAME";
-            bControlFiledSetting14.TargetControl = this.txt_Color_name;
-            this.txt_Color_code.CustomSetting.Add(bControlFiledSetting13);
-            this.txt_Color_code.CustomSetting.Add(bControlFiledSetting14);
+            bControlFiledSetting11.ColumnID = "T.CD";
+            bControlFiledSetting11.TargetControl = this.txt_Color_code;
+            bControlFiledSetting12.ColumnID = "T.CD_SHORT_NAME";
+            bControlFiledSetting12.TargetControl = this.txt_Color_name;
+            this.txt_Color_code.CustomSetting.Add(bControlFiledSetting11);
+            this.txt_Color_code.CustomSetting.Add(bControlFiledSetting12);
             this.txt_Color_code.InputControl = this.txt_Color_code;
             this.txt_Color_code.Location = new System.Drawing.Point(89, 240);
             this.txt_Color_code.MaxLength = 2;
@@ -467,16 +469,16 @@
             // 
             // txt_stdspec_chg
             // 
-            bControlFiledSetting15.ColumnID = "CD_SHORT_NAME";
-            bControlFiledSetting15.TargetControl = this.txt_stdspec_chg;
-            bControlFiledSetting16.ColumnID = "CD_NAME";
-            bControlFiledSetting16.TargetControl = this.txt_stdspec_name_chg;
-            this.txt_stdspec_chg.CustomSetting.Add(bControlFiledSetting15);
-            this.txt_stdspec_chg.CustomSetting.Add(bControlFiledSetting16);
+            bControlFiledSetting13.ColumnID = "CD_SHORT_NAME";
+            bControlFiledSetting13.TargetControl = this.txt_stdspec_chg;
+            bControlFiledSetting14.ColumnID = "CD_NAME";
+            bControlFiledSetting14.TargetControl = this.txt_stdspec_name_chg;
+            this.txt_stdspec_chg.CustomSetting.Add(bControlFiledSetting13);
+            this.txt_stdspec_chg.CustomSetting.Add(bControlFiledSetting14);
             this.txt_stdspec_chg.InputControl = this.txt_stdspec_chg;
             this.txt_stdspec_chg.Location = new System.Drawing.Point(6, 190);
             this.txt_stdspec_chg.Name = "txt_stdspec_chg";
-            this.txt_stdspec_chg.Size = new System.Drawing.Size(92, 22);
+            this.txt_stdspec_chg.Size = new System.Drawing.Size(128, 22);
             this.txt_stdspec_chg.sJoin = "";
             this.txt_stdspec_chg.sSqletc = "SELECT CD_SHORT_NAME 标准代号, CD_NAME 标准中文名 FROM ZP_CD WHERE CD_MANA_NO = \'G0030\'";
             this.txt_stdspec_chg.TabIndex = 517;
@@ -484,10 +486,10 @@
             // 
             // txt_stdspec_name_chg
             // 
-            this.txt_stdspec_name_chg.Location = new System.Drawing.Point(104, 190);
+            this.txt_stdspec_name_chg.Location = new System.Drawing.Point(133, 190);
             this.txt_stdspec_name_chg.MaxLength = 40;
             this.txt_stdspec_name_chg.Name = "txt_stdspec_name_chg";
-            this.txt_stdspec_name_chg.Size = new System.Drawing.Size(221, 22);
+            this.txt_stdspec_name_chg.Size = new System.Drawing.Size(239, 22);
             this.txt_stdspec_name_chg.TabIndex = 518;
             // 
             // groupBox2
@@ -496,7 +498,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox2.Location = new System.Drawing.Point(0, 79);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1084, 191);
+            this.groupBox2.Size = new System.Drawing.Size(1137, 191);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
@@ -508,7 +510,7 @@
             this.ss1.Name = "ss1";
             this.ss1.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
             this.ss1_Sheet1});
-            this.ss1.Size = new System.Drawing.Size(1078, 170);
+            this.ss1.Size = new System.Drawing.Size(1131, 170);
             this.ss1.TabIndex = 1;
             this.ss1.CellDoubleClick += new FarPoint.Win.Spread.CellClickEventHandler(this.ss1_CellDoubleClick);
             // 
@@ -578,12 +580,14 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.txtGas);
+            this.panel4.Controls.Add(this.txtGrid);
             this.panel4.Controls.Add(this.cbo_ResonDesc);
             this.panel4.Controls.Add(this.cmd_Off);
             this.panel4.Controls.Add(this.txt_ResonCd);
             this.panel4.Controls.Add(this.txtCl);
-            this.panel4.Controls.Add(this.txtGrid);
-            this.panel4.Controls.Add(this.txtGas);
+            this.panel4.Controls.Add(this.txtGrid1);
+            this.panel4.Controls.Add(this.txtGas1);
             this.panel4.Controls.Add(this.chkCl);
             this.panel4.Controls.Add(this.chkGrid);
             this.panel4.Controls.Add(this.chkGas);
@@ -666,23 +670,23 @@
             this.txtCl.TabIndex = 44;
             this.txtCl.UseVisualStyleBackColor = true;
             // 
-            // txtGrid
+            // txtGrid1
             // 
-            this.txtGrid.AutoSize = true;
-            this.txtGrid.Location = new System.Drawing.Point(167, 87);
-            this.txtGrid.Name = "txtGrid";
-            this.txtGrid.Size = new System.Drawing.Size(15, 14);
-            this.txtGrid.TabIndex = 43;
-            this.txtGrid.UseVisualStyleBackColor = true;
+            this.txtGrid1.AutoSize = true;
+            this.txtGrid1.Location = new System.Drawing.Point(167, 87);
+            this.txtGrid1.Name = "txtGrid1";
+            this.txtGrid1.Size = new System.Drawing.Size(15, 14);
+            this.txtGrid1.TabIndex = 43;
+            this.txtGrid1.UseVisualStyleBackColor = true;
             // 
-            // txtGas
+            // txtGas1
             // 
-            this.txtGas.AutoSize = true;
-            this.txtGas.Location = new System.Drawing.Point(146, 88);
-            this.txtGas.Name = "txtGas";
-            this.txtGas.Size = new System.Drawing.Size(15, 14);
-            this.txtGas.TabIndex = 42;
-            this.txtGas.UseVisualStyleBackColor = true;
+            this.txtGas1.AutoSize = true;
+            this.txtGas1.Location = new System.Drawing.Point(146, 88);
+            this.txtGas1.Name = "txtGas1";
+            this.txtGas1.Size = new System.Drawing.Size(15, 14);
+            this.txtGas1.TabIndex = 42;
+            this.txtGas1.UseVisualStyleBackColor = true;
             // 
             // chkCl
             // 
@@ -1597,6 +1601,8 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.groupBox8);
+            this.groupBox6.Controls.Add(this.groupBox7);
             this.groupBox6.Controls.Add(this.txt_stdspec_yy);
             this.groupBox6.Controls.Add(this.TXT_INSP_MAIN_GRD);
             this.groupBox6.Controls.Add(this.txt_stdspec_name_chg);
@@ -1628,8 +1634,6 @@
             this.groupBox6.Controls.Add(this.COM_PF);
             this.groupBox6.Controls.Add(this.txt_stdspec);
             this.groupBox6.Controls.Add(this.label18);
-            this.groupBox6.Controls.Add(this.panel3);
-            this.groupBox6.Controls.Add(this.panel2);
             this.groupBox6.Controls.Add(this.label20);
             this.groupBox6.Controls.Add(this.TXT_INSP_FLAW_NAME2);
             this.groupBox6.Controls.Add(this.TXT_INSP_FLAW2);
@@ -1639,7 +1643,7 @@
             this.groupBox6.Controls.Add(this.label24);
             this.groupBox6.Location = new System.Drawing.Point(747, 273);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(334, 349);
+            this.groupBox6.Size = new System.Drawing.Size(378, 349);
             this.groupBox6.TabIndex = 9;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "判定";
@@ -1825,13 +1829,12 @@
             // txt_stdspec_name
             // 
             this.txt_stdspec_name.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_stdspec_name.Location = new System.Drawing.Point(104, 165);
+            this.txt_stdspec_name.Location = new System.Drawing.Point(133, 165);
             this.txt_stdspec_name.MaxLength = 40;
             this.txt_stdspec_name.Name = "txt_stdspec_name";
             this.txt_stdspec_name.ReadOnly = true;
-            this.txt_stdspec_name.Size = new System.Drawing.Size(221, 22);
+            this.txt_stdspec_name.Size = new System.Drawing.Size(239, 22);
             this.txt_stdspec_name.TabIndex = 588;
-            this.txt_stdspec_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label45
             // 
@@ -1913,7 +1916,7 @@
             this.txt_stdspec.Font = new System.Drawing.Font("宋体", 9.75F);
             this.txt_stdspec.Location = new System.Drawing.Point(6, 165);
             this.txt_stdspec.Name = "txt_stdspec";
-            this.txt_stdspec.Size = new System.Drawing.Size(92, 22);
+            this.txt_stdspec.Size = new System.Drawing.Size(128, 22);
             this.txt_stdspec.TabIndex = 470;
             // 
             // label18
@@ -1927,23 +1930,10 @@
             this.label18.Text = "判废库";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.opt_CHK_PRD_GRD5);
-            this.panel3.Controls.Add(this.opt_CHK_PRD_GRD4);
-            this.panel3.Controls.Add(this.opt_CHK_PRD_GRD2);
-            this.panel3.Controls.Add(this.opt_CHK_PRD_GRD1);
-            this.panel3.Controls.Add(this.opt_CHK_PRD_GRD3);
-            this.panel3.Controls.Add(this.opt_CHK_PRD_GRD0);
-            this.panel3.Location = new System.Drawing.Point(166, 41);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(132, 75);
-            this.panel3.TabIndex = 483;
-            // 
             // opt_CHK_PRD_GRD5
             // 
             this.opt_CHK_PRD_GRD5.AutoSize = true;
-            this.opt_CHK_PRD_GRD5.Location = new System.Drawing.Point(69, 50);
+            this.opt_CHK_PRD_GRD5.Location = new System.Drawing.Point(72, 57);
             this.opt_CHK_PRD_GRD5.Name = "opt_CHK_PRD_GRD5";
             this.opt_CHK_PRD_GRD5.Size = new System.Drawing.Size(51, 17);
             this.opt_CHK_PRD_GRD5.TabIndex = 6;
@@ -1954,7 +1944,7 @@
             // opt_CHK_PRD_GRD4
             // 
             this.opt_CHK_PRD_GRD4.AutoSize = true;
-            this.opt_CHK_PRD_GRD4.Location = new System.Drawing.Point(69, 27);
+            this.opt_CHK_PRD_GRD4.Location = new System.Drawing.Point(72, 34);
             this.opt_CHK_PRD_GRD4.Name = "opt_CHK_PRD_GRD4";
             this.opt_CHK_PRD_GRD4.Size = new System.Drawing.Size(51, 17);
             this.opt_CHK_PRD_GRD4.TabIndex = 5;
@@ -1965,7 +1955,7 @@
             // opt_CHK_PRD_GRD2
             // 
             this.opt_CHK_PRD_GRD2.AutoSize = true;
-            this.opt_CHK_PRD_GRD2.Location = new System.Drawing.Point(3, 50);
+            this.opt_CHK_PRD_GRD2.Location = new System.Drawing.Point(6, 57);
             this.opt_CHK_PRD_GRD2.Name = "opt_CHK_PRD_GRD2";
             this.opt_CHK_PRD_GRD2.Size = new System.Drawing.Size(64, 17);
             this.opt_CHK_PRD_GRD2.TabIndex = 4;
@@ -1976,7 +1966,7 @@
             // opt_CHK_PRD_GRD1
             // 
             this.opt_CHK_PRD_GRD1.AutoSize = true;
-            this.opt_CHK_PRD_GRD1.Location = new System.Drawing.Point(3, 27);
+            this.opt_CHK_PRD_GRD1.Location = new System.Drawing.Point(6, 34);
             this.opt_CHK_PRD_GRD1.Name = "opt_CHK_PRD_GRD1";
             this.opt_CHK_PRD_GRD1.Size = new System.Drawing.Size(51, 17);
             this.opt_CHK_PRD_GRD1.TabIndex = 3;
@@ -1987,7 +1977,7 @@
             // opt_CHK_PRD_GRD3
             // 
             this.opt_CHK_PRD_GRD3.AutoSize = true;
-            this.opt_CHK_PRD_GRD3.Location = new System.Drawing.Point(69, 3);
+            this.opt_CHK_PRD_GRD3.Location = new System.Drawing.Point(72, 10);
             this.opt_CHK_PRD_GRD3.Name = "opt_CHK_PRD_GRD3";
             this.opt_CHK_PRD_GRD3.Size = new System.Drawing.Size(51, 17);
             this.opt_CHK_PRD_GRD3.TabIndex = 2;
@@ -1998,7 +1988,7 @@
             // opt_CHK_PRD_GRD0
             // 
             this.opt_CHK_PRD_GRD0.AutoSize = true;
-            this.opt_CHK_PRD_GRD0.Location = new System.Drawing.Point(3, 3);
+            this.opt_CHK_PRD_GRD0.Location = new System.Drawing.Point(6, 11);
             this.opt_CHK_PRD_GRD0.Name = "opt_CHK_PRD_GRD0";
             this.opt_CHK_PRD_GRD0.Size = new System.Drawing.Size(51, 17);
             this.opt_CHK_PRD_GRD0.TabIndex = 1;
@@ -2006,19 +1996,10 @@
             this.opt_CHK_PRD_GRD0.UseVisualStyleBackColor = true;
             this.opt_CHK_PRD_GRD0.CheckedChanged += new System.EventHandler(this.opt_CHK_PRD_GRD0_CheckedChanged);
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.opt_CHK_SUR_GRD1);
-            this.panel2.Controls.Add(this.opt_CHK_SUR_GRD0);
-            this.panel2.Location = new System.Drawing.Point(166, 13);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(132, 25);
-            this.panel2.TabIndex = 482;
-            // 
             // opt_CHK_SUR_GRD1
             // 
             this.opt_CHK_SUR_GRD1.AutoSize = true;
-            this.opt_CHK_SUR_GRD1.Location = new System.Drawing.Point(60, 5);
+            this.opt_CHK_SUR_GRD1.Location = new System.Drawing.Point(60, 15);
             this.opt_CHK_SUR_GRD1.Name = "opt_CHK_SUR_GRD1";
             this.opt_CHK_SUR_GRD1.Size = new System.Drawing.Size(64, 17);
             this.opt_CHK_SUR_GRD1.TabIndex = 1;
@@ -2030,7 +2011,7 @@
             // opt_CHK_SUR_GRD0
             // 
             this.opt_CHK_SUR_GRD0.AutoSize = true;
-            this.opt_CHK_SUR_GRD0.Location = new System.Drawing.Point(3, 5);
+            this.opt_CHK_SUR_GRD0.Location = new System.Drawing.Point(7, 15);
             this.opt_CHK_SUR_GRD0.Name = "opt_CHK_SUR_GRD0";
             this.opt_CHK_SUR_GRD0.Size = new System.Drawing.Size(51, 17);
             this.opt_CHK_SUR_GRD0.TabIndex = 0;
@@ -2228,14 +2209,14 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1084, 79);
+            this.groupBox1.Size = new System.Drawing.Size(1137, 79);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // SSP4
             // 
             this.SSP4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.SSP4.Font = new System.Drawing.Font("宋体", 11.75F);
+            this.SSP4.Font = new System.Drawing.Font("宋体", 10.75F);
             this.SSP4.ForeColor = System.Drawing.Color.White;
             this.SSP4.Location = new System.Drawing.Point(705, 48);
             this.SSP4.Margin = new System.Windows.Forms.Padding(0);
@@ -2249,7 +2230,7 @@
             // SSP6
             // 
             this.SSP6.BackColor = System.Drawing.Color.Magenta;
-            this.SSP6.Font = new System.Drawing.Font("宋体", 11.75F);
+            this.SSP6.Font = new System.Drawing.Font("宋体", 10.75F);
             this.SSP6.ForeColor = System.Drawing.Color.White;
             this.SSP6.Location = new System.Drawing.Point(601, 48);
             this.SSP6.Margin = new System.Windows.Forms.Padding(0);
@@ -2263,7 +2244,7 @@
             // SSP5
             // 
             this.SSP5.BackColor = System.Drawing.Color.Blue;
-            this.SSP5.Font = new System.Drawing.Font("宋体", 11.75F);
+            this.SSP5.Font = new System.Drawing.Font("宋体", 10.75F);
             this.SSP5.ForeColor = System.Drawing.Color.White;
             this.SSP5.Location = new System.Drawing.Point(705, 11);
             this.SSP5.Margin = new System.Windows.Forms.Padding(0);
@@ -2776,9 +2757,48 @@
             this.label40.Text = "头部检验工";
             this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // txtGrid
+            // 
+            this.txtGrid.Location = new System.Drawing.Point(209, 89);
+            this.txtGrid.Name = "txtGrid";
+            this.txtGrid.Size = new System.Drawing.Size(21, 22);
+            this.txtGrid.TabIndex = 49;
+            // 
+            // txtGas
+            // 
+            this.txtGas.Location = new System.Drawing.Point(236, 87);
+            this.txtGas.Name = "txtGas";
+            this.txtGas.Size = new System.Drawing.Size(21, 22);
+            this.txtGas.TabIndex = 50;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.opt_CHK_SUR_GRD1);
+            this.groupBox7.Controls.Add(this.opt_CHK_SUR_GRD0);
+            this.groupBox7.Location = new System.Drawing.Point(165, 0);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(0);
+            this.groupBox7.Size = new System.Drawing.Size(133, 35);
+            this.groupBox7.TabIndex = 677;
+            this.groupBox7.TabStop = false;
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.opt_CHK_PRD_GRD5);
+            this.groupBox8.Controls.Add(this.opt_CHK_PRD_GRD0);
+            this.groupBox8.Controls.Add(this.opt_CHK_PRD_GRD2);
+            this.groupBox8.Controls.Add(this.opt_CHK_PRD_GRD4);
+            this.groupBox8.Controls.Add(this.opt_CHK_PRD_GRD3);
+            this.groupBox8.Controls.Add(this.opt_CHK_PRD_GRD1);
+            this.groupBox8.Location = new System.Drawing.Point(166, 36);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(127, 82);
+            this.groupBox8.TabIndex = 678;
+            this.groupBox8.TabStop = false;
+            // 
             // CGD2050C
             // 
-            this.ClientSize = new System.Drawing.Size(1084, 634);
+            this.ClientSize = new System.Drawing.Size(1137, 634);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -2798,10 +2818,6 @@
             this.panel4.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -2812,6 +2828,10 @@
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2942,14 +2962,12 @@
         private System.Windows.Forms.Label label43;
         private CommonClass.MaskedDate TXT_INSP_OCCR_TIME;
         private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.RadioButton opt_CHK_PRD_GRD5;
         private System.Windows.Forms.RadioButton opt_CHK_PRD_GRD4;
         private System.Windows.Forms.RadioButton opt_CHK_PRD_GRD2;
         private System.Windows.Forms.RadioButton opt_CHK_PRD_GRD1;
         private System.Windows.Forms.RadioButton opt_CHK_PRD_GRD3;
         private System.Windows.Forms.RadioButton opt_CHK_PRD_GRD0;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.RadioButton opt_CHK_SUR_GRD1;
         private System.Windows.Forms.RadioButton opt_CHK_SUR_GRD0;
         private System.Windows.Forms.ComboBox COM_PF;
@@ -3005,8 +3023,8 @@
         private System.Windows.Forms.TextBox TXT_INSP_FLAW5;
         private System.Windows.Forms.TextBox TXT_INSP_FLAW4;
         private System.Windows.Forms.TextBox TXT_INSP_FLAW1;
-        private System.Windows.Forms.CheckBox txtGrid;
-        private System.Windows.Forms.CheckBox txtGas;
+        private System.Windows.Forms.CheckBox txtGrid1;
+        private System.Windows.Forms.CheckBox txtGas1;
         private System.Windows.Forms.CheckBox chkCl;
         private System.Windows.Forms.CheckBox chkGrid;
         private System.Windows.Forms.CheckBox chkGas;
@@ -3032,5 +3050,9 @@
         private System.Windows.Forms.ComboBox cbo_ResonDesc;
         private System.Windows.Forms.Button cmd_Off;
         private System.Windows.Forms.TextBox txt_ResonCd;
+        private System.Windows.Forms.TextBox txtGas;
+        private System.Windows.Forms.TextBox txtGrid;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.GroupBox groupBox8;
     }
 }
