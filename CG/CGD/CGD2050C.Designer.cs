@@ -64,6 +64,55 @@
             this.ss1 = new FarPoint.Win.Spread.FpSpread();
             this.ss1_Sheet1 = new FarPoint.Win.Spread.SheetView();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.cbo_ResonDesc = new System.Windows.Forms.ComboBox();
+            this.cmd_Off = new System.Windows.Forms.Button();
+            this.txt_ResonCd = new System.Windows.Forms.TextBox();
+            this.txtCl = new System.Windows.Forms.CheckBox();
+            this.txtGrid = new System.Windows.Forms.CheckBox();
+            this.txtGas = new System.Windows.Forms.CheckBox();
+            this.chkCl = new System.Windows.Forms.CheckBox();
+            this.chkGrid = new System.Windows.Forms.CheckBox();
+            this.chkGas = new System.Windows.Forms.CheckBox();
+            this.CHK_PART17 = new System.Windows.Forms.CheckBox();
+            this.CHK_PART16 = new System.Windows.Forms.CheckBox();
+            this.CHK_PART15 = new System.Windows.Forms.CheckBox();
+            this.CHK_PART14 = new System.Windows.Forms.CheckBox();
+            this.CHK_PART13 = new System.Windows.Forms.CheckBox();
+            this.CHK_PART12 = new System.Windows.Forms.CheckBox();
+            this.CHK_PART11 = new System.Windows.Forms.CheckBox();
+            this.CHK_PART10 = new System.Windows.Forms.CheckBox();
+            this.CHK_PART9 = new System.Windows.Forms.CheckBox();
+            this.CHK_PART8 = new System.Windows.Forms.CheckBox();
+            this.CHK_PART7 = new System.Windows.Forms.CheckBox();
+            this.CHK_PART6 = new System.Windows.Forms.CheckBox();
+            this.CHK_PART5 = new System.Windows.Forms.CheckBox();
+            this.CHK_PART4 = new System.Windows.Forms.CheckBox();
+            this.CHK_PART3 = new System.Windows.Forms.CheckBox();
+            this.CHK_PART2 = new System.Windows.Forms.CheckBox();
+            this.CHK_PART1 = new System.Windows.Forms.CheckBox();
+            this.CHK_PART0 = new System.Windows.Forms.CheckBox();
+            this.label49 = new System.Windows.Forms.Label();
+            this.TXT_EMP_CD1 = new System.Windows.Forms.TextBox();
+            this.SDB_INSP_LTH5 = new System.Windows.Forms.TextBox();
+            this.SDB_INSP_LTH4 = new System.Windows.Forms.TextBox();
+            this.SDB_INSP_LTH3 = new System.Windows.Forms.TextBox();
+            this.TXT_INSP_PART5 = new System.Windows.Forms.TextBox();
+            this.TXT_INSP_PART4 = new System.Windows.Forms.TextBox();
+            this.TXT_INSP_PART3 = new System.Windows.Forms.TextBox();
+            this.TXT_INSP_FLAW_NAME5 = new System.Windows.Forms.TextBox();
+            this.TXT_INSP_FLAW_NAME4 = new System.Windows.Forms.TextBox();
+            this.SDB_INSP_LTH2 = new System.Windows.Forms.TextBox();
+            this.SDB_INSP_LTH1 = new System.Windows.Forms.TextBox();
+            this.SDB_INSP_LTH0 = new System.Windows.Forms.TextBox();
+            this.TXT_INSP_PART2 = new System.Windows.Forms.TextBox();
+            this.TXT_CL = new System.Windows.Forms.TextBox();
+            this.TXT_INSP_PART1 = new System.Windows.Forms.TextBox();
+            this.TXT_INSP_PART0 = new System.Windows.Forms.TextBox();
+            this.TXT_INSP_FLAW_NAME1 = new System.Windows.Forms.TextBox();
+            this.TXT_INSP_FLAW5 = new System.Windows.Forms.TextBox();
+            this.TXT_INSP_FLAW4 = new System.Windows.Forms.TextBox();
+            this.TXT_INSP_FLAW1 = new System.Windows.Forms.TextBox();
             this.CHK_CL_FL = new System.Windows.Forms.CheckBox();
             this.TXT_RECT_DEG = new System.Windows.Forms.TextBox();
             this.TXT_VERT_DEG = new System.Windows.Forms.TextBox();
@@ -209,59 +258,11 @@
             this.label42 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.TXT_INSP_FLAW1 = new System.Windows.Forms.TextBox();
-            this.TXT_INSP_FLAW4 = new System.Windows.Forms.TextBox();
-            this.TXT_INSP_FLAW5 = new System.Windows.Forms.TextBox();
-            this.TXT_INSP_FLAW_NAME1 = new System.Windows.Forms.TextBox();
-            this.TXT_INSP_PART0 = new System.Windows.Forms.TextBox();
-            this.TXT_INSP_PART1 = new System.Windows.Forms.TextBox();
-            this.TXT_CL = new System.Windows.Forms.TextBox();
-            this.TXT_INSP_PART2 = new System.Windows.Forms.TextBox();
-            this.SDB_INSP_LTH0 = new System.Windows.Forms.TextBox();
-            this.SDB_INSP_LTH1 = new System.Windows.Forms.TextBox();
-            this.TXT_EMP_CD1 = new System.Windows.Forms.TextBox();
-            this.SDB_INSP_LTH5 = new System.Windows.Forms.TextBox();
-            this.SDB_INSP_LTH4 = new System.Windows.Forms.TextBox();
-            this.SDB_INSP_LTH3 = new System.Windows.Forms.TextBox();
-            this.TXT_INSP_PART5 = new System.Windows.Forms.TextBox();
-            this.TXT_INSP_PART4 = new System.Windows.Forms.TextBox();
-            this.TXT_INSP_PART3 = new System.Windows.Forms.TextBox();
-            this.TXT_INSP_FLAW_NAME5 = new System.Windows.Forms.TextBox();
-            this.TXT_INSP_FLAW_NAME4 = new System.Windows.Forms.TextBox();
-            this.SDB_INSP_LTH2 = new System.Windows.Forms.TextBox();
-            this.label49 = new System.Windows.Forms.Label();
-            this.CHK_PART0 = new System.Windows.Forms.CheckBox();
-            this.CHK_PART1 = new System.Windows.Forms.CheckBox();
-            this.CHK_PART2 = new System.Windows.Forms.CheckBox();
-            this.CHK_PART3 = new System.Windows.Forms.CheckBox();
-            this.CHK_PART4 = new System.Windows.Forms.CheckBox();
-            this.CHK_PART5 = new System.Windows.Forms.CheckBox();
-            this.CHK_PART6 = new System.Windows.Forms.CheckBox();
-            this.CHK_PART7 = new System.Windows.Forms.CheckBox();
-            this.CHK_PART8 = new System.Windows.Forms.CheckBox();
-            this.CHK_PART9 = new System.Windows.Forms.CheckBox();
-            this.CHK_PART10 = new System.Windows.Forms.CheckBox();
-            this.CHK_PART11 = new System.Windows.Forms.CheckBox();
-            this.CHK_PART12 = new System.Windows.Forms.CheckBox();
-            this.txtGrid = new System.Windows.Forms.CheckBox();
-            this.txtGas = new System.Windows.Forms.CheckBox();
-            this.chkCl = new System.Windows.Forms.CheckBox();
-            this.chkGrid = new System.Windows.Forms.CheckBox();
-            this.chkGas = new System.Windows.Forms.CheckBox();
-            this.CHK_PART17 = new System.Windows.Forms.CheckBox();
-            this.CHK_PART16 = new System.Windows.Forms.CheckBox();
-            this.CHK_PART15 = new System.Windows.Forms.CheckBox();
-            this.CHK_PART14 = new System.Windows.Forms.CheckBox();
-            this.CHK_PART13 = new System.Windows.Forms.CheckBox();
-            this.txtCl = new System.Windows.Forms.CheckBox();
-            this.txt_ResonCd = new System.Windows.Forms.TextBox();
-            this.cmd_Off = new System.Windows.Forms.Button();
-            this.cbo_ResonDesc = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ss1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ss1_Sheet1)).BeginInit();
             this.groupBox9.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -270,7 +271,6 @@
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // TXT_INSP_FLAW_NAME2
@@ -286,11 +286,10 @@
             this.TXT_INSP_FLAW_NAME2.Name = "TXT_INSP_FLAW_NAME2";
             this.TXT_INSP_FLAW_NAME2.Size = new System.Drawing.Size(144, 22);
             this.TXT_INSP_FLAW_NAME2.sJoin = "";
-            this.TXT_INSP_FLAW_NAME2.sSqletc = "SELECT T.CD AS 缺陷代码,T.CD_SHORT_NAME AS 缺陷名称 FROM NISCO.ZP_CD T WHERE T.CD_MANA_NO" +
-    " = \'G0002\' ORDER BY T.CD";
+            this.TXT_INSP_FLAW_NAME2.sSqletc = "SELECT T.CD_SHORT_NAME AS 缺陷名称 ,T.CD AS 缺陷代码 FROM NISCO.ZP_CD T WHERE T.CD_MANA_N" +
+    "O = \'G0002\' ORDER BY T.CD";
             this.TXT_INSP_FLAW_NAME2.TabIndex = 467;
             this.TXT_INSP_FLAW_NAME2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TXT_INSP_FLAW_NAME2.KeyUp += new System.Windows.Forms.KeyEventHandler(this.f4ETCR_CHG_GRD_RES_KeyUp);
             // 
             // TXT_INSP_FLAW2
             // 
@@ -339,8 +338,8 @@
             this.TXT_INSP_FLAW_NAME3.Name = "TXT_INSP_FLAW_NAME3";
             this.TXT_INSP_FLAW_NAME3.Size = new System.Drawing.Size(127, 22);
             this.TXT_INSP_FLAW_NAME3.sJoin = "";
-            this.TXT_INSP_FLAW_NAME3.sSqletc = "SELECT T.CD AS 缺陷代码,T.CD_SHORT_NAME AS 缺陷名称 FROM NISCO.ZP_CD T WHERE T.CD_MANA_NO" +
-    " = \'G0002\' ORDER BY T.CD";
+            this.TXT_INSP_FLAW_NAME3.sSqletc = "SELECT T.CD_SHORT_NAME AS 缺陷名称 ,T.CD AS 缺陷代码 FROM NISCO.ZP_CD T WHERE T.CD_MANA_N" +
+    "O = \'G0002\' ORDER BY T.CD";
             this.TXT_INSP_FLAW_NAME3.TabIndex = 470;
             this.TXT_INSP_FLAW_NAME3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -365,8 +364,8 @@
             this.TXT_INSP_FLAW_NAME0.Name = "TXT_INSP_FLAW_NAME0";
             this.TXT_INSP_FLAW_NAME0.Size = new System.Drawing.Size(127, 22);
             this.TXT_INSP_FLAW_NAME0.sJoin = "";
-            this.TXT_INSP_FLAW_NAME0.sSqletc = "SELECT T.CD AS 缺陷代码,T.CD_SHORT_NAME AS 缺陷名称 FROM NISCO.ZP_CD T WHERE T.CD_MANA_NO" +
-    " = \'G0002\' ORDER BY T.CD";
+            this.TXT_INSP_FLAW_NAME0.sSqletc = "SELECT T.CD_SHORT_NAME AS 缺陷名称 ,T.CD AS 缺陷代码 FROM NISCO.ZP_CD T WHERE T.CD_MANA_N" +
+    "O = \'G0002\' ORDER BY T.CD";
             this.TXT_INSP_FLAW_NAME0.TabIndex = 473;
             this.TXT_INSP_FLAW_NAME0.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -477,7 +476,7 @@
             this.txt_stdspec_chg.InputControl = this.txt_stdspec_chg;
             this.txt_stdspec_chg.Location = new System.Drawing.Point(6, 190);
             this.txt_stdspec_chg.Name = "txt_stdspec_chg";
-            this.txt_stdspec_chg.Size = new System.Drawing.Size(80, 22);
+            this.txt_stdspec_chg.Size = new System.Drawing.Size(92, 22);
             this.txt_stdspec_chg.sJoin = "";
             this.txt_stdspec_chg.sSqletc = "SELECT CD_SHORT_NAME 标准代号, CD_NAME 标准中文名 FROM ZP_CD WHERE CD_MANA_NO = \'G0030\'";
             this.txt_stdspec_chg.TabIndex = 517;
@@ -485,19 +484,19 @@
             // 
             // txt_stdspec_name_chg
             // 
-            this.txt_stdspec_name_chg.Location = new System.Drawing.Point(89, 190);
+            this.txt_stdspec_name_chg.Location = new System.Drawing.Point(104, 190);
             this.txt_stdspec_name_chg.MaxLength = 40;
             this.txt_stdspec_name_chg.Name = "txt_stdspec_name_chg";
-            this.txt_stdspec_name_chg.Size = new System.Drawing.Size(211, 22);
+            this.txt_stdspec_name_chg.Size = new System.Drawing.Size(221, 22);
             this.txt_stdspec_name_chg.TabIndex = 518;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.ss1);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox2.Location = new System.Drawing.Point(0, 102);
+            this.groupBox2.Location = new System.Drawing.Point(0, 79);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1062, 247);
+            this.groupBox2.Size = new System.Drawing.Size(1084, 191);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
@@ -509,8 +508,9 @@
             this.ss1.Name = "ss1";
             this.ss1.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
             this.ss1_Sheet1});
-            this.ss1.Size = new System.Drawing.Size(1056, 226);
+            this.ss1.Size = new System.Drawing.Size(1078, 170);
             this.ss1.TabIndex = 1;
+            this.ss1.CellDoubleClick += new FarPoint.Win.Spread.CellClickEventHandler(this.ss1_CellDoubleClick);
             // 
             // ss1_Sheet1
             // 
@@ -569,12 +569,461 @@
             this.groupBox9.Controls.Add(this.label28);
             this.groupBox9.Controls.Add(this.label31);
             this.groupBox9.Controls.Add(this.label32);
-            this.groupBox9.Location = new System.Drawing.Point(5, 352);
+            this.groupBox9.Location = new System.Drawing.Point(5, 273);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(374, 344);
+            this.groupBox9.Size = new System.Drawing.Size(374, 352);
             this.groupBox9.TabIndex = 4;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "尺寸";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.cbo_ResonDesc);
+            this.panel4.Controls.Add(this.cmd_Off);
+            this.panel4.Controls.Add(this.txt_ResonCd);
+            this.panel4.Controls.Add(this.txtCl);
+            this.panel4.Controls.Add(this.txtGrid);
+            this.panel4.Controls.Add(this.txtGas);
+            this.panel4.Controls.Add(this.chkCl);
+            this.panel4.Controls.Add(this.chkGrid);
+            this.panel4.Controls.Add(this.chkGas);
+            this.panel4.Controls.Add(this.CHK_PART17);
+            this.panel4.Controls.Add(this.CHK_PART16);
+            this.panel4.Controls.Add(this.CHK_PART15);
+            this.panel4.Controls.Add(this.CHK_PART14);
+            this.panel4.Controls.Add(this.CHK_PART13);
+            this.panel4.Controls.Add(this.CHK_PART12);
+            this.panel4.Controls.Add(this.CHK_PART11);
+            this.panel4.Controls.Add(this.CHK_PART10);
+            this.panel4.Controls.Add(this.CHK_PART9);
+            this.panel4.Controls.Add(this.CHK_PART8);
+            this.panel4.Controls.Add(this.CHK_PART7);
+            this.panel4.Controls.Add(this.CHK_PART6);
+            this.panel4.Controls.Add(this.CHK_PART5);
+            this.panel4.Controls.Add(this.CHK_PART4);
+            this.panel4.Controls.Add(this.CHK_PART3);
+            this.panel4.Controls.Add(this.CHK_PART2);
+            this.panel4.Controls.Add(this.CHK_PART1);
+            this.panel4.Controls.Add(this.CHK_PART0);
+            this.panel4.Controls.Add(this.label49);
+            this.panel4.Controls.Add(this.TXT_EMP_CD1);
+            this.panel4.Controls.Add(this.SDB_INSP_LTH5);
+            this.panel4.Controls.Add(this.SDB_INSP_LTH4);
+            this.panel4.Controls.Add(this.SDB_INSP_LTH3);
+            this.panel4.Controls.Add(this.TXT_INSP_PART5);
+            this.panel4.Controls.Add(this.TXT_INSP_PART4);
+            this.panel4.Controls.Add(this.TXT_INSP_PART3);
+            this.panel4.Controls.Add(this.TXT_INSP_FLAW_NAME5);
+            this.panel4.Controls.Add(this.TXT_INSP_FLAW_NAME4);
+            this.panel4.Controls.Add(this.SDB_INSP_LTH2);
+            this.panel4.Controls.Add(this.SDB_INSP_LTH1);
+            this.panel4.Controls.Add(this.SDB_INSP_LTH0);
+            this.panel4.Controls.Add(this.TXT_INSP_PART2);
+            this.panel4.Controls.Add(this.TXT_CL);
+            this.panel4.Controls.Add(this.TXT_INSP_PART1);
+            this.panel4.Controls.Add(this.TXT_INSP_PART0);
+            this.panel4.Controls.Add(this.TXT_INSP_FLAW_NAME1);
+            this.panel4.Controls.Add(this.TXT_INSP_FLAW5);
+            this.panel4.Controls.Add(this.TXT_INSP_FLAW4);
+            this.panel4.Controls.Add(this.TXT_INSP_FLAW1);
+            this.panel4.Location = new System.Drawing.Point(52, 141);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(294, 174);
+            this.panel4.TabIndex = 503;
+            this.panel4.Visible = false;
+            // 
+            // cbo_ResonDesc
+            // 
+            this.cbo_ResonDesc.FormattingEnabled = true;
+            this.cbo_ResonDesc.Location = new System.Drawing.Point(48, 109);
+            this.cbo_ResonDesc.Name = "cbo_ResonDesc";
+            this.cbo_ResonDesc.Size = new System.Drawing.Size(21, 21);
+            this.cbo_ResonDesc.TabIndex = 48;
+            this.cbo_ResonDesc.Click += new System.EventHandler(this.cbo_ResonDesc_Click);
+            // 
+            // cmd_Off
+            // 
+            this.cmd_Off.Location = new System.Drawing.Point(98, 113);
+            this.cmd_Off.Name = "cmd_Off";
+            this.cmd_Off.Size = new System.Drawing.Size(75, 23);
+            this.cmd_Off.TabIndex = 47;
+            this.cmd_Off.Text = "下线";
+            this.cmd_Off.UseVisualStyleBackColor = true;
+            // 
+            // txt_ResonCd
+            // 
+            this.txt_ResonCd.Location = new System.Drawing.Point(20, 110);
+            this.txt_ResonCd.Name = "txt_ResonCd";
+            this.txt_ResonCd.Size = new System.Drawing.Size(21, 22);
+            this.txt_ResonCd.TabIndex = 45;
+            // 
+            // txtCl
+            // 
+            this.txtCl.AutoSize = true;
+            this.txtCl.Location = new System.Drawing.Point(183, 89);
+            this.txtCl.Name = "txtCl";
+            this.txtCl.Size = new System.Drawing.Size(15, 14);
+            this.txtCl.TabIndex = 44;
+            this.txtCl.UseVisualStyleBackColor = true;
+            // 
+            // txtGrid
+            // 
+            this.txtGrid.AutoSize = true;
+            this.txtGrid.Location = new System.Drawing.Point(167, 87);
+            this.txtGrid.Name = "txtGrid";
+            this.txtGrid.Size = new System.Drawing.Size(15, 14);
+            this.txtGrid.TabIndex = 43;
+            this.txtGrid.UseVisualStyleBackColor = true;
+            // 
+            // txtGas
+            // 
+            this.txtGas.AutoSize = true;
+            this.txtGas.Location = new System.Drawing.Point(146, 88);
+            this.txtGas.Name = "txtGas";
+            this.txtGas.Size = new System.Drawing.Size(15, 14);
+            this.txtGas.TabIndex = 42;
+            this.txtGas.UseVisualStyleBackColor = true;
+            // 
+            // chkCl
+            // 
+            this.chkCl.AutoSize = true;
+            this.chkCl.Location = new System.Drawing.Point(128, 88);
+            this.chkCl.Name = "chkCl";
+            this.chkCl.Size = new System.Drawing.Size(15, 14);
+            this.chkCl.TabIndex = 41;
+            this.chkCl.UseVisualStyleBackColor = true;
+            this.chkCl.CheckedChanged += new System.EventHandler(this.chkCl_CheckedChanged);
+            // 
+            // chkGrid
+            // 
+            this.chkGrid.AutoSize = true;
+            this.chkGrid.Location = new System.Drawing.Point(107, 87);
+            this.chkGrid.Name = "chkGrid";
+            this.chkGrid.Size = new System.Drawing.Size(15, 14);
+            this.chkGrid.TabIndex = 40;
+            this.chkGrid.UseVisualStyleBackColor = true;
+            this.chkGrid.CheckedChanged += new System.EventHandler(this.chkGrid_CheckedChanged);
+            // 
+            // chkGas
+            // 
+            this.chkGas.AutoSize = true;
+            this.chkGas.Location = new System.Drawing.Point(86, 86);
+            this.chkGas.Name = "chkGas";
+            this.chkGas.Size = new System.Drawing.Size(15, 14);
+            this.chkGas.TabIndex = 39;
+            this.chkGas.UseVisualStyleBackColor = true;
+            this.chkGas.CheckedChanged += new System.EventHandler(this.chkGas_CheckedChanged);
+            // 
+            // CHK_PART17
+            // 
+            this.CHK_PART17.AutoSize = true;
+            this.CHK_PART17.Location = new System.Drawing.Point(70, 86);
+            this.CHK_PART17.Name = "CHK_PART17";
+            this.CHK_PART17.Size = new System.Drawing.Size(15, 14);
+            this.CHK_PART17.TabIndex = 38;
+            this.CHK_PART17.UseVisualStyleBackColor = true;
+            // 
+            // CHK_PART16
+            // 
+            this.CHK_PART16.AutoSize = true;
+            this.CHK_PART16.Location = new System.Drawing.Point(54, 87);
+            this.CHK_PART16.Name = "CHK_PART16";
+            this.CHK_PART16.Size = new System.Drawing.Size(15, 14);
+            this.CHK_PART16.TabIndex = 37;
+            this.CHK_PART16.UseVisualStyleBackColor = true;
+            // 
+            // CHK_PART15
+            // 
+            this.CHK_PART15.AutoSize = true;
+            this.CHK_PART15.Location = new System.Drawing.Point(39, 87);
+            this.CHK_PART15.Name = "CHK_PART15";
+            this.CHK_PART15.Size = new System.Drawing.Size(15, 14);
+            this.CHK_PART15.TabIndex = 36;
+            this.CHK_PART15.UseVisualStyleBackColor = true;
+            // 
+            // CHK_PART14
+            // 
+            this.CHK_PART14.AutoSize = true;
+            this.CHK_PART14.Location = new System.Drawing.Point(20, 86);
+            this.CHK_PART14.Name = "CHK_PART14";
+            this.CHK_PART14.Size = new System.Drawing.Size(15, 14);
+            this.CHK_PART14.TabIndex = 35;
+            this.CHK_PART14.UseVisualStyleBackColor = true;
+            // 
+            // CHK_PART13
+            // 
+            this.CHK_PART13.AutoSize = true;
+            this.CHK_PART13.Location = new System.Drawing.Point(4, 86);
+            this.CHK_PART13.Name = "CHK_PART13";
+            this.CHK_PART13.Size = new System.Drawing.Size(15, 14);
+            this.CHK_PART13.TabIndex = 34;
+            this.CHK_PART13.UseVisualStyleBackColor = true;
+            // 
+            // CHK_PART12
+            // 
+            this.CHK_PART12.AutoSize = true;
+            this.CHK_PART12.Location = new System.Drawing.Point(230, 66);
+            this.CHK_PART12.Name = "CHK_PART12";
+            this.CHK_PART12.Size = new System.Drawing.Size(15, 14);
+            this.CHK_PART12.TabIndex = 33;
+            this.CHK_PART12.UseVisualStyleBackColor = true;
+            // 
+            // CHK_PART11
+            // 
+            this.CHK_PART11.AutoSize = true;
+            this.CHK_PART11.Location = new System.Drawing.Point(209, 66);
+            this.CHK_PART11.Name = "CHK_PART11";
+            this.CHK_PART11.Size = new System.Drawing.Size(15, 14);
+            this.CHK_PART11.TabIndex = 32;
+            this.CHK_PART11.UseVisualStyleBackColor = true;
+            // 
+            // CHK_PART10
+            // 
+            this.CHK_PART10.AutoSize = true;
+            this.CHK_PART10.Location = new System.Drawing.Point(188, 66);
+            this.CHK_PART10.Name = "CHK_PART10";
+            this.CHK_PART10.Size = new System.Drawing.Size(15, 14);
+            this.CHK_PART10.TabIndex = 31;
+            this.CHK_PART10.UseVisualStyleBackColor = true;
+            // 
+            // CHK_PART9
+            // 
+            this.CHK_PART9.AutoSize = true;
+            this.CHK_PART9.Location = new System.Drawing.Point(167, 65);
+            this.CHK_PART9.Name = "CHK_PART9";
+            this.CHK_PART9.Size = new System.Drawing.Size(15, 14);
+            this.CHK_PART9.TabIndex = 30;
+            this.CHK_PART9.UseVisualStyleBackColor = true;
+            // 
+            // CHK_PART8
+            // 
+            this.CHK_PART8.AutoSize = true;
+            this.CHK_PART8.Location = new System.Drawing.Point(146, 66);
+            this.CHK_PART8.Name = "CHK_PART8";
+            this.CHK_PART8.Size = new System.Drawing.Size(15, 14);
+            this.CHK_PART8.TabIndex = 29;
+            this.CHK_PART8.UseVisualStyleBackColor = true;
+            // 
+            // CHK_PART7
+            // 
+            this.CHK_PART7.AutoSize = true;
+            this.CHK_PART7.Location = new System.Drawing.Point(128, 66);
+            this.CHK_PART7.Name = "CHK_PART7";
+            this.CHK_PART7.Size = new System.Drawing.Size(15, 14);
+            this.CHK_PART7.TabIndex = 28;
+            this.CHK_PART7.UseVisualStyleBackColor = true;
+            // 
+            // CHK_PART6
+            // 
+            this.CHK_PART6.AutoSize = true;
+            this.CHK_PART6.Location = new System.Drawing.Point(107, 65);
+            this.CHK_PART6.Name = "CHK_PART6";
+            this.CHK_PART6.Size = new System.Drawing.Size(15, 14);
+            this.CHK_PART6.TabIndex = 27;
+            this.CHK_PART6.UseVisualStyleBackColor = true;
+            // 
+            // CHK_PART5
+            // 
+            this.CHK_PART5.AutoSize = true;
+            this.CHK_PART5.Location = new System.Drawing.Point(86, 64);
+            this.CHK_PART5.Name = "CHK_PART5";
+            this.CHK_PART5.Size = new System.Drawing.Size(15, 14);
+            this.CHK_PART5.TabIndex = 26;
+            this.CHK_PART5.UseVisualStyleBackColor = true;
+            // 
+            // CHK_PART4
+            // 
+            this.CHK_PART4.AutoSize = true;
+            this.CHK_PART4.Location = new System.Drawing.Point(70, 64);
+            this.CHK_PART4.Name = "CHK_PART4";
+            this.CHK_PART4.Size = new System.Drawing.Size(15, 14);
+            this.CHK_PART4.TabIndex = 25;
+            this.CHK_PART4.UseVisualStyleBackColor = true;
+            // 
+            // CHK_PART3
+            // 
+            this.CHK_PART3.AutoSize = true;
+            this.CHK_PART3.Location = new System.Drawing.Point(54, 65);
+            this.CHK_PART3.Name = "CHK_PART3";
+            this.CHK_PART3.Size = new System.Drawing.Size(15, 14);
+            this.CHK_PART3.TabIndex = 24;
+            this.CHK_PART3.UseVisualStyleBackColor = true;
+            // 
+            // CHK_PART2
+            // 
+            this.CHK_PART2.AutoSize = true;
+            this.CHK_PART2.Location = new System.Drawing.Point(39, 65);
+            this.CHK_PART2.Name = "CHK_PART2";
+            this.CHK_PART2.Size = new System.Drawing.Size(15, 14);
+            this.CHK_PART2.TabIndex = 23;
+            this.CHK_PART2.UseVisualStyleBackColor = true;
+            // 
+            // CHK_PART1
+            // 
+            this.CHK_PART1.AutoSize = true;
+            this.CHK_PART1.Location = new System.Drawing.Point(20, 64);
+            this.CHK_PART1.Name = "CHK_PART1";
+            this.CHK_PART1.Size = new System.Drawing.Size(15, 14);
+            this.CHK_PART1.TabIndex = 22;
+            this.CHK_PART1.UseVisualStyleBackColor = true;
+            // 
+            // CHK_PART0
+            // 
+            this.CHK_PART0.AutoSize = true;
+            this.CHK_PART0.Location = new System.Drawing.Point(4, 64);
+            this.CHK_PART0.Name = "CHK_PART0";
+            this.CHK_PART0.Size = new System.Drawing.Size(15, 14);
+            this.CHK_PART0.TabIndex = 21;
+            this.CHK_PART0.UseVisualStyleBackColor = true;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(6, 142);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(294, 13);
+            this.label49.TabIndex = 20;
+            this.label49.Text = "上面控件都是没有用的，但是VB调用了并且隐藏了";
+            // 
+            // TXT_EMP_CD1
+            // 
+            this.TXT_EMP_CD1.Location = new System.Drawing.Point(245, 40);
+            this.TXT_EMP_CD1.Name = "TXT_EMP_CD1";
+            this.TXT_EMP_CD1.Size = new System.Drawing.Size(21, 22);
+            this.TXT_EMP_CD1.TabIndex = 19;
+            // 
+            // SDB_INSP_LTH5
+            // 
+            this.SDB_INSP_LTH5.Location = new System.Drawing.Point(221, 39);
+            this.SDB_INSP_LTH5.Name = "SDB_INSP_LTH5";
+            this.SDB_INSP_LTH5.Size = new System.Drawing.Size(21, 22);
+            this.SDB_INSP_LTH5.TabIndex = 18;
+            // 
+            // SDB_INSP_LTH4
+            // 
+            this.SDB_INSP_LTH4.Location = new System.Drawing.Point(194, 37);
+            this.SDB_INSP_LTH4.Name = "SDB_INSP_LTH4";
+            this.SDB_INSP_LTH4.Size = new System.Drawing.Size(21, 22);
+            this.SDB_INSP_LTH4.TabIndex = 17;
+            // 
+            // SDB_INSP_LTH3
+            // 
+            this.SDB_INSP_LTH3.Location = new System.Drawing.Point(167, 37);
+            this.SDB_INSP_LTH3.Name = "SDB_INSP_LTH3";
+            this.SDB_INSP_LTH3.Size = new System.Drawing.Size(21, 22);
+            this.SDB_INSP_LTH3.TabIndex = 16;
+            // 
+            // TXT_INSP_PART5
+            // 
+            this.TXT_INSP_PART5.Location = new System.Drawing.Point(140, 37);
+            this.TXT_INSP_PART5.Name = "TXT_INSP_PART5";
+            this.TXT_INSP_PART5.Size = new System.Drawing.Size(21, 22);
+            this.TXT_INSP_PART5.TabIndex = 15;
+            // 
+            // TXT_INSP_PART4
+            // 
+            this.TXT_INSP_PART4.Location = new System.Drawing.Point(113, 37);
+            this.TXT_INSP_PART4.Name = "TXT_INSP_PART4";
+            this.TXT_INSP_PART4.Size = new System.Drawing.Size(21, 22);
+            this.TXT_INSP_PART4.TabIndex = 14;
+            // 
+            // TXT_INSP_PART3
+            // 
+            this.TXT_INSP_PART3.Location = new System.Drawing.Point(86, 36);
+            this.TXT_INSP_PART3.Name = "TXT_INSP_PART3";
+            this.TXT_INSP_PART3.Size = new System.Drawing.Size(21, 22);
+            this.TXT_INSP_PART3.TabIndex = 13;
+            // 
+            // TXT_INSP_FLAW_NAME5
+            // 
+            this.TXT_INSP_FLAW_NAME5.Location = new System.Drawing.Point(59, 37);
+            this.TXT_INSP_FLAW_NAME5.Name = "TXT_INSP_FLAW_NAME5";
+            this.TXT_INSP_FLAW_NAME5.Size = new System.Drawing.Size(21, 22);
+            this.TXT_INSP_FLAW_NAME5.TabIndex = 12;
+            // 
+            // TXT_INSP_FLAW_NAME4
+            // 
+            this.TXT_INSP_FLAW_NAME4.Location = new System.Drawing.Point(33, 37);
+            this.TXT_INSP_FLAW_NAME4.Name = "TXT_INSP_FLAW_NAME4";
+            this.TXT_INSP_FLAW_NAME4.Size = new System.Drawing.Size(21, 22);
+            this.TXT_INSP_FLAW_NAME4.TabIndex = 11;
+            // 
+            // SDB_INSP_LTH2
+            // 
+            this.SDB_INSP_LTH2.Location = new System.Drawing.Point(4, 37);
+            this.SDB_INSP_LTH2.Name = "SDB_INSP_LTH2";
+            this.SDB_INSP_LTH2.Size = new System.Drawing.Size(21, 22);
+            this.SDB_INSP_LTH2.TabIndex = 10;
+            // 
+            // SDB_INSP_LTH1
+            // 
+            this.SDB_INSP_LTH1.Location = new System.Drawing.Point(245, 13);
+            this.SDB_INSP_LTH1.Name = "SDB_INSP_LTH1";
+            this.SDB_INSP_LTH1.Size = new System.Drawing.Size(21, 22);
+            this.SDB_INSP_LTH1.TabIndex = 9;
+            // 
+            // SDB_INSP_LTH0
+            // 
+            this.SDB_INSP_LTH0.Location = new System.Drawing.Point(221, 12);
+            this.SDB_INSP_LTH0.Name = "SDB_INSP_LTH0";
+            this.SDB_INSP_LTH0.Size = new System.Drawing.Size(21, 22);
+            this.SDB_INSP_LTH0.TabIndex = 8;
+            // 
+            // TXT_INSP_PART2
+            // 
+            this.TXT_INSP_PART2.Location = new System.Drawing.Point(194, 10);
+            this.TXT_INSP_PART2.Name = "TXT_INSP_PART2";
+            this.TXT_INSP_PART2.Size = new System.Drawing.Size(21, 22);
+            this.TXT_INSP_PART2.TabIndex = 7;
+            // 
+            // TXT_CL
+            // 
+            this.TXT_CL.Location = new System.Drawing.Point(167, 10);
+            this.TXT_CL.Name = "TXT_CL";
+            this.TXT_CL.Size = new System.Drawing.Size(21, 22);
+            this.TXT_CL.TabIndex = 6;
+            // 
+            // TXT_INSP_PART1
+            // 
+            this.TXT_INSP_PART1.Location = new System.Drawing.Point(140, 10);
+            this.TXT_INSP_PART1.Name = "TXT_INSP_PART1";
+            this.TXT_INSP_PART1.Size = new System.Drawing.Size(21, 22);
+            this.TXT_INSP_PART1.TabIndex = 5;
+            // 
+            // TXT_INSP_PART0
+            // 
+            this.TXT_INSP_PART0.Location = new System.Drawing.Point(113, 10);
+            this.TXT_INSP_PART0.Name = "TXT_INSP_PART0";
+            this.TXT_INSP_PART0.Size = new System.Drawing.Size(21, 22);
+            this.TXT_INSP_PART0.TabIndex = 4;
+            // 
+            // TXT_INSP_FLAW_NAME1
+            // 
+            this.TXT_INSP_FLAW_NAME1.Location = new System.Drawing.Point(86, 9);
+            this.TXT_INSP_FLAW_NAME1.Name = "TXT_INSP_FLAW_NAME1";
+            this.TXT_INSP_FLAW_NAME1.Size = new System.Drawing.Size(21, 22);
+            this.TXT_INSP_FLAW_NAME1.TabIndex = 3;
+            // 
+            // TXT_INSP_FLAW5
+            // 
+            this.TXT_INSP_FLAW5.Location = new System.Drawing.Point(59, 10);
+            this.TXT_INSP_FLAW5.Name = "TXT_INSP_FLAW5";
+            this.TXT_INSP_FLAW5.Size = new System.Drawing.Size(21, 22);
+            this.TXT_INSP_FLAW5.TabIndex = 2;
+            // 
+            // TXT_INSP_FLAW4
+            // 
+            this.TXT_INSP_FLAW4.Location = new System.Drawing.Point(33, 10);
+            this.TXT_INSP_FLAW4.Name = "TXT_INSP_FLAW4";
+            this.TXT_INSP_FLAW4.Size = new System.Drawing.Size(21, 22);
+            this.TXT_INSP_FLAW4.TabIndex = 1;
+            // 
+            // TXT_INSP_FLAW1
+            // 
+            this.TXT_INSP_FLAW1.Location = new System.Drawing.Point(4, 10);
+            this.TXT_INSP_FLAW1.Name = "TXT_INSP_FLAW1";
+            this.TXT_INSP_FLAW1.Size = new System.Drawing.Size(21, 22);
+            this.TXT_INSP_FLAW1.TabIndex = 0;
             // 
             // CHK_CL_FL
             // 
@@ -586,6 +1035,7 @@
             this.CHK_CL_FL.Text = "矫直指示";
             this.CHK_CL_FL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.CHK_CL_FL.UseVisualStyleBackColor = true;
+            this.CHK_CL_FL.CheckedChanged += new System.EventHandler(this.CHK_CL_FL_CheckedChanged);
             // 
             // TXT_RECT_DEG
             // 
@@ -951,7 +1401,7 @@
             // SDB_LEN
             // 
             this.SDB_LEN.Location = new System.Drawing.Point(216, 46);
-            this.SDB_LEN.MaxLength = 10;
+            this.SDB_LEN.MaxLength = 20;
             this.SDB_LEN.Name = "SDB_LEN";
             this.SDB_LEN.NumValue = 0D;
             this.SDB_LEN.Scale = 1;
@@ -960,6 +1410,7 @@
             this.SDB_LEN.TabIndex = 489;
             this.SDB_LEN.Text = "0.0";
             this.SDB_LEN.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.SDB_LEN.TextChanged += new System.EventHandler(this.SDB_LEN_TextChanged);
             // 
             // SDB_WID
             // 
@@ -973,6 +1424,7 @@
             this.SDB_WID.TabIndex = 484;
             this.SDB_WID.Text = "0.00";
             this.SDB_WID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.SDB_WID.TextChanged += new System.EventHandler(this.SDB_WID_TextChanged);
             // 
             // SDB_THK
             // 
@@ -986,6 +1438,7 @@
             this.SDB_THK.TabIndex = 482;
             this.SDB_THK.Text = "0.00";
             this.SDB_THK.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.SDB_THK.TextChanged += new System.EventHandler(this.SDB_THK_TextChanged);
             // 
             // SDB_ORD_LEN
             // 
@@ -1184,9 +1637,9 @@
             this.groupBox6.Controls.Add(this.TXT_SURF_GRD);
             this.groupBox6.Controls.Add(this.label14);
             this.groupBox6.Controls.Add(this.label24);
-            this.groupBox6.Location = new System.Drawing.Point(744, 352);
+            this.groupBox6.Location = new System.Drawing.Point(747, 273);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(312, 341);
+            this.groupBox6.Size = new System.Drawing.Size(334, 349);
             this.groupBox6.TabIndex = 9;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "判定";
@@ -1270,7 +1723,6 @@
             this.SDB_HD3.TabIndex = 601;
             this.SDB_HD3.Text = "0.00";
             this.SDB_HD3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.SDB_HD3.TextChanged += new System.EventHandler(this.numBox4_TextChanged);
             // 
             // label47
             // 
@@ -1373,11 +1825,11 @@
             // txt_stdspec_name
             // 
             this.txt_stdspec_name.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_stdspec_name.Location = new System.Drawing.Point(89, 165);
+            this.txt_stdspec_name.Location = new System.Drawing.Point(104, 165);
             this.txt_stdspec_name.MaxLength = 40;
             this.txt_stdspec_name.Name = "txt_stdspec_name";
             this.txt_stdspec_name.ReadOnly = true;
-            this.txt_stdspec_name.Size = new System.Drawing.Size(211, 22);
+            this.txt_stdspec_name.Size = new System.Drawing.Size(221, 22);
             this.txt_stdspec_name.TabIndex = 588;
             this.txt_stdspec_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1458,9 +1910,10 @@
             // txt_stdspec
             // 
             this.txt_stdspec.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_stdspec.Font = new System.Drawing.Font("宋体", 9.75F);
             this.txt_stdspec.Location = new System.Drawing.Point(6, 165);
             this.txt_stdspec.Name = "txt_stdspec";
-            this.txt_stdspec.Size = new System.Drawing.Size(80, 22);
+            this.txt_stdspec.Size = new System.Drawing.Size(92, 22);
             this.txt_stdspec.TabIndex = 470;
             // 
             // label18
@@ -1494,9 +1947,9 @@
             this.opt_CHK_PRD_GRD5.Name = "opt_CHK_PRD_GRD5";
             this.opt_CHK_PRD_GRD5.Size = new System.Drawing.Size(51, 17);
             this.opt_CHK_PRD_GRD5.TabIndex = 6;
-            this.opt_CHK_PRD_GRD5.TabStop = true;
             this.opt_CHK_PRD_GRD5.Text = "废钢";
             this.opt_CHK_PRD_GRD5.UseVisualStyleBackColor = true;
+            this.opt_CHK_PRD_GRD5.CheckedChanged += new System.EventHandler(this.opt_CHK_PRD_GRD5_CheckedChanged);
             // 
             // opt_CHK_PRD_GRD4
             // 
@@ -1505,9 +1958,9 @@
             this.opt_CHK_PRD_GRD4.Name = "opt_CHK_PRD_GRD4";
             this.opt_CHK_PRD_GRD4.Size = new System.Drawing.Size(51, 17);
             this.opt_CHK_PRD_GRD4.TabIndex = 5;
-            this.opt_CHK_PRD_GRD4.TabStop = true;
             this.opt_CHK_PRD_GRD4.Text = "次品";
             this.opt_CHK_PRD_GRD4.UseVisualStyleBackColor = true;
+            this.opt_CHK_PRD_GRD4.CheckedChanged += new System.EventHandler(this.opt_CHK_PRD_GRD4_CheckedChanged);
             // 
             // opt_CHK_PRD_GRD2
             // 
@@ -1516,9 +1969,9 @@
             this.opt_CHK_PRD_GRD2.Name = "opt_CHK_PRD_GRD2";
             this.opt_CHK_PRD_GRD2.Size = new System.Drawing.Size(64, 17);
             this.opt_CHK_PRD_GRD2.TabIndex = 4;
-            this.opt_CHK_PRD_GRD2.TabStop = true;
             this.opt_CHK_PRD_GRD2.Text = "协议板";
             this.opt_CHK_PRD_GRD2.UseVisualStyleBackColor = true;
+            this.opt_CHK_PRD_GRD2.CheckedChanged += new System.EventHandler(this.opt_CHK_PRD_GRD2_CheckedChanged);
             // 
             // opt_CHK_PRD_GRD1
             // 
@@ -1527,9 +1980,9 @@
             this.opt_CHK_PRD_GRD1.Name = "opt_CHK_PRD_GRD1";
             this.opt_CHK_PRD_GRD1.Size = new System.Drawing.Size(51, 17);
             this.opt_CHK_PRD_GRD1.TabIndex = 3;
-            this.opt_CHK_PRD_GRD1.TabStop = true;
             this.opt_CHK_PRD_GRD1.Text = "改判";
             this.opt_CHK_PRD_GRD1.UseVisualStyleBackColor = true;
+            this.opt_CHK_PRD_GRD1.CheckedChanged += new System.EventHandler(this.opt_CHK_PRD_GRD1_CheckedChanged);
             // 
             // opt_CHK_PRD_GRD3
             // 
@@ -1538,9 +1991,9 @@
             this.opt_CHK_PRD_GRD3.Name = "opt_CHK_PRD_GRD3";
             this.opt_CHK_PRD_GRD3.Size = new System.Drawing.Size(51, 17);
             this.opt_CHK_PRD_GRD3.TabIndex = 2;
-            this.opt_CHK_PRD_GRD3.TabStop = true;
             this.opt_CHK_PRD_GRD3.Text = "待判";
             this.opt_CHK_PRD_GRD3.UseVisualStyleBackColor = true;
+            this.opt_CHK_PRD_GRD3.CheckedChanged += new System.EventHandler(this.opt_CHK_PRD_GRD3_CheckedChanged);
             // 
             // opt_CHK_PRD_GRD0
             // 
@@ -1549,9 +2002,9 @@
             this.opt_CHK_PRD_GRD0.Name = "opt_CHK_PRD_GRD0";
             this.opt_CHK_PRD_GRD0.Size = new System.Drawing.Size(51, 17);
             this.opt_CHK_PRD_GRD0.TabIndex = 1;
-            this.opt_CHK_PRD_GRD0.TabStop = true;
             this.opt_CHK_PRD_GRD0.Text = "正品";
             this.opt_CHK_PRD_GRD0.UseVisualStyleBackColor = true;
+            this.opt_CHK_PRD_GRD0.CheckedChanged += new System.EventHandler(this.opt_CHK_PRD_GRD0_CheckedChanged);
             // 
             // panel2
             // 
@@ -1572,6 +2025,7 @@
             this.opt_CHK_SUR_GRD1.TabStop = true;
             this.opt_CHK_SUR_GRD1.Text = "不合格";
             this.opt_CHK_SUR_GRD1.UseVisualStyleBackColor = true;
+            this.opt_CHK_SUR_GRD1.CheckedChanged += new System.EventHandler(this.opt_CHK_SUR_GRD1_CheckedChanged);
             // 
             // opt_CHK_SUR_GRD0
             // 
@@ -1583,6 +2037,7 @@
             this.opt_CHK_SUR_GRD0.TabStop = true;
             this.opt_CHK_SUR_GRD0.Text = "合格";
             this.opt_CHK_SUR_GRD0.UseVisualStyleBackColor = true;
+            this.opt_CHK_SUR_GRD0.CheckedChanged += new System.EventHandler(this.opt_CHK_SUR_GRD0_CheckedChanged);
             // 
             // label20
             // 
@@ -1658,6 +2113,7 @@
             this.SDT_PROD_DATE.RawDate = "";
             this.SDT_PROD_DATE.Size = new System.Drawing.Size(95, 22);
             this.SDT_PROD_DATE.TabIndex = 90;
+            this.SDT_PROD_DATE.DoubleClick += new System.EventHandler(this.SDT_PROD_DATE_DoubleClick);
             // 
             // SDT_PROD_TO_DATE
             // 
@@ -1666,6 +2122,7 @@
             this.SDT_PROD_TO_DATE.RawDate = "";
             this.SDT_PROD_TO_DATE.Size = new System.Drawing.Size(95, 22);
             this.SDT_PROD_TO_DATE.TabIndex = 91;
+            this.SDT_PROD_TO_DATE.Load += new System.EventHandler(this.SDT_PROD_TO_DATE_Load);
             // 
             // label6
             // 
@@ -1771,7 +2228,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1062, 102);
+            this.groupBox1.Size = new System.Drawing.Size(1084, 79);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -1780,7 +2237,7 @@
             this.SSP4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.SSP4.Font = new System.Drawing.Font("宋体", 11.75F);
             this.SSP4.ForeColor = System.Drawing.Color.White;
-            this.SSP4.Location = new System.Drawing.Point(689, 71);
+            this.SSP4.Location = new System.Drawing.Point(705, 48);
             this.SSP4.Margin = new System.Windows.Forms.Padding(0);
             this.SSP4.Name = "SSP4";
             this.SSP4.Size = new System.Drawing.Size(88, 27);
@@ -1794,7 +2251,7 @@
             this.SSP6.BackColor = System.Drawing.Color.Magenta;
             this.SSP6.Font = new System.Drawing.Font("宋体", 11.75F);
             this.SSP6.ForeColor = System.Drawing.Color.White;
-            this.SSP6.Location = new System.Drawing.Point(689, 41);
+            this.SSP6.Location = new System.Drawing.Point(601, 48);
             this.SSP6.Margin = new System.Windows.Forms.Padding(0);
             this.SSP6.Name = "SSP6";
             this.SSP6.Size = new System.Drawing.Size(88, 27);
@@ -1808,7 +2265,7 @@
             this.SSP5.BackColor = System.Drawing.Color.Blue;
             this.SSP5.Font = new System.Drawing.Font("宋体", 11.75F);
             this.SSP5.ForeColor = System.Drawing.Color.White;
-            this.SSP5.Location = new System.Drawing.Point(689, 12);
+            this.SSP5.Location = new System.Drawing.Point(705, 11);
             this.SSP5.Margin = new System.Windows.Forms.Padding(0);
             this.SSP5.Name = "SSP5";
             this.SSP5.Size = new System.Drawing.Size(88, 27);
@@ -1873,6 +2330,7 @@
             this.opt_LineFlag3.TabStop = true;
             this.opt_LineFlag3.Text = "#4";
             this.opt_LineFlag3.UseVisualStyleBackColor = true;
+            this.opt_LineFlag3.CheckedChanged += new System.EventHandler(this.opt_LineFlag3_CheckedChanged);
             // 
             // TXT_UST_FLAG
             // 
@@ -1892,6 +2350,7 @@
             this.opt_LineFlag1.TabIndex = 2;
             this.opt_LineFlag1.Text = "#2";
             this.opt_LineFlag1.UseVisualStyleBackColor = true;
+            this.opt_LineFlag1.CheckedChanged += new System.EventHandler(this.opt_LineFlag1_CheckedChanged);
             // 
             // opt_LineFlag2
             // 
@@ -1904,6 +2363,7 @@
             this.opt_LineFlag2.TabStop = true;
             this.opt_LineFlag2.Text = "#3";
             this.opt_LineFlag2.UseVisualStyleBackColor = true;
+            this.opt_LineFlag2.CheckedChanged += new System.EventHandler(this.opt_LineFlag2_CheckedChanged);
             // 
             // opt_LineFlag0
             // 
@@ -1918,6 +2378,7 @@
             this.opt_LineFlag0.TabStop = true;
             this.opt_LineFlag0.Text = "#1";
             this.opt_LineFlag0.UseVisualStyleBackColor = true;
+            this.opt_LineFlag0.CheckedChanged += new System.EventHandler(this.opt_LineFlag0_CheckedChanged);
             // 
             // txt_stdspec_chg_ref
             // 
@@ -1975,7 +2436,7 @@
             this.groupBox3.Controls.Add(this.TXT_TOP_GRID_GRD);
             this.groupBox3.Controls.Add(this.label34);
             this.groupBox3.Controls.Add(this.CHK_GRID_FLAG);
-            this.groupBox3.Location = new System.Drawing.Point(385, 352);
+            this.groupBox3.Location = new System.Drawing.Point(385, 273);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(353, 158);
             this.groupBox3.TabIndex = 10;
@@ -1990,9 +2451,11 @@
             this.CHK_BOT_GRD1.Name = "CHK_BOT_GRD1";
             this.CHK_BOT_GRD1.Size = new System.Drawing.Size(78, 22);
             this.CHK_BOT_GRD1.TabIndex = 502;
+            this.CHK_BOT_GRD1.Tag = "N";
             this.CHK_BOT_GRD1.Text = "不合格";
             this.CHK_BOT_GRD1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.CHK_BOT_GRD1.UseVisualStyleBackColor = true;
+            this.CHK_BOT_GRD1.CheckedChanged += new System.EventHandler(this.CHK_BOT_GRD1_CheckedChanged);
             // 
             // CHK_BOT_GRD0
             // 
@@ -2002,9 +2465,11 @@
             this.CHK_BOT_GRD0.Name = "CHK_BOT_GRD0";
             this.CHK_BOT_GRD0.Size = new System.Drawing.Size(78, 22);
             this.CHK_BOT_GRD0.TabIndex = 501;
+            this.CHK_BOT_GRD0.Tag = "Y";
             this.CHK_BOT_GRD0.Text = "合格";
             this.CHK_BOT_GRD0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.CHK_BOT_GRD0.UseVisualStyleBackColor = true;
+            this.CHK_BOT_GRD0.CheckedChanged += new System.EventHandler(this.CHK_BOT_GRD0_CheckedChanged);
             // 
             // CHK_TOP_GRD1
             // 
@@ -2014,9 +2479,11 @@
             this.CHK_TOP_GRD1.Name = "CHK_TOP_GRD1";
             this.CHK_TOP_GRD1.Size = new System.Drawing.Size(78, 22);
             this.CHK_TOP_GRD1.TabIndex = 500;
+            this.CHK_TOP_GRD1.Tag = "N";
             this.CHK_TOP_GRD1.Text = "不合格";
             this.CHK_TOP_GRD1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.CHK_TOP_GRD1.UseVisualStyleBackColor = true;
+            this.CHK_TOP_GRD1.CheckedChanged += new System.EventHandler(this.CHK_TOP_GRD1_CheckedChanged);
             // 
             // CHK_TOP_GRD0
             // 
@@ -2026,9 +2493,11 @@
             this.CHK_TOP_GRD0.Name = "CHK_TOP_GRD0";
             this.CHK_TOP_GRD0.Size = new System.Drawing.Size(78, 22);
             this.CHK_TOP_GRD0.TabIndex = 499;
+            this.CHK_TOP_GRD0.Tag = "Y";
             this.CHK_TOP_GRD0.Text = "合格";
             this.CHK_TOP_GRD0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.CHK_TOP_GRD0.UseVisualStyleBackColor = true;
+            this.CHK_TOP_GRD0.CheckedChanged += new System.EventHandler(this.CHK_TOP_GRD0_CheckedChanged);
             // 
             // TXT_GRID_EMP_CD
             // 
@@ -2041,6 +2510,7 @@
             this.TXT_GRID_EMP_CD.Size = new System.Drawing.Size(87, 22);
             this.TXT_GRID_EMP_CD.TabIndex = 498;
             this.TXT_GRID_EMP_CD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TXT_GRID_EMP_CD.DoubleClick += new System.EventHandler(this.TXT_GRID_EMP_CD_DoubleClick);
             // 
             // label35
             // 
@@ -2115,6 +2585,7 @@
             this.TXT_GRID_TIME.Name = "TXT_GRID_TIME";
             this.TXT_GRID_TIME.Size = new System.Drawing.Size(142, 22);
             this.TXT_GRID_TIME.TabIndex = 492;
+            this.TXT_GRID_TIME.DoubleClick += new System.EventHandler(this.TXT_GRID_TIME_DoubleClick);
             // 
             // label19
             // 
@@ -2184,6 +2655,7 @@
             this.CHK_GRID_FLAG.Text = "是否修磨";
             this.CHK_GRID_FLAG.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.CHK_GRID_FLAG.UseVisualStyleBackColor = true;
+            this.CHK_GRID_FLAG.CheckedChanged += new System.EventHandler(this.CHK_GRID_FLAG_CheckedChanged);
             // 
             // groupBox4
             // 
@@ -2193,7 +2665,7 @@
             this.groupBox4.Controls.Add(this.TXT_INSP_FLAW_NAME3);
             this.groupBox4.Controls.Add(this.TXT_INSP_FLAW3);
             this.groupBox4.Controls.Add(this.label38);
-            this.groupBox4.Location = new System.Drawing.Point(385, 510);
+            this.groupBox4.Location = new System.Drawing.Point(385, 433);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(353, 82);
             this.groupBox4.TabIndex = 11;
@@ -2234,7 +2706,7 @@
             this.groupBox5.Controls.Add(this.label41);
             this.groupBox5.Controls.Add(this.TXT_INSP_MAN);
             this.groupBox5.Controls.Add(this.label40);
-            this.groupBox5.Location = new System.Drawing.Point(385, 595);
+            this.groupBox5.Location = new System.Drawing.Point(385, 513);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(353, 109);
             this.groupBox5.TabIndex = 12;
@@ -2268,6 +2740,7 @@
             this.TXT_INSP_OCCR_TIME.Name = "TXT_INSP_OCCR_TIME";
             this.TXT_INSP_OCCR_TIME.Size = new System.Drawing.Size(142, 22);
             this.TXT_INSP_OCCR_TIME.TabIndex = 585;
+            this.TXT_INSP_OCCR_TIME.DoubleClick += new System.EventHandler(this.TXT_INSP_OCCR_TIME_DoubleClick);
             // 
             // label42
             // 
@@ -2303,454 +2776,9 @@
             this.label40.Text = "头部检验工";
             this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.cbo_ResonDesc);
-            this.panel4.Controls.Add(this.cmd_Off);
-            this.panel4.Controls.Add(this.txt_ResonCd);
-            this.panel4.Controls.Add(this.txtCl);
-            this.panel4.Controls.Add(this.txtGrid);
-            this.panel4.Controls.Add(this.txtGas);
-            this.panel4.Controls.Add(this.chkCl);
-            this.panel4.Controls.Add(this.chkGrid);
-            this.panel4.Controls.Add(this.chkGas);
-            this.panel4.Controls.Add(this.CHK_PART17);
-            this.panel4.Controls.Add(this.CHK_PART16);
-            this.panel4.Controls.Add(this.CHK_PART15);
-            this.panel4.Controls.Add(this.CHK_PART14);
-            this.panel4.Controls.Add(this.CHK_PART13);
-            this.panel4.Controls.Add(this.CHK_PART12);
-            this.panel4.Controls.Add(this.CHK_PART11);
-            this.panel4.Controls.Add(this.CHK_PART10);
-            this.panel4.Controls.Add(this.CHK_PART9);
-            this.panel4.Controls.Add(this.CHK_PART8);
-            this.panel4.Controls.Add(this.CHK_PART7);
-            this.panel4.Controls.Add(this.CHK_PART6);
-            this.panel4.Controls.Add(this.CHK_PART5);
-            this.panel4.Controls.Add(this.CHK_PART4);
-            this.panel4.Controls.Add(this.CHK_PART3);
-            this.panel4.Controls.Add(this.CHK_PART2);
-            this.panel4.Controls.Add(this.CHK_PART1);
-            this.panel4.Controls.Add(this.CHK_PART0);
-            this.panel4.Controls.Add(this.label49);
-            this.panel4.Controls.Add(this.TXT_EMP_CD1);
-            this.panel4.Controls.Add(this.SDB_INSP_LTH5);
-            this.panel4.Controls.Add(this.SDB_INSP_LTH4);
-            this.panel4.Controls.Add(this.SDB_INSP_LTH3);
-            this.panel4.Controls.Add(this.TXT_INSP_PART5);
-            this.panel4.Controls.Add(this.TXT_INSP_PART4);
-            this.panel4.Controls.Add(this.TXT_INSP_PART3);
-            this.panel4.Controls.Add(this.TXT_INSP_FLAW_NAME5);
-            this.panel4.Controls.Add(this.TXT_INSP_FLAW_NAME4);
-            this.panel4.Controls.Add(this.SDB_INSP_LTH2);
-            this.panel4.Controls.Add(this.SDB_INSP_LTH1);
-            this.panel4.Controls.Add(this.SDB_INSP_LTH0);
-            this.panel4.Controls.Add(this.TXT_INSP_PART2);
-            this.panel4.Controls.Add(this.TXT_CL);
-            this.panel4.Controls.Add(this.TXT_INSP_PART1);
-            this.panel4.Controls.Add(this.TXT_INSP_PART0);
-            this.panel4.Controls.Add(this.TXT_INSP_FLAW_NAME1);
-            this.panel4.Controls.Add(this.TXT_INSP_FLAW5);
-            this.panel4.Controls.Add(this.TXT_INSP_FLAW4);
-            this.panel4.Controls.Add(this.TXT_INSP_FLAW1);
-            this.panel4.Location = new System.Drawing.Point(41, 68);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(294, 174);
-            this.panel4.TabIndex = 503;
-            this.panel4.Visible = false;
-            // 
-            // TXT_INSP_FLAW1
-            // 
-            this.TXT_INSP_FLAW1.Location = new System.Drawing.Point(4, 10);
-            this.TXT_INSP_FLAW1.Name = "TXT_INSP_FLAW1";
-            this.TXT_INSP_FLAW1.Size = new System.Drawing.Size(21, 22);
-            this.TXT_INSP_FLAW1.TabIndex = 0;
-            // 
-            // TXT_INSP_FLAW4
-            // 
-            this.TXT_INSP_FLAW4.Location = new System.Drawing.Point(33, 10);
-            this.TXT_INSP_FLAW4.Name = "TXT_INSP_FLAW4";
-            this.TXT_INSP_FLAW4.Size = new System.Drawing.Size(21, 22);
-            this.TXT_INSP_FLAW4.TabIndex = 1;
-            // 
-            // TXT_INSP_FLAW5
-            // 
-            this.TXT_INSP_FLAW5.Location = new System.Drawing.Point(59, 10);
-            this.TXT_INSP_FLAW5.Name = "TXT_INSP_FLAW5";
-            this.TXT_INSP_FLAW5.Size = new System.Drawing.Size(21, 22);
-            this.TXT_INSP_FLAW5.TabIndex = 2;
-            // 
-            // TXT_INSP_FLAW_NAME1
-            // 
-            this.TXT_INSP_FLAW_NAME1.Location = new System.Drawing.Point(86, 9);
-            this.TXT_INSP_FLAW_NAME1.Name = "TXT_INSP_FLAW_NAME1";
-            this.TXT_INSP_FLAW_NAME1.Size = new System.Drawing.Size(21, 22);
-            this.TXT_INSP_FLAW_NAME1.TabIndex = 3;
-            // 
-            // TXT_INSP_PART0
-            // 
-            this.TXT_INSP_PART0.Location = new System.Drawing.Point(113, 10);
-            this.TXT_INSP_PART0.Name = "TXT_INSP_PART0";
-            this.TXT_INSP_PART0.Size = new System.Drawing.Size(21, 22);
-            this.TXT_INSP_PART0.TabIndex = 4;
-            // 
-            // TXT_INSP_PART1
-            // 
-            this.TXT_INSP_PART1.Location = new System.Drawing.Point(140, 10);
-            this.TXT_INSP_PART1.Name = "TXT_INSP_PART1";
-            this.TXT_INSP_PART1.Size = new System.Drawing.Size(21, 22);
-            this.TXT_INSP_PART1.TabIndex = 5;
-            // 
-            // TXT_CL
-            // 
-            this.TXT_CL.Location = new System.Drawing.Point(167, 10);
-            this.TXT_CL.Name = "TXT_CL";
-            this.TXT_CL.Size = new System.Drawing.Size(21, 22);
-            this.TXT_CL.TabIndex = 6;
-            // 
-            // TXT_INSP_PART2
-            // 
-            this.TXT_INSP_PART2.Location = new System.Drawing.Point(194, 10);
-            this.TXT_INSP_PART2.Name = "TXT_INSP_PART2";
-            this.TXT_INSP_PART2.Size = new System.Drawing.Size(21, 22);
-            this.TXT_INSP_PART2.TabIndex = 7;
-            // 
-            // SDB_INSP_LTH0
-            // 
-            this.SDB_INSP_LTH0.Location = new System.Drawing.Point(221, 12);
-            this.SDB_INSP_LTH0.Name = "SDB_INSP_LTH0";
-            this.SDB_INSP_LTH0.Size = new System.Drawing.Size(21, 22);
-            this.SDB_INSP_LTH0.TabIndex = 8;
-            // 
-            // SDB_INSP_LTH1
-            // 
-            this.SDB_INSP_LTH1.Location = new System.Drawing.Point(245, 13);
-            this.SDB_INSP_LTH1.Name = "SDB_INSP_LTH1";
-            this.SDB_INSP_LTH1.Size = new System.Drawing.Size(21, 22);
-            this.SDB_INSP_LTH1.TabIndex = 9;
-            // 
-            // TXT_EMP_CD1
-            // 
-            this.TXT_EMP_CD1.Location = new System.Drawing.Point(245, 40);
-            this.TXT_EMP_CD1.Name = "TXT_EMP_CD1";
-            this.TXT_EMP_CD1.Size = new System.Drawing.Size(21, 22);
-            this.TXT_EMP_CD1.TabIndex = 19;
-            // 
-            // SDB_INSP_LTH5
-            // 
-            this.SDB_INSP_LTH5.Location = new System.Drawing.Point(221, 39);
-            this.SDB_INSP_LTH5.Name = "SDB_INSP_LTH5";
-            this.SDB_INSP_LTH5.Size = new System.Drawing.Size(21, 22);
-            this.SDB_INSP_LTH5.TabIndex = 18;
-            // 
-            // SDB_INSP_LTH4
-            // 
-            this.SDB_INSP_LTH4.Location = new System.Drawing.Point(194, 37);
-            this.SDB_INSP_LTH4.Name = "SDB_INSP_LTH4";
-            this.SDB_INSP_LTH4.Size = new System.Drawing.Size(21, 22);
-            this.SDB_INSP_LTH4.TabIndex = 17;
-            // 
-            // SDB_INSP_LTH3
-            // 
-            this.SDB_INSP_LTH3.Location = new System.Drawing.Point(167, 37);
-            this.SDB_INSP_LTH3.Name = "SDB_INSP_LTH3";
-            this.SDB_INSP_LTH3.Size = new System.Drawing.Size(21, 22);
-            this.SDB_INSP_LTH3.TabIndex = 16;
-            // 
-            // TXT_INSP_PART5
-            // 
-            this.TXT_INSP_PART5.Location = new System.Drawing.Point(140, 37);
-            this.TXT_INSP_PART5.Name = "TXT_INSP_PART5";
-            this.TXT_INSP_PART5.Size = new System.Drawing.Size(21, 22);
-            this.TXT_INSP_PART5.TabIndex = 15;
-            // 
-            // TXT_INSP_PART4
-            // 
-            this.TXT_INSP_PART4.Location = new System.Drawing.Point(113, 37);
-            this.TXT_INSP_PART4.Name = "TXT_INSP_PART4";
-            this.TXT_INSP_PART4.Size = new System.Drawing.Size(21, 22);
-            this.TXT_INSP_PART4.TabIndex = 14;
-            // 
-            // TXT_INSP_PART3
-            // 
-            this.TXT_INSP_PART3.Location = new System.Drawing.Point(86, 36);
-            this.TXT_INSP_PART3.Name = "TXT_INSP_PART3";
-            this.TXT_INSP_PART3.Size = new System.Drawing.Size(21, 22);
-            this.TXT_INSP_PART3.TabIndex = 13;
-            // 
-            // TXT_INSP_FLAW_NAME5
-            // 
-            this.TXT_INSP_FLAW_NAME5.Location = new System.Drawing.Point(59, 37);
-            this.TXT_INSP_FLAW_NAME5.Name = "TXT_INSP_FLAW_NAME5";
-            this.TXT_INSP_FLAW_NAME5.Size = new System.Drawing.Size(21, 22);
-            this.TXT_INSP_FLAW_NAME5.TabIndex = 12;
-            // 
-            // TXT_INSP_FLAW_NAME4
-            // 
-            this.TXT_INSP_FLAW_NAME4.Location = new System.Drawing.Point(33, 37);
-            this.TXT_INSP_FLAW_NAME4.Name = "TXT_INSP_FLAW_NAME4";
-            this.TXT_INSP_FLAW_NAME4.Size = new System.Drawing.Size(21, 22);
-            this.TXT_INSP_FLAW_NAME4.TabIndex = 11;
-            // 
-            // SDB_INSP_LTH2
-            // 
-            this.SDB_INSP_LTH2.Location = new System.Drawing.Point(4, 37);
-            this.SDB_INSP_LTH2.Name = "SDB_INSP_LTH2";
-            this.SDB_INSP_LTH2.Size = new System.Drawing.Size(21, 22);
-            this.SDB_INSP_LTH2.TabIndex = 10;
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(6, 142);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(294, 13);
-            this.label49.TabIndex = 20;
-            this.label49.Text = "上面控件都是没有用的，但是VB调用了并且隐藏了";
-            // 
-            // CHK_PART0
-            // 
-            this.CHK_PART0.AutoSize = true;
-            this.CHK_PART0.Location = new System.Drawing.Point(4, 64);
-            this.CHK_PART0.Name = "CHK_PART0";
-            this.CHK_PART0.Size = new System.Drawing.Size(15, 14);
-            this.CHK_PART0.TabIndex = 21;
-            this.CHK_PART0.UseVisualStyleBackColor = true;
-            // 
-            // CHK_PART1
-            // 
-            this.CHK_PART1.AutoSize = true;
-            this.CHK_PART1.Location = new System.Drawing.Point(20, 64);
-            this.CHK_PART1.Name = "CHK_PART1";
-            this.CHK_PART1.Size = new System.Drawing.Size(15, 14);
-            this.CHK_PART1.TabIndex = 22;
-            this.CHK_PART1.UseVisualStyleBackColor = true;
-            // 
-            // CHK_PART2
-            // 
-            this.CHK_PART2.AutoSize = true;
-            this.CHK_PART2.Location = new System.Drawing.Point(39, 65);
-            this.CHK_PART2.Name = "CHK_PART2";
-            this.CHK_PART2.Size = new System.Drawing.Size(15, 14);
-            this.CHK_PART2.TabIndex = 23;
-            this.CHK_PART2.UseVisualStyleBackColor = true;
-            // 
-            // CHK_PART3
-            // 
-            this.CHK_PART3.AutoSize = true;
-            this.CHK_PART3.Location = new System.Drawing.Point(54, 65);
-            this.CHK_PART3.Name = "CHK_PART3";
-            this.CHK_PART3.Size = new System.Drawing.Size(15, 14);
-            this.CHK_PART3.TabIndex = 24;
-            this.CHK_PART3.UseVisualStyleBackColor = true;
-            // 
-            // CHK_PART4
-            // 
-            this.CHK_PART4.AutoSize = true;
-            this.CHK_PART4.Location = new System.Drawing.Point(70, 64);
-            this.CHK_PART4.Name = "CHK_PART4";
-            this.CHK_PART4.Size = new System.Drawing.Size(15, 14);
-            this.CHK_PART4.TabIndex = 25;
-            this.CHK_PART4.UseVisualStyleBackColor = true;
-            // 
-            // CHK_PART5
-            // 
-            this.CHK_PART5.AutoSize = true;
-            this.CHK_PART5.Location = new System.Drawing.Point(86, 64);
-            this.CHK_PART5.Name = "CHK_PART5";
-            this.CHK_PART5.Size = new System.Drawing.Size(15, 14);
-            this.CHK_PART5.TabIndex = 26;
-            this.CHK_PART5.UseVisualStyleBackColor = true;
-            // 
-            // CHK_PART6
-            // 
-            this.CHK_PART6.AutoSize = true;
-            this.CHK_PART6.Location = new System.Drawing.Point(107, 65);
-            this.CHK_PART6.Name = "CHK_PART6";
-            this.CHK_PART6.Size = new System.Drawing.Size(15, 14);
-            this.CHK_PART6.TabIndex = 27;
-            this.CHK_PART6.UseVisualStyleBackColor = true;
-            // 
-            // CHK_PART7
-            // 
-            this.CHK_PART7.AutoSize = true;
-            this.CHK_PART7.Location = new System.Drawing.Point(128, 66);
-            this.CHK_PART7.Name = "CHK_PART7";
-            this.CHK_PART7.Size = new System.Drawing.Size(15, 14);
-            this.CHK_PART7.TabIndex = 28;
-            this.CHK_PART7.UseVisualStyleBackColor = true;
-            // 
-            // CHK_PART8
-            // 
-            this.CHK_PART8.AutoSize = true;
-            this.CHK_PART8.Location = new System.Drawing.Point(146, 66);
-            this.CHK_PART8.Name = "CHK_PART8";
-            this.CHK_PART8.Size = new System.Drawing.Size(15, 14);
-            this.CHK_PART8.TabIndex = 29;
-            this.CHK_PART8.UseVisualStyleBackColor = true;
-            // 
-            // CHK_PART9
-            // 
-            this.CHK_PART9.AutoSize = true;
-            this.CHK_PART9.Location = new System.Drawing.Point(167, 65);
-            this.CHK_PART9.Name = "CHK_PART9";
-            this.CHK_PART9.Size = new System.Drawing.Size(15, 14);
-            this.CHK_PART9.TabIndex = 30;
-            this.CHK_PART9.UseVisualStyleBackColor = true;
-            // 
-            // CHK_PART10
-            // 
-            this.CHK_PART10.AutoSize = true;
-            this.CHK_PART10.Location = new System.Drawing.Point(188, 66);
-            this.CHK_PART10.Name = "CHK_PART10";
-            this.CHK_PART10.Size = new System.Drawing.Size(15, 14);
-            this.CHK_PART10.TabIndex = 31;
-            this.CHK_PART10.UseVisualStyleBackColor = true;
-            // 
-            // CHK_PART11
-            // 
-            this.CHK_PART11.AutoSize = true;
-            this.CHK_PART11.Location = new System.Drawing.Point(209, 66);
-            this.CHK_PART11.Name = "CHK_PART11";
-            this.CHK_PART11.Size = new System.Drawing.Size(15, 14);
-            this.CHK_PART11.TabIndex = 32;
-            this.CHK_PART11.UseVisualStyleBackColor = true;
-            // 
-            // CHK_PART12
-            // 
-            this.CHK_PART12.AutoSize = true;
-            this.CHK_PART12.Location = new System.Drawing.Point(230, 66);
-            this.CHK_PART12.Name = "CHK_PART12";
-            this.CHK_PART12.Size = new System.Drawing.Size(15, 14);
-            this.CHK_PART12.TabIndex = 33;
-            this.CHK_PART12.UseVisualStyleBackColor = true;
-            // 
-            // txtGrid
-            // 
-            this.txtGrid.AutoSize = true;
-            this.txtGrid.Location = new System.Drawing.Point(167, 87);
-            this.txtGrid.Name = "txtGrid";
-            this.txtGrid.Size = new System.Drawing.Size(15, 14);
-            this.txtGrid.TabIndex = 43;
-            this.txtGrid.UseVisualStyleBackColor = true;
-            // 
-            // txtGas
-            // 
-            this.txtGas.AutoSize = true;
-            this.txtGas.Location = new System.Drawing.Point(146, 88);
-            this.txtGas.Name = "txtGas";
-            this.txtGas.Size = new System.Drawing.Size(15, 14);
-            this.txtGas.TabIndex = 42;
-            this.txtGas.UseVisualStyleBackColor = true;
-            // 
-            // chkCl
-            // 
-            this.chkCl.AutoSize = true;
-            this.chkCl.Location = new System.Drawing.Point(128, 88);
-            this.chkCl.Name = "chkCl";
-            this.chkCl.Size = new System.Drawing.Size(15, 14);
-            this.chkCl.TabIndex = 41;
-            this.chkCl.UseVisualStyleBackColor = true;
-            // 
-            // chkGrid
-            // 
-            this.chkGrid.AutoSize = true;
-            this.chkGrid.Location = new System.Drawing.Point(107, 87);
-            this.chkGrid.Name = "chkGrid";
-            this.chkGrid.Size = new System.Drawing.Size(15, 14);
-            this.chkGrid.TabIndex = 40;
-            this.chkGrid.UseVisualStyleBackColor = true;
-            // 
-            // chkGas
-            // 
-            this.chkGas.AutoSize = true;
-            this.chkGas.Location = new System.Drawing.Point(86, 86);
-            this.chkGas.Name = "chkGas";
-            this.chkGas.Size = new System.Drawing.Size(15, 14);
-            this.chkGas.TabIndex = 39;
-            this.chkGas.UseVisualStyleBackColor = true;
-            // 
-            // CHK_PART17
-            // 
-            this.CHK_PART17.AutoSize = true;
-            this.CHK_PART17.Location = new System.Drawing.Point(70, 86);
-            this.CHK_PART17.Name = "CHK_PART17";
-            this.CHK_PART17.Size = new System.Drawing.Size(15, 14);
-            this.CHK_PART17.TabIndex = 38;
-            this.CHK_PART17.UseVisualStyleBackColor = true;
-            // 
-            // CHK_PART16
-            // 
-            this.CHK_PART16.AutoSize = true;
-            this.CHK_PART16.Location = new System.Drawing.Point(54, 87);
-            this.CHK_PART16.Name = "CHK_PART16";
-            this.CHK_PART16.Size = new System.Drawing.Size(15, 14);
-            this.CHK_PART16.TabIndex = 37;
-            this.CHK_PART16.UseVisualStyleBackColor = true;
-            // 
-            // CHK_PART15
-            // 
-            this.CHK_PART15.AutoSize = true;
-            this.CHK_PART15.Location = new System.Drawing.Point(39, 87);
-            this.CHK_PART15.Name = "CHK_PART15";
-            this.CHK_PART15.Size = new System.Drawing.Size(15, 14);
-            this.CHK_PART15.TabIndex = 36;
-            this.CHK_PART15.UseVisualStyleBackColor = true;
-            // 
-            // CHK_PART14
-            // 
-            this.CHK_PART14.AutoSize = true;
-            this.CHK_PART14.Location = new System.Drawing.Point(20, 86);
-            this.CHK_PART14.Name = "CHK_PART14";
-            this.CHK_PART14.Size = new System.Drawing.Size(15, 14);
-            this.CHK_PART14.TabIndex = 35;
-            this.CHK_PART14.UseVisualStyleBackColor = true;
-            // 
-            // CHK_PART13
-            // 
-            this.CHK_PART13.AutoSize = true;
-            this.CHK_PART13.Location = new System.Drawing.Point(4, 86);
-            this.CHK_PART13.Name = "CHK_PART13";
-            this.CHK_PART13.Size = new System.Drawing.Size(15, 14);
-            this.CHK_PART13.TabIndex = 34;
-            this.CHK_PART13.UseVisualStyleBackColor = true;
-            // 
-            // txtCl
-            // 
-            this.txtCl.AutoSize = true;
-            this.txtCl.Location = new System.Drawing.Point(183, 89);
-            this.txtCl.Name = "txtCl";
-            this.txtCl.Size = new System.Drawing.Size(15, 14);
-            this.txtCl.TabIndex = 44;
-            this.txtCl.UseVisualStyleBackColor = true;
-            // 
-            // txt_ResonCd
-            // 
-            this.txt_ResonCd.Location = new System.Drawing.Point(20, 110);
-            this.txt_ResonCd.Name = "txt_ResonCd";
-            this.txt_ResonCd.Size = new System.Drawing.Size(21, 22);
-            this.txt_ResonCd.TabIndex = 45;
-            // 
-            // cmd_Off
-            // 
-            this.cmd_Off.Location = new System.Drawing.Point(98, 113);
-            this.cmd_Off.Name = "cmd_Off";
-            this.cmd_Off.Size = new System.Drawing.Size(75, 23);
-            this.cmd_Off.TabIndex = 47;
-            this.cmd_Off.Text = "下线";
-            this.cmd_Off.UseVisualStyleBackColor = true;
-            // 
-            // cbo_ResonDesc
-            // 
-            this.cbo_ResonDesc.FormattingEnabled = true;
-            this.cbo_ResonDesc.Location = new System.Drawing.Point(48, 109);
-            this.cbo_ResonDesc.Name = "cbo_ResonDesc";
-            this.cbo_ResonDesc.Size = new System.Drawing.Size(21, 21);
-            this.cbo_ResonDesc.TabIndex = 48;
-            // 
             // CGD2050C
             // 
-            this.ClientSize = new System.Drawing.Size(1062, 702);
+            this.ClientSize = new System.Drawing.Size(1084, 634);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -2760,12 +2788,14 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "CGD2050C";
             this.Text = "表面检查实绩查询及修改_CGD2050C";
-            this.Load += new System.EventHandler(this.WGC3010C_Load);
+            this.Load += new System.EventHandler(this.CGD2050C_Load);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ss1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ss1_Sheet1)).EndInit();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -2782,8 +2812,6 @@
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -116,3 +116,4 @@ C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.pdb
 D:\github\NGHB\CG\obj\Debug\CG.CGC2010C.resources
 D:\github\NGHB\CG\obj\Debug\CG.CGC2020C.resources
 D:\github\NGHB\CG\obj\Debug\CG.CGC2060C.resources
+D:\github\NGHB\CG\obj\Debug\CG.CGD2050C.resources
