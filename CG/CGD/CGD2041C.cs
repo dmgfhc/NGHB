@@ -292,6 +292,504 @@ namespace CG
 
         }
 
+        private void CGD2041C_Load(object sender, EventArgs e)
+        {
+
+            base.sSvrPgmPkgName = "CGD2041NC";
+
+            Form_Define();
+
+            SDT_PROD_DATE.Text = Gf_DTSet("", "D");
+
+            opt_Product2.Checked = true;
+            opt_Product2.ForeColor = Color.Red;
+
+            bCheck = false;
+
+
+        }
+
+        public override void Form_Cls()
+        {
+
+            string sProd_cd;
+            sProd_cd = TXT_PROD_CD.Text;
+            TXT_PROD_CD.Text = sProd_cd;
+            TextClear();
+            bCheck = false;
+        }
+
+        public void TextClear()
+        {
+            txt_SMP_NO.Text = "";
+            txt_SMP_LEN.Text = "";
+            txt_SMP_LOC.Text = "";
+            txt_SMP_LOC_NAME.Text = "";
+            txt_CHG_SMP_NO.Text = "";
+            txt_CHG_STDSPEC.Text = "";
+
+        }
+
+        public void Form_Ref()
+        {
+
+            if (SpreadCommon.Gf_Sp_ProceExist(ss2, true))
+                return;
+
+            if (txt_charge_no.Text.Trim() == "" & SDT_PROD_DATE.Text == "")
+            {
+                GeneralCommon.Gp_MsgBoxDisplay("请输入查询号还是生产开始日期！！！", "I", "提示");
+                return;
+            }
+
+            if (p_Ref(1, 1, true, false))
+            {
+                TextClear();
+                bCheck = false;
+            }
+            ss2.ActiveSheet.RowCount = 0;
+        }
+
+        public void Form_Pro()
+        {
+            int intRow;
+            long iDR;
+            int iChgCnt;
+            int iCnt;
+            string sSpec;
+            string sStdspec;
+            string sBefStdspec;
+            string sCharge_no;
+
+            iCnt = 0;
+            iChgCnt = 0;
+
+            {
+                for (iDR = 1; iDR <= ss2.ActiveSheet.RowCount; iDR++)
+                {
+                    if (ss2.ActiveSheet.Cells[iDR - 1, SS2_PROC_CD].Text != "XAC" & ss2.ActiveSheet.Cells[iDR - 1, SS2_PROC_CD].Text != "XAF")
+                    {
+
+                        sStdspec = ss2.ActiveSheet.Cells[iDR - 1, SS2_STDSPEC].Text;
+                        sBefStdspec = ss2.ActiveSheet.Cells[iDR - 1, SS2_BEF_STDSPEC].Text;
+
+                        if (sBefStdspec != "" & sStdspec != sBefStdspec & (ExpoCheck(sBefStdspec) & !ExpoCheck(sStdspec)))
+                        {
+                            iChgCnt = iChgCnt + 1;
+                            break; // TODO: might not be correct. Was : Exit For
+                        }
+
+                    }
+                }
+
+                for (iDR = 1; iDR <= ss2.ActiveSheet.RowCount; iDR++)
+                {
+                    if (ss1.ActiveSheet.RowHeader.Cells[iDR - 1, 0].Text == "修改")
+                    {
+                        ss2.Col = SS2_STDSPEC;
+                        sSpec = ss2.ActiveSheet.Cells[iDR - 1, SS2_STDSPEC].Text;
+                        if (txt_CHG_SMP_NO.Text == "" | txt_CHG_STDSPEC.Text == "")
+                        {
+                            if (ExpoCheck(sSpec))
+                            {
+                                GeneralCommon.Gp_MsgBoxDisplay("必须输入(" + txt_CHG_SMP_NO.Tag + "与" + txt_CHG_STDSPEC.Tag + ")", "I", "提示");
+                                return;
+                            }
+                        }
+
+                        if (iChgCnt == 0)
+                        {
+                            ss2.ActiveSheet.Cells[iDR - 1, SS2_CHG_SMP_NO].Text = txt_CHG_SMP_NO.Text;
+                            ss2.ActiveSheet.Cells[iDR - 1, SS2_CHG_STDSPEC].Text = txt_CHG_STDSPEC.Text;
+                            iChgCnt = 1;
+                        }
+                    }
+                }
+            }
+
+            if (p_Pro(2, 2, true, false))
+            {
+                sCharge_no = txt_charge_no.Text;
+                txt_charge_no.Text = "";
+                Form_Ref();
+                txt_charge_no.Text = sCharge_no;
+            }
+
+        }
+
+        private void SDT_PROD_DATE_Clk()
+        {
+            SDT_PROD_DATE.Text = Gf_DTSet("", "D");
+        }
+
+        private void ss1_DblClk(int col, int row)
+        {
+            int intRow;
+            string sLot_no;
+            string sSelect;
+
+            if (ss1.ActiveSheet.RowCount <= 0)
+                return;
+            if (SpreadCommon.Gf_Sp_ProceExist(ss2, true))
+                return;
+
+            {
+                for (intRow = 1; intRow <= ss1.ActiveSheet.RowCount; intRow++)
+                {
+                    ss1.ActiveSheet.RowHeader.Cells[intRow - 1, 0].Text = "";
+                    Gp_Sp_BlockColor(ss1, 1, ss1.MaxCols, ss1.ROW, ss1.ROW);
+                    SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, intRow - 1, intRow - 1, Color.Black, Color.White);
+                }
+
+                ss1.Col = 0;
+                ss1.ROW = ss1.ActiveRow;
+                ss1.ActiveSheet.RowHeader.Cells[row, 0].Text = "选择";
+                SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, row, row, Color.Black, ColorTranslator.FromHtml("ffff80"));
+
+                ss2.ActiveSheet.RowCount = 0;
+                txt_SLAB_NO.Text = ss1.ActiveSheet.Cells[row, 0].Text;
+                sLot_no = ss1.ActiveSheet.Cells[row, 1].Text; ;
+
+                sLoopChk = "**";
+                if (p_Ref(2, 2, true, false))
+                {
+                    TextClear();
+                    Sample_No_Edit();
+                    if (TXT_PROD_CD.Text == "SL")
+                    {
+                        txt_charge_no.Text = ss1.ActiveSheet.Cells[row, 0].Text;
+                    }
+                    else
+                    {
+                        txt_charge_no.Text = ss1.ActiveSheet.Cells[row, 1].Text;
+                    }
+                    bCheck = true;
+                }
+                sLoopChk = "";
+                for (intRow = 1; intRow <= ss1.ActiveSheet.RowCount; intRow++)
+                {
+                    sSelect = ss1.ActiveSheet.RowHeader.Cells[intRow - 1, 0].Text;
+                    if (sLot_no == ss1.ActiveSheet.Cells[intRow - 1, 1].Text & sLot_no.Length == 14 & sSelect == "")
+                    {
+                        ss1_Clk(0, intRow - 1);
+                    }
+                }
+            }
+
+        }
+
+        private void Sample_No_Edit()
+        {
+
+            int intRow;
+            string sPlateNo;
+            string sStdspec;
+            string sBefStdspec;
+            string sSmpFl;
+            string sSmpNo;
+            string sProdCd;
+            string sSmp_No;
+
+            if (ss2.ActiveSheet.RowCount <= 0)
+                return;
+
+            {
+                for (intRow = 1; intRow <= ss2.ActiveSheet.RowCount; intRow++)
+                {
+
+                    sStdspec = ss2.ActiveSheet.Cells[intRow - 1, SS2_STDSPEC].Text;
+                    sBefStdspec = ss2.ActiveSheet.Cells[intRow - 1, SS2_BEF_STDSPEC].Text;
+                    sPlateNo = ss2.ActiveSheet.Cells[intRow - 1, SS2_PLATE_NO].Text;
+                    sSmpFl = ss2.ActiveSheet.Cells[intRow - 1, SS2_SMP_FLAG].Text;
+                    sSmpNo = ss2.ActiveSheet.Cells[intRow - 1, SS2_SMP_NO].Text;
+                    sProdCd = ss2.ActiveSheet.Cells[intRow - 1, SS2_PROD_CD].Text;
+
+                    if (sProdCd == "PP")
+                    {
+                        sSmp_No = "00";
+                    }
+                    else
+                    {
+                        sSmp_No = "99";
+                    }
+
+                    if (txt_SMP_NO.Text == "")
+                    {
+                        if (sSmpFl != "" & sSmpNo.Substring(sSmpNo.Length - 2, 2) != sSmp_No)
+                        {
+                            txt_SMP_NO.Text = sSmpNo;
+                        }
+                        else
+                        {
+                            if ((txt_SMP_NO.Text.Length != 14 & sProdCd == "PP") | (txt_SMP_NO.Text.Length != 12 & sProdCd == "HC"))
+                            {
+                                txt_SMP_NO.Text = sPlateNo;
+                            }
+                        }
+                    }
+
+                    if (ExpoCheck(sBefStdspec) | ExpoCheck(sStdspec))
+                    {
+                        if (sSmpFl != "" & sSmpNo != txt_SMP_NO.Text)
+                        {
+                            //                        txt_CHG_SMP_NO.Text = sSmpNo
+                            txt_CHG_STDSPEC.Text = sStdspec;
+                        }
+                        else
+                        {
+                            if (sBefStdspec != "" & sStdspec != sBefStdspec)
+                            {
+                                txt_CHG_STDSPEC.Text = sStdspec;
+                            }
+                        }
+
+                        if (sProdCd == "PP")
+                        {
+                            txt_CHG_SMP_NO.Text = txt_SMP_NO.Text.Substring(0, 12) + sSmp_No;
+                        }
+                        else
+                        {
+                            txt_CHG_SMP_NO.Text = txt_SMP_NO.Text.Substring(0, 10) + sSmp_No;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void ss1_Clk(int col, int row)
+        {
+            long PRE;
+            long iDR;
+            string sSpec;
+            long iSelCnt;
+            string sCharNo;
+
+            if (ss1.ActiveSheet.RowCount <= 0)
+                return;
+
+            sSpec = ss1.ActiveSheet.Cells[row, SS1_STLGRD].Text;
+            sCharNo = ss1.ActiveSheet.Cells[row, 0].Text.Substring(0, 8);
+
+            iSelCnt = 0;
+            for (iDR = 1; iDR <= ss1.ActiveSheet.RowCount; iDR++)
+            {
+                if (ss1.ActiveSheet.RowHeader.Cells[iDR - 1, 0].Text == "选择")
+                {
+                    //            ss1.Col = 1
+                    //            If sCharNo <> Left(Trim(ss1.Text), 8) Then
+                    //                Call Gp_MsgBoxDisplay("不一样炉号")
+                    //                Exit Sub
+                    //            End If
+                    if (sSpec != ss1.ActiveSheet.Cells[iDR - 1, SS1_STLGRD].Text)
+                    {
+                        GeneralCommon.Gp_MsgBoxDisplay("钢种不一致，请确认", "I", "提示");
+                        return;
+                    }
+                    iSelCnt = iSelCnt + 1;
+                }
+            }
+
+            sLoopChk = "**";
+
+            if (ss1.ActiveSheet.RowHeader.Cells[row, 0].Text != "选择")
+            {
+                ss1.ActiveSheet.RowHeader.Cells[row, 0].Text = "选择";
+                SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, row, row, Color.Black, ColorTranslator.FromHtml("ffff80"));
+            }
+            else
+            {
+                if (SpreadCommon.Gf_Sp_ProceExist(ss2, true))
+                    return;
+
+                ss1.ActiveSheet.RowHeader.Cells[row, 0].Text = "";
+                SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, row, row, Color.Black, Color.White);
+
+                if (iSelCnt < 2)
+                {
+                    ss2.ActiveSheet.RowCount = 0;
+                }
+                else
+                {
+                    Cmd_Set_Save_Click();
+                }
+
+            }
+
+            iSelCnt = 0;
+            for (iDR = 1; iDR <= ss1.ActiveSheet.RowCount; iDR++)
+            {
+                if (ss1.ActiveSheet.RowHeader.Cells[iDR - 1, 0].Text == "选择")
+                {
+                    iSelCnt = iSelCnt + 1;
+                }
+            }
+
+            if (iSelCnt == 0)
+                TextClear();
+            sLoopChk = "";
+
+        }
+
+        private void ss2_ButtonClk(int col, int row)
+        {
+
+            string strSmpNO;
+            string sSmpFlag;
+            string sSmpLoc;
+            long lSmpLen;
+            string sSmpNo;
+            string sStdspec;
+            string sBefStdspec;
+            string sSmpFl;
+            string sProdCd;
+            string sSmp_No;
+            long iDR;
+
+            if (ss2.ActiveSheet.RowCount <= 0 | sLoopChk.Trim() != "")
+                return;
+
+            sSmpFl = "";
+
+            {
+                if (ss2.ActiveSheet.Cells[row, SS2_PROC_CD].Substring(0, 1) == "X")
+                {
+                    return;
+                }
+
+                sLoopChk = "**";
+
+                ss2.ROW = ROW;
+                ss2.Col = Col;
+
+                if (ss2.ActiveSheet.Cells[row, col].Text == "1")
+                {
+                    //            For iDr = 1 To .MaxRows
+                    //                .Row = iDr
+
+                    ss2.Col = SS2_PROC_CD;
+                    if (ss2.ActiveSheet.Cells[row, SS2_PROC_CD].Text != "X")
+                    {
+                        ss2.ActiveSheet.Cells[row, 0].Text = 1;
+
+                        if (txt_SMP_LOC.Text.Length == 1)
+                        {
+                            ss2.ActiveSheet.Cells[row, SS2_SMP_LOC].Text = txt_SMP_LOC.Text;
+                        }
+                        if (txt_SMP_LEN.Text.Length > 0)
+                        {
+                            ss2.ActiveSheet.Cells[row, SS2_SMP_LEN].Text = txt_SMP_LEN.Text;
+                        }
+
+                        sStdspec = ss2.ActiveSheet.Cells[row, SS2_STDSPEC].Text;
+                        sBefStdspec = ss2.ActiveSheet.Cells[row, SS2_BEF_STDSPEC].Text;
+                        sProdCd = ss2.ActiveSheet.Cells[row, SS2_PROD_CD].Text;
+
+                        if (sProdCd == "PP")
+                        {
+                            sSmp_No = "00";
+                        }
+                        else
+                        {
+                            sSmp_No = "99";
+                        }
+
+                        if (sBefStdspec != "" & sStdspec != sBefStdspec & (ExpoCheck(sBefStdspec) & !ExpoCheck(sStdspec)))
+                        {
+                            if ((txt_CHG_SMP_NO.Text.Length == 14 & sProdCd == "PP") | (txt_CHG_SMP_NO.Text.Length == 12 & sProdCd == "HC"))
+                            {
+                                ss2.ActiveSheet.Cells[row, SS2_SMP_NO].Text = txt_CHG_SMP_NO.Text;
+                            }
+                        }
+                        else
+                        {
+                            if ((txt_SMP_NO.Text.Length == 14 & sProdCd == "PP") | (txt_SMP_NO.Text.Length == 12 & sProdCd == "HC"))
+                            {
+                                ss2.ActiveSheet.Cells[row, SS2_SMP_NO].Text = txt_SMP_NO.Text;
+                            }
+                        }
+
+                        //                    .Row = iDr
+                        ss2.ActiveSheet.RowHeader.Cells[row, 0].Text = "新增";
+                        ss2.ActiveSheet.Cells[row, SS2_USER_ID].Text = GeneralCommon.sUserID;
+                        strSmpNO = ss2.ActiveSheet.Cells[row, SS2_PLATE_NO].Text;
+
+                        ss2.Col = SS2_SMP_NO;
+                        if (strSmpNO == ss2.ActiveSheet.Cells[row, SS2_SMP_NO].Text)
+                        {
+                            ss2.ActiveSheet.Cells[row, SS2_SMP_FLAG].Text = "Y";
+                            ss2.ActiveSheet.Cells[row, SS2_SMP_FLAG].ForeColor = Color.Red;
+                        }
+                        else
+                        {
+                            if (sSmpFl == "P" & strSmpNO != txt_SMP_NO.Text & (ss2.ActiveSheet.Cells[row, SS2_SMP_NO].Text.Substring(12, 2) == "00" | ss2.ActiveSheet.Cells[row, SS2_SMP_NO].Text.Substring(12, 2) == "99"))
+                            {
+                                ss2.ActiveSheet.Cells[row, SS2_SMP_FLAG].Text = sSmpFl;
+                                ss2.ActiveSheet.Cells[row, SS2_SMP_LEN].Text = "0";
+
+                                // ss2.Col = SS2_SMP_FLAG;
+                                // ss2.Col2 = SS2_SMP_NO;
+                                // ss2.ROW = ROW;
+                                // ss2.Row2 = ROW;
+                                // //                            .Row = iDr:             .Row2 = iDr
+
+                                // ss2.BlockMode = true;
+                                // ss2.Lock = true;
+                                // ss2.BlockMode = false;
+                                // sSmpFl = "";
+                            }
+
+                            ss2.Col = SS2_SMP_FLAG;
+                            if (ss2.ActiveSheet.Cells[row, SS2_SMP_FLAG].Text != "P")
+                            {
+                                ss2.ActiveSheet.Cells[row, SS2_SMP_FLAG].Text = "N";
+                                ss2.ActiveSheet.Cells[row, SS2_SMP_FLAG].ForeColor = Color.Black;
+                                ss2.ActiveSheet.Cells[row, SS2_SMP_LEN] = "0";
+                            }
+                            else
+                            {
+                                ss2.ActiveSheet.Cells[row, SS2_SMP_FLAG].ForeColor = Color.Red;
+                            }
+                        }
+
+                        ss2.Col = SS2_SMP_NO;
+                        if (strSmpNO == txt_SMP_NO.Text & (ss2.ActiveSheet.Cells[row, SS2_SMP_NO].Text.Substring(12, 2) == "00" | ss2.ActiveSheet.Cells[row, SS2_SMP_NO].Text.Substring(12, 2) == "99"))
+                        {
+                            sSmpFl = "P";
+                        }
+                    }
+                    //            Next iDr
+                }
+                else
+                {
+                    for (iDR = 1; iDR <= ss2.ActiveSheet.rowCount; iDR++)
+                    {
+                        ss2.ROW = iDR;
+                        ss2.Col = 1;
+                        ss2.ActiveSheet.Cells[iDR - 1, 0].Value = 0;
+
+                        ss2.ActiveSheet.RowHeader.Cells[iDR - 1, 0].Text = "";
+                        sSmpFlag = ss2.ActiveSheet.Cells[iDR - 1, SS2_BEF_SMP_FLAG].Text;
+                        sSmpLoc = ss2.ActiveSheet.Cells[iDR - 1, SS2_BEF_SMP_LOC].Text;
+                        lSmpLen = ss2.ActiveSheet.Cells[iDR - 1, SS2_BEF_SMP_LEN].Text;
+                        sSmpNo = ss2.ActiveSheet.Cells[iDR - 1, SS2_BEF_SMP_NO].Text;
+
+                        ss2.ActiveSheet.Cells[iDR - 1, SS2_SMP_FLAG].Text = sSmpFlag;
+                        ss2.ActiveSheet.Cells[iDR - 1, SS2_SMP_LOC].Text = sSmpLoc;
+                        ss2.ActiveSheet.Cells[iDR - 1, SS2_SMP_LEN].Text = lSmpLen;
+                        ss2.ActiveSheet.Cells[iDR - 1, SS2_SMP_NO].Text = sSmpNo;
+                    }
+                }
+            }
+            sLoopChk = "";
+
+
+        }
+
+
+
+
+
+
 
 
 
