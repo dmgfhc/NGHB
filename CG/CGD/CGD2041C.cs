@@ -353,7 +353,7 @@ namespace CG
             if (SpreadCommon.Gf_Sp_ProceExist(ss2, true))
                 return;
 
-            if (txt_charge_no.Text.Trim() == "" & SDT_PROD_DATE.Text == "")
+            if (txt_charge_no.Text.Trim() == "" & SDT_PROD_DATE.RawDate == "")
             {
                 GeneralCommon.Gp_MsgBoxDisplay("请输入查询号还是生产开始日期！！！", "I", "提示");
                 return;
@@ -457,7 +457,7 @@ namespace CG
                 }
 
                 ss1.ActiveSheet.RowHeader.Cells[row, 0].Text = "选择";
-                SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, row, row, Color.Black, ColorTranslator.FromHtml("#ffff80"));
+                SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, row, row, Color.Black, ColorTranslator.FromHtml("#80ffff"));
 
                 ss2.ActiveSheet.RowCount = 0;
                 txt_SLAB_NO.Text = ss1.ActiveSheet.Cells[row, 0].Text;
@@ -577,6 +577,8 @@ namespace CG
             long iSelCnt;
             string sCharNo;
 
+            
+
             if (ss1.ActiveSheet.RowCount <= 0)
                 return;
 
@@ -607,7 +609,7 @@ namespace CG
             if (ss1.ActiveSheet.RowHeader.Cells[row, 0].Text != "选择")
             {
                 ss1.ActiveSheet.RowHeader.Cells[row, 0].Text = "选择";
-                SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, row, row, Color.Black, ColorTranslator.FromHtml("#ffff80"));
+                SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, row, row, Color.Black, ColorTranslator.FromHtml("#80ffff"));
             }
             else
             {
@@ -1297,6 +1299,7 @@ namespace CG
 
         private void ss1_CellClick(object sender, CellClickEventArgs e)
         {
+            if (!e.RowHeader) return;
             ss1_Clk(e.Column, e.Row);
         }
 

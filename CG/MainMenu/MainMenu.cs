@@ -335,6 +335,7 @@ namespace CG
             this.menuItem7 = new System.Windows.Forms.MenuItem();
             this.menuItem10 = new System.Windows.Forms.MenuItem();
             this.CGD2050C = new System.Windows.Forms.MenuItem();
+            this.CGD2041C = new System.Windows.Forms.MenuItem();
             this.WGC1010C = new System.Windows.Forms.MenuItem();
             this.WGC1020C = new System.Windows.Forms.MenuItem();
             this.WGC1030C = new System.Windows.Forms.MenuItem();
@@ -459,7 +460,6 @@ namespace CG
             this.MenuItem22 = new System.Windows.Forms.MenuItem();
             this.ImageList2 = new System.Windows.Forms.ImageList(this.components);
             this.ImageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.CGD2041C = new System.Windows.Forms.MenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.StatusBarPanel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatusBarPanel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatusBarPanel3)).BeginInit();
@@ -757,6 +757,12 @@ namespace CG
             this.CGD2050C.Index = 0;
             resources.ApplyResources(this.CGD2050C, "CGD2050C");
             this.CGD2050C.Click += new System.EventHandler(this.CGD2050C_Click);
+            // 
+            // CGD2041C
+            // 
+            this.CGD2041C.Index = 1;
+            resources.ApplyResources(this.CGD2041C, "CGD2041C");
+            this.CGD2041C.Click += new System.EventHandler(this.CGD2041C_Click);
             // 
             // WGC1010C
             // 
@@ -1569,12 +1575,6 @@ namespace CG
             this.ImageList1.Images.SetKeyName(9, "M10_1.gif");
             this.ImageList1.Images.SetKeyName(10, "M11_1.gif");
             this.ImageList1.Images.SetKeyName(11, "M12_1.gif");
-            // 
-            // CGD2041C
-            // 
-            this.CGD2041C.Index = 1;
-            resources.ApplyResources(this.CGD2041C, "CGD2041C");
-            this.CGD2041C.Click += new System.EventHandler(this.CGD2041C_Click);
             // 
             // MainMenu
             // 
