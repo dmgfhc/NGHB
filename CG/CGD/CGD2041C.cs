@@ -1,12 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
+﻿using System.Collections;
 using System.Windows.Forms;
-using CommonClass;
+using System.Diagnostics;
+using FarPoint.Win.Spread.CellType;
+using System.Xml.Xsl;
+using FarPoint.Win.Spread;
+using FarPoint.Win.Spread.Model;
+using FarPoint.Win.SuperEdit;
+using ADODB;
+using System.Data;
+using System;
 using Microsoft.VisualBasic;
+using System.Drawing;
+using FarPoint.Win.Spread.DrawingSpace;
+using FarPoint.Win.Spread.DrawingSpace.Internal;
+using FarPoint;
+using System.Collections.Generic;
+using FarPoint.Win.Text;
+using FarPoint.Win.Spread.UndoRedo;
+using FarPoint.Win.Spread.Design;
+using FarPoint.Win;
+using CommonClass;
 namespace CG
 {
     public partial class CGD2041C : CommonClass.FORMBASE
@@ -146,9 +159,9 @@ namespace CG
             int intRow;
             int intCol;
             int intCount;
-            string strQuery;
-            string strQuery_H;
-            string strQuery_L;
+            string strQuery = "";
+            string strQuery_H = "";
+            string strQuery_L = "";
 
             if (ss1.ActiveSheet.RowCount <= 0)
                 return;
@@ -299,7 +312,7 @@ namespace CG
 
             Form_Define();
 
-            SDT_PROD_DATE.Text = Gf_DTSet("", "D");
+            SDT_PROD_DATE.RawDate = Gf_DTSet("D", "");
 
             opt_Product2.Checked = true;
             opt_Product2.ForeColor = Color.Red;
@@ -309,7 +322,7 @@ namespace CG
 
         }
 
-        public override void Form_Cls()
+        public override bool Form_Cls()
         {
 
             string sProd_cd;
@@ -317,7 +330,11 @@ namespace CG
             TXT_PROD_CD.Text = sProd_cd;
             TextClear();
             bCheck = false;
+            return base.Form_Cls();
+
         }
+
+
 
         public void TextClear()
         {
@@ -330,7 +347,7 @@ namespace CG
 
         }
 
-        public void Form_Ref()
+        public override void Form_Ref()
         {
 
             if (SpreadCommon.Gf_Sp_ProceExist(ss2, true))
@@ -350,10 +367,10 @@ namespace CG
             ss2.ActiveSheet.RowCount = 0;
         }
 
-        public void Form_Pro()
+        public override void Form_Pro()
         {
             int intRow;
-            long iDR;
+            int iDR;
             int iChgCnt;
             int iCnt;
             string sSpec;
@@ -386,7 +403,6 @@ namespace CG
                 {
                     if (ss1.ActiveSheet.RowHeader.Cells[iDR - 1, 0].Text == "修改")
                     {
-                        ss2.Col = SS2_STDSPEC;
                         sSpec = ss2.ActiveSheet.Cells[iDR - 1, SS2_STDSPEC].Text;
                         if (txt_CHG_SMP_NO.Text == "" | txt_CHG_STDSPEC.Text == "")
                         {
@@ -419,7 +435,7 @@ namespace CG
 
         private void SDT_PROD_DATE_Clk()
         {
-            SDT_PROD_DATE.Text = Gf_DTSet("", "D");
+            SDT_PROD_DATE.RawDate = Gf_DTSet("", "D");
         }
 
         private void ss1_DblClk(int col, int row)
@@ -437,14 +453,11 @@ namespace CG
                 for (intRow = 1; intRow <= ss1.ActiveSheet.RowCount; intRow++)
                 {
                     ss1.ActiveSheet.RowHeader.Cells[intRow - 1, 0].Text = "";
-                    Gp_Sp_BlockColor(ss1, 1, ss1.MaxCols, ss1.ROW, ss1.ROW);
                     SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, intRow - 1, intRow - 1, Color.Black, Color.White);
                 }
 
-                ss1.Col = 0;
-                ss1.ROW = ss1.ActiveRow;
                 ss1.ActiveSheet.RowHeader.Cells[row, 0].Text = "选择";
-                SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, row, row, Color.Black, ColorTranslator.FromHtml("ffff80"));
+                SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, row, row, Color.Black, ColorTranslator.FromHtml("#ffff80"));
 
                 ss2.ActiveSheet.RowCount = 0;
                 txt_SLAB_NO.Text = ss1.ActiveSheet.Cells[row, 0].Text;
@@ -559,7 +572,7 @@ namespace CG
         private void ss1_Clk(int col, int row)
         {
             long PRE;
-            long iDR;
+            int iDR;
             string sSpec;
             long iSelCnt;
             string sCharNo;
@@ -594,7 +607,7 @@ namespace CG
             if (ss1.ActiveSheet.RowHeader.Cells[row, 0].Text != "选择")
             {
                 ss1.ActiveSheet.RowHeader.Cells[row, 0].Text = "选择";
-                SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, row, row, Color.Black, ColorTranslator.FromHtml("ffff80"));
+                SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, row, row, Color.Black, ColorTranslator.FromHtml("#ffff80"));
             }
             else
             {
@@ -610,7 +623,7 @@ namespace CG
                 }
                 else
                 {
-                    Cmd_Set_Save_Click();
+                    Cmd_Set_Save_Clk();
                 }
 
             }
@@ -636,14 +649,14 @@ namespace CG
             string strSmpNO;
             string sSmpFlag;
             string sSmpLoc;
-            long lSmpLen;
+            string lSmpLen;
             string sSmpNo;
             string sStdspec;
             string sBefStdspec;
             string sSmpFl;
             string sProdCd;
             string sSmp_No;
-            long iDR;
+            int iDR;
 
             if (ss2.ActiveSheet.RowCount <= 0 | sLoopChk.Trim() != "")
                 return;
@@ -651,25 +664,22 @@ namespace CG
             sSmpFl = "";
 
             {
-                if (ss2.ActiveSheet.Cells[row, SS2_PROC_CD].Substring(0, 1) == "X")
+                if (ss2.ActiveSheet.Cells[row, SS2_PROC_CD].Text.Substring(0, 1) == "X")
                 {
                     return;
                 }
 
                 sLoopChk = "**";
 
-                ss2.ROW = ROW;
-                ss2.Col = Col;
 
                 if (ss2.ActiveSheet.Cells[row, col].Text == "1")
                 {
                     //            For iDr = 1 To .MaxRows
                     //                .Row = iDr
 
-                    ss2.Col = SS2_PROC_CD;
                     if (ss2.ActiveSheet.Cells[row, SS2_PROC_CD].Text != "X")
                     {
-                        ss2.ActiveSheet.Cells[row, 0].Text = 1;
+                        ss2.ActiveSheet.Cells[row, 0].Value = 1;
 
                         if (txt_SMP_LOC.Text.Length == 1)
                         {
@@ -709,11 +719,10 @@ namespace CG
                         }
 
                         //                    .Row = iDr
-                        ss2.ActiveSheet.RowHeader.Cells[row, 0].Text = "新增";
+                        ss2.ActiveSheet.RowHeader.Cells[row, 0].Text = "修改";
                         ss2.ActiveSheet.Cells[row, SS2_USER_ID].Text = GeneralCommon.sUserID;
                         strSmpNO = ss2.ActiveSheet.Cells[row, SS2_PLATE_NO].Text;
 
-                        ss2.Col = SS2_SMP_NO;
                         if (strSmpNO == ss2.ActiveSheet.Cells[row, SS2_SMP_NO].Text)
                         {
                             ss2.ActiveSheet.Cells[row, SS2_SMP_FLAG].Text = "Y";
@@ -738,12 +747,11 @@ namespace CG
                                 // sSmpFl = "";
                             }
 
-                            ss2.Col = SS2_SMP_FLAG;
                             if (ss2.ActiveSheet.Cells[row, SS2_SMP_FLAG].Text != "P")
                             {
                                 ss2.ActiveSheet.Cells[row, SS2_SMP_FLAG].Text = "N";
                                 ss2.ActiveSheet.Cells[row, SS2_SMP_FLAG].ForeColor = Color.Black;
-                                ss2.ActiveSheet.Cells[row, SS2_SMP_LEN] = "0";
+                                ss2.ActiveSheet.Cells[row, SS2_SMP_LEN].Text = "0";
                             }
                             else
                             {
@@ -751,7 +759,6 @@ namespace CG
                             }
                         }
 
-                        ss2.Col = SS2_SMP_NO;
                         if (strSmpNO == txt_SMP_NO.Text & (ss2.ActiveSheet.Cells[row, SS2_SMP_NO].Text.Substring(12, 2) == "00" | ss2.ActiveSheet.Cells[row, SS2_SMP_NO].Text.Substring(12, 2) == "99"))
                         {
                             sSmpFl = "P";
@@ -761,16 +768,14 @@ namespace CG
                 }
                 else
                 {
-                    for (iDR = 1; iDR <= ss2.ActiveSheet.rowCount; iDR++)
+                    for (iDR = 1; iDR <= ss2.ActiveSheet.RowCount; iDR++)
                     {
-                        ss2.ROW = iDR;
-                        ss2.Col = 1;
                         ss2.ActiveSheet.Cells[iDR - 1, 0].Value = 0;
 
                         ss2.ActiveSheet.RowHeader.Cells[iDR - 1, 0].Text = "";
                         sSmpFlag = ss2.ActiveSheet.Cells[iDR - 1, SS2_BEF_SMP_FLAG].Text;
                         sSmpLoc = ss2.ActiveSheet.Cells[iDR - 1, SS2_BEF_SMP_LOC].Text;
-                        lSmpLen = ss2.ActiveSheet.Cells[iDR - 1, SS2_BEF_SMP_LEN].Text;
+                        lSmpLen =ss2.ActiveSheet.Cells[iDR - 1, SS2_BEF_SMP_LEN].Text;
                         sSmpNo = ss2.ActiveSheet.Cells[iDR - 1, SS2_BEF_SMP_NO].Text;
 
                         ss2.ActiveSheet.Cells[iDR - 1, SS2_SMP_FLAG].Text = sSmpFlag;
@@ -786,1022 +791,539 @@ namespace CG
         }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        private void WGC3020C_Load(object sender, EventArgs e)
+        private void ss2_EditMode(int col, int row)
         {
-            Form_Define();
-            txt_prod_cd.Text = "PP";
-            opt_Product1.ForeColor = Color.Red;
-            opt_Product1.Checked = true;
-            //   base.sAuthority = "1111";
+            int intCheck;
+            string strSmpNO;
+            string strOrginSmpNO;
+            string sSmpNo;
+
+            if (ss2.ActiveSheet.RowCount <= 0)
+                return;
+
+            if (row >= 0)
+            {
+
+                if (ss2.ActiveSheet.Cells[row, 0].Text != "1")
+                {
+                    ss2.ActiveSheet.Cells[row, 0].Value = 1;
+                    return;
+                }
+
+                if (col == SS2_SMP_FLAG)
+                {
+                    ss2.ActiveSheet.Cells[row, col].Text = ss2.ActiveSheet.Cells[row, col].Text.ToUpper();
+                    strSmpNO = ss2.ActiveSheet.Cells[row, SS2_PLATE_NO].Text.ToUpper();
+                    if (strSmpNO == ss2.ActiveSheet.Cells[row, SS2_SMP_NO].Text)
+                    {
+                        //ss2.Col = SS2_SMP_FLAG;
+                        //ss2.Text = "Y" Modified By YangMeng At 2006.06.01
+                    }
+                    else
+                    {
+                        if (ss2.ActiveSheet.Cells[row, SS2_SMP_FLAG].Text != "P")
+                        {
+                            ss2.ActiveSheet.Cells[row, SS2_SMP_FLAG].Text = "N";
+                            ss2.ActiveSheet.Cells[row, SS2_SMP_LEN].Text = "0";
+                        }
+                    }
+                }
+                else if (col == SS2_SMP_LOC)
+                {
+                    ss2.ActiveSheet.Cells[row, col].Text = ss2.ActiveSheet.Cells[row, col].Text.ToUpper();
+                    switch (ss2.ActiveSheet.Cells[row, col].Text)
+                    {
+                        case "M":
+                        case "B":
+                        case "T":
+                            break;
+                        default:
+                            ss2.ActiveSheet.Cells[row, col].Text = "T";
+                            break;
+                    }
+                }
+                else if (col == SS2_SMP_NO)
+                {
+                    strSmpNO = ss2.ActiveSheet.Cells[row, SS2_PLATE_NO].Text;
+                    //Or Left(ss2.Text, 8) <> Left(strSmpNO, 8) Then 'Modified By YangMeng At 2007.03.29
+                    if (ss2.ActiveSheet.Cells[row, col].Text.Length != strSmpNO.Length)
+                    {
+                        GeneralCommon.Gp_MsgBoxDisplay("试样号错误", "I", "提示");
+                        sSmpNo = ss2.ActiveSheet.Cells[row, SS2_BEF_SMP_NO].Text;
+                        ss2.ActiveSheet.Cells[row, col].Text = sSmpNo;
+                    }
+
+                    if (strSmpNO == ss2.ActiveSheet.Cells[row, col].Text)
+                    {
+                        ss2.ActiveSheet.Cells[row, SS2_SMP_FLAG].Text = "Y";
+                        ss2.ActiveSheet.Cells[row, SS2_SMP_FLAG].ForeColor = Color.Red;
+                    }
+                    else
+                    {
+                        if (ss2.ActiveSheet.Cells[row, SS2_SMP_FLAG].Text != "P")
+                        {
+                            ss2.ActiveSheet.Cells[row, SS2_SMP_FLAG].Text = "N";
+                            ss2.ActiveSheet.Cells[row, SS2_SMP_FLAG].ForeColor = Color.Black;
+                            ss2.ActiveSheet.Cells[row, SS2_SMP_LEN].Text = "0";
+                        }
+                        else
+                        {
+                            ss2.ActiveSheet.Cells[row, SS2_SMP_FLAG].ForeColor = Color.Red;
+                        }
+                    }
+                }
+            }
+        }
+
+        public bool ExpoCheck(string sSpec) {
+
+
+            sQuery = "SELECT  Gf_Expo_Smp_Check('" + sSpec + "')";
+            sQuery = sQuery + "       FROM  DUAL ";
+
+            int iCnt;
+
+            iCnt = 0;
+
+
+            if (GeneralCommon.M_CN1.State == 0)
+                if (!GeneralCommon.GF_DbConnect()) return false;
+
+
+            ADODB.Recordset AdoRs = new ADODB.Recordset();
+            try {
+                AdoRs.Open(sQuery, GeneralCommon.M_CN1, ADODB.CursorTypeEnum.adOpenStatic, ADODB.LockTypeEnum.adLockReadOnly);
+
+                if (!AdoRs.BOF && !AdoRs.EOF) {
+                    //RltValue = true;
+                    while (!AdoRs.EOF) {
+                        iCnt = Convert.ToInt32(AdoRs.Fields[0].Value);
+                        AdoRs.MoveNext();
+                    }
+                }
+
+                //关闭对象要注意不可以是在整个查询中，会影响其它数据读取 韩超
+
+                GeneralCommon.M_CN1.Close();
+
+                AdoRs = null;
+
+                if (iCnt > 0) {
+                    return true;
+                } else {
+                    return false;
+                }
+
+                return false;
+            } catch (Exception ex) {
+                if (GeneralCommon.M_CN1.State != 0) GeneralCommon.M_CN1.Close();
+                AdoRs = null;
+                return false;
+            }
 
         }
 
-        public override bool Form_Cls()
+        private void txt_SMP_LOC_Chg()
         {
-            base.Form_Cls();
-            txt_prod_cd.Text = "PP";
-            opt_Product1.ForeColor = Color.Red;
-            txt_SMP_NO.Text = "";
-            txt_SMP_LEN.Text = "";
-            txt_SMP_LOC.Text = "";
-            txt_SMP_LOC_NAME.Text = "";
-            txt_CHG_SMP_NO.Text = "";
-            txt_CHG_STDSPEC.Text = "";
-            list.Clear();
-            isMax = false;
+            txt_SMP_LOC.Text = txt_SMP_LOC.Text.ToUpper();
+            switch (txt_SMP_LOC.Text)
+            {
+                case "M":
+                    txt_SMP_LOC_NAME.Text = "中部";
+                    break;
+                case "T":
+                    txt_SMP_LOC_NAME.Text = "头部";
+                    break;
+                case "B":
+                    txt_SMP_LOC_NAME.Text = "尾部";
+                    break;
+                default:
+                    txt_SMP_LOC_NAME.Text = "";
+                    txt_SMP_LOC.Text = "";
+                    break;
+            }
+        }
+
+        private void ss2_set_check()
+        {
+            int intRow;
+            string strSmpNO;
+
+            if (ss2.ActiveSheet.RowCount <= 0)
+                return;
+
+            for (intRow = 1; intRow <= ss2.ActiveSheet.RowCount; intRow++)
+            {
+                if (ss2.ActiveSheet.Cells[intRow - 1, SS2_PROC_CD].Text != "X")
+                {
+                    ss2.ActiveSheet.Cells[intRow - 1, 0].Value = 1;
+                }
+            }
+        }
+
+        private void txt_SMP_NO_Chg()
+        {
+            int iDR;
+            if (ss2.ActiveSheet.RowCount <= 0)
+                return;
+
+            if (txt_SMP_NO.Text.Length == 14)
+            {
+                if (txt_CHG_SMP_NO.Text != "")
+                {
+                    txt_CHG_SMP_NO.Text = txt_SMP_NO.Text.Substring(0, 12) + "00";
+                }
+            }
+
+            for (iDR = 1; iDR <= ss2.ActiveSheet.RowCount; iDR++)
+            {
+                ss2.ActiveSheet.Cells[iDR - 1, 0].Value = 0;
+            }
+        }
+
+        private void opt_Product_Click()
+        {
+            if (opt_Product1.Checked)
+            {
+                TXT_PROD_CD.Text = "SL";
+                opt_Product1.ForeColor = Color.Red;
+                opt_Product2.ForeColor = Color.Black;
+            }
+            else
+            {
+                TXT_PROD_CD.Text = "LO";
+                opt_Product2.ForeColor = Color.Red;
+                opt_Product1.ForeColor = Color.Black;
+            }
+        }
+
+
+        #region 公共方法
+
+        public bool Gp_DateCheck(string DateCheck, string sDTChk)
+        {
+            sDTChk = "M";
+            string iDateCheck;
+            string iDateMatch;
+            string iDate;
+            System.DateTime iCheck;
+
+            if (sDTChk == "M")
+            {
+                iDateCheck = DateCheck;
+            }
+            else
+            {
+                iDateCheck = DateCheck.Replace("-", "");
+                iDateCheck = iDateCheck.Replace(" ", "");
+                iDateCheck = iDateCheck.Replace(":", "");
+            }
+
+            if (Convert.ToInt32(iDateCheck.Substring(0, 4)) > 2020 | Convert.ToInt32(iDateCheck.Substring(0, 4)) < 2000)
+            {
+                return false;
+            }
+
+            switch (iDateCheck.Length)
+            {
+                case 8:
+                    iDate = iDateCheck.Substring(0, 4) + "-" + iDateCheck.Substring(4, 2) + "-" + iDateCheck.Substring(6, 2);
+                    iCheck = Convert.ToDateTime(iDate.Substring(1, 10));
+                    break;
+                case 12:
+                    iDate = iDateCheck.Substring(0, 4) + "-" + iDateCheck.Substring(4, 2) + "-" + iDateCheck.Substring(6, 2) + " " + iDateCheck.Substring(8, 2) + ":" + iDateCheck.Substring(10, 2);
+                    iCheck = Convert.ToDateTime(iDate.Substring(1, 16));
+                    break;
+                case 14:
+                    iDate = iDateCheck.Substring(0, 4) + "-" + iDateCheck.Substring(4, 2) + "-" + iDateCheck.Substring(6, 2) + " " + iDateCheck.Substring(8, 2) + ":" + iDateCheck.Substring(10, 2) + ":" + iDateCheck.Substring(12, 2);
+                    iCheck = Convert.ToDateTime(iDate.Substring(1, 19));
+                    break;
+                default:
+                    return false;
+                    break;
+            }
+
+            iDateMatch = iCheck.ToString("yyyyMM");
+
+            if (iDateMatch != iDateCheck.Substring(0, 8))
+            {
+                return false;
+            }
             return true;
         }
 
-        protected override void ss_CellDoubleClick(object sender, FarPoint.Win.Spread.CellClickEventArgs e)
+        public string Gf_ShiftSet3(string WKDATE)
         {
 
-            FarPoint.Win.Spread.FpSpread spread = (FarPoint.Win.Spread.FpSpread)sender;
 
-            if (e.ColumnHeader || e.RowHeader) return;
-            if (spread.Name == "ss1") //点击的是第一个Spread
-            {
-                list.Clear(); //0801
-
-
-                if (ss1.ActiveSheet.RowCount < 0) return; //Spread1无数据，返回。
-                //txt_slab_no.Text = ss1.ActiveSheet.Cells[e.Row, 0].Text.Trim();//设置txt_SLAB_NO控件的值。用于Spread2的查询
-                txt_slab_no.Text = "''" + ss1.ActiveSheet.Cells[e.Row, 0].Text.Trim() + "''"; //设置txt_SLAB_NO控件的值。用于Spread2的查询
-                p_Ref(2, 2, true, false); //Spread2的查询
-                isMax = false;
-                if (ss1.ActiveSheet.RowHeader.Cells[e.Row, 0].Text == "") //点击Spread1用于查询Spread2
-                {
-                    for (int i = 0; i < ss1.ActiveSheet.Rows.Count; i++)
-                    {
-                        ss1.ActiveSheet.Rows.Get(i).BackColor = Color.White;
-                        ss1.ActiveSheet.Cells[i, 0].BackColor = Color.White;
-                        ss1.ActiveSheet.RowHeader.Cells[i, 0].Text = "";
-                    }
-                    ss1.ActiveSheet.Rows.Get(e.Row).BackColor = Color.GreenYellow;
-                    ss1.ActiveSheet.Cells[e.Row, 0].BackColor = Color.GreenYellow;
-                    txt_charge_no.Text = ss1.ActiveSheet.Cells[e.Row, 0].Text;
-                    ss1.ActiveSheet.RowHeader.Cells[e.Row, 0].Text = "选择";
-                    list.Add(spread.ActiveSheet.Cells[e.Row, 0].Text); //0801
-                }
-                else
-                {
-                    ss1.ActiveSheet.Rows.Get(e.Row).BackColor = Color.White;
-                    ss1.ActiveSheet.Cells[e.Row, 0].BackColor = Color.White;
-                    ss1.ActiveSheet.RowHeader.Cells[e.Row, 0].Text = "";
-                    txt_charge_no.Text = "";
-                    ss2.ActiveSheet.RowCount = 0;
-                    list.Remove(spread.ActiveSheet.Cells[e.Row, 0].Text); //0801
-                }
-                if (ss2_Sheet1.RowCount == 0) return; //假如Spread2无数据，返回。
-                else
-                {
-                    txt_SMP_NO.Text = "";
-                    rowCount = 0;
-                    for (int i = 0; i < ss2_Sheet1.RowCount; i++) //遍历Spread2，进程代码不以“X”开头，可以修改数据。
-                    {
-                        if (!ss2_Sheet1.Cells[i, 3].Text.Trim().StartsWith("X")) //
-                        {
-                            ss2_Sheet1.Cells[i, 0].Locked = false; //可以修改。不锁定
-                            ss2_Sheet1.Cells[i, 13].Locked = false;
-                            ss2_Sheet1.Cells[i, 14].Locked = false;
-                            ss2_Sheet1.Cells[i, 15].Locked = false;
-                            ss2_Sheet1.Cells[i, 16].Locked = false;
-
-                            ss2_Sheet1.Cells[i, 0].BackColor = Color.FromArgb(255, 255, 255, 192); //颜色为黄色。
-                            ss2_Sheet1.Cells[i, 13].BackColor = Color.FromArgb(255, 255, 255, 192);
-                            ss2_Sheet1.Cells[i, 14].BackColor = Color.FromArgb(255, 255, 255, 192);
-                            ss2_Sheet1.Cells[i, 15].BackColor = Color.FromArgb(255, 255, 255, 192);
-                            ss2_Sheet1.Cells[i, 16].BackColor = Color.FromArgb(255, 255, 255, 192);
-                            rowCount++;
-                        }
-                        else
-                        {
-                            ss2_Sheet1.Cells[i, 0].BackColor = Color.White; //以“X”开头，设定背景色为白色。不可修改数据。
-                            ss2_Sheet1.Cells[i, 13].BackColor = Color.White;
-                            ss2_Sheet1.Cells[i, 14].BackColor = Color.White;
-                            ss2_Sheet1.Cells[i, 15].BackColor = Color.White;
-                            ss2_Sheet1.Cells[i, 16].BackColor = Color.White;
-                        }
-                    }
-
-                    ArrayRecords = new object[rowCount, 4]; //定义数组，存储Spread2的初始数据，用于点击Spread2的Checkbox按钮时，恢复数据。
-                    int currentCountSeq = 0;
-                    for (int i = 0; i < ss2_Sheet1.RowCount; i++)
-                    {
-                        if (!ss2_Sheet1.Cells[i, 3].Text.Trim().StartsWith("X")) //不以“X”开头的数据才可以存储。
-                        {
-                            ArrayRecords[currentCountSeq, 0] = ss2_Sheet1.Cells[i, 13].Text;
-                            ArrayRecords[currentCountSeq, 1] = ss2_Sheet1.Cells[i, 14].Text;
-                            ArrayRecords[currentCountSeq, 2] = ss2_Sheet1.Cells[i, 15].Text;
-                            ArrayRecords[currentCountSeq++, 3] = ss2_Sheet1.Cells[i, 16].Text;
-                        }
-                    }
-
-                    //for (int i = 0; i < ss2_Sheet1.RowCount; i++)//取得式样号。默认取Spread2的第一条不以“X”开头的板坯号为式样号。
-                    //{
-                    //    if (!ss2_Sheet1.Cells[i, 3].Text.Trim().StartsWith("X"))
-                    //    {
-                    //        txt_SMP_NO.Text = ss2_Sheet1.Cells[i, 1].Text;
-                    //        SMP_NO = ss2_Sheet1.Cells[i, 1].Text;//将式样号赋值给全局变量SMP_NO。
-                    //        break;
-                    //    }
-                    //}
-                    bool isChoseed = false;
-                    for (int i = 0; i < ss2_Sheet1.RowCount; i++) //取得式样号。
-                    {
-                        if (!ss2_Sheet1.Cells[i, 3].Text.Trim().StartsWith("X") && ss2_Sheet1.Cells[i, 13].Text == "Y")
-                        {
-                            txt_SMP_NO.Text = ss2_Sheet1.Cells[i, 1].Text;
-                            SMP_NO = ss2_Sheet1.Cells[i, 1].Text; //将式样号赋值给全局变量SMP_NO。
-                            isChoseed = true;
-                            break;
-                        }
-                    }
-                    if (!isChoseed)
-                    {
-                        for (int i = 0; i < ss2_Sheet1.RowCount; i++) //取得式样号。
-                        {
-                            if (!ss2_Sheet1.Cells[i, 3].Text.Trim().StartsWith("X") && (ss2_Sheet1.Cells[i, 11].Text.ToUpper() == "Y" || ss2_Sheet1.Cells[i, 11].Text.ToUpper() == "P"))
-                            {
-                                txt_SMP_NO.Text = ss2_Sheet1.Cells[i, 1].Text;
-                                SMP_NO = ss2_Sheet1.Cells[i, 1].Text; //将式样号赋值给全局变量SMP_NO。
-                                isChoseed = true;
-                                break;
-                            }
-                        }
-                    }
-                    if (!isChoseed)
-                    {
-                        for (int i = 0; i < ss2_Sheet1.RowCount; i++) //取得式样号。
-                        {
-                            if (!ss2_Sheet1.Cells[i, 3].Text.Trim().StartsWith("X"))
-                            {
-                                txt_SMP_NO.Text = ss2_Sheet1.Cells[i, 1].Text;
-                                SMP_NO = ss2_Sheet1.Cells[i, 1].Text; //将式样号赋值给全局变量SMP_NO。
-                                break;
-                            }
-                        }
-                    }
-
-                    ////////////////////////////////////////////////
-                    ////////////////////////////////////////////////
-                    Sample_No_Edit();
-                    ////////////////////////////////////////////////
-                    ////////////////////////////////////////////////
-
-
-                    txt_SMP_LEN.Text = "";
-                    txt_SMP_LOC.Text = "";
-                    txt_SMP_LOC_NAME.Text = "";
-                }
-            }
-            else //双击的为Spread2，假如双击的不以“X”开头，并且点击的列数为13,14,15，16.那么根据规则自动将数据填充。
-            {
-                if (ss2_Sheet1.ActiveColumnIndex == 13 || ss2_Sheet1.ActiveColumnIndex == 14 || ss2_Sheet1.ActiveColumnIndex == 15 || ss2_Sheet1.ActiveColumnIndex == 16)
-                {
-                    if (!ss2_Sheet1.Cells[e.Row, 3].Text.Trim().StartsWith("X"))
-                    {
-                        if (ss2_Sheet1.Cells[e.Row, 13].Text == "Y") return; ////20131104ydk
-                        ss2_Sheet1.Cells[e.Row, 0].Text = "True";
-                        ss2_Sheet1.RowHeader.Cells[e.Row, 0].Text = "修改";
-                        ss2_Sheet1.Cells[e.Row, 16].Text = SMP_NO;
-                        if (SMP_NO == ss2_Sheet1.Cells[e.Row, 1].Text) //式样号与板坯号相同，那么“实绩标记”为红色Y。
-                        {
-                            ss2_Sheet1.Cells[e.Row, 13].Text = "Y";
-                            ss2_Sheet1.Cells[e.Row, 13].ForeColor = Color.Red;
-                        }
-                        else
-                        {
-                            ss2_Sheet1.Cells[e.Row, 13].Text = "N";
-                        }
-                        if (ss2_Sheet1.Cells[e.Row, 13].Text == "Y") //“实绩标记”为红色Y，才可将“试样长度”赋值给第15列“长度”
-                        {
-                            ss2_Sheet1.Cells[e.Row, 15].Text = txt_SMP_LEN.Text;
-                        }
-                        else
-                        {
-                            ss2_Sheet1.Cells[e.Row, 15].Text = "0"; //否则默认为“0”
-                        }
-                        if (this.txt_SMP_LOC.Text != "")
-                        {
-                            ss2_Sheet1.Cells[e.Row, 14].Text = txt_SMP_LOC.Text; //“取样位置”不为空时，方可将“取样位置”赋值给Spread2的第14列。
-                        }
-                    }
-                }
-
-            }
-        }
-
-        public override void Form_Ref() //Spread1的查询。
-        {
-            if (!(SDT_PROD_DATE.RawDate != "" || txt_charge_no.Text != ""))
-            {
-                GeneralCommon.Gp_MsgBoxDisplay("生产时间或者查询号必须输入...!", "I", "提示");
-                return;
-            }
-            if (p_Ref(1, 1, true, true))
-            {
-                ss2_Sheet1.RowCount = 0;
-            }
-        }
-        //“取样位置”只可输入：“B”“M”“T”“Y”“”。
-        private void txt_SMP_LOC_TextChanged(object sender, EventArgs e)
-        {
-            if (!(txt_SMP_LOC.Text == "B" || txt_SMP_LOC.Text == "M" || txt_SMP_LOC.Text == "T" || txt_SMP_LOC.Text == "Y" || txt_SMP_LOC.Text == ""))
-            {
-                txt_SMP_LOC.Text = "";
-            }
-        }
-
-        string SMP_NO = ""; //式样号。
-
-        //“多行设定”按钮。
-        private void Cmd_Set_Save_Click(object sender, EventArgs e)
-        {
-            ///////20140219
-            if (this.txt_SMP_NO.Text != "" && this.txt_SMP_NO.Text.Length == 14)
-            {
-                if (list.Count != 0)
-                {
-                    if (txt_SMP_NO.Text.StartsWith(list[0].ToString().Substring(0, 8)))
-                        SMP_NO = txt_SMP_NO.Text;
-                    else
-                    {
-                        GeneralCommon.Gp_MsgBoxDisplay("式样号与选定的钢板不匹配...!!", "W", "警告");
-                        txt_SMP_NO.Text = "";
-                        return;
-                    }
-                }
-            }
-            ///////20140219
-            //if(ss2_Sheet1.RowCount == 0)return;
-            if (ss2_Sheet1.RowCount == 0)
-            {
-                setMaxCount();
-                return;
-            } //0802
-            for (int i = 0; i < ss2_Sheet1.RowCount; i++)
-            {
-                if (!ss2_Sheet1.Cells[i, 3].Text.Trim().StartsWith("X"))
-                {
-                    ss2_Sheet1.RowHeader.Cells[i, 0].Text = "修改";
-                    ss2_Sheet1.Cells[i, 16].Text = SMP_NO; //
-                    ss2_Sheet1.Cells[i, 0].Text = "1";
-
-                    if (ss2_Sheet1.Cells[i, 1].Text == ss2_Sheet1.Cells[i, 16].Text)
-                    {
-                        ss2_Sheet1.Cells[i, 13].Text = "Y";
-                        ss2_Sheet1.Cells[i, 13].ForeColor = Color.Red;
-                    }
-                    else
-                    {
-                        ss2_Sheet1.Cells[i, 13].Text = "N";
-                    }
-
-                    if (ss2_Sheet1.Cells[i, 13].Text == "Y")
-                    {
-                        ss2_Sheet1.Cells[i, 15].Text = txt_SMP_LEN.Text;
-                    }
-                    else
-                    {
-                        ss2_Sheet1.Cells[i, 15].Text = "0";
-                    }
-                    if (this.txt_SMP_LOC.Text != "")
-                    {
-                        ss2_Sheet1.Cells[i, 14].Text = txt_SMP_LOC.Text;
-                    }
-                }
-            }
-        }
-
-
-
-        object[,] ArrayRecordsNew = null;
-        Boolean isMax = false;
-        public void setMaxCount()
-        {
-
-            if (list.Count == 0) return;
-            list.Sort();
-            txt_charge_no.Text = list[0];
-            ///////////////20130805begin
-            //ss2_Sheet1.RowCount = setSpreadRowCount();
-            //int signCount = 0;
-            //List<object> listMax = new List<object>();
-            //for (int i = 0; i < list.Count; i++)
-            //{
-            //    object[,] ArrayRecordsNNN = Gf_ArrayPlReturn("{call WGC3020C.P_SREFER1 ( '" + list[i] + "')}");
-            //    signCount = ArrayRecordsNNN.Length / 28;
-            //    for (int j = 0; j < signCount; j++)
-            //    {
-            //        for (int k = 0; k < 28; k++)
-            //        {
-            //            listMax.Add(ArrayRecordsNNN[j, k]);                  
-            //        }
-            //    }
-            //}
-
-
-            //for (int i = 0; i < listMax.Count / 28; i++)
-            //{
-            //    for (int j = 0; j < 28;j++)
-            //    {
-            //        ss2_Sheet1.Cells[i, j].Text = listMax[i * 28 + j].ToString();
-            //    }
-            //}
-            ///////////20130805end
-            //StringBuilder sb = new StringBuilder();
-            //if (list.Count == 1) sb.Append("('").Append(list[0]).Append("')");
-            //else
-            //{
-            //    for (int ii = 0; ii < list.Count; ii++)
-            //    {
-            //        if (ii == 0) sb.Append("('").Append(list[ii]);
-
-            //        else if (ii == list.Count - 1) sb.Append(list[ii]).Append("')");
-
-            //        else sb.Append("','").Append(list[ii]);
-            //    }
-            //}
-            string inputPlSql = "";
-            if (list.Count == 1) inputPlSql = "''" + list[0].Trim() + "''";
-            // inputPlSql = "''1320005105'',''1320005107''";
-
-            else
-            {
-                for (int ii = 0; ii < list.Count; ii++)
-                {
-                    if (ii == 0) inputPlSql = "''" + list[0].Trim();
-                    else inputPlSql += "'',''" + list[ii].Trim();
-                    if (ii == list.Count - 1) inputPlSql += "''";
-
-
-
-
-                }
-            }
-            object[,] ArrayRecordsNNN = Gf_ArrayPlReturn("{call WGC3020C.P_SREFER1 ( '" + inputPlSql + "')}");
-            ss2_Sheet1.RowCount = ArrayRecordsNNN.GetLength(0);
-            for (int i = 0; i < ArrayRecordsNNN.GetLength(0); i++)
-            {
-                for (int j = 0; j < ArrayRecordsNNN.GetLength(1); j++)
-                {
-                    ss2_Sheet1.Cells[i, j].Text = ArrayRecordsNNN[i, j].ToString();
-                }
-            }
-
-            //////////////////////////////////////////
-            txt_SMP_NO.Text = "";
-            rowCount = 0;
-            for (int i = 0; i < ss2_Sheet1.RowCount; i++) //遍历Spread2，进程代码不以“X”开头，可以修改数据。
-            {
-                if (!ss2_Sheet1.Cells[i, 3].Text.Trim().StartsWith("X")) //
-                {
-                    ss2_Sheet1.Cells[i, 0].Locked = false; //可以修改。不锁定
-                    ss2_Sheet1.Cells[i, 13].Locked = false;
-                    ss2_Sheet1.Cells[i, 14].Locked = false;
-                    ss2_Sheet1.Cells[i, 15].Locked = false;
-                    ss2_Sheet1.Cells[i, 16].Locked = false;
-
-                    ss2_Sheet1.Cells[i, 0].BackColor = Color.FromArgb(255, 255, 255, 192); //颜色为黄色。
-                    ss2_Sheet1.Cells[i, 13].BackColor = Color.FromArgb(255, 255, 255, 192);
-                    ss2_Sheet1.Cells[i, 14].BackColor = Color.FromArgb(255, 255, 255, 192);
-                    ss2_Sheet1.Cells[i, 15].BackColor = Color.FromArgb(255, 255, 255, 192);
-                    ss2_Sheet1.Cells[i, 16].BackColor = Color.FromArgb(255, 255, 255, 192);
-                    rowCount++;
-                }
-                else
-                {
-                    ss2_Sheet1.Cells[i, 0].BackColor = Color.White; //以“X”开头，设定背景色为白色。不可修改数据。
-                    ss2_Sheet1.Cells[i, 13].BackColor = Color.White;
-                    ss2_Sheet1.Cells[i, 14].BackColor = Color.White;
-                    ss2_Sheet1.Cells[i, 15].BackColor = Color.White;
-                    ss2_Sheet1.Cells[i, 16].BackColor = Color.White;
-                }
-            }
-
-            ArrayRecordsNew = new object[rowCount, 4]; //定义数组，存储Spread2的初始数据，用于点击Spread2的Checkbox按钮时，恢复数据。
-            int currentCountSeq = 0;
-            for (int i = 0; i < ss2_Sheet1.RowCount; i++)
-            {
-                if (!ss2_Sheet1.Cells[i, 3].Text.Trim().StartsWith("X")) //不以“X”开头的数据才可以存储。
-                {
-                    ArrayRecordsNew[currentCountSeq, 0] = ss2_Sheet1.Cells[i, 13].Text;
-                    ArrayRecordsNew[currentCountSeq, 1] = ss2_Sheet1.Cells[i, 14].Text;
-                    ArrayRecordsNew[currentCountSeq, 2] = ss2_Sheet1.Cells[i, 15].Text;
-                    ArrayRecordsNew[currentCountSeq++, 3] = ss2_Sheet1.Cells[i, 16].Text;
-                }
-            }
-
-
-            bool isChoseed = false;
-            for (int i = 0; i < ss2_Sheet1.RowCount; i++) //取得式样号。
-            {
-                if (!ss2_Sheet1.Cells[i, 3].Text.Trim().StartsWith("X") && ss2_Sheet1.Cells[i, 13].Text == "Y")
-                {
-                    txt_SMP_NO.Text = ss2_Sheet1.Cells[i, 1].Text;
-                    SMP_NO = ss2_Sheet1.Cells[i, 1].Text; //将式样号赋值给全局变量SMP_NO。
-                    isChoseed = true;
-                    break;
-                }
-            }
-            if (!isChoseed)
-            {
-                for (int i = 0; i < ss2_Sheet1.RowCount; i++) //取得式样号。
-                {
-                    if (!ss2_Sheet1.Cells[i, 3].Text.Trim().StartsWith("X") && (ss2_Sheet1.Cells[i, 11].Text.ToUpper() == "Y" || ss2_Sheet1.Cells[i, 11].Text.ToUpper() == "P"))
-                    {
-                        txt_SMP_NO.Text = ss2_Sheet1.Cells[i, 1].Text;
-                        SMP_NO = ss2_Sheet1.Cells[i, 1].Text; //将式样号赋值给全局变量SMP_NO。
-                        isChoseed = true;
-                        break;
-                    }
-                }
-            }
-            if (!isChoseed)
-            {
-                for (int i = 0; i < ss2_Sheet1.RowCount; i++) //取得式样号。
-                {
-                    if (!ss2_Sheet1.Cells[i, 3].Text.Trim().StartsWith("X"))
-                    {
-                        txt_SMP_NO.Text = ss2_Sheet1.Cells[i, 1].Text;
-                        SMP_NO = ss2_Sheet1.Cells[i, 1].Text; //将式样号赋值给全局变量SMP_NO。
-                        break;
-                    }
-                }
-            }
-
-
-            Sample_No_Edit();
-
-
-
-            txt_SMP_LEN.Text = "";
-            //txt_SMP_LOC.Text = "";
-            //txt_SMP_LOC_NAME.Text = "";
-            //////////////////////////////////////////
-
-            /////////////////////////////////////////////
-            for (int i = 0; i < ss2_Sheet1.RowCount; i++)
-            {
-                if (!ss2_Sheet1.Cells[i, 3].Text.Trim().StartsWith("X"))
-                {
-                    ss2_Sheet1.RowHeader.Cells[i, 0].Text = "修改";
-                    ss2_Sheet1.Cells[i, 16].Text = SMP_NO; //
-                    ss2_Sheet1.Cells[i, 0].Text = "1";
-
-                    if (ss2_Sheet1.Cells[i, 1].Text == ss2_Sheet1.Cells[i, 16].Text)
-                    {
-                        ss2_Sheet1.Cells[i, 13].Text = "Y";
-                        ss2_Sheet1.Cells[i, 13].ForeColor = Color.Red;
-                    }
-                    else
-                    {
-                        ss2_Sheet1.Cells[i, 13].Text = "N";
-                    }
-
-                    if (ss2_Sheet1.Cells[i, 13].Text == "Y")
-                    {
-                        ss2_Sheet1.Cells[i, 15].Text = txt_SMP_LEN.Text;
-                    }
-                    else
-                    {
-                        ss2_Sheet1.Cells[i, 15].Text = "0";
-                    }
-                    if (this.txt_SMP_LOC.Text != "")
-                    {
-                        ss2_Sheet1.Cells[i, 14].Text = txt_SMP_LOC.Text;
-                    }
-                }
-            }
-            /////////////////////////////////////////////
-            isMax = true;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        }
-
-        private int setSpreadRowCount()
-        {
-            int SpreadRowCount = 0;
-            ADODB.Recordset AdoRs;
-            for (int i = 0; i < list.Count; i++)
-            {
-                if (GeneralCommon.M_CN1.State == 0)
-                {
-                    if (GeneralCommon.GF_DbConnect() == false)
-                    {
-                        return 0;
-                    }
-                }
-                AdoRs = new ADODB.Recordset();
-
-                string sQuery = "{call WGC3020C.P_SREFER1 ( '" + list[i] + "')}";
-                AdoRs.Open(sQuery, GeneralCommon.M_CN1, ADODB.CursorTypeEnum.adOpenKeyset, ADODB.LockTypeEnum.adLockReadOnly, -1);
-                if (AdoRs.BOF || AdoRs.EOF)
-                {
-                    AdoRs.Close();
-                    AdoRs = null;
-                    if (GeneralCommon.M_CN1.State != 0)
-                    {
-                        GeneralCommon.M_CN1.Close();
-                    }
-                    Cursor.Current = Cursors.Default;
-                }
-                else
-                {
-                    SpreadRowCount += AdoRs.RecordCount;
-                }
-                AdoRs.Close();
-                AdoRs = null;
-                if (GeneralCommon.M_CN1.State != 0)
-                {
-                    GeneralCommon.M_CN1.Close();
-                }
-            }
-            return SpreadRowCount;
-
-        }
-
-
-
-        object[,] ArrayRecords = null;
-        int rowCount = 0;
-
-        private void ss2_EnterCell(object sender, FarPoint.Win.Spread.EnterCellEventArgs e)
-        {
-
-        }
-
-        //Spread2的Cell离开事件，用于校验手工输入的Spread2的第13，14，15，16列的内容是否符合规范。
-        private void ss2_LeaveCell(object sender, FarPoint.Win.Spread.LeaveCellEventArgs e)
-        {
-            if (ss2_Sheet1.ActiveColumnIndex == 16 && ss2_Sheet1.Cells[e.Row, 16].Text.Length != 14)
-            {
-                GeneralCommon.Gp_MsgBoxDisplay("试样号错误", "W", "警告");
-                ss2_Sheet1.Cells[e.Row, 16].Text = SMP_NO;
-            }
-            if (ss2_Sheet1.ActiveColumnIndex == 14 && (ss2_Sheet1.Cells[e.Row, 14].Text != "T") && (ss2_Sheet1.Cells[e.Row, 14].Text != "Y") && (ss2_Sheet1.Cells[e.Row, 14].Text != "B") && (ss2_Sheet1.Cells[e.Row, 14].Text != "M") && (ss2_Sheet1.Cells[e.Row, 14].Text != ""))
-            {
-                ss2_Sheet1.Cells[e.Row, 14].Text = "T";
-            }
-            if (ss2_Sheet1.ActiveColumnIndex == 13 && (ss2_Sheet1.Cells[e.Row, 13].Text != "Y") && (ss2_Sheet1.Cells[e.Row, 13].Text != "N") && (ss2_Sheet1.Cells[e.Row, 14].Text != "P"))
-            {
-                if (ss2_Sheet1.Cells[e.Row, 1].Text != SMP_NO)
-                    ss2_Sheet1.Cells[e.Row, 14].Text = "N";
-            }
-        }
-
-        //保存事件
-        public override void Form_Pro()
-        {
-            if (ss2_Sheet1.RowCount == 0) return;
-            //for (int i = 0; i < ss1_Sheet1.RowCount; i++)
-            //{
-            //    if (ss1_Sheet1.RowHeader.Cells[i, 0].Text == "选择" && ss1_Sheet1.Cells[i, 2].Text == "取样结束")
-            //    {
-            //        GeneralCommon.Gp_MsgBoxDisplay(ss1_Sheet1.Cells[i, 0].Text + "已经取样完成，不能再次取样...!!", "W", "警告");
-            //        return;
-            //    }
-            //}
-            string sStdspec = "";
-            string sBefStdspec = "";
-            string sSpec = "";
-            int iChgCnt = 0;
-            if (ss2_Sheet1.RowCount < 0) return;
-            for (int i = 0; i < ss2_Sheet1.RowCount; i++)
-            {
-                if (ss2_Sheet1.Cells[i, 3].Text != "XAC" && ss2_Sheet1.Cells[i, 3].Text != "XAF")
-                {
-                    sStdspec = ss2_Sheet1.Cells[i, 17].Text;
-                    sBefStdspec = ss2_Sheet1.Cells[i, 18].Text;
-                    if (sBefStdspec != "" && sStdspec != sBefStdspec && (ExpoCheck(sBefStdspec) && !(ExpoCheck(sStdspec))))
-                    {
-                        iChgCnt = iChgCnt + 1;
-                    }
-                }
-            }
-
-            for (int i = 0; i < ss2_Sheet1.RowCount; i++)
-            {
-                if (ss2_Sheet1.RowHeader.Cells[i, 0].Text == "修改")
-                {
-                    sSpec = ss2_Sheet1.Cells[i, 18].Text;
-                    if (txt_CHG_SMP_NO.Text == "" || txt_CHG_STDSPEC.Text == "")
-                    {
-                        if (ExpoCheck(sSpec))
-                        {
-                            GeneralCommon.Gp_MsgBoxDisplay("改判试样号，改判时标准必须输入...!", "I", "提示");
-                            return;
-                        }
-                    }
-                    if (iChgCnt == 0)
-                    {
-                        ss2_Sheet1.Cells[i, 26].Text = txt_CHG_SMP_NO.Text;
-                        ss2_Sheet1.Cells[i, 27].Text = txt_CHG_STDSPEC.Text;
-                        iChgCnt = 1;
-                    }
-                }
-            }
-            if (base.p_Pro(2, 2, true, true))
-            {
-                p_Ref(1, 1, true, false);
-                ss2_Sheet1.RowCount = 0;
-            }
-            list.Clear();
-        }
-
-        ////////
-        private bool ExpoCheck(string sSpec)
-        {
-            bool ExpoCheck = false;
-            string sqlStr = "SELECT Gf_Expo_Smp_Check('" + sSpec + "')FROM  DUAL ";
-            ADODB.Recordset AdoRs = new ADODB.Recordset();
             if (GeneralCommon.M_CN1.State == 0)
-                if (GeneralCommon.GF_DbConnect() == false) return false;
-            AdoRs.Open(sqlStr, GeneralCommon.M_CN1, ADODB.CursorTypeEnum.adOpenDynamic, ADODB.LockTypeEnum.adLockReadOnly, -1);
-            int flag = int.Parse(AdoRs.Fields[0].Value.ToString());
-            if (flag > 0)
-            {
-                ExpoCheck = true;
-            }
-            return ExpoCheck;
-        }
-
-        private void opt_Product1_Click(object sender, EventArgs e)
-        {
-            opt_Product1.ForeColor = Color.Red;
-            txt_prod_cd.Text = "PP";
-            opt_Product2.ForeColor = Color.Black;
-        }
-
-        private void opt_Product_Click(object sender, EventArgs e)
-        {
-            opt_Product1.ForeColor = Color.Black;
-            txt_prod_cd.Text = "LP";
-            opt_Product2.ForeColor = Color.Red;
-        }
-
-
-        //Spread2的第一列checkbox单击事件，第一次点击时，将当前行数据按照规定赋值给Spread2的第13，14，15，16列。再次点击时，全部恢复初始值。
-        private void ss2_ButtonClicked(object sender, FarPoint.Win.Spread.EditorNotifyEventArgs e)
-        {
-            if (ss2_Sheet1.RowCount < 0) return;
-
-            if (isMax)
-            {
-                if (e.Column == 0 && !ss2_Sheet1.Cells[e.Row, 3].Text.Trim().StartsWith("X"))
-                {
-                    if (ss2_Sheet1.Cells[e.Row, 0].Text == "True")
-                    {
-                        ss2_Sheet1.RowHeader.Cells[e.Row, 0].Text = "修改";
-                        ss2_Sheet1.Cells[e.Row, 16].Text = SMP_NO;
-                        if (SMP_NO == ss2_Sheet1.Cells[e.Row, 1].Text)
-                        {
-                            ss2_Sheet1.Cells[e.Row, 13].Text = "Y";
-                            ss2_Sheet1.Cells[e.Row, 13].ForeColor = Color.Red;
-                        }
-                        else
-                        {
-                            ss2_Sheet1.Cells[e.Row, 13].Text = "N";
-                        }
-                        if (ss2_Sheet1.Cells[e.Row, 13].Text == "Y")
-                        {
-                            ss2_Sheet1.Cells[e.Row, 15].Text = txt_SMP_LEN.Text;
-                        }
-                        else
-                        {
-                            ss2_Sheet1.Cells[e.Row, 15].Text = "0";
-                        }
-                        if (this.txt_SMP_LOC.Text != "")
-                        {
-                            ss2_Sheet1.Cells[e.Row, 14].Text = txt_SMP_LOC.Text;
-                        }
-                    }
-                    else //再次点击时，全部恢复初始值。
-                    {
-                        int currentCountSeq1 = 0;
-                        for (int i = 0; i < ss2_Sheet1.RowCount; i++)
-                        {
-                            if (!ss2_Sheet1.Cells[i, 3].Text.Trim().StartsWith("X"))
-                            {
-                                ss2_Sheet1.Cells[i, 0].Text = "False";
-                                ss2_Sheet1.RowHeader.Cells[i, 0].Text = "";
-                                ss2_Sheet1.Cells[i, 13].Text = ArrayRecordsNew[currentCountSeq1, 0].ToString();
-                                ss2_Sheet1.Cells[i, 14].Text = ArrayRecordsNew[currentCountSeq1, 1].ToString();
-                                ss2_Sheet1.Cells[i, 15].Text = ArrayRecordsNew[currentCountSeq1, 2].ToString();
-                                ss2_Sheet1.Cells[i, 16].Text = ArrayRecordsNew[currentCountSeq1++, 3].ToString();
-                            }
-                        }
-                    }
-                }
-            }
-            else
-            {
-                if (e.Column == 0 && !ss2_Sheet1.Cells[e.Row, 3].Text.Trim().StartsWith("X"))
-                {
-                    if (ss2_Sheet1.Cells[e.Row, 0].Text == "True")
-                    {
-                        ss2_Sheet1.RowHeader.Cells[e.Row, 0].Text = "修改";
-                        ss2_Sheet1.Cells[e.Row, 16].Text = SMP_NO;
-                        if (SMP_NO == ss2_Sheet1.Cells[e.Row, 1].Text)
-                        {
-                            ss2_Sheet1.Cells[e.Row, 13].Text = "Y";
-                            ss2_Sheet1.Cells[e.Row, 13].ForeColor = Color.Red;
-                        }
-                        else
-                        {
-                            ss2_Sheet1.Cells[e.Row, 13].Text = "N";
-                        }
-                        if (ss2_Sheet1.Cells[e.Row, 13].Text == "Y")
-                        {
-                            ss2_Sheet1.Cells[e.Row, 15].Text = txt_SMP_LEN.Text;
-                        }
-                        else
-                        {
-                            ss2_Sheet1.Cells[e.Row, 15].Text = "0";
-                        }
-                        if (this.txt_SMP_LOC.Text != "")
-                        {
-                            ss2_Sheet1.Cells[e.Row, 14].Text = txt_SMP_LOC.Text;
-                        }
-                    }
-                    else //再次点击时，全部恢复初始值。
-                    {
-                        int currentCountSeq1 = 0;
-                        for (int i = 0; i < ss2_Sheet1.RowCount; i++)
-                        {
-                            if (!ss2_Sheet1.Cells[i, 3].Text.Trim().StartsWith("X"))
-                            {
-                                ss2_Sheet1.Cells[i, 0].Text = "False";
-                                ss2_Sheet1.RowHeader.Cells[i, 0].Text = "";
-                                ss2_Sheet1.Cells[i, 13].Text = ArrayRecords[currentCountSeq1, 0].ToString();
-                                ss2_Sheet1.Cells[i, 14].Text = ArrayRecords[currentCountSeq1, 1].ToString();
-                                ss2_Sheet1.Cells[i, 15].Text = ArrayRecords[currentCountSeq1, 2].ToString();
-                                ss2_Sheet1.Cells[i, 16].Text = ArrayRecords[currentCountSeq1++, 3].ToString();
-                            }
-                        }
-                    }
-                }
-            }
-
-
-
-
-
-
-        }
-
-
-
-
-
-        public void Sample_No_Edit()
-        {
-            string sPlateNo = "";
-            string sStdspec = "";
-            string sBefStdspec = "";
-            string sSmpFl = "";
-            string sSmpNo = "";
-            string sProdCd = "";
-            string sSmp_No = "";
-            if (ss2_Sheet1.RowCount < 0) return;
-            for (int i = 0; i < ss2_Sheet1.RowCount; i++)
-            {
-                if (!ss2_Sheet1.Cells[i, 3].Text.Trim().StartsWith("X"))
-                {
-                    sStdspec = ss2_Sheet1.Cells[i, 17].Text;
-                    sBefStdspec = ss2_Sheet1.Cells[i, 18].Text;
-                    sPlateNo = ss2_Sheet1.Cells[i, 1].Text;
-                    sSmpFl = ss2_Sheet1.Cells[i, 13].Text;
-                    sSmpNo = ss2_Sheet1.Cells[i, 16].Text;
-                    sProdCd = ss2_Sheet1.Cells[i, 2].Text;
-                    if (sProdCd == "PP")
-                    {
-                        sSmp_No = "00";
-                    }
-                    else
-                    {
-                        sSmp_No = "99";
-                    }
-                    if (ExpoCheck(sBefStdspec) || ExpoCheck(sStdspec))
-                    {
-                        if (sSmpFl != "" && sSmpNo != txt_SMP_NO.Text)
-                        {
-                            txt_CHG_STDSPEC.Text = sStdspec;
-                        }
-                        else
-                        {
-                            if (sBefStdspec != "" && sStdspec != sBefStdspec)
-                            {
-                                txt_CHG_STDSPEC.Text = sStdspec;
-                            }
-                        }
-                        if (sProdCd == "PP")
-                        {
-                            txt_CHG_SMP_NO.Text = txt_SMP_NO.Text.Substring(0, 12) + sSmp_No;
-                        }
-                        else
-                        {
-                            txt_CHG_SMP_NO.Text = txt_SMP_NO.Text.Substring(0, 10) + sSmp_No;
-                        }
-                    }
-                }
-            }
-        }
-
-        //public bool ExpoCheck(string str)
-        //{
-        //    bool isExpoCheck = false;
-        //    string sQuery = " SELECT  Gf_Expo_Smp_Check(' " + str + " ') FROM  DUAL ";
-        //    double flag = GeneralCommon.Gf_FloatFind(GeneralCommon.M_CN1,sQuery);
-        //    int sFlag = System.Convert.ToInt32(flag);
-        //    if(sFlag>0)
-        //    {
-        //        isExpoCheck = true;
-        //    }
-        //    return isExpoCheck;
-        //}
-        private void ss2_EditModeOn(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ss2_EditorFocused(object sender, FarPoint.Win.Spread.EditorNotifyEventArgs e)
-        {
-
-        }
-
-        private void ss2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-
-        List<string> list = new List<string>();
-        protected override void ss_CellClickEvent(object sender, FarPoint.Win.Spread.CellClickEventArgs e)
-        {
-            //base.ss_CellClickEvent(sender, e);   
-
-            FarPoint.Win.Spread.FpSpread spread = (FarPoint.Win.Spread.FpSpread)sender;
-            if (e.ColumnHeader) return;
-            if (spread.Name == "ss1")
-            {
-                if (spread.ActiveSheet.RowCount < 0) return;
-                if (e.RowHeader)
-                {
-                    if (list.Count > 0)
-                    {
-                        if (spread.ActiveSheet.Cells[e.Row, 0].Text.Substring(0, 8) != list[0].Substring(0, 8))
-                        {
-                            GeneralCommon.Gp_MsgBoxDisplay("请选择同炉的钢板进行取样...!!", "W", "警告");
-                            return;
-                        }
-                    }
-                    ss2_Sheet1.RowCount = 0;
-                    isMax = true;
-                    if (spread.ActiveSheet.RowHeader.Cells[e.Row, 0].Text == "")
-                    {
-                        ss1.ActiveSheet.Rows.Get(e.Row).BackColor = Color.GreenYellow;
-                        ss1.ActiveSheet.Cells[e.Row, 0].BackColor = Color.GreenYellow;
-                        ss1.ActiveSheet.RowHeader.Cells[e.Row, 0].Text = "选择";
-                        list.Add(spread.ActiveSheet.Cells[e.Row, 0].Text);
-                    }
-                    else
-                    {
-                        ss1.ActiveSheet.Rows.Get(e.Row).BackColor = Color.White;
-                        ss1.ActiveSheet.Cells[e.Row, 0].BackColor = Color.White;
-                        ss1.ActiveSheet.RowHeader.Cells[e.Row, 0].Text = "";
-                        list.Remove(spread.ActiveSheet.Cells[e.Row, 0].Text);
-                    }
-
-                }
-            }
-        }
-
-
-        private static object[,] Gf_ArrayPlReturn(string sQuery)
-        {
-            object[,] ArrayRecords = null;
-            int RsRowCount = 0;
-            int RsColCount = 0;
-            ADODB.Recordset AdoRs;
+                if (!GeneralCommon.GF_DbConnect()) return "";
+            string Shift_HH = "0";
+            string sQuery;
+            sQuery = "SELECT TO_CHAR(SYSDATE,'HH24MI') FROM DUAL";
+            ADODB.Recordset AdoRs = new ADODB.Recordset();
             try
             {
-                if (GeneralCommon.M_CN1.State == 0)
+                if (WKDATE != "")
                 {
-                    if (GeneralCommon.GF_DbConnect() == false)
+                    return WKDATE;
+                }
+                AdoRs.Open(sQuery, GeneralCommon.M_CN1, ADODB.CursorTypeEnum.adOpenStatic, ADODB.LockTypeEnum.adLockReadOnly);
+
+                if (!AdoRs.BOF && !AdoRs.EOF)
+                {
+                    //RltValue = true;
+                    while (!AdoRs.EOF)
                     {
-                        return null;
+                        if (AdoRs.Fields[0].Value.ToString() == "")
+                        {
+                            Shift_HH = "";
+                        }
+                        else
+                        {
+                            Shift_HH = AdoRs.Fields[0].Value.ToString();
+                        }
+                        AdoRs.MoveNext();
                     }
                 }
-                AdoRs = new ADODB.Recordset();
-                AdoRs.Open(sQuery, GeneralCommon.M_CN1, ADODB.CursorTypeEnum.adOpenKeyset, ADODB.LockTypeEnum.adLockReadOnly, -1);
-                if (AdoRs.BOF || AdoRs.EOF)
-                {
-                    //GeneralCommon.Gp_MsgBoxDisplay("没有数据...!", "I", "提示");
-                    AdoRs.Close();
-                    AdoRs = null;
-                    if (GeneralCommon.M_CN1.State != 0)
-                    {
-                        GeneralCommon.M_CN1.Close();
-                    }
-                    Cursor.Current = Cursors.Default;
-                    return null;
-                }
-                RsRowCount = AdoRs.RecordCount;
-                RsColCount = AdoRs.Fields.Count;
-                ArrayRecords = new object[RsRowCount, RsColCount];
-                int i = 0;
-                while (!AdoRs.EOF)
-                {
-                    for (int j = 0; j < AdoRs.Fields.Count; j++)
-                    {
-                        ArrayRecords[i, j] = AdoRs.Fields[j].Value;
-                    }
-                    i++;
-                    AdoRs.MoveNext();
-                }
-                AdoRs.Close();
+                GeneralCommon.M_CN1.Close();
                 AdoRs = null;
-                if (GeneralCommon.M_CN1.State != 0)
+
+                if (Convert.ToInt32(Shift_HH) < 800)
                 {
-                    GeneralCommon.M_CN1.Close();
+                    return "1";
                 }
-                return ArrayRecords;
+                else if (Convert.ToInt32(Shift_HH) < 1600)
+                {
+                    return "2";
+                }
+                else
+                {
+                    return "3";
+                }
             }
             catch (Exception ex)
             {
+                if (GeneralCommon.M_CN1.State != 0) GeneralCommon.M_CN1.Close();
                 AdoRs = null;
-                if (GeneralCommon.M_CN1.State != 0)
-                {
-                    GeneralCommon.M_CN1.Close();
-                }
-                GeneralCommon.Gp_MsgBoxDisplay((string)("Gf_ArrayPlReturn Error : " + ex.Message), "W", " 警告");
-                return null;
+                return "0";
             }
         }
 
+        public string Gf_GroupSet(string shift, string setDate)
+        {
+
+            if (GeneralCommon.M_CN1.State == 0)
+                if (!GeneralCommon.GF_DbConnect()) return "";
+
+            string sQuery;
+            string group = "0";
+            sQuery = "SELECT Gf_Groupset('C3'," + shift + ",SUBSTR('" + setDate + "',1,8)) FROM DUAL";
+
+            ADODB.Recordset AdoRs = new ADODB.Recordset();
+            try
+            {
+                AdoRs.Open(sQuery, GeneralCommon.M_CN1, ADODB.CursorTypeEnum.adOpenStatic, ADODB.LockTypeEnum.adLockReadOnly);
+
+                if (!AdoRs.BOF && !AdoRs.EOF)
+                {
+                    //RltValue = true;
+                    while (!AdoRs.EOF)
+                    {
+                        if (AdoRs.Fields[0].Value.ToString() == "")
+                        {
+                            group = "";
+                        }
+                        else
+                        {
+                            group = AdoRs.Fields[0].Value.ToString();
+                        }
+                        AdoRs.MoveNext();
+                    }
+                }
+
+                GeneralCommon.M_CN1.Close();
+
+                AdoRs = null;
+
+                return group;
+            }
+            catch (Exception ex)
+            {
+                if (GeneralCommon.M_CN1.State != 0) GeneralCommon.M_CN1.Close();
+                AdoRs = null;
+                return "";
+            }
+        }
+
+        //日期格式
+        public string Gf_DTSet(string DTCheck, string DTFlag)
+        {
+
+            if (DTCheck == "D")
+            {
+                DTCheck = "D";
+            }
+            else
+            {
+                DTCheck = "S";
+            }
+            DTFlag = "C";
+
+            string sQuery = "";
+            int sQuery_Len = 0;
+            string time = "";
+
+            switch (DTCheck)
+            {
+                case "S":
+                    sQuery = "SELECT TO_CHAR(SYSDATE,'YYYYMMDDHH24MISS') FROM DUAL";
+                    sQuery_Len = 14;
+                    break;
+                case "I":
+                    sQuery = "SELECT TO_CHAR(SYSDATE,'YYYYMMDDHH24MI') FROM DUAL";
+                    sQuery_Len = 12;
+                    break;
+                case "H":
+                    sQuery = "SELECT TO_CHAR(SYSDATE,'YYYYMMDDHH24') FROM DUAL";
+                    sQuery_Len = 10;
+                    break;
+                case "D":
+                    sQuery = "SELECT TO_CHAR(SYSDATE,'YYYYMMDD') FROM DUAL";
+                    sQuery_Len = 8;
+                    break;
+                case "T":
+                    sQuery = "SELECT TO_CHAR(SYSDATE,'HH24MISS') FROM DUAL";
+                    sQuery_Len = 6;
+                    break;
+                case "M":
+                    sQuery = "SELECT TO_CHAR(SYSDATE,'YYYYMM') FROM DUAL";
+                    sQuery_Len = 6;
+                    break;
+                case "Y":
+                    sQuery = "SELECT TO_CHAR(SYSDATE,'YYYY') FROM DUAL";
+                    sQuery_Len = 4;
+                    break;
+            }
+
+            if (DTFlag == "C")
+            {
+                if (DTCheck == "T")
+                {
+                    return DateTime.Now.ToString("HHmmss");
+                }
+                return (DateTime.Now.ToString("yyyyMMddHHmmss")).Substring(0, sQuery_Len);
+            }
+
+            if (GeneralCommon.M_CN1.State == 0)
+                if (!GeneralCommon.GF_DbConnect()) return "00000000000000";
+
+            ADODB.Recordset AdoRs = new ADODB.Recordset();
+            try
+            {
+                AdoRs.Open(sQuery, GeneralCommon.M_CN1, ADODB.CursorTypeEnum.adOpenStatic, ADODB.LockTypeEnum.adLockReadOnly);
+
+                if (!AdoRs.BOF && !AdoRs.EOF)
+                {
+                    //RltValue = true;
+                    while (!AdoRs.EOF)
+                    {
+                        if (AdoRs.Fields[0].Value.ToString() == "")
+                        {
+                            time = "";
+                        }
+                        else
+                        {
+                            time = AdoRs.Fields[0].Value.ToString();
+                        }
+                        AdoRs.MoveNext();
+                    }
+                }
+                else
+                {
+                    time = "00000000000000";
+
+                }
+
+                GeneralCommon.M_CN1.Close();
+
+                AdoRs = null;
+
+                return time;
+            }
+            catch (Exception ex)
+            {
+                if (GeneralCommon.M_CN1.State != 0) GeneralCommon.M_CN1.Close();
+                AdoRs = null;
+                return "00000000000000";
+            }
+        }
+
+        //unlock spread L column
+        public void unlockSpread(FpSpread e)
+        {
+            int columnCount = e.Sheets[0].ColumnCount;
+            for (int i = 0; i < columnCount; i++)
+            {
+                e.ActiveSheet.Columns[i].Locked = false;
+            }
+        }
+
+        public void lockSpread(FpSpread e)
+        {
+            int columnCount = e.Sheets[0].ColumnCount;
+            for (int i = 0; i < columnCount; i++)
+            {
+                e.ActiveSheet.Columns[i].Locked = true;
+            }
+        }
+
+        #endregion
+
+        private void Cmd_Set_Save_Click(object sender, EventArgs e)
+        {
+            Cmd_Set_Save_Clk();
+        }
+
+        private void SDT_PROD_DATE_Click(object sender, EventArgs e)
+        {
+            SDT_PROD_DATE_Clk();
+        }
+
+        private void ss1_CellDoubleClick(object sender, CellClickEventArgs e)
+        {
+            ss1_DblClk(e.Column, e.Row);
+        }
+
+        private void ss1_CellClick(object sender, CellClickEventArgs e)
+        {
+            ss1_Clk(e.Column, e.Row);
+        }
+
+        private void ss2_ButtonClicked(object sender, EditorNotifyEventArgs e)
+        {
+            ss2_ButtonClk(e.Column, e.Row);
+        }
+
+        private void ss2_EditChange(object sender, EditorNotifyEventArgs e)
+        {
+            ss2_EditMode(e.Column, e.Row);
+        }
+
+        private void txt_SMP_NO_TextChanged(object sender, EventArgs e)
+        {
+            txt_SMP_NO_Chg();
+        }
+
+        private void txt_SMP_LOC_TextChanged(object sender, EventArgs e)
+        {
+            txt_SMP_LOC_Chg();
+        }
+
+        private void opt_Product1_TextChanged(object sender, EventArgs e)
+        {
+            opt_Product_Click();
+        }
 
 
 

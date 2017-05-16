@@ -95,7 +95,6 @@ C:\Users\HAN\Desktop\github\NGHB\CommonClass\bin\Debug\FarPoint.Win.Spread.Desig
 C:\Users\HAN\Desktop\github\NGHB\CommonClass\bin\Debug\FarPoint.Win.Spread.Html.xml
 C:\Users\HAN\Desktop\github\NGHB\CommonClass\bin\Debug\policy.5.0.FarPoint.Win.config
 C:\Users\HAN\Desktop\github\NGHB\CommonClass\bin\Debug\policy.5.0.FarPoint.Win.Spread.config
-C:\Users\HAN\Desktop\github\NGHB\CommonClass\obj\Debug\CommonClass.csprojResolveAssemblyReference.cache
 C:\Users\HAN\Desktop\github\NGHB\CommonClass\obj\Debug\CommonClass.csproj.ResolveComReference.cache
 C:\Users\HAN\Desktop\github\NGHB\CommonClass\obj\Debug\CommonClass.FORMBASE.resources
 C:\Users\HAN\Desktop\github\NGHB\CommonClass\obj\Debug\CommonClass.PopupForm.resources

@@ -116,7 +116,7 @@
             // 
             // TXT_PROD_CD
             // 
-            this.TXT_PROD_CD.Location = new System.Drawing.Point(370, 11);
+            this.TXT_PROD_CD.Location = new System.Drawing.Point(252, 13);
             this.TXT_PROD_CD.Name = "TXT_PROD_CD";
             this.TXT_PROD_CD.Size = new System.Drawing.Size(25, 22);
             this.TXT_PROD_CD.TabIndex = 22;
@@ -129,37 +129,37 @@
             this.SDT_PROD_DATE.RawDate = "";
             this.SDT_PROD_DATE.Size = new System.Drawing.Size(97, 21);
             this.SDT_PROD_DATE.TabIndex = 11;
+            this.SDT_PROD_DATE.Click += new System.EventHandler(this.SDT_PROD_DATE_Click);
             // 
             // txt_charge_no
             // 
             this.txt_charge_no.Location = new System.Drawing.Point(81, 35);
             this.txt_charge_no.Name = "txt_charge_no";
-            this.txt_charge_no.Size = new System.Drawing.Size(97, 22);
+            this.txt_charge_no.Size = new System.Drawing.Size(131, 22);
             this.txt_charge_no.TabIndex = 10;
             // 
             // opt_Product2
             // 
             this.opt_Product2.AutoSize = true;
-            this.opt_Product2.Location = new System.Drawing.Point(313, 38);
+            this.opt_Product2.Location = new System.Drawing.Point(338, 36);
             this.opt_Product2.Name = "opt_Product2";
             this.opt_Product2.Size = new System.Drawing.Size(64, 17);
             this.opt_Product2.TabIndex = 8;
             this.opt_Product2.TabStop = true;
             this.opt_Product2.Text = "轧批号";
             this.opt_Product2.UseVisualStyleBackColor = true;
-            this.opt_Product2.Click += new System.EventHandler(this.opt_Product_Click);
             // 
             // opt_Product1
             // 
             this.opt_Product1.AutoSize = true;
-            this.opt_Product1.Location = new System.Drawing.Point(313, 13);
+            this.opt_Product1.Location = new System.Drawing.Point(338, 11);
             this.opt_Product1.Name = "opt_Product1";
             this.opt_Product1.Size = new System.Drawing.Size(64, 17);
             this.opt_Product1.TabIndex = 7;
             this.opt_Product1.TabStop = true;
             this.opt_Product1.Text = "板坯号";
             this.opt_Product1.UseVisualStyleBackColor = true;
-            this.opt_Product1.Click += new System.EventHandler(this.opt_Product1_Click);
+            this.opt_Product1.TextChanged += new System.EventHandler(this.opt_Product1_TextChanged);
             // 
             // CBO_GROUP
             // 
@@ -169,7 +169,7 @@
             "B",
             "C",
             "D"});
-            this.CBO_GROUP.Location = new System.Drawing.Point(249, 35);
+            this.CBO_GROUP.Location = new System.Drawing.Point(283, 36);
             this.CBO_GROUP.Name = "CBO_GROUP";
             this.CBO_GROUP.Size = new System.Drawing.Size(42, 21);
             this.CBO_GROUP.TabIndex = 5;
@@ -181,7 +181,7 @@
             "1",
             "2",
             "3"});
-            this.CBO_SHIFT.Location = new System.Drawing.Point(249, 11);
+            this.CBO_SHIFT.Location = new System.Drawing.Point(283, 12);
             this.CBO_SHIFT.Name = "CBO_SHIFT";
             this.CBO_SHIFT.Size = new System.Drawing.Size(42, 21);
             this.CBO_SHIFT.TabIndex = 6;
@@ -199,7 +199,7 @@
             // label3
             // 
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label3.Location = new System.Drawing.Point(184, 35);
+            this.label3.Location = new System.Drawing.Point(218, 36);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 21);
             this.label3.TabIndex = 3;
@@ -219,7 +219,7 @@
             // label2
             // 
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Location = new System.Drawing.Point(184, 11);
+            this.label2.Location = new System.Drawing.Point(218, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 21);
             this.label2.TabIndex = 4;
@@ -295,6 +295,7 @@
             this.txt_SMP_NO.Name = "txt_SMP_NO";
             this.txt_SMP_NO.Size = new System.Drawing.Size(107, 22);
             this.txt_SMP_NO.TabIndex = 15;
+            this.txt_SMP_NO.TextChanged += new System.EventHandler(this.txt_SMP_NO_TextChanged);
             // 
             // label10
             // 
@@ -380,6 +381,8 @@
             this.ss1_Sheet1});
             this.ss1.Size = new System.Drawing.Size(1349, 303);
             this.ss1.TabIndex = 2;
+            this.ss1.CellClick += new FarPoint.Win.Spread.CellClickEventHandler(this.ss1_CellClick);
+            this.ss1.CellDoubleClick += new FarPoint.Win.Spread.CellClickEventHandler(this.ss1_CellDoubleClick);
             // 
             // ss1_Sheet1
             // 
@@ -395,12 +398,8 @@
             this.ss2_Sheet1});
             this.ss2.Size = new System.Drawing.Size(1349, 252);
             this.ss2.TabIndex = 3;
-            this.ss2.EditModeOn += new System.EventHandler(this.ss2_EditModeOn);
-            this.ss2.LeaveCell += new FarPoint.Win.Spread.LeaveCellEventHandler(this.ss2_LeaveCell);
-            this.ss2.EnterCell += new FarPoint.Win.Spread.EnterCellEventHandler(this.ss2_EnterCell);
             this.ss2.ButtonClicked += new FarPoint.Win.Spread.EditorNotifyEventHandler(this.ss2_ButtonClicked);
-            this.ss2.EditorFocused += new FarPoint.Win.Spread.EditorNotifyEventHandler(this.ss2_EditorFocused);
-            this.ss2.Enter += new System.EventHandler(this.ss2_Enter);
+            this.ss2.EditChange += new FarPoint.Win.Spread.EditorNotifyEventHandler(this.ss2_EditChange);
             // 
             // ss2_Sheet1
             // 
@@ -416,7 +415,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "CGD2041C";
             this.Text = "钢板取样信息查询及修改界面_CGD2041C";
-            this.Load += new System.EventHandler(this.WGC3020C_Load);
+            this.Load += new System.EventHandler(this.CGD2041C_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

@@ -221,3 +221,4 @@ C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.csproj.GenerateResource.Cache
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.exe.licenses
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.exe.manifest
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.application
+C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGD2041C.resources
