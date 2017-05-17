@@ -674,7 +674,7 @@ namespace CG
                 sLoopChk = "**";
 
 
-                if (ss2.ActiveSheet.Cells[row, col].Text == "1")
+                if (ss2.ActiveSheet.Cells[row, col].Text == "True")
                 {
                     //            For iDr = 1 To .MaxRows
                     //                .Row = iDr
@@ -1327,7 +1327,6 @@ namespace CG
         {
             opt_Product_Click();
         }
-
 
 
     }
