@@ -398,6 +398,7 @@
             this.ss2_Sheet1});
             this.ss2.Size = new System.Drawing.Size(1349, 252);
             this.ss2.TabIndex = 3;
+            this.ss2.CellDoubleClick += new FarPoint.Win.Spread.CellClickEventHandler(this.ss2_CellDoubleClick);
             this.ss2.ButtonClicked += new FarPoint.Win.Spread.EditorNotifyEventHandler(this.ss2_ButtonClicked);
             this.ss2.EditChange += new FarPoint.Win.Spread.EditorNotifyEventHandler(this.ss2_EditChange);
             // 

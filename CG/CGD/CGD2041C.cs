@@ -805,11 +805,13 @@ namespace CG
 
             if (row >= 0)
             {
+                ss2.ActiveSheet.RowHeader.Cells[row, 0].Text = "修改";
 
-                if (ss2.ActiveSheet.Cells[row, 0].Text != "1")
+                if (ss2.ActiveSheet.Cells[row, 0].Text != "True")
                 {
                     ss2.ActiveSheet.Cells[row, 0].Value = 1;
-                    return;
+                    
+                    //return;
                 }
 
                 if (col == SS2_SMP_FLAG)
@@ -820,12 +822,14 @@ namespace CG
                     {
                         //ss2.Col = SS2_SMP_FLAG;
                         //ss2.Text = "Y" Modified By YangMeng At 2006.06.01
+                        ss2.ActiveSheet.Cells[row, SS2_SMP_FLAG].ForeColor = Color.Red;
                     }
                     else
                     {
                         if (ss2.ActiveSheet.Cells[row, SS2_SMP_FLAG].Text != "P")
                         {
                             ss2.ActiveSheet.Cells[row, SS2_SMP_FLAG].Text = "N";
+                            ss2.ActiveSheet.Cells[row, SS2_SMP_FLAG].ForeColor = Color.Black;
                             ss2.ActiveSheet.Cells[row, SS2_SMP_LEN].Text = "0";
                         }
                     }
@@ -1326,6 +1330,12 @@ namespace CG
         private void opt_Product1_TextChanged(object sender, EventArgs e)
         {
             opt_Product_Click();
+        }
+
+        private void ss2_CellDoubleClick(object sender, CellClickEventArgs e)
+        {
+            if (e.Column != SS2_SMP_FLAG && e.Column != SS2_SMP_LOC && e.Column != SS2_SMP_LEN && e.Column != SS2_SMP_NO) return;
+            ss2_EditMode(e.Column, e.Row);
         }
 
 
