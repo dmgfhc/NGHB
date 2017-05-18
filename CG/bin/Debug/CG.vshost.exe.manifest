@@ -117,14 +117,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CG.exe" size="1431040">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CG.exe" size="1455616">
       <assemblyIdentity name="CG" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>fcc75uU7RHn1aTkKY8P8IXY0J0A=</dsig:DigestValue>
+        <dsig:DigestValue>45hjXrSh4t2Cge6iF32FCE0I05s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -136,7 +136,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>cgrVvQU81696+fD5mm2HrupgMGI=</dsig:DigestValue>
+        <dsig:DigestValue>akGPweB8fv9Diy3h6FMx4N81dos=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -22,9 +22,9 @@ using FarPoint.Win;
 using CommonClass;
 namespace CG
 {
-    public partial class CGD2041C : CommonClass.FORMBASE
+    public partial class CGD2042C : CommonClass.FORMBASE
     {
-        public CGD2041C()
+        public CGD2042C()
         {
             InitializeComponent();
         }
@@ -39,23 +39,27 @@ namespace CG
         bool bCheck;
         string sLoopChk;
 
-        const int SS1_STLGRD = 2; //钢种
-        const int SS2_PLATE_NO = 1; //PLATE NO
-        const int SS2_PROC_CD = 6; //进程代码
-        const int SS2_PROD_CD = 2; //PRODUCT STATUS
-        const int SS2_SMP_FLAG = 16; //实绩标记
-        const int SS2_SMP_LOC = 17; //位置
-        const int SS2_SMP_LEN = 18; //长度
-        const int SS2_SMP_NO = 19; //试样号
-        const int SS2_STDSPEC = 20; //标准号
-        const int SS2_BEF_STDSPEC = 21; //BEFORE 标准号
-        const int SS2_USER_ID = 28; //USER ID
-        const int SS2_BEF_SMP_FLAG = 29; //BEFORE 实绩标记
-        const int SS2_BEF_SMP_LOC = 30; //BEFORE 位置
-        const int SS2_BEF_SMP_LEN = 31; //BEFORE 长度
-        const int SS2_BEF_SMP_NO = 32; //BEFORE 试样号
-        const int SS2_CHG_SMP_NO = 33; //改判时试样号
-        const int SS2_CHG_STDSPEC = 34; //改判时适用标准
+        const int SS1_SLAB_NO = 0;
+        const int SS1_ORD_NO = 9;
+        const int SS1_ORD_ITEM = 10;
+        const int SS1_URGNT_FL = 15;
+
+        const int SS2_PLATE_NO = 1;//PLATE NO
+        const int SS2_PROC_CD = 5;//进程代码
+        const int SS2_PROD_CD = 2;//PRODUCT STATUS
+        const int SS2_SMP_FLAG = 15;//实绩标记
+        const int SS2_SMP_LOC = 16;//位置
+        const int SS2_SMP_LEN = 17;//长度
+        const int SS2_SMP_NO = 18;//试样号
+        const int SS2_STDSPEC = 19;//标准号
+        const int SS2_BEF_STDSPEC = 20;//BEFORE 标准号
+        const int SS2_USER_ID = 23;//USER ID
+        const int SS2_BEF_SMP_FLAG = 24;//BEFORE 实绩标记
+        const int SS2_BEF_SMP_LOC = 25;//BEFORE 位置
+        const int SS2_BEF_SMP_LEN = 26;//BEFORE 长度
+        const int SS2_BEF_SMP_NO = 27;//BEFORE 试样号
+        const int SS2_CHG_SMP_NO = 28;//改判时试样号
+        const int SS2_CHG_STDSPEC = 29; //改判时适用标准
 
         protected override void p_SubFormInit()
         {
@@ -69,6 +73,7 @@ namespace CG
             p_SetMc("班次", CBO_SHIFT, "P", "", "", "", "", imcseq);
             p_SetMc("班别", CBO_GROUP, "P", "", "", "", "", imcseq);
             p_SetMc("生产时间(结束)", TXT_PROD_CD, "P", "", "", "", "", imcseq);
+            p_SetMc("班别", TXT_PRCLINE, "P", "", "", "", "", imcseq);
 
             p_McIni(Mc2, false);
             imcseq = 2;
@@ -81,8 +86,8 @@ namespace CG
             p_SetSc("板坯号", "E", "", "L", "", "", "", iscseq, iheadrow); //0
             p_SetSc("批号", "E", "", "L", "", "", "", iscseq, iheadrow); //1
             p_SetSc("钢种", "E", "", "L", "", "", "", iscseq, iheadrow); //2
-            p_SetSc("试样号", "E", "", "L", "", "", "", iscseq, iheadrow); //3
-            p_SetSc("取样状态", "E", "", "L", "", "", "", iscseq, iheadrow, "M"); //4
+            p_SetSc("取样状态", "E", "", "L", "", "", "", iscseq, iheadrow, "M"); //3
+            p_SetSc("整批号是否剪切结束", "E", "1", "L", "", "", "", iscseq, iheadrow); //4
             p_SetSc("厚度", "N", "6", "L", "", "", "", iscseq, iheadrow); //5
             p_SetSc("宽度", "N", "6", "L", "", "", "", iscseq, iheadrow); //6
             p_SetSc("长度", "N", "6", "L", "", "", "", iscseq, iheadrow); //7
@@ -93,11 +98,12 @@ namespace CG
             p_SetSc("宽度", "N", "6", "L", "", "", "", iscseq, iheadrow); //12
             p_SetSc("产品代码", "E", "", "L", "", "", "", iscseq, iheadrow, "M"); //13
             p_SetSc("剪切时间", "DT", "", "L", "", "", "", iscseq, iheadrow); //14
+            p_SetSc("是否紧急订单", "E", "1", "L", "", "", "", iscseq, iheadrow); //15
 
 
             iheadrow = 0;
-            p_spanSpread("板坯尺寸", 5, 7, iscseq, iheadrow, 1);
-            p_spanSpread("产品尺寸", 11, 12, iscseq, iheadrow, 1);
+            p_spanSpread("板坯尺寸", 6, 8, iscseq, iheadrow, 1);
+            p_spanSpread("产品尺寸", 12, 13, iscseq, iheadrow, 1);
 
 
             p_ScIni(ss2, Sc2, 0, false, false);
@@ -108,43 +114,37 @@ namespace CG
             p_SetSc("钢板", "E", "18", "PIL", "", "", "", iscseq, iheadrow); //1
             p_SetSc("产品代码", "E", "18", "IL", "", "", "", iscseq, iheadrow, "M"); //2
             p_SetSc("批号", "E", "", "L", "", "", "", iscseq, iheadrow, "M"); //3
-            p_SetSc("喷印号", "E", "", "L", "", "", "", iscseq, iheadrow, "M"); //4
-            p_SetSc("分段号", "E", "", "L", "", "", "", iscseq, iheadrow, "M"); //5
-            p_SetSc("进程代码", "E", "18", "L", "", "", "", iscseq, iheadrow, "M"); //6
-            p_SetSc("厚度", "N", "6,1", "L", "", "", "", iscseq, iheadrow); //7
-            p_SetSc("宽度", "N", "6,1", "L", "", "", "", iscseq, iheadrow); //8
-            p_SetSc("长度", "N", "6,1", "L", "", "", "", iscseq, iheadrow); //9
-            p_SetSc("重量", "N", "8,3", "L", "", "", "", iscseq, iheadrow); //10
-            p_SetSc("订单标记", "E", "18", "L", "", "", "", iscseq, iheadrow); //11
-            p_SetSc("订单号", "E", "18", "L", "", "", "", iscseq, iheadrow); //12
-            p_SetSc("订单系列号", "E", "18", "L", "", "", "", iscseq, iheadrow, "M"); //13
-            p_SetSc("指示标记", "E", "18", "L", "", "", "", iscseq, iheadrow, "M"); //14
-            p_SetSc("指示长度", "N", "6", "L", "", "", "", iscseq, iheadrow); //15
-            p_SetSc("实绩标记", "E", "1", "I", "", "", "", iscseq, iheadrow, "M"); //16  I
-            p_SetSc("位置", "ETCN", "1", "I", "CD", "", "SELECT CD 代码, CD_SHORT_NAME 代码简称, CD_NAME 代码名称, CD_SHORT_ENG 代码英文简称, CD_FULL_ENG 代码英文名称 FROM NISCO.ZP_CD  WHERE CD_MANA_NO = 'Q0021'  ORDER BY CD ASC ", iscseq, iheadrow, "M"); //17            I
-            p_SetSc("长度", "N", "3", "I", "", "", "", iscseq, iheadrow); //18              I
-            p_SetSc("试样号", "E", "14", "I", "", "", "", iscseq, iheadrow); //19       I
-            p_SetSc("适用标准", "E", "18", "L", "", "", "", iscseq, iheadrow); //20
-            p_SetSc("改判前标准", "E", "18", "L", "", "", "", iscseq, iheadrow); //21
-            p_SetSc("上表缺陷", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //22
-            p_SetSc("下表缺陷", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //23
-            p_SetSc("改判缺陷", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //24
-            p_SetSc("探伤缺陷", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //25
-            p_SetSc("客户名称", "E", "200", "L", "", "", "", iscseq, iheadrow); //26
-            p_SetSc("生产日期", "E", "30", "L", "", "", "", iscseq, iheadrow, "M"); //27
-            p_SetSc("upd_emp_cd", "E", "18", "IL", "", "", "", iscseq, iheadrow); //28
-            p_SetSc("实绩标记", "E", "18", "L", "", "", "", iscseq, iheadrow); //29
-            p_SetSc("位置", "N", "18", "L", "", "", "", iscseq, iheadrow); //30
-            p_SetSc("长度", "N", "18", "L", "", "", "", iscseq, iheadrow); //31
-            p_SetSc("试样号", "E", "18", "L", "", "", "", iscseq, iheadrow); //32
-            p_SetSc("改判时试样号", "E", "18", "IL", "", "", "", iscseq, iheadrow); //33
-            p_SetSc("改判时适用标准", "E", "18", "IL", "", "", "", iscseq, iheadrow); //34
-            p_SetSc("订单特殊要求", "E", "100", "L", "", "", "", iscseq, iheadrow); //35
+            p_SetSc("分段号", "E", "", "L", "", "", "", iscseq, iheadrow, "M"); //4
+            p_SetSc("进程代码", "E", "18", "L", "", "", "", iscseq, iheadrow, "M"); //5
+            p_SetSc("厚度", "N", "6,1", "L", "", "", "", iscseq, iheadrow); //6
+            p_SetSc("宽度", "N", "6,1", "L", "", "", "", iscseq, iheadrow); //7
+            p_SetSc("长度", "N", "6,1", "L", "", "", "", iscseq, iheadrow); //8
+            p_SetSc("重量", "N", "8,3", "L", "", "", "", iscseq, iheadrow); //9
+            p_SetSc("订单标记", "E", "18", "L", "", "", "", iscseq, iheadrow); //10
+            p_SetSc("订单号", "E", "18", "L", "", "", "", iscseq, iheadrow); //11
+            p_SetSc("订单系列号", "E", "18", "L", "", "", "", iscseq, iheadrow, "M"); //12
+            p_SetSc("指示标记", "E", "18", "L", "", "", "", iscseq, iheadrow, "M"); //13
+            p_SetSc("指示长度", "N", "6", "L", "", "", "", iscseq, iheadrow); //14
+            p_SetSc("实绩标记", "E", "1", "I", "", "", "", iscseq, iheadrow, "M"); //15  I
+            p_SetSc("位置", "ETCN", "1", "I", "CD", "", "SELECT CD 代码, CD_SHORT_NAME 代码简称, CD_NAME 代码名称, CD_SHORT_ENG 代码英文简称, CD_FULL_ENG 代码英文名称 FROM NISCO.ZP_CD  WHERE CD_MANA_NO = 'Q0021'  ORDER BY CD ASC ", iscseq, iheadrow, "M"); //16            I
+            p_SetSc("长度", "N", "3", "I", "", "", "", iscseq, iheadrow); //17              I
+            p_SetSc("试样号", "E", "14", "I", "", "", "", iscseq, iheadrow); //18       I
+            p_SetSc("适用标准", "E", "18", "L", "", "", "", iscseq, iheadrow); //19
+            p_SetSc("改判前标准", "E", "18", "L", "", "", "", iscseq, iheadrow); //20
+            p_SetSc("客户名称", "E", "200", "L", "", "", "", iscseq, iheadrow); //21
+            p_SetSc("生产日期", "E", "30", "L", "", "", "", iscseq, iheadrow, "M"); //22
+            p_SetSc("upd_emp_cd", "E", "18", "IL", "", "", "", iscseq, iheadrow); //23
+            p_SetSc("实绩标记", "E", "18", "L", "", "", "", iscseq, iheadrow); //24
+            p_SetSc("位置", "N", "18", "L", "", "", "", iscseq, iheadrow); //25
+            p_SetSc("长度", "N", "18", "L", "", "", "", iscseq, iheadrow); //26
+            p_SetSc("试样号", "E", "18", "L", "", "", "", iscseq, iheadrow); //27
+            p_SetSc("改判时试样号", "E", "18", "IL", "", "", "", iscseq, iheadrow); //28
+            p_SetSc("改判时适用标准", "E", "18", "IL", "", "", "", iscseq, iheadrow); //29
+            p_SetSc("订单特殊要求", "E", "100", "L", "", "", "", iscseq, iheadrow); //30
 
             iheadrow = 0;
-            p_spanSpread("试样信息", 14, 19, iscseq, iheadrow, 1);
-            p_spanSpread("缺陷原因", 22, 25, iscseq, iheadrow, 1);
-            p_spanSpread("OLD SAMPLE INFORMATION", 29, 32, iscseq, iheadrow, 1);
+            p_spanSpread("试样信息", 13, 18, iscseq, iheadrow, 1);
+            p_spanSpread("OLD SAMPLE INFORMATION", 24, 27, iscseq, iheadrow, 1);
 
             SpreadCommon.Gp_Sp_ColHidden(ss2, SS2_USER_ID, true);
             SpreadCommon.Gp_Sp_ColHidden(ss2, SS2_BEF_SMP_FLAG, true);
@@ -170,7 +170,6 @@ namespace CG
             strQuery = strQuery + "         ,MATA_NO                                                    ";
             strQuery = strQuery + "         ,PROD_CD                                                    ";
             strQuery = strQuery + "         ,LOT_NO                                                     ";
-            strQuery = strQuery + "         ,MARK_DATA10                                                ";
             strQuery = strQuery + "         ,MOCUT_NO                                                   ";
             strQuery = strQuery + "         ,PROC_CD                                                    ";
             strQuery = strQuery + "         ,THK                                                        ";
@@ -188,11 +187,6 @@ namespace CG
             strQuery = strQuery + "         ,SMP_NO                                                     ";
             strQuery = strQuery + "         ,STD_SPEC                                                   ";
             strQuery = strQuery + "         ,BEF_STDSPEC                                                ";
-            //strQuery = strQuery & "         ,DEFECT                                                     " & vbCrLf
-            strQuery = strQuery + "         ,INSP_T_FLAW                                                ";
-            strQuery = strQuery + "         ,INSP_B_FLAW                                                ";
-            strQuery = strQuery + "         ,INSP_B_DEP_FLAW2                                           ";
-            strQuery = strQuery + "         ,INSP_T_DEP_FLAW2                                           ";
             strQuery = strQuery + "         ,CUST_NAME                                                  ";
             strQuery = strQuery + "         ,PROD_DATE                                                  ";
             strQuery = strQuery + "         ,UPD_EMP_CD                                                 ";
@@ -208,9 +202,10 @@ namespace CG
             strQuery = strQuery + "  SELECT 0                                          CHK              ";
             strQuery = strQuery + "         ,A.PLATE_NO                                MATA_NO          ";
             strQuery = strQuery + "         ,A.PROD_CD                                 PROD_CD          ";
-            strQuery = strQuery + "         ,A.OUT_SHEET_NO                            LOT_NO           ";
-            strQuery = strQuery + "         ,(SELECT N.MARK_DATA10 FROM EP_PLATE_INS3 N WHERE N.SLAB_NO = A.SLAB_NO AND ROWNUM =1)  MARK_DATA10          ";
-            strQuery = strQuery + "         ,A.TRNS_CMPY_CD                            MOCUT_NO         ";
+
+            strQuery = strQuery + "         ,A.OUT_SHEET_NO LOT_NO                                       ";
+            strQuery = strQuery + "         ,(SELECT MAX(TRNS_CMPY_CD) FROM NISCO.GP_PLATE WHERE PLATE_NO = SUBSTR(A.PLATE_NO,1,12))    MOCUT_NO        ";
+
             strQuery = strQuery + "         ,A.PROC_CD                                 PROC_CD          ";
             strQuery = strQuery + "         ,A.THK                                     THK              ";
             strQuery = strQuery + "         ,A.WID                                     WID              ";
@@ -227,11 +222,6 @@ namespace CG
             strQuery = strQuery + "         ,A.SMP_NO                                  SMP_NO           ";
             strQuery = strQuery + "         ,A.APLY_STDSPEC                            STD_SPEC         ";
             strQuery = strQuery + "         ,A.BEF_APLY_STDSPEC                        BEF_STDSPEC      ";
-            //strQuery = strQuery & "         ,GF_INSPPLATE_DEFECT_M(A.PLATE_NO)         DEFECT           " & vbCrLf
-            strQuery = strQuery + "         ,GF_COMNNAMEFIND('G0002',I.INSP_T_FLAW)    INSP_T_FLAW      ";
-            strQuery = strQuery + "         ,GF_COMNNAMEFIND('G0002',I.INSP_T_FLAW)    INSP_B_FLAW      ";
-            strQuery = strQuery + "         ,GF_COMNNAMEFIND('G0002',I.INSP_T_FLAW)    INSP_B_DEP_FLAW2 ";
-            strQuery = strQuery + "         ,GF_COMNNAMEFIND('G0002',I.INSP_T_FLAW)    INSP_T_DEP_FLAW2 ";
             strQuery = strQuery + "         ,GF_CUSTNAMEFIND(A.CUST_CD)                CUST_NAME        ";
             strQuery = strQuery + "         ,A.PROD_DATE                               PROD_DATE        ";
             strQuery = strQuery + "         ,A.UPD_EMP_CD                              UPD_EMP_CD       ";
@@ -240,13 +230,12 @@ namespace CG
             strQuery = strQuery + "         ,A.ACT_SMP_LEN                             BEF_ACT_SMP_LEN  ";
             strQuery = strQuery + "         ,A.SMP_NO                                  BEF_SMP_NO       ";
             strQuery = strQuery + "         ,B.SPECIAL_OPR_REQ                         SPECIAL_OPR_REQ  ";
-            strQuery = strQuery + "   FROM  GP_PLATE A,GP_INSPPLATE  I,BP_ORDER_ITEM  B                 ";
+            strQuery = strQuery + "   FROM  GP_PLATE A,BP_ORDER_ITEM  B                                 ";
             strQuery = strQuery + "   WHERE (A.REC_STS          =     '2')     AND                      ";
-            strQuery = strQuery + "         (A.PRC_LINE        <=     '2')     AND                      ";
+            strQuery = strQuery + "         (A.PRC_LINE         IN ( '3' ,'4','5'))     AND             ";
             strQuery = strQuery + "         (A.PROD_CD          =     'PP')    AND                      ";
             strQuery = strQuery + "         (A.PLT              =     'C3')    AND                      ";
             strQuery = strQuery + "         (NVL(A.HTM_METH1,'H')   = 'H' )    AND                      ";
-            strQuery = strQuery + "         A.PLATE_NO          =     I.MAT_NO(+)    AND                ";
             strQuery = strQuery + "         A.ORD_NO                =   B.ORD_NO    AND                 ";
             strQuery = strQuery + "         A.ORD_ITEM              =   B.ORD_ITEM  AND                 ";
 
@@ -305,17 +294,18 @@ namespace CG
 
         }
 
-        private void CGD2041C_Load(object sender, EventArgs e)
+        private void CGD2042C_Load(object sender, EventArgs e)
         {
 
-            base.sSvrPgmPkgName = "CGD2041NC";
+            base.sSvrPgmPkgName = "CGD2042NC";
 
             Form_Define();
 
             SDT_PROD_DATE.RawDate = Gf_DTSet("D", "");
 
-            opt_Product2.Checked = true;
-            opt_Product2.ForeColor = Color.Red;
+            opt_Product1.Checked = true;
+            opt_Product1.ForeColor = Color.Red;
+            opt_LineFlag2.Checked = true;
 
             bCheck = false;
 
@@ -326,11 +316,14 @@ namespace CG
         {
 
             string sProd_cd;
+            string txtPrcline;
             sProd_cd = TXT_PROD_CD.Text;
+            txtPrcline = TXT_PRCLINE.Text;
             TextClear();
             bCheck = false;
             base.Form_Cls();
             TXT_PROD_CD.Text = sProd_cd;
+            TXT_PRCLINE.Text = txtPrcline;
             return true;
 
         }
@@ -351,6 +344,10 @@ namespace CG
         public override void Form_Ref()
         {
 
+            string sUrgnt_Fl;
+            int iRow;
+            int iCol;
+
             if (SpreadCommon.Gf_Sp_ProceExist(ss2, true))
                 return;
 
@@ -365,6 +362,22 @@ namespace CG
                 TextClear();
                 bCheck = false;
             }
+
+            //紧急订单绿色显示
+            for ( iRow = 1; iRow <= ss1.ActiveSheet.RowCount; iRow++)
+            {
+                sUrgnt_Fl = ss1.ActiveSheet.Cells[iRow-1, SS1_URGNT_FL].Text;
+
+                if (sUrgnt_Fl == "Y")
+                {
+                    SpreadCommon.Gp_Sp_BlockColor(ss1, SS1_SLAB_NO, SS1_SLAB_NO, iRow - 1, iRow-1, Color.Green,Color.White);
+                    SpreadCommon.Gp_Sp_BlockColor(ss1, SS1_ORD_NO, SS1_ORD_NO, iRow - 1, iRow - 1, Color.Green, Color.White);
+                    SpreadCommon.Gp_Sp_BlockColor(ss1, SS1_ORD_ITEM, SS1_ORD_ITEM, iRow - 1, iRow - 1, Color.Green, Color.White);
+                    SpreadCommon.Gp_Sp_BlockColor(ss1, SS1_URGNT_FL, SS1_URGNT_FL, iRow - 1, iRow - 1, Color.Green, Color.White);
+                }
+            }
+
+
             ss2.ActiveSheet.RowCount = 0;
         }
 
@@ -437,6 +450,42 @@ namespace CG
         private void SDT_PROD_DATE_Clk()
         {
             SDT_PROD_DATE.RawDate = Gf_DTSet("", "D");
+        }
+
+        private void opt_LineFlag_Clk()
+        {
+            if (opt_LineFlag2.Checked)
+            {
+                TXT_PRCLINE.Text = "3";
+                opt_LineFlag2.ForeColor = Color.Red;
+                //red
+                opt_LineFlag0.ForeColor = Color.Black;
+                //black
+                opt_LineFlag3.ForeColor = Color.Black;
+                //black
+            }
+            else if (opt_LineFlag3.Checked)
+            {
+                TXT_PRCLINE.Text = "4";
+                opt_LineFlag2.ForeColor = Color.Black;
+                //black
+                opt_LineFlag0.ForeColor = Color.Black;
+                //black
+                opt_LineFlag3.ForeColor = Color.Red;
+                //red
+            }
+            else if (opt_LineFlag0.Checked)
+            {
+                TXT_PRCLINE.Text = "5";
+                opt_LineFlag2.ForeColor = Color.Black;
+                //black
+                opt_LineFlag3.ForeColor = Color.Black;
+                //black
+                opt_LineFlag0.ForeColor = Color.Red;
+                //red
+            }
+            ss1.ActiveSheet.RowCount = 0;
+            ss2.ActiveSheet.RowCount = 0;
         }
 
         private void ss1_DblClk(int col, int row)
@@ -529,7 +578,7 @@ namespace CG
 
                     if (txt_SMP_NO.Text == "")
                     {
-                        if (sSmpFl != "" & sSmpNo.Substring(sSmpNo.Length - 2, 2) != sSmp_No)
+                        if (sSmpFl != "" && sSmpNo.Substring(sSmpNo.Length - 2, 2) != sSmp_No)
                         {
                             txt_SMP_NO.Text = sSmpNo;
                         }
@@ -583,7 +632,7 @@ namespace CG
             if (ss1.ActiveSheet.RowCount <= 0)
                 return;
 
-            sSpec = ss1.ActiveSheet.Cells[row, SS1_STLGRD].Text;
+            sSpec = ss1.ActiveSheet.Cells[row, 1].Text;
             sCharNo = ss1.ActiveSheet.Cells[row, 0].Text.Substring(0, 8);
 
             iSelCnt = 0;
@@ -596,7 +645,7 @@ namespace CG
                     //                Call Gp_MsgBoxDisplay("不一样炉号")
                     //                Exit Sub
                     //            End If
-                    if (sSpec != ss1.ActiveSheet.Cells[iDR - 1, SS1_STLGRD].Text)
+                    if (sSpec != ss1.ActiveSheet.Cells[iDR - 1, 1].Text)
                     {
                         GeneralCommon.Gp_MsgBoxDisplay("钢种不一致，请确认", "I", "提示");
                         return;
@@ -1337,6 +1386,16 @@ namespace CG
         {
             if (e.Column != SS2_SMP_FLAG && e.Column != SS2_SMP_LOC && e.Column != SS2_SMP_LEN && e.Column != SS2_SMP_NO) return;
             ss2_EditMode(e.Column, e.Row);
+        }
+
+        private void opt_LineFlag2_CheckedChanged(object sender, EventArgs e)
+        {
+            opt_LineFlag_Clk();
+        }
+
+        private void opt_LineFlag3_CheckedChanged(object sender, EventArgs e)
+        {
+            opt_LineFlag_Clk();
         }
 
 
