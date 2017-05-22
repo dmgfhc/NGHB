@@ -10,8 +10,28 @@ using Microsoft.VisualBasic;
 using Microsoft.Office.Interop.Excel;
 using System.Reflection;
 using System.Collections;
+//-------------------------------------------------------------------------------
+//-- PROGRAM HEADER  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//-------------------------------------------------------------------------------
+//-- System Name       中板轧钢作业
+//-- Sub_System Name   轧钢作业
+//-- Program Name      钢板取样委托管理画面
+//-- Program ID        AGC2430C
+//-- Document No       Q-00-0010(Specification)
+//-- Designer          韩超
+//-- Coder             韩超
+//-- Date              2017.05.22
+//-- Description
+//-------------------------------------------------------------------------------
+//-- UPDATE HISTORY  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//-------------------------------------------------------------------------------
+//-- VER           DATE                 EDITOR            DESCRIPTION
+//   1.0         2017.05.22             韩超            钢板取样委托管理
+//-------------------------------------------------------------------------------
+//-- DECLARATION     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//-------------------------------------------------------------------------------
 
-namespace BG
+namespace CG
 {
     public partial class AGC2430C : CommonClass.FORMBASE
     {
@@ -35,8 +55,8 @@ namespace BG
             imcseq = 1;
             p_SetMc("开始日期", dtp_prod_fr, "PN", "", "", "", "", imcseq);//0
             p_SetMc("结束日期", dtp_prod_to, "PN", "", "", "", "", imcseq);//1
-            p_SetMc("工厂", txt_plt, "PN", "", "", "", "", imcseq);//2
-            p_SetMc("产线", txt_line, "P", "", "", "", "", imcseq);//3
+            p_SetMc("工厂", txt_plt, "PN", "8", "", "", "", imcseq);//2
+            p_SetMc("产线", txt_line, "P", "8", "", "", "", imcseq);//3
             p_SetMc("委托单号", txt_smp_sent_no, "P", "", "", "", "", imcseq);//4
             p_SetMc("已处理对象", txt_check, "P", "", "", "", "", imcseq);//5
             p_SetMc("热处理", txt_DH_FL, "P", "", "", "", "", imcseq);//6
@@ -45,67 +65,62 @@ namespace BG
             p_SetMc("热处理方式", txt_HTM_METH, "P", "", "", "", "", imcseq);//9
             p_SetMc("出口", Txt_OutOrder, "P", "", "", "", "", imcseq);//10
 
-            p_ScIni(ss1, Sc1, 0, false, true);
+            p_ScIni(ss1, Sc1, 26, false, true);
             iheadrow = 1;
             iscseq = 1;
 
             p_SetSc("选择", "C", "", "I", "", "", "", iscseq, iheadrow);//0
-            p_SetSc("委托单号", "E", "", "IL", "", "", "", iscseq, iheadrow, "M");//1
-            p_SetSc("试样号", "E", "", "PIL", "", "", "", iscseq, iheadrow, "M");//2
-            p_SetSc("订单号{代表样}", "E", "", "L", "", "", "", iscseq, iheadrow, "M");//3
-            p_SetSc("钢种", "E", "", "IL", "", "", "", iscseq, iheadrow, "L");//4
-            p_SetSc("订单备注", "E", "", "L", "", "", "", iscseq, iheadrow, "L");//5
-            p_SetSc("合同交货结束时间", "E", "", "L", "", "", "", iscseq, iheadrow, "L");//6
-            p_SetSc("规格", "N", "9,2", "IL", "", "", "", iscseq, iheadrow, "R");//7
-            p_SetSc("委托顺序", "E", "", "I", "", "", "", iscseq, iheadrow, "L");//8
-            p_SetSc("试样数量", "N", "9", "I", "", "", "", iscseq, iheadrow, "M");//9
-            p_SetSc("拉伸", "E", "", "IL", "", "", "", iscseq, iheadrow, "M");//10
-            p_SetSc("高温拉伸", "E", "", "IL", "", "", "", iscseq, iheadrow, "M");//11
-            p_SetSc("冷弯", "E", "", "IL", "", "", "", iscseq, iheadrow, "M");//12
-            p_SetSc("冲击温度", "E", "", "IL", "", "", "", iscseq, iheadrow, "M");//13
-            p_SetSc("落锤温度", "E", "", "IL", "", "", "", iscseq, iheadrow, "M");//14
-            p_SetSc("时效温度", "E", "", "IL", "", "", "", iscseq, iheadrow, "M");//15
-            p_SetSc("夹杂", "E", "", "I", "", "", "", iscseq, iheadrow, "M");//16
-            p_SetSc("金相", "C", "", "I", "", "", "", iscseq, iheadrow, "M");//17
-            p_SetSc("硬度", "E", "", "IL", "", "", "", iscseq, iheadrow, "M");//18
-            p_SetSc("成分", "C", "", "I", "", "", "", iscseq, iheadrow, "M");//19
-            p_SetSc("ON", "C", "", "I", "", "", "", iscseq, iheadrow, "L");//20
-            p_SetSc("H", "C", "", "I", "", "", "", iscseq, iheadrow, "L");//21
-            p_SetSc("做普", "C", "", "IL", "", "", "", iscseq, iheadrow, "L");//22
-            p_SetSc("Z向", "E", "", "I", "", "", "", iscseq, iheadrow, "M");//23
-            p_SetSc("HIC", "C", "", "IL", "", "", "", iscseq, iheadrow, "M");//24
-            p_SetSc("断口", "C", "", "IL", "", "", "", iscseq, iheadrow, "M");//25
-            p_SetSc("", "E", "", "L", "", "", "", iscseq, iheadrow, "M");//26
-            p_SetSc("备注", "E", "", "IL", "", "", "", iscseq, iheadrow, "L");//27
-            p_SetSc("要求完成时间", "E", "", "I", "", "", "", iscseq, iheadrow, "M");//28
-            p_SetSc("录入人id", "E", "", "IL", "", "", "", iscseq, iheadrow, "M");//29
-            p_SetSc("录入人", "E", "", "L", "", "", "", iscseq, iheadrow, "M");//30
-            p_SetSc("录入日期", "E", "", "L", "", "", "", iscseq, iheadrow, "M");//31
-            p_SetSc("录入时间", "E", "", "L", "", "", "", iscseq, iheadrow, "M");//32
-            p_SetSc("AH", "E", "", "IL", "", "", "", iscseq, iheadrow, "M");//33
-            p_SetSc("AL", "E", "", "IL", "", "", "", iscseq, iheadrow, "M");//34
-            p_SetSc("紧急订单", "E", "", "L", "", "", "", iscseq, iheadrow, "M");//35
+            p_SetSc("委托单号", "E", "", "IL", "", "", "", iscseq, iheadrow);//1
+            p_SetSc("试样号", "E", "", "PIL", "", "", "", iscseq, iheadrow, "L");//2
+            p_SetSc("订单号(代表样)", "E", "", "L", "", "", "", iscseq, iheadrow);//3
+            p_SetSc("钢种", "E", "", "IL", "", "", "", iscseq, iheadrow);//4
+            p_SetSc("订单备注", "E", "", "L", "", "", "", iscseq, iheadrow);//5
+            p_SetSc("合同交货结束时间", "E", "", "L", "", "", "", iscseq, iheadrow, "M");//6
+            p_SetSc("规格", "E", "", "IL", "", "", "", iscseq, iheadrow);//7
+            p_SetSc("试样数量（件）", "N", "6", "I", "", "", "", iscseq, iheadrow);//8
+
+            p_SetSc("拉伸", "E", "", "IL", "", "", "", iscseq, iheadrow, "M");//9
+            p_SetSc("高温拉伸", "E", "", "IL", "", "", "", iscseq, iheadrow, "M");//10
+            p_SetSc("冷弯", "E", "", "IL", "", "", "", iscseq, iheadrow, "M");//11
+            p_SetSc("冲击温度", "E", "", "IL", "", "", "", iscseq, iheadrow, "M");//12
+            p_SetSc("落锤温度", "E", "", "IL", "", "", "", iscseq, iheadrow, "M");//13
+            p_SetSc("时效温度", "E", "", "IL", "", "", "", iscseq, iheadrow, "M");//14
+            p_SetSc("夹杂", "E", "", "I", "", "", "", iscseq, iheadrow, "M");//15
+            p_SetSc("金相", "C", "", "I", "", "", "", iscseq, iheadrow);//16
+            p_SetSc("硬度", "E", "", "IL", "", "", "", iscseq, iheadrow, "M");//17
+            p_SetSc("成分", "C", "", "IL", "", "", "", iscseq, iheadrow);//18
+            p_SetSc("ON", "C", "", "IL", "", "", "", iscseq, iheadrow);//19
+            p_SetSc("H", "C", "", "I", "", "", "", iscseq, iheadrow);//20
+            p_SetSc("做普", "C", "", "IL", "", "", "", iscseq, iheadrow);//21
+            p_SetSc("Z向", "E", "", "I", "", "", "", iscseq, iheadrow, "M");//22
+            p_SetSc("HIC ", "C", "", "IL", "", "", "", iscseq, iheadrow);//23
+            p_SetSc("断口 ", "C", "", "IL", "", "", "", iscseq, iheadrow);//24
+            p_SetSc(" ", "E", "", "L", "", "", "", iscseq, iheadrow, "M");//25////////////////
+            p_SetSc("备注", "E", "", "IL", "", "", "", iscseq, iheadrow);//26
+            p_SetSc("要求完成时间", "E", "", "I", "", "", "", iscseq, iheadrow);//27
+            p_SetSc("委托人id", "E", "", "IL", "", "", "", iscseq, iheadrow);//28  A
+            p_SetSc("委托人", "E", "", "L", "", "", "", iscseq, iheadrow);//29
+            p_SetSc("录入日期", "E", "", "LA", "", "", "", iscseq, iheadrow);//30   A
+            p_SetSc("录入时间", "E", "", "LA", "", "", "", iscseq, iheadrow);//31   A
+            p_SetSc("工厂", "E", "", "ILA", "", "", "", iscseq, iheadrow);//32/////////////////////////    A
+            p_SetSc("C", "E", "", "ILA", "", "", "", iscseq, iheadrow);//33//////////////////////////   A
+            p_SetSc("紧急订单", "E", "", "L", "", "", "", iscseq, iheadrow, "M");//34
+            p_SetSc("订单特殊要求", "E", "300", "L", "", "", "", iscseq, iheadrow, "L");//35
             p_SetSc("是否有QAB船板", "E", "", "L", "", "", "", iscseq, iheadrow, "M");//36
             p_SetSc("是否做PWHT", "E", "", "L", "", "", "", iscseq, iheadrow, "M");//37
+           
             iheadrow = 0;
-            p_spanSpread("委托项目", 10, 25, iscseq, iheadrow, 1);
-
-            SpreadCommon.Gp_Sp_ColHidden(ss1, 34, true);
-            SpreadCommon.Gp_Sp_ColHidden(ss1, 31, true);
-            SpreadCommon.Gp_Sp_ColHidden(ss1, 32, true);
-            SpreadCommon.Gp_Sp_ColHidden(ss1, 33, true);
-            SpreadCommon.Gp_Sp_ColHidden(ss1, 8, true);
-            //p_spanSpread("", 32, 32, iscseq, iheadrow, 1);
-            //p_spanSpread("", 33, 33, iscseq, iheadrow, 1);
+            p_spanSpread("委托项目", 9, 24, iscseq, iheadrow, 1);
+           
         }
 
-
+        
         private void AGC2430C_Load(object sender, EventArgs e)
         {
             base.sSvrPgmPkgName = "AGC2430NC";
             Form_Define();
         //    base.sAuthority = "1111";
-            txt_plt.Text = "C2";
+            txt_plt.Text = "C3";
             this.dtp_prod_fr.RawDate = curDate;//取当前时间
             this.dtp_prod_to.RawDate = curDate;  
         
@@ -114,8 +129,6 @@ namespace BG
             subButtonHide();//设置画面形式。
             txt_smp_sent_no.Text = "";
             TXT_CUT_PLT.Text = "";
-            PLT_NAME.Text = "宽厚板厂";
-
         }
 
         public override bool Form_Cls()
@@ -126,7 +139,7 @@ namespace BG
             subButtonHide();
             txt_smp_sent_no.Text = "";
             TXT_CUT_PLT.Text = "";
-            txt_plt.Text = "C2";
+            txt_plt.Text = "C3";
             dtp_prod_fr.RawDate = curDate;
             dtp_prod_to.RawDate = curDate;
             return true;
@@ -136,8 +149,15 @@ namespace BG
         {
             p_Ref(1,1,true,true);
             if (ss1_Sheet1.RowCount <= 0) return;
+            for (int i = 0; i < ss1_Sheet1.RowCount;i++)//紧急订单，设置当前行的颜色。
+            {
+                if(ss1_Sheet1.Cells[i,34].Text == "Y")
+                {
+                    ss1.ActiveSheet.Rows.Get(i).BackColor = Color.GreenYellow;
+                }
+            }
             subButtonHide();
-            TXT_CUT_PLT.Text = ss1_Sheet1.Cells[0, 50].Text;
+            TXT_CUT_PLT.Text = ss1_Sheet1.Cells[0, 32].Text;
             reSetToolbarImages();//重置Toolbar的画面。
         }
 
@@ -155,7 +175,7 @@ namespace BG
                 label2.Visible = false;
                 dtp_end_date.Visible = false;
                 label8.Visible = false;
-                SpreadCommon.Gp_Sp_ColHidden(ss1,2,false);
+                SpreadCommon.Gp_Sp_ColHidden(ss1,1,false);
                 for (int i = 0; i < ss1_Sheet1.RowCount;i++)
                 {
                     ss1_Sheet1.Rows.Get(i).Locked = true;
@@ -176,8 +196,27 @@ namespace BG
                 label2.Visible = true;
                 dtp_end_date.Visible = true;
                 label8.Visible = true;
+                SpreadCommon.Gp_Sp_ColHidden(ss1, 1, true);
             }
         }
+
+        //protected override void form_Activated(object sender, EventArgs e)
+        //{
+        //    base.form_Activated(sender, e);
+
+        //    if (txt_check.Checked)
+        //    {
+        //        GeneralCommon.ImageList0.Images[4] = GeneralCommon.ImageList2.Images[4];
+        //        GeneralCommon.MDIToolBar.Buttons[6].Tag = "F";
+        //    }
+        //    else
+        //    {
+        //        GeneralCommon.ImageList0.Images[4] = GeneralCommon.ImageList2.Images[4];
+        //        GeneralCommon.MDIToolBar.Buttons[6].Tag = "F";
+        //        GeneralCommon.ImageList0.Images[5] = GeneralCommon.ImageList2.Images[5];
+        //        GeneralCommon.MDIToolBar.Buttons[7].Tag = "F";
+        //    }
+        //}
 
         //重置Toolbar的画面。
         private void reSetToolbarImages()
@@ -219,8 +258,8 @@ namespace BG
             if (e.RowHeader) return;
             if (txt_check.Checked)
             {
-                txt_smp_sent_no.Text = ss1_Sheet1.Cells[e.Row, 2].Text;
-                TXT_CUT_PLT.Text = ss1_Sheet1.Cells[e.Row, 50].Text;
+                txt_smp_sent_no.Text = ss1_Sheet1.Cells[e.Row, 1].Text;
+                TXT_CUT_PLT.Text = ss1_Sheet1.Cells[e.Row, 32].Text;
             }           
         }
 
@@ -237,187 +276,29 @@ namespace BG
                 GeneralCommon.Gp_MsgBoxDisplay("请输入委托单号，再打印！", "W", "提示");
                 return;
             }
-            string modelName = "AGC2432C.xlsx";
-            GeneralCommon.Gp_CopyModel(modelName);
-            string fileName = AppDomain.CurrentDomain.BaseDirectory.ToString() + "report" + "\\" + modelName;
-            Microsoft.Office.Interop.Excel.Application appExcel = null;
-            appExcel = new Microsoft.Office.Interop.Excel.Application();
-            appExcel.DisplayAlerts = true;
-            appExcel.AlertBeforeOverwriting = true;
-            Microsoft.Office.Interop.Excel.Workbook workbook = appExcel.Workbooks.Open(fileName,
-                Type.Missing, Type.Missing, Type.Missing, Type.Missing,
-                Type.Missing, Type.Missing, Type.Missing, Type.Missing,
-                Type.Missing, Type.Missing, Type.Missing, Type.Missing,
-                Type.Missing, Type.Missing);
-
-            appExcel.Cells[2, 1] = "委托单号：" + txt_smp_sent_no.Text + "                     工厂：" + PLT_NAME.Text;
-            //appExcel.Cells[2, 4] = "工厂：" + PLT_NAME.Text;
-
-            appExcel.Cells[4, 1]  = ss1.ActiveSheet.Cells[0, 1].Text;  //试样号
-            appExcel.Cells[4, 2]  = ss1.ActiveSheet.Cells[0, 3].Text;  //钢种
-            //appExcel.Cells[4, 3]  = ss1.ActiveSheet.Cells[0, 4].Text;  //规格
-            appExcel.Cells[4, 3] = ss1.ActiveSheet.Cells[0, 4].Text + ",数量：" + ss1.ActiveSheet.Cells[0, 5].Text;
-            appExcel.Cells[4, 4]  = ss1.ActiveSheet.Cells[0, 6].Text; //位置
-            appExcel.Cells[4, 5]  = ss1.ActiveSheet.Cells[0, 54].Text;  //拉伸a
-            appExcel.Cells[4, 6]  = ss1.ActiveSheet.Cells[0, 7].Text; //位置
-            appExcel.Cells[4, 7]  = ss1.ActiveSheet.Cells[0, 55].Text;  //拉伸b
-            appExcel.Cells[4, 8]  = ss1.ActiveSheet.Cells[0, 8].Text; //位置
-            appExcel.Cells[4, 9]  = ss1.ActiveSheet.Cells[0, 56].Text;  //拉伸c
-            appExcel.Cells[4, 10] = ss1.ActiveSheet.Cells[0, 9].Text; //位置
-            appExcel.Cells[4, 11] = ss1.ActiveSheet.Cells[0, 57].Text;  //拉伸d
-            appExcel.Cells[4, 12] = ss1.ActiveSheet.Cells[0, 10].Text; //位置
-            appExcel.Cells[4, 13] = ss1.ActiveSheet.Cells[0, 58].Text; //拉伸e
-            appExcel.Cells[4, 14] = ss1.ActiveSheet.Cells[0, 11].Text; //位置
-            appExcel.Cells[4, 15] = ss1.ActiveSheet.Cells[0, 59].Text; //拉伸f
-            appExcel.Cells[4, 16] = ss1.ActiveSheet.Cells[0, 12].Text; //位置
-            appExcel.Cells[4, 17] = ss1.ActiveSheet.Cells[0, 60].Text; //高温拉伸g
-            appExcel.Cells[4, 18] = ss1.ActiveSheet.Cells[0, 13].Text; //位置
-            appExcel.Cells[4, 19] = ss1.ActiveSheet.Cells[0, 61].Text; //高温拉伸h
-            appExcel.Cells[4, 20] = ss1.ActiveSheet.Cells[0, 14].Text; //位置
-            appExcel.Cells[4, 21] = ss1.ActiveSheet.Cells[0, 62].Text; //高温拉伸i
-            appExcel.Cells[4, 22] = ss1.ActiveSheet.Cells[0, 15].Text; //位置
-            appExcel.Cells[4, 23] = ss1.ActiveSheet.Cells[0, 63].Text; //高温拉伸j
-            appExcel.Cells[4, 24] = ss1.ActiveSheet.Cells[0, 16].Text; //位置
-            appExcel.Cells[4, 25] = ss1.ActiveSheet.Cells[0, 64].Text; //高温拉伸k
-            appExcel.Cells[4, 26] = ss1.ActiveSheet.Cells[0, 17].Text; //位置
-            appExcel.Cells[4, 27] = ss1.ActiveSheet.Cells[0, 65].Text; //高温拉伸l
-
-            appExcel.Cells[6, 4]  = ss1.ActiveSheet.Cells[0, 19].Text; //冲击a
-            appExcel.Cells[6, 5]  = ss1.ActiveSheet.Cells[0, 67].Text; //位置
-            appExcel.Cells[6, 6]  = ss1.ActiveSheet.Cells[0, 20].Text; //位置
-            appExcel.Cells[6, 7]  = ss1.ActiveSheet.Cells[0, 68].Text; //冲击b
-            appExcel.Cells[6, 8]  = ss1.ActiveSheet.Cells[0, 21].Text; //位置
-            appExcel.Cells[6, 9]  = ss1.ActiveSheet.Cells[0, 69].Text; //冲击c
-            appExcel.Cells[6, 10] = ss1.ActiveSheet.Cells[0, 22].Text; //位置
-            appExcel.Cells[6, 11] = ss1.ActiveSheet.Cells[0, 70].Text; //冲击d
-            appExcel.Cells[6, 12] = ss1.ActiveSheet.Cells[0, 23].Text; //位置
-            appExcel.Cells[6, 13] = ss1.ActiveSheet.Cells[0, 71].Text; //冲击e
-            appExcel.Cells[6, 14] = ss1.ActiveSheet.Cells[0, 24].Text; //位置
-            appExcel.Cells[6, 15] = ss1.ActiveSheet.Cells[0, 72].Text; //冲击f
-            appExcel.Cells[6, 16] = ss1.ActiveSheet.Cells[0, 25].Text; //位置
-            appExcel.Cells[6, 17] = ss1.ActiveSheet.Cells[0, 73].Text; //时效冲击g
-            appExcel.Cells[6, 18] = ss1.ActiveSheet.Cells[0, 26].Text; //位置
-            appExcel.Cells[6, 19] = ss1.ActiveSheet.Cells[0, 74].Text; //时效冲击h
-            appExcel.Cells[6, 20] = ss1.ActiveSheet.Cells[0, 27].Text; //位置
-            appExcel.Cells[6, 21] = ss1.ActiveSheet.Cells[0, 75].Text; //时效冲击i
-            appExcel.Cells[6, 22] = ss1.ActiveSheet.Cells[0, 28].Text; //位置
-            appExcel.Cells[6, 23] = ss1.ActiveSheet.Cells[0, 76].Text; //时效冲击j
-            appExcel.Cells[6, 24] = ss1.ActiveSheet.Cells[0, 29].Text; //位置
-            appExcel.Cells[6, 25] = ss1.ActiveSheet.Cells[0, 77].Text; //时效冲击k
-            appExcel.Cells[6, 26] = ss1.ActiveSheet.Cells[0, 30].Text; //位置
-            appExcel.Cells[6, 27] = ss1.ActiveSheet.Cells[0, 78].Text; //时效冲击l
-
-            appExcel.Cells[8, 4]  = ss1.ActiveSheet.Cells[0, 32].Text; //位置
-            appExcel.Cells[8, 5]  = ss1.ActiveSheet.Cells[0, 80].Text; //Z向a
-            appExcel.Cells[8, 6]  = ss1.ActiveSheet.Cells[0, 33].Text; //位置
-            appExcel.Cells[8, 7]  = ss1.ActiveSheet.Cells[0, 81].Text; //Z向b
-            appExcel.Cells[8, 8]  = ss1.ActiveSheet.Cells[0, 34].Text; //位置
-            appExcel.Cells[8, 9]  = ss1.ActiveSheet.Cells[0, 82].Text; //Z向c
-            appExcel.Cells[8, 10] = ss1.ActiveSheet.Cells[0, 35].Text; //位置
-            appExcel.Cells[8, 11] = ss1.ActiveSheet.Cells[0, 83].Text; //Z向d
-            appExcel.Cells[8, 12] = ss1.ActiveSheet.Cells[0, 36].Text; //位置
-            appExcel.Cells[8, 13] = ss1.ActiveSheet.Cells[0, 84].Text; //Z向e
-            appExcel.Cells[8, 14] = ss1.ActiveSheet.Cells[0, 37].Text; //位置
-            appExcel.Cells[8, 15] = ss1.ActiveSheet.Cells[0, 85].Text; //Z向f
-
-            appExcel.Cells[8, 16] = ss1.ActiveSheet.Cells[0, 18].Text; //位置
-            appExcel.Cells[8, 17] = ss1.ActiveSheet.Cells[0, 66].Text; //弯曲a
-            appExcel.Cells[8, 18] = ss1.ActiveSheet.Cells[0, 31].Text; //位置
-            appExcel.Cells[8, 19] = ss1.ActiveSheet.Cells[0, 79].Text; //硬度a          
-            appExcel.Cells[8, 20] = ss1.ActiveSheet.Cells[0, 44].Text; //位置
-            appExcel.Cells[8, 21] = ss1.ActiveSheet.Cells[0, 92].Text; //金相a
-            appExcel.Cells[8, 22] = ss1.ActiveSheet.Cells[0, 45].Text; //位置
-            appExcel.Cells[8, 23] = ss1.ActiveSheet.Cells[0, 93].Text; //夹杂a
-
-            appExcel.Cells[9, 1] = "备注：" + ss1.ActiveSheet.Cells[0, 46].Text;
-
-            if (ss1_Sheet1.RowCount > 1)
-            {
-                appExcel.Cells[11, 1] = ss1.ActiveSheet.Cells[1, 1].Text;  //试样号
-                appExcel.Cells[11, 2] = ss1.ActiveSheet.Cells[1, 3].Text;  //钢种
-                appExcel.Cells[11, 3] = ss1.ActiveSheet.Cells[1, 4].Text + ",数量：" + ss1.ActiveSheet.Cells[0, 5].Text;  //规格
-                appExcel.Cells[11, 4] = ss1.ActiveSheet.Cells[1, 6].Text; //位置
-                appExcel.Cells[11, 5] = ss1.ActiveSheet.Cells[1, 54].Text;  //拉伸a
-                appExcel.Cells[11, 6] = ss1.ActiveSheet.Cells[1, 7].Text; //位置
-                appExcel.Cells[11, 7] = ss1.ActiveSheet.Cells[1, 55].Text;  //拉伸b
-                appExcel.Cells[11, 8] = ss1.ActiveSheet.Cells[1, 8].Text; //位置
-                appExcel.Cells[11, 9] = ss1.ActiveSheet.Cells[1, 56].Text;  //拉伸c
-                appExcel.Cells[11, 10] = ss1.ActiveSheet.Cells[1, 9].Text; //位置
-                appExcel.Cells[11, 11] = ss1.ActiveSheet.Cells[1, 57].Text;  //拉伸d
-                appExcel.Cells[11, 12] = ss1.ActiveSheet.Cells[1, 10].Text; //位置
-                appExcel.Cells[11, 13] = ss1.ActiveSheet.Cells[1, 58].Text; //拉伸e
-                appExcel.Cells[11, 14] = ss1.ActiveSheet.Cells[1, 11].Text; //位置
-                appExcel.Cells[11, 15] = ss1.ActiveSheet.Cells[1, 59].Text; //拉伸f
-                appExcel.Cells[11, 16] = ss1.ActiveSheet.Cells[1, 12].Text; //位置
-                appExcel.Cells[11, 17] = ss1.ActiveSheet.Cells[1, 60].Text; //高温拉伸g
-                appExcel.Cells[11, 18] = ss1.ActiveSheet.Cells[1, 13].Text; //位置
-                appExcel.Cells[11, 19] = ss1.ActiveSheet.Cells[1, 61].Text; //高温拉伸h
-                appExcel.Cells[11, 20] = ss1.ActiveSheet.Cells[1, 14].Text; //位置
-                appExcel.Cells[11, 21] = ss1.ActiveSheet.Cells[1, 62].Text; //高温拉伸i
-                appExcel.Cells[11, 22] = ss1.ActiveSheet.Cells[1, 15].Text; //位置
-                appExcel.Cells[11, 23] = ss1.ActiveSheet.Cells[1, 63].Text; //高温拉伸j
-                appExcel.Cells[11, 24] = ss1.ActiveSheet.Cells[1, 16].Text; //位置
-                appExcel.Cells[11, 25] = ss1.ActiveSheet.Cells[1, 64].Text; //高温拉伸k
-                appExcel.Cells[11, 26] = ss1.ActiveSheet.Cells[1, 17].Text; //位置
-                appExcel.Cells[11, 27] = ss1.ActiveSheet.Cells[1, 65].Text; //高温拉伸l
-
-                appExcel.Cells[13, 4] = ss1.ActiveSheet.Cells[1, 19].Text; //位置
-                appExcel.Cells[13, 5] = ss1.ActiveSheet.Cells[1, 67].Text; //冲击a
-                appExcel.Cells[13, 6] = ss1.ActiveSheet.Cells[1, 20].Text; //位置
-                appExcel.Cells[13, 7] = ss1.ActiveSheet.Cells[1, 68].Text; //冲击b
-                appExcel.Cells[13, 8] = ss1.ActiveSheet.Cells[1, 21].Text; //位置
-                appExcel.Cells[13, 9] = ss1.ActiveSheet.Cells[1, 69].Text; //冲击c
-                appExcel.Cells[13, 10] = ss1.ActiveSheet.Cells[1, 22].Text; //位置
-                appExcel.Cells[13, 11] = ss1.ActiveSheet.Cells[1, 70].Text; //冲击d
-                appExcel.Cells[13, 12] = ss1.ActiveSheet.Cells[1, 23].Text; //位置
-                appExcel.Cells[13, 13] = ss1.ActiveSheet.Cells[1, 71].Text; //冲击e
-                appExcel.Cells[13, 14] = ss1.ActiveSheet.Cells[1, 24].Text; //位置
-                appExcel.Cells[13, 15] = ss1.ActiveSheet.Cells[1, 72].Text; //冲击f
-                appExcel.Cells[13, 16] = ss1.ActiveSheet.Cells[1, 25].Text; //位置
-                appExcel.Cells[13, 17] = ss1.ActiveSheet.Cells[1, 73].Text; //时效冲击g
-                appExcel.Cells[13, 18] = ss1.ActiveSheet.Cells[1, 26].Text; //位置
-                appExcel.Cells[13, 19] = ss1.ActiveSheet.Cells[1, 74].Text; //时效冲击h
-                appExcel.Cells[13, 20] = ss1.ActiveSheet.Cells[1, 27].Text; //位置
-                appExcel.Cells[13, 21] = ss1.ActiveSheet.Cells[1, 75].Text; //时效冲击i
-                appExcel.Cells[13, 22] = ss1.ActiveSheet.Cells[1, 28].Text; //位置
-                appExcel.Cells[13, 23] = ss1.ActiveSheet.Cells[1, 76].Text; //时效冲击j
-                appExcel.Cells[13, 24] = ss1.ActiveSheet.Cells[1, 29].Text; //位置
-                appExcel.Cells[13, 25] = ss1.ActiveSheet.Cells[1, 77].Text; //时效冲击k
-                appExcel.Cells[13, 26] = ss1.ActiveSheet.Cells[1, 30].Text; //位置
-                appExcel.Cells[13, 27] = ss1.ActiveSheet.Cells[1, 78].Text; //时效冲击l
-
-                
-                appExcel.Cells[15, 4] = ss1.ActiveSheet.Cells[1, 32].Text; //位置
-                appExcel.Cells[15, 5] = ss1.ActiveSheet.Cells[1, 80].Text; //Z向a
-                appExcel.Cells[15, 6] = ss1.ActiveSheet.Cells[1, 33].Text; //位置
-                appExcel.Cells[15, 7] = ss1.ActiveSheet.Cells[1, 81].Text; //Z向b
-                appExcel.Cells[15, 8] = ss1.ActiveSheet.Cells[1, 34].Text; //位置
-                appExcel.Cells[15, 9] = ss1.ActiveSheet.Cells[1, 82].Text; //Z向c
-                appExcel.Cells[15, 10] = ss1.ActiveSheet.Cells[1, 35].Text; //位置
-                appExcel.Cells[15, 11] = ss1.ActiveSheet.Cells[1, 83].Text; //Z向d
-                appExcel.Cells[15, 12] = ss1.ActiveSheet.Cells[1, 36].Text; //位置
-                appExcel.Cells[15, 13] = ss1.ActiveSheet.Cells[1, 84].Text; //Z向e
-                appExcel.Cells[15, 14] = ss1.ActiveSheet.Cells[1, 37].Text; //位置
-                appExcel.Cells[15, 15] = ss1.ActiveSheet.Cells[1, 85].Text; //Z向f
-
-                appExcel.Cells[15, 16] = ss1.ActiveSheet.Cells[1, 18].Text; //位置
-                appExcel.Cells[15, 17] = ss1.ActiveSheet.Cells[1, 66].Text; //弯曲a
-                appExcel.Cells[15, 18] = ss1.ActiveSheet.Cells[1, 31].Text; //位置
-                appExcel.Cells[15, 19] = ss1.ActiveSheet.Cells[1, 79].Text; //硬度a
-                appExcel.Cells[15, 20] = ss1.ActiveSheet.Cells[1, 44].Text; //位置
-                appExcel.Cells[15, 21] = ss1.ActiveSheet.Cells[1, 92].Text; //金相a
-                appExcel.Cells[15, 22] = ss1.ActiveSheet.Cells[1, 45].Text; //位置
-                appExcel.Cells[15, 23] = ss1.ActiveSheet.Cells[1, 93].Text; //夹杂a
-
-                appExcel.Cells[16, 1] = "备注：" + ss1.ActiveSheet.Cells[1, 46].Text;
-            }
-            
-            workbook.PrintOut();
-            appExcel.Visible = true;
-            appExcel = null;
-            
-            string plsqlPackageName = "CSQ9010C.P_SMODIFY1";
-            string informationText = "提示信息：试样号信息已更新...!!!";
+            ArrayRecords = null;
+            string sQuery = "";
+            sQuery = "SELECT    '',A.SMP_NO,A.STDSPEC ,A.THK  ,A.SMP_CNT ,A.TENCIL_FL  ,A.HGT_TENCIL_FL, A.Bend_Fl,A.Impact_TEMP  ,A.Drop_Wgt_TEMP";
+            sQuery = sQuery + " ,A.Tim_Imact_TEMP    ,DECODE(A.Non_Metal_Fl,'1','Y','') ,DECODE(A.MACRO_FL,1,'Y','') ,A.Hardness_Fl,DECODE(A.Chem_Fl,1,'Y','')   ,DECODE(A.Ton_Fl,1,'Y','')   ,DECODE(A.Std_Smp_Fl,1,'Y','')";
+            sQuery = sQuery + " ,A.Photo_Fl  ,SUBSTR(A.Text,1,48), A.WRK_DATE     ,A.UPD_EMP      ,gf_empnamefind(A.UPD_EMP)   ,A.UPD_DATE";
+            sQuery = sQuery + " ,A.UPD_TIME  ,DECODE (B.PRC,'DH','热处理'||B.PRC_LINE , GF_COMNNAMEFIND('C0001',B.SMP_CUT_PLT) )   ,'1'";
+            sQuery = sQuery + " ,GF_COMNNAMEFIND('Q0089',C.YP_TYPE_CD), GF_COMNNAMEFIND('Q0089',C.A_YP_TYPE_CD), GF_COMNNAMEFIND('Q0089',C.HGT_YP_TYPE_CD), GF_COMNNAMEFIND('Q0089',C.A_HGT_YP_TYPE_CD)";
+            sQuery = sQuery + " ,GF_COMNNAMEFIND('Q0008',C.IMPACT_KND), GF_COMNNAMEFIND('Q0008',C.A_IMPACT_KND), GF_COMNNAMEFIND('Q0008',C.TIM_IMPACT_KND), GF_COMNNAMEFIND('Q0008',C.A_TIM_IMPACT_KND)";
+            sQuery = sQuery + " ,GF_COMNNAMEFIND('Q0057',C.IMPACT_SIZE_CD), GF_COMNNAMEFIND('Q0057',C.A_IMPACT_SIZE_CD), GF_COMNNAMEFIND('Q0057',C.TIM_IMPACT_SIZE_CD), GF_COMNNAMEFIND('Q0057',C.A_TIM_IMPACT_SIZE_CD)";
+            sQuery = sQuery + " , DECODE(A.HIC_Fl,1,'Y',''), GF_COMNNAMEFIND('Q0090',C.HIC_STD_CD), C.HIC_SVT_KND, DECODE(A.H_FL,1,'Y',''),DECODE(A.MECH_FRACT,1,'Y','')";
+            sQuery = sQuery + " FROM   Qp_Smp_Send A,QP_TEST_HEAD B,QP_QLTY_MATR C";
+            sQuery = sQuery + " WHERE  A.SMP_NO      = B.SMP_NO";
+            sQuery = sQuery + "   AND  A.SMP_SEND_NO = '" + txt_smp_sent_no.Text + "'";
+            sQuery = sQuery + "   AND  B.ORD_NO = C.ORD_NO";
+            sQuery = sQuery + "   AND  B.ORD_ITEM = C.ORD_ITEM";
+            sQuery = sQuery + "   AND C.KND = (SELECT  MAX(KND) FROM  NISCO.QP_QLTY_MATR ";
+            sQuery = sQuery + " WHERE ORD_NO = B.ORD_NO AND ORD_ITEM = B.ORD_ITEM AND KND IN('1','2'))";
+            sQuery = sQuery + " ORDER BY A.STDSPEC,A.THK ,A.SMP_NO";
+            curDateExcel = GeneralCommon.Gf_CodeFind(GeneralCommon.M_CN1, "select to_char(sysdate,'YYYYMMDDHH24MISS') from dual");
+            ArrayRecords = plSqlReturn(sQuery);//二维数组ArrayRecords的赋值，保存后台传来的结果。
+            SAMPLE_SEND_PRINT(ArrayRecords);//打印委托单。
+            string plsqlPackageName = "AGC2430NC.P_SMODIFY1";
+            string informationText = "提示信息：式样号信息已更新...!!!";
             list = new ArrayList();//初始集合。
             list.Add(txt_smp_sent_no.Text);//集合中添加值。
             PRINT_Click2(plsqlPackageName, list, informationText);//式样号信息更新
@@ -460,7 +341,7 @@ namespace BG
                 }
 
                 adoCmd.Execute(out value);
-                if (plsqlPackageName == "AQC1061P")
+                if (plsqlPackageName == "AQC1060P")
                 {
                     if (adoCmd.Parameters["arg_e_code"].Value.ToString() != "YY")
                     {
@@ -515,6 +396,252 @@ namespace BG
         }
 
 
+
+
+
+
+
+
+       
+        int RsRowCount = 0;//定义后台共有多少条记录返回。
+        int RsColCount = 0;
+
+        //传入SQL语句，得到该SQL语句执行的结果并返回。
+        private object[,] plSqlReturn(string sQuery)
+        {
+            object[,] ArrayRecords = null;
+            RsRowCount = 0;
+            RsColCount = 0;
+            ADODB.Recordset AdoRs;
+            try
+            {
+                if (GeneralCommon.M_CN1.State == 0)
+                {
+                    if (GeneralCommon.GF_DbConnect() == false)
+                    {
+                        return null;
+                    }
+                }
+                AdoRs = new ADODB.Recordset();
+                AdoRs.Open(sQuery, GeneralCommon.M_CN1, ADODB.CursorTypeEnum.adOpenKeyset, ADODB.LockTypeEnum.adLockReadOnly, -1);
+                if (AdoRs.BOF || AdoRs.EOF)
+                {
+                    GeneralCommon.Gp_MsgBoxDisplay("没有数据...!", "I", "提示");
+                    AdoRs.Close();
+                    AdoRs = null;
+                    if (GeneralCommon.M_CN1.State != 0)
+                    {
+                        GeneralCommon.M_CN1.Close();
+                    }
+                    Cursor.Current = Cursors.Default;
+                    return null;
+                }
+                RsRowCount = AdoRs.RecordCount;
+                RsColCount = AdoRs.Fields.Count;
+                ArrayRecords = new object[RsRowCount, RsColCount];
+                int i = 0;
+                while (!AdoRs.EOF)
+                {
+                    for (int j = 0; j < AdoRs.Fields.Count; j++)
+                    {
+                        ArrayRecords[i, j] = AdoRs.Fields[j].Value;
+                    }
+                    i++;
+                    AdoRs.MoveNext();
+                }
+                AdoRs.Close();
+                AdoRs = null;
+                if (GeneralCommon.M_CN1.State != 0)
+                {
+                    GeneralCommon.M_CN1.Close();
+                }
+                return ArrayRecords;
+            }
+            catch (Exception ex)
+            {
+                AdoRs = null;
+                if (GeneralCommon.M_CN1.State != 0)
+                {
+                    GeneralCommon.M_CN1.Close();
+                }
+                return null;
+            }
+        }
+
+        //打印委托单。
+        private void SAMPLE_SEND_PRINT(object[,] ArrayRecords)
+        { 
+            if (TXT_CUT_PLT.Text == "")
+            {
+                if (txt_DH_FL.Checked)
+                {
+                    TXT_CUT_PLT.Text = "热处理" + txt_line.Text;
+                }
+                else
+                {
+                    TXT_CUT_PLT.Text = GeneralCommon.Gf_ComnNameFind(GeneralCommon.M_CN1, "C0001", txt_plt.Text,1);
+                }
+            }
+
+            if (null == ArrayRecords)//假如数组为空，返回
+            {
+                GeneralCommon.Gp_MsgBoxDisplay("该委托单号没有数据...!","I","提示");
+                return;
+            }
+
+            object[,] ArrayRecordInputExcel = null;//定义一个二维数组，存储写入Excel表格数据。
+            ArrayRecordInputExcel = new object[RsRowCount,23];//初始化二维数组，列共有21，行根据后台传入的多少条记录赋值。
+
+            //从ArrayRecords二维数组中选取需要的数据，传入ArrayRecordInputExcel二维数组中
+            for (int i = 0; i < RsRowCount;i++)
+            {
+                ArrayRecordInputExcel[i, 0] = i + 1;
+                ArrayRecordInputExcel[i, 1] = ArrayRecords[i, 1];
+                ArrayRecordInputExcel[i, 2] = ArrayRecords[i, 2];
+                ArrayRecordInputExcel[i, 3] = ArrayRecords[i, 3];
+                ArrayRecordInputExcel[i, 4] = ArrayRecords[i, 4];
+                ArrayRecordInputExcel[i, 5] = ArrayRecords[i, 5];
+                ArrayRecordInputExcel[i, 6] = ArrayRecords[i, 6];
+                ArrayRecordInputExcel[i, 7] = ArrayRecords[i, 7];
+                ArrayRecordInputExcel[i, 8] = ArrayRecords[i, 8];
+                ArrayRecordInputExcel[i, 9] = ArrayRecords[i, 9];
+                ArrayRecordInputExcel[i, 10] = ArrayRecords[i, 10];
+                ArrayRecordInputExcel[i, 11] = ArrayRecords[i, 11];
+                ArrayRecordInputExcel[i, 12] = ArrayRecords[i, 12];
+                ArrayRecordInputExcel[i, 13] = ArrayRecords[i, 13];
+                ArrayRecordInputExcel[i, 14] = ArrayRecords[i, 14];
+                ArrayRecordInputExcel[i, 15] = ArrayRecords[i, 15];
+                ArrayRecordInputExcel[i, 16] = ArrayRecords[i, 41];//H
+                ArrayRecordInputExcel[i, 17] = ArrayRecords[i, 16];
+                ArrayRecordInputExcel[i, 18] = ArrayRecords[i, 17];
+                ArrayRecordInputExcel[i, 19] = ArrayRecords[i, 38];
+                ArrayRecordInputExcel[i, 20] = ArrayRecords[i, 42];
+                ArrayRecordInputExcel[i, 21] = ArrayRecords[i, 18];
+
+                if (ArrayRecords[i, 26].ToString() != "")
+                {
+                    ArrayRecordInputExcel[i, 22] = "屈服类型：" + ArrayRecords[i, 26].ToString();
+                }
+                else if (ArrayRecords[i, 27].ToString() != "")
+                {
+                    ArrayRecordInputExcel[i, 22] = "追加屈服类型：" + ArrayRecords[i, 27].ToString();
+                }
+                else if (ArrayRecords[i, 28].ToString() != "")
+                {
+                    ArrayRecordInputExcel[i, 22] = "高温屈服类型：" + ArrayRecords[i, 28].ToString();
+                }
+                else if (ArrayRecords[i, 29].ToString() != "")
+                {
+                    ArrayRecordInputExcel[i, 22] = "追加高温屈服类型：" + ArrayRecords[i, 29].ToString();
+                }
+                else if (ArrayRecords[i, 30].ToString() != "")
+                {
+                    ArrayRecordInputExcel[i, 22] = "冲击开槽：" + ArrayRecords[i, 30].ToString();
+                }
+                else if (ArrayRecords[i, 31].ToString() != "")
+                {
+                    ArrayRecordInputExcel[i, 22] = "追加冲击开槽：" + ArrayRecords[i, 31].ToString();
+                }
+                else if (ArrayRecords[i, 32].ToString() != "")
+                {
+                    ArrayRecordInputExcel[i, 22] = "时效冲击开槽：" + ArrayRecords[i, 32].ToString();
+                }
+                else if (ArrayRecords[i, 33].ToString() != "")
+                {
+                    ArrayRecordInputExcel[i, 22] = "追加时效冲击开槽：" + ArrayRecords[i, 33].ToString();
+                }
+                else if (ArrayRecords[i, 34].ToString() != "")
+                {
+                    ArrayRecordInputExcel[i, 22] = "冲击尺寸：" + ArrayRecords[i, 34].ToString();
+                }
+                else if (ArrayRecords[i, 35].ToString() != "")
+                {
+                    ArrayRecordInputExcel[i, 22] = "追加冲击尺寸：" + ArrayRecords[i, 35].ToString();
+                }
+                else if (ArrayRecords[i, 36].ToString() != "")
+                {
+                    ArrayRecordInputExcel[i, 22] = "时效冲击尺寸：" + ArrayRecords[i, 36].ToString();
+                }
+                else if (ArrayRecords[i, 37].ToString() != "")
+                {
+                    ArrayRecordInputExcel[i, 22] = "追加时效冲击尺寸：" + ArrayRecords[i, 37].ToString();
+                }
+                else if (ArrayRecords[i, 39].ToString() != "")
+                {
+                    ArrayRecordInputExcel[i, 22] = "HIC试验标准：" + ArrayRecords[i, 39].ToString();
+                }
+                else if (ArrayRecords[i, 40].ToString() != "")
+                {
+                    ArrayRecordInputExcel[i, 22] = "溶液类型：" + ArrayRecords[i, 40].ToString();
+                }
+                else
+                {
+                    ArrayRecordInputExcel[i, 22] = "";
+                }
+            }
+
+            string dateInputExcel = curDateExcel.Substring(0, 4) + "-" + curDateExcel.Substring(4, 2) + "-" + curDateExcel.Substring(6, 2) + " " + curDateExcel.Substring(8, 2) + ":" + curDateExcel.Substring(10, 2) + ":" + curDateExcel.Substring(12, 2);
+            string modelName = "AGC2430C.xls";
+            GeneralCommon.Gp_CopyModel(modelName);
+            string fileName = AppDomain.CurrentDomain.BaseDirectory.ToString() + "report" + "\\" + modelName;
+            Microsoft.Office.Interop.Excel.Application appExcel = null;
+            appExcel = new Microsoft.Office.Interop.Excel.Application();
+            appExcel.DisplayAlerts = true;
+            appExcel.AlertBeforeOverwriting = true;
+            Microsoft.Office.Interop.Excel.Workbook workbook = appExcel.Workbooks.Open(fileName,
+                Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+                Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+                Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+                Type.Missing, Type.Missing);
+
+            Microsoft.Office.Interop.Excel.Range range = null;
+            Worksheet worksheet1 = null;
+            worksheet1 = (Worksheet)workbook.Sheets[1];
+
+            appExcel.Cells[3, 1] = "委托单号：" + txt_smp_sent_no.Text;
+            appExcel.Cells[4, 1] = "委托单位：" + TXT_CUT_PLT.Text;
+            string excelDate = curDate.Substring(0, 4) + "年" + curDate.Substring(4, 2) + "月" + curDate.Substring(6, 2) + "日";
+            appExcel.Cells[4, 2] = excelDate;
+           
+            for (int i = 0; i < RsRowCount;i++)
+            {
+                appExcel.Cells[7 + i, 1] = ArrayRecordInputExcel[i, 0].ToString();
+                appExcel.Cells[7 + i, 2] = ArrayRecordInputExcel[i, 1].ToString();
+                appExcel.Cells[7 + i, 3] = ArrayRecordInputExcel[i, 2].ToString();
+                appExcel.Cells[7 + i, 4] = ArrayRecordInputExcel[i, 3].ToString();
+                appExcel.Cells[7 + i, 5] = ArrayRecordInputExcel[i, 4].ToString();
+                appExcel.Cells[7 + i, 6] = ArrayRecordInputExcel[i, 5].ToString();
+                appExcel.Cells[7 + i, 7] = ArrayRecordInputExcel[i, 6].ToString();
+                appExcel.Cells[7 + i, 8] = ArrayRecordInputExcel[i, 7].ToString();
+                appExcel.Cells[7 + i, 9] = ArrayRecordInputExcel[i, 8].ToString();
+                appExcel.Cells[7 + i, 10] = ArrayRecordInputExcel[i, 9].ToString();
+                appExcel.Cells[7 + i, 11] = ArrayRecordInputExcel[i, 10].ToString();
+                appExcel.Cells[7 + i, 12] = ArrayRecordInputExcel[i, 11].ToString();
+                appExcel.Cells[7 + i, 13] = ArrayRecordInputExcel[i, 12].ToString();
+                appExcel.Cells[7 + i, 14] = ArrayRecordInputExcel[i, 13].ToString();
+                appExcel.Cells[7 + i, 15] = ArrayRecordInputExcel[i, 14].ToString();
+                appExcel.Cells[7 + i, 16] = ArrayRecordInputExcel[i, 15].ToString();
+                appExcel.Cells[7 + i, 17] = ArrayRecordInputExcel[i, 16].ToString();
+                appExcel.Cells[7 + i, 18] = ArrayRecordInputExcel[i, 17].ToString();
+                appExcel.Cells[7 + i, 19] = ArrayRecordInputExcel[i, 18].ToString();
+                appExcel.Cells[7 + i, 20] = ArrayRecordInputExcel[i, 19].ToString();
+                appExcel.Cells[7 + i, 21] = ArrayRecordInputExcel[i, 20].ToString();
+                appExcel.Cells[7 + i, 22] = ArrayRecordInputExcel[i, 21].ToString();
+                appExcel.Cells[7 + i, 23] = ArrayRecordInputExcel[i, 22].ToString();
+                range = (Microsoft.Office.Interop.Excel.Range)worksheet1.get_Range("A" + (7 + i), "W" + (7 + i));
+                range.Borders.LineStyle = 1;
+            }
+
+            appExcel.Cells[7 + RsRowCount, 2] = "委托人：" + GeneralCommon.sUsername;
+            appExcel.Cells[7 + RsRowCount, 4] = "委托时间：" + dateInputExcel;
+            appExcel.Cells[7 + RsRowCount, 9] = "送样人：";
+            appExcel.Cells[7 + RsRowCount, 14] = "送样时间：";
+            workbook.PrintOut();
+            appExcel.Visible = true;
+            ////appExcel.Quit();//从内存中退出
+            appExcel = null;  
+        }
+
         //式样号信息更新或者委托信息发送。
         private void PRINT_Click(string plsqlPackageName, ArrayList list,string informationText)
         {
@@ -553,7 +680,7 @@ namespace BG
                 }
 
                 adoCmd.Execute(out value);
-                if (plsqlPackageName == "AQC1061P")
+                if (plsqlPackageName == "AQC1060P")
                 {
                     if (adoCmd.Parameters["arg_e_code"].Value.ToString() != "YY")
                     {
@@ -618,13 +745,12 @@ namespace BG
                 GeneralCommon.Gp_MsgBoxDisplay("请输入委托单号，再发送委托信息...！", "W", "警告");
                 return;
             }
-            string plsqlPackageName = "AQC1061P";
+            string plsqlPackageName = "AQC1060P";
             string informationText = "提示信息：委托信息已成功发送...!!!";
             list = new ArrayList();
             list.Add(txt_smp_sent_no.Text);
             list.Add("");
             PRINT_Click(plsqlPackageName, list, informationText);
-            base.Form_Cls();
         }
 
         //spread的ButtonClicked事件，用于第一列checkbox的点击。
@@ -633,15 +759,36 @@ namespace BG
             if (ss1_Sheet1.Cells[e.Row, 0].Text == "True" && e.Column == 0)
             {
                 ss1_Sheet1.RowHeader.Cells[e.Row, 0].Text = "修改";
-                ss1_Sheet1.Cells[e.Row, 48].Text = GeneralCommon.sUserID;
-                ss1_Sheet1.Cells[e.Row, 49].Text = GeneralCommon.sUsername;
+                ss1_Sheet1.Cells[e.Row, 28].Text = GeneralCommon.sUserID;
+                ss1_Sheet1.Cells[e.Row, 29].Text = GeneralCommon.sUsername;
             }
             else if (e.Column == 0)
             {        
                 ss1_Sheet1.RowHeader.Cells[e.Row, 0].Text = "";
-                ss1_Sheet1.Cells[e.Row, 48].Text = "";
-                ss1_Sheet1.Cells[e.Row, 49].Text = "";
+                //string sQuery = "{call WGC3030C.P_SONEROW ( '" + ss1_Sheet1.Cells[e.Row, 2].Text.Trim() + "')}";
+                //SpreadCommon.Gp_Sp_OneRowDisplay(GeneralCommon.M_CN1, sQuery, ss1, e.Row);
             }
+        }
+
+        protected override void ss_EditChange(object sender, FarPoint.Win.Spread.EditorNotifyEventArgs e)
+        {
+            //base.ss_EditChange(sender, e);//覆盖源代码事件。请勿删除
+        }
+
+        protected override void ss_CellClickEvent(object sender, FarPoint.Win.Spread.CellClickEventArgs e)
+        {
+            //base.ss_CellClickEvent(sender, e);//覆盖源代码事件。请勿删除
+        }
+
+        //Spread的LeaveCell事件，假如当前行第一列checkbox的状态不为选择状态，执行行刷新。
+        private void ss1_LeaveCell(object sender, FarPoint.Win.Spread.LeaveCellEventArgs e)
+        {
+            if (ss1_Sheet1.Cells[e.Row, 0].Text != "True")
+            {
+                //string sQuery = "{call WGC3030C.P_SONEROW ( '" + ss1_Sheet1.Cells[e.Row, 2].Text.Trim() + "')}";
+                //SpreadCommon.Gp_Sp_OneRowDisplay(GeneralCommon.M_CN1, sQuery, ss1, e.Row);
+            }
+
         }
 
         //Spread保存事件。
@@ -685,10 +832,10 @@ namespace BG
                     if (ss1_Sheet1.RowHeader.Cells[i, 0].Text == "修改")
                     {
                         checkTrueCount++;
-                        ss1_Sheet1.Cells[i, 2].Text = sampleNo;
-                        if (ss1_Sheet1.Cells[i, 47].Text == "")
+                        ss1_Sheet1.Cells[i, 1].Text = sampleNo;
+                        if (ss1_Sheet1.Cells[i, 27].Text == "")
                         {
-                            ss1_Sheet1.Cells[i, 47].Text = dtp_end_date.RawDate;
+                            ss1_Sheet1.Cells[i, 27].Text = dtp_end_date.RawDate;
                         }
                     }
                 }
@@ -697,33 +844,12 @@ namespace BG
                     GeneralCommon.Gp_MsgBoxDisplay("一张委托单不能超过24个试样...!!", "W", "警告");
                     return;
                 }
-                if (checkTrueCount > 2)
-                {
-                    GeneralCommon.Gp_MsgBoxDisplay("一张委托单不能超过2个试样号！", "W", "警告");
-                    return;
-                }
                 base.p_Pro(1, 1, true, false);
                 reSetToolbarImages();
             }
         }
 
-        private void txt_plt_TextChanged(object sender, EventArgs e)
-        {
-            if (txt_plt.Text == "C1")
-            {
-                PLT_NAME.Text = "板卷厂";
-            }
-            else if (txt_plt.Text == "C3")
-            {
-                PLT_NAME.Text = "中板厂";
-            }
-            else if (txt_plt.Text == "C2")
-            {
-                PLT_NAME.Text = "宽厚板厂";
-            }
-        }
-
-        private void Chc_OutOrder_Click(object sender, EventArgs e)
+        private void Chc_OutOrder_Chk()
         {
             if (Chc_OutOrder.Checked == true)
             {
@@ -735,6 +861,10 @@ namespace BG
             }
         }
 
+        private void Chc_OutOrder_CheckedChanged(object sender, EventArgs e)
+        {
+            Chc_OutOrder_Chk();
+        }
 
 
     }

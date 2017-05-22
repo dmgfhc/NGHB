@@ -321,11 +321,17 @@
     <Compile Include="CGC\WGC3020C.Designer.cs">
       <DependentUpon>WGC3020C.cs</DependentUpon>
     </Compile>
-    <Compile Include="CGD\AGC2430C.cs">
+    <Compile Include="CGC\WGC3030C.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CGD\AGC2430C.Designer.cs">
-      <DependentUpon>AGC2430C.cs</DependentUpon>
+    <Compile Include="CGC\WGC3030C.Designer.cs">
+      <DependentUpon>WGC3030C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CGC\WGC3031C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CGC\WGC3031C.Designer.cs">
+      <DependentUpon>WGC3031C.cs</DependentUpon>
     </Compile>
     <Compile Include="CGD\CGD2041C.cs">
       <SubType>Form</SubType>
@@ -344,6 +350,18 @@
     </Compile>
     <Compile Include="CGD\CGD2042C.Designer.cs">
       <DependentUpon>CGD2042C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CGD\AGC2430C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CGD\AGC2430C.Designer.cs">
+      <DependentUpon>AGC2430C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CGD\AGC2432C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CGD\AGC2432C.Designer.cs">
+      <DependentUpon>AGC2432C.cs</DependentUpon>
     </Compile>
     <Compile Include="MainMenu\MainMenu.cs">
       <SubType>Form</SubType>
@@ -470,18 +488,6 @@
     </Compile>
     <Compile Include="CGC\WGC2070C.designer.cs">
       <DependentUpon>WGC2070C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGC\WGC3030C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGC\WGC3030C.Designer.cs">
-      <DependentUpon>WGC3030C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGC\WGC3031C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGC\WGC3031C.Designer.cs">
-      <DependentUpon>WGC3031C.cs</DependentUpon>
     </Compile>
     <Compile Include="CGE\WGE1010C.cs">
       <SubType>Form</SubType>
@@ -779,8 +785,11 @@
     <EmbeddedResource Include="CGC\WGC3020C.resx">
       <DependentUpon>WGC3020C.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CGD\AGC2430C.resx">
-      <DependentUpon>AGC2430C.cs</DependentUpon>
+    <EmbeddedResource Include="CGC\WGC3030C.resx">
+      <DependentUpon>WGC3030C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CGC\WGC3031C.resx">
+      <DependentUpon>WGC3031C.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CGD\CGD2041C.resx">
       <DependentUpon>CGD2041C.cs</DependentUpon>
@@ -790,6 +799,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CGD\CGD2042C.resx">
       <DependentUpon>CGD2042C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CGD\AGC2430C.resx">
+      <DependentUpon>AGC2430C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CGD\AGC2432C.resx">
+      <DependentUpon>AGC2432C.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
@@ -855,12 +870,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CGC\WGC2070C.resx">
       <DependentUpon>WGC2070C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGC\WGC3030C.resx">
-      <DependentUpon>WGC3030C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGC\WGC3031C.resx">
-      <DependentUpon>WGC3031C.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CGE\WGE1010C.resx">
       <DependentUpon>WGE1010C.cs</DependentUpon>
