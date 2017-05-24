@@ -99,8 +99,8 @@
             this.CBO_CUR_INV.Size = new System.Drawing.Size(25, 22);
             this.CBO_CUR_INV.sJoin = "";
             this.CBO_CUR_INV.sSqletc = "SELECT CD \"代码\", CD_SHORT_NAME \"代码简称\", CD_NAME \"代码名称\",        CD_SHORT_ENG \"代码英文简称" +
-                "\", CD_FULL_ENG \"代码英文名称\" FROM NISCO.ZP_CD  WHERE CD_MANA_NO =    \'C0013\'    AND C" +
-                "D         like \'%\'  ORDER  BY  CD  ASC ";
+    "\", CD_FULL_ENG \"代码英文名称\" FROM NISCO.ZP_CD  WHERE CD_MANA_NO =    \'C0013\'    AND C" +
+    "D         like \'%\'  ORDER  BY  CD  ASC ";
             this.CBO_CUR_INV.TabIndex = 550;
             this.CBO_CUR_INV.Text = "00";
             this.CBO_CUR_INV.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -131,8 +131,8 @@
             this.txt_o_t_addr.Size = new System.Drawing.Size(85, 22);
             this.txt_o_t_addr.sJoin = "";
             this.txt_o_t_addr.sSqletc = "SELECT CD \"代码\", CD_SHORT_NAME \"代码简称\", CD_NAME \"代码名称\",  CD_SHORT_ENG \"代码英文简称\", CD_" +
-                "FULL_ENG \"代码英文名称\" FROM NISCO.ZP_CD  WHERE CD_MANA_NO = \'C0002\' AND CD  like \'%\' " +
-                " ORDER  BY  CD  ASC ";
+    "FULL_ENG \"代码英文名称\" FROM NISCO.ZP_CD  WHERE CD_MANA_NO = \'C0002\' AND CD  like \'%\' " +
+    " ORDER  BY  CD  ASC ";
             this.txt_o_t_addr.TabIndex = 555;
             this.txt_o_t_addr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -160,8 +160,8 @@
             this.txt_o_f_addr.Size = new System.Drawing.Size(85, 22);
             this.txt_o_f_addr.sJoin = "";
             this.txt_o_f_addr.sSqletc = "SELECT CD \"代码\", CD_SHORT_NAME \"代码简称\", CD_NAME \"代码名称\",  CD_SHORT_ENG \"代码英文简称\", CD_" +
-                "FULL_ENG \"代码英文名称\" FROM NISCO.ZP_CD  WHERE CD_MANA_NO = \'C0002\' AND CD  like \'%\' " +
-                " ORDER  BY  CD  ASC ";
+    "FULL_ENG \"代码英文名称\" FROM NISCO.ZP_CD  WHERE CD_MANA_NO = \'C0002\' AND CD  like \'%\' " +
+    " ORDER  BY  CD  ASC ";
             this.txt_o_f_addr.TabIndex = 552;
             this.txt_o_f_addr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -181,7 +181,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1370, 622);
+            this.panel4.Size = new System.Drawing.Size(1362, 622);
             this.panel4.TabIndex = 3;
             // 
             // groupBox3
@@ -192,7 +192,7 @@
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(0, 105);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1370, 517);
+            this.groupBox3.Size = new System.Drawing.Size(1362, 517);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             // 
@@ -202,7 +202,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(614, 18);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(753, 496);
+            this.panel2.Size = new System.Drawing.Size(745, 496);
             this.panel2.TabIndex = 2;
             // 
             // ss2
@@ -213,7 +213,7 @@
             this.ss2.Name = "ss2";
             this.ss2.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
             this.ss2_Sheet1});
-            this.ss2.Size = new System.Drawing.Size(753, 496);
+            this.ss2.Size = new System.Drawing.Size(745, 496);
             this.ss2.TabIndex = 0;
             // 
             // ss2_Sheet1
@@ -271,7 +271,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox2.Location = new System.Drawing.Point(0, 41);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1370, 64);
+            this.groupBox2.Size = new System.Drawing.Size(1362, 64);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
@@ -373,7 +373,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1370, 41);
+            this.groupBox1.Size = new System.Drawing.Size(1362, 41);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -396,8 +396,8 @@
             this.txt_f_addr.Size = new System.Drawing.Size(71, 22);
             this.txt_f_addr.sJoin = "";
             this.txt_f_addr.sSqletc = "SELECT CD            \"代码\", CD_SHORT_NAME \"代码简称\",  CD_NAME       \"代码名称\", CD_SHORT_" +
-                "ENG  \"代码英文简称\", CD_FULL_ENG   \"代码英文名称\" FROM NISCO.ZP_CD WHERE CD_MANA_NO = \'F0043" +
-                "\' AND CD like \'S%\'ORDER BY CD ASC";
+    "ENG  \"代码英文简称\", CD_FULL_ENG   \"代码英文名称\" FROM NISCO.ZP_CD WHERE CD_MANA_NO = \'F0043" +
+    "\' AND CD like \'S%\'ORDER BY CD ASC";
             this.txt_f_addr.TabIndex = 552;
             this.txt_f_addr.TextChanged += new System.EventHandler(this.txt_f_addr_TextChanged);
             // 
@@ -503,7 +503,7 @@
             // 
             // CGA2010C
             // 
-            this.ClientSize = new System.Drawing.Size(1370, 622);
+            this.ClientSize = new System.Drawing.Size(1362, 622);
             this.Controls.Add(this.panel4);
             this.Name = "CGA2010C";
             this.Text = "板坯库库存修改及查询界面_CGA2010C";
