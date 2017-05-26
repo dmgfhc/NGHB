@@ -1,6 +1,6 @@
 ﻿namespace CG
 {
-    partial class WGE1010C
+    partial class CGE2021C
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -30,8 +30,12 @@
         {
             CommonClass.BControlFiledSetting bControlFiledSetting1 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting2 = new CommonClass.BControlFiledSetting();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WGE1010C));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CGE2021C));
+            this.text_cur_inv_code = new CommonClass.F4ETCR();
+            this.text_cur_inv = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TXT_MAX_WGT = new CommonClass.NumBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.TXT_LOC_WGT = new CommonClass.NumBox();
             this.TXT_LOC_CNT = new CommonClass.NumBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -65,10 +69,6 @@
             this.ss1_Sheet1 = new FarPoint.Win.Spread.SheetView();
             this.ss2 = new FarPoint.Win.Spread.FpSpread();
             this.ss2_Sheet1 = new FarPoint.Win.Spread.SheetView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.text_cur_inv_code = new CommonClass.F4ETCR();
-            this.text_cur_inv = new System.Windows.Forms.TextBox();
-            this.TXT_MAX_WGT = new CommonClass.NumBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -80,6 +80,30 @@
             ((System.ComponentModel.ISupportInitialize)(this.ss2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ss2_Sheet1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // text_cur_inv_code
+            // 
+            bControlFiledSetting1.ColumnID = "CD";
+            bControlFiledSetting1.TargetControl = this.text_cur_inv_code;
+            bControlFiledSetting2.ColumnID = "CD_SHORT_NAME";
+            bControlFiledSetting2.TargetControl = this.text_cur_inv;
+            this.text_cur_inv_code.CustomSetting.Add(bControlFiledSetting1);
+            this.text_cur_inv_code.CustomSetting.Add(bControlFiledSetting2);
+            this.text_cur_inv_code.InputControl = this.text_cur_inv_code;
+            this.text_cur_inv_code.Location = new System.Drawing.Point(81, 17);
+            this.text_cur_inv_code.MaxLength = 1;
+            this.text_cur_inv_code.Name = "text_cur_inv_code";
+            this.text_cur_inv_code.Size = new System.Drawing.Size(33, 22);
+            this.text_cur_inv_code.sJoin = "";
+            this.text_cur_inv_code.sSqletc = resources.GetString("text_cur_inv_code.sSqletc");
+            this.text_cur_inv_code.TabIndex = 131;
+            // 
+            // text_cur_inv
+            // 
+            this.text_cur_inv.Location = new System.Drawing.Point(112, 17);
+            this.text_cur_inv.Name = "text_cur_inv";
+            this.text_cur_inv.Size = new System.Drawing.Size(82, 22);
+            this.text_cur_inv.TabIndex = 130;
             // 
             // groupBox1
             // 
@@ -120,6 +144,30 @@
             this.groupBox1.Size = new System.Drawing.Size(1161, 110);
             this.groupBox1.TabIndex = 111;
             this.groupBox1.TabStop = false;
+            // 
+            // TXT_MAX_WGT
+            // 
+            this.TXT_MAX_WGT.BackColor = System.Drawing.Color.White;
+            this.TXT_MAX_WGT.Font = new System.Drawing.Font("宋体", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.TXT_MAX_WGT.ForeColor = System.Drawing.Color.Crimson;
+            this.TXT_MAX_WGT.Location = new System.Drawing.Point(1035, 79);
+            this.TXT_MAX_WGT.Name = "TXT_MAX_WGT";
+            this.TXT_MAX_WGT.NumValue = 0D;
+            this.TXT_MAX_WGT.Scale = 3;
+            this.TXT_MAX_WGT.ShowZero = false;
+            this.TXT_MAX_WGT.Size = new System.Drawing.Size(102, 22);
+            this.TXT_MAX_WGT.TabIndex = 132;
+            this.TXT_MAX_WGT.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label5
+            // 
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label5.Location = new System.Drawing.Point(955, 79);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(74, 22);
+            this.label5.TabIndex = 128;
+            this.label5.Text = "最大量";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // TXT_LOC_WGT
             // 
@@ -482,60 +530,12 @@
             this.ss2_Sheet1.Reset();
             this.ss2_Sheet1.SheetName = "Sheet1";
             // 
-            // label5
-            // 
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label5.Location = new System.Drawing.Point(955, 79);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 22);
-            this.label5.TabIndex = 128;
-            this.label5.Text = "最大量";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // text_cur_inv_code
-            // 
-            bControlFiledSetting1.ColumnID = "CD";
-            bControlFiledSetting1.TargetControl = this.text_cur_inv_code;
-            bControlFiledSetting2.ColumnID = "CD_SHORT_NAME";
-            bControlFiledSetting2.TargetControl = this.text_cur_inv;
-            this.text_cur_inv_code.CustomSetting.Add(bControlFiledSetting1);
-            this.text_cur_inv_code.CustomSetting.Add(bControlFiledSetting2);
-            this.text_cur_inv_code.InputControl = this.text_cur_inv_code;
-            this.text_cur_inv_code.Location = new System.Drawing.Point(81, 17);
-            this.text_cur_inv_code.MaxLength = 1;
-            this.text_cur_inv_code.Name = "text_cur_inv_code";
-            this.text_cur_inv_code.Size = new System.Drawing.Size(33, 22);
-            this.text_cur_inv_code.sJoin = "";
-            this.text_cur_inv_code.sSqletc = resources.GetString("text_cur_inv_code.sSqletc");
-            this.text_cur_inv_code.TabIndex = 131;
-            // 
-            // text_cur_inv
-            // 
-            this.text_cur_inv.Location = new System.Drawing.Point(112, 17);
-            this.text_cur_inv.Name = "text_cur_inv";
-            this.text_cur_inv.Size = new System.Drawing.Size(82, 22);
-            this.text_cur_inv.TabIndex = 130;
-            // 
-            // TXT_MAX_WGT
-            // 
-            this.TXT_MAX_WGT.BackColor = System.Drawing.Color.White;
-            this.TXT_MAX_WGT.Font = new System.Drawing.Font("宋体", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.TXT_MAX_WGT.ForeColor = System.Drawing.Color.Crimson;
-            this.TXT_MAX_WGT.Location = new System.Drawing.Point(1035, 79);
-            this.TXT_MAX_WGT.Name = "TXT_MAX_WGT";
-            this.TXT_MAX_WGT.NumValue = 0D;
-            this.TXT_MAX_WGT.Scale = 3;
-            this.TXT_MAX_WGT.ShowZero = false;
-            this.TXT_MAX_WGT.Size = new System.Drawing.Size(102, 22);
-            this.TXT_MAX_WGT.TabIndex = 132;
-            this.TXT_MAX_WGT.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // WGE1010C
+            // CGE2021C
             // 
             this.ClientSize = new System.Drawing.Size(1161, 622);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "WGE1010C";
+            this.Name = "CGE2021C";
             this.Text = "中板未入库产品垛位管理界面_CGE2021C";
             this.Load += new System.EventHandler(this.Form_Load);
             this.groupBox1.ResumeLayout(false);

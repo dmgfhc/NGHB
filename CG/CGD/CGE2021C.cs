@@ -29,22 +29,22 @@ using CommonClass;
 ///-------------------------------------------------------------------------------
 ///-- 程序头注释 ++++++++++++++++++++++++++++++++++++++++++++++++++++++  
 ///-------------------------------------------------------------------------------
-///-- 系统名            宽厚板轧钢作业                                              
+///-- 系统名            中板轧钢作业                                              
 ///-- 子系统名          钢板库管理                                                  
 ///-- 程序名            在制品指定垛位                                  
-///-- 程序ID            WGE1010C                                                  
+///-- 程序ID            CGE2021C                                                  
 ///-- 版本              1.1.00                                                    
 ///-- 文档号            规格书名称                                                
-///-- 设计              顾汉锋                                                    
-///-- 代码              顾汉锋                                                    
-///-- 代码日期          2012.11.16                                                
+///-- 设计              中板未入库产品垛位管理                                                    
+///-- 代码              韩超                                                    
+///-- 代码日期          2017.05.25                                                
 ///-- 处理描述          
 
 ///-------------------------------------------------------------------------------
 ///-- 更新历史  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++     
 ///-------------------------------------------------------------------------------
 ///-- 版本      日期          修改人         修改内容                             
-///1.1.00    2012.11.16       顾汉锋                                              
+///1.1.00    2017.05.26       韩超                                              
 
 ///-------------------------------------------------------------------------------
 ///-- 程序头注释结束++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -52,9 +52,9 @@ using CommonClass;
 
 namespace CG
 {
-    public partial class WGE1010C : CommonClass.FORMBASE
+    public partial class CGE2021C : CommonClass.FORMBASE
     {
-        public WGE1010C()
+        public CGE2021C()
         {
             InitializeComponent();
         }
@@ -80,97 +80,69 @@ namespace CG
             p_McIni(Mc1, false);
             imcseq = 1;
             //0-5
-            p_SetMc("生产日期始", sdt_prod_fr, "PN", "10", "", "", "", imcseq);
-
-            p_SetMc("生产日期至", sdt_prod_to, "PN", "10", "", "", "", imcseq);            
-            p_SetMc("当前库", txt_cur_inv, "PN", "2", "", "", "", imcseq);
-            p_SetMc("产品类型", txt_prod_cd, "PN", "2", "", "", "", imcseq);
-            p_SetMc("物料号", TXT_PLATE_NO, "P", "14", "", "", "", imcseq);
-            p_SetMc("标准", txt_stdspec_chg, "P", "30", "", "", "", imcseq);
-            //6-10
-            p_SetMc("班次", CBO_SHIFT, "P", "1", "", "", "", imcseq);
-            p_SetMc("起始垛位", txt_f_addr, "P", "7", "", "", "", imcseq);       
-            p_SetMc("表面等级", CBO_SURFGRD, "P", "1", "Q0034", "", "", imcseq);
-            p_SetMc("探伤日期1", sdt_ust_fr, "P", "10", "", "", "", imcseq);
-            p_SetMc("探伤日期2", sdt_ust_to, "P", "10", "", "", "", imcseq);
-            //11-15
-            
-            p_SetMc("探伤班次", CBO_PROD_CD, "P", "", "", "", "", imcseq);
-            p_SetMc("厚度", SDB_THK, "P", "6", "", "", "", imcseq);
-            p_SetMc("选择件数", TXT_CNT, "", "", "", "", "", imcseq);
-            p_SetMc("选择累计重量", TXT_WGT, "", "6", "", "", "", imcseq);
-
-            //查询目标垛位条件
-            p_McIni(Mc2, false);
-            imcseq = 2;
-
-            p_SetMc("当前库", txt_cur_inv, "PN", "2", "", "", "", imcseq);
-            p_SetMc("目标垛位", txt_t_addr, "P", "7", "", "", "", imcseq);
+            p_SetMc("当前库", text_cur_inv_code, "PN", "", "", "", "", imcseq);//0
+            p_SetMc("生产时间", SDT_PROD_DATE, "PN", "", "", "", "", imcseq);//1
+            p_SetMc("生产时间", SDT_PROD_DATE_TO, "PN", "", "", "", "", imcseq);//2
+            p_SetMc(txt_stdspec_chg, "P", "", "", "", imcseq, "");//3
+            p_SetMc(CBO_SHIFT, "P", "", "", "", imcseq, "");//4
+            p_SetMc(CBO_SURFGRD, "P", "", "", "", imcseq, "");//5
+            p_SetMc(txt_f_addr, "P", "", "", "", imcseq, "");//6
+            p_SetMc(txt_t_addr, "P", "", "", "", imcseq, "");//7
+            p_SetMc(TXT_PLATE_NO, "P", "", "", "", imcseq, "");//8
+            p_SetMc(SDB_THK, "P", "", "", "", imcseq, "");//9
+            p_SetMc(CBO_PROD_CD, "P", "", "", "", imcseq, "");//10
+            //p_SetMc(TXT_CNT, "P", "", "", "", imcseq, "");
+            //p_SetMc(TXT_WGT, "P", "", "", "", imcseq, "");
 
             //当前垛位
             p_ScIni(ss1, Sc1, 0, true, false);
-            iheadrow = 1;
+            iheadrow = 0;
             iscseq = 1;
             //0-5
-            p_SetSc("钢板号", "E", "14", "PL", "", "", "", iscseq, iheadrow, "L");
-
-            p_SetSc("产品类型", "E", "2", "L", "", "", "", iscseq, iheadrow, "M");
-            p_SetSc("进程状态", "E", "3", "L", "", "", "", iscseq, iheadrow, "M");
-            p_SetSc("标准号", "E", "30", "L", "", "", "", iscseq, iheadrow, "L");
-            p_SetSc("客户代码", "E", "6", "L", "", "", "", iscseq, iheadrow, "L");
-            p_SetSc("紧急订单", "C", "1", "L", "", "", "", iscseq, iheadrow);
-            //6-10
-            p_SetSc("厚度", "N", "6,2", "L", "", "", "", iscseq, iheadrow);
-            p_SetSc("宽度", "N", "6", "L", "", "", "", iscseq, iheadrow);
-            p_SetSc("长度", "N", "8", "L", "", "", "", iscseq, iheadrow);
-            p_SetSc("重量", "N", "15,3", "L", "", "", "", iscseq, iheadrow);
-            p_SetSc("订单号", "E", "14", "L", "", "", "", iscseq, iheadrow, "L");           
-            //11-15
-            p_SetSc("表面等级", "E", "4", "L", "", "", "", iscseq, iheadrow, "L");
-            p_SetSc("垛位号", "E", "7", "L", "", "", "", iscseq, iheadrow, "L");
-            p_SetSc("探伤", "E", "12", "L", "", "", "", iscseq, iheadrow, "L");
-            p_SetSc("切割", "E", "3", "L", "", "", "", iscseq, iheadrow, "L");
-            p_SetSc("矫直", "E", "3", "L", "", "", "", iscseq, iheadrow, "L");
-            //16
-            p_SetSc("热处理", "E", "15", "L", "", "", "", iscseq, iheadrow, "L");
-            p_SetSc("特殊工序", "E", "8", "L", "", "", "", iscseq, iheadrow, "L");
-            p_SetSc("生产日期", "D", "10", "L", "", "", "", iscseq, iheadrow, "L");
-            p_SetSc("班别", "E", "1", "L", "", "", "", iscseq, iheadrow, "M");
+            p_SetSc("钢板号", "E", "14", "L", "", "", "", iscseq, iheadrow, "M");//0
+            p_SetSc("进程状态", "E", "10", "L", "", "", "", iscseq, iheadrow, "M");//1
+            p_SetSc("标准号", "E", "30", "L", "", "", "", iscseq, iheadrow, "L");//2
+            p_SetSc("厚度", "E", "10", "L", "", "", "", iscseq, iheadrow, "R");//3
+            p_SetSc("宽度", "E", "10", "L", "", "", "", iscseq, iheadrow, "R");//4
+            p_SetSc("长度", "E", "10", "L", "", "", "", iscseq, iheadrow, "R");//5
+            p_SetSc("重量", "N", "10,3", "L", "", "", "", iscseq, iheadrow, "R");//6
+            p_SetSc("垛位", "E", "10", "L", "", "", "", iscseq, iheadrow, "L");//7
+            p_SetSc("外观等级", "E", "10", "L", "", "", "", iscseq, iheadrow, "M");//8
+            p_SetSc("产品等级", "E", "10", "L", "", "", "", iscseq, iheadrow, "M");//9
+            p_SetSc("探伤", "E", "20", "L", "", "", "", iscseq, iheadrow, "M");//10          
+            p_SetSc("切割", "E", "20", "L", "", "", "", iscseq, iheadrow, "M");//11
+            p_SetSc("矫直", "E", "20", "L", "", "", "", iscseq, iheadrow, "M");//12
+            p_SetSc("热处理", "E", "20", "L", "", "", "", iscseq, iheadrow, "M");//13
+            p_SetSc("生产时间", "D", "", "L", "", "", "", iscseq, iheadrow, "M");//14
+            p_SetSc("班别", "E", "2", "L", "", "", "", iscseq, iheadrow, "M");//15
+ 
             //合并列头
-            iheadrow = 0;
-            p_spanSpread("规格", 6, 9, iscseq, iheadrow, 1);
-            p_spanSpread("作业指示/实绩", 13, 17, iscseq, iheadrow, 1);
+            //iheadrow = 0;
+            //p_spanSpread("规格", 6, 9, iscseq, iheadrow, 1);
+            //p_spanSpread("作业指示/实绩", 13, 17, iscseq, iheadrow, 1);
             //钢板号冻结
-            ss1.Sheets[0].FrozenColumnCount = 1;
+            //ss1.Sheets[0].FrozenColumnCount = 1;
 
             //目标垛位情况
-            p_ScIni(ss2, Sc2, 12, true, false);
-            iheadrow = 1;
-            iscseq = 2;
-            //0-5
-            p_SetSc("垛层", "E", "3", "PIL", "", "", "", iscseq, iheadrow, "L");
-
-            p_SetSc("钢板号", "E", "14", "IL", "", "", "", iscseq, iheadrow, "L");
-            p_SetSc("产品类型", "E", "2", "L", "", "", "", iscseq, iheadrow, "M");
-            p_SetSc("进程状态", "E", "3", "L", "", "", "", iscseq, iheadrow, "M");
-            p_SetSc("标准号", "E", "30", "L", "", "", "", iscseq, iheadrow, "L");
-            p_SetSc("厚度", "N", "6,2", "L", "", "", "", iscseq, iheadrow);
-            //6-10
-            p_SetSc("宽度", "N", "6", "L", "", "", "", iscseq, iheadrow);
-            p_SetSc("长度", "N", "8", "L", "", "", "", iscseq, iheadrow);
-            p_SetSc("重量", "N", "15,3", "L", "", "", "", iscseq, iheadrow);
-            p_SetSc("订单号", "E", "14", "L", "", "", "", iscseq, iheadrow, "L");
-            p_SetSc("表面等级", "E", "10", "L", "", "", "", iscseq, iheadrow, "L");
-            //11-15
-            p_SetSc("生产日期", "D", "10", "L", "", "", "", iscseq, iheadrow, "L");
-            p_SetSc("更新人", "E", "7", "IL", "", "", "", iscseq, iheadrow, "L");
-            p_SetSc("库", "E", "2", "PILA", "", "", "", iscseq, iheadrow, "L");
-            p_SetSc("垛位", "E", "7", "PILA", "", "", "", iscseq, iheadrow, "L");
-            //合并列头
+            p_ScIni(ss2, Sc2, 0, true, false);
             iheadrow = 0;
-            p_spanSpread("规格", 5, 8, iscseq, iheadrow, 1);
+            iscseq = 2;
+            p_SetSc("垛层", "E", "60", "NI", "", "", "", iscseq, iheadrow, "L");//0
+            p_SetSc("钢板号", "E", "14", "I", "", "", "", iscseq, iheadrow, "L");//1
+            p_SetSc("起始垛位", "E", "7", "I", "", "", "", iscseq, iheadrow, "L");//2
+            p_SetSc("标准号", "E", "30", "L", "", "", "", iscseq, iheadrow, "L");//3
+            p_SetSc("产品等级", "E", "10", "L", "", "", "", iscseq, iheadrow, "M");//4
+            p_SetSc("厚度", "E", "10", "L", "", "", "", iscseq, iheadrow, "R");//5
+            p_SetSc("宽度", "E", "10", "L", "", "", "", iscseq, iheadrow, "R");//6
+            p_SetSc("长度", "E", "10", "L", "", "", "", iscseq, iheadrow, "R");//7
+            p_SetSc("重量", "N", "10,3", "L", "", "", "", iscseq, iheadrow, "R");//8
+            p_SetSc("生产日期", "D", "", "L", "", "", "", iscseq, iheadrow, "M");//9
+            p_SetSc("作业人员", "E", "10", "I", "", "", "", iscseq, iheadrow, "M");//10
+            //合并列头
+            //iheadrow = 0;
+            //p_spanSpread("规格", 5, 8, iscseq, iheadrow, 1);
             //钢板号冻结
-            ss2.Sheets[0].FrozenColumnCount = 2;
+            //ss2.Sheets[0].FrozenColumnCount = 2;
 
         }
         public void Form_Load(object sender, System.EventArgs e)

@@ -2583,7 +2583,7 @@ namespace CG
         {
             if (!GeneralCommon.Gf_IsFormLoad("WGE1010C"))
             {
-                WGE1010C WGE1010C = new WGE1010C();
+                CGE2021C WGE1010C = new CGE2021C();
                 WGE1010C.MdiParent = this;
                 WGE1010C.Show();
                 WGE1010C.WindowState = FormWindowState.Maximized;
