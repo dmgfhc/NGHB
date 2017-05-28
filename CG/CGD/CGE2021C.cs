@@ -1,5 +1,4 @@
-﻿
-using System.Collections;
+﻿using System.Collections;
 using System.Windows.Forms;
 using System.Diagnostics;
 using FarPoint.Win.Spread.CellType;
@@ -50,29 +49,18 @@ using CommonClass;
 ///-- 程序头注释结束++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ///-------------------------------------------------------------------------------
 
-namespace CG
-{
-    public partial class CGE2021C : CommonClass.FORMBASE
-    {
-        public CGE2021C()
-        {
+namespace CG {
+    public partial class CGE2021C: CommonClass.FORMBASE {
+        public CGE2021C() {
             InitializeComponent();
         }
         Collection Mc1 = new Collection();
         Collection Mc2 = new Collection();
         Collection Sc1 = new Collection();
         Collection Sc2 = new Collection();
-        public const int iss1_plate_wgt = 9; //SS1钢板重量
-        public const int iss1_is_urgnt  = 5; //SS1紧急订单
-        public const int iss1_plate_no  = 0; //SS1钢板号
-        public const int iss2_plate_no  = 1; //SS2钢板号
-        public const int iss2_upd_emp   = 12; //SS2更新人
-        public const int iss2_bed_seq = 0; //SS2垛层
-        public const int iss2_yarrd = 14; //SS2垛位
-        int iss2showrow = 0;
-        #region 界面初始化
-        protected override void p_SubFormInit()
-        {
+
+        //#region 界面初始化
+        protected override void p_SubFormInit() {
             int iheadrow;
             int imcseq;
             int iscseq;
@@ -80,42 +68,42 @@ namespace CG
             p_McIni(Mc1, false);
             imcseq = 1;
             //0-5
-            p_SetMc("当前库", text_cur_inv_code, "PN", "", "", "", "", imcseq);//0
-            p_SetMc("生产时间", SDT_PROD_DATE, "PN", "", "", "", "", imcseq);//1
-            p_SetMc("生产时间", SDT_PROD_DATE_TO, "PN", "", "", "", "", imcseq);//2
-            p_SetMc(txt_stdspec_chg, "P", "", "", "", imcseq, "");//3
-            p_SetMc(CBO_SHIFT, "P", "", "", "", imcseq, "");//4
-            p_SetMc(CBO_SURFGRD, "P", "", "", "", imcseq, "");//5
-            p_SetMc(txt_f_addr, "P", "", "", "", imcseq, "");//6
-            p_SetMc(txt_t_addr, "P", "", "", "", imcseq, "");//7
-            p_SetMc(TXT_PLATE_NO, "P", "", "", "", imcseq, "");//8
-            p_SetMc(SDB_THK, "P", "", "", "", imcseq, "");//9
-            p_SetMc(CBO_PROD_CD, "P", "", "", "", imcseq, "");//10
+            p_SetMc("当前库", text_cur_inv_code, "PN", "", "", "", "", imcseq); //0
+            p_SetMc("生产时间", SDT_PROD_DATE, "PN", "", "", "", "", imcseq); //1
+            p_SetMc("生产时间", SDT_PROD_DATE_TO, "PN", "", "", "", "", imcseq); //2
+            p_SetMc(txt_stdspec_chg, "P", "", "", "", imcseq, ""); //3
+            p_SetMc(CBO_SHIFT, "P", "", "", "", imcseq, ""); //4
+            p_SetMc(CBO_SURFGRD, "P", "", "", "", imcseq, ""); //5
+            p_SetMc(txt_f_addr, "P", "", "", "", imcseq, ""); //6
+            p_SetMc(txt_t_addr, "P", "", "", "", imcseq, ""); //7
+            p_SetMc(TXT_PLATE_NO, "P", "", "", "", imcseq, ""); //8
+            p_SetMc(SDB_THK, "P", "", "", "", imcseq, ""); //9
+            p_SetMc(CBO_PROD_CD, "P", "", "", "", imcseq, ""); //10
             //p_SetMc(TXT_CNT, "P", "", "", "", imcseq, "");
             //p_SetMc(TXT_WGT, "P", "", "", "", imcseq, "");
 
             //当前垛位
-            p_ScIni(ss1, Sc1, 0, true, false);
+            p_ScIni(ss1, Sc1, 0, false, false);
             iheadrow = 0;
             iscseq = 1;
             //0-5
-            p_SetSc("钢板号", "E", "14", "L", "", "", "", iscseq, iheadrow, "M");//0
-            p_SetSc("进程状态", "E", "10", "L", "", "", "", iscseq, iheadrow, "M");//1
-            p_SetSc("标准号", "E", "30", "L", "", "", "", iscseq, iheadrow, "L");//2
-            p_SetSc("厚度", "E", "10", "L", "", "", "", iscseq, iheadrow, "R");//3
-            p_SetSc("宽度", "E", "10", "L", "", "", "", iscseq, iheadrow, "R");//4
-            p_SetSc("长度", "E", "10", "L", "", "", "", iscseq, iheadrow, "R");//5
-            p_SetSc("重量", "N", "10,3", "L", "", "", "", iscseq, iheadrow, "R");//6
-            p_SetSc("垛位", "E", "10", "L", "", "", "", iscseq, iheadrow, "L");//7
-            p_SetSc("外观等级", "E", "10", "L", "", "", "", iscseq, iheadrow, "M");//8
-            p_SetSc("产品等级", "E", "10", "L", "", "", "", iscseq, iheadrow, "M");//9
-            p_SetSc("探伤", "E", "20", "L", "", "", "", iscseq, iheadrow, "M");//10          
-            p_SetSc("切割", "E", "20", "L", "", "", "", iscseq, iheadrow, "M");//11
-            p_SetSc("矫直", "E", "20", "L", "", "", "", iscseq, iheadrow, "M");//12
-            p_SetSc("热处理", "E", "20", "L", "", "", "", iscseq, iheadrow, "M");//13
-            p_SetSc("生产时间", "D", "", "L", "", "", "", iscseq, iheadrow, "M");//14
-            p_SetSc("班别", "E", "2", "L", "", "", "", iscseq, iheadrow, "M");//15
- 
+            p_SetSc("钢板号", "E", "14", "L", "", "", "", iscseq, iheadrow, "M"); //0
+            p_SetSc("进程状态", "E", "10", "L", "", "", "", iscseq, iheadrow, "M"); //1
+            p_SetSc("标准号", "E", "30", "L", "", "", "", iscseq, iheadrow, "L"); //2
+            p_SetSc("厚度", "E", "10", "L", "", "", "", iscseq, iheadrow, "R"); //3
+            p_SetSc("宽度", "E", "10", "L", "", "", "", iscseq, iheadrow, "R"); //4
+            p_SetSc("长度", "E", "10", "L", "", "", "", iscseq, iheadrow, "R"); //5
+            p_SetSc("重量", "N", "10,3", "L", "", "", "", iscseq, iheadrow, "R"); //6
+            p_SetSc("垛位", "E", "10", "L", "", "", "", iscseq, iheadrow, "L"); //7
+            p_SetSc("外观等级", "E", "10", "L", "", "", "", iscseq, iheadrow, "M"); //8
+            p_SetSc("产品等级", "E", "10", "L", "", "", "", iscseq, iheadrow, "M"); //9
+            p_SetSc("探伤", "E", "20", "L", "", "", "", iscseq, iheadrow, "M"); //10          
+            p_SetSc("切割", "E", "20", "L", "", "", "", iscseq, iheadrow, "M"); //11
+            p_SetSc("矫直", "E", "20", "L", "", "", "", iscseq, iheadrow, "M"); //12
+            p_SetSc("热处理", "E", "20", "L", "", "", "", iscseq, iheadrow, "M"); //13
+            p_SetSc("生产时间", "D", "", "L", "", "", "", iscseq, iheadrow, "M"); //14
+            p_SetSc("班别", "E", "2", "L", "", "", "", iscseq, iheadrow, "M"); //15
+
             //合并列头
             //iheadrow = 0;
             //p_spanSpread("规格", 6, 9, iscseq, iheadrow, 1);
@@ -124,20 +112,20 @@ namespace CG
             //ss1.Sheets[0].FrozenColumnCount = 1;
 
             //目标垛位情况
-            p_ScIni(ss2, Sc2, 0, true, false);
+            p_ScIni(ss2, Sc2, 0, false, false);
             iheadrow = 0;
             iscseq = 2;
-            p_SetSc("垛层", "E", "60", "NI", "", "", "", iscseq, iheadrow, "L");//0
-            p_SetSc("钢板号", "E", "14", "I", "", "", "", iscseq, iheadrow, "L");//1
-            p_SetSc("起始垛位", "E", "7", "I", "", "", "", iscseq, iheadrow, "L");//2
-            p_SetSc("标准号", "E", "30", "L", "", "", "", iscseq, iheadrow, "L");//3
-            p_SetSc("产品等级", "E", "10", "L", "", "", "", iscseq, iheadrow, "M");//4
-            p_SetSc("厚度", "E", "10", "L", "", "", "", iscseq, iheadrow, "R");//5
-            p_SetSc("宽度", "E", "10", "L", "", "", "", iscseq, iheadrow, "R");//6
-            p_SetSc("长度", "E", "10", "L", "", "", "", iscseq, iheadrow, "R");//7
-            p_SetSc("重量", "N", "10,3", "L", "", "", "", iscseq, iheadrow, "R");//8
-            p_SetSc("生产日期", "D", "", "L", "", "", "", iscseq, iheadrow, "M");//9
-            p_SetSc("作业人员", "E", "10", "I", "", "", "", iscseq, iheadrow, "M");//10
+            p_SetSc("垛层", "E", "60", "NI", "", "", "", iscseq, iheadrow, "L"); //0
+            p_SetSc("钢板号", "E", "14", "I", "", "", "", iscseq, iheadrow, "L"); //1
+            p_SetSc("起始垛位", "E", "7", "I", "", "", "", iscseq, iheadrow, "L"); //2
+            p_SetSc("标准号", "E", "30", "L", "", "", "", iscseq, iheadrow, "L"); //3
+            p_SetSc("产品等级", "E", "10", "L", "", "", "", iscseq, iheadrow, "M"); //4
+            p_SetSc("厚度", "E", "10", "L", "", "", "", iscseq, iheadrow, "R"); //5
+            p_SetSc("宽度", "E", "10", "L", "", "", "", iscseq, iheadrow, "R"); //6
+            p_SetSc("长度", "E", "10", "L", "", "", "", iscseq, iheadrow, "R"); //7
+            p_SetSc("重量", "N", "10,3", "L", "", "", "", iscseq, iheadrow, "R"); //8
+            p_SetSc("生产日期", "D", "", "L", "", "", "", iscseq, iheadrow, "M"); //9
+            p_SetSc("作业人员", "E", "10", "I", "", "", "", iscseq, iheadrow, "M"); //10
             //合并列头
             //iheadrow = 0;
             //p_spanSpread("规格", 5, 8, iscseq, iheadrow, 1);
@@ -145,195 +133,649 @@ namespace CG
             //ss2.Sheets[0].FrozenColumnCount = 2;
 
         }
-        public void Form_Load(object sender, System.EventArgs e)
-        {
+
+
+        private void CGE2021C_Load(object sender, EventArgs e) {
+            base.sSvrPgmPkgName = "CGE2021NC";
             Form_Define();
-       //     base.sAuthority = "1111";
-            txt_cur_inv.Text = "HB";
-            txt_prod_cd.Text = "PP";
-            return;            
-        }
-        #endregion
-        #region 查询
-        public override void Form_Ref()
-        {
-            base.p_Ref(1, 1, true, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss2, 2, true);
+            TXT_CNT.Text = "";
+            TXT_WGT.Text = "";
 
-            if (txt_t_addr.Text.Trim().Length == 7)
-            { base.p_Ref(2, 2, true,false); }
-            SpreadCommon.Gp_Sp_ColColor(ss2, iss2_plate_no, Color.Black, Color.White);
-            SpreadCommon.Gp_Sp_ColColor(ss2, iss2_bed_seq, Color.Black, Color.White);
-            SpreadCommon.Gp_Sp_ColColor(ss2, iss2_yarrd, Color.Black, Color.White);
-            SpreadCommon.Gp_Sp_ColColor(ss2, iss2_upd_emp, Color.Black, Color.White);
-            TXT_CNT.NumValue = 0;
-            TXT_WGT.NumValue = 0;   
-            return;
+            text_cur_inv_code.Text = "ZB";
+            text_cur_inv.Text = "中板";
+            CBO_PROD_CD.SelectedIndex = 0;
+            SDT_PROD_DATE_GotFocus();
         }
-        #endregion
-        #region 指定垛位
-        /// <summary>
-/// 单击表单1选中钢板指定垛位
-/// </summary>
-/// <param name="sender"></param>
-/// <param name="e"></param>
-    
-        private void ss1_CellClick(object sender, CellClickEventArgs e)
-        {
-            int iRowidx;
-            bool bFull = true;//是否到达顶层
 
-            if (ss1_Sheet1.RowCount <= 0 || ss2_Sheet1.RowCount <= 0)//表单1有物料才可以进行指定垛位处理
-            {
+        private void SDT_PROD_DATE_GotFocus() {
+            if (SDT_PROD_DATE.RawDate == "") {
+                SDT_PROD_DATE.RawDate = Gf_DTSet("D", "");
+            }
+            if (SDT_PROD_DATE_TO.RawDate == "") {
+                SDT_PROD_DATE_TO.RawDate = Gf_DTSet("D", "");
+            }
+        }
+
+        private void SDT_PROD_DATE_TO_GotFocus() {
+            if (SDT_PROD_DATE_TO.RawDate == "") {
+                SDT_PROD_DATE_TO.RawDate = Gf_DTSet("D", "");
+            }
+        }
+
+        //列头单击
+        private void ss1_Clk(int col, int row) {
+            if (col == 0) {
+                ss1_DblClk(col, row);
+            }
+        }
+
+
+        //ss1列头双击
+        private void ss1_DblClk(int col, int row) {
+            string plate_no;
+            int iCnt;
+            int iPlate_cnt;
+            double iPlate_wgt;
+
+            int tRow;
+
+            iPlate_cnt = 0;
+            iPlate_wgt = 0;
+
+            if (ss1.ActiveSheet.RowCount <= 0)
+                return;
+
+            if (ss1.ActiveSheet.RowHeader.Cells[row, 0].Text == "增加") {
+                plate_no = ss1.ActiveSheet.Cells[row, 0].Text;
+                for (iCnt = ss2.ActiveSheet.RowCount; iCnt >= 1; iCnt += -1) {
+                    if (ss2.ActiveSheet.RowHeader.Cells[iCnt - 1, 0].Text == "增加") {
+                        if (ss2.ActiveSheet.Cells[iCnt - 1, 1].Text == plate_no) {
+                            ss2.ActiveSheet.Cells[iCnt - 1, 1].Text = "";
+                            SpreadCommon.Gp_Sp_BlockColor(ss2, 0, ss2.ActiveSheet.ColumnCount - 1, iCnt - 1, iCnt - 1, Color.Black, Color.White);
+                            ss2.ActiveSheet.RowHeader.Cells[iCnt - 1, 0].Text = "";
+                            break; // TODO: might not be correct. Was : Exit For
+                        }
+                    }
+                }
+                ss1.ActiveSheet.RowHeader.Cells[row, 0].Text = "";
+
+                SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, row, row, Color.Black, Color.White);
+
+
+                for (iCnt = 1; iCnt <= ss1.ActiveSheet.RowCount; iCnt += 1) {
+                    if (ss1.ActiveSheet.RowHeader.Cells[iCnt - 1, 0].Text != "") {
+                        iPlate_cnt = iPlate_cnt + 1;
+                        iPlate_wgt = iPlate_wgt + Convert.ToDouble(ss1.ActiveSheet.Cells[iCnt - 1, 6].Text);
+                    }
+                }
+
+                TXT_CNT.Text = iPlate_cnt.ToString();
+                TXT_WGT.Text = iPlate_wgt.ToString();
                 return;
             }
-            if (ss1.ActiveSheet.RowHeader.Rows[e.Row].Label != "移动")//尚未选中的进行指定垛位处理
-            {
-                
-                if (ss2.ActiveSheet.SelectionCount>0)//指定开始堆放垛层
-                {
-                    for (int iRow = ss2.Sheets[0].ActiveRowIndex; iRow >= 0; iRow--)//垛层号小的在最后，从底层空垛层开始堆放
-                    {
-                        if (ss2.ActiveSheet.Cells[iRow, iss2_plate_no].Text.Trim() == "")//将钢板移动到空的垛层
-                        {
-                            iss2showrow = iRow;
-                            ss2.ActiveSheet.Cells[iRow, iss2_plate_no].Text = ss1.ActiveSheet.Cells[e.Row, iss1_plate_no].Text;
-                            ss2.ActiveSheet.Cells[iRow, iss2_upd_emp].Text = GeneralCommon.sUserID;//记录指定垛位人员
-                            ss2.ActiveSheet.RowHeader.Rows[iRow].Label = "修改";
-                            SpreadCommon.Gp_Sp_RowColor(ss2, iRow, Color.Black, Color.LightPink);//选定行着色
-                            ss2.ShowRow(0, iRow, VerticalPosition.Center);
-                            bFull = false;
-                            break;
-                        }                                
-                    }   
+
+            plate_no = ss1.ActiveSheet.Cells[row, 0].Text;
+
+            if (ss2.ActiveSheet.RowCount <= 0) {
+                return;
+            }
+
+            ss1.ActiveSheet.RowHeader.Cells[row, 0].Text = "增加";
+
+            SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, row, row, Color.Black, ColorTranslator.FromHtml("#FFC0FF"));
+
+
+            for (iCnt = 1; iCnt <= ss1.ActiveSheet.RowCount; iCnt += 1) {
+                if (ss1.ActiveSheet.RowHeader.Cells[iCnt - 1, 0].Text != "") {
+                    iPlate_cnt = iPlate_cnt + 1;
+                    iPlate_wgt = iPlate_wgt + Convert.ToDouble(ss1.ActiveSheet.Cells[iCnt - 1, 6].Text);
                 }
-                else
-                {
-                  try{    
-                          for (int iRow = 0; iRow <= ss2.ActiveSheet.RowCount - 1; iRow++)//未指定垛层从顶层向下开始查找可堆放层
-                        {                     
-                              if (ss2.ActiveSheet.Cells[iRow, iss2_plate_no].Text.Trim().Length > 1 && ss2.ActiveSheet.Cells[iRow-1, iss2_plate_no].Text.Trim().Length == 0)//查找到有钢板号且上一层垛位为空则可堆放
-                             {
-                                iss2showrow = iRow - 1;
-                                ss2.ActiveSheet.Cells[iRow - 1, iss2_plate_no].Text = ss1.ActiveSheet.Cells[e.Row, iss1_plate_no].Text;
-                                ss2.ActiveSheet.Cells[iRow - 1, iss2_upd_emp].Text = GeneralCommon.sUserID;//记录指定垛位人员
-                                ss2.ActiveSheet.RowHeader.Rows[iRow-1].Label = "修改";
-                                SpreadCommon.Gp_Sp_RowColor(ss2, iRow - 1, Color.Black, Color.LightPink);//选定行着色
-                                ss2.ShowRow(0, iRow - 1, VerticalPosition.Center);
-                                bFull = false;//垛位未放满允许堆放
-                                break;
-                             }  
-                         }                         
-                    }
-                    catch (Exception)//顶层有钢板，垛位满
-                    {
-                        GeneralCommon.Gp_MsgBoxDisplay("可堆放块数不足，请检查垛位信息或开始堆放垛层", "I", this.Text);
+            }
+
+            TXT_CNT.Text = iPlate_cnt.ToString();
+            TXT_WGT.Text = iPlate_wgt.ToString();
+
+            tRow = ss2.ActiveSheet.ActiveRowIndex;
+
+            if (ss2.ActiveSheet.Cells[tRow, 1].Text.Length == 14) {
+
+                for (iCnt = ss2.ActiveSheet.RowCount; iCnt >= 1; iCnt += -1) {
+                    //ss2.Col = 2;
+                    //ss2.ROW = iCnt;
+                    if (ss2.ActiveSheet.Cells[iCnt - 1, 1].Text == "") {
+                        ss2.ActiveSheet.Cells[iCnt - 1, 1].Text = plate_no;
+                        ss2.ActiveSheet.RowHeader.Cells[iCnt - 1, 0].Text = "增加";
+                        ss2.ActiveSheet.Cells[iCnt - 1, 10].Text = GeneralCommon.sUserID;
                         return;
                     }
                 }
 
-                if (bFull)//垛位堆放已到顶层且不允许堆放
-                {
-                    GeneralCommon.Gp_MsgBoxDisplay("可堆放块数不足，请检查垛位信息或开始堆放垛层", "I", this.Text);
+            } else {
+
+                if (ss2.ActiveSheet.Cells[tRow, 1].Text == "") {
+                    ss2.ActiveSheet.Cells[tRow, 1].Text = plate_no;
+                    ss2.ActiveSheet.RowHeader.Cells[tRow, 0].Text = "增加";
+                    ss2.ActiveSheet.Cells[tRow, 10].Text = GeneralCommon.sUserID;
+                    if (tRow >= 0) {
+                        ss2.ActiveSheet.SetActiveCell(tRow - 1, 0);
+                    }
                     return;
                 }
-         
-                ss1.ActiveSheet.RowHeader.Rows[e.Row].Label = "移动";//选定行行头标移动
-                SpreadCommon.Gp_Sp_RowColor(ss1, e.Row, Color.Black, Color.LightPink);//选定行着色
-                TXT_CNT.NumValue = TXT_CNT.NumValue + 1; //选择钢板件数
-                TXT_WGT.NumValue = TXT_WGT.NumValue + Convert.ToDouble(ss1.ActiveSheet.Cells[e.Row, iss1_plate_wgt].Text);//选择钢板累计重量
-
-
             }
-            else//取消已经指定垛位的操作
-            {                
-                for (int iRow = ss2.ActiveSheet.RowCount - 1; iRow >= 0; iRow--)
-                {
-                    if (ss2.ActiveSheet.Cells[iRow, iss2_plate_no].Text == ss1.ActiveSheet.Cells[e.Row, iss1_plate_no].Text && ss2.ActiveSheet.RowHeader.Rows[iRow].Label == "修改")//钢板号相同且行头是增加才可以取消
-                    {
-                        ss2.ActiveSheet.Cells[iRow, iss2_plate_no].Text = "";//清空钢板号
-                        ss2.ActiveSheet.Cells[iRow, iss2_upd_emp].Text = "";//清空指定垛位人员
-                        iRowidx = iRow + 1;
-                        ss2.ActiveSheet.RowHeader.Rows[iRow].Label = iRowidx.ToString();//行头恢复
-                        SpreadCommon.Gp_Sp_RowColor(ss2, iRow, Color.Black, Color.White);//背景色恢复
-                        break;
-                    }
-
-                }                
-                iRowidx = e.Row + 1;
-                ss1.ActiveSheet.RowHeader.Rows[e.Row].Label = iRowidx.ToString();//行头恢复
-                SpreadCommon.Gp_Sp_RowColor(ss1, e.Row, Color.Black, Color.White);//背景色恢复
-                TXT_CNT.NumValue = TXT_CNT.NumValue - 1; //选择钢板件数
-                TXT_WGT.NumValue = TXT_WGT.NumValue - Convert.ToDouble(ss1.ActiveSheet.Cells[e.Row, iss1_plate_wgt].Text);//选择钢板累计重量
-            }           
         }
 
-        //仅表单2可以保存删除修改
-        public override void Form_Pro()
-        {
-            if (ss2_Sheet1.RowCount > 0)
-            { 
-                base.p_pro(2,2,true,false);
-                TXT_CNT.NumValue = 0;//重置选中数量
-                TXT_WGT.NumValue = 0;//重置选中重量           
-                base.p_Ref(1, 1, true, false);
-                ss2.ShowRow(0,iss2showrow, VerticalPosition.Center);
-                iss2showrow = 0;
-            }            
-            return;
-        }
-
-        //仅表单2可以做删除
-        public override void  Form_Del()
-       {
-            if (ss2_Sheet1.RowCount > 0)
-            { base.p_del(1, 2, true); }
-            return;
-        }
-        #endregion
-          
-        public override bool Form_Cls()
-        {
-            // 重写清空
+        public override bool Form_Cls() {
+            TXT_CNT.Text = "";
+            TXT_WGT.Text = "";
             base.Form_Cls();
-            txt_cur_inv.Text = "HB";
-            txt_prod_cd.Text = "PP";
-            TXT_CNT.NumValue = 0;//重置选中数量
-            TXT_WGT.NumValue = 0;//重置选中重量    
+            text_cur_inv_code.Text = "ZB";
+            text_cur_inv.Text = "中板";
+            CBO_PROD_CD.SelectedIndex = 0;
+            SDT_PROD_DATE_GotFocus();
             return true;
         }
-        #region 整理垛位
-        /// <summary>
-        /// 点击目标垛位标签整理垛位
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void label11_DoubleClick(object sender, EventArgs e)
-        {
-            string[] Para = new string[5];
 
-            //垛位号长度符合才可以进行整理垛位操作
-            if (txt_t_addr.Text.Length == 7)
-            {
-                //判断库别如果为空赋予默认库
-                if (txt_cur_inv.Text.Trim() != "")
-                {
-                    Para[0] = txt_cur_inv.Text;
-                }
-                else { Para[0] = "HB"; }
-                Para[1] = txt_t_addr.Text;
-                Para[2] = GeneralCommon.sUserID;
-                Para[3] = this.Name;
-                if (GeneralCommon.Gf_ExecProcedure(GeneralCommon.M_CN1, "GP_RESET_YARD", Para))
-                {
-                    GeneralCommon.Gp_MsgBoxDisplay("垛位整理完毕", "I", this.Text);
-                    base.p_Ref(2, 2, true, true);
-                }
+        public override void Form_Ref() {
+            int iRow;
+            int sRow = 0;
+            int tRow;
+
+            int iCnt = 0;
+            double iWGT = 0;
+
+            //if (SpreadCommon.Gf_Sp_ProceExist(ss2, true)) return;
+
+            p_Ref(1, 1, true, false);
+
+            if (txt_t_addr.Text.Length > 2) {
+                p_Ref(1, 2, true, false);
             }
-            else
-            { GeneralCommon.Gp_MsgBoxDisplay("请输入正确垛位号", "I", this.Text); }
+
+            TXT_CNT.Text = "";
+            TXT_WGT.Text = "";
+
+            if (ss2.ActiveSheet.RowCount <= 0) return;
+
+            for (iRow = 1; iRow <= ss2.ActiveSheet.RowCount; iRow++) {
+                //ss2.ROW = iRow;
+                //ss2.Col = 2;
+                if (ss2.ActiveSheet.Cells[iRow - 1, 1].Text != "") {
+                    iCnt = iCnt + 1;
+                    //ss2.Col = 9;
+                    iWGT = iWGT + Convert.ToDouble(ss2.ActiveSheet.Cells[iRow - 1, 8].Text);
+                }
+                sRow = ss2.ActiveSheet.RowCount - 1;
+            }
+
+            TXT_LOC_CNT.Text = iCnt.ToString();
+            TXT_LOC_WGT.Text = iWGT.ToString();
+
+
+            for (iRow = 1; iRow <= ss2.ActiveSheet.RowCount; iRow++) {
+                //ss2.ROW = iRow;
+                //ss2.Col = 2;
+                if (ss2.ActiveSheet.Cells[iRow - 1, 1].Text != "") {
+                    sRow = iRow - 1;
+                    break;
+                }
+                sRow = ss2.ActiveSheet.RowCount - 1;
+            }
+
+            tRow = sRow + 15;
+            if (tRow > ss2.ActiveSheet.RowCount - 1) {
+                tRow = ss2.ActiveSheet.RowCount - 1;
+            }
+
+            ss2.ActiveSheet.SetActiveCell(tRow, 0);
+            //将光标移动到选择的行
+            ss2.ShowActiveCell(FarPoint.Win.Spread.VerticalPosition.Bottom, FarPoint.Win.Spread.HorizontalPosition.Nearest);
+
             return;
         }
+
+        public override void Form_Pro() {
+            int iRow;
+            int sRow = 0;
+            int tRow;
+
+            if (p_Pro(1, 2, true, false)) {
+                p_Ref(1, 1, true, false);
+            }
+
+            if (ss2.ActiveSheet.RowCount <= 0) return;
+            for (iRow = 1; iRow <= ss2.ActiveSheet.RowCount; iRow++) {
+                //ss2.ROW = iRow;
+                //ss2.Col = 2;
+                if (ss2.ActiveSheet.Cells[iRow - 1, 1].Text != "") {
+                    sRow = iRow;
+                    break;
+                }
+                sRow = ss2.ActiveSheet.RowCount - 1;
+            }
+
+            tRow = sRow + 15;
+            if (tRow > ss2.ActiveSheet.RowCount - 1) {
+                tRow = ss2.ActiveSheet.RowCount - 1;
+            }
+
+            ss2.ActiveSheet.SetActiveCell(tRow, 0);
+            ss2.ShowActiveCell(FarPoint.Win.Spread.VerticalPosition.Bottom, FarPoint.Win.Spread.HorizontalPosition.Nearest);
+
+            TXT_CNT.Text = "";
+            TXT_WGT.Text = "";
+        }
+
+        public override void Form_Del() {
+            if (ss2.ActiveSheet.RowCount > 0) { base.p_del(1, 2, true); }
+            return;
+        }
+
+        private void ss2_DblClk(int col, int row) {
+            if (ss2.ActiveSheet.RowCount <= 0) return;
+
+            if (col == 1) {
+                //ss2.ROW = ROW + 1;
+                //ss2.Col = 2;
+                if (ss2.ActiveSheet.Cells[row + 1, col].Text == "" & row != ss2.ActiveSheet.RowCount - 1)
+                    return;
+                //ss2.ROW = ROW;
+                if (ss2.ActiveSheet.Cells[row, col].Text == "") {
+                    //ss2.Col = 0;
+                    ss2.ActiveSheet.RowHeader.Cells[row, 0].Text = "增加";
+                } else {
+                    //ss2.Col = 0;
+                    ss2.ActiveSheet.RowHeader.Cells[row, 0].Text = "修改";
+                }
+            }
+        }
+
+        public override void Spread_Can() {
+            int ss1Row;
+            int ss2Row;
+            int iCnt;
+            int iCnt1;
+            string iPlate_no;
+
+
+            //ss2.Col = 0;
+            //ss2.ROW = ss2.ActiveSheet.ActiveRowIndex;
+            if (ss2.ActiveSheet.RowHeader.Cells[ss2.ActiveSheet.ActiveRowIndex, 0].Text == "增加") {
+                for (ss2Row = ss2.ActiveSheet.ActiveRowIndex; ss2Row >= 0; ss2Row += -1) {
+                    //ss2.Col = 2;
+                    //ss2.ROW = ss2Row;
+                    if (ss2.ActiveSheet.Cells[ss2Row, 1].Text.Length == 14) {
+                        iPlate_no = ss2.ActiveSheet.Cells[ss2Row, 1].Text;
+                        ss2.ActiveSheet.Cells[ss2Row, 1].Text = "";
+                        //ss2.Col = 0;
+                        ss2.ActiveSheet.RowHeader.Cells[ss2Row, 0].Text = "";
+                        for (ss1Row = 1; ss1Row <= ss1.ActiveSheet.RowCount; ss1Row++) {
+                            //ss1.ROW = ss1Row;
+                            //ss1.Col = 0;
+                            if (ss1.ActiveSheet.RowHeader.Cells[ss1Row - 1, 0].Text == "增加") {
+                                //ss1.Col = 1;
+                                if (ss1.ActiveSheet.Cells[ss1Row - 1, 0].Text == iPlate_no) {
+                                    //ss1.Col = 0;
+                                    ss1.ActiveSheet.RowHeader.Cells[ss1Row - 1, 0].Text = "";
+
+
+                                    SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, ss1Row - 1, ss1Row - 1, Color.Black, ColorTranslator.FromHtml("#FFFFFF"));
+
+                                    //ss1.Col = 7;
+                                    TXT_CNT.Text = (Convert.ToInt32(TXT_CNT.Text) - 1).ToString();
+                                    TXT_WGT.Text = (Convert.ToDouble(TXT_WGT.Text) - Convert.ToDouble(ss1.ActiveSheet.Cells[ss1Row - 1, 6].Text)).ToString();
+                                    if (TXT_CNT.Text == "0") {
+                                        TXT_CNT.Text = "";
+                                        TXT_WGT.Text = "";
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        public string Gf_CarInfFind(string Car_no, string Car_knd, string nameType)
+        {
+            if (GeneralCommon.M_CN1.State == 0)
+                if (!GeneralCommon.GF_DbConnect()) return "FAIL";
+            string sQuery;
+            string Gf_CarInfFind = "";
+            switch (nameType)
+            {
+                case "1":
+                    //最大装载量
+                    sQuery = "SELECT H.CAR_WGT_MAX    FROM HP_CAR_IMF H WHERE H.CAR_NO = '" + Car_no + "' AND H.CAR_KND = '" + Car_knd + "' ";
+                    break;
+                case "2":
+                    //装载量(适量)
+                    sQuery = "SELECT H.CAR_WGT_AVE    FROM HP_CAR_IMF H WHERE H.CAR_NO = '" + Car_no + "' AND H.CAR_KND = '" + Car_knd + "' ";
+                    break;
+                default:
+                    //可装车长度
+                    sQuery = "SELECT H.CAR_LEN        FROM HP_CAR_IMF H WHERE H.CAR_NO = '" + Car_no + "' AND H.CAR_KND = '" + Car_knd + "' ";
+                    break;
+            }
+            ADODB.Recordset AdoRs = new ADODB.Recordset();
+            try
+            {
+                AdoRs.Open(sQuery, GeneralCommon.M_CN1, ADODB.CursorTypeEnum.adOpenStatic, ADODB.LockTypeEnum.adLockReadOnly);
+
+                if (!AdoRs.BOF && !AdoRs.EOF)
+                {
+                    //RltValue = true;
+                    while (!AdoRs.EOF)
+                    {
+                        if (AdoRs.Fields[0].Value.ToString() == "")
+                        {
+                            Gf_CarInfFind = "";
+                        }
+                        else
+                        {
+                            Gf_CarInfFind = AdoRs.Fields[0].Value.ToString();
+                        }
+                        AdoRs.MoveNext();
+                    }
+                }
+                GeneralCommon.M_CN1.Close();
+                AdoRs = null;
+
+                return Gf_CarInfFind;
+            }
+            catch (Exception ex)
+            {
+                if (GeneralCommon.M_CN1.State != 0) GeneralCommon.M_CN1.Close();
+                AdoRs = null;
+                return "";
+            }
+        }
+
+
+
+
+        # region 公共方法
+
+        public bool Gp_DateCheck(string DateCheck, string sDTChk) {
+            sDTChk = "M";
+            string iDateCheck;
+            string iDateMatch;
+            string iDate;
+            System.DateTime iCheck;
+
+            if (sDTChk == "M") {
+                iDateCheck = DateCheck;
+            } else {
+                iDateCheck = DateCheck.Replace("-", "");
+                iDateCheck = iDateCheck.Replace(" ", "");
+                iDateCheck = iDateCheck.Replace(":", "");
+            }
+
+            if (Convert.ToInt32(iDateCheck.Substring(0, 4)) > 2020 | Convert.ToInt32(iDateCheck.Substring(0, 4)) < 2000) {
+                return false;
+            }
+
+            switch (iDateCheck.Length) {
+                case 8:
+                    iDate = iDateCheck.Substring(0, 4) + "-" + iDateCheck.Substring(4, 2) + "-" + iDateCheck.Substring(6, 2);
+                    iCheck = Convert.ToDateTime(iDate.Substring(1, 10));
+                    break;
+                case 12:
+                    iDate = iDateCheck.Substring(0, 4) + "-" + iDateCheck.Substring(4, 2) + "-" + iDateCheck.Substring(6, 2) + " " + iDateCheck.Substring(8, 2) + ":" + iDateCheck.Substring(10, 2);
+                    iCheck = Convert.ToDateTime(iDate.Substring(1, 16));
+                    break;
+                case 14:
+                    iDate = iDateCheck.Substring(0, 4) + "-" + iDateCheck.Substring(4, 2) + "-" + iDateCheck.Substring(6, 2) + " " + iDateCheck.Substring(8, 2) + ":" + iDateCheck.Substring(10, 2) + ":" + iDateCheck.Substring(12, 2);
+                    iCheck = Convert.ToDateTime(iDate.Substring(1, 19));
+                    break;
+                default:
+                    return false;
+                    break;
+            }
+
+            iDateMatch = iCheck.ToString("yyyyMM");
+
+            if (iDateMatch != iDateCheck.Substring(0, 8)) {
+                return false;
+            }
+            return true;
+        }
+
+        public string Gf_ShiftSet3(string WKDATE) {
+
+
+            if (GeneralCommon.M_CN1.State == 0)
+                if (!GeneralCommon.GF_DbConnect()) return "";
+            string Shift_HH = "0";
+            string sQuery;
+            sQuery = "SELECT TO_CHAR(SYSDATE,'HH24MI') FROM DUAL";
+            ADODB.Recordset AdoRs = new ADODB.Recordset();
+            try {
+                if (WKDATE != "") {
+                    return WKDATE;
+                }
+                AdoRs.Open(sQuery, GeneralCommon.M_CN1, ADODB.CursorTypeEnum.adOpenStatic, ADODB.LockTypeEnum.adLockReadOnly);
+
+                if (!AdoRs.BOF && !AdoRs.EOF) {
+                    //RltValue = true;
+                    while (!AdoRs.EOF) {
+                        if (AdoRs.Fields[0].Value.ToString() == "") {
+                            Shift_HH = "";
+                        } else {
+                            Shift_HH = AdoRs.Fields[0].Value.ToString();
+                        }
+                        AdoRs.MoveNext();
+                    }
+                }
+                GeneralCommon.M_CN1.Close();
+                AdoRs = null;
+
+                if (Convert.ToInt32(Shift_HH) < 800) {
+                    return "1";
+                } else if (Convert.ToInt32(Shift_HH) < 1600) {
+                    return "2";
+                } else {
+                    return "3";
+                }
+            } catch (Exception ex) {
+                if (GeneralCommon.M_CN1.State != 0) GeneralCommon.M_CN1.Close();
+                AdoRs = null;
+                return "0";
+            }
+        }
+
+        public string Gf_GroupSet(string shift, string setDate) {
+
+            if (GeneralCommon.M_CN1.State == 0)
+                if (!GeneralCommon.GF_DbConnect()) return "";
+
+            string sQuery;
+            string group = "0";
+            sQuery = "SELECT Gf_Groupset('C3'," + shift + ",SUBSTR('" + setDate + "',1,8)) FROM DUAL";
+
+            ADODB.Recordset AdoRs = new ADODB.Recordset();
+            try {
+                AdoRs.Open(sQuery, GeneralCommon.M_CN1, ADODB.CursorTypeEnum.adOpenStatic, ADODB.LockTypeEnum.adLockReadOnly);
+
+                if (!AdoRs.BOF && !AdoRs.EOF) {
+                    //RltValue = true;
+                    while (!AdoRs.EOF) {
+                        if (AdoRs.Fields[0].Value.ToString() == "") {
+                            group = "";
+                        } else {
+                            group = AdoRs.Fields[0].Value.ToString();
+                        }
+                        AdoRs.MoveNext();
+                    }
+                }
+
+                GeneralCommon.M_CN1.Close();
+
+                AdoRs = null;
+
+                return group;
+            } catch (Exception ex) {
+                if (GeneralCommon.M_CN1.State != 0) GeneralCommon.M_CN1.Close();
+                AdoRs = null;
+                return "";
+            }
+        }
+
+        //日期格式
+        public string Gf_DTSet(string DTCheck, string DTFlag) {
+
+            if (DTCheck == "D") {
+                DTCheck = "D";
+            } else {
+                DTCheck = "S";
+            }
+            DTFlag = "C";
+
+            string sQuery = "";
+            int sQuery_Len = 0;
+            string time = "";
+
+            switch (DTCheck) {
+                case "S":
+                    sQuery = "SELECT TO_CHAR(SYSDATE,'YYYYMMDDHH24MISS') FROM DUAL";
+                    sQuery_Len = 14;
+                    break;
+                case "I":
+                    sQuery = "SELECT TO_CHAR(SYSDATE,'YYYYMMDDHH24MI') FROM DUAL";
+                    sQuery_Len = 12;
+                    break;
+                case "H":
+                    sQuery = "SELECT TO_CHAR(SYSDATE,'YYYYMMDDHH24') FROM DUAL";
+                    sQuery_Len = 10;
+                    break;
+                case "D":
+                    sQuery = "SELECT TO_CHAR(SYSDATE,'YYYYMMDD') FROM DUAL";
+                    sQuery_Len = 8;
+                    break;
+                case "T":
+                    sQuery = "SELECT TO_CHAR(SYSDATE,'HH24MISS') FROM DUAL";
+                    sQuery_Len = 6;
+                    break;
+                case "M":
+                    sQuery = "SELECT TO_CHAR(SYSDATE,'YYYYMM') FROM DUAL";
+                    sQuery_Len = 6;
+                    break;
+                case "Y":
+                    sQuery = "SELECT TO_CHAR(SYSDATE,'YYYY') FROM DUAL";
+                    sQuery_Len = 4;
+                    break;
+            }
+
+            if (DTFlag == "C") {
+                if (DTCheck == "T") {
+                    return DateTime.Now.ToString("HHmmss");
+                }
+                return (DateTime.Now.ToString("yyyyMMddHHmmss")).Substring(0, sQuery_Len);
+            }
+
+            if (GeneralCommon.M_CN1.State == 0)
+                if (!GeneralCommon.GF_DbConnect()) return "00000000000000";
+
+            ADODB.Recordset AdoRs = new ADODB.Recordset();
+            try {
+                AdoRs.Open(sQuery, GeneralCommon.M_CN1, ADODB.CursorTypeEnum.adOpenStatic, ADODB.LockTypeEnum.adLockReadOnly);
+
+                if (!AdoRs.BOF && !AdoRs.EOF) {
+                    //RltValue = true;
+                    while (!AdoRs.EOF) {
+                        if (AdoRs.Fields[0].Value.ToString() == "") {
+                            time = "";
+                        } else {
+                            time = AdoRs.Fields[0].Value.ToString();
+                        }
+                        AdoRs.MoveNext();
+                    }
+                } else {
+                    time = "00000000000000";
+
+                }
+
+                GeneralCommon.M_CN1.Close();
+
+                AdoRs = null;
+
+                return time;
+            } catch (Exception ex) {
+                if (GeneralCommon.M_CN1.State != 0) GeneralCommon.M_CN1.Close();
+                AdoRs = null;
+                return "00000000000000";
+            }
+        }
+
+        //unlock spread L column
+        public void unlockSpread(FpSpread e) {
+            int columnCount = e.Sheets[0].ColumnCount;
+            for (int i = 0; i < columnCount; i++) {
+                e.ActiveSheet.Columns[i].Locked = false;
+            }
+        }
+
+        public void lockSpread(FpSpread e) {
+            int columnCount = e.Sheets[0].ColumnCount;
+            for (int i = 0; i < columnCount; i++) {
+                e.ActiveSheet.Columns[i].Locked = true;
+            }
+        }
+
         #endregion
+
+        private void ss1_CellClick(object sender, CellClickEventArgs e)
+        {
+            ss1_Clk(e.Column, e.Row);
+        }
+
+        private void ss1_CellDoubleClick(object sender, CellClickEventArgs e)
+        {
+            ss1_DblClk(e.Column, e.Row);
+        }
+
+        private void ss2_CellDoubleClick(object sender, CellClickEventArgs e)
+        {
+            ss2_DblClk(e.Column, e.Row);
+        }
+
+        private void text_cur_inv_code_TextChanged(object sender, EventArgs e)
+        {
+            if (text_cur_inv_code.Text == "ZB")
+            {
+                txt_f_addr.sKey = "F0037";
+                txt_t_addr.sKey = "F0037";
+            }
+            else if (text_cur_inv_code.Text == "WG")
+            {
+                txt_f_addr.sKey = "F0036";
+                txt_t_addr.sKey = "F0036";
+            }
+            else if (text_cur_inv_code.Text == "52")
+            {
+                txt_f_addr.sKey = "F0038";
+                txt_t_addr.sKey = "F0038";
+            }
+            else
+            {
+                txt_f_addr.sKey = "X";
+                txt_t_addr.sKey = "X";
+            }
+        }
+
+        private void txt_t_addr_TextChanged(object sender, EventArgs e)
+        {
+            if (txt_t_addr.Text.Length == txt_t_addr.MaxLength)
+            {
+                TXT_MAX_WGT.Text = Gf_CarInfFind(txt_t_addr.Text, "R", "1");
+            }
+            else
+            {
+                TXT_MAX_WGT.Text = "";
+            }
+        }
+
     }
-       
+
 }

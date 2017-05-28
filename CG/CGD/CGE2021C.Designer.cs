@@ -91,12 +91,13 @@
             this.text_cur_inv_code.CustomSetting.Add(bControlFiledSetting2);
             this.text_cur_inv_code.InputControl = this.text_cur_inv_code;
             this.text_cur_inv_code.Location = new System.Drawing.Point(81, 17);
-            this.text_cur_inv_code.MaxLength = 1;
+            this.text_cur_inv_code.MaxLength = 2;
             this.text_cur_inv_code.Name = "text_cur_inv_code";
             this.text_cur_inv_code.Size = new System.Drawing.Size(33, 22);
             this.text_cur_inv_code.sJoin = "";
             this.text_cur_inv_code.sSqletc = resources.GetString("text_cur_inv_code.sSqletc");
             this.text_cur_inv_code.TabIndex = 131;
+            this.text_cur_inv_code.TextChanged += new System.EventHandler(this.text_cur_inv_code_TextChanged);
             // 
             // text_cur_inv
             // 
@@ -265,6 +266,7 @@
             // txt_stdspec_chg
             // 
             this.txt_stdspec_chg.Location = new System.Drawing.Point(293, 47);
+            this.txt_stdspec_chg.MaxLength = 18;
             this.txt_stdspec_chg.Name = "txt_stdspec_chg";
             this.txt_stdspec_chg.sFcontrol = "StdSPEC";
             this.txt_stdspec_chg.Size = new System.Drawing.Size(210, 22);
@@ -294,6 +296,7 @@
             // txt_f_addr
             // 
             this.txt_f_addr.Location = new System.Drawing.Point(80, 47);
+            this.txt_f_addr.MaxLength = 7;
             this.txt_f_addr.Name = "txt_f_addr";
             this.txt_f_addr.Size = new System.Drawing.Size(114, 22);
             this.txt_f_addr.sJoin = "";
@@ -303,11 +306,13 @@
             // txt_t_addr
             // 
             this.txt_t_addr.Location = new System.Drawing.Point(596, 79);
+            this.txt_t_addr.MaxLength = 7;
             this.txt_t_addr.Name = "txt_t_addr";
             this.txt_t_addr.Size = new System.Drawing.Size(106, 22);
             this.txt_t_addr.sJoin = "";
             this.txt_t_addr.sKey = "F0037";
             this.txt_t_addr.TabIndex = 8;
+            this.txt_t_addr.TextChanged += new System.EventHandler(this.txt_t_addr_TextChanged);
             // 
             // CBO_PROD_CD
             // 
@@ -433,7 +438,6 @@
             this.label11.Tag = "f4";
             this.label11.Text = "目标垛位";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label11.DoubleClick += new System.EventHandler(this.label11_DoubleClick);
             // 
             // label12
             // 
@@ -508,6 +512,7 @@
             this.ss1.Size = new System.Drawing.Size(612, 491);
             this.ss1.TabIndex = 14;
             this.ss1.CellClick += new FarPoint.Win.Spread.CellClickEventHandler(this.ss1_CellClick);
+            this.ss1.CellDoubleClick += new FarPoint.Win.Spread.CellClickEventHandler(this.ss1_CellDoubleClick);
             // 
             // ss1_Sheet1
             // 
@@ -524,6 +529,7 @@
             this.ss2_Sheet1});
             this.ss2.Size = new System.Drawing.Size(539, 491);
             this.ss2.TabIndex = 15;
+            this.ss2.CellDoubleClick += new FarPoint.Win.Spread.CellClickEventHandler(this.ss2_CellDoubleClick);
             // 
             // ss2_Sheet1
             // 
@@ -537,7 +543,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "CGE2021C";
             this.Text = "中板未入库产品垛位管理界面_CGE2021C";
-            this.Load += new System.EventHandler(this.Form_Load);
+            this.Load += new System.EventHandler(this.CGE2021C_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

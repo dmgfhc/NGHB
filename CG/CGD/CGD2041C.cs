@@ -351,8 +351,9 @@ namespace CG
         public override void Form_Ref()
         {
 
-            if (SpreadCommon.Gf_Sp_ProceExist(ss2, true))
-                return;
+            ////p_Ref框架会调用此方法，此处注掉，如有需要再开启
+            //if (SpreadCommon.Gf_Sp_ProceExist(ss2, true))
+            //    return;
 
             if (txt_charge_no.Text.Trim() == "" & SDT_PROD_DATE.RawDate == "")
             {

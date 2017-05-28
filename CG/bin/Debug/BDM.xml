@@ -599,6 +599,23 @@
             使用代码编辑器修改此方法的内容。
             </summary>
         </member>
+        <member name="F:CG.CGE2021C.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:CG.CGE2021C.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:CG.CGE2021C.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
         <member name="F:CG.MainMenu.sAuthority">
             '''fdfdsfdsfds
         </member>
@@ -924,37 +941,6 @@
             <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
         </member>
         <member name="M:CG.WGC2070C.InitializeComponent">
-            <summary>
-            设计器支持所需的方法 - 不要
-            使用代码编辑器修改此方法的内容。
-            </summary>
-        </member>
-        <member name="M:CG.WGE1010C.ss1_CellClick(System.Object,FarPoint.Win.Spread.CellClickEventArgs)">
-            <summary>
-            单击表单1选中钢板指定垛位
-            </summary>
-            <param name="sender"></param>
-            <param name="e"></param>
-        </member>
-        <member name="M:CG.WGE1010C.label11_DoubleClick(System.Object,System.EventArgs)">
-            <summary>
-            点击目标垛位标签整理垛位
-            </summary>
-            <param name="sender"></param>
-            <param name="e"></param>
-        </member>
-        <member name="F:CG.WGE1010C.components">
-            <summary>
-            必需的设计器变量。
-            </summary>
-        </member>
-        <member name="M:CG.WGE1010C.Dispose(System.Boolean)">
-            <summary>
-            清理所有正在使用的资源。
-            </summary>
-            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
-        </member>
-        <member name="M:CG.WGE1010C.InitializeComponent">
             <summary>
             设计器支持所需的方法 - 不要
             使用代码编辑器修改此方法的内容。
