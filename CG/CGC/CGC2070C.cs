@@ -25,6 +25,7 @@ using FarPoint.Win.Spread.UndoRedo;
 using FarPoint.Win.Spread.Design;
 using FarPoint.Win;
 using CommonClass;
+using System.Threading;
 
 //-------------------------------------------------------------------------------
 //-- PROGRAM HEADER  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -109,10 +110,10 @@ namespace CG {
             p_SetSc("标准号", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //10
             p_SetSc("是否探伤", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //11
             p_SetSc("是否真空", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //12
-            p_SetSc("1#线", "E", "60", "I", "", "", "", iscseq, iheadrow, "M"); //13
-            p_SetSc("2#线", "E", "60", "I", "", "", "", iscseq, iheadrow, "M"); //14
-            p_SetSc("3#线", "E", "60", "I", "", "", "", iscseq, iheadrow, "M"); //15
-            p_SetSc("4#线", "E", "60", "I", "", "", "", iscseq, iheadrow, "M"); //16
+            p_SetSc("1#线", "C", "", "I", "", "", "", iscseq, iheadrow, "M"); //13
+            p_SetSc("2#线", "C", "", "I", "", "", "", iscseq, iheadrow, "M"); //14
+            p_SetSc("3#线", "C", "", "I", "", "", "", iscseq, iheadrow, "M"); //15
+            p_SetSc("4#线", "C", "", "I", "", "", "", iscseq, iheadrow, "M"); //16
             p_SetSc("下线时间", "DT", "", "I", "", "", "", iscseq, iheadrow, "M"); //17
             p_SetSc("计划/实绩", "E", "10", "L", "", "", "", iscseq, iheadrow, "M"); //18
             p_SetSc("母板分段时间", "DT", "", "L", "", "", "", iscseq, iheadrow, "M"); //19
@@ -194,6 +195,10 @@ namespace CG {
 
             SpreadCommon.Gp_Sp_ColHidden(ss1, SS1_SMP_YN, true);
             SpreadCommon.Gp_Sp_ColHidden(ss1, SS1_OFFLINE_DATE, true);
+
+            ss1.ActiveSheet.FrozenColumnCount = 3;
+
+            unlockSpread(ss1);
 
         }
 
@@ -315,49 +320,50 @@ namespace CG {
 
             if ((col == SS1_SMP_YN | col == SS1_LINE1 | col == SS1_LINE2 | col == SS1_LINE3 | col == SS1_LINE4)) {
 
-                ss1.EditMode = true;
+                //ss1.EditMode = true;
 
-                if (ss1.ActiveSheet.Cells[ss1.ActiveSheet.ActiveRowIndex, col].Text == "False") {
-                    ss1.ActiveSheet.Cells[ss1.ActiveSheet.ActiveRowIndex, col].Value = 1;
-                } else {
-                    ss1.ActiveSheet.Cells[ss1.ActiveSheet.ActiveRowIndex, col].Value = 0;
-                }
+                //if (ss1.ActiveSheet.Cells[row, col].Text == "False")
+                //{
+                //    ss1.ActiveSheet.Cells[row, col].Value = 1;
+                //} else {
+                //    ss1.ActiveSheet.Cells[row, col].Value = 0;
+                //}
 
 
-                if (ss1.ActiveSheet.Cells[ss1.ActiveSheet.ActiveRowIndex, col].Text == "True") {
+                if (ss1.ActiveSheet.Cells[row, col].Text == "True")
+                {
                     if (col == SS1_LINE1) {
-                        ss1.ActiveSheet.Cells[ss1.ActiveSheet.ActiveRowIndex, SS1_LINE2].Value = 0;
-                        ss1.ActiveSheet.Cells[ss1.ActiveSheet.ActiveRowIndex, SS1_LINE3].Value = 0;
-                        ss1.ActiveSheet.Cells[ss1.ActiveSheet.ActiveRowIndex, SS1_LINE4].Value = 0;
-                        ss1.ActiveSheet.Cells[ss1.ActiveSheet.ActiveRowIndex, SS1_OFFLINE_DATE].Text = "";
+                        ss1.ActiveSheet.Cells[row, SS1_LINE2].Value = 0;
+                        ss1.ActiveSheet.Cells[row, SS1_LINE3].Value = 0;
+                        ss1.ActiveSheet.Cells[row, SS1_LINE4].Value = 0;
+                        ss1.ActiveSheet.Cells[row, SS1_OFFLINE_DATE].Text = "";
                     } else if (col == SS1_LINE2) {
-                        ss1.ActiveSheet.Cells[ss1.ActiveSheet.ActiveRowIndex, SS1_LINE1].Value = 0;
-                        ss1.ActiveSheet.Cells[ss1.ActiveSheet.ActiveRowIndex, SS1_LINE3].Value = 0;
-                        ss1.ActiveSheet.Cells[ss1.ActiveSheet.ActiveRowIndex, SS1_LINE4].Value = 0;
-                        ss1.ActiveSheet.Cells[ss1.ActiveSheet.ActiveRowIndex, SS1_OFFLINE_DATE].Text = "";
+                        ss1.ActiveSheet.Cells[row, SS1_LINE1].Value = 0;
+                        ss1.ActiveSheet.Cells[row, SS1_LINE3].Value = 0;
+                        ss1.ActiveSheet.Cells[row, SS1_LINE4].Value = 0;
+                        ss1.ActiveSheet.Cells[row, SS1_OFFLINE_DATE].Text = "";
                     } else if (col == SS1_LINE3) {
-                        ss1.ActiveSheet.Cells[ss1.ActiveSheet.ActiveRowIndex, SS1_LINE1].Value = 0;
-                        ss1.ActiveSheet.Cells[ss1.ActiveSheet.ActiveRowIndex, SS1_LINE2].Value = 0;
-                        ss1.ActiveSheet.Cells[ss1.ActiveSheet.ActiveRowIndex, SS1_LINE4].Value = 0;
+                        ss1.ActiveSheet.Cells[row, SS1_LINE1].Value = 0;
+                        ss1.ActiveSheet.Cells[row, SS1_LINE2].Value = 0;
+                        ss1.ActiveSheet.Cells[row, SS1_LINE4].Value = 0;
                     } else if (col == SS1_LINE4) {
-                        ss1.ActiveSheet.Cells[ss1.ActiveSheet.ActiveRowIndex, SS1_LINE1].Value = 0;
-                        ss1.ActiveSheet.Cells[ss1.ActiveSheet.ActiveRowIndex, SS1_LINE2].Value = 0;
-                        ss1.ActiveSheet.Cells[ss1.ActiveSheet.ActiveRowIndex, SS1_LINE3].Value = 0;
+                        ss1.ActiveSheet.Cells[row, SS1_LINE1].Value = 0;
+                        ss1.ActiveSheet.Cells[row, SS1_LINE2].Value = 0;
+                        ss1.ActiveSheet.Cells[row, SS1_LINE3].Value = 0;
                     }
                 } else {
-                    ss1.ActiveSheet.RowHeader.Cells[ss1.ActiveSheet.ActiveRowIndex, 0].Text = "";
+                    ss1.ActiveSheet.RowHeader.Cells[row, 0].Text = "";
                 }
 
-                ss1.ActiveSheet.Cells[ss1.ActiveSheet.ActiveRowIndex, SS1_USERID].Text = GeneralCommon.sUserID;
+                ss1.ActiveSheet.Cells[row, SS1_USERID].Text = GeneralCommon.sUserID;
 
-                SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, ss1.ActiveSheet.ActiveRowIndex, ss1.ActiveSheet.ActiveRowIndex, Color.Black, SSP1.BackColor);
+                SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, row, row, Color.Black, SSP1.BackColor);
 
                 //txt_tmpseq.Text = ss1.ActiveSheet.ActiveRowIndex;
 
             }
 
         }
-
 
 
         #region 公共方法
@@ -584,6 +590,24 @@ namespace CG {
         }
 
         #endregion
+
+        private void SDT_PROD_DATE_FROM_DoubleClick(object sender, EventArgs e)
+        {
+            SDT_PROD_DATE_FROM_GotFocus();
+        }
+
+        private void SDT_PROD_DATE_TO_DoubleClick(object sender, EventArgs e)
+        {
+            SDT_PROD_DATE_TO_GotFocus();
+        }
+
+        private void ss1_ButtonClicked(object sender, EditorNotifyEventArgs e)
+        {
+            ss1_Clk(e.Column, e.Row);
+        }
+
+       
+
 
     }
 }
