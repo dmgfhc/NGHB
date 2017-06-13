@@ -381,6 +381,12 @@
     <Compile Include="CGD\CGE2021C.Designer.cs">
       <DependentUpon>CGE2021C.cs</DependentUpon>
     </Compile>
+    <Compile Include="CGC\CGC2071C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CGC\CGC2071C.Designer.cs">
+      <DependentUpon>CGC2071C.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu\MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -826,6 +832,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CGD\CGE2021C.resx">
       <DependentUpon>CGE2021C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CGC\CGC2071C.resx">
+      <DependentUpon>CGC2071C.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
