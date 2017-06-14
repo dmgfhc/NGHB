@@ -48,12 +48,9 @@ using System.IO;
 //-- DECLARATION     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //-------------------------------------------------------------------------------
 
-namespace CG
-{
-    public partial class CGC2071C : CommonClass.FORMBASE
-    {
-        public CGC2071C()
-        {
+namespace CG {
+    public partial class CGC2071C: CommonClass.FORMBASE {
+        public CGC2071C() {
             InitializeComponent();
         }
 
@@ -100,10 +97,8 @@ namespace CG
         //const int SPD_PLAN_PROD_WGT = 33,
 
 
-        #region 界面初始化
 
-        protected override void p_SubFormInit()
-        {
+        protected override void p_SubFormInit() {
 
             int iheadrow;
             int imcseq;
@@ -198,35 +193,34 @@ namespace CG
             //SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_OCCR_TIME, true);
 
         }
-        private void opt_line1_Clk()
-        {
+        private void opt_line1_Clk() {
+            if (!opt_line1.Checked) return;
             txt_line.Text = "1";
             Form_Ref();
         }
 
-        private void opt_line2_Clk()
-        {
+        private void opt_line2_Clk() {
+            if (!opt_line2.Checked) return;
             txt_line.Text = "2";
             Form_Ref();
         }
 
-        private void opt_line3_Clk()
-        {
+        private void opt_line3_Clk() {
+            if (!opt_line3.Checked) return;
             txt_line.Text = "3";
             Form_Ref();
         }
 
-        private void opt_line4_Clk()
-        {
+        private void opt_line4_Clk() {
+            if (!opt_line4.Checked) return;
             txt_line.Text = "4";
             Form_Ref();
         }
 
-        public void Form_Load(object sender, System.EventArgs e)
-        {
+        public void Form_Load(object sender, System.EventArgs e) {
             base.sSvrPgmPkgName = "CGC2071NC";
             Form_Define();
-            ss1.ActiveSheet.FrozenColumnCount = 2;
+            ss1.ActiveSheet.FrozenColumnCount = 1;
             CBO_SHIFT.Items.Add("1");
             CBO_SHIFT.Items.Add("2");
             CBO_SHIFT.Items.Add("3");
@@ -235,25 +229,10 @@ namespace CG
             CBO_GROUP.Items.Add("B");
             CBO_GROUP.Items.Add("C");
             CBO_GROUP.Items.Add("D");
-            
+
         }
 
-
-
-
-
-
-
-
-
-
-
-
-        #endregion
-
-        # region 重写查询
-        public override void Form_Ref()
-        {
+        public override void Form_Ref() {
             string SMESG;
             int lRow;
             //定义一个变量标记，用来控制颜色显示
@@ -266,57 +245,40 @@ namespace CG
             unlockSpread(ss1);
 
 
-            for (lRow = 1; lRow <= ss1.ActiveSheet.RowCount; lRow++)
-            {
-              
+            for (lRow = 1; lRow <= ss1.ActiveSheet.RowCount; lRow++) {
+
                 //取母板号，初始值为空，把颜色标记置为1
-                if (mOplate_No == "")
-                {
+                if (mOplate_No == "") {
                     iColor = "1";
-                }
-                else
-                {
+                } else {
                     //母板号不为空时，检查与上一母板号是否为相同母板号
-                    if (ss1.ActiveSheet.Cells[lRow - 1, SS1_MOTHER_NO].Text != mOplate_No)
-                    {
+                    if (ss1.ActiveSheet.Cells[lRow - 1, SS1_MOTHER_NO].Text != mOplate_No) {
                         //如果是不同母板号，而且颜色标记为1，那么颜色标记改为2，表示改变颜色
-                        if (iColor == "1")
-                        {
+                        if (iColor == "1") {
                             iColor = "2";
                             //如果母板号相同，那么颜色标记还为1，表示颜色不变
-                        }
-                        else
-                        {
+                        } else {
                             iColor = "1";
                         }
                     }
                 }
                 //用1表示颜色置为浅灰色，用2表示颜色置为白色
                 //每次循环结束，如果iColor为1，则颜色为浅灰色，否则颜色为白色
-                if (iColor == "1")
-                {
+                if (iColor == "1") {
                     //取样颜色改变，如果为Y表示取样，则该行字体颜色变红色
-                    if (ss1.ActiveSheet.Cells[lRow - 1, SS1_PLAN_SMP].Text == "Y")
-                    {
+                    if (ss1.ActiveSheet.Cells[lRow - 1, SS1_PLAN_SMP].Text == "Y") {
                         SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, lRow - 1, lRow - 1, Color.Red, ColorTranslator.FromHtml("#e0e0e0"));
                         //浅灰色
-                    }
-                    else
-                    {
+                    } else {
                         SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, lRow - 1, lRow - 1, Color.Black, ColorTranslator.FromHtml("#e0e0e0"));
                         //浅灰色
                     }
-                }
-                else
-                {
+                } else {
                     //取样颜色改变，如果为Y表示取样，则该行字体颜色变红色
-                    if (ss1.ActiveSheet.Cells[lRow - 1, SS1_PLAN_SMP].Text == "Y")
-                    {
+                    if (ss1.ActiveSheet.Cells[lRow - 1, SS1_PLAN_SMP].Text == "Y") {
                         SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, lRow - 1, lRow - 1, Color.Red, ColorTranslator.FromHtml("#ffffff"));
                         //白
-                    }
-                    else
-                    {
+                    } else {
                         SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, lRow - 1, lRow - 1, Color.Black, ColorTranslator.FromHtml("#ffffff"));
                         //白
                     }
@@ -325,15 +287,13 @@ namespace CG
                 mOplate_No = ss1.ActiveSheet.Cells[lRow - 1, SS1_MOTHER_NO].Text;
 
                 sord_cnt = Convert.ToInt32(ss1.ActiveSheet.Cells[lRow - 1, SS1_ORD_CNT].Text);
-                if (sord_cnt > 1)
-                {
+                if (sord_cnt > 1) {
                     SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, lRow - 1, lRow - 1, Color.Black, SSP1.BackColor);
                 }
 
                 //热处理指示蓝色显示
                 sHtm_Meth = ss1.ActiveSheet.Cells[lRow - 1, SS1_HTM_METH].Text;
-                if (sHtm_Meth.Substring(0, 1) == "N" & sHtm_Meth.Substring(0, 1) != "/ / /")
-                {
+                if (sHtm_Meth.Substring(0, 1) == "N" & sHtm_Meth.Substring(0, 1) != "/ / /") {
                     //        If sHtm_Meth <> "/ / /" Then
                     SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, lRow - 1, lRow - 1, Color.Black, SSP2.BackColor);
                 }
@@ -345,23 +305,19 @@ namespace CG
         }
 
         //钢板信息导出
-        private void resetExcelName(string currentReportPath, string targetExcelName)
-        {
-            if (!Directory.Exists(currentReportPath))
-            {
+        private void resetExcelName(string currentReportPath, string targetExcelName) {
+            if (!Directory.Exists(currentReportPath)) {
                 Directory.CreateDirectory(currentReportPath);
             }
             string sourceExcelName = System.Windows.Forms.Application.StartupPath + "\\model" + "\\CGC2071C.xls";
 
-            if (File.Exists(targetExcelName))
-            {
+            if (File.Exists(targetExcelName)) {
                 File.Delete(targetExcelName);
             }
             File.Copy(sourceExcelName, targetExcelName);
         }
 
-        private void setExcelText(string targetExcelName, int plateIndex)
-        {
+        private void setExcelText(string targetExcelName, int plateIndex) {
             Microsoft.Office.Interop.Excel.Application appExcel = null;
             appExcel = new Microsoft.Office.Interop.Excel.Application();
             appExcel.DisplayAlerts = true;
@@ -373,7 +329,7 @@ namespace CG
                 Type.Missing, Type.Missing);
 
             //导出EXCEL表单            
-          
+
             appExcel.Cells[1, 2] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_MV_DATE].Text;
             appExcel.Cells[2, 2] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_CUST_NAME].Text;
             appExcel.Cells[3, 2] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_PLATE_NO].Text;
@@ -383,58 +339,61 @@ namespace CG
             appExcel.Cells[7, 2] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_TRIM_FL].Text;
             appExcel.Cells[8, 2] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_THK_LIM].Text;
             appExcel.Cells[9, 2] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_ORD_REMARK].Text;
-            appExcel.Cells[10,2] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_UST_STATUS].Text;
-            appExcel.Cells[11,2] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_GAS_STATUS].Text;
-            appExcel.Cells[12,2] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_CL_STATUS].Text;
-            appExcel.Cells[13,2] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_HTM_METH].Text;
-            appExcel.Cells[14,2] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_QT].Text;
-            appExcel.Cells[15,2] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_STDSPEC_STLGRD].Text;
+            appExcel.Cells[10, 2] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_UST_STATUS].Text;
+            appExcel.Cells[11, 2] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_GAS_STATUS].Text;
+            appExcel.Cells[12, 2] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_CL_STATUS].Text;
+            appExcel.Cells[13, 2] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_HTM_METH].Text;
+            appExcel.Cells[14, 2] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_QT].Text;
+            appExcel.Cells[15, 2] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_STDSPEC_STLGRD].Text;
             appExcel.Cells[16, 2] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_STDSPEC_ORG_KND].Text;
             appExcel.Cells[1, 4] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_SHIFT].Text;
-appExcel.Cells[2, 4] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_TRNS_CMPY_CD].Text;
-appExcel.Cells[3, 4] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_OUT_SHEET_NO].Text;
-appExcel.Cells[5, 4] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_LEN].Text;
-appExcel.Cells[7, 4] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_SIZE_KND].Text;
-appExcel.Cells[8, 4] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_LEN_LIM].Text;
-appExcel.Cells[16,4] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_CUST_CD].Text;
-appExcel.Cells[15,4] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_CD_MANA_NO].Text;
+            appExcel.Cells[2, 4] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_TRNS_CMPY_CD].Text;
+            appExcel.Cells[3, 4] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_OUT_SHEET_NO].Text;
+            appExcel.Cells[5, 4] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_LEN].Text;
+            appExcel.Cells[7, 4] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_SIZE_KND].Text;
+            appExcel.Cells[8, 4] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_LEN_LIM].Text;
+            appExcel.Cells[16, 4] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_CUST_CD].Text;
+            appExcel.Cells[15, 4] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_CD_MANA_NO].Text;
 
-            
+
             appExcel.Visible = true;
             ////appExcel.Quit();//从内存中退出
             appExcel = null;
         }
 
-        #endregion
-
-        # region 公共方法
-
-        public bool Gp_DateCheck(string DateCheck, string sDTChk)
+        public override bool Form_Cls()
         {
+            plateNo = "";
+            base.Form_Cls();
+            opt_line1.Checked = true;
+            txt_line.Text = "1";
+            return true;
+
+        }
+
+
+        #region 公共方法
+
+        public bool Gp_DateCheck(string DateCheck, string sDTChk) {
             sDTChk = "M";
             string iDateCheck;
             string iDateMatch;
             string iDate;
             System.DateTime iCheck;
 
-            if (sDTChk == "M")
-            {
+            if (sDTChk == "M") {
                 iDateCheck = DateCheck;
-            }
-            else
-            {
+            } else {
                 iDateCheck = DateCheck.Replace("-", "");
                 iDateCheck = iDateCheck.Replace(" ", "");
                 iDateCheck = iDateCheck.Replace(":", "");
             }
 
-            if (Convert.ToInt32(iDateCheck.Substring(0, 4)) > 2020 | Convert.ToInt32(iDateCheck.Substring(0, 4)) < 2000)
-            {
+            if (Convert.ToInt32(iDateCheck.Substring(0, 4)) > 2020 | Convert.ToInt32(iDateCheck.Substring(0, 4)) < 2000) {
                 return false;
             }
 
-            switch (iDateCheck.Length)
-            {
+            switch (iDateCheck.Length) {
                 case 8:
                     iDate = iDateCheck.Substring(0, 4) + "-" + iDateCheck.Substring(4, 2) + "-" + iDateCheck.Substring(6, 2);
                     iCheck = Convert.ToDateTime(iDate.Substring(1, 10));
@@ -454,15 +413,13 @@ appExcel.Cells[15,4] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_CD_MANA_NO].Te
 
             iDateMatch = iCheck.ToString("yyyyMM");
 
-            if (iDateMatch != iDateCheck.Substring(0, 8))
-            {
+            if (iDateMatch != iDateCheck.Substring(0, 8)) {
                 return false;
             }
             return true;
         }
 
-        public string Gf_ShiftSet3(string WKDATE)
-        {
+        public string Gf_ShiftSet3(string WKDATE) {
 
 
             if (GeneralCommon.M_CN1.State == 0)
@@ -471,25 +428,18 @@ appExcel.Cells[15,4] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_CD_MANA_NO].Te
             string sQuery;
             sQuery = "SELECT TO_CHAR(SYSDATE,'HH24MI') FROM DUAL";
             ADODB.Recordset AdoRs = new ADODB.Recordset();
-            try
-            {
-                if (WKDATE != "")
-                {
+            try {
+                if (WKDATE != "") {
                     return WKDATE;
                 }
                 AdoRs.Open(sQuery, GeneralCommon.M_CN1, ADODB.CursorTypeEnum.adOpenStatic, ADODB.LockTypeEnum.adLockReadOnly);
 
-                if (!AdoRs.BOF && !AdoRs.EOF)
-                {
+                if (!AdoRs.BOF && !AdoRs.EOF) {
                     //RltValue = true;
-                    while (!AdoRs.EOF)
-                    {
-                        if (AdoRs.Fields[0].Value.ToString() == "")
-                        {
+                    while (!AdoRs.EOF) {
+                        if (AdoRs.Fields[0].Value.ToString() == "") {
                             Shift_HH = "";
-                        }
-                        else
-                        {
+                        } else {
                             Shift_HH = AdoRs.Fields[0].Value.ToString();
                         }
                         AdoRs.MoveNext();
@@ -498,29 +448,21 @@ appExcel.Cells[15,4] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_CD_MANA_NO].Te
                 GeneralCommon.M_CN1.Close();
                 AdoRs = null;
 
-                if (Convert.ToInt32(Shift_HH) < 800)
-                {
+                if (Convert.ToInt32(Shift_HH) < 800) {
                     return "1";
-                }
-                else if (Convert.ToInt32(Shift_HH) < 1600)
-                {
+                } else if (Convert.ToInt32(Shift_HH) < 1600) {
                     return "2";
-                }
-                else
-                {
+                } else {
                     return "3";
                 }
-            }
-            catch (Exception ex)
-            {
+            } catch (Exception ex) {
                 if (GeneralCommon.M_CN1.State != 0) GeneralCommon.M_CN1.Close();
                 AdoRs = null;
                 return "0";
             }
         }
 
-        public string Gf_GroupSet(string shift, string setDate)
-        {
+        public string Gf_GroupSet(string shift, string setDate) {
 
             if (GeneralCommon.M_CN1.State == 0)
                 if (!GeneralCommon.GF_DbConnect()) return "";
@@ -530,21 +472,15 @@ appExcel.Cells[15,4] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_CD_MANA_NO].Te
             sQuery = "SELECT Gf_Groupset('C3'," + shift + ",SUBSTR('" + setDate + "',1,8)) FROM DUAL";
 
             ADODB.Recordset AdoRs = new ADODB.Recordset();
-            try
-            {
+            try {
                 AdoRs.Open(sQuery, GeneralCommon.M_CN1, ADODB.CursorTypeEnum.adOpenStatic, ADODB.LockTypeEnum.adLockReadOnly);
 
-                if (!AdoRs.BOF && !AdoRs.EOF)
-                {
+                if (!AdoRs.BOF && !AdoRs.EOF) {
                     //RltValue = true;
-                    while (!AdoRs.EOF)
-                    {
-                        if (AdoRs.Fields[0].Value.ToString() == "")
-                        {
+                    while (!AdoRs.EOF) {
+                        if (AdoRs.Fields[0].Value.ToString() == "") {
                             group = "";
-                        }
-                        else
-                        {
+                        } else {
                             group = AdoRs.Fields[0].Value.ToString();
                         }
                         AdoRs.MoveNext();
@@ -556,9 +492,7 @@ appExcel.Cells[15,4] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_CD_MANA_NO].Te
                 AdoRs = null;
 
                 return group;
-            }
-            catch (Exception ex)
-            {
+            } catch (Exception ex) {
                 if (GeneralCommon.M_CN1.State != 0) GeneralCommon.M_CN1.Close();
                 AdoRs = null;
                 return "";
@@ -566,8 +500,7 @@ appExcel.Cells[15,4] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_CD_MANA_NO].Te
         }
 
         //日期格式
-        public string Gf_DTSet(string DTCheck, string DTFlag)
-        {
+        public string Gf_DTSet(string DTCheck, string DTFlag) {
             DTCheck = "S";
             DTFlag = "C";
 
@@ -575,8 +508,7 @@ appExcel.Cells[15,4] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_CD_MANA_NO].Te
             int sQuery_Len = 0;
             string time = "";
 
-            switch (DTCheck)
-            {
+            switch (DTCheck) {
                 case "S":
                     sQuery = "SELECT TO_CHAR(SYSDATE,'YYYYMMDDHH24MISS') FROM DUAL";
                     sQuery_Len = 14;
@@ -607,10 +539,8 @@ appExcel.Cells[15,4] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_CD_MANA_NO].Te
                     break;
             }
 
-            if (DTFlag == "C")
-            {
-                if (DTCheck == "T")
-                {
+            if (DTFlag == "C") {
+                if (DTCheck == "T") {
                     return DateTime.Now.ToString("HHmmss");
                 }
                 return (DateTime.Now.ToString("yyyyMMddHHmmss")).Substring(0, sQuery_Len);
@@ -620,28 +550,20 @@ appExcel.Cells[15,4] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_CD_MANA_NO].Te
                 if (!GeneralCommon.GF_DbConnect()) return "00000000000000";
 
             ADODB.Recordset AdoRs = new ADODB.Recordset();
-            try
-            {
+            try {
                 AdoRs.Open(sQuery, GeneralCommon.M_CN1, ADODB.CursorTypeEnum.adOpenStatic, ADODB.LockTypeEnum.adLockReadOnly);
 
-                if (!AdoRs.BOF && !AdoRs.EOF)
-                {
+                if (!AdoRs.BOF && !AdoRs.EOF) {
                     //RltValue = true;
-                    while (!AdoRs.EOF)
-                    {
-                        if (AdoRs.Fields[0].Value.ToString() == "")
-                        {
+                    while (!AdoRs.EOF) {
+                        if (AdoRs.Fields[0].Value.ToString() == "") {
                             time = "";
-                        }
-                        else
-                        {
+                        } else {
                             time = AdoRs.Fields[0].Value.ToString();
                         }
                         AdoRs.MoveNext();
                     }
-                }
-                else
-                {
+                } else {
                     time = "00000000000000";
 
                 }
@@ -651,9 +573,7 @@ appExcel.Cells[15,4] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_CD_MANA_NO].Te
                 AdoRs = null;
 
                 return time;
-            }
-            catch (Exception ex)
-            {
+            } catch (Exception ex) {
                 if (GeneralCommon.M_CN1.State != 0) GeneralCommon.M_CN1.Close();
                 AdoRs = null;
                 return "00000000000000";
@@ -661,48 +581,38 @@ appExcel.Cells[15,4] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_CD_MANA_NO].Te
         }
 
         //unlock spread L column
-        public void unlockSpread(FpSpread e)
-        {
+        public void unlockSpread(FpSpread e) {
             int columnCount = e.Sheets[0].ColumnCount;
-            for (int i = 0; i < columnCount; i++)
-            {
+            for (int i = 0; i < columnCount; i++) {
                 e.ActiveSheet.Columns[i].Locked = false;
             }
         }
 
-        public void lockSpread(FpSpread e)
-        {
+        public void lockSpread(FpSpread e) {
             int columnCount = e.Sheets[0].ColumnCount;
-            for (int i = 0; i < columnCount; i++)
-            {
+            for (int i = 0; i < columnCount; i++) {
                 e.ActiveSheet.Columns[i].Locked = true;
             }
         }
 
         #endregion
 
-        private void CMD_EXCEL_Click(object sender, EventArgs e)
-        {
-            if (plateNo == "")
-            {
+        private void CMD_EXCEL_Click(object sender, EventArgs e) {
+            if (plateNo == "") {
                 GeneralCommon.Gp_MsgBoxDisplay("请选择你要导出的钢板号", "W", "警告");
                 return;
             }
-            try
-            {
+            try {
                 string currentReportPath = System.Windows.Forms.Application.StartupPath + "\\南钢宽厚板导出Excel文件夹";
                 string targetExcelName = currentReportPath + "\\" + plateNo + ".xls";
                 resetExcelName(currentReportPath, targetExcelName);
                 setExcelText(targetExcelName, plateIndex);
-            }
-            catch (Exception ex)
-            {
+            } catch (Exception ex) {
                 GeneralCommon.Gp_MsgBoxDisplay(ex.ToString(), "W", "警告");
             }
         }
 
-        private void ss1_CellClick(object sender, CellClickEventArgs e)
-        {
+        private void ss1_CellClick(object sender, CellClickEventArgs e) {
             if (e.RowHeader) return;
             if (ss1.ActiveSheet.RowCount <= 0) return;
             TXT_MAT_NO.Text = ss1.ActiveSheet.Cells[e.Row, 0].Text;
@@ -711,6 +621,26 @@ appExcel.Cells[15,4] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_CD_MANA_NO].Te
             plateIndex = e.Row;
             p_Ref(2, 2, true, true);
             TXT_MAT_NO.Text = "";
+        }
+
+        private void opt_line1_CheckedChanged(object sender, EventArgs e)
+        {
+            opt_line1_Clk();
+        }
+
+        private void opt_line2_CheckedChanged(object sender, EventArgs e)
+        {
+            opt_line2_Clk();
+        }
+
+        private void opt_line3_CheckedChanged(object sender, EventArgs e)
+        {
+            opt_line3_Clk();
+        }
+
+        private void opt_line4_CheckedChanged(object sender, EventArgs e)
+        {
+            opt_line4_Clk();
         }
 
 

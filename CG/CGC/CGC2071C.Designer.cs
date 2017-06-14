@@ -165,6 +165,7 @@
             this.opt_line4.TabIndex = 3;
             this.opt_line4.Text = "#4";
             this.opt_line4.UseVisualStyleBackColor = true;
+            this.opt_line4.CheckedChanged += new System.EventHandler(this.opt_line4_CheckedChanged);
             // 
             // opt_line3
             // 
@@ -176,6 +177,7 @@
             this.opt_line3.TabIndex = 2;
             this.opt_line3.Text = "#3";
             this.opt_line3.UseVisualStyleBackColor = true;
+            this.opt_line3.CheckedChanged += new System.EventHandler(this.opt_line3_CheckedChanged);
             // 
             // opt_line2
             // 
@@ -186,6 +188,7 @@
             this.opt_line2.TabIndex = 1;
             this.opt_line2.Text = "#2";
             this.opt_line2.UseVisualStyleBackColor = true;
+            this.opt_line2.CheckedChanged += new System.EventHandler(this.opt_line2_CheckedChanged);
             // 
             // opt_line1
             // 
@@ -199,6 +202,7 @@
             this.opt_line1.TabStop = true;
             this.opt_line1.Text = "#1";
             this.opt_line1.UseVisualStyleBackColor = true;
+            this.opt_line1.CheckedChanged += new System.EventHandler(this.opt_line1_CheckedChanged);
             // 
             // txt_line
             // 
