@@ -25,6 +25,7 @@ using FarPoint.Win.Spread.UndoRedo;
 using FarPoint.Win.Spread.Design;
 using FarPoint.Win;
 using CommonClass;
+using System.IO;
 
 //-------------------------------------------------------------------------------
 //-- PROGRAM HEADER  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -91,7 +92,10 @@ namespace CG
         const int SS1_STDSPEC_STLGRD = 33;
         const int SS1_CD_MANA_NO = 35;
 
+
+        string plateNo = "";
         string mOplate_No;
+        int plateIndex = -1;
 
         //const int SPD_PLAN_PROD_WGT = 33,
 
@@ -222,7 +226,7 @@ namespace CG
         {
             base.sSvrPgmPkgName = "CGC2071NC";
             Form_Define();
-            ss1.ActiveSheet.FrozenColumnCount = 3;
+            ss1.ActiveSheet.FrozenColumnCount = 2;
             CBO_SHIFT.Items.Add("1");
             CBO_SHIFT.Items.Add("2");
             CBO_SHIFT.Items.Add("3");
@@ -232,8 +236,18 @@ namespace CG
             CBO_GROUP.Items.Add("C");
             CBO_GROUP.Items.Add("D");
             
-
         }
+
+
+
+
+
+
+
+
+
+
+
 
         #endregion
 
@@ -328,6 +342,67 @@ namespace CG
 
             lockSpread(ss1);
 
+        }
+
+        //钢板信息导出
+        private void resetExcelName(string currentReportPath, string targetExcelName)
+        {
+            if (!Directory.Exists(currentReportPath))
+            {
+                Directory.CreateDirectory(currentReportPath);
+            }
+            string sourceExcelName = System.Windows.Forms.Application.StartupPath + "\\model" + "\\CGC2071C.xls";
+
+            if (File.Exists(targetExcelName))
+            {
+                File.Delete(targetExcelName);
+            }
+            File.Copy(sourceExcelName, targetExcelName);
+        }
+
+        private void setExcelText(string targetExcelName, int plateIndex)
+        {
+            Microsoft.Office.Interop.Excel.Application appExcel = null;
+            appExcel = new Microsoft.Office.Interop.Excel.Application();
+            appExcel.DisplayAlerts = true;
+            appExcel.AlertBeforeOverwriting = true;
+            Microsoft.Office.Interop.Excel.Workbook workbook = appExcel.Workbooks.Open(targetExcelName,
+                Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+                Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+                Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+                Type.Missing, Type.Missing);
+
+            //导出EXCEL表单            
+          
+            appExcel.Cells[1, 2] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_MV_DATE].Text;
+            appExcel.Cells[2, 2] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_CUST_NAME].Text;
+            appExcel.Cells[3, 2] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_PLATE_NO].Text;
+            appExcel.Cells[4, 2] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_ORD_THK].Text;
+            appExcel.Cells[5, 2] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_ORD_WID].Text;
+            appExcel.Cells[6, 2] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_ORD_LEN].Text;
+            appExcel.Cells[7, 2] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_TRIM_FL].Text;
+            appExcel.Cells[8, 2] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_THK_LIM].Text;
+            appExcel.Cells[9, 2] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_ORD_REMARK].Text;
+            appExcel.Cells[10,2] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_UST_STATUS].Text;
+            appExcel.Cells[11,2] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_GAS_STATUS].Text;
+            appExcel.Cells[12,2] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_CL_STATUS].Text;
+            appExcel.Cells[13,2] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_HTM_METH].Text;
+            appExcel.Cells[14,2] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_QT].Text;
+            appExcel.Cells[15,2] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_STDSPEC_STLGRD].Text;
+            appExcel.Cells[16, 2] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_STDSPEC_ORG_KND].Text;
+            appExcel.Cells[1, 4] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_SHIFT].Text;
+appExcel.Cells[2, 4] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_TRNS_CMPY_CD].Text;
+appExcel.Cells[3, 4] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_OUT_SHEET_NO].Text;
+appExcel.Cells[5, 4] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_LEN].Text;
+appExcel.Cells[7, 4] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_SIZE_KND].Text;
+appExcel.Cells[8, 4] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_LEN_LIM].Text;
+appExcel.Cells[16,4] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_CUST_CD].Text;
+appExcel.Cells[15,4] = this.ss1.ActiveSheet.Cells[plateIndex, SS1_CD_MANA_NO].Text;
+
+            
+            appExcel.Visible = true;
+            ////appExcel.Quit();//从内存中退出
+            appExcel = null;
         }
 
         #endregion
@@ -605,6 +680,40 @@ namespace CG
         }
 
         #endregion
+
+        private void CMD_EXCEL_Click(object sender, EventArgs e)
+        {
+            if (plateNo == "")
+            {
+                GeneralCommon.Gp_MsgBoxDisplay("请选择你要导出的钢板号", "W", "警告");
+                return;
+            }
+            try
+            {
+                string currentReportPath = System.Windows.Forms.Application.StartupPath + "\\南钢宽厚板导出Excel文件夹";
+                string targetExcelName = currentReportPath + "\\" + plateNo + ".xls";
+                resetExcelName(currentReportPath, targetExcelName);
+                setExcelText(targetExcelName, plateIndex);
+            }
+            catch (Exception ex)
+            {
+                GeneralCommon.Gp_MsgBoxDisplay(ex.ToString(), "W", "警告");
+            }
+        }
+
+        private void ss1_CellClick(object sender, CellClickEventArgs e)
+        {
+            if (e.RowHeader) return;
+            if (ss1.ActiveSheet.RowCount <= 0) return;
+            TXT_MAT_NO.Text = ss1.ActiveSheet.Cells[e.Row, 0].Text;
+            //if (e.RowHeader) return;
+            plateNo = ss1.ActiveSheet.Cells[e.Row, 0].Text.Trim();
+            plateIndex = e.Row;
+            p_Ref(2, 2, true, true);
+            TXT_MAT_NO.Text = "";
+        }
+
+
 
     }
 }

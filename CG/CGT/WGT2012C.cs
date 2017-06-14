@@ -693,6 +693,11 @@ namespace CG
                 }
             }
         }
+
+        private void ss1_CellClick(object sender, FarPoint.Win.Spread.CellClickEventArgs e)
+        {
+
+        }
         
     }
 }

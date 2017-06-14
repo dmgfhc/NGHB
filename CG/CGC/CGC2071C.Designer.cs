@@ -102,6 +102,7 @@
             this.CMD_EXCEL.TabIndex = 594;
             this.CMD_EXCEL.Text = "Excel导出";
             this.CMD_EXCEL.UseVisualStyleBackColor = true;
+            this.CMD_EXCEL.Click += new System.EventHandler(this.CMD_EXCEL_Click);
             // 
             // SSP1
             // 
@@ -328,6 +329,7 @@
             this.ss1_Sheet1});
             this.ss1.Size = new System.Drawing.Size(1012, 124);
             this.ss1.TabIndex = 16;
+            this.ss1.CellClick += new FarPoint.Win.Spread.CellClickEventHandler(this.ss1_CellClick);
             // 
             // ss1_Sheet1
             // 

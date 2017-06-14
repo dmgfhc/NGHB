@@ -74,7 +74,7 @@
             this.txt_plt.Size = new System.Drawing.Size(43, 22);
             this.txt_plt.sJoin = "";
             this.txt_plt.sSqletc = "SELECT cd 代码,cd_short_name 代码简称,cd_name 代码名称,cd_short_eng 代码英文简称,cd_full_eng 代码英文" +
-                "名称 FROM ZP_CD WHERE CD_MANA_NO = \'C0001\' ";
+    "名称 FROM ZP_CD WHERE CD_MANA_NO = \'C0001\' ";
             this.txt_plt.TabIndex = 11;
             // 
             // txt_plt_name
@@ -92,8 +92,8 @@
             this.txt_stdspec.Size = new System.Drawing.Size(195, 22);
             this.txt_stdspec.sJoin = "";
             this.txt_stdspec.sSqletc = "SELECT StdSPEC \"标准代号\",StdSPEC_YY \"发布年度\", STDSPEC_CHR_CD \"标准特性代码\",Gf_ComnNameFind(" +
-                "\'Q0025\', STDSPEC_CHR_CD) \"标准特性名称\",STDSPEC_NAME_ENG \"标准英文名\",STDSPEC_NAME_CHN \"标准中" +
-                "文名\" FROM NISCO.QP_STD_HEAD";
+    "\'Q0025\', STDSPEC_CHR_CD) \"标准特性名称\",STDSPEC_NAME_ENG \"标准英文名\",STDSPEC_NAME_CHN \"标准中" +
+    "文名\" FROM NISCO.QP_STD_HEAD";
             this.txt_stdspec.TabIndex = 26;
             // 
             // cbo_group
@@ -330,6 +330,7 @@
             this.ss1.Size = new System.Drawing.Size(1123, 551);
             this.ss1.TabIndex = 2;
             this.ss1.SelectionChanged += new FarPoint.Win.Spread.SelectionChangedEventHandler(this.ss1_SelectionChanged);
+            this.ss1.CellClick += new FarPoint.Win.Spread.CellClickEventHandler(this.ss1_CellClick);
             // 
             // ss1_Sheet1
             // 
