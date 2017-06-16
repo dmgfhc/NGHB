@@ -309,6 +309,12 @@
     <Compile Include="CGC\CGC2060C.Designer.cs">
       <DependentUpon>CGC2060C.cs</DependentUpon>
     </Compile>
+    <Compile Include="CGC\CGC2071C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CGC\CGC2071C.Designer.cs">
+      <DependentUpon>CGC2071C.cs</DependentUpon>
+    </Compile>
     <Compile Include="CGC\WGC3010C.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -332,6 +338,12 @@
     </Compile>
     <Compile Include="CGC\WGC3031C.Designer.cs">
       <DependentUpon>WGC3031C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CGC\CGC2072C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CGC\CGC2072C.Designer.cs">
+      <DependentUpon>CGC2072C.cs</DependentUpon>
     </Compile>
     <Compile Include="CGD\AGC2440C.cs">
       <SubType>Form</SubType>
@@ -380,12 +392,6 @@
     </Compile>
     <Compile Include="CGD\CGE2021C.Designer.cs">
       <DependentUpon>CGE2021C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGC\CGC2071C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGC\CGC2071C.Designer.cs">
-      <DependentUpon>CGC2071C.cs</DependentUpon>
     </Compile>
     <Compile Include="MainMenu\MainMenu.cs">
       <SubType>Form</SubType>
@@ -797,6 +803,9 @@
     <EmbeddedResource Include="CGC\CGC2060C.resx">
       <DependentUpon>CGC2060C.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CGC\CGC2071C.resx">
+      <DependentUpon>CGC2071C.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CGC\WGC3010C.resx">
       <DependentUpon>WGC3010C.cs</DependentUpon>
     </EmbeddedResource>
@@ -808,6 +817,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CGC\WGC3031C.resx">
       <DependentUpon>WGC3031C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CGC\CGC2072C.resx">
+      <DependentUpon>CGC2072C.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CGD\AGC2440C.resx">
       <DependentUpon>AGC2440C.cs</DependentUpon>
@@ -832,9 +844,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CGD\CGE2021C.resx">
       <DependentUpon>CGE2021C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGC\CGC2071C.resx">
-      <DependentUpon>CGC2071C.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
