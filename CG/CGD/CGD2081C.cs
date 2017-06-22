@@ -74,105 +74,21 @@ namespace CG {
 
             p_McIni(Mc1, true);
             imcseq = 1;
-            p_SetMc("钢板号", TXT_PLATE_NO, "PI", "", "", "", "", imcseq); //0
-            p_SetMc("作业线", txt_PrcLine, "I", "", "", "", "", imcseq); //1
-            //p_SetMc(SDT_PROD_DATE, "P", "", "", "", imcseq, ""); //2
-            //p_SetMc(SDT_PROD_TO_DATE, "P", "", "", "", imcseq, ""); //3
-            //p_SetMc(CBO_SHIFT, "P", "", "", "", imcseq, ""); //4
-            //p_SetMc(txt_stdspec_chg_ref, "P", "", "", "", imcseq, ""); //5
-            //p_SetMc(SDB_THK_REF, "P", "", "", "", imcseq, ""); //6
-            //p_SetMc(SDB_WID_REF, "P", "", "", "", imcseq, ""); //7
-            p_SetMc(TXT_UST_FLAG, "RL", "", "", "", imcseq, ""); //8
-            p_SetMc(TXT_PROC_FLAG, "RL", "", "", "", imcseq, ""); //9
-            p_SetMc(TXT_APLY_ENDUSE_CD, "RL", "", "", "", imcseq, ""); //10
-            p_SetMc(TXT_STLGRD, "RL", "", "", "", imcseq, ""); //11
-            p_SetMc(TXT_INSP_FLAW3, "IR", "", "", "", imcseq, ""); //12
-            p_SetMc(TXT_INSP_FLAW4, "IR", "", "", "", imcseq, ""); //13
-            p_SetMc(TXT_INSP_FLAW5, "IR", "", "", "", imcseq, ""); //14
-            p_SetMc(TXT_INSP_PART3, "IRL", "", "", "", imcseq, ""); //15
-            p_SetMc(TXT_INSP_PART4, "IRL", "", "", "", imcseq, ""); //16
-            p_SetMc(TXT_INSP_PART5, "IRL", "", "", "", imcseq, ""); //17
-            p_SetMc(SDB_INSP_LTH3, "IR", "", "", "", imcseq, ""); //18
-            p_SetMc(SDB_INSP_LTH4, "IR", "", "", "", imcseq, ""); //19
-            p_SetMc(SDB_INSP_LTH5, "IR", "", "", "", imcseq, ""); //20
-            p_SetMc(TXT_INSP_FLAW0, "IR", "", "", "", imcseq, ""); //21
-            p_SetMc(TXT_INSP_FLAW1, "IR", "", "", "", imcseq, ""); //22
-            p_SetMc(TXT_INSP_FLAW2, "IR", "", "", "", imcseq, ""); //23
-            p_SetMc(TXT_INSP_PART0, "IRL", "", "", "", imcseq, ""); //24
-            p_SetMc(TXT_INSP_PART1, "IRL", "", "", "", imcseq, ""); //25
-            p_SetMc(TXT_INSP_PART2, "IRL", "", "", "", imcseq, ""); //26
-            p_SetMc(SDB_INSP_LTH0, "IR", "", "", "", imcseq, ""); //27
-            p_SetMc(SDB_INSP_LTH1, "IR", "", "", "", imcseq, ""); //28
-            p_SetMc(SDB_INSP_LTH2, "IR", "", "", "", imcseq, ""); //29
-            p_SetMc("实绩厚度", SDB_THK, "NIR", "", "", "", "", imcseq); //30
-            p_SetMc(SDB_INSP_THK_MX, "RL", "", "", "", imcseq, ""); //31
-            p_SetMc(SDB_INSP_THK_MN, "RL", "", "", "", imcseq, ""); //32
-            p_SetMc("实绩宽度", SDB_WID, "NIR", "", "", "", "", imcseq); //33
-            p_SetMc(SDB_INSP_WID_MX, "RL", "", "", "", imcseq, ""); //34
-            p_SetMc(SDB_INSP_WID_MN, "RL", "", "", "", imcseq, ""); //35
-            p_SetMc("实绩长度", SDB_LEN, "NIR", "", "", "", "", imcseq); //36
-            p_SetMc(SDB_INSP_LEN_MX, "RL", "", "", "", imcseq, ""); //37
-            p_SetMc(SDB_INSP_LEN_MN, "RL", "", "", "", imcseq, ""); //38
-            p_SetMc(SDB_WGT_ORD, "RL", "", "", "", imcseq, ""); //39
-            p_SetMc("实绩重量", SDB_WGT, "NIR", "", "", "", "", imcseq); //40
-            p_SetMc(SDB_PWGT_MX, "RL", "", "", "", imcseq, ""); //41
-            p_SetMc(SDB_PWGT_MN, "RL", "", "", "", imcseq, ""); //42
-            p_SetMc(TXT_INSP_THK_GRD, "IRL", "", "", "", imcseq, ""); //43
-            p_SetMc(TXT_INSP_WID_GRD, "IRL", "", "", "", imcseq, ""); //44
-            p_SetMc(TXT_INSP_LEN_GRD, "IRL", "", "", "", imcseq, ""); //45
-            p_SetMc(TXT_INSP_WGT_GRD, "IRL", "", "", "", imcseq, ""); //46
-            p_SetMc(TXT_SURF_GRD, "IR", "", "", "", imcseq, ""); //47
-            p_SetMc(TXT_INSP_MAIN_GRD, "IR", "", "", "", imcseq, ""); //48
-            p_SetMc(txtGas, "IR", "", "", "", imcseq, ""); //49
-            p_SetMc(txtGrid, "IR", "", "", "", imcseq, ""); //50
-            p_SetMc(TXT_CL, "IR", "", "", "", imcseq, ""); //51
-            p_SetMc("头部检验工", TXT_INSP_MAN, "NIR", "", "", "", "", imcseq); //52
-            p_SetMc(TXT_INSP_MAN_TAIL, "IR", "", "", "", imcseq, ""); //53
-            p_SetMc("检查时间", TXT_INSP_OCCR_TIME, "NIR", "", "", "", "", imcseq); //54
-            p_SetMc(SDB_ORD_WID, "R", "", "", "", imcseq, ""); //55
-            p_SetMc(SDB_ORD_THK, "R", "", "", "", imcseq, ""); //56
-            p_SetMc(SDB_ORD_LEN, "R", "", "", "", imcseq, ""); //57
-            p_SetMc(TXT_GRID_EMP_CD, "IR", "", "", "", imcseq, ""); //58
-            p_SetMc(TXT_GRID_TIME, "IR", "", "", "", imcseq, ""); //59
-            p_SetMc(TXT_TOP_GRID_GRD, "IRL", "", "", "", imcseq, ""); //60
-            p_SetMc(SDB_TOP_GRID_YRD, "IR", "", "", "", imcseq, ""); //61
-            p_SetMc(SDB_TOP_GRID_DEEP, "IR", "", "", "", imcseq, ""); //62
-            p_SetMc(TXT_BOT_GRID_GRD, "IRL", "", "", "", imcseq, ""); //63
-            p_SetMc(SDB_BOT_GRID_YRD, "IR", "", "", "", imcseq, ""); //64
-            p_SetMc(SDB_BOT_GRID_DEEP, "IR", "", "", "", imcseq, ""); //65
-            p_SetMc(txt_stdspec, "R", "", "", "", imcseq, ""); //66
-            p_SetMc(txt_stdspec_name, "R", "", "", "", imcseq, ""); //67
-            p_SetMc(txt_stdspec_chg, "I", "", "", "", imcseq, ""); //68
-            p_SetMc(txt_stdspec_name_chg, "L", "", "", "", imcseq, ""); //69
-            p_SetMc(txt_Scrap_code, "IR", "", "", "", imcseq, ""); //70
-            p_SetMc(txt_Scrap_name, "L", "", "", "", imcseq, ""); //71
-            p_SetMc(SDB_Mn, "R", "", "", "", imcseq, ""); //72
-            p_SetMc(TXT_PROC_CD, "R", "", "", "", imcseq, ""); //73
-            p_SetMc(SDB_THK_R, "IR", "", "", "", imcseq, ""); //74
-            p_SetMc(SDB_WID_R, "IR", "", "", "", imcseq, ""); //75
-            p_SetMc(SDB_LEN_R, "IR", "", "", "", imcseq, ""); //76
-            p_SetMc(TXT_EMP_CD1, "IR", "", "", "", imcseq, ""); //77
-            p_SetMc(TXT_WAVE, "IR", "", "", "", imcseq, ""); //78
-            p_SetMc(TXT_VERT_DEG, "IR", "", "", "", imcseq, ""); //79
-            p_SetMc(TXT_RECT_DEG, "IR", "", "", "", imcseq, ""); //80
-            p_SetMc(SDB_INSP_DIAGONAL1, "IR", "", "", "", imcseq, ""); //81
-            p_SetMc(SDB_INSP_DIAGONAL2, "IR", "", "", "", imcseq, ""); //82
-            p_SetMc("定尺", TXT_SIZE_KND, "NIR", "", "", "", "", imcseq); //83
-            p_SetMc(TXT_WAVE1, "IR", "", "", "", imcseq, ""); //84
-            p_SetMc(txt_Color_code, "IR", "", "", "", imcseq, ""); //85
-            p_SetMc(SDB_HD1, "IR", "", "", "", imcseq, ""); //86
-            p_SetMc(SDB_HD2, "IR", "", "", "", imcseq, ""); //87
-            p_SetMc(SDB_HD3, "IR", "", "", "", imcseq, ""); //88
-            p_SetMc(SDB_HD4, "IR", "", "", "", imcseq, ""); //89
-            p_SetMc(SDB_HD5, "IR", "", "", "", imcseq, ""); //90
-            p_SetMc(SDB_HD6, "IR", "", "", "", imcseq, ""); //91
-            p_SetMc(CHK_FLAW_YN, "I", "", "", "", imcseq, ""); //92
-            p_SetMc(TXT_EMP_CD5, "I", "", "", "", imcseq, ""); //93
-            p_SetMc(COM_PF, "I", "", "", "", imcseq, ""); //94
+            p_SetMc("工厂代码", txt_plt, "PNL", "", "", "", "", imcseq); //0
+            //p_SetMc("作业线", txt_plt_name, "I", "", "", "", "", imcseq); //1
+            p_SetMc("钢板号", txt_plate_no, "P", "", "", "", "", imcseq); //1
+            p_SetMc("开始时间", udt_date_fr, "P", "", "", "", "", imcseq); //2
+            p_SetMc("结束时间", udt_date_to, "P", "", "", "", "", imcseq); //3
+            p_SetMc("产线", txt_line, "P", "", "", "", "", imcseq); //4
+            p_SetMc("标准号", txt_stdspec, "P", "", "", "", "", imcseq); //5
+            p_SetMc("轧批号", txt_lot_no, "P", "", "", "", "", imcseq); //6
+            p_SetMc("钢板状态", txt_rec_sts, "", "", "", "", "", imcseq); //7
+            p_SetMc("班次", CBO_SHIFT, "P", "", "", "", "", imcseq); //8
+           
 
             p_McIni(Mc2, false);
             imcseq = 2;
-            p_SetMc("钢板号", TXT_PLATE_NO, "PI", "", "", "", "", imcseq); //0
+            p_SetMc("钢板号", txt_plate_no, "PI", "", "", "", "", imcseq); //0
             p_SetMc("作业线", txt_PrcLine, "PI", "", "", "", "", imcseq); //1
             p_SetMc(udt_date_fr, "P", "", "", "", imcseq, ""); //2
             p_SetMc(udt_date_to, "P", "", "", "", imcseq, ""); //3
@@ -279,7 +195,7 @@ namespace CG {
         private void CGD2050C_Load(object sender, EventArgs e) {
             base.sSvrPgmPkgName = "CGD2050NC";
             Form_Define();
-            if (TXT_PLATE_NO.Text != "") {
+            if (txt_plate_no.Text != "") {
                 Form_Ref();
             }
             opt_LineFlag0.Checked = true;
@@ -296,13 +212,13 @@ namespace CG {
         }
 
         public override bool Form_Cls() {
-            TXT_PLATE_NO.Text = "";
+            txt_plate_no.Text = "";
             TXT_INSP_MAN.Text = "";
             TXT_EMP_CD1.Text = GeneralCommon.sUserID;
-            TXT_INSP_FLAW_NAME0.Text = "";
+            TXT_INSP_FLAW_NAME3.Text = "";
             TXT_INSP_FLAW_NAME1.Text = "";
             TXT_INSP_FLAW_NAME2.Text = "";
-            TXT_INSP_FLAW_NAME3.Text = "";
+            TXT_INSP_FLAW_NAME0.Text = "";
             TXT_INSP_FLAW_NAME4.Text = "";
             CHK_CL_FL.Checked = false;
             CHK_FLAW_YN.Checked = false;
@@ -328,7 +244,7 @@ namespace CG {
             if (ss1.ActiveSheet.RowCount > 0)
             {
 
-                TXT_PLATE_NO.Text = ss1.ActiveSheet.Cells[0, 0].Text;
+                txt_plate_no.Text = ss1.ActiveSheet.Cells[0, 0].Text;
 
                 //for (i = 0; i <= 17; i++) {
                 //CHK_PART = Type.GetType("CHK_PART"+i);
@@ -337,7 +253,7 @@ namespace CG {
                 //}
             }
 
-            if (TXT_PLATE_NO.Text.Length == 14)
+            if (txt_plate_no.Text.Length == 14)
             {
                 if (p_Ref(1, 0, true, false))
                 {
@@ -376,7 +292,7 @@ namespace CG {
                         }
                         else if (TXT_INSP_MAIN_GRD.Text == "1")
                         {
-                            opt_CHK_PRD_GRD0.Checked = true;
+                            opt_CHK_PRD_GR0D.Checked = true;
                         }
                     }
                     if (TXT_INSP_OCCR_TIME.Text == "")
@@ -401,20 +317,20 @@ namespace CG {
                     sexport = ss1.ActiveSheet.Cells[iCount - 1, SS1_EXPORT].Text.Trim();
                     if (simpcont == "Y")
                     {
-                        SpreadCommon.Gp_Sp_BlockColor(ss1, SS1_PLATE_NO, SS1_PLATE_NO, iCount - 1, iCount - 1, SSP4.BackColor, Color.White);
-                        SpreadCommon.Gp_Sp_BlockColor(ss1, SS1_IMP_CONT, SS1_IMP_CONT, iCount - 1, iCount - 1, SSP4.BackColor, Color.White);
+                        SpreadCommon.Gp_Sp_BlockColor(ss1, SS1_PLATE_NO, SS1_PLATE_NO, iCount - 1, iCount - 1, SSP1.BackColor, Color.White);
+                        SpreadCommon.Gp_Sp_BlockColor(ss1, SS1_IMP_CONT, SS1_IMP_CONT, iCount - 1, iCount - 1, SSP1.BackColor, Color.White);
                     }
 
                     //是否定制配送
                     if (sFlag == "Y")
                     {
-                        SpreadCommon.Gp_Sp_BlockColor(ss1, SS1_PLATE_NO, SS1_PLATE_NO, iCount - 1, iCount - 1, SSP5.BackColor, Color.White);
+                        SpreadCommon.Gp_Sp_BlockColor(ss1, SS1_PLATE_NO, SS1_PLATE_NO, iCount - 1, iCount - 1, SSP4.BackColor, Color.White);
                     }
                     //是否出口订单
 
                     if (sexport == "Y")
                     {
-                        SpreadCommon.Gp_Sp_BlockColor(ss1, SS1_PLATE_NO, SS1_PLATE_NO, iCount - 1, iCount - 1, SSP6.BackColor, Color.White);
+                        SpreadCommon.Gp_Sp_BlockColor(ss1, SS1_PLATE_NO, SS1_PLATE_NO, iCount - 1, iCount - 1, SSP5.BackColor, Color.White);
                     }
                 }
             }
@@ -444,7 +360,7 @@ namespace CG {
                 return;
             }
 
-            if (CHK_GRID_FLAG.Checked) {
+            if (SSCHK_GRID_YN.Checked) {
                 if (!Gp_DateCheck(TXT_GRID_TIME.Text, "")) {
                     SMESG = " 请正确输入修磨时间 ！";
                     GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "");
@@ -481,9 +397,9 @@ namespace CG {
 
 
         private void opt_CHK_PRD_GRD_Clk() {
-            if (opt_CHK_PRD_GRD0.Checked) {
+            if (opt_CHK_PRD_GR0D.Checked) {
                 TXT_INSP_MAIN_GRD.Text = "1";
-                opt_CHK_PRD_GRD0.ForeColor = Color.Red;
+                opt_CHK_PRD_GR0D.ForeColor = Color.Red;
                 //red
                 opt_CHK_PRD_GRD1.ForeColor = Color.Black;
                 //black
@@ -499,7 +415,7 @@ namespace CG {
                 COM_PF.Text = "";
             } else if (opt_CHK_PRD_GRD1.Checked) {
                 TXT_INSP_MAIN_GRD.Text = "2";
-                opt_CHK_PRD_GRD0.ForeColor = Color.Black;
+                opt_CHK_PRD_GR0D.ForeColor = Color.Black;
                 //black
                 opt_CHK_PRD_GRD1.ForeColor = Color.Red;
                 //red
@@ -515,7 +431,7 @@ namespace CG {
                 COM_PF.Text = "";
             } else if (opt_CHK_PRD_GRD2.Checked) {
                 TXT_INSP_MAIN_GRD.Text = "3";
-                opt_CHK_PRD_GRD0.ForeColor = Color.Black;
+                opt_CHK_PRD_GR0D.ForeColor = Color.Black;
                 //black
                 opt_CHK_PRD_GRD1.ForeColor = Color.Black;
                 //black
@@ -531,7 +447,7 @@ namespace CG {
                 COM_PF.Text = "";
             } else if (opt_CHK_PRD_GRD3.Checked) {
                 TXT_INSP_MAIN_GRD.Text = "4";
-                opt_CHK_PRD_GRD0.ForeColor = Color.Black;
+                opt_CHK_PRD_GR0D.ForeColor = Color.Black;
                 //black
                 opt_CHK_PRD_GRD1.ForeColor = Color.Black;
                 //black
@@ -547,7 +463,7 @@ namespace CG {
                 COM_PF.Text = "";
             } else if (opt_CHK_PRD_GRD4.Checked) {
                 TXT_INSP_MAIN_GRD.Text = "5";
-                opt_CHK_PRD_GRD0.ForeColor = Color.Black;
+                opt_CHK_PRD_GR0D.ForeColor = Color.Black;
                 //black
                 opt_CHK_PRD_GRD1.ForeColor = Color.Black;
                 //black
@@ -563,7 +479,7 @@ namespace CG {
                 COM_PF.Text = "";
             } else if (opt_CHK_PRD_GRD5.Checked) {
                 TXT_INSP_MAIN_GRD.Text = "7";
-                opt_CHK_PRD_GRD0.ForeColor = Color.Black;
+                opt_CHK_PRD_GR0D.ForeColor = Color.Black;
                 //black
                 opt_CHK_PRD_GRD1.ForeColor = Color.Black;
                 //black
@@ -876,7 +792,7 @@ namespace CG {
         }
 
         private void CHK_GRID_FLAG_Click() {
-            if (!CHK_GRID_FLAG.Checked) {
+            if (!SSCHK_GRID_YN.Checked) {
                 CHK_TOP_GRD0.Enabled = false;
                 CHK_TOP_GRD0.Checked = false;
                 CHK_TOP_GRD1.Enabled = false;
@@ -929,7 +845,7 @@ namespace CG {
 
 
             if (TXT_TOP_GRID_GRD.Text != "")
-                CHK_GRID_FLAG.Checked = true;
+                SSCHK_GRID_YN.Checked = true;
 
             if (TXT_TOP_GRID_GRD.Text == "Y") {
                 CHK_TOP_GRD0.Checked = true;
@@ -958,7 +874,7 @@ namespace CG {
             }
 
             if (TXT_INSP_MAIN_GRD.Text == "1") {
-                opt_CHK_PRD_GRD0.Checked = true;
+                opt_CHK_PRD_GR0D.Checked = true;
             } else if (TXT_INSP_MAIN_GRD.Text == "2") {
                 opt_CHK_PRD_GRD1.Checked = true;
             } else if (TXT_INSP_MAIN_GRD.Text == "3") {
@@ -997,7 +913,7 @@ namespace CG {
             { return; }
 
             // THICK GRAND CHECK
-            if (SDB_THK.NumValue >= SDB_ORD_THK.NumValue + SDB_INSP_THK_MN.NumValue & SDB_THK.NumValue <= SDB_ORD_THK.NumValue + SDB_INSP_THK_MX.NumValue) {
+            if (SDB_THK.NumValue >= SDB_MS_THK.NumValue + SDB_INSP_THK_MN.NumValue & SDB_THK.NumValue <= SDB_MS_THK.NumValue + SDB_INSP_THK_MX.NumValue) {
                 TXT_INSP_THK_GRD.Text = "Y";
                 SDB_THK.ForeColor = Color.Black;
             } else {
@@ -1007,7 +923,7 @@ namespace CG {
             }
 
             // WIDTH GRAND CHECK
-            if (SDB_WID.NumValue >= SDB_ORD_WID.NumValue + SDB_INSP_WID_MN.NumValue & SDB_WID.NumValue <= SDB_ORD_WID.NumValue + SDB_INSP_WID_MX.NumValue) {
+            if (SDB_WID.NumValue >= SDB_MS_WID.NumValue + SDB_INSP_WID_MN.NumValue & SDB_WID.NumValue <= SDB_MS_WID.NumValue + SDB_INSP_WID_MX.NumValue) {
                 TXT_INSP_WID_GRD.Text = "Y";
                 SDB_WID.ForeColor = Color.Black;
             } else {
@@ -1017,7 +933,7 @@ namespace CG {
             }
 
             // LENGTH GRAND CHECK
-            if (SDB_LEN.NumValue >= SDB_ORD_LEN.NumValue + SDB_INSP_LEN_MN.NumValue & SDB_LEN.NumValue <= SDB_ORD_LEN.NumValue + SDB_INSP_LEN_MX.NumValue) {
+            if (SDB_LEN.NumValue >= SDB_MS_LEN.NumValue + SDB_INSP_LEN_MN.NumValue & SDB_LEN.NumValue <= SDB_MS_LEN.NumValue + SDB_INSP_LEN_MX.NumValue) {
                 TXT_INSP_LEN_GRD.Text = "Y";
                 SDB_LEN.ForeColor = Color.Black;
             } else {
@@ -1040,10 +956,10 @@ namespace CG {
         private void ss1_DblClk(int col, int row) {
             //If Row < 1 Or SDB_DIVIDE_CNT.Value > 0 Then Exit Sub
 
-            TXT_PLATE_NO.Text = ss1.ActiveSheet.Cells[row, 0].Text;
-            CHK_GRID_FLAG.Checked = false;
+            txt_plate_no.Text = ss1.ActiveSheet.Cells[row, 0].Text;
+            SSCHK_GRID_YN.Checked = false;
 
-            if (TXT_PLATE_NO.Text.Length == 14) {
+            if (txt_plate_no.Text.Length == 14) {
 
                 if (p_Ref(1, 0, true, false)) {
                     ///'''''''''''''''ADD BY GUOLI AT 200712071330''''''''''
@@ -1066,7 +982,7 @@ namespace CG {
                         } else if (TXT_INSP_MAIN_GRD.Text == "2") {
                             opt_CHK_PRD_GRD1.Checked = true;
                         } else if (TXT_INSP_MAIN_GRD.Text == "1") {
-                            opt_CHK_PRD_GRD0.Checked = true;
+                            opt_CHK_PRD_GR0D.Checked = true;
                         }
                     }
 
