@@ -48,9 +48,12 @@ using CommonClass;
 ///-------------------------------------------------------------------------------
 ///
 
-namespace CG {
-    public partial class CGD2081C: CommonClass.FORMBASE {
-        public CGD2081C() {
+namespace CG
+{
+    public partial class CGD2081C : CommonClass.FORMBASE
+    {
+        public CGD2081C()
+        {
             InitializeComponent();
         }
         Collection Mc1 = new Collection();
@@ -126,7 +129,8 @@ namespace CG {
         const int SPD_THK6 = 84;
         const int SPD_FLAW_YN = 85;
 
-        protected override void p_SubFormInit() {
+        protected override void p_SubFormInit()
+        {
 
             int imcseq;
 
@@ -142,7 +146,7 @@ namespace CG {
             p_SetMc("轧批号", txt_lot_no, "P", "", "", "", "", imcseq); //6
             p_SetMc("钢板状态", txt_rec_sts, "", "", "", "", "", imcseq); //7
             p_SetMc("班次", CBO_SHIFT, "P", "", "", "", "", imcseq); //8
-           
+
             int iheadrow;
             int iscseq;
             p_ScIni(ss1, Sc1, 0, true, false);
@@ -251,7 +255,7 @@ namespace CG {
         {
             base.sSvrPgmPkgName = "CGD2081NC";
             Form_Define();
-           
+
             SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_LOT_NO, true);
             SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_ACT_THK, true);
             SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_ACT_WID, true);
@@ -303,591 +307,97 @@ namespace CG {
 
         }
 
-        public override bool Form_Cls() {
-            
-             base.Form_Cls();
-             txt_plt.Text = "C3";
-             //        Call txt_plt_KeyUp(0, 0)
-             txt_line.Text = "1";
-             txt_rec_sts.Text = "1";
-             opt_line3.Checked = true;
-             txt_stdspec_chg.Text = "";
-             TXT_REMARK.Text = "";
-             //2012-3-14 Modify by LiChao
-             TXT_sUserID.Text = "";
-             TXT_sUserID_Tail.Text = "";
-             txt_Color_code.Text = "";
-             return true;
+        public override bool Form_Cls()
+        {
+
+            base.Form_Cls();
+            txt_plt.Text = "C3";
+            //        Call txt_plt_KeyUp(0, 0)
+            txt_line.Text = "1";
+            txt_rec_sts.Text = "1";
+            opt_line3.Checked = true;
+            txt_stdspec_chg.Text = "";
+            TXT_REMARK.Text = "";
+            //2012-3-14 Modify by LiChao
+            TXT_sUserID.Text = "";
+            TXT_sUserID_Tail.Text = "";
+            txt_Color_code.Text = "";
+            return true;
         }
 
-        public override void Form_Ref() {
-            int i;
-            //
-            //    Call Form_Cls
-            string simpcont;
+        public override void Form_Ref()
+        {
             int iCount;
+            string sPlateNo;
+            int iRow;
+            int sord_cnt;
             string sFlag;
             string sexport;
-            Type CHK_PART;
 
-            unlockSpread(ss1);
+            int inum;
+            int lRow;
 
-           
+            string sCurDate;
+            string sDel_To_Date;
 
-            p_Ref(2, 1, true, false);
+            sCurDate = System.DateTime.Now.ToString("yyyyMM");
 
-            if (ss1.ActiveSheet.RowCount > 0)
+            //    If Gf_Sp_ProceExist(sc1.Item("Spread")) Then Exit Sub
+
+            p_Ref(1, 1, true, true);
+
+            for (iCount = 1; iCount <= ss1.ActiveSheet.RowCount; iCount++)
             {
-
-                txt_plate_no.Text = ss1.ActiveSheet.Cells[0, 0].Text;
-
-                //for (i = 0; i <= 17; i++) {
-                //CHK_PART = Type.GetType("CHK_PART"+i);
-                //PropertyInfo CHK_PART_TEXT =   CHK_PART.GetProperty("Text");
-                //CHK_PART_TEXT.SetValue(obj, "zhx", null);
-                //}
-            }
-
-            if (txt_plate_no.Text.Length == 14)
-            {
-                if (p_Ref(1, 0, true, false))
+                sPlateNo = ss1.ActiveSheet.Cells[iCount - 1, SPD_PLATE_NO].Text;
+                if (ss1.ActiveSheet.Cells[iCount - 1, SPD_PLATE_NO].Text.Substring(0, 12) == sPlateNo.Substring(0, 12)) { }
+                else
                 {
-
-                    if (TXT_SURF_GRD.Text == "Y")
-                    {
-                        opt_CHK_SUR_GRD0.Checked = true;
-                    }
-                    else
-                    {
-                        opt_CHK_SUR_GRD1.Checked = true;
-                    }
-
-
-                    if (TXT_INSP_MAIN_GRD.Text.Length == 1)
-                    {
-                        if (TXT_INSP_MAIN_GRD.Text == "7")
-                        {
-                            opt_CHK_PRD_GRD5.Checked = true;
-                        }
-                        else if (TXT_INSP_MAIN_GRD.Text == "5")
-                        {
-                            opt_CHK_PRD_GRD4.Checked = true;
-                        }
-                        else if (TXT_INSP_MAIN_GRD.Text == "4")
-                        {
-                            opt_CHK_PRD_GRD3.Checked = true;
-                        }
-                        else if (TXT_INSP_MAIN_GRD.Text == "3")
-                        {
-                            opt_CHK_PRD_GRD2.Checked = true;
-                        }
-                        else if (TXT_INSP_MAIN_GRD.Text == "2")
-                        {
-                            opt_CHK_PRD_GRD1.Checked = true;
-                        }
-                        else if (TXT_INSP_MAIN_GRD.Text == "1")
-                        {
-                            opt_CHK_PRD_GRD0.Checked = true;
-                        }
-                    }
-                    if (TXT_INSP_OCCR_TIME.Text == "")
-                    {
-                        TXT_INSP_OCCR_TIME.Text = Gf_DTSet("", "X");
-                    }
-                    //TXT_INSP_MAN = sUserID
-                    //ADD BY LIQIAN AT 20120322
-
-                    TXT_EMP_CD1.Text = GeneralCommon.sUserID;
-
-                    //Call Display_Data_Edit
+                    ss1.ActiveSheet.Cells[iCount - 2, SPD_LAST_YN].Text = "1";
                 }
             }
-
+            for (iRow = 1; iRow <= ss1.ActiveSheet.RowCount; iRow++)
             {
-                for (iCount = 1; iCount <= ss1.ActiveSheet.RowCount; iCount++)
+
+                sord_cnt = Convert.ToInt32(ss1.ActiveSheet.Cells[iRow - 1, SPD_ORD_CNT].Text);
+
+                if (sord_cnt > 1)
                 {
-
-                    simpcont = ss1.ActiveSheet.Cells[iCount - 1, SS1_IMP_CONT].Text.Trim();
-                    sFlag = ss1.ActiveSheet.Cells[iCount - 1, SS1_FLAG].Text.Trim();
-                    sexport = ss1.ActiveSheet.Cells[iCount - 1, SS1_EXPORT].Text.Trim();
-                    if (simpcont == "Y")
-                    {
-                        SpreadCommon.Gp_Sp_BlockColor(ss1, SS1_PLATE_NO, SS1_PLATE_NO, iCount - 1, iCount - 1, SSP1.BackColor, Color.White);
-                        SpreadCommon.Gp_Sp_BlockColor(ss1, SS1_IMP_CONT, SS1_IMP_CONT, iCount - 1, iCount - 1, SSP1.BackColor, Color.White);
-                    }
-
-                    //是否定制配送
-                    if (sFlag == "Y")
-                    {
-                        SpreadCommon.Gp_Sp_BlockColor(ss1, SS1_PLATE_NO, SS1_PLATE_NO, iCount - 1, iCount - 1, SSP4.BackColor, Color.White);
-                    }
-                    //是否出口订单
-
-                    if (sexport == "Y")
-                    {
-                        SpreadCommon.Gp_Sp_BlockColor(ss1, SS1_PLATE_NO, SS1_PLATE_NO, iCount - 1, iCount - 1, SSP5.BackColor, Color.White);
-                    }
+                    SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, iRow - 1, iRow - 1, Color.Black, SSP1.BackColor);
                 }
             }
 
-            lockSpread(ss1);
-
-            CHK_CL_FL.Checked = false;
-
-        }
-
-        public override void Form_Pro() {
-            string SMESG;
-            int iCount;
-
-            if (TXT_INSP_MAIN_GRD.Text.Trim() != "4") {
-                if (TXT_SURF_GRD.Text.Trim() == "") {
-                    SMESG = " 请输入表面判定 ！";
-                    GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "");
-                    return;
+            //超交货期用红色显示 add by liqian 2012-07-23
+            for (iRow = 1; iRow <= ss1.ActiveSheet.RowCount; iRow++)
+            {
+                sDel_To_Date = ss1.ActiveSheet.Cells[iRow - 1, SPD_DEL_DATE_TO].Text.Substring(0, 6);
+                if (Convert.ToDouble(sDel_To_Date) < Convert.ToDouble(sCurDate))
+                {
+                    SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, iRow - 1, iRow - 1, Color.Red, Color.White);
                 }
             }
 
-
-            if (!Gp_DateCheck(TXT_INSP_OCCR_TIME.Text, "")) {
-                SMESG = " 请正确输入检查时间 ！";
-                GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "");
-                return;
-            }
-
-            if (SSCHK_GRID_YN.Checked) {
-                if (!Gp_DateCheck(TXT_GRID_TIME.Text, "")) {
-                    SMESG = " 请正确输入修磨时间 ！";
-                    GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "");
-                    return;
+            for (iRow = 1; iRow <= ss1.ActiveSheet.RowCount; iRow++)
+            {
+                //是否定制配送
+                sFlag = ss1.ActiveSheet.Cells[iRow - 1, SPD_FLAG_FL].Text;
+                if (sFlag == "Y")
+                {
+                    SpreadCommon.Gp_Sp_BlockColor(ss1, SPD_PLATE_NO, SPD_PLATE_NO, iRow - 1, iRow - 1, SSP4.BackColor, Color.White);
                 }
-                if (TXT_GRID_EMP_CD.Text.Trim() == "") {
-                    TXT_GRID_EMP_CD.Text = GeneralCommon.sUserID;
-                }
-                if (TXT_TOP_GRID_GRD.Text == "") {
-                    SMESG = " 请正确输入上表面修磨后判定 ！";
-                    GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "");
-                    return;
-                }
-                if (TXT_BOT_GRID_GRD.Text == "") {
-                    SMESG = " 请正确输入下表面修磨后判定 ！";
-                    GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "");
-                    return;
+                //是否出口订单
+                sexport = ss1.ActiveSheet.Cells[iRow - 1, SPD_EXPORT].Text;
+                if (sexport == "Y")
+                {
+                    SpreadCommon.Gp_Sp_BlockColor(ss1, SPD_PLATE_NO, SPD_PLATE_NO, iRow - 1, iRow - 1, SSP5.BackColor, Color.White);
                 }
             }
 
-
-            //TXT_INSP_MAN.Text = sUserID
-            //ADD BY LIQIAN AT 20120322
-            TXT_EMP_CD1.Text = GeneralCommon.sUserID;
-            if (TXT_INSP_MAN.Text == "") {
-                SMESG = " 请选择检验人员！";
-                GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "");
-                return;
-            }
-            p_Pro(1, 0, true, true);
-
-            CHK_CL_FL.Checked = false;
         }
 
-
-        private void opt_CHK_PRD_GRD_Clk() {
-            if (opt_CHK_PRD_GRD0.Checked) {
-                TXT_INSP_MAIN_GRD.Text = "1";
-                opt_CHK_PRD_GRD0.ForeColor = Color.Red;
-                //red
-                opt_CHK_PRD_GRD1.ForeColor = Color.Black;
-                //black
-                opt_CHK_PRD_GRD2.ForeColor = Color.Black;
-                //black
-                opt_CHK_PRD_GRD3.ForeColor = Color.Black;
-                //black
-                opt_CHK_PRD_GRD4.ForeColor = Color.Black;
-                //black
-                opt_CHK_PRD_GRD5.ForeColor = Color.Black;
-                //black
-                COM_PF.Enabled = false;
-                COM_PF.Text = "";
-            } else if (opt_CHK_PRD_GRD1.Checked) {
-                TXT_INSP_MAIN_GRD.Text = "2";
-                opt_CHK_PRD_GRD0.ForeColor = Color.Black;
-                //black
-                opt_CHK_PRD_GRD1.ForeColor = Color.Red;
-                //red
-                opt_CHK_PRD_GRD2.ForeColor = Color.Black;
-                //black
-                opt_CHK_PRD_GRD3.ForeColor = Color.Black;
-                //black
-                opt_CHK_PRD_GRD4.ForeColor = Color.Black;
-                //black
-                opt_CHK_PRD_GRD5.ForeColor = Color.Black;
-                //black
-                COM_PF.Enabled = false;
-                COM_PF.Text = "";
-            } else if (opt_CHK_PRD_GRD2.Checked) {
-                TXT_INSP_MAIN_GRD.Text = "3";
-                opt_CHK_PRD_GRD0.ForeColor = Color.Black;
-                //black
-                opt_CHK_PRD_GRD1.ForeColor = Color.Black;
-                //black
-                opt_CHK_PRD_GRD2.ForeColor = Color.Red;
-                //red
-                opt_CHK_PRD_GRD3.ForeColor = Color.Black;
-                //black
-                opt_CHK_PRD_GRD4.ForeColor = Color.Black;
-                //black
-                opt_CHK_PRD_GRD5.ForeColor = Color.Black;
-                //black
-                COM_PF.Enabled = false;
-                COM_PF.Text = "";
-            } else if (opt_CHK_PRD_GRD3.Checked) {
-                TXT_INSP_MAIN_GRD.Text = "4";
-                opt_CHK_PRD_GRD0.ForeColor = Color.Black;
-                //black
-                opt_CHK_PRD_GRD1.ForeColor = Color.Black;
-                //black
-                opt_CHK_PRD_GRD2.ForeColor = Color.Black;
-                //black
-                opt_CHK_PRD_GRD3.ForeColor = Color.Red;
-                //red
-                opt_CHK_PRD_GRD4.ForeColor = Color.Black;
-                //black
-                opt_CHK_PRD_GRD5.ForeColor = Color.Black;
-                //black
-                COM_PF.Enabled = false;
-                COM_PF.Text = "";
-            } else if (opt_CHK_PRD_GRD4.Checked) {
-                TXT_INSP_MAIN_GRD.Text = "5";
-                opt_CHK_PRD_GRD0.ForeColor = Color.Black;
-                //black
-                opt_CHK_PRD_GRD1.ForeColor = Color.Black;
-                //black
-                opt_CHK_PRD_GRD2.ForeColor = Color.Black;
-                //black
-                opt_CHK_PRD_GRD3.ForeColor = Color.Black;
-                //black
-                opt_CHK_PRD_GRD4.ForeColor = Color.Red;
-                //red
-                opt_CHK_PRD_GRD5.ForeColor = Color.Black;
-                //black
-                COM_PF.Enabled = false;
-                COM_PF.Text = "";
-            } else if (opt_CHK_PRD_GRD5.Checked) {
-                TXT_INSP_MAIN_GRD.Text = "7";
-                opt_CHK_PRD_GRD0.ForeColor = Color.Black;
-                //black
-                opt_CHK_PRD_GRD1.ForeColor = Color.Black;
-                //black
-                opt_CHK_PRD_GRD2.ForeColor = Color.Black;
-                //black
-                opt_CHK_PRD_GRD3.ForeColor = Color.Black;
-                //black
-                opt_CHK_PRD_GRD4.ForeColor = Color.Black;
-                //black
-                opt_CHK_PRD_GRD5.ForeColor = Color.Red;
-                //red
-                txt_Scrap_code.Enabled = true;
-                COM_PF.Enabled = true;
-            }
-        }
-
-        private void opt_CHK_SUR_GRD_Clk() {
-            if (opt_CHK_SUR_GRD0.Checked) {
-                opt_CHK_SUR_GRD0.ForeColor = Color.Red;
-                //red
-                opt_CHK_SUR_GRD1.ForeColor = Color.Black;
-                //black
-                TXT_SURF_GRD.Text = "Y";
-            } else {
-                TXT_SURF_GRD.Text = "N";
-                opt_CHK_SUR_GRD1.ForeColor = Color.Red;
-                //red
-                opt_CHK_SUR_GRD0.ForeColor = Color.Black;
-                //black
-            }
-        }
-
-        private void opt_LineFlag_Clk() {
-            //    Call Form_Cls
-            //    TXT_PLATE_NO = ""
-            if (opt_LineFlag0.Checked) {
-                txt_PrcLine.Text = "1";
-                opt_LineFlag0.ForeColor = Color.Red;
-                //red
-                opt_LineFlag1.ForeColor = Color.Black;
-                //black
-                opt_LineFlag2.ForeColor = Color.Black;
-                //black
-                opt_LineFlag3.ForeColor = Color.Black;
-                //black
-            } else if (opt_LineFlag1.Checked) {
-                txt_PrcLine.Text = "2";
-                opt_LineFlag0.ForeColor = Color.Black;
-                //black
-                opt_LineFlag1.ForeColor = Color.Red;
-                //red
-                opt_LineFlag2.ForeColor = Color.Black;
-                //black
-                opt_LineFlag3.ForeColor = Color.Black;
-                //black
-            } else if (opt_LineFlag2.Checked) {
-                txt_PrcLine.Text = "3";
-                opt_LineFlag0.ForeColor = Color.Black;
-                //black
-                opt_LineFlag1.ForeColor = Color.Black;
-                //black
-                opt_LineFlag2.ForeColor = Color.Red;
-                //red
-                opt_LineFlag3.ForeColor = Color.Black;
-                //black
-            } else if (opt_LineFlag3.Checked) {
-                txt_PrcLine.Text = "4";
-                opt_LineFlag0.ForeColor = Color.Black;
-                //black
-                opt_LineFlag1.ForeColor = Color.Black;
-                //black
-                opt_LineFlag2.ForeColor = Color.Black;
-                //black
-                opt_LineFlag3.ForeColor = Color.Red;
-                //red
-            }
-        }
-
-
-        private void SDB_THK_Change() {
-            PRD_WEIGHT_CALC();
-        }
-
-        private void SDB_WID_Change() {
-            PRD_WEIGHT_CALC();
-        }
-
-        private void SDB_LEN_Change() {
-            PRD_WEIGHT_CALC();
-        }
-
-        private void PRD_WEIGHT_CALC() {
-            double dThk;
-            double dWid;
-            double dLen;
-
-            dThk = SDB_THK.NumValue;
-            dWid = SDB_WID.NumValue;
-            dLen = SDB_LEN.NumValue;
-            if (dThk > 0 & dWid > 0 & dLen > 0) {
-                SDB_WGT.NumValue = Cal_Plate_Wgt("WGT", dThk, dWid, dLen);
-            }
-
-            Size_Grade_Edit();
-        }
-
-
-        private double Cal_Plate_Wgt(string sMode, double dThk, double dWid, double dLen) {
-
-            double Plate_Wgt = 0;
-
-            sQuery = "SELECT  Gf_Cal_Plate_Wgt('" + sMode + "'";
-            sQuery = sQuery + ",'" + TXT_APLY_ENDUSE_CD.Text + "'";
-            sQuery = sQuery + ",'" + TXT_STLGRD.Text + "'";
-            sQuery = sQuery + "," + dThk;
-            sQuery = sQuery + "," + dWid;
-            sQuery = sQuery + "," + dLen;
-            sQuery = sQuery + ",0 )";
-            sQuery = sQuery + "FROM  DUAL";
-
-            if (GeneralCommon.M_CN1.State == 0)
-                if (!GeneralCommon.GF_DbConnect()) return Plate_Wgt;
-
-
-            ADODB.Recordset AdoRs = new ADODB.Recordset();
-            try {
-                AdoRs.Open(sQuery, GeneralCommon.M_CN1, ADODB.CursorTypeEnum.adOpenStatic, ADODB.LockTypeEnum.adLockReadOnly);
-
-                if (!AdoRs.BOF && !AdoRs.EOF) {
-                    //RltValue = true;
-                    while (!AdoRs.EOF) {
-                        Plate_Wgt = Convert.ToDouble(AdoRs.Fields[0].Value);
-                        AdoRs.MoveNext();
-                    }
-                }
-
-                //在这里不需要关闭对象，因为该方法是在查询过程中调用，关闭对象会导致框架查询报错 韩超
-
-                //GeneralCommon.M_CN1.Close();
-
-                AdoRs = null;
-
-                return Plate_Wgt;
-            } catch (Exception ex) {
-               // if (GeneralCommon.M_CN1.State != 0) GeneralCommon.M_CN1.Close();
-                AdoRs = null;
-                return 0;
-            }
-
-        }
-
-        private void SDT_PROD_DATE_DblClk() {
-            udt_date_fr.Text = Gf_DTSet("D", "");
-            udt_date_to.Text = Gf_DTSet("D", "");
-        }
-        private void SDT_PROD_TO_DATE_DblClk() {
-            udt_date_to.Text = Gf_DTSet("D", "");
-        }
-
-        private void txt_Color_code_Change() {
-            if (txt_Color_code.Text.Length == txt_Color_code.MaxLength) {
-                txt_Color_name.Text = GeneralCommon.Gf_ComnNameFind(GeneralCommon.M_CN1, "CG002", txt_Color_code.Text, 1);
-            } else {
-                txt_Color_name.Text = "";
-            }
-        }
-
-        private void TXT_GRID_EMP_CD_DblClk() {
-            TXT_GRID_EMP_CD.Text = GeneralCommon.sUserID;
-        }
-
-        private void TXT_GRID_TIME_DblClick() {
-            TXT_GRID_TIME.Text = Gf_DTSet("", "X");
-        }
-
-        private void TXT_INSP_OCCR_TIME_DblClk() {
-            TXT_INSP_OCCR_TIME.Text = Gf_DTSet("", "X");
-        }
-
-        private void CHK_TOP_GRD0_Clk() {
-
-            if (sCheck != "") {
-                return;
-            }
-
-            sCheck = "**";
-
-            if (!CHK_TOP_GRD0.Checked) {
-                if (!CHK_TOP_GRD1.Checked) {
-                    TXT_TOP_GRID_GRD.Text = "";
-                    CHK_TOP_GRD0.ForeColor = Color.Black;
-                    CHK_TOP_GRD1.ForeColor = Color.Black;
-                    sCheck = "";
-                    return;
-                }
-            }
-
-            if (CHK_TOP_GRD0.Checked) {
-                CHK_TOP_GRD0.ForeColor = Color.Red;
-                CHK_TOP_GRD0.Checked = true;
-
-                CHK_TOP_GRD1.ForeColor = Color.Black;
-                CHK_TOP_GRD1.Checked = false;
-
-                TXT_TOP_GRID_GRD.Text = CHK_TOP_GRD0.Tag.ToString();
-                sCheck = "";
-
-            }
-        }
-
-        private void CHK_TOP_GRD1_Clk()
+        private void SSCHK_GRID_YN_Clk()
         {
-
-            if (sCheck != "")
+            if (SSCHK_GRID_YN.Checked == false)
             {
-                return;
-            }
-
-            sCheck = "**";
-
-            if (!CHK_TOP_GRD0.Checked)
-            {
-                if (!CHK_TOP_GRD1.Checked)
-                {
-                    TXT_TOP_GRID_GRD.Text = "";
-                    CHK_TOP_GRD0.ForeColor = Color.Black;
-                    CHK_TOP_GRD1.ForeColor = Color.Black;
-                    sCheck = "";
-                    return;
-                }
-            }
-
-            if (CHK_TOP_GRD1.Checked)
-            {
-                CHK_TOP_GRD1.ForeColor = Color.Red;
-                CHK_TOP_GRD1.Checked = true;
-
-                CHK_TOP_GRD0.ForeColor = Color.Black;
-                CHK_TOP_GRD0.Checked = false;
-
-                TXT_TOP_GRID_GRD.Text = CHK_TOP_GRD1.Tag.ToString();
-                sCheck = "";
-
-            }
-        }
-
-        private void CHK_BOT_GRD0_Clk() {
-
-            if (sCheck != "")
-                return;
-
-            sCheck = "**";
-
-            if (!CHK_BOT_GRD0.Checked) {
-                if (!CHK_BOT_GRD1.Checked) {
-                    TXT_BOT_GRID_GRD.Text = "";
-                    CHK_BOT_GRD0.ForeColor = Color.Black;
-                    CHK_BOT_GRD1.ForeColor = Color.Black;
-                    sCheck = "";
-                    return;
-                }
-            }
-
-            if (CHK_BOT_GRD0.Checked) {
-                CHK_BOT_GRD0.ForeColor = Color.Red;
-                CHK_BOT_GRD0.Checked = true;
-
-                CHK_BOT_GRD1.ForeColor = Color.Black;
-                CHK_BOT_GRD1.Checked = false;
-
-                TXT_BOT_GRID_GRD.Text = CHK_BOT_GRD0.Tag.ToString();
-                sCheck = "";
-
-            }
-
-        }
-
-        private void CHK_BOT_GRD1_Clk()
-        {
-
-            if (sCheck != "")
-                return;
-
-            sCheck = "**";
-
-            if (!CHK_BOT_GRD0.Checked)
-            {
-                if (!CHK_BOT_GRD1.Checked)
-                {
-                    TXT_BOT_GRID_GRD.Text = "";
-                    CHK_BOT_GRD0.ForeColor = Color.Black;
-                    CHK_BOT_GRD1.ForeColor = Color.Black;
-                    sCheck = "";
-                    return;
-                }
-            }
-
-            if (CHK_BOT_GRD1.Checked)
-            {
-                CHK_BOT_GRD1.ForeColor = Color.Red;
-                CHK_BOT_GRD1.Checked = true;
-
-                CHK_BOT_GRD0.ForeColor = Color.Black;
-                CHK_BOT_GRD0.Checked = false;
-
-                TXT_BOT_GRID_GRD.Text = CHK_BOT_GRD1.Tag.ToString();
-                sCheck = "";
-            }
-           
-        }
-
-        private void CHK_GRID_FLAG_Click() {
-            if (!SSCHK_GRID_YN.Checked) {
                 CHK_TOP_GRD0.Enabled = false;
                 CHK_TOP_GRD0.Checked = false;
                 CHK_TOP_GRD1.Enabled = false;
@@ -904,13 +414,13 @@ namespace CG {
                 SDB_TOP_GRID_DEEP.Text = "";
                 SDB_BOT_GRID_DEEP.Enabled = false;
                 SDB_BOT_GRID_DEEP.Text = "";
-                TXT_GRID_EMP_CD.Enabled = false;
-                TXT_GRID_EMP_CD.Text = "";
                 TXT_GRID_TIME.Enabled = false;
                 TXT_GRID_TIME.Text = "";
 
                 //        CHK_NEXT_PRC(1).Enabled = True
-            } else {
+            }
+            else
+            {
                 CHK_TOP_GRD0.Enabled = true;
                 CHK_TOP_GRD1.Enabled = true;
                 CHK_BOT_GRD0.Enabled = true;
@@ -919,207 +429,812 @@ namespace CG {
                 SDB_BOT_GRID_YRD.Enabled = true;
                 SDB_TOP_GRID_DEEP.Enabled = true;
                 SDB_BOT_GRID_DEEP.Enabled = true;
-                TXT_GRID_EMP_CD.Enabled = true;
                 TXT_GRID_TIME.Enabled = true;
 
-                TXT_GRID_EMP_CD.Text = GeneralCommon.sUserID;
                 TXT_GRID_TIME.Text = Gf_DTSet("", "X");
 
                 CHK_TOP_GRD0.Checked = true;
-                CHK_TOP_GRD0_Clk();
+                //CHK_TOP_GRD_Click0);
                 CHK_BOT_GRD0.Checked = true;
-                CHK_BOT_GRD0_Clk();
+                //CHK_BOT_GRD_Click(0);
+
             }
         }
 
-        private void Display_Data_Edit() {
-            int iIndexChk;
-            int iIndexStr;
+        private void CHK_TOP_GRD_Clk()
+        {
+
+            if (sCheck != "")
+                return;
 
             sCheck = "**";
 
-
-            if (TXT_TOP_GRID_GRD.Text != "")
-                SSCHK_GRID_YN.Checked = true;
-
-            if (TXT_TOP_GRID_GRD.Text == "Y") {
-                CHK_TOP_GRD0.Checked = true;
-                CHK_TOP_GRD1.Checked = false;
-            } else if (TXT_TOP_GRID_GRD.Text == "N") {
-                CHK_TOP_GRD0.Checked = false;
-                CHK_TOP_GRD1.Checked = true;
+            if (!CHK_TOP_GRD0.Checked &&!CHK_TOP_GRD1.Checked)
+            {
+                TXT_TOP_GRID_GRD.Text = "";
+                this.ForeColor = ColorTranslator.FromHtml("#808080");
+                sCheck = "";
+                return;
             }
 
-            if (TXT_BOT_GRID_GRD.Text == "Y") {
-                CHK_BOT_GRD0.Checked = true;
-                CHK_BOT_GRD1.Checked = false;
-            } else if (TXT_BOT_GRID_GRD.Text == "N") {
-                CHK_BOT_GRD0.Checked = false;
-                CHK_BOT_GRD1.Checked = true;
+            if (CHK_TOP_GRD0.Checked)
+            {
+                CHK_TOP_GRD0.ForeColor = Color.Red;
+                CHK_TOP_GRD1.ForeColor = ColorTranslator.FromHtml("#808080");
+            }
+            else
+            {
+                CHK_TOP_GRD1.ForeColor = Color.Red;
+                CHK_TOP_GRD0.ForeColor = ColorTranslator.FromHtml("#808080");
             }
 
-            if (txtGas.Text == "Y") {
-                chkGas.Checked = true;
-            }
-            if (txtGrid.Text == "Y") {
-                chkGrid.Checked = true;
-            }
-            if (txtCl.Text == "Y") {
-                chkCl.Checked = true;
-            }
-
-            if (TXT_INSP_MAIN_GRD.Text == "1") {
-                opt_CHK_PRD_GRD0.Checked = true;
-            } else if (TXT_INSP_MAIN_GRD.Text == "2") {
-                opt_CHK_PRD_GRD1.Checked = true;
-            } else if (TXT_INSP_MAIN_GRD.Text == "3") {
-                opt_CHK_PRD_GRD2.Checked = true;
-            } else if (TXT_INSP_MAIN_GRD.Text == "4") {
-                opt_CHK_PRD_GRD3.Checked = true;
-            } else if (TXT_INSP_MAIN_GRD.Text == "5") {
-                opt_CHK_PRD_GRD4.Checked = true;
-            } else if (TXT_INSP_MAIN_GRD.Text == "7") {
-                opt_CHK_PRD_GRD5.Checked = true;
-            }
-
-            if (TXT_SURF_GRD.Text == "Y") {
-                opt_CHK_SUR_GRD0.Checked = true;
-            } else if (TXT_SURF_GRD.Text == "N") {
-                opt_CHK_SUR_GRD1.Checked = true;
-            }
-
-            ///''''''ADD BY GUOLI AT 200712071330''''''''''
-            if (opt_CHK_SUR_GRD0.Checked == true) {
-                TXT_SURF_GRD.Text = "Y";
-            } else if (opt_CHK_SUR_GRD1.Checked == true) {
-                TXT_SURF_GRD.Text = "N";
-            }
-            ///''''''''''''''''''''''''''''''''''''''''''''
+            TXT_TOP_GRID_GRD.Text = this.Tag.ToString();
+            
+            sCheck = "";
 
         }
 
+        private void CHK_BOT_GRD_Clk()
+        {
 
-        private void Size_Grade_Edit() {
-            string sGradeFlag;
+            if (sCheck != "")
+                return;
 
-            sGradeFlag = "";
+            sCheck = "**";
 
-            if (TXT_PROC_FLAG.Text != "CGD") 
-            { return; }
-
-            // THICK GRAND CHECK
-            if (SDB_THK.NumValue >= SDB_MS_THK.NumValue + SDB_INSP_THK_MN.NumValue & SDB_THK.NumValue <= SDB_MS_THK.NumValue + SDB_INSP_THK_MX.NumValue) {
-                TXT_INSP_THK_GRD.Text = "Y";
-                SDB_THK.ForeColor = Color.Black;
-            } else {
-                TXT_INSP_THK_GRD.Text = "N";
-                SDB_THK.ForeColor = Color.Red;
-                sGradeFlag = "N";
+            if (!CHK_BOT_GRD0.Checked && !CHK_BOT_GRD1.Checked)
+            {
+                TXT_TOP_GRID_GRD.Text = "";
+                this.ForeColor = ColorTranslator.FromHtml("#808080");
+                sCheck = "";
+                return;
             }
 
-            // WIDTH GRAND CHECK
-            if (SDB_WID.NumValue >= SDB_MS_WID.NumValue + SDB_INSP_WID_MN.NumValue & SDB_WID.NumValue <= SDB_MS_WID.NumValue + SDB_INSP_WID_MX.NumValue) {
-                TXT_INSP_WID_GRD.Text = "Y";
-                SDB_WID.ForeColor = Color.Black;
-            } else {
-                TXT_INSP_WID_GRD.Text = "N";
-                SDB_WID.ForeColor = Color.Red;
-                sGradeFlag = "N";
+            if (CHK_BOT_GRD0.Checked)
+            {
+                CHK_BOT_GRD0.ForeColor = Color.Red;
+                CHK_BOT_GRD1.ForeColor = ColorTranslator.FromHtml("#808080");
+            }
+            else
+            {
+                CHK_BOT_GRD1.ForeColor = Color.Red;
+                CHK_BOT_GRD0.ForeColor = ColorTranslator.FromHtml("#808080");
             }
 
-            // LENGTH GRAND CHECK
-            if (SDB_LEN.NumValue >= SDB_MS_LEN.NumValue + SDB_INSP_LEN_MN.NumValue & SDB_LEN.NumValue <= SDB_MS_LEN.NumValue + SDB_INSP_LEN_MX.NumValue) {
-                TXT_INSP_LEN_GRD.Text = "Y";
-                SDB_LEN.ForeColor = Color.Black;
-            } else {
-                TXT_INSP_LEN_GRD.Text = "N";
-                SDB_LEN.ForeColor = Color.Red;
-                sGradeFlag = "N";
-            }
+            TXT_BOT_GRID_GRD.Text = this.Tag.ToString();
 
-            // WEIGHT GRAND CHECK
-            if (SDB_WGT.NumValue >= SDB_WGT_ORD.NumValue + SDB_PWGT_MN.NumValue & SDB_WGT.NumValue <= SDB_WGT_ORD.NumValue + SDB_PWGT_MX.NumValue) {
-                TXT_INSP_WGT_GRD.Text = "Y";
-                SDB_WGT.ForeColor = Color.Black;
-            } else {
-                TXT_INSP_WGT_GRD.Text = "N";
-                SDB_WGT.ForeColor = Color.Red;
-                sGradeFlag = "N";
-            }
+            sCheck = "";
+
         }
 
-        private void ss1_DblClk(int col, int row) {
-            //If Row < 1 Or SDB_DIVIDE_CNT.Value > 0 Then Exit Sub
+        public override void Form_Pro()
+        {
 
-            txt_plate_no.Text = ss1.ActiveSheet.Cells[row, 0].Text;
-            SSCHK_GRID_YN.Checked = false;
+            int iRow;
+            string SMESG;
 
-            if (txt_plate_no.Text.Length == 14) {
+            string sMark_no;
+            string sPlate_no;
+            string sThk;
+            string sWid;
+            string sLen;
+            string sWgt;
+            string sSpec;
+            string sStdspec_YY;
 
-                if (p_Ref(1, 0, true, false)) {
-                    ///'''''''''''''''ADD BY GUOLI AT 200712071330''''''''''
-                    if (opt_CHK_SUR_GRD0.Checked) {
-                        TXT_SURF_GRD.Text = "Y";
-                    } else if (opt_CHK_SUR_GRD1.Checked) {
-                        TXT_SURF_GRD.Text = "N";
-                    }
-                    ///'''''''''''''''''''''''''''''''''''''''''''''''''''''
-
-                    if (TXT_INSP_MAIN_GRD.Text.Length == 1) {
-                        if (TXT_INSP_MAIN_GRD.Text == "7") {
-                            opt_CHK_PRD_GRD5.Checked = true;
-                        } else if (TXT_INSP_MAIN_GRD.Text == "5") {
-                            opt_CHK_PRD_GRD4.Checked = true;
-                        } else if (TXT_INSP_MAIN_GRD.Text == "4") {
-                            opt_CHK_PRD_GRD3.Checked = true;
-                        } else if (TXT_INSP_MAIN_GRD.Text == "3") {
-                            opt_CHK_PRD_GRD2.Checked = true;
-                        } else if (TXT_INSP_MAIN_GRD.Text == "2") {
-                            opt_CHK_PRD_GRD1.Checked = true;
-                        } else if (TXT_INSP_MAIN_GRD.Text == "1") {
-                            opt_CHK_PRD_GRD0.Checked = true;
-                        }
-                    }
-
-                    //Call Display_Data_Edit
+            if (SSCHK_GRID_YN.Checked)
+            {
+                if (!Gp_DateCheck(TXT_GRID_TIME.Text, ""))
+                {
+                    SMESG = " 请正确输入修磨时间 ！";
+                    GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "");
+                    return;
                 }
-                if (TXT_INSP_OCCR_TIME.Text == "") {
-                    TXT_INSP_OCCR_TIME.Text = Gf_DTSet("", "X");
+                if (TXT_TOP_GRID_GRD.Text == "")
+                {
+                    SMESG = " 请正确输入上表面修磨后判定 ！";
+                    GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "");
+                    return;
                 }
+                if (TXT_BOT_GRID_GRD.Text == "")
+                {
+                    SMESG = " 请正确输入下表面修磨后判定 ！";
+                    GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "");
+                    return;
+                }
+            }
 
-                // add by liqian at 2012-04-12  下一块时改判标准到自动清空
-                txt_stdspec_chg.Text = "";
-                txt_stdspec_name_chg.Text = "";
+            if (ss1.ActiveSheet.RowHeader.Cells[ss1.ActiveSheet.ActiveRowIndex, 0].Text != "修改")
+            {
+                SMESG = "请选择钢板号";
+                GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "");
+                return;
+            }
 
-                //TXT_INSP_MAN = sUserID
-                //MODIFY BY LIQIAN AT 20120322
-                TXT_EMP_CD1.Text = GeneralCommon.sUserID;
+            int rowIndex = ss1.ActiveSheet.ActiveRowIndex;
+
+            ss1.ActiveSheet.Cells[rowIndex, SPD_THK].Text = SDB_THK.NumValue.ToString();
+            ss1.ActiveSheet.Cells[rowIndex, SPD_WID].Text = SDB_WID.NumValue.ToString();
+            ss1.ActiveSheet.Cells[rowIndex, SPD_LEN].Text = SDB_LEN.NumValue.ToString();
+            ss1.ActiveSheet.Cells[rowIndex, SPD_ACT_THK].Text = SDB_ACT_THK.NumValue.ToString();
+            ss1.ActiveSheet.Cells[rowIndex, SPD_ACT_WID].Text = SDB_ACT_WID.NumValue.ToString();
+            ss1.ActiveSheet.Cells[rowIndex, SPD_ACT_LEN].Text = SDB_ACT_LEN.NumValue.ToString();
+            ss1.ActiveSheet.Cells[rowIndex, SPD_THK_MIN].Text = SDB_INSP_THK_MN.NumValue.ToString();
+            ss1.ActiveSheet.Cells[rowIndex, SPD_THK_MAX].Text = SDB_INSP_THK_MX.NumValue.ToString();
+            ss1.ActiveSheet.Cells[rowIndex, SPD_WID_MIN].Text = SDB_INSP_WID_MN.NumValue.ToString();
+            ss1.ActiveSheet.Cells[rowIndex, SPD_WID_MAX].Text = SDB_INSP_WID_MX.NumValue.ToString();
+            ss1.ActiveSheet.Cells[rowIndex, SPD_LEN_MIN].Text = SDB_INSP_LEN_MN.NumValue.ToString();
+            ss1.ActiveSheet.Cells[rowIndex, SPD_LEN_MAX].Text = SDB_INSP_LEN_MX.NumValue.ToString();
+            ss1.ActiveSheet.Cells[rowIndex, SPD_INSP_CD].Text = TXT_INSP_FLAW5.Text;
+            ss1.ActiveSheet.Cells[rowIndex, SPD_INSP_CD1].Text = TXT_INSP_FLAW0.Text;
+            //ss1.ActiveSheet.Cells[rowIndex, SPD_INSP_CD2].Text = TXT_INSP_FLAW1.Text;
+            ss1.ActiveSheet.Cells[rowIndex, SPD_INSP_CD3].Text = TXT_INSP_FLAW3.Text;
+            //ss1.ActiveSheet.Cells[rowIndex, SPD_INSP_CD4].Text = TXT_INSP_FLAW4.Text;
+            ss1.ActiveSheet.Cells[rowIndex, SPD_APLY_STDSPEC_NEW].Text = txt_stdspec_chg.Text;
+            if (SSCHK_LAST_YN.Checked)
+            {
+                ss1.ActiveSheet.Cells[rowIndex, SPD_LAST_YN].Text = "True";
+            }
+            else
+            {
+                ss1.ActiveSheet.Cells[rowIndex, SPD_LAST_YN].Text = "False";
+            }
+            ss1.ActiveSheet.Cells[rowIndex, SPD_SIZE_KND].Text = TXT_SIZE_KND.Text;
+            ss1.ActiveSheet.Cells[rowIndex, SPD_TRIM_FL].Text = TXT_TRIM_FL.Text;
+            if (SSCHK_GRID_YN.Checked)
+            {
+                ss1.ActiveSheet.Cells[rowIndex, SPD_GRID_YN].Text = "Y";
+            }
+            else
+            {
+                ss1.ActiveSheet.Cells[rowIndex, SPD_GRID_YN].Text = "N";
+            }
+            ss1.ActiveSheet.Cells[rowIndex, SPD_PROD_REMARK].Text = TXT_REMARK.Text;
+
+            ss1.ActiveSheet.Cells[rowIndex, SPD_SURF_GRD].Text = TXT_INSP_MAIN_GRD.Text;
+            if (ss1.ActiveSheet.Cells[rowIndex, SPD_SURF_GRD].Text != "1" & ss1.ActiveSheet.Cells[rowIndex, SPD_SURF_GRD].Text != "2" & ss1.ActiveSheet.Cells[rowIndex, SPD_SURF_GRD].Text != "3" & ss1.ActiveSheet.Cells[rowIndex, SPD_SURF_GRD].Text != "4" & ss1.ActiveSheet.Cells[rowIndex, SPD_SURF_GRD].Text != "5" & ss1.ActiveSheet.Cells[rowIndex, SPD_SURF_GRD].Text != "7")
+            {
+                GeneralCommon.Gp_MsgBoxDisplay("表面等级输入错误，请确认", "I", "");
+                return;
+            }
+            ss1.ActiveSheet.Cells[rowIndex, SPD_TOP_GRID_GRD].Text = TXT_TOP_GRID_GRD.Text;
+            ss1.ActiveSheet.Cells[rowIndex, SPD_TOP_GRID_YRD].Text = SDB_TOP_GRID_YRD.Text;
+            ss1.ActiveSheet.Cells[rowIndex, SPD_TOP_GRID_DEEP].Text = SDB_TOP_GRID_DEEP.Text;
+            ss1.ActiveSheet.Cells[rowIndex, SPD_BOT_GRID_GRD].Text = TXT_BOT_GRID_GRD.Text;
+            ss1.ActiveSheet.Cells[rowIndex, SPD_BOT_GRID_YRD].Text = SDB_BOT_GRID_YRD.Text;
+            ss1.ActiveSheet.Cells[rowIndex, SPD_BOT_GRID_DEEP].Text = SDB_BOT_GRID_DEEP.Text;
+            ss1.ActiveSheet.Cells[rowIndex, SPD_GRID_TIME].Text = TXT_GRID_TIME.Text;
+            ss1.ActiveSheet.Cells[rowIndex, SPD_INSP_DIAGONAL1].Text = SDB_INSP_DIAGONAL1.NumValue.ToString();
+            ss1.ActiveSheet.Cells[rowIndex, SPD_INSP_DIAGONAL2].Text = SDB_INSP_DIAGONAL2.NumValue.ToString();
+            ss1.ActiveSheet.Cells[rowIndex, SPD_LOC].Text = TXT_LOC.Text;
+            ss1.ActiveSheet.Cells[rowIndex, SPD_INSP_WAVE1].Text = TXT_WAVE1.Text;
+            ss1.ActiveSheet.Cells[rowIndex, SPD_PLATE_COLOR].Text = txt_Color_code.Text;
+
+            ss1.ActiveSheet.Cells[rowIndex, SPD_THK1].Text = SDB_HD1.NumValue.ToString();
+            ss1.ActiveSheet.Cells[rowIndex, SPD_THK2].Text = SDB_HD2.NumValue.ToString();
+            ss1.ActiveSheet.Cells[rowIndex, SPD_THK3].Text = SDB_HD3.NumValue.ToString();
+            ss1.ActiveSheet.Cells[rowIndex, SPD_THK4].Text = SDB_HD4.NumValue.ToString();
+            ss1.ActiveSheet.Cells[rowIndex, SPD_THK5].Text = SDB_HD5.NumValue.ToString();
+            ss1.ActiveSheet.Cells[rowIndex, SPD_THK6].Text = SDB_HD6.NumValue.ToString();
+            // .Col = SPD_FLAW_YN:             If CHK_FLAW_YN.Value = -1 Then .Text = "Y" Else .Text = "N"
+
+            if (txt_rec_sts.Text == "1")
+            {
+
+                p_pro(1, 1, true, true);
+            }
+
+        }
+
+        public override void Spread_Ins()
+        {
+            double dThk =0;
+            double dWid = 0;
+            double dLen = 0;
+            double dWgt = 0;
+            int lRow = 0;
+            string sPlateNo;
+            string sLotNo = "";
+            string sCutNo = "";
+            string sClipText;
+
+            string sSize_knd = "";
+            string sTrim_fl = "";
+            string sAply_stdspec = "";
+            string sEmp_cd = "";
+            string sStdspec_YY;
+            string sStdspec;
+            int iCount;
+
+            sPlateNo = "";
+
+            if (ss1.ActiveSheet.RowCount == 0)
+            {
+                if (txt_plate_no.Text.Length == 12)
+                {
+                    base.Spread_Ins();
+                    ss1.ActiveSheet.Cells[0, SPD_PLATE_NO].Text = txt_plate_no.Text + "01";
+                    ss1.ActiveSheet.Cells[0, SPD_THK].Text = "0";
+                    ss1.ActiveSheet.Cells[0, SPD_WID].Text = "0";
+                    ss1.ActiveSheet.Cells[0, SPD_LEN].Text = "0";
+                    ss1.ActiveSheet.Cells[0, SPD_APLY_STDSPEC].Text = "GB-XXX";
+                }
+                else
+                {
+                    GeneralCommon.Gp_MsgBoxDisplay("请正确输入母板号 ！", "I", "");
+                }
+                return;
+            }
+
+
+            for (iCount = ss1.ActiveSheet.ActiveRowIndex; iCount < ss1.ActiveSheet.RowCount; iCount++)
+            {
+                if (sPlateNo == "" || ss1.ActiveSheet.Cells[iCount, SPD_PLATE_NO].Text.Substring(0, 12) == sPlateNo.Substring(0, 12))
+                {
+                    sPlateNo = ss1.ActiveSheet.Cells[iCount, SPD_PLATE_NO].Text;
+                    lRow = iCount;
+                }
+                else
+                {
+                    break; // TODO: might not be correct. Was : Exit For
+                }
+            }
+
+            sPlateNo = "";
+
+            ss1.ActiveSheet.SetActiveCell(0, lRow);
+            base.Spread_Ins();
+            if (lRow >= 0)
+            {
+                sPlateNo = ss1.ActiveSheet.Cells[lRow, SPD_PLATE_NO].Text;
+                sLotNo = ss1.ActiveSheet.Cells[lRow, SPD_LOT_NO].Text;
+                sCutNo = ss1.ActiveSheet.Cells[lRow, SPD_CUT_NO].Text;
+                dThk = Convert.ToDouble(ss1.ActiveSheet.Cells[lRow, SPD_THK].Text);
+                dWid = Convert.ToDouble(ss1.ActiveSheet.Cells[lRow, SPD_WID].Text);
+                dLen = Convert.ToDouble(ss1.ActiveSheet.Cells[lRow, SPD_LEN].Text);
+                dWgt = Convert.ToDouble(ss1.ActiveSheet.Cells[lRow, SPD_WGT].Text);
+                sSize_knd = ss1.ActiveSheet.Cells[lRow, SPD_SIZE_KND].Text;
+                sTrim_fl = ss1.ActiveSheet.Cells[lRow, SPD_TRIM_FL].Text;
+                sAply_stdspec = ss1.ActiveSheet.Cells[lRow, SPD_APLY_STDSPEC].Text;
+                sEmp_cd = ss1.ActiveSheet.Cells[lRow, SPD_EMP_CD].Text;
+            }
+            else
+            {
+                sPlateNo = txt_plate_no.Text + "00";
+            }
+
+            ss1.ActiveSheet.Cells[lRow, SPD_PLATE_NO].Text = sPlateNo;
+            ss1.ActiveSheet.Cells[lRow, SPD_LOT_NO].Text = sLotNo;
+            ss1.ActiveSheet.Cells[lRow, SPD_CUT_NO].Text = sCutNo;
+            ss1.ActiveSheet.Cells[lRow, SPD_THK].Text = dThk.ToString();
+            ss1.ActiveSheet.Cells[lRow, SPD_WID].Text = dWid.ToString();
+            ss1.ActiveSheet.Cells[lRow, SPD_LEN].Text = dLen.ToString();
+            ss1.ActiveSheet.Cells[lRow, SPD_WGT].Text = dWgt.ToString();
+            ss1.ActiveSheet.Cells[lRow, SPD_SIZE_KND].Text = sSize_knd;
+            ss1.ActiveSheet.Cells[lRow, SPD_TRIM_FL].Text = sTrim_fl;
+            ss1.ActiveSheet.Cells[lRow, SPD_APLY_STDSPEC].Text = sAply_stdspec;
+            ss1.ActiveSheet.Cells[lRow, SPD_EMP_CD].Text = sEmp_cd;
+            //ss1.Col = 0;
+            //ss1.Text = "Input";
+            ss1.ActiveSheet.Cells[lRow, SPD_PLATE_NO].Text = ss1.ActiveSheet.Cells[lRow, SPD_PLATE_NO].Text.Substring(0, 12) + string.Format((Convert.ToInt32(ss1.ActiveSheet.Cells[lRow, SPD_PLATE_NO].Text.Substring(12, 2)) + 1).ToString());
+            ss1.ActiveSheet.Cells[lRow, SPD_SURF_GRD].Text = "1";
+
+        }
+
+        private void opt_CHK_PRD_GRD_Clk()
+        {
+            if (opt_CHK_PRD_GRD0.Checked)
+            {
+                TXT_INSP_MAIN_GRD.Text = "1";
+                opt_CHK_PRD_GRD0.ForeColor = Color.Red;
+                //red
+                opt_CHK_PRD_GRD1.ForeColor = Color.Black;
+                //black
+                opt_CHK_PRD_GRD2.ForeColor = Color.Black;
+                //black
+                opt_CHK_PRD_GRD3.ForeColor = Color.Black;
+                //black
+                opt_CHK_PRD_GRD4.ForeColor = Color.Black;
+                //black
+
+            
+            }
+            else if (opt_CHK_PRD_GRD1.Checked)
+            {
+                TXT_INSP_MAIN_GRD.Text = "2";
+                opt_CHK_PRD_GRD0.ForeColor = Color.Black;
+                //black
+                opt_CHK_PRD_GRD1.ForeColor = Color.Red;
+                //red
+                opt_CHK_PRD_GRD2.ForeColor = Color.Black;
+                //black
+                opt_CHK_PRD_GRD3.ForeColor = Color.Black;
+                //black
+                opt_CHK_PRD_GRD4.ForeColor = Color.Black;
+                //black
+                label29.Text = "改判原因";
+            
+            }
+            else if (opt_CHK_PRD_GRD2.Checked)
+            {
+                TXT_INSP_MAIN_GRD.Text = "3";
+                opt_CHK_PRD_GRD0.ForeColor = Color.Black;
+                //black
+                opt_CHK_PRD_GRD1.ForeColor = Color.Black;
+                //black
+                opt_CHK_PRD_GRD2.ForeColor = Color.Red;
+                //red
+                opt_CHK_PRD_GRD3.ForeColor = Color.Black;
+                //black
+                opt_CHK_PRD_GRD4.ForeColor = Color.Black;
+                //black
+                label29.Text = "协议原因";
+              
+            }
+            else if (opt_CHK_PRD_GRD3.Checked)
+            {
+                TXT_INSP_MAIN_GRD.Text = "4";
+                opt_CHK_PRD_GRD0.ForeColor = Color.Black;
+                //black
+                opt_CHK_PRD_GRD1.ForeColor = Color.Black;
+                //black
+                opt_CHK_PRD_GRD2.ForeColor = Color.Black;
+                //black
+                opt_CHK_PRD_GRD3.ForeColor = Color.Red;
+                //red
+                opt_CHK_PRD_GRD4.ForeColor = Color.Black;
+                //black
+                label29.Text = "待判原因";
+             
+            }
+            else if (opt_CHK_PRD_GRD4.Checked)
+            {
+                TXT_INSP_MAIN_GRD.Text = "5";
+                opt_CHK_PRD_GRD0.ForeColor = Color.Black;
+                //black
+                opt_CHK_PRD_GRD1.ForeColor = Color.Black;
+                //black
+                opt_CHK_PRD_GRD2.ForeColor = Color.Black;
+                //black
+                opt_CHK_PRD_GRD3.ForeColor = Color.Black;
+                //black
+                opt_CHK_PRD_GRD4.ForeColor = Color.Red;
+                //red
+                label29.Text = "次品原因";
             }
         }
+
+        private void opt_line1_Clk()
+        {
+
+            if (opt_line1.Checked)
+            {
+                opt_line1.ForeColor = Color.Red;
+                opt_line2.ForeColor = Color.Black;
+                opt_line5.ForeColor = Color.Black;
+                txt_line.Text = "1";
+                if (ss1.ActiveSheet.RowCount > 0) Form_Ref();
+                SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_LINE1, false);
+                SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_LINE2, true);
+            }
+
+        }
+
+
+        private void opt_line2_Clk(int Value)
+        {
+            if (opt_line2.Checked)
+            {
+                opt_line2.ForeColor = Color.Red;
+                opt_line1.ForeColor = Color.Black;
+                opt_line5.ForeColor = Color.Black;
+                txt_line.Text = "2";
+                if (ss1.ActiveSheet.RowCount > 0) Form_Ref();
+                SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_LINE2, false);
+                SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_LINE1, true);
+            }
+
+        }
+
+
+        private void opt_line5_Clk(int Value)
+        {
+            if (opt_line5.Checked)
+            {
+                opt_line5.ForeColor = Color.Red;
+                opt_line1.ForeColor = Color.Black;
+                opt_line2.ForeColor = Color.Black;
+                txt_line.Text = "";
+                if (ss1.ActiveSheet.RowCount > 0) Form_Ref();
+                SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_LINE2, false);
+                SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_LINE1, false);
+            }
+
+        }
+
+        private void opt_line3_Clk(int Value)
+        {
+            if (opt_line3.Checked)
+            {
+                opt_line3.ForeColor = Color.Red;
+                opt_line4.ForeColor = Color.Black;
+                txt_rec_sts.Text = "1";
+            }
+        }
+
+        private void opt_line4_Clk(int Value)
+        {
+            if (opt_line4.Checked)
+            {
+                opt_line4.ForeColor = Color.Red;
+                opt_line3.ForeColor = Color.Black;
+                txt_rec_sts.Text = "2";
+            }
+        }
+
+        //add by liqian at 2012-03-14 根据实测长度值计算公称长度
+        private void SDB_ACT_LEN_Chg()
+        {
+            double iLen;
+            if (TXT_SIZE_KND.Text != "01")
+            {
+                if (SDB_ACT_LEN.NumValue > 0)
+                {
+                    iLen = (SDB_ACT_LEN.NumValue / 50) * 50;
+                    SDB_LEN.NumValue = iLen;
+                }
+            }
+        }
+
+        private void ss1_ButtonClicked(int Col, int ROW)
+{
+	int sCheck1;
+	int sCheck2;
+
+	int iCol;
+	int iRow;
+	int iMode;
+
+	int iRowNum;
+	int iRowfr;
+	int iRowto;
+
+	string SMESG;
+
+	iCol = Col;
+	iRow = ROW;
+
+	if (ss1.ActiveSheet.RowCount<=0) return;
+	if (Col != SPD_LINE1 & Col != SPD_LINE2 & Col != SPD_SURF_YN) return;
+	if (GeneralCommon.Gf_Sc_Authority(sAuthority, "U")) return;
+
+	SSCHK_GRID_YN.Checked = false;
+
+	iRowto = iRow - 1;
+	iRowfr = iRow + 1;
+
+	if (iRowto >= 0) {
+		for (iRowNum = 0; iRowNum <= iRowto; iRowNum++) {
+
+			if (ss1.ActiveSheet.RowHeader.Cells[iRowNum,0].Text != "") {
+				ss1.ActiveSheet.RowHeader.Cells[iRowNum,0].Text = "";
+				ss1.ActiveSheet.Cells[iRowNum,SPD_LINE1].Text = "False";
+				ss1.ActiveSheet.Cells[iRowNum,SPD_LINE2].Text = "False";
+
+				break; // TODO: might not be correct. Was : Exit For
+			}
+		}
+	}
+
+	if (iRowfr <= ss1.ActiveSheet.RowCount) {
+		for (iRowNum = iRowfr; iRowNum < ss1.ActiveSheet.RowCount; iRowNum++) {
+
+			if (ss1.ActiveSheet.RowHeader.Cells[iRowNum,0].Text != "") {
+				ss1.ActiveSheet.RowHeader.Cells[iRowNum,0].Text = "";
+				ss1.ActiveSheet.Cells[iRowNum,SPD_LINE1].Text = "False";
+				ss1.ActiveSheet.Cells[iRowNum,SPD_LINE2].Text = "False";
+
+				break; // TODO: might not be correct. Was : Exit For
+			}
+		}
+	}
+
+
+	if (ss1.ActiveSheet.Cells[iRow,SPD_LINE1].Text == "True") {;
+		ss1.ActiveSheet.Cells[iRow,SPD_LINE2].Text = "False";
+	} else if (ss1.ActiveSheet.Cells[iRow,SPD_LINE2].Text == "True") {
+		ss1.ActiveSheet.Cells[iRow,SPD_LINE1].Text = "False";
+	}
+
+	if (Col == SPD_SURF_YN) {
+		if (ss1.ActiveSheet.Cells[iRow,SPD_SURF_YN].Text == "True") {
+			ss1.ActiveSheet.Cells[iRow,SPD_SURF_GRD].Text = "1";
+		} else {
+			ss1.ActiveSheet.Cells[iRow,SPD_SURF_GRD].Text = "4";
+		}
+	}
+
+
+	ss1.Col = 0;
+	ss1.Text = "Update";
+
+	TXT_INSP_FLAW(0).Text = "";
+	TXT_INSP_FLAW(1).Text = "";
+	TXT_INSP_FLAW(3).Text = "";
+	TXT_INSP_FLAW(4).Text = "";
+	TXT_INSP_FLAW(5).Text = "";
+
+	ss1.Col = SPD_LINE1;
+	sCheck1 = ss1.Value;
+	ss1.Col = SPD_LINE2;
+	sCheck2 = ss1.Value;
+
+	if (sCheck1 == 0 & sCheck2 == 0) {
+		ss1.Col = 0;
+		ss1.Text = "";
+		Gp_Sp_BlockColor(ss1, 1, -1, iRow, iRow);
+	} else {
+		Gp_Sp_BlockColor(ss1, 1, -1, iRow, iRow, , SSP2.BackColor);
+		//        TXT_INSP_FLAW(0).Text = ""
+		//        TXT_INSP_FLAW(1).Text = ""
+		//        TXT_INSP_FLAW(3).Text = ""
+		//        TXT_INSP_FLAW(4).Text = ""
+		//        TXT_INSP_FLAW(5).Text = ""
+		opt_CHK_PRD_GRD(0).Value = true;
+
+		// add by liqian at 2012-03-29  改判标准到下一块时自动清空
+		txt_stdspec_chg.Text = "";
+		TXT_INSP_FLAW_NAME(5).Text = "";
+		TXT_INSP_FLAW(5).Text = "";
+		// add by liqian at 2012-04-18 留样下一块自动清空
+		SSCHK_LY_YN.Value = 0;
+		SSCHK_LAST_YN.Value = 0;
+		CHK_FLAW_YN.Value = 0;
+
+		ss1.ROW = iRow;
+		ss1.Col = SPD_THK;
+		SDB_THK.Value = ss1.Value;
+		ss1.Col = SPD_WID;
+		SDB_WID.Value = ss1.Value;
+		ss1.Col = SPD_LEN;
+		SDB_LEN.Value = ss1.Value;
+		ss1.Col = SPD_THK_MIN;
+		if (ss1.Value == "")
+			SDB_INSP_THK_MN.Value = 0;
+		else
+			SDB_INSP_THK_MN.Value = ss1.Value;
+		ss1.Col = SPD_THK_MAX;
+		if (ss1.Value == "")
+			SDB_INSP_THK_MX.Value = 0;
+		else
+			SDB_INSP_THK_MX.Value = ss1.Value;
+		ss1.Col = SPD_WID_MIN;
+		if (ss1.Value == "")
+			SDB_INSP_WID_MN.Value = 0;
+		else
+			SDB_INSP_WID_MN.Value = ss1.Value;
+		ss1.Col = SPD_WID_MAX;
+		if (ss1.Value == "")
+			SDB_INSP_WID_MX.Value = 0;
+		else
+			SDB_INSP_WID_MX.Value = ss1.Value;
+		ss1.Col = SPD_LEN_MIN;
+		if (ss1.Value == "")
+			SDB_INSP_LEN_MN.Value = 0;
+		else
+			SDB_INSP_LEN_MN.Value = ss1.Value;
+		ss1.Col = SPD_LEN_MAX;
+		if (ss1.Value == "")
+			SDB_INSP_LEN_MX.Value = 0;
+		else
+			SDB_INSP_LEN_MX.Value = ss1.Value;
+		ss1.Col = SPD_ACT_THK;
+		if (ss1.Value == "")
+			SDB_ACT_THK.Value = 0;
+		else
+			SDB_ACT_THK.Value = ss1.Value;
+		ss1.Col = SPD_ACT_WID;
+		if (ss1.Value == "")
+			SDB_ACT_WID.Value = 0;
+		else
+			SDB_ACT_WID.Value = ss1.Value;
+		ss1.Col = SPD_ACT_LEN;
+		if (ss1.Value == "")
+			SDB_ACT_LEN.Value = 0;
+		else
+			SDB_ACT_LEN.Value = ss1.Value;
+		//2012-3-20 Modify by LiChao
+		ss1.Col = SPD_INSP_WAVE;
+		if (ss1.Value == "")
+			TXT_WAVE.Text = "";
+		else
+			TXT_WAVE.Text = ss1.Value;
+		ss1.Col = SPD_INSP_VERT_DEG;
+		if (ss1.Value == "")
+			TXT_VERT_DEG.Text = "";
+		else
+			TXT_VERT_DEG.Text = ss1.Value;
+		ss1.Col = SPD_INSP_RECT_DEG;
+		if (ss1.Value == "")
+			TXT_RECT_DEG.Text = "";
+		else
+			TXT_RECT_DEG.Text = ss1.Value;
+		// add by liqian at 2012-04-18 留样下一块自动清空,备注重查
+		ss1.Col = SPD_PROD_REMARK;
+		if (ss1.Value == "")
+			TXT_REMARK.Text = "";
+		else
+			TXT_REMARK.Text = ss1.Value;
+		ss1.Col = SPD_TOP_GRID_GRD;
+		if (ss1.Value == "")
+			TXT_TOP_GRID_GRD.Text = "";
+		else
+			TXT_TOP_GRID_GRD.Text = ss1.Value;
+		ss1.Col = SPD_TOP_GRID_YRD;
+		if (ss1.Value == "")
+			SDB_TOP_GRID_YRD.Value = 0;
+		else
+			SDB_TOP_GRID_YRD.Value = ss1.Value;
+		ss1.Col = SPD_TOP_GRID_DEEP;
+		if (ss1.Value == "")
+			SDB_TOP_GRID_DEEP.Value = 0;
+		else
+			SDB_TOP_GRID_DEEP.Value = ss1.Value;
+		ss1.Col = SPD_BOT_GRID_GRD;
+		if (ss1.Value == "")
+			TXT_BOT_GRID_GRD.Text = "";
+		else
+			TXT_BOT_GRID_GRD.Text = ss1.Value;
+		ss1.Col = SPD_BOT_GRID_YRD;
+		if (ss1.Value == "")
+			SDB_BOT_GRID_YRD.Value = 0;
+		else
+			SDB_BOT_GRID_YRD.Value = ss1.Value;
+		ss1.Col = SPD_BOT_GRID_DEEP;
+		if (ss1.Value == "")
+			SDB_BOT_GRID_DEEP.Value = 0;
+		else
+			SDB_BOT_GRID_DEEP.Value = ss1.Value;
+		ss1.Col = SPD_GRID_TIME;
+		if (ss1.Value == "")
+			TXT_GRID_TIME.Text = "";
+		else
+			TXT_GRID_TIME.Text = ss1.Value;
+		ss1.Col = SPD_INSP_DIAGONAL1;
+		if (ss1.Value == "")
+			SDB_INSP_DIAGONAL1.Value = 0;
+		else
+			SDB_INSP_DIAGONAL1.Value = ss1.Value;
+		ss1.Col = SPD_INSP_DIAGONAL2;
+		if (ss1.Value == "")
+			SDB_INSP_DIAGONAL2.Value = 0;
+		else
+			SDB_INSP_DIAGONAL2.Value = ss1.Value;
+		ss1.Col = SPD_LOC;
+		if (ss1.Value == "")
+			txt_loc.Text = "";
+		else
+			txt_loc.Text = ss1.Value;
+		ss1.Col = SPD_INSP_WAVE1;
+		if (ss1.Value == "")
+			TXT_WAVE1.Text = "";
+		else
+			TXT_WAVE1.Text = ss1.Value;
+
+		ss1.Col = SPD_THK1;
+		if (ss1.Value == "")
+			SDB_HD1.Value = 0;
+		else
+			SDB_HD1.Value = ss1.Value;
+		ss1.Col = SPD_THK2;
+		if (ss1.Value == "")
+			SDB_HD2.Value = 0;
+		else
+			SDB_HD2.Value = ss1.Value;
+		ss1.Col = SPD_THK3;
+		if (ss1.Value == "")
+			SDB_HD3.Value = 0;
+		else
+			SDB_HD3.Value = ss1.Value;
+		ss1.Col = SPD_THK4;
+		if (ss1.Value == "")
+			SDB_HD4.Value = 0;
+		else
+			SDB_HD4.Value = ss1.Value;
+		ss1.Col = SPD_THK5;
+		if (ss1.Value == "")
+			SDB_HD5.Value = 0;
+		else
+			SDB_HD5.Value = ss1.Value;
+		ss1.Col = SPD_THK6;
+		if (ss1.Value == "")
+			SDB_HD6.Value = 0;
+		else
+			SDB_HD6.Value = ss1.Value;
+
+		ss1.Col = SPD_INSP_CD1;
+		if (ss1.Text == "")
+			TXT_INSP_FLAW(0).Text = "";
+		else
+			TXT_INSP_FLAW(0).Text = ss1.Text;
+		ss1.Col = SPD_INSP_CD3;
+		if (ss1.Text == "")
+			TXT_INSP_FLAW(3).Text = "";
+		else
+			TXT_INSP_FLAW(3).Text = ss1.Text;
+
+
+		//2011-08-29   modified by liqian for 画面显示定尺改为汉字,双击时对应栏位还原回代码表示,保证定尺保存为01,02,06,08,..类型
+		ss1.Col = SPD_SIZE_KND;
+		switch (ss1.Text) {
+			case "定尺":
+				TXT_SIZE_KND.Text = "01";
+				break;
+			case "单定尺":
+				TXT_SIZE_KND.Text = "02";
+				break;
+			case "非尺":
+				TXT_SIZE_KND.Text = "06";
+				break;
+			case "小尺板":
+				TXT_SIZE_KND.Text = "08";
+				break;
+			default:
+				TXT_SIZE_KND.Text = "";
+				break;
+		}
+		ss1.Col = SPD_TRIM_FL;
+		TXT_TRIM_FL.Text = ss1.Text;
+
+	}
+
+	ss1.Col = SPD_EMP_CD;
+	ss1.Text = sUserID;
+
+	TXT_CUT_TIME.RawData = Gf_DTSet(M_CN1, , "X");
+	ss1.Col = SPD_PROD_DATE;
+	ss1.Text = TXT_CUT_TIME.Text;
+
+	ss1.Col = SPD_INS_MAN;
+	ss1.Text = TXT_sUserID.Text;
+	ss1.Col = SPD_INS_MAN_TAIL;
+	ss1.Text = TXT_sUserID_Tail.Text;
+
+	ss1.Col = SPD_PLATE_COLOR;
+	ss1.Text = txt_Color_code.Text;
+
+}
+
 
 
         #region 公共方法
 
-        public bool Gp_DateCheck(string DateCheck, string sDTChk) {
+        public bool Gp_DateCheck(string DateCheck, string sDTChk)
+        {
             sDTChk = "M";
             string iDateCheck;
             string iDateMatch;
             string iDate;
             System.DateTime iCheck;
 
-            if (sDTChk == "M") {
+            if (sDTChk == "M")
+            {
                 iDateCheck = DateCheck;
-            } else {
+            }
+            else
+            {
                 iDateCheck = DateCheck.Replace("-", "");
                 iDateCheck = iDateCheck.Replace(" ", "");
                 iDateCheck = iDateCheck.Replace(":", "");
             }
 
-            if (Convert.ToInt32(iDateCheck.Substring(0, 4)) > 2020 | Convert.ToInt32(iDateCheck.Substring(0, 4)) < 2000) {
+            if (Convert.ToInt32(iDateCheck.Substring(0, 4)) > 2020 | Convert.ToInt32(iDateCheck.Substring(0, 4)) < 2000)
+            {
                 return false;
             }
 
-            switch (iDateCheck.Length) {
+            switch (iDateCheck.Length)
+            {
                 case 8:
                     iDate = iDateCheck.Substring(0, 4) + "-" + iDateCheck.Substring(4, 2) + "-" + iDateCheck.Substring(6, 2);
                     iCheck = Convert.ToDateTime(iDate.Substring(1, 10));
@@ -1139,13 +1254,15 @@ namespace CG {
 
             iDateMatch = iCheck.ToString("yyyyMM");
 
-            if (iDateMatch != iDateCheck.Substring(0, 8)) {
+            if (iDateMatch != iDateCheck.Substring(0, 8))
+            {
                 return false;
             }
             return true;
         }
 
-        public string Gf_ShiftSet3(string WKDATE) {
+        public string Gf_ShiftSet3(string WKDATE)
+        {
 
 
             if (GeneralCommon.M_CN1.State == 0)
@@ -1154,18 +1271,25 @@ namespace CG {
             string sQuery;
             sQuery = "SELECT TO_CHAR(SYSDATE,'HH24MI') FROM DUAL";
             ADODB.Recordset AdoRs = new ADODB.Recordset();
-            try {
-                if (WKDATE != "") {
+            try
+            {
+                if (WKDATE != "")
+                {
                     return WKDATE;
                 }
                 AdoRs.Open(sQuery, GeneralCommon.M_CN1, ADODB.CursorTypeEnum.adOpenStatic, ADODB.LockTypeEnum.adLockReadOnly);
 
-                if (!AdoRs.BOF && !AdoRs.EOF) {
+                if (!AdoRs.BOF && !AdoRs.EOF)
+                {
                     //RltValue = true;
-                    while (!AdoRs.EOF) {
-                        if (AdoRs.Fields[0].Value.ToString() == "") {
+                    while (!AdoRs.EOF)
+                    {
+                        if (AdoRs.Fields[0].Value.ToString() == "")
+                        {
                             Shift_HH = "";
-                        } else {
+                        }
+                        else
+                        {
                             Shift_HH = AdoRs.Fields[0].Value.ToString();
                         }
                         AdoRs.MoveNext();
@@ -1174,21 +1298,29 @@ namespace CG {
                 GeneralCommon.M_CN1.Close();
                 AdoRs = null;
 
-                if (Convert.ToInt32(Shift_HH) < 800) {
+                if (Convert.ToInt32(Shift_HH) < 800)
+                {
                     return "1";
-                } else if (Convert.ToInt32(Shift_HH) < 1600) {
+                }
+                else if (Convert.ToInt32(Shift_HH) < 1600)
+                {
                     return "2";
-                } else {
+                }
+                else
+                {
                     return "3";
                 }
-            } catch (Exception ex) {
+            }
+            catch (Exception ex)
+            {
                 if (GeneralCommon.M_CN1.State != 0) GeneralCommon.M_CN1.Close();
                 AdoRs = null;
                 return "0";
             }
         }
 
-        public string Gf_GroupSet(string shift, string setDate) {
+        public string Gf_GroupSet(string shift, string setDate)
+        {
 
             if (GeneralCommon.M_CN1.State == 0)
                 if (!GeneralCommon.GF_DbConnect()) return "";
@@ -1198,15 +1330,21 @@ namespace CG {
             sQuery = "SELECT Gf_Groupset('C3'," + shift + ",SUBSTR('" + setDate + "',1,8)) FROM DUAL";
 
             ADODB.Recordset AdoRs = new ADODB.Recordset();
-            try {
+            try
+            {
                 AdoRs.Open(sQuery, GeneralCommon.M_CN1, ADODB.CursorTypeEnum.adOpenStatic, ADODB.LockTypeEnum.adLockReadOnly);
 
-                if (!AdoRs.BOF && !AdoRs.EOF) {
+                if (!AdoRs.BOF && !AdoRs.EOF)
+                {
                     //RltValue = true;
-                    while (!AdoRs.EOF) {
-                        if (AdoRs.Fields[0].Value.ToString() == "") {
+                    while (!AdoRs.EOF)
+                    {
+                        if (AdoRs.Fields[0].Value.ToString() == "")
+                        {
                             group = "";
-                        } else {
+                        }
+                        else
+                        {
                             group = AdoRs.Fields[0].Value.ToString();
                         }
                         AdoRs.MoveNext();
@@ -1218,7 +1356,9 @@ namespace CG {
                 AdoRs = null;
 
                 return group;
-            } catch (Exception ex) {
+            }
+            catch (Exception ex)
+            {
                 if (GeneralCommon.M_CN1.State != 0) GeneralCommon.M_CN1.Close();
                 AdoRs = null;
                 return "";
@@ -1226,11 +1366,15 @@ namespace CG {
         }
 
         //日期格式
-        public string Gf_DTSet(string DTCheck, string DTFlag) {
+        public string Gf_DTSet(string DTCheck, string DTFlag)
+        {
 
-            if (DTCheck == "D") {
+            if (DTCheck == "D")
+            {
                 DTCheck = "D";
-            } else {
+            }
+            else
+            {
                 DTCheck = "S";
             }
             DTFlag = "C";
@@ -1239,7 +1383,8 @@ namespace CG {
             int sQuery_Len = 0;
             string time = "";
 
-            switch (DTCheck) {
+            switch (DTCheck)
+            {
                 case "S":
                     sQuery = "SELECT TO_CHAR(SYSDATE,'YYYYMMDDHH24MISS') FROM DUAL";
                     sQuery_Len = 14;
@@ -1270,8 +1415,10 @@ namespace CG {
                     break;
             }
 
-            if (DTFlag == "C") {
-                if (DTCheck == "T") {
+            if (DTFlag == "C")
+            {
+                if (DTCheck == "T")
+                {
                     return DateTime.Now.ToString("HHmmss");
                 }
                 return (DateTime.Now.ToString("yyyyMMddHHmmss")).Substring(0, sQuery_Len);
@@ -1281,20 +1428,28 @@ namespace CG {
                 if (!GeneralCommon.GF_DbConnect()) return "00000000000000";
 
             ADODB.Recordset AdoRs = new ADODB.Recordset();
-            try {
+            try
+            {
                 AdoRs.Open(sQuery, GeneralCommon.M_CN1, ADODB.CursorTypeEnum.adOpenStatic, ADODB.LockTypeEnum.adLockReadOnly);
 
-                if (!AdoRs.BOF && !AdoRs.EOF) {
+                if (!AdoRs.BOF && !AdoRs.EOF)
+                {
                     //RltValue = true;
-                    while (!AdoRs.EOF) {
-                        if (AdoRs.Fields[0].Value.ToString() == "") {
+                    while (!AdoRs.EOF)
+                    {
+                        if (AdoRs.Fields[0].Value.ToString() == "")
+                        {
                             time = "";
-                        } else {
+                        }
+                        else
+                        {
                             time = AdoRs.Fields[0].Value.ToString();
                         }
                         AdoRs.MoveNext();
                     }
-                } else {
+                }
+                else
+                {
                     time = "00000000000000";
 
                 }
@@ -1304,7 +1459,9 @@ namespace CG {
                 AdoRs = null;
 
                 return time;
-            } catch (Exception ex) {
+            }
+            catch (Exception ex)
+            {
                 if (GeneralCommon.M_CN1.State != 0) GeneralCommon.M_CN1.Close();
                 AdoRs = null;
                 return "00000000000000";
@@ -1312,16 +1469,20 @@ namespace CG {
         }
 
         //unlock spread L column
-        public void unlockSpread(FpSpread e) {
+        public void unlockSpread(FpSpread e)
+        {
             int columnCount = e.Sheets[0].ColumnCount;
-            for (int i = 0; i < columnCount; i++) {
+            for (int i = 0; i < columnCount; i++)
+            {
                 e.ActiveSheet.Columns[i].Locked = false;
             }
         }
 
-        public void lockSpread(FpSpread e) {
+        public void lockSpread(FpSpread e)
+        {
             int columnCount = e.Sheets[0].ColumnCount;
-            for (int i = 0; i < columnCount; i++) {
+            for (int i = 0; i < columnCount; i++)
+            {
                 e.ActiveSheet.Columns[i].Locked = true;
             }
         }
