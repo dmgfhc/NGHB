@@ -54,19 +54,77 @@ namespace CG {
             InitializeComponent();
         }
         Collection Mc1 = new Collection();
-        Collection Mc2 = new Collection();
         Collection Sc1 = new Collection();
 
-        string sCheck = "";
-        string sQuery;
+        string sCheck;
 
-        const int SS1_PLATE_NO = 0;
-        const int SS1_IMP_CONT = 23;
-        const int SS1_FLAG = 24;
-        const int SS1_EXPORT = 25;
-
-
-
+        const int SPD_LINE1 = 0;
+        const int SPD_LINE2 = 1;
+        const int SPD_PLATE_NO = 2;
+        const int SPD_LOT_NO = 3;
+        const int SPD_CUT_NO = 4;
+        const int SPD_THK = 5;
+        const int SPD_WID = 6;
+        const int SPD_LEN = 7;
+        const int SPD_WGT = 8;
+        const int SPD_ACT_THK = 9;
+        const int SPD_ACT_WID = 10;
+        const int SPD_ACT_LEN = 11;
+        const int SPD_LAST_YN = 12;
+        const int SPD_SIZE_KND = 13;
+        const int SPD_TRIM_FL = 14;
+        const int SPD_UST_FL = 15;
+        const int SPD_APLY_STDSPEC = 16;
+        const int SPD_APLY_STDSPEC_NEW = 17;
+        const int SPD_INSP_CD = 18;
+        const int SPD_GRID_YN = 19;
+        const int SPD_INSP_CD1 = 20;
+        const int SPD_INSP_CD2 = 21;
+        const int SPD_INSP_CD3 = 22;
+        const int SPD_INSP_CD4 = 23;
+        const int SPD_SURF_YN = 24;
+        const int SPD_SURF_GRD = 26;
+        const int SPD_SURF_GRD_DET = 27;
+        const int SPD_PROD_DATE = 28;
+        const int SPD_EMP_CD = 29;
+        const int SPD_THK_MIN = 30;
+        const int SPD_THK_MAX = 31;
+        const int SPD_WID_MIN = 33;
+        const int SPD_WID_MAX = 34;
+        const int SPD_LEN_MIN = 35;
+        const int SPD_LEN_MAX = 36;
+        const int SPD_DEL_DATE_FR = 49;
+        const int SPD_DEL_DATE_TO = 50;
+        const int SPD_ORD_CNT = 51;
+        const int SPD_ORD_REMARK = 52;
+        const int SPD_PROD_REMARK = 53;
+        const int SPD_INS_MAN = 54;
+        const int SPD_INSP_WAVE = 55;
+        const int SPD_INSP_VERT_DEG = 56;
+        const int SPD_INSP_RECT_DEG = 57;
+        const int SPD_INS_MAN_TAIL = 58;
+        const int SPD_TOP_GRID_GRD = 59;
+        const int SPD_TOP_GRID_YRD = 60;
+        const int SPD_TOP_GRID_DEEP = 61;
+        const int SPD_BOT_GRID_GRD = 62;
+        const int SPD_BOT_GRID_YRD = 63;
+        const int SPD_BOT_GRID_DEEP = 64;
+        const int SPD_GRID_TIME = 65;
+        const int SPD_INSP_DIAGONAL1 = 66;
+        const int SPD_INSP_DIAGONAL2 = 67;
+        const int SPD_CL_FL = 68;
+        const int SPD_LOC = 69;
+        const int SPD_INSP_WAVE1 = 70;
+        const int SPD_FLAG_FL = 71;
+        const int SPD_EXPORT = 72;
+        const int SPD_PLATE_COLOR = 73;
+        const int SPD_THK1 = 79;
+        const int SPD_THK2 = 80;
+        const int SPD_THK3 = 81;
+        const int SPD_THK4 = 82;
+        const int SPD_THK5 = 83;
+        const int SPD_THK6 = 84;
+        const int SPD_FLAW_YN = 85;
 
         protected override void p_SubFormInit() {
 
@@ -85,144 +143,181 @@ namespace CG {
             p_SetMc("钢板状态", txt_rec_sts, "", "", "", "", "", imcseq); //7
             p_SetMc("班次", CBO_SHIFT, "P", "", "", "", "", imcseq); //8
            
-
-            p_McIni(Mc2, false);
-            imcseq = 2;
-            p_SetMc("钢板号", txt_plate_no, "PI", "", "", "", "", imcseq); //0
-            p_SetMc("作业线", txt_PrcLine, "PI", "", "", "", "", imcseq); //1
-            p_SetMc(udt_date_fr, "P", "", "", "", imcseq, ""); //2
-            p_SetMc(udt_date_to, "P", "", "", "", imcseq, ""); //3
-            p_SetMc(CBO_SHIFT, "P", "", "", "", imcseq, ""); //4
-            p_SetMc(txt_stdspec, "P", "", "", "", imcseq, ""); //5
-            p_SetMc(SDB_THK_REF, "P", "", "", "", imcseq, ""); //6
-            p_SetMc(SDB_WID_REF, "P", "", "", "", imcseq, ""); //7
-
-
             int iheadrow;
             int iscseq;
             p_ScIni(ss1, Sc1, 0, true, false);
-            iheadrow = 0;
+            iheadrow = 1;
             iscseq = 1;
-            p_SetSc("钢板号", "E", "14", "L", "", "", "", iscseq, iheadrow, "L"); //0 
-            p_SetSc("生产日期", "DT", "", "L", "", "", "", iscseq, iheadrow, "M"); //1 
-            p_SetSc("班次", "E", "10", "L", "", "", "", iscseq, iheadrow, "M"); //2 
-            p_SetSc("分段号", "E", "30", "L", "", "", "", iscseq, iheadrow, "M"); //3 
-            p_SetSc("厚度", "N", "8,2", "L", "", "", "", iscseq, iheadrow, "R"); //4 
-            p_SetSc("宽度", "N", "8,2", "L", "", "", "", iscseq, iheadrow, "R"); //5 
-            p_SetSc("长度", "N", "8", "L", "", "", "", iscseq, iheadrow, "R"); //6 
-            p_SetSc("重量", "N", "15,3", "L", "", "", "", iscseq, iheadrow, "R"); //7 
-            p_SetSc("标准号", "E", "30", "L", "", "", "", iscseq, iheadrow, "L"); //8 
-            p_SetSc("取样", "E", "20", "L", "", "", "", iscseq, iheadrow, "M"); //9 
-            p_SetSc("取样长度", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //10
-            p_SetSc("热处理/实绩", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //11
-            p_SetSc("UST/实绩", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //12
-            p_SetSc("切割/实绩", "E", "10", "L", "", "", "", iscseq, iheadrow, "M"); //13
-            p_SetSc("矫直/实绩", "E", "10", "L", "", "", "", iscseq, iheadrow, "M"); //14
-            p_SetSc("切边", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //15
-            p_SetSc("外观等级", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //16
-            p_SetSc("检验工", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //17
-            p_SetSc("订单厚度", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //18
-            p_SetSc("订单宽度", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //19
-            p_SetSc("订单长度", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //20
-            p_SetSc("轧批号", "E", "20", "L", "", "", "", iscseq, iheadrow, "L"); //21
-            p_SetSc("垛位号", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //22
-            p_SetSc("重点订单", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //23
-            p_SetSc("是否定制配送", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //24
-            p_SetSc("是否出口订单", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //25
-            p_SetSc("试样备注", "E", "200", "L", "", "", "", iscseq, iheadrow, "L"); //26
-            p_SetSc("尺寸备注", "E", "200", "L", "", "", "", iscseq, iheadrow, "L"); //27
-            p_SetSc("打包备注", "E", "200", "L", "", "", "", iscseq, iheadrow, "L"); //28
-            p_SetSc("表面客户要求", "E", "200", "L", "", "", "", iscseq, iheadrow, "L"); //29
+            p_SetSc("#1", "C", "", "L", "", "", "", iscseq, iheadrow, "M"); //0
+            p_SetSc("#2", "C", "", "L", "", "", "", iscseq, iheadrow, "M"); //1
+            p_SetSc("钢板号", "E", "14", "L", "", "", "", iscseq, iheadrow, "L"); //2
+            p_SetSc("轧批号", "E", "20", "L", "", "", "", iscseq, iheadrow, "R"); //3
+            p_SetSc("分段号", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //4
+            p_SetSc("厚度", "N", "9", "L", "", "", "", iscseq, iheadrow, "R"); //5
+            p_SetSc("宽度", "N", "9", "L", "", "", "", iscseq, iheadrow, "R"); //6
+            p_SetSc("长度", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //7
+            p_SetSc("重量", "E", "10", "L", "", "", "", iscseq, iheadrow, "R"); //8
+            p_SetSc("厚度", "N", "9", "L", "", "", "", iscseq, iheadrow, "R"); //9
+            p_SetSc("宽度", "N", "9", "L", "", "", "", iscseq, iheadrow, "R"); //10
+            p_SetSc("长度", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //11
+            p_SetSc("尾板", "E", "1", "L", "", "", "", iscseq, iheadrow, "M"); //12
+            p_SetSc("定尺", "E", "10", "L", "", "", "", iscseq, iheadrow, "M"); //13
+            p_SetSc("切边", "E", "1", "L", "", "", "", iscseq, iheadrow, "M"); //14
+            p_SetSc("探伤", "E", "10", "L", "", "", "", iscseq, iheadrow, "M"); //15
+            p_SetSc("标准号", "E", "30", "L", "", "", "", iscseq, iheadrow, "L"); //16
+            p_SetSc("改判标准号", "E", "30", "L", "", "", "", iscseq, iheadrow, "L"); //17
+            p_SetSc("改判缺陷", "E", "3", "L", "", "", "", iscseq, iheadrow, "M"); //18
+            p_SetSc("修磨", "E", "1", "L", "", "", "", iscseq, iheadrow, "M"); //19
+            p_SetSc("1", "E", "3", "L", "", "", "", iscseq, iheadrow, "M"); //20
+            p_SetSc("2", "E", "3", "L", "", "", "", iscseq, iheadrow, "M"); //21
+            p_SetSc("1", "E", "3", "L", "", "", "", iscseq, iheadrow, "M"); //22
+            p_SetSc("2", "E", "3", "L", "", "", "", iscseq, iheadrow, "M"); //23
+            p_SetSc("合格", "C", "", "L", "", "", "", iscseq, iheadrow, "M"); //24
+            p_SetSc("锁定原因", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //25
+            p_SetSc("等级", "E", "1", "L", "", "", "", iscseq, iheadrow, "M"); //26
+            p_SetSc("内部等级", "E", "10", "L", "", "", "", iscseq, iheadrow, "M"); //27
+            p_SetSc("生产日期", "DT", "", "L", "", "", "", iscseq, iheadrow, "L"); //28
+            p_SetSc("检查人员", "E", "10", "L", "", "", "", iscseq, iheadrow, "M"); //29
+            p_SetSc("厚度下限", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //30
+            p_SetSc("厚度上限", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //31
+            p_SetSc("同板差", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //32
+            p_SetSc("宽度下限", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //33
+            p_SetSc("宽度上限", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //34
+            p_SetSc("长度下限", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //35
+            p_SetSc("长度上限", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //36
+            p_SetSc("镰刀弯总最大值", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //37
+            p_SetSc("镰刀弯每最大值", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //38
+            p_SetSc("镰刀弯类型", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //39
+            p_SetSc("不平度总最大值", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //40
+            p_SetSc("不平度每单位最大值", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //41
+            p_SetSc("不平度类型", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //42
+            p_SetSc("直角度类型", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //43
+            p_SetSc("直角度最大值", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //44
+            p_SetSc("长边切斜度最大值", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //45
+            p_SetSc("宽边切斜度最大值", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //46
+            p_SetSc("厚度切斜度最大值", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //47
+            p_SetSc("同板差最大值", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //48
+            p_SetSc("开始", "D", "", "L", "", "", "", iscseq, iheadrow, "M"); //49
+            p_SetSc("结束", "D", "", "L", "", "", "", iscseq, iheadrow, "M"); //50
+            p_SetSc("订单数量", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //51
+            p_SetSc("订单备注", "E", "400", "L", "", "", "", iscseq, iheadrow, "L"); //52
+            p_SetSc("生产备注", "E", "100", "L", "", "", "", iscseq, iheadrow, "L"); //53
+            p_SetSc("检验工（头部）", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //54
+            p_SetSc("不平度", "N", "9", "L", "", "", "", iscseq, iheadrow, "R"); //55
+            p_SetSc("镰刀弯", "N", "9", "L", "", "", "", iscseq, iheadrow, "R"); //56
+            p_SetSc("切斜", "N", "9", "L", "", "", "", iscseq, iheadrow, "R"); //57
+            p_SetSc("检验工（尾部）", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //58
+            p_SetSc("判定", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //59
+            p_SetSc("面积比", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //60
+            p_SetSc("深度", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //61
+            p_SetSc("判定", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //62
+            p_SetSc("面积比", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //63
+            p_SetSc("深度", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //64
+            p_SetSc("修磨时间", "DT", "", "L", "", "", "", iscseq, iheadrow, "M"); //65
+            p_SetSc("对角线1", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //66
+            p_SetSc("对角线2", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //67
+            p_SetSc("矫直指示", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //68
+            p_SetSc("垛位号", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //69
+            p_SetSc("不平度1", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //70
+            p_SetSc("是否定制配送", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //71
+            p_SetSc("是否出口订单", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //72
+            p_SetSc("钢板颜色", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //73
+            p_SetSc("坯料类别", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //74
+            p_SetSc("试样备注", "E", "200", "L", "", "", "", iscseq, iheadrow, "L"); //75
+            p_SetSc("尺寸备注", "E", "200", "L", "", "", "", iscseq, iheadrow, "L"); //76
+            p_SetSc("打包备注", "E", "200", "L", "", "", "", iscseq, iheadrow, "L"); //77
+            p_SetSc("表面客户要求", "E", "200", "L", "", "", "", iscseq, iheadrow, "L"); //78
+            p_SetSc("厚度1", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //79
+            p_SetSc("厚度2", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //80
+            p_SetSc("厚度3", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //81
+            p_SetSc("厚度4", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //82
+            p_SetSc("厚度5", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //83
+            p_SetSc("厚度6", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //84
+            p_SetSc("下表是否检验", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //85
+
+            iheadrow = 0;
+            p_spanSpread("公称尺寸", 5, 8, iscseq, iheadrow, 1);
+            p_spanSpread("实测尺寸", 9, 11, iscseq, iheadrow, 1);
+            p_spanSpread("上表面缺陷", 20, 21, iscseq, iheadrow, 1);
+            p_spanSpread("下表面缺陷", 22, 23, iscseq, iheadrow, 1);
+            p_spanSpread("订单交付条件", 30, 47, iscseq, iheadrow, 1);
+            p_spanSpread("交货期", 49, 50, iscseq, iheadrow, 1);
+            p_spanSpread("上表面修磨", 59, 61, iscseq, iheadrow, 1);
+            p_spanSpread("下表面修磨", 62, 64, iscseq, iheadrow, 1);
 
         }
 
-
-        private void cbo_ResonDesc_Clk() {
-
-            if (cbo_ResonDesc.Text != "") {
-                txt_ResonCd.Text = cbo_ResonDesc.Text.Substring(0, 0);
-            }
-        }
-
-
-        private void CHK_CL_FL_Clk() {
-            if (CHK_CL_FL.Checked) {
-                TXT_CL.Text = "Y";
-            } else {
-                TXT_CL.Text = "N";
-            }
-        }
-
-        private void chkCl_Clk() {
-            if (chkCl.Checked) {
-                txtCl.Text = "Y";
-                chkCl.ForeColor = Color.Red;
-                //red
-            } else {
-                txtCl.Text = "N";
-                chkCl.ForeColor = Color.Black;
-                //black
-            }
-        }
-
-        private void chkGas_Clk() {
-            if (chkGas.Checked) {
-                txtGas.Text = "Y";
-                chkGas.ForeColor = Color.Red;
-                //red
-            } else {
-                txtGas.Text = "N";
-                chkGas.ForeColor = Color.Black;
-                //red
-            }
-        }
-
-        private void chkGrid_Clk() {
-            if (chkGrid.Checked) {
-                txtGrid.Text = "Y";
-                chkGrid.ForeColor = Color.Red;
-                //red
-            } else {
-                txtGrid.Text = "N";
-                chkGrid.ForeColor = Color.Black;
-                //red
-            }
-        }
-
-        //该功能已经不存在暂时不考虑实现，如需实现请参考VB代码
-        //Private Sub cmd_Off_Click()
-
-        private void CGD2050C_Load(object sender, EventArgs e) {
-            base.sSvrPgmPkgName = "CGD2050NC";
+        private void CGD2081C_Load(object sender, EventArgs e)
+        {
+            base.sSvrPgmPkgName = "CGD2081NC";
             Form_Define();
-            if (txt_plate_no.Text != "") {
-                Form_Ref();
-            }
-            opt_LineFlag0.Checked = true;
-            cbo_ResonDesc.Items.Add("1:设备异常");
-            cbo_ResonDesc.Items.Add("2:线过负荷");
-            cbo_ResonDesc.Items.Add("3:产品异常");
-            if (base.sAuthority.Substring(0, 3) == "111") {
-                cmd_Off.Enabled = true;
-            } else {
-                cmd_Off.Enabled = false;
-            }
-            CHK_CL_FL.Checked = false;
-            COM_PF.Enabled = false;
+           
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_LOT_NO, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_ACT_THK, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_ACT_WID, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_ACT_LEN, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_UST_FL, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_LAST_YN, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_GRID_YN, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_APLY_STDSPEC_NEW, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_INSP_CD, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_INSP_CD1, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_INSP_CD2, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_INSP_CD3, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_INSP_CD4, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_SURF_YN, true);
+            //Call Gp_Sp_ColHidden(ss1, SPD_SURF_GRD, True)
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_SURF_GRD_DET, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_PROD_DATE, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_EMP_CD, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_INSP_WAVE, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_INSP_VERT_DEG, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_INSP_RECT_DEG, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_TOP_GRID_GRD, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_TOP_GRID_YRD, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_TOP_GRID_DEEP, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_BOT_GRID_GRD, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_BOT_GRID_YRD, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_BOT_GRID_DEEP, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_GRID_TIME, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_INSP_DIAGONAL1, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_INSP_DIAGONAL2, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_LOC, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_INSP_WAVE1, true);
+
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_THK1, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_THK2, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_THK3, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_THK4, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_THK5, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_THK6, true);
+
+            txt_plt.Text = "C3";
+
+            txt_line.Text = "1";
+            txt_rec_sts.Text = "1";
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_LINE2, true);
+            opt_line1.Checked = true;
+            opt_line3.Checked = true;
+            opt_CHK_PRD_GRD0.Checked = true;
+
         }
 
         public override bool Form_Cls() {
-            txt_plate_no.Text = "";
-            TXT_INSP_MAN.Text = "";
-            TXT_EMP_CD1.Text = GeneralCommon.sUserID;
-            TXT_INSP_FLAW_NAME3.Text = "";
-            TXT_INSP_FLAW_NAME1.Text = "";
-            TXT_INSP_FLAW_NAME2.Text = "";
-            TXT_INSP_FLAW_NAME0.Text = "";
-            TXT_INSP_FLAW_NAME4.Text = "";
-            CHK_CL_FL.Checked = false;
-            CHK_FLAW_YN.Checked = false;
-            return base.Form_Cls();
+            
+             base.Form_Cls();
+             txt_plt.Text = "C3";
+             //        Call txt_plt_KeyUp(0, 0)
+             txt_line.Text = "1";
+             txt_rec_sts.Text = "1";
+             opt_line3.Checked = true;
+             txt_stdspec_chg.Text = "";
+             TXT_REMARK.Text = "";
+             //2012-3-14 Modify by LiChao
+             TXT_sUserID.Text = "";
+             TXT_sUserID_Tail.Text = "";
+             txt_Color_code.Text = "";
+             return true;
         }
 
         public override void Form_Ref() {
@@ -292,7 +387,7 @@ namespace CG {
                         }
                         else if (TXT_INSP_MAIN_GRD.Text == "1")
                         {
-                            opt_CHK_PRD_GR0D.Checked = true;
+                            opt_CHK_PRD_GRD0.Checked = true;
                         }
                     }
                     if (TXT_INSP_OCCR_TIME.Text == "")
@@ -397,9 +492,9 @@ namespace CG {
 
 
         private void opt_CHK_PRD_GRD_Clk() {
-            if (opt_CHK_PRD_GR0D.Checked) {
+            if (opt_CHK_PRD_GRD0.Checked) {
                 TXT_INSP_MAIN_GRD.Text = "1";
-                opt_CHK_PRD_GR0D.ForeColor = Color.Red;
+                opt_CHK_PRD_GRD0.ForeColor = Color.Red;
                 //red
                 opt_CHK_PRD_GRD1.ForeColor = Color.Black;
                 //black
@@ -415,7 +510,7 @@ namespace CG {
                 COM_PF.Text = "";
             } else if (opt_CHK_PRD_GRD1.Checked) {
                 TXT_INSP_MAIN_GRD.Text = "2";
-                opt_CHK_PRD_GR0D.ForeColor = Color.Black;
+                opt_CHK_PRD_GRD0.ForeColor = Color.Black;
                 //black
                 opt_CHK_PRD_GRD1.ForeColor = Color.Red;
                 //red
@@ -431,7 +526,7 @@ namespace CG {
                 COM_PF.Text = "";
             } else if (opt_CHK_PRD_GRD2.Checked) {
                 TXT_INSP_MAIN_GRD.Text = "3";
-                opt_CHK_PRD_GR0D.ForeColor = Color.Black;
+                opt_CHK_PRD_GRD0.ForeColor = Color.Black;
                 //black
                 opt_CHK_PRD_GRD1.ForeColor = Color.Black;
                 //black
@@ -447,7 +542,7 @@ namespace CG {
                 COM_PF.Text = "";
             } else if (opt_CHK_PRD_GRD3.Checked) {
                 TXT_INSP_MAIN_GRD.Text = "4";
-                opt_CHK_PRD_GR0D.ForeColor = Color.Black;
+                opt_CHK_PRD_GRD0.ForeColor = Color.Black;
                 //black
                 opt_CHK_PRD_GRD1.ForeColor = Color.Black;
                 //black
@@ -463,7 +558,7 @@ namespace CG {
                 COM_PF.Text = "";
             } else if (opt_CHK_PRD_GRD4.Checked) {
                 TXT_INSP_MAIN_GRD.Text = "5";
-                opt_CHK_PRD_GR0D.ForeColor = Color.Black;
+                opt_CHK_PRD_GRD0.ForeColor = Color.Black;
                 //black
                 opt_CHK_PRD_GRD1.ForeColor = Color.Black;
                 //black
@@ -479,7 +574,7 @@ namespace CG {
                 COM_PF.Text = "";
             } else if (opt_CHK_PRD_GRD5.Checked) {
                 TXT_INSP_MAIN_GRD.Text = "7";
-                opt_CHK_PRD_GR0D.ForeColor = Color.Black;
+                opt_CHK_PRD_GRD0.ForeColor = Color.Black;
                 //black
                 opt_CHK_PRD_GRD1.ForeColor = Color.Black;
                 //black
@@ -874,7 +969,7 @@ namespace CG {
             }
 
             if (TXT_INSP_MAIN_GRD.Text == "1") {
-                opt_CHK_PRD_GR0D.Checked = true;
+                opt_CHK_PRD_GRD0.Checked = true;
             } else if (TXT_INSP_MAIN_GRD.Text == "2") {
                 opt_CHK_PRD_GRD1.Checked = true;
             } else if (TXT_INSP_MAIN_GRD.Text == "3") {
@@ -982,7 +1077,7 @@ namespace CG {
                         } else if (TXT_INSP_MAIN_GRD.Text == "2") {
                             opt_CHK_PRD_GRD1.Checked = true;
                         } else if (TXT_INSP_MAIN_GRD.Text == "1") {
-                            opt_CHK_PRD_GR0D.Checked = true;
+                            opt_CHK_PRD_GRD0.Checked = true;
                         }
                     }
 
