@@ -230,3 +230,4 @@ C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGC2070C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGD2037C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGC2071C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGC2072C.resources
+C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGD2081C.resources

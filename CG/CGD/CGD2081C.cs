@@ -59,7 +59,7 @@ namespace CG
         Collection Mc1 = new Collection();
         Collection Sc1 = new Collection();
 
-        string sCheck;
+        string sCheck = "";
 
         const int SPD_LINE1 = 0;
         const int SPD_LINE2 = 1;
@@ -134,7 +134,7 @@ namespace CG
 
             int imcseq;
 
-            p_McIni(Mc1, true);
+            p_McIni(Mc1, false);
             imcseq = 1;
             p_SetMc("工厂代码", txt_plt, "PNL", "", "", "", "", imcseq); //0
             //p_SetMc("作业线", txt_plt_name, "I", "", "", "", "", imcseq); //1
@@ -144,7 +144,7 @@ namespace CG
             p_SetMc("产线", txt_line, "P", "", "", "", "", imcseq); //4
             p_SetMc("标准号", txt_stdspec, "P", "", "", "", "", imcseq); //5
             p_SetMc("轧批号", txt_lot_no, "P", "", "", "", "", imcseq); //6
-            p_SetMc("钢板状态", txt_rec_sts, "", "", "", "", "", imcseq); //7
+            p_SetMc("钢板状态", txt_rec_sts, "P", "", "", "", "", imcseq); //7
             p_SetMc("班次", CBO_SHIFT, "P", "", "", "", "", imcseq); //8
 
             int iheadrow;
@@ -152,36 +152,36 @@ namespace CG
             p_ScIni(ss1, Sc1, 0, true, false);
             iheadrow = 1;
             iscseq = 1;
-            p_SetSc("#1", "C", "", "L", "", "", "", iscseq, iheadrow, "M"); //0
-            p_SetSc("#2", "C", "", "L", "", "", "", iscseq, iheadrow, "M"); //1
-            p_SetSc("钢板号", "E", "14", "L", "", "", "", iscseq, iheadrow, "L"); //2
+            p_SetSc("#1", "C", "", "I", "", "", "", iscseq, iheadrow, "M"); //0
+            p_SetSc("#2", "C", "", "I", "", "", "", iscseq, iheadrow, "M"); //1
+            p_SetSc("钢板号", "E", "14", "PIL", "", "", "", iscseq, iheadrow, "L"); //2
             p_SetSc("轧批号", "E", "20", "L", "", "", "", iscseq, iheadrow, "R"); //3
             p_SetSc("分段号", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //4
-            p_SetSc("厚度", "N", "9", "L", "", "", "", iscseq, iheadrow, "R"); //5
-            p_SetSc("宽度", "N", "9", "L", "", "", "", iscseq, iheadrow, "R"); //6
-            p_SetSc("长度", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //7
+            p_SetSc("厚度", "N", "9,2", "I", "", "", "", iscseq, iheadrow, "R"); //5
+            p_SetSc("宽度", "N", "9", "I", "", "", "", iscseq, iheadrow, "R"); //6
+            p_SetSc("长度", "N", "9", "I", "", "", "", iscseq, iheadrow, "R"); //7
             p_SetSc("重量", "E", "10", "L", "", "", "", iscseq, iheadrow, "R"); //8
-            p_SetSc("厚度", "N", "9", "L", "", "", "", iscseq, iheadrow, "R"); //9
-            p_SetSc("宽度", "N", "9", "L", "", "", "", iscseq, iheadrow, "R"); //10
-            p_SetSc("长度", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //11
-            p_SetSc("尾板", "E", "1", "L", "", "", "", iscseq, iheadrow, "M"); //12
-            p_SetSc("定尺", "E", "10", "L", "", "", "", iscseq, iheadrow, "M"); //13
-            p_SetSc("切边", "E", "1", "L", "", "", "", iscseq, iheadrow, "M"); //14
+            p_SetSc("厚度", "N", "9", "I", "", "", "", iscseq, iheadrow, "R"); //9
+            p_SetSc("宽度", "N", "9", "I", "", "", "", iscseq, iheadrow, "R"); //10
+            p_SetSc("长度", "N", "9,2", "I", "", "", "", iscseq, iheadrow, "R"); //11
+            p_SetSc("尾板", "E", "1", "I", "", "", "", iscseq, iheadrow, "M"); //12
+            p_SetSc("定尺", "E", "10", "I", "", "", "", iscseq, iheadrow, "M"); //13
+            p_SetSc("切边", "E", "1", "I", "", "", "", iscseq, iheadrow, "M"); //14
             p_SetSc("探伤", "E", "10", "L", "", "", "", iscseq, iheadrow, "M"); //15
-            p_SetSc("标准号", "E", "30", "L", "", "", "", iscseq, iheadrow, "L"); //16
-            p_SetSc("改判标准号", "E", "30", "L", "", "", "", iscseq, iheadrow, "L"); //17
-            p_SetSc("改判缺陷", "E", "3", "L", "", "", "", iscseq, iheadrow, "M"); //18
-            p_SetSc("修磨", "E", "1", "L", "", "", "", iscseq, iheadrow, "M"); //19
-            p_SetSc("1", "E", "3", "L", "", "", "", iscseq, iheadrow, "M"); //20
-            p_SetSc("2", "E", "3", "L", "", "", "", iscseq, iheadrow, "M"); //21
-            p_SetSc("1", "E", "3", "L", "", "", "", iscseq, iheadrow, "M"); //22
-            p_SetSc("2", "E", "3", "L", "", "", "", iscseq, iheadrow, "M"); //23
+            p_SetSc("标准号", "E", "30", "I", "", "", "", iscseq, iheadrow, "L"); //16
+            p_SetSc("改判标准号", "E", "30", "I", "", "", "", iscseq, iheadrow, "L"); //17
+            p_SetSc("改判缺陷", "E", "3", "I", "", "", "", iscseq, iheadrow, "M"); //18
+            p_SetSc("修磨", "E", "1", "I", "", "", "", iscseq, iheadrow, "M"); //19
+            p_SetSc("1", "E", "3", "IL", "", "", "", iscseq, iheadrow, "M"); //20
+            p_SetSc("2", "E", "3", "IL", "", "", "", iscseq, iheadrow, "M"); //21
+            p_SetSc("1", "E", "3", "IL", "", "", "", iscseq, iheadrow, "M"); //22
+            p_SetSc("2", "E", "3", "IL", "", "", "", iscseq, iheadrow, "M"); //23
             p_SetSc("合格", "C", "", "L", "", "", "", iscseq, iheadrow, "M"); //24
             p_SetSc("锁定原因", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //25
-            p_SetSc("等级", "E", "1", "L", "", "", "", iscseq, iheadrow, "M"); //26
-            p_SetSc("内部等级", "E", "10", "L", "", "", "", iscseq, iheadrow, "M"); //27
-            p_SetSc("生产日期", "DT", "", "L", "", "", "", iscseq, iheadrow, "L"); //28
-            p_SetSc("检查人员", "E", "10", "L", "", "", "", iscseq, iheadrow, "M"); //29
+            p_SetSc("等级", "E", "1", "I", "", "", "", iscseq, iheadrow, "M"); //26
+            p_SetSc("内部等级", "E", "10", "I", "", "", "", iscseq, iheadrow, "M"); //27
+            p_SetSc("生产日期", "DT", "", "I", "", "", "", iscseq, iheadrow, "L"); //28
+            p_SetSc("检查人员", "E", "10", "IL", "", "", "", iscseq, iheadrow, "M"); //29
             p_SetSc("厚度下限", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //30
             p_SetSc("厚度上限", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //31
             p_SetSc("同板差", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //32
@@ -201,43 +201,43 @@ namespace CG
             p_SetSc("宽边切斜度最大值", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //46
             p_SetSc("厚度切斜度最大值", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //47
             p_SetSc("同板差最大值", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //48
-            p_SetSc("开始", "D", "", "L", "", "", "", iscseq, iheadrow, "M"); //49
-            p_SetSc("结束", "D", "", "L", "", "", "", iscseq, iheadrow, "M"); //50
+            p_SetSc("开始", "E", "", "L", "", "", "", iscseq, iheadrow, "M"); //49
+            p_SetSc("结束", "E", "", "L", "", "", "", iscseq, iheadrow, "M"); //50
             p_SetSc("订单数量", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //51
             p_SetSc("订单备注", "E", "400", "L", "", "", "", iscseq, iheadrow, "L"); //52
-            p_SetSc("生产备注", "E", "100", "L", "", "", "", iscseq, iheadrow, "L"); //53
-            p_SetSc("检验工（头部）", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //54
-            p_SetSc("不平度", "N", "9", "L", "", "", "", iscseq, iheadrow, "R"); //55
-            p_SetSc("镰刀弯", "N", "9", "L", "", "", "", iscseq, iheadrow, "R"); //56
-            p_SetSc("切斜", "N", "9", "L", "", "", "", iscseq, iheadrow, "R"); //57
-            p_SetSc("检验工（尾部）", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //58
-            p_SetSc("判定", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //59
-            p_SetSc("面积比", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //60
-            p_SetSc("深度", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //61
-            p_SetSc("判定", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //62
-            p_SetSc("面积比", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //63
-            p_SetSc("深度", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //64
-            p_SetSc("修磨时间", "DT", "", "L", "", "", "", iscseq, iheadrow, "M"); //65
-            p_SetSc("对角线1", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //66
-            p_SetSc("对角线2", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //67
-            p_SetSc("矫直指示", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //68
-            p_SetSc("垛位号", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //69
-            p_SetSc("不平度1", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //70
+            p_SetSc("生产备注", "E", "100", "I", "", "", "", iscseq, iheadrow, "L"); //53
+            p_SetSc("检验工（头部）", "E", "60", "IL", "", "", "", iscseq, iheadrow, "M"); //54
+            p_SetSc("不平度", "N", "9", "IL", "", "", "", iscseq, iheadrow, "R"); //55
+            p_SetSc("镰刀弯", "N", "9", "IL", "", "", "", iscseq, iheadrow, "R"); //56
+            p_SetSc("切斜", "N", "9", "IL", "", "", "", iscseq, iheadrow, "R"); //57
+            p_SetSc("检验工（尾部）", "E", "60", "IL", "", "", "", iscseq, iheadrow, "M"); //58
+            p_SetSc("判定", "E", "60", "IL", "", "", "", iscseq, iheadrow, "M"); //59
+            p_SetSc("面积比", "N", "9,2", "IL", "", "", "", iscseq, iheadrow, "R"); //60
+            p_SetSc("深度", "N", "9,2", "IL", "", "", "", iscseq, iheadrow, "R"); //61
+            p_SetSc("判定", "E", "60", "IL", "", "", "", iscseq, iheadrow, "M"); //62
+            p_SetSc("面积比", "N", "9,2", "IL", "", "", "", iscseq, iheadrow, "R"); //63
+            p_SetSc("深度", "N", "9,2", "IL", "", "", "", iscseq, iheadrow, "R"); //64
+            p_SetSc("修磨时间", "DT", "", "IL", "", "", "", iscseq, iheadrow, "M"); //65
+            p_SetSc("对角线1", "N", "9,2", "IL", "", "", "", iscseq, iheadrow, "R"); //66
+            p_SetSc("对角线2", "N", "9,2", "IL", "", "", "", iscseq, iheadrow, "R"); //67
+            p_SetSc("矫直指示", "E", "60", "IL", "", "", "", iscseq, iheadrow, "M"); //68
+            p_SetSc("垛位号", "E", "60", "IL", "", "", "", iscseq, iheadrow, "M"); //69
+            p_SetSc("不平度1", "N", "9,2", "IL", "", "", "", iscseq, iheadrow, "R"); //70
             p_SetSc("是否定制配送", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //71
             p_SetSc("是否出口订单", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //72
-            p_SetSc("钢板颜色", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //73
+            p_SetSc("钢板颜色", "E", "60", "I", "", "", "", iscseq, iheadrow, "M"); //73
             p_SetSc("坯料类别", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //74
             p_SetSc("试样备注", "E", "200", "L", "", "", "", iscseq, iheadrow, "L"); //75
             p_SetSc("尺寸备注", "E", "200", "L", "", "", "", iscseq, iheadrow, "L"); //76
             p_SetSc("打包备注", "E", "200", "L", "", "", "", iscseq, iheadrow, "L"); //77
             p_SetSc("表面客户要求", "E", "200", "L", "", "", "", iscseq, iheadrow, "L"); //78
-            p_SetSc("厚度1", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //79
-            p_SetSc("厚度2", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //80
-            p_SetSc("厚度3", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //81
-            p_SetSc("厚度4", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //82
-            p_SetSc("厚度5", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //83
-            p_SetSc("厚度6", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //84
-            p_SetSc("下表是否检验", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //85
+            p_SetSc("厚度1", "N", "9,2", "IL", "", "", "", iscseq, iheadrow, "R"); //79
+            p_SetSc("厚度2", "N", "9,2", "IL", "", "", "", iscseq, iheadrow, "R"); //80
+            p_SetSc("厚度3", "N", "9,2", "IL", "", "", "", iscseq, iheadrow, "R"); //81
+            p_SetSc("厚度4", "N", "9,2", "IL", "", "", "", iscseq, iheadrow, "R"); //82
+            p_SetSc("厚度5", "N", "9,2", "IL", "", "", "", iscseq, iheadrow, "R"); //83
+            p_SetSc("厚度6", "N", "9,2", "IL", "", "", "", iscseq, iheadrow, "R"); //84
+            p_SetSc("下表是否检验", "E", "60", "IL", "", "", "", iscseq, iheadrow, "M"); //85
 
             iheadrow = 0;
             p_spanSpread("公称尺寸", 5, 8, iscseq, iheadrow, 1);
@@ -298,6 +298,15 @@ namespace CG
 
             txt_plt.Text = "C3";
 
+            CBO_SHIFT.Items.Add("1");
+            CBO_SHIFT.Items.Add("2");
+            CBO_SHIFT.Items.Add("3");
+
+            cbo_group.Items.Add("A");
+            cbo_group.Items.Add("B");
+            cbo_group.Items.Add("C");
+            cbo_group.Items.Add("D");
+
             txt_line.Text = "1";
             txt_rec_sts.Text = "1";
             SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_LINE2, true);
@@ -315,7 +324,11 @@ namespace CG
             //        Call txt_plt_KeyUp(0, 0)
             txt_line.Text = "1";
             txt_rec_sts.Text = "1";
+            opt_line1.Checked = true;
             opt_line3.Checked = true;
+            opt_CHK_PRD_GRD0.Checked = true;
+            txt_rec_sts.Text = "1";
+            txt_line.Text = "1";
             txt_stdspec_chg.Text = "";
             TXT_REMARK.Text = "";
             //2012-3-14 Modify by LiChao
@@ -362,7 +375,7 @@ namespace CG
 
                 if (sord_cnt > 1)
                 {
-                    SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, iRow - 1, iRow - 1, Color.Black, SSP1.BackColor);
+                    Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, iRow - 1, iRow - 1, Color.Black, SSP1.BackColor);
                 }
             }
 
@@ -370,9 +383,9 @@ namespace CG
             for (iRow = 1; iRow <= ss1.ActiveSheet.RowCount; iRow++)
             {
                 sDel_To_Date = ss1.ActiveSheet.Cells[iRow - 1, SPD_DEL_DATE_TO].Text.Substring(0, 6);
-                if (Convert.ToDouble(sDel_To_Date) < Convert.ToDouble(sCurDate))
+                if (convertX(sDel_To_Date) < convertX(sCurDate))
                 {
-                    SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, iRow - 1, iRow - 1, Color.Red, Color.White);
+                    Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, iRow - 1, iRow - 1, Color.Red, Color.White);
                 }
             }
 
@@ -382,13 +395,13 @@ namespace CG
                 sFlag = ss1.ActiveSheet.Cells[iRow - 1, SPD_FLAG_FL].Text;
                 if (sFlag == "Y")
                 {
-                    SpreadCommon.Gp_Sp_BlockColor(ss1, SPD_PLATE_NO, SPD_PLATE_NO, iRow - 1, iRow - 1, SSP4.BackColor, Color.White);
+                    Gp_Sp_BlockColor(ss1, SPD_PLATE_NO, SPD_PLATE_NO, iRow - 1, iRow - 1, SSP4.BackColor, Color.White);
                 }
                 //是否出口订单
                 sexport = ss1.ActiveSheet.Cells[iRow - 1, SPD_EXPORT].Text;
                 if (sexport == "Y")
                 {
-                    SpreadCommon.Gp_Sp_BlockColor(ss1, SPD_PLATE_NO, SPD_PLATE_NO, iRow - 1, iRow - 1, SSP5.BackColor, Color.White);
+                    Gp_Sp_BlockColor(ss1, SPD_PLATE_NO, SPD_PLATE_NO, iRow - 1, iRow - 1, SSP5.BackColor, Color.White);
                 }
             }
 
@@ -441,7 +454,7 @@ namespace CG
             }
         }
 
-        private void CHK_TOP_GRD_Clk()
+        private void CHK_TOP_GRD_Clk(object sender)
         {
 
             if (sCheck != "")
@@ -452,29 +465,31 @@ namespace CG
             if (!CHK_TOP_GRD0.Checked &&!CHK_TOP_GRD1.Checked)
             {
                 TXT_TOP_GRID_GRD.Text = "";
-                this.ForeColor = ColorTranslator.FromHtml("#808080");
+                ((CheckBox)sender).ForeColor = ColorTranslator.FromHtml("#808080");
                 sCheck = "";
                 return;
             }
 
-            if (CHK_TOP_GRD0.Checked)
+            if (CHK_TOP_GRD0.Checked && ((CheckBox)sender).Name == "CHK_TOP_GRD0")
             {
+                CHK_TOP_GRD1.Checked = false;
                 CHK_TOP_GRD0.ForeColor = Color.Red;
                 CHK_TOP_GRD1.ForeColor = ColorTranslator.FromHtml("#808080");
             }
-            else
+            else if (CHK_TOP_GRD1.Checked && ((CheckBox)sender).Name == "CHK_TOP_GRD1")
             {
+                CHK_TOP_GRD0.Checked = false;
                 CHK_TOP_GRD1.ForeColor = Color.Red;
                 CHK_TOP_GRD0.ForeColor = ColorTranslator.FromHtml("#808080");
             }
 
-            TXT_TOP_GRID_GRD.Text = this.Tag.ToString();
+            TXT_TOP_GRID_GRD.Text = ((CheckBox)sender).Tag.ToString();
             
             sCheck = "";
 
         }
 
-        private void CHK_BOT_GRD_Clk()
+        private void CHK_BOT_GRD_Clk(object sender)
         {
 
             if (sCheck != "")
@@ -484,24 +499,26 @@ namespace CG
 
             if (!CHK_BOT_GRD0.Checked && !CHK_BOT_GRD1.Checked)
             {
-                TXT_TOP_GRID_GRD.Text = "";
-                this.ForeColor = ColorTranslator.FromHtml("#808080");
+                TXT_BOT_GRID_GRD.Text = "";
+                ((CheckBox)sender).ForeColor = ColorTranslator.FromHtml("#808080");
                 sCheck = "";
                 return;
             }
 
-            if (CHK_BOT_GRD0.Checked)
+            if (CHK_BOT_GRD0.Checked && ((CheckBox)sender).Name == "CHK_BOT_GRD0")
             {
+                CHK_BOT_GRD1.Checked = false;
                 CHK_BOT_GRD0.ForeColor = Color.Red;
                 CHK_BOT_GRD1.ForeColor = ColorTranslator.FromHtml("#808080");
             }
-            else
+            else if (CHK_BOT_GRD1.Checked && ((CheckBox)sender).Name == "CHK_BOT_GRD1")
             {
+                CHK_BOT_GRD0.Checked = false;
                 CHK_BOT_GRD1.ForeColor = Color.Red;
                 CHK_BOT_GRD0.ForeColor = ColorTranslator.FromHtml("#808080");
             }
 
-            TXT_BOT_GRID_GRD.Text = this.Tag.ToString();
+            TXT_BOT_GRID_GRD.Text = ((CheckBox)sender).Tag.ToString();
 
             sCheck = "";
 
@@ -577,7 +594,7 @@ namespace CG
             }
             else
             {
-                ss1.ActiveSheet.Cells[rowIndex, SPD_LAST_YN].Text = "False";
+                ss1.ActiveSheet.Cells[rowIndex, SPD_LAST_YN].Text = "";
             }
             ss1.ActiveSheet.Cells[rowIndex, SPD_SIZE_KND].Text = TXT_SIZE_KND.Text;
             ss1.ActiveSheet.Cells[rowIndex, SPD_TRIM_FL].Text = TXT_TRIM_FL.Text;
@@ -682,17 +699,17 @@ namespace CG
 
             sPlateNo = "";
 
-            ss1.ActiveSheet.SetActiveCell(0, lRow);
+            ss1.ActiveSheet.SetActiveCell(lRow, 0);
             base.Spread_Ins();
             if (lRow >= 0)
             {
                 sPlateNo = ss1.ActiveSheet.Cells[lRow, SPD_PLATE_NO].Text;
                 sLotNo = ss1.ActiveSheet.Cells[lRow, SPD_LOT_NO].Text;
                 sCutNo = ss1.ActiveSheet.Cells[lRow, SPD_CUT_NO].Text;
-                dThk = Convert.ToDouble(ss1.ActiveSheet.Cells[lRow, SPD_THK].Text);
-                dWid = Convert.ToDouble(ss1.ActiveSheet.Cells[lRow, SPD_WID].Text);
-                dLen = Convert.ToDouble(ss1.ActiveSheet.Cells[lRow, SPD_LEN].Text);
-                dWgt = Convert.ToDouble(ss1.ActiveSheet.Cells[lRow, SPD_WGT].Text);
+                dThk = convertX(ss1.ActiveSheet.Cells[lRow, SPD_THK].Text);
+                dWid = convertX(ss1.ActiveSheet.Cells[lRow, SPD_WID].Text);
+                dLen = convertX(ss1.ActiveSheet.Cells[lRow, SPD_LEN].Text);
+                dWgt = convertX(ss1.ActiveSheet.Cells[lRow, SPD_WGT].Text);
                 sSize_knd = ss1.ActiveSheet.Cells[lRow, SPD_SIZE_KND].Text;
                 sTrim_fl = ss1.ActiveSheet.Cells[lRow, SPD_TRIM_FL].Text;
                 sAply_stdspec = ss1.ActiveSheet.Cells[lRow, SPD_APLY_STDSPEC].Text;
@@ -702,6 +719,8 @@ namespace CG
             {
                 sPlateNo = txt_plate_no.Text + "00";
             }
+
+            lRow = lRow + 1;
 
             ss1.ActiveSheet.Cells[lRow, SPD_PLATE_NO].Text = sPlateNo;
             ss1.ActiveSheet.Cells[lRow, SPD_LOT_NO].Text = sLotNo;
@@ -716,7 +735,7 @@ namespace CG
             ss1.ActiveSheet.Cells[lRow, SPD_EMP_CD].Text = sEmp_cd;
             //ss1.Col = 0;
             //ss1.Text = "Input";
-            ss1.ActiveSheet.Cells[lRow, SPD_PLATE_NO].Text = ss1.ActiveSheet.Cells[lRow, SPD_PLATE_NO].Text.Substring(0, 12) + string.Format((Convert.ToInt32(ss1.ActiveSheet.Cells[lRow, SPD_PLATE_NO].Text.Substring(12, 2)) + 1).ToString());
+            ss1.ActiveSheet.Cells[lRow, SPD_PLATE_NO].Text = ss1.ActiveSheet.Cells[lRow, SPD_PLATE_NO].Text.Substring(0, 12) + string.Format("{0:D2}",Convert.ToInt32(ss1.ActiveSheet.Cells[lRow, SPD_PLATE_NO].Text.Substring(12, 2)) + 1);
             ss1.ActiveSheet.Cells[lRow, SPD_SURF_GRD].Text = "1";
 
         }
@@ -821,7 +840,7 @@ namespace CG
         }
 
 
-        private void opt_line2_Clk(int Value)
+        private void opt_line2_Clk()
         {
             if (opt_line2.Checked)
             {
@@ -837,7 +856,7 @@ namespace CG
         }
 
 
-        private void opt_line5_Clk(int Value)
+        private void opt_line5_Clk()
         {
             if (opt_line5.Checked)
             {
@@ -852,7 +871,7 @@ namespace CG
 
         }
 
-        private void opt_line3_Clk(int Value)
+        private void opt_line3_Clk()
         {
             if (opt_line3.Checked)
             {
@@ -862,7 +881,7 @@ namespace CG
             }
         }
 
-        private void opt_line4_Clk(int Value)
+        private void opt_line4_Clk()
         {
             if (opt_line4.Checked)
             {
@@ -886,324 +905,567 @@ namespace CG
             }
         }
 
-        private void ss1_ButtonClicked(int Col, int ROW)
-{
-	int sCheck1;
-	int sCheck2;
+        private void ss1_BtnClk(int Col, int ROW)
+        {
+            string sCheck1;
+            string sCheck2;
 
-	int iCol;
-	int iRow;
-	int iMode;
+            int iCol;
+            int iRow;
+            int iMode;
 
-	int iRowNum;
-	int iRowfr;
-	int iRowto;
+            int iRowNum;
+            int iRowfr;
+            int iRowto;
 
-	string SMESG;
+            string SMESG;
 
-	iCol = Col;
-	iRow = ROW;
+            iCol = Col;
+            iRow = ROW;
 
-	if (ss1.ActiveSheet.RowCount<=0) return;
-	if (Col != SPD_LINE1 & Col != SPD_LINE2 & Col != SPD_SURF_YN) return;
-	if (GeneralCommon.Gf_Sc_Authority(sAuthority, "U")) return;
+            if (ss1.ActiveSheet.RowCount <= 0) return;
+            if (Col != SPD_LINE1 & Col != SPD_LINE2 & Col != SPD_SURF_YN) return;
+            if (!GeneralCommon.Gf_Sc_Authority(sAuthority, "U")) return;
 
-	SSCHK_GRID_YN.Checked = false;
+            SSCHK_GRID_YN.Checked = false;
 
-	iRowto = iRow - 1;
-	iRowfr = iRow + 1;
+            iRowto = iRow - 1;
+            iRowfr = iRow + 1;
 
-	if (iRowto >= 0) {
-		for (iRowNum = 0; iRowNum <= iRowto; iRowNum++) {
+            if (iRowto >= 0)
+            {
+                for (iRowNum = 0; iRowNum <= iRowto; iRowNum++)
+                {
 
-			if (ss1.ActiveSheet.RowHeader.Cells[iRowNum,0].Text != "") {
-				ss1.ActiveSheet.RowHeader.Cells[iRowNum,0].Text = "";
-				ss1.ActiveSheet.Cells[iRowNum,SPD_LINE1].Text = "False";
-				ss1.ActiveSheet.Cells[iRowNum,SPD_LINE2].Text = "False";
+                    if (ss1.ActiveSheet.RowHeader.Cells[iRowNum, 0].Text != "")
+                    {
+                        ss1.ActiveSheet.RowHeader.Cells[iRowNum, 0].Text = "";
+                        ss1.ActiveSheet.Cells[iRowNum, SPD_LINE1].Text = "";
+                        ss1.ActiveSheet.Cells[iRowNum, SPD_LINE2].Text = "";
 
-				break; // TODO: might not be correct. Was : Exit For
-			}
-		}
-	}
+                        break; // TODO: might not be correct. Was : Exit For
+                    }
+                }
+            }
 
-	if (iRowfr <= ss1.ActiveSheet.RowCount) {
-		for (iRowNum = iRowfr; iRowNum < ss1.ActiveSheet.RowCount; iRowNum++) {
+            if (iRowfr <= ss1.ActiveSheet.RowCount)
+            {
+                for (iRowNum = iRowfr; iRowNum < ss1.ActiveSheet.RowCount; iRowNum++)
+                {
 
-			if (ss1.ActiveSheet.RowHeader.Cells[iRowNum,0].Text != "") {
-				ss1.ActiveSheet.RowHeader.Cells[iRowNum,0].Text = "";
-				ss1.ActiveSheet.Cells[iRowNum,SPD_LINE1].Text = "False";
-				ss1.ActiveSheet.Cells[iRowNum,SPD_LINE2].Text = "False";
+                    if (ss1.ActiveSheet.RowHeader.Cells[iRowNum, 0].Text != "")
+                    {
+                        ss1.ActiveSheet.RowHeader.Cells[iRowNum, 0].Text = "";
+                        ss1.ActiveSheet.Cells[iRowNum, SPD_LINE1].Text = "";
+                        ss1.ActiveSheet.Cells[iRowNum, SPD_LINE2].Text = "";
 
-				break; // TODO: might not be correct. Was : Exit For
-			}
-		}
-	}
-
-
-	if (ss1.ActiveSheet.Cells[iRow,SPD_LINE1].Text == "True") {;
-		ss1.ActiveSheet.Cells[iRow,SPD_LINE2].Text = "False";
-	} else if (ss1.ActiveSheet.Cells[iRow,SPD_LINE2].Text == "True") {
-		ss1.ActiveSheet.Cells[iRow,SPD_LINE1].Text = "False";
-	}
-
-	if (Col == SPD_SURF_YN) {
-		if (ss1.ActiveSheet.Cells[iRow,SPD_SURF_YN].Text == "True") {
-			ss1.ActiveSheet.Cells[iRow,SPD_SURF_GRD].Text = "1";
-		} else {
-			ss1.ActiveSheet.Cells[iRow,SPD_SURF_GRD].Text = "4";
-		}
-	}
+                        break; // TODO: might not be correct. Was : Exit For
+                    }
+                }
+            }
 
 
-	ss1.Col = 0;
-	ss1.Text = "Update";
+            if (Col == 0 && ss1.ActiveSheet.Cells[iRow, SPD_LINE1].Text == "True")
+            {
+                ;
+                ss1.ActiveSheet.Cells[iRow, SPD_LINE2].Text = "";
+            }
+            else if (Col == 1 && ss1.ActiveSheet.Cells[iRow, SPD_LINE2].Text == "True")
+            {
+                ss1.ActiveSheet.Cells[iRow, SPD_LINE1].Text = "";
+            }
 
-	TXT_INSP_FLAW(0).Text = "";
-	TXT_INSP_FLAW(1).Text = "";
-	TXT_INSP_FLAW(3).Text = "";
-	TXT_INSP_FLAW(4).Text = "";
-	TXT_INSP_FLAW(5).Text = "";
-
-	ss1.Col = SPD_LINE1;
-	sCheck1 = ss1.Value;
-	ss1.Col = SPD_LINE2;
-	sCheck2 = ss1.Value;
-
-	if (sCheck1 == 0 & sCheck2 == 0) {
-		ss1.Col = 0;
-		ss1.Text = "";
-		Gp_Sp_BlockColor(ss1, 1, -1, iRow, iRow);
-	} else {
-		Gp_Sp_BlockColor(ss1, 1, -1, iRow, iRow, , SSP2.BackColor);
-		//        TXT_INSP_FLAW(0).Text = ""
-		//        TXT_INSP_FLAW(1).Text = ""
-		//        TXT_INSP_FLAW(3).Text = ""
-		//        TXT_INSP_FLAW(4).Text = ""
-		//        TXT_INSP_FLAW(5).Text = ""
-		opt_CHK_PRD_GRD(0).Value = true;
-
-		// add by liqian at 2012-03-29  改判标准到下一块时自动清空
-		txt_stdspec_chg.Text = "";
-		TXT_INSP_FLAW_NAME(5).Text = "";
-		TXT_INSP_FLAW(5).Text = "";
-		// add by liqian at 2012-04-18 留样下一块自动清空
-		SSCHK_LY_YN.Value = 0;
-		SSCHK_LAST_YN.Value = 0;
-		CHK_FLAW_YN.Value = 0;
-
-		ss1.ROW = iRow;
-		ss1.Col = SPD_THK;
-		SDB_THK.Value = ss1.Value;
-		ss1.Col = SPD_WID;
-		SDB_WID.Value = ss1.Value;
-		ss1.Col = SPD_LEN;
-		SDB_LEN.Value = ss1.Value;
-		ss1.Col = SPD_THK_MIN;
-		if (ss1.Value == "")
-			SDB_INSP_THK_MN.Value = 0;
-		else
-			SDB_INSP_THK_MN.Value = ss1.Value;
-		ss1.Col = SPD_THK_MAX;
-		if (ss1.Value == "")
-			SDB_INSP_THK_MX.Value = 0;
-		else
-			SDB_INSP_THK_MX.Value = ss1.Value;
-		ss1.Col = SPD_WID_MIN;
-		if (ss1.Value == "")
-			SDB_INSP_WID_MN.Value = 0;
-		else
-			SDB_INSP_WID_MN.Value = ss1.Value;
-		ss1.Col = SPD_WID_MAX;
-		if (ss1.Value == "")
-			SDB_INSP_WID_MX.Value = 0;
-		else
-			SDB_INSP_WID_MX.Value = ss1.Value;
-		ss1.Col = SPD_LEN_MIN;
-		if (ss1.Value == "")
-			SDB_INSP_LEN_MN.Value = 0;
-		else
-			SDB_INSP_LEN_MN.Value = ss1.Value;
-		ss1.Col = SPD_LEN_MAX;
-		if (ss1.Value == "")
-			SDB_INSP_LEN_MX.Value = 0;
-		else
-			SDB_INSP_LEN_MX.Value = ss1.Value;
-		ss1.Col = SPD_ACT_THK;
-		if (ss1.Value == "")
-			SDB_ACT_THK.Value = 0;
-		else
-			SDB_ACT_THK.Value = ss1.Value;
-		ss1.Col = SPD_ACT_WID;
-		if (ss1.Value == "")
-			SDB_ACT_WID.Value = 0;
-		else
-			SDB_ACT_WID.Value = ss1.Value;
-		ss1.Col = SPD_ACT_LEN;
-		if (ss1.Value == "")
-			SDB_ACT_LEN.Value = 0;
-		else
-			SDB_ACT_LEN.Value = ss1.Value;
-		//2012-3-20 Modify by LiChao
-		ss1.Col = SPD_INSP_WAVE;
-		if (ss1.Value == "")
-			TXT_WAVE.Text = "";
-		else
-			TXT_WAVE.Text = ss1.Value;
-		ss1.Col = SPD_INSP_VERT_DEG;
-		if (ss1.Value == "")
-			TXT_VERT_DEG.Text = "";
-		else
-			TXT_VERT_DEG.Text = ss1.Value;
-		ss1.Col = SPD_INSP_RECT_DEG;
-		if (ss1.Value == "")
-			TXT_RECT_DEG.Text = "";
-		else
-			TXT_RECT_DEG.Text = ss1.Value;
-		// add by liqian at 2012-04-18 留样下一块自动清空,备注重查
-		ss1.Col = SPD_PROD_REMARK;
-		if (ss1.Value == "")
-			TXT_REMARK.Text = "";
-		else
-			TXT_REMARK.Text = ss1.Value;
-		ss1.Col = SPD_TOP_GRID_GRD;
-		if (ss1.Value == "")
-			TXT_TOP_GRID_GRD.Text = "";
-		else
-			TXT_TOP_GRID_GRD.Text = ss1.Value;
-		ss1.Col = SPD_TOP_GRID_YRD;
-		if (ss1.Value == "")
-			SDB_TOP_GRID_YRD.Value = 0;
-		else
-			SDB_TOP_GRID_YRD.Value = ss1.Value;
-		ss1.Col = SPD_TOP_GRID_DEEP;
-		if (ss1.Value == "")
-			SDB_TOP_GRID_DEEP.Value = 0;
-		else
-			SDB_TOP_GRID_DEEP.Value = ss1.Value;
-		ss1.Col = SPD_BOT_GRID_GRD;
-		if (ss1.Value == "")
-			TXT_BOT_GRID_GRD.Text = "";
-		else
-			TXT_BOT_GRID_GRD.Text = ss1.Value;
-		ss1.Col = SPD_BOT_GRID_YRD;
-		if (ss1.Value == "")
-			SDB_BOT_GRID_YRD.Value = 0;
-		else
-			SDB_BOT_GRID_YRD.Value = ss1.Value;
-		ss1.Col = SPD_BOT_GRID_DEEP;
-		if (ss1.Value == "")
-			SDB_BOT_GRID_DEEP.Value = 0;
-		else
-			SDB_BOT_GRID_DEEP.Value = ss1.Value;
-		ss1.Col = SPD_GRID_TIME;
-		if (ss1.Value == "")
-			TXT_GRID_TIME.Text = "";
-		else
-			TXT_GRID_TIME.Text = ss1.Value;
-		ss1.Col = SPD_INSP_DIAGONAL1;
-		if (ss1.Value == "")
-			SDB_INSP_DIAGONAL1.Value = 0;
-		else
-			SDB_INSP_DIAGONAL1.Value = ss1.Value;
-		ss1.Col = SPD_INSP_DIAGONAL2;
-		if (ss1.Value == "")
-			SDB_INSP_DIAGONAL2.Value = 0;
-		else
-			SDB_INSP_DIAGONAL2.Value = ss1.Value;
-		ss1.Col = SPD_LOC;
-		if (ss1.Value == "")
-			txt_loc.Text = "";
-		else
-			txt_loc.Text = ss1.Value;
-		ss1.Col = SPD_INSP_WAVE1;
-		if (ss1.Value == "")
-			TXT_WAVE1.Text = "";
-		else
-			TXT_WAVE1.Text = ss1.Value;
-
-		ss1.Col = SPD_THK1;
-		if (ss1.Value == "")
-			SDB_HD1.Value = 0;
-		else
-			SDB_HD1.Value = ss1.Value;
-		ss1.Col = SPD_THK2;
-		if (ss1.Value == "")
-			SDB_HD2.Value = 0;
-		else
-			SDB_HD2.Value = ss1.Value;
-		ss1.Col = SPD_THK3;
-		if (ss1.Value == "")
-			SDB_HD3.Value = 0;
-		else
-			SDB_HD3.Value = ss1.Value;
-		ss1.Col = SPD_THK4;
-		if (ss1.Value == "")
-			SDB_HD4.Value = 0;
-		else
-			SDB_HD4.Value = ss1.Value;
-		ss1.Col = SPD_THK5;
-		if (ss1.Value == "")
-			SDB_HD5.Value = 0;
-		else
-			SDB_HD5.Value = ss1.Value;
-		ss1.Col = SPD_THK6;
-		if (ss1.Value == "")
-			SDB_HD6.Value = 0;
-		else
-			SDB_HD6.Value = ss1.Value;
-
-		ss1.Col = SPD_INSP_CD1;
-		if (ss1.Text == "")
-			TXT_INSP_FLAW(0).Text = "";
-		else
-			TXT_INSP_FLAW(0).Text = ss1.Text;
-		ss1.Col = SPD_INSP_CD3;
-		if (ss1.Text == "")
-			TXT_INSP_FLAW(3).Text = "";
-		else
-			TXT_INSP_FLAW(3).Text = ss1.Text;
+            if (Col == SPD_SURF_YN)
+            {
+                if (ss1.ActiveSheet.Cells[iRow, SPD_SURF_YN].Text == "True")
+                {
+                    ss1.ActiveSheet.Cells[iRow, SPD_SURF_GRD].Text = "1";
+                }
+                else
+                {
+                    ss1.ActiveSheet.Cells[iRow, SPD_SURF_GRD].Text = "4";
+                }
+            }
 
 
-		//2011-08-29   modified by liqian for 画面显示定尺改为汉字,双击时对应栏位还原回代码表示,保证定尺保存为01,02,06,08,..类型
-		ss1.Col = SPD_SIZE_KND;
-		switch (ss1.Text) {
-			case "定尺":
-				TXT_SIZE_KND.Text = "01";
-				break;
-			case "单定尺":
-				TXT_SIZE_KND.Text = "02";
-				break;
-			case "非尺":
-				TXT_SIZE_KND.Text = "06";
-				break;
-			case "小尺板":
-				TXT_SIZE_KND.Text = "08";
-				break;
-			default:
-				TXT_SIZE_KND.Text = "";
-				break;
-		}
-		ss1.Col = SPD_TRIM_FL;
-		TXT_TRIM_FL.Text = ss1.Text;
+            ss1.ActiveSheet.RowHeader.Cells[iRow, 0].Text = "修改";
 
-	}
+            TXT_INSP_FLAW0.Text = "";
+            //TXT_INSP_FLAW1.Text = "";
+            TXT_INSP_FLAW3.Text = "";
+            //TXT_INSP_FLAW4.Text = "";
+            TXT_INSP_FLAW5.Text = "";
 
-	ss1.Col = SPD_EMP_CD;
-	ss1.Text = sUserID;
+            sCheck1 = ss1.ActiveSheet.Cells[iRow, SPD_LINE1].Text;
+            sCheck2 = ss1.ActiveSheet.Cells[iRow, SPD_LINE2].Text;
 
-	TXT_CUT_TIME.RawData = Gf_DTSet(M_CN1, , "X");
-	ss1.Col = SPD_PROD_DATE;
-	ss1.Text = TXT_CUT_TIME.Text;
+            if (sCheck1 == "False")
+            {
+                sCheck1 = "";
+            }
 
-	ss1.Col = SPD_INS_MAN;
-	ss1.Text = TXT_sUserID.Text;
-	ss1.Col = SPD_INS_MAN_TAIL;
-	ss1.Text = TXT_sUserID_Tail.Text;
+            if (sCheck2 == "False")
+            {
+                sCheck2 = "";
+            }
 
-	ss1.Col = SPD_PLATE_COLOR;
-	ss1.Text = txt_Color_code.Text;
+            if (sCheck1 == "" & sCheck2 == "")
+            {
+                ss1.ActiveSheet.RowHeader.Cells[iRow, 0].Text = "";
+                //Gp_Sp_BlockColor(ss1, 1, -1, iRow, iRow);
+            }
+            else
+            {
+                //Gp_Sp_BlockColor(ss1, 1, -1, iRow, iRow, , SSP2.BackColor);
+                //        TXT_INSP_FLAW(0).Text = ""
+                //        TXT_INSP_FLAW(1).Text = ""
+                //        TXT_INSP_FLAW(3).Text = ""
+                //        TXT_INSP_FLAW(4).Text = ""
+                //        TXT_INSP_FLAW(5).Text = ""
+                opt_CHK_PRD_GRD0.Checked = true;
 
-}
+                // add by liqian at 2012-03-29  改判标准到下一块时自动清空
+                txt_stdspec_chg.Text = "";
+                TXT_INSP_FLAW_NAME5.Text = "";
+                TXT_INSP_FLAW5.Text = "";
+                // add by liqian at 2012-04-18 留样下一块自动清空
+                SSCHK_LY_YN.Checked = false;
+                SSCHK_LAST_YN.Checked = false;
+                CHK_FLAW_YN.Checked = false;
+
+                SDB_THK.NumValue = convertX(ss1.ActiveSheet.Cells[iRow, SPD_THK].Text);
+                SDB_WID.NumValue = convertX(ss1.ActiveSheet.Cells[iRow, SPD_WID].Text);
+                SDB_LEN.NumValue = convertX(ss1.ActiveSheet.Cells[iRow, SPD_LEN].Text);
+                if (ss1.ActiveSheet.Cells[iRow, SPD_THK_MIN].Text == "")
+                    SDB_INSP_THK_MN.NumValue = 0;
+                else
+                    SDB_INSP_THK_MN.NumValue = convertX(ss1.ActiveSheet.Cells[iRow, SPD_THK_MIN].Text);
+                if (ss1.ActiveSheet.Cells[iRow, SPD_THK_MAX].Text == "")
+                    SDB_INSP_THK_MX.NumValue = 0;
+                else
+                    SDB_INSP_THK_MX.NumValue = convertX(ss1.ActiveSheet.Cells[iRow, SPD_THK_MAX].Text);
+
+                if (ss1.ActiveSheet.Cells[iRow, SPD_WID_MIN].Text == "")
+                    SDB_INSP_WID_MN.NumValue = 0;
+                else
+                    SDB_INSP_WID_MN.NumValue = convertX(ss1.ActiveSheet.Cells[iRow, SPD_WID_MIN].Text);
+                if (ss1.ActiveSheet.Cells[iRow, SPD_WID_MAX].Text == "")
+                    SDB_INSP_WID_MX.NumValue = 0;
+                else
+                    SDB_INSP_WID_MX.NumValue = convertX(ss1.ActiveSheet.Cells[iRow, SPD_WID_MAX].Text);
+                if (ss1.ActiveSheet.Cells[iRow, SPD_LEN_MIN].Text == "")
+                    SDB_INSP_LEN_MN.NumValue = 0;
+                else
+                    SDB_INSP_LEN_MN.NumValue = convertX(ss1.ActiveSheet.Cells[iRow, SPD_LEN_MIN].Text);
+                if (ss1.ActiveSheet.Cells[iRow, SPD_LEN_MAX].Text == "")
+                    SDB_INSP_LEN_MX.NumValue = 0;
+                else
+                    SDB_INSP_LEN_MX.NumValue = convertX(ss1.ActiveSheet.Cells[iRow, SPD_LEN_MAX].Text);
+                if (ss1.ActiveSheet.Cells[iRow, SPD_ACT_THK].Text == "")
+                    SDB_ACT_THK.NumValue = 0;
+                else
+                    SDB_ACT_THK.NumValue = convertX(ss1.ActiveSheet.Cells[iRow, SPD_ACT_THK].Text);
+                if (ss1.ActiveSheet.Cells[iRow, SPD_ACT_WID].Text == "")
+                    SDB_ACT_WID.NumValue = 0;
+                else
+                    SDB_ACT_WID.NumValue = convertX(ss1.ActiveSheet.Cells[iRow, SPD_ACT_WID].Text);
+                if (ss1.ActiveSheet.Cells[iRow, SPD_ACT_LEN].Text == "")
+                    SDB_ACT_LEN.NumValue = 0;
+                else
+                    SDB_ACT_LEN.NumValue = convertX(ss1.ActiveSheet.Cells[iRow, SPD_ACT_LEN].Text);
+                //2012-3-20 Modify by LiChao
+                if (ss1.ActiveSheet.Cells[iRow, SPD_INSP_WAVE].Text == "")
+                    TXT_WAVE.Text = "";
+                else
+                    TXT_WAVE.Text = ss1.ActiveSheet.Cells[iRow, SPD_INSP_WAVE].Text;
+                if (ss1.ActiveSheet.Cells[iRow, SPD_INSP_VERT_DEG].Text == "")
+                    TXT_VERT_DEG.Text = "";
+                else
+                    TXT_VERT_DEG.Text = ss1.ActiveSheet.Cells[iRow, SPD_INSP_VERT_DEG].Text;
+                if (ss1.ActiveSheet.Cells[iRow, SPD_INSP_RECT_DEG].Text == "")
+                    TXT_RECT_DEG.Text = "";
+                else
+                    TXT_RECT_DEG.Text = ss1.ActiveSheet.Cells[iRow, SPD_INSP_RECT_DEG].Text;
+                // add by liqian at 2012-04-18 留样下一块自动清空,备注重查
+                if (ss1.ActiveSheet.Cells[iRow, SPD_PROD_REMARK].Text == "")
+                    TXT_REMARK.Text = "";
+                else
+                    TXT_REMARK.Text = ss1.ActiveSheet.Cells[iRow, SPD_PROD_REMARK].Text;
+                if (ss1.ActiveSheet.Cells[iRow, SPD_TOP_GRID_GRD].Text == "")
+                    TXT_TOP_GRID_GRD.Text = "";
+                else
+                    TXT_TOP_GRID_GRD.Text = ss1.ActiveSheet.Cells[iRow, SPD_TOP_GRID_GRD].Text;
+                if (ss1.ActiveSheet.Cells[iRow, SPD_TOP_GRID_YRD].Text == "")
+                    SDB_TOP_GRID_YRD.NumValue = 0;
+                else
+                    SDB_TOP_GRID_YRD.NumValue = convertX(ss1.ActiveSheet.Cells[iRow, SPD_TOP_GRID_YRD].Text);
+                if (ss1.ActiveSheet.Cells[iRow, SPD_TOP_GRID_DEEP].Text == "")
+                    SDB_TOP_GRID_DEEP.NumValue = 0;
+                else
+                    SDB_TOP_GRID_DEEP.NumValue = convertX(ss1.ActiveSheet.Cells[iRow, SPD_TOP_GRID_DEEP].Text);
+                if (ss1.ActiveSheet.Cells[iRow, SPD_BOT_GRID_GRD].Text == "")
+                    TXT_BOT_GRID_GRD.Text = "";
+                else
+                    TXT_BOT_GRID_GRD.Text = ss1.ActiveSheet.Cells[iRow, SPD_BOT_GRID_GRD].Text;
+                if (ss1.ActiveSheet.Cells[iRow, SPD_BOT_GRID_YRD].Text == "")
+                    SDB_BOT_GRID_YRD.NumValue = 0;
+                else
+                    SDB_BOT_GRID_YRD.NumValue = convertX(ss1.ActiveSheet.Cells[iRow, SPD_BOT_GRID_YRD].Text);
+                if (ss1.ActiveSheet.Cells[iRow, SPD_BOT_GRID_DEEP].Text == "")
+                    SDB_BOT_GRID_DEEP.NumValue = 0;
+                else
+                    SDB_BOT_GRID_DEEP.NumValue = convertX(ss1.ActiveSheet.Cells[iRow, SPD_BOT_GRID_DEEP].Text);
+                if (ss1.ActiveSheet.Cells[iRow, SPD_GRID_TIME].Text == "")
+                    TXT_GRID_TIME.Text = "";
+                else
+                    TXT_GRID_TIME.Text = ss1.ActiveSheet.Cells[iRow, SPD_GRID_TIME].Text;
+                if (ss1.ActiveSheet.Cells[iRow, SPD_INSP_DIAGONAL1].Text == "")
+                    SDB_INSP_DIAGONAL1.NumValue = 0;
+                else
+                    SDB_INSP_DIAGONAL1.NumValue = convertX(ss1.ActiveSheet.Cells[iRow, SPD_INSP_DIAGONAL1].Text);
+                if (ss1.ActiveSheet.Cells[iRow, SPD_INSP_DIAGONAL2].Text == "")
+                    SDB_INSP_DIAGONAL2.NumValue = 0;
+                else
+                    SDB_INSP_DIAGONAL2.NumValue = convertX(ss1.ActiveSheet.Cells[iRow, SPD_INSP_DIAGONAL2].Text);
+                if (ss1.ActiveSheet.Cells[iRow, SPD_LOC].Text == "")
+                    TXT_LOC.Text = "";
+                else
+                    TXT_LOC.Text = ss1.ActiveSheet.Cells[iRow, SPD_LOC].Text;
+                if (ss1.ActiveSheet.Cells[iRow, SPD_INSP_WAVE1].Text == "")
+                    TXT_WAVE1.Text = "";
+                else
+                    TXT_WAVE1.Text = ss1.ActiveSheet.Cells[iRow, SPD_INSP_WAVE1].Text;
+
+                if (ss1.ActiveSheet.Cells[iRow, SPD_THK1].Text == "")
+                    SDB_HD1.NumValue = 0;
+                else
+                    SDB_HD1.NumValue = convertX(ss1.ActiveSheet.Cells[iRow, SPD_THK1].Text);
+                if (ss1.ActiveSheet.Cells[iRow, SPD_THK2].Text == "")
+                    SDB_HD2.NumValue = 0;
+                else
+                    SDB_HD2.NumValue = convertX(ss1.ActiveSheet.Cells[iRow, SPD_THK2].Text);
+                if (ss1.ActiveSheet.Cells[iRow, SPD_THK3].Text == "")
+                    SDB_HD3.NumValue = 0;
+                else
+                    SDB_HD3.NumValue = convertX(ss1.ActiveSheet.Cells[iRow, SPD_THK3].Text);
+                if (ss1.ActiveSheet.Cells[iRow, SPD_THK4].Text == "")
+                    SDB_HD4.NumValue = 0;
+                else
+                    SDB_HD4.NumValue = convertX(ss1.ActiveSheet.Cells[iRow, SPD_THK4].Text);
+                if (ss1.ActiveSheet.Cells[iRow, SPD_THK5].Text == "")
+                    SDB_HD5.NumValue = 0;
+                else
+                    SDB_HD5.NumValue = convertX(ss1.ActiveSheet.Cells[iRow, SPD_THK5].Text);
+                if (ss1.ActiveSheet.Cells[iRow, SPD_THK6].Text == "")
+                    SDB_HD6.NumValue = 0;
+                else
+                    SDB_HD6.NumValue = convertX(ss1.ActiveSheet.Cells[iRow, SPD_THK6].Text);
+
+                if (ss1.ActiveSheet.Cells[iRow, SPD_INSP_CD1].Text == "")
+                    TXT_INSP_FLAW0.Text = "";
+                else
+                    TXT_INSP_FLAW0.Text = ss1.ActiveSheet.Cells[iRow, SPD_INSP_CD1].Text;
+                if (ss1.ActiveSheet.Cells[iRow, SPD_INSP_CD3].Text == "")
+                    TXT_INSP_FLAW3.Text = "";
+                else
+                    TXT_INSP_FLAW3.Text = ss1.ActiveSheet.Cells[iRow, SPD_INSP_CD3].Text;
+
+
+                //2011-08-29   modified by liqian for 画面显示定尺改为汉字,双击时对应栏位还原回代码表示,保证定尺保存为01,02,06,08,..类型
+                switch (ss1.ActiveSheet.Cells[iRow, SPD_SIZE_KND].Text)
+                {
+                    case "定尺":
+                        TXT_SIZE_KND.Text = "01";
+                        break;
+                    case "单定尺":
+                        TXT_SIZE_KND.Text = "02";
+                        break;
+                    case "非尺":
+                        TXT_SIZE_KND.Text = "06";
+                        break;
+                    case "小尺板":
+                        TXT_SIZE_KND.Text = "08";
+                        break;
+                    default:
+                        TXT_SIZE_KND.Text = "";
+                        break;
+                }
+                TXT_TRIM_FL.Text = ss1.ActiveSheet.Cells[iRow, SPD_TRIM_FL].Text;
+
+            }
+
+            ss1.ActiveSheet.Cells[iRow, SPD_EMP_CD].Text = GeneralCommon.sUserID;
+
+            TXT_CUT_TIME.Text = Gf_DTSet("", "X");
+            ss1.ActiveSheet.Cells[iRow, SPD_PROD_DATE].Text = TXT_CUT_TIME.Text;
+
+            ss1.ActiveSheet.Cells[iRow, SPD_INS_MAN].Text = TXT_sUserID.Text;
+            ss1.ActiveSheet.Cells[iRow, SPD_INS_MAN_TAIL].Text = TXT_sUserID_Tail.Text;
+
+            ss1.ActiveSheet.Cells[iRow, SPD_PLATE_COLOR].Text = txt_Color_code.Text;
+
+        }
+
+        private void ss1_Clk(int Col, int ROW)
+        {
+            string SMESG;
+
+            if (ss1.ActiveSheet.RowCount <= 0) return;
+
+            // Add by liqian at 2012-03-16
+            if (TXT_sUserID.Text == "")
+            {
+                SMESG = "请选择头部检验人员工号！";
+                GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "");
+                ss1.ActiveSheet.RowHeader.Cells[ROW, 0].Text = "";
+                return;
+            }
+
+            if (TXT_sUserID_Tail.Text == "")
+            {
+                SMESG = "请选择尾部检验人员工号！";
+                GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "");
+                ss1.ActiveSheet.RowHeader.Cells[ROW, 0].Text = "";
+                return;
+            }
+
+            if (Col == SPD_PROD_DATE)
+            {
+                TXT_CUT_TIME.Text = Gf_DTSet("", "X");
+                ss1.ActiveSheet.Cells[ROW, SPD_PROD_DATE].Text = TXT_CUT_TIME.Text;
+            }
+        }
+
+
+        private void SSCHK_LY_YN_Clk()
+        {
+            if (!SSCHK_LY_YN.Checked)
+            {
+                TXT_REMARK.Text = TXT_REMARK.Text;
+            }
+            else
+            {
+                if (TXT_REMARK.Text != "")
+                {
+                    TXT_REMARK.Text = TXT_REMARK.Text + ";留样";
+                }
+                else
+                {
+                    TXT_REMARK.Text = "留样";
+                }
+                if (ss1.ActiveSheet.RowCount <= 0) return;
+                int rowIndex = ss1.ActiveSheet.ActiveRowIndex;
+                if (ss1.ActiveSheet.Cells[rowIndex, SPD_PROD_REMARK].Text != "")
+                {
+                    ss1.ActiveSheet.Cells[rowIndex, SPD_PROD_REMARK].Text = ss1.ActiveSheet.Cells[rowIndex, SPD_PROD_REMARK].Text + ";留样";
+                }
+                else
+                {
+                    ss1.ActiveSheet.Cells[rowIndex, SPD_PROD_REMARK].Text = "留样";
+                }
+            }
+
+        }
+
+        //矫直指示
+        private void CHK_CL_FL_Clk()
+        {
+            if (ss1.ActiveSheet.RowCount <= 0) return;
+            int rowIndex = ss1.ActiveSheet.ActiveRowIndex;
+            if (CHK_CL_FL.Checked)
+            {
+                TXT_CL.Text = "Y";
+                ss1.ActiveSheet.Cells[rowIndex, SPD_CL_FL].Text = TXT_CL.Text;
+            }
+            else
+            {
+                TXT_CL.Text = "";
+                ss1.ActiveSheet.Cells[rowIndex, SPD_CL_FL].Text = TXT_CL.Text;
+            }
+
+        }
+
+        private void CHK_FLAW_YN_Clk()
+        {
+            if (ss1.ActiveSheet.RowCount <= 0) return;
+            int rowIndex = ss1.ActiveSheet.ActiveRowIndex;
+            if (CHK_FLAW_YN.Checked)
+            {
+                TXT_FLAW.Text = "Y";
+                ss1.ActiveSheet.Cells[rowIndex, SPD_FLAW_YN].Text = TXT_FLAW.Text;
+            }
+            else
+            {
+                TXT_FLAW.Text = "";
+                ss1.ActiveSheet.Cells[rowIndex, SPD_FLAW_YN].Text = TXT_FLAW.Text;
+            }
+
+        }
+
+
+        private void SSCHK_SIZE_KND_Clk()
+        {
+            if (!SSCHK_SIZE_KND.Checked)
+            {
+                TXT_SIZE_KND.Text = "02";
+            }
+            else
+            {
+                TXT_SIZE_KND.Text = "01";
+            }
+
+        }
+
+        private void SSCHK_TRIM_FL_Clk()
+        {
+            if (!SSCHK_TRIM_FL.Checked)
+            {
+                TXT_TRIM_FL.Text = "N";
+            }
+            else
+            {
+                TXT_TRIM_FL.Text = "Y";
+            }
+        }
+
+
+        private void TXT_INSP_FLAW_Chg()
+        {
+            if (ss1.ActiveSheet.RowCount <= 0) return;
+            int rowIndex = ss1.ActiveSheet.ActiveRowIndex;
+            if (TXT_INSP_FLAW0.Text.Trim().Length == 3)
+            {
+                ss1.ActiveSheet.Cells[rowIndex, SPD_INSP_CD1].Text = TXT_INSP_FLAW0.Text;
+            }
+
+            if (TXT_INSP_FLAW0.Text.Trim().Length == 0)
+            {
+                ss1.ActiveSheet.Cells[rowIndex, SPD_INSP_CD1].Text = "";
+            }
+
+            if (TXT_INSP_FLAW3.Text.Trim().Length == 3)
+            {
+                ss1.ActiveSheet.Cells[rowIndex, SPD_INSP_CD3].Text = TXT_INSP_FLAW3.Text;
+            }
+
+            if (TXT_INSP_FLAW3.Text.Trim().Length == 0)
+            {
+                ss1.ActiveSheet.Cells[rowIndex, SPD_INSP_CD3].Text = "";
+            }
+
+        }
+
+        private void TXT_RECT_DEG_Chg()
+        {
+            if (ss1.ActiveSheet.RowCount <= 0) return;
+            int rowIndex = ss1.ActiveSheet.ActiveRowIndex;
+            if (TXT_RECT_DEG.Text != "")
+            {
+                ss1.ActiveSheet.Cells[rowIndex, SPD_INSP_RECT_DEG].Text = TXT_RECT_DEG.Text;
+            }
+        }
+
+        private void TXT_VERT_DEG_Chg()
+        {
+            if (ss1.ActiveSheet.RowCount <= 0) return;
+            int rowIndex = ss1.ActiveSheet.ActiveRowIndex;
+            if (TXT_VERT_DEG.Text != "")
+            {
+                ss1.ActiveSheet.Cells[rowIndex, SPD_INSP_VERT_DEG].Text = TXT_VERT_DEG.Text;
+            }
+        }
+
+        private void TXT_WAVE_Chg()
+        {
+            if (ss1.ActiveSheet.RowCount <= 0) return;
+            int rowIndex = ss1.ActiveSheet.ActiveRowIndex;
+            if (TXT_WAVE.Text != "")
+            {
+                ss1.ActiveSheet.Cells[rowIndex, SPD_INSP_WAVE].Text = TXT_WAVE.Text;
+            }
+        }
+
+        private void TXT_LOC_Chg()
+        {
+            if (ss1.ActiveSheet.RowCount <= 0) return;
+            int rowIndex = ss1.ActiveSheet.ActiveRowIndex;
+            if (TXT_LOC.Text != "")
+            {
+                ss1.ActiveSheet.Cells[rowIndex, SPD_LOC].Text = TXT_LOC.Text;
+            }
+        }
+
+        private void TXT_WAVE1_Chg()
+        {
+            if (ss1.ActiveSheet.RowCount <= 0) return;
+            int rowIndex = ss1.ActiveSheet.ActiveRowIndex;
+            if (TXT_WAVE1.Text != "")
+            {
+                ss1.ActiveSheet.Cells[rowIndex, SPD_INSP_WAVE1].Text = TXT_WAVE1.Text;
+            }
+        }
+
+        private void SDB_HD1_Chg()
+        {
+            if (ss1.ActiveSheet.RowCount <= 0) return;
+            int rowIndex = ss1.ActiveSheet.ActiveRowIndex;
+            if (SDB_HD1.Text != "")
+            {
+                ss1.ActiveSheet.Cells[rowIndex, SPD_THK1].Text = SDB_HD1.Text;
+            }
+        }
+
+        private void SDB_HD2_Chg()
+        {
+            if (ss1.ActiveSheet.RowCount <= 0) return;
+            int rowIndex = ss1.ActiveSheet.ActiveRowIndex;
+            if (SDB_HD2.Text != "")
+            {
+                ss1.ActiveSheet.Cells[rowIndex, SPD_THK2].Text = SDB_HD2.Text;
+            }
+        }
+
+        private void SDB_HD3_Chg()
+        {
+            if (ss1.ActiveSheet.RowCount <= 0) return;
+            int rowIndex = ss1.ActiveSheet.ActiveRowIndex;
+            if (SDB_HD3.Text != "")
+            {
+                ss1.ActiveSheet.Cells[rowIndex, SPD_THK3].Text = SDB_HD3.Text;
+            }
+        }
+
+        private void SDB_HD4_Chg()
+        {
+            if (ss1.ActiveSheet.RowCount <= 0) return;
+            int rowIndex = ss1.ActiveSheet.ActiveRowIndex;
+            if (SDB_HD4.Text != "")
+            {
+                ss1.ActiveSheet.Cells[rowIndex, SPD_THK4].Text = SDB_HD4.Text;
+            }
+        }
+
+        private void SDB_HD5_Chg()
+        {
+            if (ss1.ActiveSheet.RowCount <= 0) return;
+            int rowIndex = ss1.ActiveSheet.ActiveRowIndex;
+            if (SDB_HD5.Text != "")
+            {
+                ss1.ActiveSheet.Cells[rowIndex, SPD_THK5].Text = SDB_HD5.Text;
+            }
+        }
+
+        private void SDB_HD6_Chg()
+        {
+            if (ss1.ActiveSheet.RowCount <= 0) return;
+            int rowIndex = ss1.ActiveSheet.ActiveRowIndex;
+            if (SDB_HD6.Text != "")
+            {
+                ss1.ActiveSheet.Cells[rowIndex, SPD_THK6].Text = SDB_HD6.Text;
+            }
+        }
+
+
 
 
 
@@ -1486,41 +1748,71 @@ namespace CG
                 e.ActiveSheet.Columns[i].Locked = true;
             }
         }
+        //重写了框架的颜色方法，原来的框架在解锁方面有点问题，不方便在框架直接修改，所以重新写了一个
+        public void Gp_Sp_BlockColor(FpSpread oSpread, int iCol1, int iCol2, int iRow1, int iRow2, Color fColor, Color bColor)
+        {
+
+            FarPoint.Win.Spread.SheetView with_1 = oSpread.ActiveSheet;
+            for (int row = iRow1; row <= iRow2; row++)
+            {
+                for (int col = iCol1; col <= iCol2; col++)
+                {
+                    bool locked = with_1.Columns[col].Locked;
+                    with_1.Columns[col].Locked = false;
+                    with_1.Cells[row, col].Locked = false;
+                    //我在这里加了一个颜色的判断，防止多个颜色的时候，颜色覆盖替换的问题，所以在赋值的时候，黑色字体和白色背景不会被传入进行修改
+                    if (fColor != Color.Black)
+                    {
+                        with_1.Cells[row, col].ForeColor = fColor;
+                    }
+                    if (bColor != Color.White)
+                    {
+                        with_1.Cells[row, col].BackColor = bColor;
+                    }
+                    with_1.Cells[row, col].Locked = locked;
+                    with_1.Columns[col].Locked = locked;
+                }
+            }
+
+        }
+
+        public double convertX(string value)
+        {
+            if (value != "")
+            {
+                return Convert.ToDouble(value);
+            }
+            return 0;
+        }
 
         #endregion
 
-        private void cbo_ResonDesc_Click(object sender, EventArgs e)
+        private void SSCHK_GRID_YN_CheckedChanged(object sender, EventArgs e)
         {
-            cbo_ResonDesc_Clk();
+            SSCHK_GRID_YN_Clk();
         }
 
-        private void CHK_CL_FL_CheckedChanged(object sender, EventArgs e)
+        private void CHK_TOP_GRD0_CheckedChanged(object sender, EventArgs e)
         {
-            CHK_CL_FL_Clk();
+            CHK_TOP_GRD_Clk(sender);
         }
 
-        private void chkCl_CheckedChanged(object sender, EventArgs e)
+        private void CHK_TOP_GRD1_CheckedChanged(object sender, EventArgs e)
         {
-            CHK_CL_FL_Clk();
+            CHK_TOP_GRD_Clk(sender);
         }
 
-        private void chkGas_CheckedChanged(object sender, EventArgs e)
+        private void CHK_BOT_GRD0_CheckedChanged(object sender, EventArgs e)
         {
-            chkGas_Clk();
+            CHK_BOT_GRD_Clk(sender);
         }
 
-
-        private void chkGrid_CheckedChanged(object sender, EventArgs e)
+        private void CHK_BOT_GRD1_CheckedChanged(object sender, EventArgs e)
         {
-            chkGrid_Clk();
+            CHK_BOT_GRD_Clk(sender);
         }
 
         private void opt_CHK_PRD_GRD0_CheckedChanged(object sender, EventArgs e)
-        {
-            opt_CHK_PRD_GRD_Clk();
-        }
-
-        private void opt_CHK_PRD_GRD3_CheckedChanged(object sender, EventArgs e)
         {
             opt_CHK_PRD_GRD_Clk();
         }
@@ -1530,122 +1822,150 @@ namespace CG
             opt_CHK_PRD_GRD_Clk();
         }
 
-        private void opt_CHK_PRD_GRD4_CheckedChanged(object sender, EventArgs e)
-        {
-            opt_CHK_PRD_GRD_Clk();
-        }
-
         private void opt_CHK_PRD_GRD2_CheckedChanged(object sender, EventArgs e)
         {
             opt_CHK_PRD_GRD_Clk();
         }
 
-        private void opt_CHK_PRD_GRD5_CheckedChanged(object sender, EventArgs e)
+        private void opt_CHK_PRD_GRD3_CheckedChanged(object sender, EventArgs e)
         {
             opt_CHK_PRD_GRD_Clk();
         }
 
-        private void opt_CHK_SUR_GRD0_CheckedChanged(object sender, EventArgs e)
+        private void opt_CHK_PRD_GRD4_CheckedChanged(object sender, EventArgs e)
         {
-            opt_CHK_SUR_GRD_Clk();
+            opt_CHK_PRD_GRD_Clk();
         }
 
-        private void opt_CHK_SUR_GRD1_CheckedChanged(object sender, EventArgs e)
+        private void opt_line1_CheckedChanged(object sender, EventArgs e)
         {
-            opt_CHK_SUR_GRD_Clk();
+            opt_line1_Clk();
         }
 
-        private void opt_LineFlag0_CheckedChanged(object sender, EventArgs e)
+        private void opt_line2_CheckedChanged(object sender, EventArgs e)
         {
-            opt_LineFlag_Clk();
+            opt_line2_Clk();
         }
 
-        private void opt_LineFlag1_CheckedChanged(object sender, EventArgs e)
+        private void opt_line5_CheckedChanged(object sender, EventArgs e)
         {
-            opt_LineFlag_Clk();
+            opt_line5_Clk();
         }
 
-        private void opt_LineFlag2_CheckedChanged(object sender, EventArgs e)
+        private void opt_line3_CheckedChanged(object sender, EventArgs e)
         {
-            opt_LineFlag_Clk();
+            opt_line3_Clk();
         }
 
-        private void opt_LineFlag3_CheckedChanged(object sender, EventArgs e)
+        private void opt_line4_CheckedChanged(object sender, EventArgs e)
         {
-            opt_LineFlag_Clk();
+            opt_line4_Clk();
         }
 
-        private void SDB_THK_TextChanged(object sender, EventArgs e)
+        private void SDB_ACT_LEN_TextChanged(object sender, EventArgs e)
         {
-            PRD_WEIGHT_CALC();
+            SDB_ACT_LEN_Chg();
         }
 
-        private void SDB_WID_TextChanged(object sender, EventArgs e)
+        private void ss1_ButtonClicked(object sender, EditorNotifyEventArgs e)
         {
-            PRD_WEIGHT_CALC();
+            ss1_BtnClk(e.Column,e.Row);
         }
 
-        private void SDB_LEN_TextChanged(object sender, EventArgs e)
+        private void ss1_CellClick(object sender, CellClickEventArgs e)
         {
-            PRD_WEIGHT_CALC();
+            ss1_Clk(e.Column, e.Row);
         }
 
-        private void SDT_PROD_DATE_DoubleClick(object sender, EventArgs e)
+        private void SSCHK_LY_YN_CheckedChanged(object sender, EventArgs e)
         {
-            SDT_PROD_DATE_DblClk();
+            SSCHK_LY_YN_Clk();
         }
 
-        private void SDT_PROD_TO_DATE_Load(object sender, EventArgs e)
+        private void CHK_CL_FL_CheckedChanged(object sender, EventArgs e)
         {
-            SDT_PROD_TO_DATE_DblClk();
+            CHK_CL_FL_Clk();
         }
 
-        private void TXT_GRID_EMP_CD_DoubleClick(object sender, EventArgs e)
+        private void CHK_FLAW_YN_CheckedChanged(object sender, EventArgs e)
         {
-            TXT_GRID_EMP_CD_DblClk();
+            CHK_FLAW_YN_Clk();
         }
 
-        private void TXT_GRID_TIME_DoubleClick(object sender, EventArgs e)
+        private void SSCHK_SIZE_KND_CheckedChanged(object sender, EventArgs e)
         {
-            TXT_GRID_TIME_DblClick();
+            SSCHK_SIZE_KND_Clk();
         }
 
-        private void TXT_INSP_OCCR_TIME_DoubleClick(object sender, EventArgs e)
+        private void SSCHK_TRIM_FL_CheckedChanged(object sender, EventArgs e)
         {
-            TXT_INSP_OCCR_TIME_DblClk();
+            SSCHK_TRIM_FL_Clk();
         }
 
-        private void CHK_TOP_GRD0_CheckedChanged(object sender, EventArgs e)
+        private void TXT_INSP_FLAW0_TextChanged(object sender, EventArgs e)
         {
-            CHK_TOP_GRD0_Clk();
+            TXT_INSP_FLAW_Chg();
         }
 
-        private void CHK_TOP_GRD1_CheckedChanged(object sender, EventArgs e)
+        private void TXT_INSP_FLAW3_TextChanged(object sender, EventArgs e)
         {
-            CHK_TOP_GRD1_Clk();
+            TXT_INSP_FLAW_Chg();
         }
 
-        private void CHK_BOT_GRD0_CheckedChanged(object sender, EventArgs e)
+        private void TXT_RECT_DEG_TextChanged(object sender, EventArgs e)
         {
-            CHK_BOT_GRD0_Clk();
+            TXT_RECT_DEG_Chg();
         }
 
-        private void CHK_BOT_GRD1_CheckedChanged(object sender, EventArgs e)
+        private void TXT_VERT_DEG_TextChanged(object sender, EventArgs e)
         {
-            CHK_BOT_GRD1_Clk();
+            TXT_VERT_DEG_Chg();
         }
 
-        private void CHK_GRID_FLAG_CheckedChanged(object sender, EventArgs e)
+        private void TXT_WAVE_TextChanged(object sender, EventArgs e)
         {
-            CHK_GRID_FLAG_Click();
+            TXT_WAVE_Chg();
         }
 
-        private void ss1_CellDoubleClick(object sender, CellClickEventArgs e)
+        private void TXT_WAVE1_TextChanged(object sender, EventArgs e)
         {
-            ss1_DblClk(e.Column, e.Row);
+            TXT_WAVE1_Chg();
         }
 
+        private void TXT_LOC_TextChanged(object sender, EventArgs e)
+        {
+            TXT_LOC_Chg();
+        }
 
+        private void SDB_HD1_TextChanged(object sender, EventArgs e)
+        {
+            SDB_HD1_Chg();
+        }
+
+        private void SDB_HD2_TextChanged(object sender, EventArgs e)
+        {
+            SDB_HD2_Chg();
+        }
+
+        private void SDB_HD3_TextChanged(object sender, EventArgs e)
+        {
+            SDB_HD3_Chg();
+        }
+
+        private void SDB_HD4_TextChanged(object sender, EventArgs e)
+        {
+            SDB_HD4_Chg();
+        }
+
+        private void SDB_HD5_TextChanged(object sender, EventArgs e)
+        {
+            SDB_HD5_Chg();
+        }
+
+        private void SDB_HD6_TextChanged(object sender, EventArgs e)
+        {
+            SDB_HD6_Chg();
+        }
 
     }
 }
