@@ -218,6 +218,10 @@ namespace CG
             base.sSvrPgmPkgName = "CGZ2031NC";
             Form_Define();
 
+            CBO_PLT.SelectedItem = "C3";
+            CBO_LINE.SelectedItem = "1";
+
+            TXT_CUT_TIME_DblClk();
 
         }
         #endregion
@@ -225,16 +229,190 @@ namespace CG
         #region 重写查询
         public override void Form_Ref()
         {
-            p_Ref(1, 1, true, true);
+            int iCount;
+
+	if (TXT_SEARCH_FL.Text == "")
+		TXT_SEARCH_FL.Text = "1";
+
+	if (TXT_MPLATE_NO.Text.Length > 9) {
+
+		//        If TXT_SEQ <> "" Then
+		//           TXT_MPLATE_NO.Text = Mid(TXT_MPLATE_NO.Text, 1, 10)
+		//        End If
+
+		if (p_Ref(1, 1, true, true)) {
+			PlateWgtEdit();
+            p_Ref(2, 0, true, true);
+			///'''ADDED BY GUOLI AT 20080718200300'''''''''
+			if (ss1.ActiveSheet.Cells[ss1.ActiveSheet.RowCount-1,9].Text == "") {
+                ss1.ActiveSheet.Cells[ss1.ActiveSheet.RowCount - 1, 14].Text = "True";
+			}
+			///'''''''''''''''''''''''''''''''''''''''''''
+		}
+
+	} else {
+        if (p_Ref(2, 1, true, true))
+        {
+			ss2_DblClk(0, 0);
+		}
+	}
+
+	if (ss1.ActiveSheet.RowCount < 1)return;
+
+		for (iCount = 1; iCount <= ss1.ActiveSheet.RowCount; iCount++) {
+            if (ss1.ActiveSheet.Cells[iCount - 1, SPD_PROC_CD].Text == "CGB")
+            {
+                ss1.ActiveSheet.Cells[iCount - 1, SPD_MARK_YN].Text = "True";
+                ss1.ActiveSheet.Cells[iCount - 1, SPD_STAMP_YN].Text = "True"; 
+                ss1.ActiveSheet.Cells[iCount - 1, SPD_BAR_YN].Text = "True";
+			}
+		}
+		
+	//    For iCount = 1 To ss1.MaxRows
+	//        ss1.ROW = iCount
+	//        ss1.Col = 0
+	//        ss1.Text = "Update"
+	//        ss1.Col = SPD_DS_CUT_STA_DATE
+	//        ss1.Text = TXT_CUT_TIME
+	//        ss1.Col = SPD_DS_CUT_END_DATE
+	//        ss1.Text = TXT_CUT_TIME
+	//        ss1.Col = SPD_PLT
+	//        ss1.Text = Trim(CBO_PLT.Text)
+	//        ss1.Col = SPD_PRC_LINE
+	//        ss1.Text = Trim(CBO_LINE.Text)
+	//        ss1.Col = SPD_EMP_CD
+	//        ss1.Text = sUserID
+	//    Next
+
         }
 
         public override void Form_Pro()
         {
+            int iCount;
+            string sDateFrom;
+            string sDateTo;
+            string sPlateNo = "";
+
+            int inum = 0;
+            int lRow = 0;
+            for (iCount = 1; iCount <= ss1.ActiveSheet.RowCount; iCount++)
+            {
+                if (ss1.ActiveSheet.RowHeader.Cells[iCount - 1, 0].Text == "修改")
+                {
+                    if (!Gp_DateCheck(ss1.ActiveSheet.Cells[iCount - 1, 9].Text, "X"))
+                    {
+
+                        GeneralCommon.Gp_MsgBoxDisplay(" 请正确输入结束时间 ！", "I", "");
+                        return;
+                    }
+                }
+            }
+
+            if (TXT_SEARCH_FL.Text == "")
+                TXT_SEARCH_FL.Text = "1";
+
+            for (iCount = 1; iCount <= ss1.ActiveSheet.RowCount; iCount++)
+            {
+                if (ss1.ActiveSheet.RowHeader.Cells[iCount - 1, 0].Text == "修改" | ss1.ActiveSheet.RowHeader.Cells[iCount - 1, 0].Text == "新增" | ss1.ActiveSheet.RowHeader.Cells[iCount - 1, 0].Text == "删除")
+                {
+                    ss1.ActiveSheet.Cells[iCount - 1, SPD_PLT].Text = CBO_PLT.Text.Trim();
+                    ss1.ActiveSheet.Cells[iCount - 1, SPD_PRC_LINE].Text = CBO_LINE.Text.Trim();
+                    ss1.ActiveSheet.Cells[iCount - 1, SPD_EMP_CD].Text = GeneralCommon.sUserID;
+                }
+            }
+
+
+            for (iCount = 1; iCount <= ss1.ActiveSheet.RowCount; iCount++)
+            {
+                if (ss1.ActiveSheet.Cells[iCount - 1, SPD_PLATE_NO].Text.Substring(0, 12) == sPlateNo.Substring(0, 12) || sPlateNo == "")
+                {
+                    sPlateNo = ss1.ActiveSheet.Cells[iCount - 1, SPD_PLATE_NO].Text;
+                    if (ss1.ActiveSheet.Cells[iCount - 1, SPD_DS_LAST_YN].Text == "True")
+                    {
+                        lRow = iCount;
+                        inum = inum + 1;
+                        if (inum > 1)
+                        {
+                            GeneralCommon.Gp_MsgBoxDisplay("一块母板只能有一块尾板.." + sPlateNo.Substring(0, 12), "I", "");
+                            return;
+                        }
+                    }
+                    if (inum == 1)
+                    {
+                        if (iCount > lRow)
+                        {
+                            if (ss1.ActiveSheet.RowHeader.Cells[iCount - 1, 0].Text != "删除")
+                            {
+                                ss1.ActiveSheet.RowHeader.Cells[iCount - 1, 0].Text = "";
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    inum = 0;
+                    sPlateNo = ss1.ActiveSheet.Cells[iCount - 1, SPD_PLATE_NO].Text;
+                    if (ss1.ActiveSheet.Cells[iCount - 1, SPD_DS_LAST_YN].Text == "True")
+                    {
+                        lRow = iCount;
+                        inum = inum + 1;
+                        if (inum > 1)
+                        {
+                            GeneralCommon.Gp_MsgBoxDisplay("一块母板只能有一块尾板.." + sPlateNo.Substring(0, 12), "I", "");
+                            return;
+                        }
+                    }
+                    if (inum == 1)
+                    {
+                        if (iCount > lRow)
+                        {
+                            ss1.ActiveSheet.RowHeader.Cells[iCount - 1, 0].Text = "";
+                        }
+                    }
+                }
+            }
+
+
+            for (iCount = 1; iCount <= ss1.ActiveSheet.RowCount; iCount++)
+            {
+                {
+                    switch (ss1.ActiveSheet.RowHeader.Cells[iCount - 1, 0].Text)
+                    {
+
+                        case "增加":
+                        case "修改":
+                            sPlateNo = ss1.ActiveSheet.Cells[iCount - 1, SPD_PLATE_NO].Text;
+                            sDateFrom = ss1.ActiveSheet.Cells[iCount - 1, SPD_DS_CUT_STA_DATE].Text;
+                            if (!Gp_DateCheck(ss1.ActiveSheet.Cells[iCount - 1, SPD_DS_CUT_STA_DATE].Text, "S"))
+                            {
+                                GeneralCommon.Gp_MsgBoxDisplay("请正确输入开始时间.." + sPlateNo, "I", "");
+                                return;
+                            }
+
+                            sDateTo = ss1.ActiveSheet.Cells[iCount - 1, SPD_DS_CUT_END_DATE].Text;
+                            if (!Gp_DateCheck(ss1.ActiveSheet.Cells[iCount - 1, SPD_DS_CUT_END_DATE].Text, "S"))
+                            {
+                                GeneralCommon.Gp_MsgBoxDisplay("请正确输入结束时间.." + sPlateNo, "I", "");
+                                return;
+                            }
+
+                            if (convertX(sDateFrom) > convertX(sDateTo))
+                            {
+                                GeneralCommon.Gp_MsgBoxDisplay("请正确输入开始时间还是结束时间.." + sPlateNo, "I", "");
+                                return;
+                            }
+                            break;
+
+                    }
+                }
+            }
             p_pro(1, 1, true, true);
         }
 
         public override bool Form_Cls()
         {
+            CBO_PLT.SelectedItem = "C3";
+            CBO_LINE.SelectedItem = "1";
             base.Form_Cls();
             return true;
 
