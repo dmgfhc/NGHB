@@ -409,6 +409,98 @@ namespace CG
             p_pro(1, 1, true, true);
         }
 
+        public override void Spread_Ins()
+        {
+            double dThk =0;
+            double dWid=0;
+            double dLen=0;
+            double dWgt=0;
+            int lRow = 0;
+            string sPlateNo = "";
+            string sClipText = "";
+
+            string sPlt = "";
+            string sPRC_LINE = "";
+            string sEmp_cd = "";
+
+            int iCount;
+
+            sPlateNo = "";
+
+            {
+                if (ss1.ActiveSheet.RowCount == 0)
+                {
+                    if (TXT_MPLATE_NO.Text.Length == 12)
+                    {
+                        base.Spread_Ins();
+                        ss1.ActiveSheet.Cells[0,0].Text = TXT_MPLATE_NO.Text + "01";
+                    }
+                    else
+                    {
+                        GeneralCommon.Gp_MsgBoxDisplay("请正确输入母板号 ！", "I", "");
+                    }
+                    return;
+                }
+                for (iCount = ss1.ActiveSheet.ActiveRowIndex; iCount < ss1.ActiveSheet.RowCount; iCount++)
+                {
+                    if (ss1.ActiveSheet.Cells[iCount,0].Text.Substring(0,12) == sPlateNo.Substring(0,12) || sPlateNo == "")
+                    {
+                        sPlateNo = ss1.ActiveSheet.Cells[iCount,0].Text;
+                        lRow = iCount;
+                    }
+                    else
+                    {
+                        break; 
+                    }
+                }
+            }
+
+            sPlateNo = "";
+
+            //ss1.SetActiveCell(1, lRow);
+            //Gp_Sp_Ins(Proc_Sc("Sc"));
+            base.Spread_Ins();
+
+                if (lRow > 0)
+                {
+                    sPlateNo = ss1.ActiveSheet.Cells[lRow, SPD_PLATE_NO].Text;
+                    dThk = convertX(ss1.ActiveSheet.Cells[lRow, SPD_THK].Text);
+                    dWid = convertX(ss1.ActiveSheet.Cells[lRow, SPD_WID].Text);
+                    dLen = convertX(ss1.ActiveSheet.Cells[lRow, SPD_LEN].Text);
+                    dWgt = convertX(ss1.ActiveSheet.Cells[lRow, SPD_WGT].Text);
+                    sPlt = ss1.ActiveSheet.Cells[lRow, SPD_PLT].Text;
+                    sPRC_LINE = ss1.ActiveSheet.Cells[lRow, SPD_PRC_LINE].Text;
+                    sEmp_cd = ss1.ActiveSheet.Cells[lRow, SPD_EMP_CD].Text;
+                }
+                else
+                {
+                    sPlateNo = TXT_MPLATE_NO.Text + "00";
+                }
+
+                lRow = lRow + 1;
+                ss1.ActiveSheet.Cells[lRow, SPD_PLATE_NO].Text = sPlateNo;
+                ss1.ActiveSheet.Cells[lRow, SPD_THK].Text = dThk.ToString();
+                ss1.ActiveSheet.Cells[lRow, SPD_WID].Text = dWid.ToString();
+                ss1.ActiveSheet.Cells[lRow, SPD_LEN].Text = dLen.ToString();
+                ss1.ActiveSheet.Cells[lRow, SPD_WGT].Text = dWgt.ToString();
+                ss1.ActiveSheet.Cells[lRow, SPD_PLT].Text = sPlt;
+                ss1.ActiveSheet.Cells[lRow, SPD_PRC_LINE].Text = sPRC_LINE;
+                ss1.ActiveSheet.Cells[lRow, SPD_EMP_CD].Text = sEmp_cd;
+                ss1.ActiveSheet.RowHeader.Cells[lRow, 0].Text = "增加";
+                ss1.ActiveSheet.Cells[lRow, SPD_PLATE_NO].Text = ss1.ActiveSheet.Cells[lRow, SPD_PLATE_NO].Text.Substring(0, 12) + string.Format("{0:D2}", Convert.ToInt32(ss1.ActiveSheet.Cells[lRow, SPD_PLATE_NO].Text.Substring(12, 2)) + 1);
+                ss1.ActiveSheet.Cells[lRow, SPD_SURF_GRD].Text = "True";
+                ss1.ActiveSheet.Cells[lRow, SPD_MARK_YN].Text = "True";
+                ss1.ActiveSheet.Cells[lRow, SPD_STAMP_YN].Text = "True";
+                ss1.ActiveSheet.Cells[lRow, SPD_BAR_YN].Text = "True";
+
+                //ss1.SetActiveCell(1, ss1.ROW);
+                //ss1.ReDraw = true;
+            
+
+            ss1.ActiveSheet.Cells[ss1.ActiveSheet.RowCount-1,14].Text = "True";
+        
+        }
+
         public override bool Form_Cls()
         {
             CBO_PLT.SelectedItem = "C3";
