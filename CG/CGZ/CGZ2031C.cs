@@ -92,7 +92,7 @@ namespace CG
         double Mplate_thk;
 
         //const int SPD_PLAN_PROD_WGT = 33,
-                 
+
 
         #region 界面初始化
 
@@ -127,16 +127,16 @@ namespace CG
             iheadrow = 1;
             iscseq = 1;
 
-            p_SetSc("钢板号", "E", "14", "PNIL", "", "", "", iscseq, iheadrow,"M");//0 
+            p_SetSc("钢板号", "E", "14", "PNIL", "", "", "", iscseq, iheadrow, "M");//0 
             p_SetSc("厚度", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//1
-            p_SetSc("宽度", "E", "60", "L", "", "", "", iscseq, iheadrow,"R");//2
+            p_SetSc("宽度", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//2
             p_SetSc("长度", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//3
-            p_SetSc("重量", "E", "60", "L", "", "", "", iscseq, iheadrow,"R");//4
+            p_SetSc("重量", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//4
             p_SetSc("定尺", "C", "", "L", "", "", "", iscseq, iheadrow, "M");//5
             p_SetSc("标准号", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//6
             p_SetSc("UST", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//7
             p_SetSc("开始时间", "DT", "", "NI", "", "", "", iscseq, iheadrow, "M");//8
-            p_SetSc("结束时间", "DT", "", "NI", "", "", "", iscseq, iheadrow,"M");//9
+            p_SetSc("结束时间", "DT", "", "NI", "", "", "", iscseq, iheadrow, "M");//9
             p_SetSc("厚度", "N", "8,2", "NI", "", "", "", iscseq, iheadrow, "R");//10
             p_SetSc("宽度", "N", "8", "NI", "", "", "", iscseq, iheadrow, "R");//11
             p_SetSc("长度", "N", "8", "NI", "", "", "", iscseq, iheadrow, "R");//12
@@ -161,7 +161,7 @@ namespace CG
             p_SetSc("钢种", "E", "30", "L", "", "", "", iscseq, iheadrow, "L");//31
             p_SetSc("订单号", "E", "20", "L", "", "", "", iscseq, iheadrow, "L");//32
             p_SetSc("订单序列号", "E", "10", "L", "", "", "", iscseq, iheadrow, "L");//33
-           
+
             iheadrow = 0;
             p_spanSpread("作业指示", 5, 7, iscseq, iheadrow, 1);
             p_spanSpread("作业实绩", 9, 16, iscseq, iheadrow, 1);
@@ -231,58 +231,64 @@ namespace CG
         {
             int iCount;
 
-	if (TXT_SEARCH_FL.Text == "")
-		TXT_SEARCH_FL.Text = "1";
+            if (TXT_SEARCH_FL.Text == "")
+                TXT_SEARCH_FL.Text = "1";
 
-	if (TXT_MPLATE_NO.Text.Length > 9) {
-
-		//        If TXT_SEQ <> "" Then
-		//           TXT_MPLATE_NO.Text = Mid(TXT_MPLATE_NO.Text, 1, 10)
-		//        End If
-
-		if (p_Ref(1, 1, true, true)) {
-			PlateWgtEdit();
-            p_Ref(2, 0, true, true);
-			///'''ADDED BY GUOLI AT 20080718200300'''''''''
-			if (ss1.ActiveSheet.Cells[ss1.ActiveSheet.RowCount-1,9].Text == "") {
-                ss1.ActiveSheet.Cells[ss1.ActiveSheet.RowCount - 1, 14].Text = "True";
-			}
-			///'''''''''''''''''''''''''''''''''''''''''''
-		}
-
-	} else {
-        if (p_Ref(2, 1, true, true))
-        {
-			ss2_DblClk(0, 0);
-		}
-	}
-
-	if (ss1.ActiveSheet.RowCount < 1)return;
-
-		for (iCount = 1; iCount <= ss1.ActiveSheet.RowCount; iCount++) {
-            if (ss1.ActiveSheet.Cells[iCount - 1, SPD_PROC_CD].Text == "CGB")
+            if (TXT_MPLATE_NO.Text.Length > 9)
             {
-                ss1.ActiveSheet.Cells[iCount - 1, SPD_MARK_YN].Text = "True";
-                ss1.ActiveSheet.Cells[iCount - 1, SPD_STAMP_YN].Text = "True"; 
-                ss1.ActiveSheet.Cells[iCount - 1, SPD_BAR_YN].Text = "True";
-			}
-		}
-		
-	//    For iCount = 1 To ss1.MaxRows
-	//        ss1.ROW = iCount
-	//        ss1.Col = 0
-	//        ss1.Text = "Update"
-	//        ss1.Col = SPD_DS_CUT_STA_DATE
-	//        ss1.Text = TXT_CUT_TIME
-	//        ss1.Col = SPD_DS_CUT_END_DATE
-	//        ss1.Text = TXT_CUT_TIME
-	//        ss1.Col = SPD_PLT
-	//        ss1.Text = Trim(CBO_PLT.Text)
-	//        ss1.Col = SPD_PRC_LINE
-	//        ss1.Text = Trim(CBO_LINE.Text)
-	//        ss1.Col = SPD_EMP_CD
-	//        ss1.Text = sUserID
-	//    Next
+
+                //        If TXT_SEQ <> "" Then
+                //           TXT_MPLATE_NO.Text = Mid(TXT_MPLATE_NO.Text, 1, 10)
+                //        End If
+
+                if (p_Ref(1, 1, true, true))
+                {
+                    PlateWgtEdit();
+                    p_Ref(2, 0, true, true);
+                    ///'''ADDED BY GUOLI AT 20080718200300'''''''''
+                    if (ss1.ActiveSheet.Cells[ss1.ActiveSheet.RowCount - 1, 9].Text == "")
+                    {
+                        ss1.ActiveSheet.Cells[ss1.ActiveSheet.RowCount - 1, 14].Text = "True";
+                    }
+                    ///'''''''''''''''''''''''''''''''''''''''''''
+                }
+
+            }
+            else
+            {
+                if (p_Ref(2, 1, true, true))
+                {
+                    ss2_DblClk(0, 0);
+                }
+            }
+
+            if (ss1.ActiveSheet.RowCount < 1) return;
+
+            for (iCount = 1; iCount <= ss1.ActiveSheet.RowCount; iCount++)
+            {
+                if (ss1.ActiveSheet.Cells[iCount - 1, SPD_PROC_CD].Text == "CGB")
+                {
+                    ss1.ActiveSheet.Cells[iCount - 1, SPD_MARK_YN].Text = "True";
+                    ss1.ActiveSheet.Cells[iCount - 1, SPD_STAMP_YN].Text = "True";
+                    ss1.ActiveSheet.Cells[iCount - 1, SPD_BAR_YN].Text = "True";
+                }
+            }
+
+            //    For iCount = 1 To ss1.MaxRows
+            //        ss1.ROW = iCount
+            //        ss1.Col = 0
+            //        ss1.Text = "Update"
+            //        ss1.Col = SPD_DS_CUT_STA_DATE
+            //        ss1.Text = TXT_CUT_TIME
+            //        ss1.Col = SPD_DS_CUT_END_DATE
+            //        ss1.Text = TXT_CUT_TIME
+            //        ss1.Col = SPD_PLT
+            //        ss1.Text = Trim(CBO_PLT.Text)
+            //        ss1.Col = SPD_PRC_LINE
+            //        ss1.Text = Trim(CBO_LINE.Text)
+            //        ss1.Col = SPD_EMP_CD
+            //        ss1.Text = sUserID
+            //    Next
 
         }
 
@@ -411,10 +417,10 @@ namespace CG
 
         public override void Spread_Ins()
         {
-            double dThk =0;
-            double dWid=0;
-            double dLen=0;
-            double dWgt=0;
+            double dThk = 0;
+            double dWid = 0;
+            double dLen = 0;
+            double dWgt = 0;
             int lRow = 0;
             string sPlateNo = "";
             string sClipText = "";
@@ -433,7 +439,7 @@ namespace CG
                     if (TXT_MPLATE_NO.Text.Length == 12)
                     {
                         base.Spread_Ins();
-                        ss1.ActiveSheet.Cells[0,0].Text = TXT_MPLATE_NO.Text + "01";
+                        ss1.ActiveSheet.Cells[0, 0].Text = TXT_MPLATE_NO.Text + "01";
                     }
                     else
                     {
@@ -443,14 +449,14 @@ namespace CG
                 }
                 for (iCount = ss1.ActiveSheet.ActiveRowIndex; iCount < ss1.ActiveSheet.RowCount; iCount++)
                 {
-                    if (ss1.ActiveSheet.Cells[iCount,0].Text.Substring(0,12) == sPlateNo.Substring(0,12) || sPlateNo == "")
+                    if (ss1.ActiveSheet.Cells[iCount, 0].Text.Substring(0, 12) == sPlateNo.Substring(0, 12) || sPlateNo == "")
                     {
-                        sPlateNo = ss1.ActiveSheet.Cells[iCount,0].Text;
+                        sPlateNo = ss1.ActiveSheet.Cells[iCount, 0].Text;
                         lRow = iCount;
                     }
                     else
                     {
-                        break; 
+                        break;
                     }
                 }
             }
@@ -461,44 +467,294 @@ namespace CG
             //Gp_Sp_Ins(Proc_Sc("Sc"));
             base.Spread_Ins();
 
-                if (lRow > 0)
+            if (lRow > 0)
+            {
+                sPlateNo = ss1.ActiveSheet.Cells[lRow, SPD_PLATE_NO].Text;
+                dThk = convertX(ss1.ActiveSheet.Cells[lRow, SPD_THK].Text);
+                dWid = convertX(ss1.ActiveSheet.Cells[lRow, SPD_WID].Text);
+                dLen = convertX(ss1.ActiveSheet.Cells[lRow, SPD_LEN].Text);
+                dWgt = convertX(ss1.ActiveSheet.Cells[lRow, SPD_WGT].Text);
+                sPlt = ss1.ActiveSheet.Cells[lRow, SPD_PLT].Text;
+                sPRC_LINE = ss1.ActiveSheet.Cells[lRow, SPD_PRC_LINE].Text;
+                sEmp_cd = ss1.ActiveSheet.Cells[lRow, SPD_EMP_CD].Text;
+            }
+            else
+            {
+                sPlateNo = TXT_MPLATE_NO.Text + "00";
+            }
+
+            lRow = lRow + 1;
+            ss1.ActiveSheet.Cells[lRow, SPD_PLATE_NO].Text = sPlateNo;
+            ss1.ActiveSheet.Cells[lRow, SPD_THK].Text = dThk.ToString();
+            ss1.ActiveSheet.Cells[lRow, SPD_WID].Text = dWid.ToString();
+            ss1.ActiveSheet.Cells[lRow, SPD_LEN].Text = dLen.ToString();
+            ss1.ActiveSheet.Cells[lRow, SPD_WGT].Text = dWgt.ToString();
+            ss1.ActiveSheet.Cells[lRow, SPD_PLT].Text = sPlt;
+            ss1.ActiveSheet.Cells[lRow, SPD_PRC_LINE].Text = sPRC_LINE;
+            ss1.ActiveSheet.Cells[lRow, SPD_EMP_CD].Text = sEmp_cd;
+            ss1.ActiveSheet.RowHeader.Cells[lRow, 0].Text = "增加";
+            ss1.ActiveSheet.Cells[lRow, SPD_PLATE_NO].Text = ss1.ActiveSheet.Cells[lRow, SPD_PLATE_NO].Text.Substring(0, 12) + string.Format("{0:D2}", Convert.ToInt32(ss1.ActiveSheet.Cells[lRow, SPD_PLATE_NO].Text.Substring(12, 2)) + 1);
+            ss1.ActiveSheet.Cells[lRow, SPD_SURF_GRD].Text = "True";
+            ss1.ActiveSheet.Cells[lRow, SPD_MARK_YN].Text = "True";
+            ss1.ActiveSheet.Cells[lRow, SPD_STAMP_YN].Text = "True";
+            ss1.ActiveSheet.Cells[lRow, SPD_BAR_YN].Text = "True";
+
+            //ss1.SetActiveCell(1, ss1.ROW);
+            //ss1.ReDraw = true;
+
+
+            ss1.ActiveSheet.Cells[ss1.ActiveSheet.RowCount - 1, 14].Text = "True";
+
+        }
+
+        private void PlateWgtEdit()
+        {
+            double dThk;
+            double dWid;
+            double dLen;
+            double dWgt;
+            double sProcCode;
+            string sEndUseCd;
+            string sStlgrd;
+            int iCount;
+
+            for (iCount = 1; iCount <= ss1.ActiveSheet.RowCount; iCount++)
+            {
+
+                dThk = convertX(ss1.ActiveSheet.Cells[iCount - 1, SPD_THK].Text);
+                dWid = convertX(ss1.ActiveSheet.Cells[iCount - 1, SPD_WID].Text);
+                dLen = convertX(ss1.ActiveSheet.Cells[iCount - 1, SPD_LEN].Text);
+                dWgt = convertX(ss1.ActiveSheet.Cells[iCount - 1, SPD_WGT].Text);
+                sEndUseCd = ss1.ActiveSheet.Cells[iCount - 1, SPD_END_USE].Text;
+                sStlgrd = ss1.ActiveSheet.Cells[iCount - 1, SPD_STLGRD].Text;
+                ss1.ActiveSheet.Cells[iCount - 1, 27].Text = CBO_LINE.Text;
+                //lbl_moplate_wgt.Caption = Val(lbl_moplate_wgt.Caption + "") + dWgt;
+                //Val(.Text & "")
+                if (dWgt == 0 & dThk > 0 & dWid > 0 & dLen > 0)
                 {
-                    sPlateNo = ss1.ActiveSheet.Cells[lRow, SPD_PLATE_NO].Text;
-                    dThk = convertX(ss1.ActiveSheet.Cells[lRow, SPD_THK].Text);
-                    dWid = convertX(ss1.ActiveSheet.Cells[lRow, SPD_WID].Text);
-                    dLen = convertX(ss1.ActiveSheet.Cells[lRow, SPD_LEN].Text);
-                    dWgt = convertX(ss1.ActiveSheet.Cells[lRow, SPD_WGT].Text);
-                    sPlt = ss1.ActiveSheet.Cells[lRow, SPD_PLT].Text;
-                    sPRC_LINE = ss1.ActiveSheet.Cells[lRow, SPD_PRC_LINE].Text;
-                    sEmp_cd = ss1.ActiveSheet.Cells[lRow, SPD_EMP_CD].Text;
+                    ss1.ActiveSheet.Cells[iCount - 1, SPD_WGT].Text = Cal_Plate_Wgt("WGT", sEndUseCd, sStlgrd, dThk, dWid, dLen).ToString();
                 }
-                else
+            }
+        }
+
+
+
+        private double Cal_Plate_Wgt(string sMode, string sEndUseCd, string sStlgrd, double dThk, double dWid, double dLen)
+        {
+
+            double Plate_Wgt = 0;
+
+            sQuery = "SELECT  Gf_Cal_Plate_Wgt('" + sMode + "'";
+            sQuery = sQuery + "             ,'" + sEndUseCd + "'";
+            sQuery = sQuery + "             ,'" + sStlgrd + "'";
+            sQuery = sQuery + "             ," + dThk;
+            sQuery = sQuery + "             ," + dWid;
+            sQuery = sQuery + "             ," + dLen;
+            sQuery = sQuery + "             ,0 )";
+            sQuery = sQuery + "       FROM  DUAL ";
+
+            if (GeneralCommon.M_CN1.State == 0)
+                if (!GeneralCommon.GF_DbConnect()) return Plate_Wgt;
+
+
+            ADODB.Recordset AdoRs = new ADODB.Recordset();
+            try
+            {
+                AdoRs.Open(sQuery, GeneralCommon.M_CN1, ADODB.CursorTypeEnum.adOpenStatic, ADODB.LockTypeEnum.adLockReadOnly);
+
+                if (!AdoRs.BOF && !AdoRs.EOF)
                 {
-                    sPlateNo = TXT_MPLATE_NO.Text + "00";
+                    //RltValue = true;
+                    while (!AdoRs.EOF)
+                    {
+                        Plate_Wgt = Convert.ToDouble(AdoRs.Fields[0].Value);
+                        AdoRs.MoveNext();
+                    }
                 }
 
-                lRow = lRow + 1;
-                ss1.ActiveSheet.Cells[lRow, SPD_PLATE_NO].Text = sPlateNo;
-                ss1.ActiveSheet.Cells[lRow, SPD_THK].Text = dThk.ToString();
-                ss1.ActiveSheet.Cells[lRow, SPD_WID].Text = dWid.ToString();
-                ss1.ActiveSheet.Cells[lRow, SPD_LEN].Text = dLen.ToString();
-                ss1.ActiveSheet.Cells[lRow, SPD_WGT].Text = dWgt.ToString();
-                ss1.ActiveSheet.Cells[lRow, SPD_PLT].Text = sPlt;
-                ss1.ActiveSheet.Cells[lRow, SPD_PRC_LINE].Text = sPRC_LINE;
-                ss1.ActiveSheet.Cells[lRow, SPD_EMP_CD].Text = sEmp_cd;
-                ss1.ActiveSheet.RowHeader.Cells[lRow, 0].Text = "增加";
-                ss1.ActiveSheet.Cells[lRow, SPD_PLATE_NO].Text = ss1.ActiveSheet.Cells[lRow, SPD_PLATE_NO].Text.Substring(0, 12) + string.Format("{0:D2}", Convert.ToInt32(ss1.ActiveSheet.Cells[lRow, SPD_PLATE_NO].Text.Substring(12, 2)) + 1);
-                ss1.ActiveSheet.Cells[lRow, SPD_SURF_GRD].Text = "True";
-                ss1.ActiveSheet.Cells[lRow, SPD_MARK_YN].Text = "True";
-                ss1.ActiveSheet.Cells[lRow, SPD_STAMP_YN].Text = "True";
-                ss1.ActiveSheet.Cells[lRow, SPD_BAR_YN].Text = "True";
+                //判断是不是需要关闭连接对象，有时候该方法是在查询过程中调用，关闭对象会导致框架查询报错 韩超
 
-                //ss1.SetActiveCell(1, ss1.ROW);
-                //ss1.ReDraw = true;
-            
+                GeneralCommon.M_CN1.Close();
 
-            ss1.ActiveSheet.Cells[ss1.ActiveSheet.RowCount-1,14].Text = "True";
-        
+                AdoRs = null;
+
+                return Plate_Wgt;
+            }
+            catch (Exception ex)
+            {
+                // if (GeneralCommon.M_CN1.State != 0) GeneralCommon.M_CN1.Close();
+                AdoRs = null;
+                return 0;
+            }
+
+        }
+
+        //该方法在VB中发现已不使用
+        //private void opt_wait_product_Click()
+        //{
+        //    opt_wait_product.ForeColor = 0xffL;
+        //    opt_wait_inspect.ForeColor = 0x808080;
+        //    opt_all.ForeColor = 0x808080;
+        //    TXT_SEARCH_FL.Text = "1";
+        //    TXT_MPLATE_NO.Text = "";
+        //}
+
+        //该方法在VB中发现已不使用
+        //private void opt_wait_inspect_Click()
+        //{
+        //    opt_wait_inspect.ForeColor = 0xffL;
+        //    opt_wait_product.ForeColor = 0x808080;
+        //    opt_all.ForeColor = 0x808080;
+        //    TXT_SEARCH_FL.Text = "2";
+        //    TXT_MPLATE_NO.Text = "";
+        //}
+
+
+        private void ss1_DblClk(int Col, int ROW)
+        {
+            string sDate;
+            string sDateTo;
+
+            if (ss1.ActiveSheet.RowCount <= 0) return;
+
+            ss1.ActiveSheet.Cells[ROW, SPD_PLT].Text = CBO_PLT.Text.Trim();
+            ss1.ActiveSheet.Cells[ROW, SPD_PRC_LINE].Text = CBO_LINE.Text.Trim();
+            ss1.ActiveSheet.Cells[ROW, SPD_EMP_CD].Text = GeneralCommon.sUserID;
+
+            ss1.ActiveSheet.Cells[ROW, SPD_DS_CUT_STA_DATE].Text = TXT_CUT_TIME.Text;
+            ss1.ActiveSheet.Cells[ROW, SPD_DS_CUT_END_DATE].Text = TXT_CUT_TIME.Text;
+
+            //ss1_Row_Edit(ROW);
+        }
+
+        private void opt_all_Clk()
+        {
+            opt_all.ForeColor = Color.Red;
+            //opt_wait_inspect.ForeColor = 0x808080;//该控件在VB中已不使用
+            //opt_wait_product.ForeColor = 0x808080;//该控件在VB中已不使用
+            TXT_SEARCH_FL.Text = "3";
+            TXT_MPLATE_NO.Text = "";
+        }
+
+        private void ss1_EditChange(int Col, int ROW)
+        {
+
+            double dThk;
+            double dWid;
+            double dLen;
+            string sEndUseCd;
+            string sStlgrd;
+
+            if (ss1.ActiveSheet.RowCount <= 0) return;
+
+
+            if (Col == SPD_THK || Col == SPD_WID || Col == SPD_LEN)
+            {
+                dThk = convertX(ss1.ActiveSheet.Cells[ROW, SPD_THK].Text);
+                dWid = convertX(ss1.ActiveSheet.Cells[ROW, SPD_WID].Text);
+                dLen = convertX(ss1.ActiveSheet.Cells[ROW, SPD_LEN].Text);
+                sEndUseCd = ss1.ActiveSheet.Cells[ROW, SPD_END_USE].Text;
+                sStlgrd = ss1.ActiveSheet.Cells[ROW, SPD_STLGRD].Text;
+                if (dThk > 0 & dWid > 0 & dLen > 0)
+                {
+                    ss1.ActiveSheet.Cells[ROW, SPD_WGT].Text = Cal_Plate_Wgt("WGT", sEndUseCd, sStlgrd, dThk, dWid, dLen).ToString();
+                }
+            }
+
+            //ss1_Row_Edit(ROW);
+
+        }
+
+        private void ss2_DblClk(int Col, int ROW)
+        {
+
+            int iCount;
+
+            if (ss2.ActiveSheet.RowCount <= 0) return;
+
+            TXT_MPLATE_NO.Text = ss2.ActiveSheet.Cells[ROW, 0].Text;
+            if (ss2.ActiveSheet.Cells[ROW, 1].Text == "")
+                ss2.ActiveSheet.Cells[ROW, 1].Text = "0";
+            Mplate_thk = convertX(ss2.ActiveSheet.Cells[ROW, 1].Text);
+            if (TXT_MPLATE_NO.Text.Length == 12)
+            {
+
+                if (TXT_SEQ.Text != "")
+                {
+                    //           TXT_MPLATE_NO.Text = Mid(TXT_MPLATE_NO.Text, 1, 10)
+                    if (ss2.ActiveSheet.Cells[ROW, 1].Text != "")
+                        TXT_SEQ.Text = ss2.ActiveSheet.Cells[ROW, 1].Text;
+                }
+                if (p_Ref(1, 1, true, false))
+                {
+
+                    PlateWgtEdit();
+                    p_Ref(2, 0, true, false);
+                    if (ss1.ActiveSheet.Cells[ss1.ActiveSheet.RowCount - 1, 9].Text == "")
+                    {
+                        ss1.ActiveSheet.Cells[ss1.ActiveSheet.RowCount - 1, 14].Text = "True";
+                    }
+                }
+
+            }
+
+            if (ss1.ActiveSheet.RowCount <= 0) return;
+
+
+            for (iCount = 1; iCount <= ss1.ActiveSheet.RowCount; iCount++)
+            {
+                if (ss1.ActiveSheet.Cells[iCount - 1, 1].Text == "")
+                {
+                    ss1.ActiveSheet.Cells[iCount - 1, 1].Text = Mplate_thk.ToString();
+                    ss1.ActiveSheet.Cells[iCount - 1, 10].Text = Mplate_thk.ToString();
+                }
+                if (ss1.ActiveSheet.Cells[iCount - 1, SPD_PROC_CD].Text == "CGB")
+                {
+                    ss1.ActiveSheet.Cells[iCount - 1, SPD_MARK_YN].Text = "True";
+                    ss1.ActiveSheet.Cells[iCount - 1, SPD_STAMP_YN].Text = "True";
+                    ss1.ActiveSheet.Cells[iCount - 1, SPD_BAR_YN].Text = "True";
+                }
+                //         Call .SetActiveCell(1, .ROW)
+            }
+
+
+            //    For iCount = 1 To ss1.MaxRows
+            //        ss1.ROW = iCount
+            //        ss1.Col = 0
+            //        ss1.Text = "Update"
+            //        ss1.Col = SPD_DS_CUT_STA_DATE
+            //        ss1.Text = TXT_CUT_TIME
+            //        ss1.Col = SPD_DS_CUT_END_DATE
+            //        ss1.Text = TXT_CUT_TIME
+            //        ss1.Col = SPD_PLT
+            //        ss1.Text = Trim(CBO_PLT.Text)
+            //        ss1.Col = SPD_PRC_LINE
+            //        ss1.Text = Trim(CBO_LINE.Text)
+            //        ss1.Col = SPD_EMP_CD
+            //        ss1.Text = sUserID
+            //    Next
+
+        }
+
+        private void TXT_CUT_TIME_Chg()
+        {
+            int iCount;
+            for (iCount = 1; iCount <= ss1.ActiveSheet.RowCount; iCount++)
+            {
+                if (ss1.ActiveSheet.RowHeader.Cells[iCount - 1, 0].Text == "修改" | ss1.Text == "增加" | ss1.Text == "删除")
+                {
+                    ss1.ActiveSheet.Cells[iCount - 1, SPD_DS_CUT_STA_DATE].Text = TXT_CUT_TIME.Text;
+                    ss1.ActiveSheet.Cells[iCount - 1, SPD_DS_CUT_END_DATE].Text = TXT_CUT_TIME.Text;
+                    ss1.ActiveSheet.Cells[iCount - 1, SPD_PLT].Text = CBO_PLT.Text.Trim();
+                    ss1.ActiveSheet.Cells[iCount - 1, SPD_PRC_LINE].Text = CBO_LINE.Text.Trim();
+                    ss1.ActiveSheet.Cells[iCount - 1, SPD_EMP_CD].Text = GeneralCommon.sUserID;
+                }
+            }
+        }
+
+        private void TXT_CUT_TIME_DblClk()
+        {
+            TXT_CUT_TIME.Text = Gf_DTSet("", "X");
         }
 
         public override bool Form_Cls()
