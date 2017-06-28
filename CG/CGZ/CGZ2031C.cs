@@ -104,7 +104,7 @@ namespace CG
             int iscseq;
             p_McIni(Mc1, false);
             imcseq = 1;
-            p_SetMc("查询号", TXT_MPLATE_NO, "PN", "", "", "", "", imcseq);
+            p_SetMc("查询号", TXT_MPLATE_NO, "P", "", "", "", "", imcseq);
             p_SetMc("", TXT_SEQ, "P", "", "", "", "", imcseq);
             p_SetMc("", CBO_PLT, "P", "", "", "", "", imcseq);
             p_SetMc("", CBO_LINE, "P", "", "", "", "", imcseq);
@@ -112,7 +112,7 @@ namespace CG
 
             p_McIni(Mc2, true);
             imcseq = 2;
-            p_SetMc("查询号", TXT_MPLATE_NO, "PN", "", "", "", "", imcseq);
+            p_SetMc("查询号", TXT_MPLATE_NO, "P", "", "", "", "", imcseq);
             p_SetMc("", TXT_ORD_NO, "R", "", "", "", "", imcseq);
             p_SetMc("", TXT_SIZE, "R", "", "", "", "", imcseq);
             p_SetMc("", TXT_WGT, "R", "", "", "", "", imcseq);
@@ -190,6 +190,8 @@ namespace CG
 
             SpreadCommon.Gp_Sp_ColHidden(ss2, 9, true);
 
+            SpreadCommon.Gp_Sp_ColHidden(ss1, 4, true);
+
 
             p_ScIni(ss2, Sc2, 0, true, true);
             iheadrow = 0;
@@ -222,6 +224,7 @@ namespace CG
             CBO_LINE.SelectedItem = "1";
 
             TXT_CUT_TIME_DblClk();
+            TXT_MPLATE_NO.Focus();
 
         }
         #endregion
@@ -256,7 +259,7 @@ namespace CG
             }
             else
             {
-                if (p_Ref(2, 1, true, true))
+                if (p_Ref(1, 2, true, true))
                 {
                     ss2_DblClk(0, 0);
                 }
@@ -289,7 +292,7 @@ namespace CG
             //        ss1.Col = SPD_EMP_CD
             //        ss1.Text = sUserID
             //    Next
-
+            TXT_MPLATE_NO.Enabled = true;
         }
 
         public override void Form_Pro()
@@ -449,7 +452,7 @@ namespace CG
                 }
                 for (iCount = ss1.ActiveSheet.ActiveRowIndex; iCount < ss1.ActiveSheet.RowCount; iCount++)
                 {
-                    if (ss1.ActiveSheet.Cells[iCount, 0].Text.Substring(0, 12) == sPlateNo.Substring(0, 12) || sPlateNo == "")
+                    if (sPlateNo == "" || ss1.ActiveSheet.Cells[iCount, 0].Text.Substring(0, 12) == sPlateNo.Substring(0, 12))
                     {
                         sPlateNo = ss1.ActiveSheet.Cells[iCount, 0].Text;
                         lRow = iCount;
@@ -464,10 +467,12 @@ namespace CG
             sPlateNo = "";
 
             //ss1.SetActiveCell(1, lRow);
+            ss1.ActiveSheet.SetActiveCell(lRow, 0);
+            
             //Gp_Sp_Ins(Proc_Sc("Sc"));
             base.Spread_Ins();
 
-            if (lRow > 0)
+            if (lRow >= 0)
             {
                 sPlateNo = ss1.ActiveSheet.Cells[lRow, SPD_PLATE_NO].Text;
                 dThk = convertX(ss1.ActiveSheet.Cells[lRow, SPD_THK].Text);
@@ -738,6 +743,7 @@ namespace CG
 
         private void TXT_CUT_TIME_Chg()
         {
+            if (ss1.ActiveSheet.RowCount <= 0) return;
             int iCount;
             for (iCount = 1; iCount <= ss1.ActiveSheet.RowCount; iCount++)
             {
@@ -1086,6 +1092,31 @@ namespace CG
 
         #endregion
 
+        private void ss1_CellDoubleClick(object sender, CellClickEventArgs e)
+        {
+            ss1_DblClk(e.Column, e.Row);
+        }
+
+        private void ss1_EditChange(object sender, EditorNotifyEventArgs e)
+        {
+            ss1_EditChange(e.Column, e.Row);
+        }
+
+        private void ss2_CellDoubleClick(object sender, CellClickEventArgs e)
+        {
+            ss2_DblClk(e.Column, e.Row);
+        }
+
+        private void TXT_CUT_TIME_TextChanged(object sender, EventArgs e)
+        {
+            
+            TXT_CUT_TIME_Chg();
+        }
+
+        private void TXT_CUT_TIME_DoubleClick(object sender, EventArgs e)
+        {
+            TXT_CUT_TIME_DblClk();
+        }
 
     }
 }
