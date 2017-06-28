@@ -49,111 +49,95 @@ namespace CG
             int imcseq;
             p_McIni(Mc1, false);
             imcseq = 1;
-            p_SetMc("钢板号", TXT_PLATE_NO, "P", "", "", "", "", imcseq);
-            p_SetMc("生产日期", SDT_PROD_DATE_FROM, "P", "", "", "", "", imcseq);
-            p_SetMc("生产日期", SDT_PROD_DATE_TO, "P", "", "", "", "", imcseq);
-            p_SetMc("班次", CBO_SHIFT, "P", "", "", "", "", imcseq);
+            p_SetMc("钢板号", TXT_PLATE_NO, "PI ", "", "", "", "", imcseq);//0
+            p_SetMc("生产日期", SDT_PROD_DATE_FROM, "P", "", "", "", "", imcseq);//1
+            p_SetMc("生产日期", SDT_PROD_DATE_TO, "P", "", "", "", "", imcseq);//2
+            p_SetMc("班次", CBO_SHIFT, "P", "", "", "", "", imcseq);//3
+            p_SetMc("", TXT_PROC_FLAG, "RL", "", "", "", "", imcseq);//4
+            p_SetMc("", TXT_APLY_ENDUSE_CD, "RL", "", "", "", "", imcseq);//5
+            p_SetMc("", TXT_STLGRD, "RL", "", "", "", "", imcseq);//6
+            p_SetMc("", TXT_KIND_NO, "R", "", "", "", "", imcseq);//7
+            p_SetMc("", TXT_UST_HEAD, "R", "", "", "", "", imcseq);//8
+            p_SetMc("", TXT_UST_METHOD, "R", "", "", "", "", imcseq);//9
+            p_SetMc("", TXT_UST_PREC, "R", "", "", "", "", imcseq);//10
+            p_SetMc("", TXT_UST_STAND_NO, "NIR", "", "", "", "", imcseq);//11
+            p_SetMc("", TXT_UST_GRADE, "IR", "", "", "", "", imcseq);//12
+            p_SetMc("", SDB_THK, "NIR", "", "", "", "", imcseq);//13
+            p_SetMc("", SDB_INSP_THK_MX, "RL", "", "", "", "", imcseq);//14
+            p_SetMc("", SDB_INSP_THK_MN, "RL", "", "", "", "", imcseq);//15
+            p_SetMc("", SDB_WID, "NIR", "", "", "", "", imcseq);//16
+            p_SetMc("", SDB_INSP_WID_MX, "RL", "", "", "", "", imcseq);//17
+            p_SetMc("", SDB_INSP_WID_MN, "RL", "", "", "", "", imcseq);//18
+            p_SetMc("", SDB_LEN, "NIR", "", "", "", "", imcseq);//19
+            p_SetMc("", SDB_INSP_LEN_MX, "RL", "", "", "", "", imcseq);//20
+            p_SetMc("", SDB_INSP_LEN_MN, "RL", "", "", "", "", imcseq);//21
+            p_SetMc("", SDB_WGT, "NIR", "", "", "", "", imcseq);//22
+            p_SetMc("", SDB_PWGT_MX, "RL", "", "", "", "", imcseq);//23
+            p_SetMc("", SDB_PWGT_MN, "RL", "", "", "", "", imcseq);//24
+            p_SetMc("", SDB_THK_ORG, "RL", "", "", "", "", imcseq);//25
+            p_SetMc("", SDB_WID_ORG, "IRL", "", "", "", "", imcseq);//26
+            p_SetMc("", SDB_LEN_ORG, "IRL", "", "", "", "", imcseq);//27
+            p_SetMc("", SDB_WGT_ORG, "IRL", "", "", "", "", imcseq);//28
+            p_SetMc("", SDB_ORD_THK, "RL", "", "", "", "", imcseq);//29
+            p_SetMc("", SDB_ORD_WID, "RL", "", "", "", "", imcseq);//30
+            p_SetMc("", SDB_ORD_LEN, "RL", "", "", "", "", imcseq);//31
+            p_SetMc("", SDB_WGT_ORD, "RL", "", "", "", "", imcseq);//32
+            p_SetMc("", TXT_UST_GRD, "NIR", "", "", "", "", imcseq);//33
+            p_SetMc("", TXT_PRD_GRD, "NIR", "", "", "", "", imcseq);//34
+            p_SetMc("", TXT_INSP_MAN, "NIR", "", "", "", "", imcseq);//35
+            p_SetMc("", TXT_INSP_OCCR_TIME, "NIR", "", "", "", "", imcseq);//36
+            p_SetMc("", TXT_ADD_THK, "IR", "", "", "", "", imcseq);//37
+            p_SetMc("", TXT_LOC, "IR", "", "", "", "", imcseq);//38
+            p_SetMc("", TXT_REMARK, "IR", "", "", "", "", imcseq);//39
+            p_SetMc("", txt_stdspec, "IR", "", "", "", "", imcseq);//40
+            p_SetMc("", txt_stdspec_chg, "I", "", "", "", "", imcseq);//41
+            p_SetMc("", TXT_REASON_FL0, "IR", "", "", "", "", imcseq);//42
+            p_SetMc("", TXT_REASON_FL1, "IR", "", "", "", "", imcseq);//43
+            p_SetMc("", TXT_REASON_FL2, "IR", "", "", "", "", imcseq);//44
+            p_SetMc("", TXT_ADDR0, "R", "", "", "", "", imcseq);//45
+            p_SetMc("", TXT_ADDR1, "R", "", "", "", "", imcseq);//46
+            p_SetMc("", TXT_ADDR2, "R", "", "", "", "", imcseq);//47
+            p_SetMc("", txt_Scrap_code, "I", "", "", "", "", imcseq);//48
+            p_SetMc("", txt_Scrap_name, "L", "", "", "", "", imcseq);//49
+            p_SetMc("", TXT_NEXT_PROC, "IRL", "", "", "", "", imcseq);//50
+            p_SetMc("", TXT_INSP_MAN1, "NIR", "", "", "", "", imcseq);//51
+            p_SetMc("", TXT_INSP_MAN2, "IR", "", "", "", "", imcseq);//52
+            p_SetMc("", TXT_EQPM, "NI", "", "", "", "", imcseq);//53
 
             int iheadrow;
             int iscseq;
-            p_ScIni(ss1, Sc1, 18, true, true);
-            iheadrow = 1;
+            p_ScIni(ss1, Sc1, 0, true, true);
+            iheadrow = 0;
             iscseq = 1;
             //0-5
-            p_SetSc("钢板号", "E", "14", "PIL", "", "", "", iscseq, iheadrow);
-            p_SetSc("实绩状态", "E", "10", "L", "", "", "", iscseq, iheadrow,"M");
-            p_SetSc("探伤结束时间", "DT", "19", "I", "", "", "", iscseq, iheadrow, "L");
-            p_SetSc("厚度", "N", "6,2", "L", "", "", "", iscseq, iheadrow);
-            p_SetSc("宽度", "N", "6", "L", "", "", "", iscseq, iheadrow);
-            p_SetSc("长度", "N", "8", "L", "", "", "", iscseq, iheadrow);
-            //6-10
-            p_SetSc("重量", "N", "15,3", "L", "", "", "", iscseq, iheadrow);
-            p_SetSc("标准号", "E", "30", "L", "", "", "", iscseq, iheadrow);
-            p_SetSc("代码", "E", "4", "L", "", "", "", iscseq, iheadrow,"M");
-            p_SetSc("名称", "E", "80", "L", "", "", "", iscseq, iheadrow);
-            p_SetSc("代码", "E", "4", "IL", "", "", "", iscseq, iheadrow,"M");
-            //11-15
-            p_SetSc("名称", "E", "80", "L", "", "", "", iscseq, iheadrow,"L");
-            p_SetSc("合格", "C", "1", "I", "", "", "", iscseq, iheadrow,"M");
-            p_SetSc("代码", "E", "10", "I", "", "", "", iscseq, iheadrow, "M");
-            p_SetSc("数量", "N", "2", "I", "", "", "", iscseq, iheadrow);
-            p_SetSc("面积", "N", "8", "I", "", "", "", iscseq, iheadrow);
-            //16-18
-            p_SetSc("面积比", "N", "3", "I", "", "", "", iscseq, iheadrow);
-            p_SetSc("紧急订单", "E", "1", "L", "", "", "", iscseq, iheadrow,"M");
-            p_SetSc("垛位", "E", "12", "L", "", "", "", iscseq, iheadrow, "M");  //20140606 ADD BY LICHAO FOR LITIQIN
-            p_SetSc("备注", "E", "50", "L", "", "", "", iscseq, iheadrow);      
-            p_SetSc("确认人员", "E", "7", "IL", "", "", "", iscseq, iheadrow);
-            p_SetSc("矫直", "E", "5", "L", "", "", "", iscseq, iheadrow,"M");   //20140208 ADD BY LICHAO
-            p_SetSc("热处理", "E", "10", "L", "", "", "", iscseq, iheadrow);     //20140208 ADD BY LICHAO
+            p_SetSc("钢板号", "E", "14", "L", "", "", "", iscseq, iheadrow,"M");//0
+            p_SetSc("扎批号", "E", "60", "L", "", "", "", iscseq, iheadrow,"L");//1
+            p_SetSc("分段号", "E", "20", "L", "", "", "", iscseq, iheadrow, "M");//2
+            p_SetSc("规格尺寸(mm)", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//3
+            p_SetSc("重量", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//4
+            p_SetSc("返剪宽度", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R");//5
+            p_SetSc("返剪长度", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R");//6
+            p_SetSc("返剪重量", "N", "15,3", "L", "", "", "", iscseq, iheadrow, "R");//7
+            p_SetSc("表面等级", "E", "10", "L", "", "", "", iscseq, iheadrow, "M");//8
+            p_SetSc("合格", "E", "10", "L", "", "", "", iscseq, iheadrow, "M");//9
+            p_SetSc("探伤日期", "E", "10", "L", "", "", "", iscseq, iheadrow, "M");//10
+            p_SetSc("标准号", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//11
+            p_SetSc("改判标准号", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//12
+            p_SetSc("改判原因1", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//13
+            p_SetSc("改判原因2", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//14
+            p_SetSc("返剪原因", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//15
+            p_SetSc("仪器型号", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//16
+            p_SetSc("探头", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//17
+            p_SetSc("探伤方式", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//18
+            p_SetSc("探伤灵敏度", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//19
+            p_SetSc("检查标准", "E", "10", "L", "", "", "", iscseq, iheadrow, "M");//20
+            p_SetSc("探伤人员", "E", "7", "L", "", "", "", iscseq, iheadrow, "M");//21
+            p_SetSc("垛位号", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//22
 
-            iheadrow = 0;
-            p_spanSpread("钢板规格", 3, 6, iscseq, iheadrow, 1);
-            p_spanSpread("探伤指示", 8, 9, iscseq, iheadrow, 1);
-            p_spanSpread("探伤实绩", 10, 12, iscseq, iheadrow, 1);
-            p_spanSpread("探伤缺陷", 13, 16, iscseq, iheadrow, 1);
-
-            p_McIni(Mc2, true);
-            imcseq = 2;
-            //0-5
-            p_SetMc("钢板号", TXT_PLATE_NO_EDT, "PNRI", "", "", "", "", imcseq);
-            p_SetMc("实绩状态", TXT_UST_HEAD, "R", "", "", "", "", imcseq);
-            p_SetMc("仪器型号", TXT_EQPM, "NI", "", "", "", "", imcseq);
-            p_SetMc("探伤指示标准", TXT_UST_STAND_NO, "RL", "", "", "", "", imcseq);
-            p_SetMc("探伤实绩标准", TXT_UST_GRADE, "RNI", "4", "", "", "", imcseq);
-            p_SetMc("探伤判定结果", TXT_UST_GRD, "RNI", "", "", "", "", imcseq);
-            //6-10
-            p_SetMc("等级判定", TXT_SURF_GRD, "RNI", "", "", "", "", imcseq);
-            p_SetMc("订单用途", f4ETCR_ENDUSE_CD, "RNI", "3", "", "", "", imcseq);
-            p_SetMc("改判厚度", SDB_THK, "RNI", "", "", "", "", imcseq);
-            p_SetMc("改判宽度", SDB_WID, "RNI", "", "", "", "", imcseq);
-            p_SetMc("改判长度", SDB_LEN, "RNI", "", "", "", "", imcseq);
-            //11-15
-            p_SetMc("改判重量", SDB_WGT, "R", "", "", "", "", imcseq);
-            p_SetMc("实绩厚度", SDB_THK_ORG, "R", "", "", "", "", imcseq);
-            p_SetMc("实绩宽度", SDB_WID_ORG, "R", "", "", "", "", imcseq);
-            p_SetMc("实绩长度", SDB_LEN_ORG, "R", "", "", "", "", imcseq);
-            p_SetMc("实绩重量", SDB_WGT_ORG, "R", "", "", "", "", imcseq);
-            //16-20
-            p_SetMc("订单厚度", SDB_ORD_THK, "R", "", "", "", "", imcseq);
-            p_SetMc("订单宽度", SDB_ORD_WID, "R", "", "", "", "", imcseq);
-            p_SetMc("订单长度", SDB_ORD_LEN, "R", "", "", "", "", imcseq);
-            p_SetMc("订单重量", SDB_WGT_ORD, "R", "", "", "", "", imcseq);
-            p_SetMc("上公差厚度", SDB_INSP_THK_MX, "R", "", "", "", "", imcseq);
-            //21-25
-            p_SetMc("上公差宽度", SDB_INSP_WID_MX, "R", "", "", "", "", imcseq);
-            p_SetMc("上公差长度", SDB_INSP_LEN_MX, "R", "", "", "", "", imcseq);
-            p_SetMc("下公差厚度", SDB_INSP_THK_MN, "R", "", "", "", "", imcseq);
-            p_SetMc("下公差宽度", SDB_INSP_WID_MN, "R", "", "", "", "", imcseq);
-            p_SetMc("下公差长度", SDB_INSP_LEN_MN, "R", "", "", "", "", imcseq);
-            //26-30
-            p_SetMc("判定结果厚度", TXT_INSP_THK_GRD, "R", "", "", "", "", imcseq);
-            p_SetMc("判定结果宽度", TXT_INSP_WID_GRD, "R", "", "", "", "", imcseq);
-            p_SetMc("判定结果长度", TXT_INSP_LEN_GRD, "R", "", "", "", "", imcseq);
-            p_SetMc("原始标准号", txt_stdspec_name, "R", "", "", "", "", imcseq);
-            p_SetMc("改判标准号", txt_stdspec, "I", "", "", "", "", imcseq);
-            //31-35
-            p_SetMc("改判原因", f4ETCR_CHG_GRD_RES, "RI", "3", "", "", "", imcseq);
-            p_SetMc("责任单位", f4ETCR_CHG_GRD_DEP, "RI", "3", "", "", "", imcseq);
-            p_SetMc("判废原因", txt_Scrap_code, "RI", "1", "", "", "", imcseq);
-            p_SetMc("余材原因", f4ETCN_WOO_RSN, "RI", "2", "", "", "", imcseq);
-            p_SetMc("厚度附加值", TXT_ADD_THK, "R", "", "", "", "", imcseq);
-            p_SetMc("返剪原因", TXT_REASON_FL, "RI", "", "", "", "", imcseq);
-            //36-40
-            p_SetMc("垛位号", TXT_ADDR0, "I", "", "", "", "", imcseq);
-            p_SetMc("备注", TXT_REMARK, "RI", "", "", "", "", imcseq);
-            p_SetMc("探伤人员", TXT_INSP_MAN1, "NRI", "", "", "", "", imcseq);
-            p_SetMc("探伤时间", TXT_INSP_OCCR_TIME, "NRI", "19", "", "", "", imcseq);
-            p_SetMc("缺陷代码", TXT_REJ_CD, "RI", "1", "", "", "", imcseq);
-            //41-43
-            p_SetMc("缺陷数量", SDB_REJ_NUM, "RI", "2", "", "", "", imcseq);
-            p_SetMc("缺陷面积", SDB_REJ_AREA, "RI", "8", "", "", "", imcseq);
-            p_SetMc("缺陷面积比", SDB_REJ_AREA_RATE, "RI", "3", "", "", "", imcseq);   
-       
         }
-        private void WGC2040C_Load(object sender, EventArgs e)
+        private void CGD2060C_Load(object sender, EventArgs e)
         {
-            //base.sSvrPgmPkgName = "PKG_LIQIAN_TEST";
+            base.sSvrPgmPkgName = "CGD2060NC";
             Form_Define();
         }
         #endregion
@@ -232,14 +216,14 @@ namespace CG
 
         private void LISTB_SURF_GRD13_Click(object sender, EventArgs e)
         {
-            TXT_SURF_GRD.Text = Convert.ToString(LISTB_SURF_GRD13.SelectedItem).Substring(0, 1);
+            TXT_PRD_GRD.Text = Convert.ToString(LISTB_SURF_GRD13.SelectedItem).Substring(0, 1);
             //点击等级1~3时取消等级4~7的选择
             LISTB_SURF_GRD47.SetSelected(0, false);
         }
 
         private void LISTB_SURF_GRD47_Click(object sender, EventArgs e)
         {
-            TXT_SURF_GRD.Text = Convert.ToString(LISTB_SURF_GRD47.SelectedItem).Substring(0, 1);
+            TXT_PRD_GRD.Text = Convert.ToString(LISTB_SURF_GRD47.SelectedItem).Substring(0, 1);
             //点击等级4~7时取消等级1~3的选择
             LISTB_SURF_GRD13.SetSelected(0, false);
         }
