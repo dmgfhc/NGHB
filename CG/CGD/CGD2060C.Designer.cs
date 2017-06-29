@@ -122,7 +122,7 @@
             this.CHK_PRD_GRD1 = new System.Windows.Forms.CheckBox();
             this.CHK_PRD_GRD0 = new System.Windows.Forms.CheckBox();
             this.CHK_UST_GRD1 = new System.Windows.Forms.CheckBox();
-            this.CHK_UST_GRD = new System.Windows.Forms.CheckBox();
+            this.CHK_UST_GRD0 = new System.Windows.Forms.CheckBox();
             this.TXT_STLGRD = new System.Windows.Forms.TextBox();
             this.TXT_APLY_ENDUSE_CD = new System.Windows.Forms.TextBox();
             this.TXT_PROC_FLAG = new System.Windows.Forms.TextBox();
@@ -451,7 +451,6 @@
             this.TXT_PLATE_NO.Name = "TXT_PLATE_NO";
             this.TXT_PLATE_NO.Size = new System.Drawing.Size(115, 22);
             this.TXT_PLATE_NO.TabIndex = 86;
-            this.TXT_PLATE_NO.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXT_PLATE_NO_KeyPress);
             // 
             // label6
             // 
@@ -509,7 +508,6 @@
             this.ss1_Sheet1});
             this.ss1.Size = new System.Drawing.Size(1212, 264);
             this.ss1.TabIndex = 2;
-            this.ss1.CellClick += new FarPoint.Win.Spread.CellClickEventHandler(this.ss1_CellClick);
             // 
             // ss1_Sheet1
             // 
@@ -916,7 +914,7 @@
             this.groupBox3.Controls.Add(this.CHK_PRD_GRD1);
             this.groupBox3.Controls.Add(this.CHK_PRD_GRD0);
             this.groupBox3.Controls.Add(this.CHK_UST_GRD1);
-            this.groupBox3.Controls.Add(this.CHK_UST_GRD);
+            this.groupBox3.Controls.Add(this.CHK_UST_GRD0);
             this.groupBox3.Controls.Add(this.TXT_STLGRD);
             this.groupBox3.Controls.Add(this.TXT_APLY_ENDUSE_CD);
             this.groupBox3.Controls.Add(this.TXT_PROC_FLAG);
@@ -1012,7 +1010,7 @@
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(0, 330);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1218, 316);
+            this.groupBox3.Size = new System.Drawing.Size(1218, 304);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             // 
@@ -1056,6 +1054,7 @@
             this.CHK_NEXT_PRC1.Name = "CHK_NEXT_PRC1";
             this.CHK_NEXT_PRC1.Size = new System.Drawing.Size(65, 17);
             this.CHK_NEXT_PRC1.TabIndex = 517;
+            this.CHK_NEXT_PRC1.Tag = "T";
             this.CHK_NEXT_PRC1.Text = "热处理";
             this.CHK_NEXT_PRC1.UseVisualStyleBackColor = true;
             // 
@@ -1066,6 +1065,7 @@
             this.CHK_NEXT_PRC0.Name = "CHK_NEXT_PRC0";
             this.CHK_NEXT_PRC0.Size = new System.Drawing.Size(65, 17);
             this.CHK_NEXT_PRC0.TabIndex = 516;
+            this.CHK_NEXT_PRC0.Tag = "P";
             this.CHK_NEXT_PRC0.Text = "钢板库";
             this.CHK_NEXT_PRC0.UseVisualStyleBackColor = true;
             // 
@@ -1139,15 +1139,15 @@
             this.CHK_UST_GRD1.Text = "不合格";
             this.CHK_UST_GRD1.UseVisualStyleBackColor = true;
             // 
-            // CHK_UST_GRD
+            // CHK_UST_GRD0
             // 
-            this.CHK_UST_GRD.AutoSize = true;
-            this.CHK_UST_GRD.Location = new System.Drawing.Point(175, 167);
-            this.CHK_UST_GRD.Name = "CHK_UST_GRD";
-            this.CHK_UST_GRD.Size = new System.Drawing.Size(52, 17);
-            this.CHK_UST_GRD.TabIndex = 508;
-            this.CHK_UST_GRD.Text = "合格";
-            this.CHK_UST_GRD.UseVisualStyleBackColor = true;
+            this.CHK_UST_GRD0.AutoSize = true;
+            this.CHK_UST_GRD0.Location = new System.Drawing.Point(175, 167);
+            this.CHK_UST_GRD0.Name = "CHK_UST_GRD0";
+            this.CHK_UST_GRD0.Size = new System.Drawing.Size(52, 17);
+            this.CHK_UST_GRD0.TabIndex = 508;
+            this.CHK_UST_GRD0.Text = "合格";
+            this.CHK_UST_GRD0.UseVisualStyleBackColor = true;
             // 
             // TXT_STLGRD
             // 
@@ -1589,7 +1589,7 @@
             // 
             // CGD2060C
             // 
-            this.ClientSize = new System.Drawing.Size(1218, 646);
+            this.ClientSize = new System.Drawing.Size(1218, 634);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -1725,7 +1725,7 @@
         private System.Windows.Forms.CheckBox CHK_PRD_GRD1;
         private System.Windows.Forms.CheckBox CHK_PRD_GRD0;
         private System.Windows.Forms.CheckBox CHK_UST_GRD1;
-        private System.Windows.Forms.CheckBox CHK_UST_GRD;
+        private System.Windows.Forms.CheckBox CHK_UST_GRD0;
         private System.Windows.Forms.TextBox TXT_ADDR2;
         private System.Windows.Forms.TextBox TXT_ADDR1;
         private System.Windows.Forms.TextBox TXT_INSP_MAN2;

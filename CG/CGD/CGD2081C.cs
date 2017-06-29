@@ -466,6 +466,7 @@ namespace CG
             {
                 TXT_TOP_GRID_GRD.Text = "";
                 ((CheckBox)sender).ForeColor = ColorTranslator.FromHtml("#808080");
+
                 sCheck = "";
                 return;
             }
