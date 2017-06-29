@@ -224,7 +224,7 @@ namespace CG
             sQuery = sQuery + "       ,UST_REMARTS   = '" + sComments + "'               ";
             sQuery = sQuery + " WHERE  PLATE_NO      = '" + TXT_PLATE_NO.Text.Trim() + "' ";
             
-            GeneralCommon.Gf_ExecSql(GeneralCommon.M_CN1,sQuery);
+            Gf_ExecSql(GeneralCommon.M_CN1,sQuery);
         }
 
         private void Cmd_Edit_Date_Clk()
@@ -244,7 +244,7 @@ namespace CG
             sQuery = sQuery + "       ,GROUP_CD           = Gf_Groupset('C1',Gf_Shiftset3('" + sUST_END_DATE + "'),'" + sUST_END_DATE.Substring(0,8) + "')           ";
             sQuery = sQuery + " WHERE  PLATE_NO           = '" + TXT_PLATE_NO.Text.Trim() + "' ";
 
-            GeneralCommon.Gf_ExecSql(GeneralCommon.M_CN1, sQuery);
+            Gf_ExecSql(GeneralCommon.M_CN1, sQuery);
 
         }
 
@@ -314,7 +314,7 @@ namespace CG
 
             if (TXT_UST_STAND_NO.Text == "")
                 TXT_UST_STAND_NO.Text = iSTAND_NO;
-            if (TXT_INSP_OCCR_TIME.Text == "")
+            if (TXT_INSP_OCCR_TIME.Text == "    -  -     :  :")
                 TXT_INSP_OCCR_TIME.Text = iDATETIME;
             TXT_REMARK.Text = iTXT_REMARK;
 
@@ -599,7 +599,7 @@ namespace CG
             {
                 if (TXT_INSP_MAN.Text == "")
                     TXT_INSP_MAN.Text = GeneralCommon.sUserID;
-                if (TXT_INSP_OCCR_TIME.Text == "")
+                if (TXT_INSP_OCCR_TIME.Text == "    -  -     :  :")
                     TXT_INSP_OCCR_TIME.Text = Gf_DTSet("","");
             }
 
@@ -719,7 +719,7 @@ namespace CG
 
                 //判断是不是需要关闭连接对象，有时候该方法是在查询过程中调用，关闭对象会导致框架查询报错 韩超
 
-                GeneralCommon.M_CN1.Close();
+                //GeneralCommon.M_CN1.Close();
 
                 AdoRs = null;
 
@@ -1084,6 +1084,66 @@ namespace CG
                 return Convert.ToDouble(value);
             }
             return 0;
+        }
+
+        public static bool Gf_ExecSql(ADODB.Connection Conn, string sQuery)
+        {
+            bool returnValue = false;
+
+            //Dim iCount As Integer
+            object[,] OutParam = new object[3, 5];
+
+            ADODB.Command adoCmd;
+
+            try
+            {
+
+                //Db Connection Check
+                if (GeneralCommon.M_CN1.State == 0)
+                {
+                    if (GeneralCommon.GF_DbConnect() == false)
+                    {
+                        return returnValue;
+                    }
+                }
+
+                Cursor.Current = Cursors.WaitCursor;
+
+                //Ado Setting
+                GeneralCommon.M_CN1.CursorLocation = ADODB.CursorLocationEnum.adUseServer;
+                adoCmd = new ADODB.Command();
+
+                Conn.BeginTrans();
+
+                adoCmd.ActiveConnection = GeneralCommon.M_CN1;
+                adoCmd.CommandText = "UPDATE  GP_USTRESULT SET  UST_LOC= '',UST_REMARTS   = '' WHERE  PLATE_NO  = '05201206040102'";
+
+                object null_object = "";
+                object null_object2 = "";
+                adoCmd.Execute(out null_object, ref null_object2, -1);
+                Conn.CommitTrans();
+                adoCmd = null;
+                Cursor.Current = Cursors.Default;
+
+                if (GeneralCommon.M_CN1.State != 0)
+                {
+                    GeneralCommon.M_CN1.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                adoCmd = null;
+                Conn.RollbackTrans();
+                returnValue = false;
+                Cursor.Current = Cursors.Default;
+                if (GeneralCommon.M_CN1.State != 0)
+                {
+                    GeneralCommon.M_CN1.Close();
+                }
+               GeneralCommon.Gp_MsgBoxDisplay((string)("Gf_ExecProcedure Error : " + ex.Message), "", "");
+            }
+
+            return returnValue;
         }
 
         #endregion
