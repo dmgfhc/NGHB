@@ -36,9 +36,10 @@ namespace CG
         }
 
         Collection Mc1 = new Collection();
+        Collection Mc2 = new Collection();
         Collection Sc1 = new Collection();
 
-        string sCheck;
+        string sCheck = "";
         string sQuery;
 
         public const int iSs1_Plate_No = 0;  //SS1钢板号
@@ -49,7 +50,7 @@ namespace CG
         {
 
             int imcseq;
-            p_McIni(Mc1, false);
+            p_McIni(Mc1, true);
             imcseq = 1;
             p_SetMc("钢板号", TXT_PLATE_NO, "PI ", "", "", "", "", imcseq);//0
             p_SetMc("生产日期", SDT_PROD_DATE_FROM, "P", "", "", "", "", imcseq);//1
@@ -105,6 +106,15 @@ namespace CG
             p_SetMc("", TXT_INSP_MAN1, "NIR", "", "", "", "", imcseq);//51
             p_SetMc("", TXT_INSP_MAN2, "IR", "", "", "", "", imcseq);//52
             p_SetMc("", TXT_EQPM, "NI", "", "", "", "", imcseq);//53
+            
+
+
+            p_McIni(Mc2, false);
+            imcseq = 2;
+            p_SetMc("钢板号", TXT_PLATE_NO, "PI ", "", "", "", "", imcseq);//0
+            p_SetMc("生产日期", SDT_PROD_DATE_FROM, "P", "", "", "", "", imcseq);//1
+            p_SetMc("生产日期", SDT_PROD_DATE_TO, "P", "", "", "", "", imcseq);//2
+            p_SetMc("班次", CBO_SHIFT, "P", "", "", "", "", imcseq);//3
 
             int iheadrow;
             int iscseq;
@@ -149,7 +159,7 @@ namespace CG
             SDT_PROD_DATE_FROM.RawDate = Gf_DTSet("D","");
             SDT_PROD_DATE_TO.RawDate = Gf_DTSet("D","");
 
-            if (base.sAuthority == "111")
+            if (base.sAuthority.Substring(0,3) == "111")
             {
                 Cmd_Edit.Enabled = true;
                 Cmd_Edit_Date.Enabled = true;
@@ -159,6 +169,12 @@ namespace CG
                 Cmd_Edit.Enabled = false;
                 Cmd_Edit_Date.Enabled = false;
             }
+
+            CHK_UST_GRD0.Checked = false;
+            TXT_INSP_THK_GRD.Text = "";
+            TXT_INSP_WID_GRD.Text = "";
+            TXT_INSP_LEN_GRD.Text = "";
+            TXT_INSP_WGT_GRD.Text = "";
 
         }
         #endregion
@@ -274,7 +290,7 @@ namespace CG
                 return;
             }
 
-            p_Ref(1, 1, true, true);
+            p_Ref(2, 1, true, true);
 
             if (TXT_PLATE_NO.Text.Length == 14 && TXT_PLATE_NO.Text.Substring(0, 2) != "74")
             {
@@ -293,7 +309,7 @@ namespace CG
 
             if (iAddr.Length == 3 && iAddr1.Length == 4 && iAddr2.Length > 0)
             {
-                TXT_LOC.Text = iAddr + iAddr1 + string.Format("{0:D3}", iAddr2);
+                TXT_LOC.Text = iAddr + iAddr1 + string.Format("{0:D3}", convertX(iAddr2)+1);
             }
 
             if (TXT_UST_STAND_NO.Text == "")
@@ -395,8 +411,8 @@ namespace CG
 
             if (dThk > 0 & dWid > 0 & dLen > 0)
             {
-                SDB_WGT.Text = Cal_Plate_Wgt("WGT", dThk, dWid, dLen);
-                TXT_ADD_THK.Text = Cal_Plate_Wgt("VAT", dThk, dWid, dLen);
+                SDB_WGT.Text = Cal_Plate_Wgt("WGT", dThk, dWid, dLen).ToString();
+                TXT_ADD_THK.Text = Cal_Plate_Wgt("VAT", dThk, dWid, dLen).ToString();
             }
 
             Size_Grade_Edit();
@@ -597,7 +613,7 @@ namespace CG
             sGradeFlag = "";
 
             // THICK GRAND CHECK
-            if (SDB_THK.NumValue >= SDB_ORD_THK.NumValue +convertX(SDB_INSP_THK_MN.Text) && SDB_THK.NumValue <= SDB_ORD_THK.NumValue + convertX(SDB_INSP_THK_MX.Text))
+            if (SDB_THK.NumValue >= SDB_ORD_THK.NumValue + convertX(SDB_INSP_THK_MN.Text) && SDB_THK.NumValue <= SDB_ORD_THK.NumValue + convertX(SDB_INSP_THK_MX.Text))
             {
                 TXT_INSP_THK_GRD.Text = "Y";
                 SDB_THK.ForeColor = Color.Black;
@@ -665,6 +681,90 @@ namespace CG
             //    '        CHK_PRD_GRD(0).Enabled = True
             //        End If
             //    End If
+
+        }
+
+        private double Cal_Plate_Wgt(string sMode,double dThk, double dWid, double dLen)
+        {
+
+            double Plate_Wgt = 0;
+
+            sQuery = "SELECT  Gf_Cal_Plate_Wgt('" + sMode + "'";
+            sQuery = sQuery + "             ,'" + TXT_APLY_ENDUSE_CD.Text.Trim() + "'";
+            sQuery = sQuery + "             ,'" + TXT_STLGRD.Text.Trim() + "'";
+            sQuery = sQuery + "             ," + dThk;
+            sQuery = sQuery + "             ," + dWid;
+            sQuery = sQuery + "             ," + dLen;
+            sQuery = sQuery + "             ,0 )";
+            sQuery = sQuery + "       FROM  DUAL ";
+
+            if (GeneralCommon.M_CN1.State == 0)
+                if (!GeneralCommon.GF_DbConnect()) return Plate_Wgt;
+
+
+            ADODB.Recordset AdoRs = new ADODB.Recordset();
+            try
+            {
+                AdoRs.Open(sQuery, GeneralCommon.M_CN1, ADODB.CursorTypeEnum.adOpenStatic, ADODB.LockTypeEnum.adLockReadOnly);
+
+                if (!AdoRs.BOF && !AdoRs.EOF)
+                {
+                    //RltValue = true;
+                    while (!AdoRs.EOF)
+                    {
+                        Plate_Wgt = Convert.ToDouble(AdoRs.Fields[0].Value);
+                        AdoRs.MoveNext();
+                    }
+                }
+
+                //判断是不是需要关闭连接对象，有时候该方法是在查询过程中调用，关闭对象会导致框架查询报错 韩超
+
+                GeneralCommon.M_CN1.Close();
+
+                AdoRs = null;
+
+                return Plate_Wgt;
+            }
+            catch (Exception ex)
+            {
+                // if (GeneralCommon.M_CN1.State != 0) GeneralCommon.M_CN1.Close();
+                AdoRs = null;
+                return 0;
+            }
+        }
+
+        private void ss1_DblClk(int Col, int ROW)
+        {
+            string iAddr;
+            string iAddr1;
+            string iAddr2;
+            string iTXT_REMARK;
+
+            if (ss1.ActiveSheet.RowCount <= 0) return;
+
+            TXT_PLATE_NO.Text = ss1.ActiveSheet.Cells[ROW, 0].Text;
+            iTXT_REMARK = TXT_REMARK.Text;
+
+            if (TXT_PLATE_NO.Text.Length == 14)
+            {
+                if (p_Ref(1, 0, true, true))
+                {
+                    Display_Data_Edit();
+                    if (TXT_NEXT_PROC.Text == "" | TXT_NEXT_PROC.Text == "U")
+                    {
+                        CHK_NEXT_PRC0.Checked = true;
+                        TXT_NEXT_PROC.Text = "P";
+                    }
+                    iAddr = TXT_ADDR0.Text;
+                    iAddr1 = TXT_ADDR1.Text;
+                    iAddr2 = TXT_ADDR2.Text;
+                    if (iAddr.Length == 3 && iAddr1.Length == 4 && iAddr2.Length > 0)
+                    {
+                        TXT_LOC.Text = iAddr + iAddr1 + string.Format("{0:D3}", convertX(iAddr2) + 1);
+                    }
+                    TXT_REMARK.Text = iTXT_REMARK;
+                }
+            }
 
         }
 
@@ -987,6 +1087,94 @@ namespace CG
         }
 
         #endregion
+
+        private void CHK_NEXT_PRC0_CheckedChanged(object sender, EventArgs e)
+        {
+            CHK_NEXT_PRC_Clk();
+        }
+
+        private void CHK_NEXT_PRC1_CheckedChanged(object sender, EventArgs e)
+        {
+            CHK_NEXT_PRC_Clk();
+        }
+
+        private void Cmd_Edit_Click(object sender, EventArgs e)
+        {
+            Cmd_Edit_Clk();
+        }
+
+        private void Cmd_Edit_Date_Click(object sender, EventArgs e)
+        {
+            Cmd_Edit_Date_Clk();
+        }
+
+        private void SDB_THK_TextChanged(object sender, EventArgs e)
+        {
+            SDB_THK_Chg();
+        }
+
+        private void SDB_WID_TextChanged(object sender, EventArgs e)
+        {
+            SDB_WID_Chg();
+        }
+
+        private void SDB_LEN_TextChanged(object sender, EventArgs e)
+        {
+            SDB_LEN_Chg();
+        }
+
+        private void TXT_INSP_MAN_DoubleClick(object sender, EventArgs e)
+        {
+            TXT_INSP_MAN_DblClk();
+        }
+
+        private void CHK_PRD_GRD0_CheckedChanged(object sender, EventArgs e)
+        {
+            CHK_PRD_GRD_Clk(0);
+        }
+
+        private void CHK_PRD_GRD1_CheckedChanged(object sender, EventArgs e)
+        {
+            CHK_PRD_GRD_Clk(1);
+        }
+
+        private void CHK_PRD_GRD2_CheckedChanged(object sender, EventArgs e)
+        {
+            CHK_PRD_GRD_Clk(2);
+        }
+
+        private void CHK_PRD_GRD3_CheckedChanged(object sender, EventArgs e)
+        {
+            CHK_PRD_GRD_Clk(3);
+        }
+
+        private void CHK_PRD_GRD4_CheckedChanged(object sender, EventArgs e)
+        {
+            CHK_PRD_GRD_Clk(4);
+        }
+
+        private void CHK_PRD_GRD5_CheckedChanged(object sender, EventArgs e)
+        {
+            CHK_PRD_GRD_Clk(5);
+        }
+
+        private void CHK_UST_GRD0_CheckedChanged(object sender, EventArgs e)
+        {
+            CHK_UST_GRD_Clk(0);
+        }
+
+        private void CHK_UST_GRD1_CheckedChanged(object sender, EventArgs e)
+        {
+            CHK_UST_GRD_Clk(1);
+        }
+
+        private void ss1_CellDoubleClick(object sender, CellClickEventArgs e)
+        {
+            ss1_DblClk(e.Column, e.Row);
+        }
+
+
+
 
 
 

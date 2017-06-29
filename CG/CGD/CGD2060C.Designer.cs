@@ -28,6 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            CommonClass.BControlFiledSetting bControlFiledSetting11 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting12 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting13 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting14 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting15 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting16 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting1 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting2 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting3 = new CommonClass.BControlFiledSetting();
@@ -36,12 +42,6 @@
             CommonClass.BControlFiledSetting bControlFiledSetting6 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting7 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting8 = new CommonClass.BControlFiledSetting();
-            CommonClass.BControlFiledSetting bControlFiledSetting9 = new CommonClass.BControlFiledSetting();
-            CommonClass.BControlFiledSetting bControlFiledSetting10 = new CommonClass.BControlFiledSetting();
-            CommonClass.BControlFiledSetting bControlFiledSetting11 = new CommonClass.BControlFiledSetting();
-            CommonClass.BControlFiledSetting bControlFiledSetting12 = new CommonClass.BControlFiledSetting();
-            CommonClass.BControlFiledSetting bControlFiledSetting13 = new CommonClass.BControlFiledSetting();
-            CommonClass.BControlFiledSetting bControlFiledSetting14 = new CommonClass.BControlFiledSetting();
             this.TXT_UST_STAND_NO = new CommonClass.F4ETCR();
             this.TXT_UST_STAND_NAME = new System.Windows.Forms.TextBox();
             this.txt_Scrap_code = new CommonClass.F4ETCR();
@@ -172,20 +172,21 @@
             // 
             // TXT_UST_STAND_NO
             // 
-            bControlFiledSetting1.ColumnID = "T.CD";
-            bControlFiledSetting1.TargetControl = this.TXT_UST_STAND_NO;
-            bControlFiledSetting2.ColumnID = "T.CD_SHORT_NAME";
-            bControlFiledSetting2.TargetControl = this.TXT_UST_STAND_NAME;
-            this.TXT_UST_STAND_NO.CustomSetting.Add(bControlFiledSetting1);
-            this.TXT_UST_STAND_NO.CustomSetting.Add(bControlFiledSetting2);
+            bControlFiledSetting11.ColumnID = "T.CD";
+            bControlFiledSetting11.TargetControl = this.TXT_UST_STAND_NO;
+            bControlFiledSetting12.ColumnID = "T.CD_SHORT_NAME";
+            bControlFiledSetting12.TargetControl = this.TXT_UST_STAND_NAME;
+            this.TXT_UST_STAND_NO.CustomSetting.Add(bControlFiledSetting11);
+            this.TXT_UST_STAND_NO.CustomSetting.Add(bControlFiledSetting12);
             this.TXT_UST_STAND_NO.InputControl = this.TXT_UST_STAND_NO;
             this.TXT_UST_STAND_NO.Location = new System.Drawing.Point(126, 119);
             this.TXT_UST_STAND_NO.Name = "TXT_UST_STAND_NO";
             this.TXT_UST_STAND_NO.Size = new System.Drawing.Size(46, 22);
             this.TXT_UST_STAND_NO.sJoin = "";
             this.TXT_UST_STAND_NO.sSqletc = "SELECT T.CD AS 探伤标准代码,T.CD_SHORT_NAME AS 探伤标准名称 FROM NISCO.ZP_CD T WHERE T.CD_MAN" +
-    "A_NO = \'Q0046\' ORDER BY T.CD";
+    "A_NO = \'Q0046\'AND NVL(APLY_STD,\'N\') = \'Y\' ORDER BY T.CD";
             this.TXT_UST_STAND_NO.TabIndex = 187;
+            this.TXT_UST_STAND_NO.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TXT_UST_STAND_NAME
             // 
@@ -197,12 +198,13 @@
             // 
             // txt_Scrap_code
             // 
-            bControlFiledSetting3.ColumnID = "T.CD";
-            bControlFiledSetting3.TargetControl = this.txt_Scrap_code;
-            bControlFiledSetting4.ColumnID = "T.CD_SHORT_NAME";
-            bControlFiledSetting4.TargetControl = this.txt_Scrap_name;
-            this.txt_Scrap_code.CustomSetting.Add(bControlFiledSetting3);
-            this.txt_Scrap_code.CustomSetting.Add(bControlFiledSetting4);
+            bControlFiledSetting13.ColumnID = "T.CD";
+            bControlFiledSetting13.TargetControl = this.txt_Scrap_code;
+            bControlFiledSetting14.ColumnID = "T.CD_SHORT_NAME";
+            bControlFiledSetting14.TargetControl = this.txt_Scrap_name;
+            this.txt_Scrap_code.CustomSetting.Add(bControlFiledSetting13);
+            this.txt_Scrap_code.CustomSetting.Add(bControlFiledSetting14);
+            this.txt_Scrap_code.Enabled = false;
             this.txt_Scrap_code.InputControl = this.txt_Scrap_code;
             this.txt_Scrap_code.Location = new System.Drawing.Point(111, 256);
             this.txt_Scrap_code.Name = "txt_Scrap_code";
@@ -223,12 +225,12 @@
             // 
             // TXT_REASON_FL2
             // 
-            bControlFiledSetting5.ColumnID = "T.CD";
-            bControlFiledSetting5.TargetControl = this.TXT_REASON_FL2;
-            bControlFiledSetting6.ColumnID = "T.CD_SHORT_NAME";
-            bControlFiledSetting6.TargetControl = this.TXT_REASON_NAME2;
-            this.TXT_REASON_FL2.CustomSetting.Add(bControlFiledSetting5);
-            this.TXT_REASON_FL2.CustomSetting.Add(bControlFiledSetting6);
+            bControlFiledSetting15.ColumnID = "T.CD";
+            bControlFiledSetting15.TargetControl = this.TXT_REASON_FL2;
+            bControlFiledSetting16.ColumnID = "T.CD_SHORT_NAME";
+            bControlFiledSetting16.TargetControl = this.TXT_REASON_NAME2;
+            this.TXT_REASON_FL2.CustomSetting.Add(bControlFiledSetting15);
+            this.TXT_REASON_FL2.CustomSetting.Add(bControlFiledSetting16);
             this.TXT_REASON_FL2.InputControl = this.TXT_REASON_FL2;
             this.TXT_REASON_FL2.Location = new System.Drawing.Point(839, 49);
             this.TXT_REASON_FL2.Name = "TXT_REASON_FL2";
@@ -249,12 +251,12 @@
             // 
             // TXT_UST_GRADE
             // 
-            bControlFiledSetting7.ColumnID = "T.CD";
-            bControlFiledSetting7.TargetControl = this.TXT_UST_GRADE;
-            bControlFiledSetting8.ColumnID = "T.CD_SHORT_NAME";
-            bControlFiledSetting8.TargetControl = this.TXT_UST_GRADE_NAME;
-            this.TXT_UST_GRADE.CustomSetting.Add(bControlFiledSetting7);
-            this.TXT_UST_GRADE.CustomSetting.Add(bControlFiledSetting8);
+            bControlFiledSetting1.ColumnID = "T.CD";
+            bControlFiledSetting1.TargetControl = this.TXT_UST_GRADE;
+            bControlFiledSetting2.ColumnID = "T.CD_SHORT_NAME";
+            bControlFiledSetting2.TargetControl = this.TXT_UST_GRADE_NAME;
+            this.TXT_UST_GRADE.CustomSetting.Add(bControlFiledSetting1);
+            this.TXT_UST_GRADE.CustomSetting.Add(bControlFiledSetting2);
             this.TXT_UST_GRADE.InputControl = this.TXT_UST_GRADE;
             this.TXT_UST_GRADE.Location = new System.Drawing.Point(126, 143);
             this.TXT_UST_GRADE.Name = "TXT_UST_GRADE";
@@ -263,6 +265,7 @@
             this.TXT_UST_GRADE.sSqletc = "SELECT T.CD AS 代码,T.CD_SHORT_NAME AS 代码简称 FROM NISCO.ZP_CD T WHERE T.CD_MANA_NO =" +
     " \'Q0053\' ORDER BY T.CD";
             this.TXT_UST_GRADE.TabIndex = 187;
+            this.TXT_UST_GRADE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TXT_UST_GRADE_NAME
             // 
@@ -274,12 +277,12 @@
             // 
             // TXT_EQPM
             // 
-            bControlFiledSetting9.ColumnID = "T.CD";
-            bControlFiledSetting9.TargetControl = this.TXT_EQPM;
-            bControlFiledSetting10.ColumnID = "T.CD_SHORT_NAME";
-            bControlFiledSetting10.TargetControl = this.TXT_KIND_NO;
-            this.TXT_EQPM.CustomSetting.Add(bControlFiledSetting9);
-            this.TXT_EQPM.CustomSetting.Add(bControlFiledSetting10);
+            bControlFiledSetting3.ColumnID = "T.CD";
+            bControlFiledSetting3.TargetControl = this.TXT_EQPM;
+            bControlFiledSetting4.ColumnID = "T.CD_SHORT_NAME";
+            bControlFiledSetting4.TargetControl = this.TXT_KIND_NO;
+            this.TXT_EQPM.CustomSetting.Add(bControlFiledSetting3);
+            this.TXT_EQPM.CustomSetting.Add(bControlFiledSetting4);
             this.TXT_EQPM.InputControl = this.TXT_EQPM;
             this.TXT_EQPM.Location = new System.Drawing.Point(126, 25);
             this.TXT_EQPM.Name = "TXT_EQPM";
@@ -297,15 +300,16 @@
             this.TXT_KIND_NO.Name = "TXT_KIND_NO";
             this.TXT_KIND_NO.Size = new System.Drawing.Size(147, 22);
             this.TXT_KIND_NO.TabIndex = 459;
+            this.TXT_KIND_NO.Text = "KM3";
             // 
             // TXT_REASON_FL0
             // 
-            bControlFiledSetting11.ColumnID = "T.CD";
-            bControlFiledSetting11.TargetControl = this.TXT_REASON_FL0;
-            bControlFiledSetting12.ColumnID = "T.CD_SHORT_NAME";
-            bControlFiledSetting12.TargetControl = this.TXT_REASON_NAME0;
-            this.TXT_REASON_FL0.CustomSetting.Add(bControlFiledSetting11);
-            this.TXT_REASON_FL0.CustomSetting.Add(bControlFiledSetting12);
+            bControlFiledSetting5.ColumnID = "T.CD";
+            bControlFiledSetting5.TargetControl = this.TXT_REASON_FL0;
+            bControlFiledSetting6.ColumnID = "T.CD_SHORT_NAME";
+            bControlFiledSetting6.TargetControl = this.TXT_REASON_NAME0;
+            this.TXT_REASON_FL0.CustomSetting.Add(bControlFiledSetting5);
+            this.TXT_REASON_FL0.CustomSetting.Add(bControlFiledSetting6);
             this.TXT_REASON_FL0.InputControl = this.TXT_REASON_FL0;
             this.TXT_REASON_FL0.Location = new System.Drawing.Point(524, 256);
             this.TXT_REASON_FL0.Name = "TXT_REASON_FL0";
@@ -326,12 +330,12 @@
             // 
             // TXT_REASON_FL1
             // 
-            bControlFiledSetting13.ColumnID = "T.CD";
-            bControlFiledSetting13.TargetControl = this.TXT_REASON_FL1;
-            bControlFiledSetting14.ColumnID = "T.CD_SHORT_NAME";
-            bControlFiledSetting14.TargetControl = this.TXT_REASON_NAME1;
-            this.TXT_REASON_FL1.CustomSetting.Add(bControlFiledSetting13);
-            this.TXT_REASON_FL1.CustomSetting.Add(bControlFiledSetting14);
+            bControlFiledSetting7.ColumnID = "T.CD";
+            bControlFiledSetting7.TargetControl = this.TXT_REASON_FL1;
+            bControlFiledSetting8.ColumnID = "T.CD_SHORT_NAME";
+            bControlFiledSetting8.TargetControl = this.TXT_REASON_NAME1;
+            this.TXT_REASON_FL1.CustomSetting.Add(bControlFiledSetting7);
+            this.TXT_REASON_FL1.CustomSetting.Add(bControlFiledSetting8);
             this.TXT_REASON_FL1.InputControl = this.TXT_REASON_FL1;
             this.TXT_REASON_FL1.Location = new System.Drawing.Point(524, 282);
             this.TXT_REASON_FL1.Name = "TXT_REASON_FL1";
@@ -494,7 +498,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox2.Location = new System.Drawing.Point(0, 45);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1218, 285);
+            this.groupBox2.Size = new System.Drawing.Size(1218, 262);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
@@ -506,8 +510,9 @@
             this.ss1.Name = "ss1";
             this.ss1.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
             this.ss1_Sheet1});
-            this.ss1.Size = new System.Drawing.Size(1212, 264);
+            this.ss1.Size = new System.Drawing.Size(1212, 241);
             this.ss1.TabIndex = 2;
+            this.ss1.CellDoubleClick += new FarPoint.Win.Spread.CellClickEventHandler(this.ss1_CellDoubleClick);
             // 
             // ss1_Sheet1
             // 
@@ -877,19 +882,23 @@
             // 
             // TXT_UST_GRD
             // 
+            this.TXT_UST_GRD.Enabled = false;
             this.TXT_UST_GRD.Location = new System.Drawing.Point(126, 167);
             this.TXT_UST_GRD.Name = "TXT_UST_GRD";
             this.TXT_UST_GRD.Size = new System.Drawing.Size(46, 22);
             this.TXT_UST_GRD.TabIndex = 170;
+            this.TXT_UST_GRD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TXT_PRD_GRD
             // 
+            this.TXT_PRD_GRD.Enabled = false;
             this.TXT_PRD_GRD.Location = new System.Drawing.Point(126, 195);
             this.TXT_PRD_GRD.Multiline = true;
             this.TXT_PRD_GRD.Name = "TXT_PRD_GRD";
             this.TXT_PRD_GRD.Size = new System.Drawing.Size(46, 22);
             this.TXT_PRD_GRD.TabIndex = 171;
             this.TXT_PRD_GRD.Tag = "";
+            this.TXT_PRD_GRD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TXT_INSP_OCCR_TIME
             // 
@@ -1008,9 +1017,9 @@
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Location = new System.Drawing.Point(0, 330);
+            this.groupBox3.Location = new System.Drawing.Point(0, 307);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1218, 304);
+            this.groupBox3.Size = new System.Drawing.Size(1218, 308);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             // 
@@ -1057,6 +1066,7 @@
             this.CHK_NEXT_PRC1.Tag = "T";
             this.CHK_NEXT_PRC1.Text = "热处理";
             this.CHK_NEXT_PRC1.UseVisualStyleBackColor = true;
+            this.CHK_NEXT_PRC1.CheckedChanged += new System.EventHandler(this.CHK_NEXT_PRC1_CheckedChanged);
             // 
             // CHK_NEXT_PRC0
             // 
@@ -1068,6 +1078,7 @@
             this.CHK_NEXT_PRC0.Tag = "P";
             this.CHK_NEXT_PRC0.Text = "钢板库";
             this.CHK_NEXT_PRC0.UseVisualStyleBackColor = true;
+            this.CHK_NEXT_PRC0.CheckedChanged += new System.EventHandler(this.CHK_NEXT_PRC0_CheckedChanged);
             // 
             // CHK_PRD_GRD4
             // 
@@ -1076,8 +1087,10 @@
             this.CHK_PRD_GRD4.Name = "CHK_PRD_GRD4";
             this.CHK_PRD_GRD4.Size = new System.Drawing.Size(52, 17);
             this.CHK_PRD_GRD4.TabIndex = 515;
+            this.CHK_PRD_GRD4.Tag = "7";
             this.CHK_PRD_GRD4.Text = "废钢";
             this.CHK_PRD_GRD4.UseVisualStyleBackColor = true;
+            this.CHK_PRD_GRD4.CheckedChanged += new System.EventHandler(this.CHK_PRD_GRD4_CheckedChanged);
             // 
             // CHK_PRD_GRD3
             // 
@@ -1086,8 +1099,10 @@
             this.CHK_PRD_GRD3.Name = "CHK_PRD_GRD3";
             this.CHK_PRD_GRD3.Size = new System.Drawing.Size(52, 17);
             this.CHK_PRD_GRD3.TabIndex = 514;
+            this.CHK_PRD_GRD3.Tag = "5";
             this.CHK_PRD_GRD3.Text = "次品";
             this.CHK_PRD_GRD3.UseVisualStyleBackColor = true;
+            this.CHK_PRD_GRD3.CheckedChanged += new System.EventHandler(this.CHK_PRD_GRD3_CheckedChanged);
             // 
             // CHK_PRD_GRD5
             // 
@@ -1096,8 +1111,10 @@
             this.CHK_PRD_GRD5.Name = "CHK_PRD_GRD5";
             this.CHK_PRD_GRD5.Size = new System.Drawing.Size(52, 17);
             this.CHK_PRD_GRD5.TabIndex = 513;
+            this.CHK_PRD_GRD5.Tag = "4";
             this.CHK_PRD_GRD5.Text = "待判";
             this.CHK_PRD_GRD5.UseVisualStyleBackColor = true;
+            this.CHK_PRD_GRD5.CheckedChanged += new System.EventHandler(this.CHK_PRD_GRD5_CheckedChanged);
             // 
             // CHK_PRD_GRD2
             // 
@@ -1106,8 +1123,10 @@
             this.CHK_PRD_GRD2.Name = "CHK_PRD_GRD2";
             this.CHK_PRD_GRD2.Size = new System.Drawing.Size(52, 17);
             this.CHK_PRD_GRD2.TabIndex = 512;
+            this.CHK_PRD_GRD2.Tag = "3";
             this.CHK_PRD_GRD2.Text = "协议";
             this.CHK_PRD_GRD2.UseVisualStyleBackColor = true;
+            this.CHK_PRD_GRD2.CheckedChanged += new System.EventHandler(this.CHK_PRD_GRD2_CheckedChanged);
             // 
             // CHK_PRD_GRD1
             // 
@@ -1116,8 +1135,10 @@
             this.CHK_PRD_GRD1.Name = "CHK_PRD_GRD1";
             this.CHK_PRD_GRD1.Size = new System.Drawing.Size(52, 17);
             this.CHK_PRD_GRD1.TabIndex = 511;
+            this.CHK_PRD_GRD1.Tag = "2";
             this.CHK_PRD_GRD1.Text = "改判";
             this.CHK_PRD_GRD1.UseVisualStyleBackColor = true;
+            this.CHK_PRD_GRD1.CheckedChanged += new System.EventHandler(this.CHK_PRD_GRD1_CheckedChanged);
             // 
             // CHK_PRD_GRD0
             // 
@@ -1126,8 +1147,10 @@
             this.CHK_PRD_GRD0.Name = "CHK_PRD_GRD0";
             this.CHK_PRD_GRD0.Size = new System.Drawing.Size(52, 17);
             this.CHK_PRD_GRD0.TabIndex = 510;
+            this.CHK_PRD_GRD0.Tag = "1";
             this.CHK_PRD_GRD0.Text = "正品";
             this.CHK_PRD_GRD0.UseVisualStyleBackColor = true;
+            this.CHK_PRD_GRD0.CheckedChanged += new System.EventHandler(this.CHK_PRD_GRD0_CheckedChanged);
             // 
             // CHK_UST_GRD1
             // 
@@ -1136,8 +1159,10 @@
             this.CHK_UST_GRD1.Name = "CHK_UST_GRD1";
             this.CHK_UST_GRD1.Size = new System.Drawing.Size(65, 17);
             this.CHK_UST_GRD1.TabIndex = 509;
+            this.CHK_UST_GRD1.Tag = "N";
             this.CHK_UST_GRD1.Text = "不合格";
             this.CHK_UST_GRD1.UseVisualStyleBackColor = true;
+            this.CHK_UST_GRD1.CheckedChanged += new System.EventHandler(this.CHK_UST_GRD1_CheckedChanged);
             // 
             // CHK_UST_GRD0
             // 
@@ -1146,8 +1171,10 @@
             this.CHK_UST_GRD0.Name = "CHK_UST_GRD0";
             this.CHK_UST_GRD0.Size = new System.Drawing.Size(52, 17);
             this.CHK_UST_GRD0.TabIndex = 508;
+            this.CHK_UST_GRD0.Tag = "Y";
             this.CHK_UST_GRD0.Text = "合格";
             this.CHK_UST_GRD0.UseVisualStyleBackColor = true;
+            this.CHK_UST_GRD0.CheckedChanged += new System.EventHandler(this.CHK_UST_GRD0_CheckedChanged);
             // 
             // TXT_STLGRD
             // 
@@ -1178,21 +1205,25 @@
             // 
             // Cmd_Edit_Date
             // 
+            this.Cmd_Edit_Date.Font = new System.Drawing.Font("宋体", 8.75F);
             this.Cmd_Edit_Date.Location = new System.Drawing.Point(920, 224);
             this.Cmd_Edit_Date.Name = "Cmd_Edit_Date";
             this.Cmd_Edit_Date.Size = new System.Drawing.Size(80, 23);
             this.Cmd_Edit_Date.TabIndex = 504;
             this.Cmd_Edit_Date.Text = "更新时间";
             this.Cmd_Edit_Date.UseVisualStyleBackColor = true;
+            this.Cmd_Edit_Date.Click += new System.EventHandler(this.Cmd_Edit_Date_Click);
             // 
             // Cmd_Edit
             // 
+            this.Cmd_Edit.Font = new System.Drawing.Font("宋体", 8.75F);
             this.Cmd_Edit.Location = new System.Drawing.Point(757, 96);
             this.Cmd_Edit.Name = "Cmd_Edit";
             this.Cmd_Edit.Size = new System.Drawing.Size(80, 23);
             this.Cmd_Edit.TabIndex = 503;
             this.Cmd_Edit.Text = "更新垛位";
             this.Cmd_Edit.UseVisualStyleBackColor = true;
+            this.Cmd_Edit.Click += new System.EventHandler(this.Cmd_Edit_Click);
             // 
             // TXT_LOC
             // 
@@ -1210,6 +1241,7 @@
             this.TXT_INSP_MAN.Size = new System.Drawing.Size(75, 22);
             this.TXT_INSP_MAN.TabIndex = 501;
             this.TXT_INSP_MAN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TXT_INSP_MAN.DoubleClick += new System.EventHandler(this.TXT_INSP_MAN_DoubleClick);
             // 
             // label36
             // 
@@ -1259,6 +1291,7 @@
             // txt_stdspec_name_chg
             // 
             this.txt_stdspec_name_chg.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.txt_stdspec_name_chg.Enabled = false;
             this.txt_stdspec_name_chg.Location = new System.Drawing.Point(584, 231);
             this.txt_stdspec_name_chg.Name = "txt_stdspec_name_chg";
             this.txt_stdspec_name_chg.Size = new System.Drawing.Size(167, 22);
@@ -1380,6 +1413,7 @@
             // 
             // txt_stdspec
             // 
+            this.txt_stdspec.Enabled = false;
             this.txt_stdspec.Location = new System.Drawing.Point(433, 201);
             this.txt_stdspec.Name = "txt_stdspec";
             this.txt_stdspec.sFcontrol = "CD_SHORT_NAME";
@@ -1441,6 +1475,7 @@
             this.SDB_LEN.TabIndex = 463;
             this.SDB_LEN.Text = "0.0";
             this.SDB_LEN.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.SDB_LEN.TextChanged += new System.EventHandler(this.SDB_LEN_TextChanged);
             // 
             // SDB_WID
             // 
@@ -1454,6 +1489,7 @@
             this.SDB_WID.TabIndex = 462;
             this.SDB_WID.Text = "0.00";
             this.SDB_WID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.SDB_WID.TextChanged += new System.EventHandler(this.SDB_WID_TextChanged);
             // 
             // SDB_LEN_ORG
             // 
@@ -1493,6 +1529,7 @@
             this.SDB_THK.TabIndex = 461;
             this.SDB_THK.Text = "0.00";
             this.SDB_THK.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.SDB_THK.TextChanged += new System.EventHandler(this.SDB_THK_TextChanged);
             // 
             // SDB_ORD_LEN
             // 
@@ -1570,6 +1607,7 @@
             // txt_stdspec_name
             // 
             this.txt_stdspec_name.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.txt_stdspec_name.Enabled = false;
             this.txt_stdspec_name.Location = new System.Drawing.Point(584, 201);
             this.txt_stdspec_name.MaxLength = 40;
             this.txt_stdspec_name.Name = "txt_stdspec_name";
@@ -1589,7 +1627,7 @@
             // 
             // CGD2060C
             // 
-            this.ClientSize = new System.Drawing.Size(1218, 634);
+            this.ClientSize = new System.Drawing.Size(1218, 615);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
