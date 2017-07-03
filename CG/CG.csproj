@@ -351,6 +351,12 @@
     <Compile Include="CGC\CGC2072C.Designer.cs">
       <DependentUpon>CGC2072C.cs</DependentUpon>
     </Compile>
+    <Compile Include="CGC\CGC2050C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CGC\CGC2050C.Designer.cs">
+      <DependentUpon>CGC2050C.cs</DependentUpon>
+    </Compile>
     <Compile Include="CGD\AGC2440C.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -841,6 +847,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CGC\CGC2072C.resx">
       <DependentUpon>CGC2072C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CGC\CGC2050C.resx">
+      <DependentUpon>CGC2050C.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CGD\AGC2440C.resx">
       <DependentUpon>AGC2440C.cs</DependentUpon>

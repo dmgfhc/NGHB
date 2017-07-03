@@ -28,12 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            CommonClass.BControlFiledSetting bControlFiledSetting11 = new CommonClass.BControlFiledSetting();
-            CommonClass.BControlFiledSetting bControlFiledSetting12 = new CommonClass.BControlFiledSetting();
-            CommonClass.BControlFiledSetting bControlFiledSetting13 = new CommonClass.BControlFiledSetting();
-            CommonClass.BControlFiledSetting bControlFiledSetting14 = new CommonClass.BControlFiledSetting();
-            CommonClass.BControlFiledSetting bControlFiledSetting15 = new CommonClass.BControlFiledSetting();
-            CommonClass.BControlFiledSetting bControlFiledSetting16 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting1 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting2 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting3 = new CommonClass.BControlFiledSetting();
@@ -42,6 +36,12 @@
             CommonClass.BControlFiledSetting bControlFiledSetting6 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting7 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting8 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting9 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting10 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting11 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting12 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting13 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting14 = new CommonClass.BControlFiledSetting();
             this.TXT_UST_STAND_NO = new CommonClass.F4ETCR();
             this.TXT_UST_STAND_NAME = new System.Windows.Forms.TextBox();
             this.txt_Scrap_code = new CommonClass.F4ETCR();
@@ -172,12 +172,12 @@
             // 
             // TXT_UST_STAND_NO
             // 
-            bControlFiledSetting11.ColumnID = "T.CD";
-            bControlFiledSetting11.TargetControl = this.TXT_UST_STAND_NO;
-            bControlFiledSetting12.ColumnID = "T.CD_SHORT_NAME";
-            bControlFiledSetting12.TargetControl = this.TXT_UST_STAND_NAME;
-            this.TXT_UST_STAND_NO.CustomSetting.Add(bControlFiledSetting11);
-            this.TXT_UST_STAND_NO.CustomSetting.Add(bControlFiledSetting12);
+            bControlFiledSetting1.ColumnID = "T.CD";
+            bControlFiledSetting1.TargetControl = this.TXT_UST_STAND_NO;
+            bControlFiledSetting2.ColumnID = "T.CD_SHORT_NAME";
+            bControlFiledSetting2.TargetControl = this.TXT_UST_STAND_NAME;
+            this.TXT_UST_STAND_NO.CustomSetting.Add(bControlFiledSetting1);
+            this.TXT_UST_STAND_NO.CustomSetting.Add(bControlFiledSetting2);
             this.TXT_UST_STAND_NO.InputControl = this.TXT_UST_STAND_NO;
             this.TXT_UST_STAND_NO.Location = new System.Drawing.Point(126, 119);
             this.TXT_UST_STAND_NO.Name = "TXT_UST_STAND_NO";
@@ -198,12 +198,12 @@
             // 
             // txt_Scrap_code
             // 
-            bControlFiledSetting13.ColumnID = "T.CD";
-            bControlFiledSetting13.TargetControl = this.txt_Scrap_code;
-            bControlFiledSetting14.ColumnID = "T.CD_SHORT_NAME";
-            bControlFiledSetting14.TargetControl = this.txt_Scrap_name;
-            this.txt_Scrap_code.CustomSetting.Add(bControlFiledSetting13);
-            this.txt_Scrap_code.CustomSetting.Add(bControlFiledSetting14);
+            bControlFiledSetting3.ColumnID = "T.CD";
+            bControlFiledSetting3.TargetControl = this.txt_Scrap_code;
+            bControlFiledSetting4.ColumnID = "T.CD_SHORT_NAME";
+            bControlFiledSetting4.TargetControl = this.txt_Scrap_name;
+            this.txt_Scrap_code.CustomSetting.Add(bControlFiledSetting3);
+            this.txt_Scrap_code.CustomSetting.Add(bControlFiledSetting4);
             this.txt_Scrap_code.Enabled = false;
             this.txt_Scrap_code.InputControl = this.txt_Scrap_code;
             this.txt_Scrap_code.Location = new System.Drawing.Point(111, 256);
@@ -225,12 +225,12 @@
             // 
             // TXT_REASON_FL2
             // 
-            bControlFiledSetting15.ColumnID = "T.CD";
-            bControlFiledSetting15.TargetControl = this.TXT_REASON_FL2;
-            bControlFiledSetting16.ColumnID = "T.CD_SHORT_NAME";
-            bControlFiledSetting16.TargetControl = this.TXT_REASON_NAME2;
-            this.TXT_REASON_FL2.CustomSetting.Add(bControlFiledSetting15);
-            this.TXT_REASON_FL2.CustomSetting.Add(bControlFiledSetting16);
+            bControlFiledSetting5.ColumnID = "T.CD";
+            bControlFiledSetting5.TargetControl = this.TXT_REASON_FL2;
+            bControlFiledSetting6.ColumnID = "T.CD_SHORT_NAME";
+            bControlFiledSetting6.TargetControl = this.TXT_REASON_NAME2;
+            this.TXT_REASON_FL2.CustomSetting.Add(bControlFiledSetting5);
+            this.TXT_REASON_FL2.CustomSetting.Add(bControlFiledSetting6);
             this.TXT_REASON_FL2.InputControl = this.TXT_REASON_FL2;
             this.TXT_REASON_FL2.Location = new System.Drawing.Point(839, 49);
             this.TXT_REASON_FL2.Name = "TXT_REASON_FL2";
@@ -251,12 +251,12 @@
             // 
             // TXT_UST_GRADE
             // 
-            bControlFiledSetting1.ColumnID = "T.CD";
-            bControlFiledSetting1.TargetControl = this.TXT_UST_GRADE;
-            bControlFiledSetting2.ColumnID = "T.CD_SHORT_NAME";
-            bControlFiledSetting2.TargetControl = this.TXT_UST_GRADE_NAME;
-            this.TXT_UST_GRADE.CustomSetting.Add(bControlFiledSetting1);
-            this.TXT_UST_GRADE.CustomSetting.Add(bControlFiledSetting2);
+            bControlFiledSetting7.ColumnID = "T.CD";
+            bControlFiledSetting7.TargetControl = this.TXT_UST_GRADE;
+            bControlFiledSetting8.ColumnID = "T.CD_SHORT_NAME";
+            bControlFiledSetting8.TargetControl = this.TXT_UST_GRADE_NAME;
+            this.TXT_UST_GRADE.CustomSetting.Add(bControlFiledSetting7);
+            this.TXT_UST_GRADE.CustomSetting.Add(bControlFiledSetting8);
             this.TXT_UST_GRADE.InputControl = this.TXT_UST_GRADE;
             this.TXT_UST_GRADE.Location = new System.Drawing.Point(126, 143);
             this.TXT_UST_GRADE.Name = "TXT_UST_GRADE";
@@ -277,12 +277,12 @@
             // 
             // TXT_EQPM
             // 
-            bControlFiledSetting3.ColumnID = "T.CD";
-            bControlFiledSetting3.TargetControl = this.TXT_EQPM;
-            bControlFiledSetting4.ColumnID = "T.CD_SHORT_NAME";
-            bControlFiledSetting4.TargetControl = this.TXT_KIND_NO;
-            this.TXT_EQPM.CustomSetting.Add(bControlFiledSetting3);
-            this.TXT_EQPM.CustomSetting.Add(bControlFiledSetting4);
+            bControlFiledSetting9.ColumnID = "T.CD";
+            bControlFiledSetting9.TargetControl = this.TXT_EQPM;
+            bControlFiledSetting10.ColumnID = "T.CD_SHORT_NAME";
+            bControlFiledSetting10.TargetControl = this.TXT_KIND_NO;
+            this.TXT_EQPM.CustomSetting.Add(bControlFiledSetting9);
+            this.TXT_EQPM.CustomSetting.Add(bControlFiledSetting10);
             this.TXT_EQPM.InputControl = this.TXT_EQPM;
             this.TXT_EQPM.Location = new System.Drawing.Point(126, 25);
             this.TXT_EQPM.Name = "TXT_EQPM";
@@ -304,12 +304,12 @@
             // 
             // TXT_REASON_FL0
             // 
-            bControlFiledSetting5.ColumnID = "T.CD";
-            bControlFiledSetting5.TargetControl = this.TXT_REASON_FL0;
-            bControlFiledSetting6.ColumnID = "T.CD_SHORT_NAME";
-            bControlFiledSetting6.TargetControl = this.TXT_REASON_NAME0;
-            this.TXT_REASON_FL0.CustomSetting.Add(bControlFiledSetting5);
-            this.TXT_REASON_FL0.CustomSetting.Add(bControlFiledSetting6);
+            bControlFiledSetting11.ColumnID = "T.CD";
+            bControlFiledSetting11.TargetControl = this.TXT_REASON_FL0;
+            bControlFiledSetting12.ColumnID = "T.CD_SHORT_NAME";
+            bControlFiledSetting12.TargetControl = this.TXT_REASON_NAME0;
+            this.TXT_REASON_FL0.CustomSetting.Add(bControlFiledSetting11);
+            this.TXT_REASON_FL0.CustomSetting.Add(bControlFiledSetting12);
             this.TXT_REASON_FL0.InputControl = this.TXT_REASON_FL0;
             this.TXT_REASON_FL0.Location = new System.Drawing.Point(524, 256);
             this.TXT_REASON_FL0.Name = "TXT_REASON_FL0";
@@ -330,12 +330,12 @@
             // 
             // TXT_REASON_FL1
             // 
-            bControlFiledSetting7.ColumnID = "T.CD";
-            bControlFiledSetting7.TargetControl = this.TXT_REASON_FL1;
-            bControlFiledSetting8.ColumnID = "T.CD_SHORT_NAME";
-            bControlFiledSetting8.TargetControl = this.TXT_REASON_NAME1;
-            this.TXT_REASON_FL1.CustomSetting.Add(bControlFiledSetting7);
-            this.TXT_REASON_FL1.CustomSetting.Add(bControlFiledSetting8);
+            bControlFiledSetting13.ColumnID = "T.CD";
+            bControlFiledSetting13.TargetControl = this.TXT_REASON_FL1;
+            bControlFiledSetting14.ColumnID = "T.CD_SHORT_NAME";
+            bControlFiledSetting14.TargetControl = this.TXT_REASON_NAME1;
+            this.TXT_REASON_FL1.CustomSetting.Add(bControlFiledSetting13);
+            this.TXT_REASON_FL1.CustomSetting.Add(bControlFiledSetting14);
             this.TXT_REASON_FL1.InputControl = this.TXT_REASON_FL1;
             this.TXT_REASON_FL1.Location = new System.Drawing.Point(524, 282);
             this.TXT_REASON_FL1.Name = "TXT_REASON_FL1";
@@ -772,6 +772,7 @@
             this.SDB_INSP_THK_MN.ReadOnly = true;
             this.SDB_INSP_THK_MN.Size = new System.Drawing.Size(80, 22);
             this.SDB_INSP_THK_MN.TabIndex = 136;
+            this.SDB_INSP_THK_MN.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // SDB_INSP_WID_MX
             // 
@@ -782,6 +783,7 @@
             this.SDB_INSP_WID_MX.ReadOnly = true;
             this.SDB_INSP_WID_MX.Size = new System.Drawing.Size(80, 22);
             this.SDB_INSP_WID_MX.TabIndex = 137;
+            this.SDB_INSP_WID_MX.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // SDB_INSP_LEN_MX
             // 
@@ -792,6 +794,7 @@
             this.SDB_INSP_LEN_MX.ReadOnly = true;
             this.SDB_INSP_LEN_MX.Size = new System.Drawing.Size(80, 22);
             this.SDB_INSP_LEN_MX.TabIndex = 138;
+            this.SDB_INSP_LEN_MX.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // SDB_INSP_THK_MX
             // 
@@ -802,6 +805,7 @@
             this.SDB_INSP_THK_MX.ReadOnly = true;
             this.SDB_INSP_THK_MX.Size = new System.Drawing.Size(80, 22);
             this.SDB_INSP_THK_MX.TabIndex = 139;
+            this.SDB_INSP_THK_MX.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // SDB_INSP_WID_MN
             // 
@@ -812,6 +816,7 @@
             this.SDB_INSP_WID_MN.ReadOnly = true;
             this.SDB_INSP_WID_MN.Size = new System.Drawing.Size(80, 22);
             this.SDB_INSP_WID_MN.TabIndex = 140;
+            this.SDB_INSP_WID_MN.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // SDB_INSP_LEN_MN
             // 
@@ -822,6 +827,7 @@
             this.SDB_INSP_LEN_MN.ReadOnly = true;
             this.SDB_INSP_LEN_MN.Size = new System.Drawing.Size(80, 22);
             this.SDB_INSP_LEN_MN.TabIndex = 141;
+            this.SDB_INSP_LEN_MN.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // TXT_INSP_THK_GRD
             // 
@@ -1328,6 +1334,7 @@
             this.SDB_PWGT_MN.ReadOnly = true;
             this.SDB_PWGT_MN.Size = new System.Drawing.Size(57, 22);
             this.SDB_PWGT_MN.TabIndex = 489;
+            this.SDB_PWGT_MN.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // SDB_PWGT_MX
             // 
@@ -1338,6 +1345,7 @@
             this.SDB_PWGT_MX.ReadOnly = true;
             this.SDB_PWGT_MX.Size = new System.Drawing.Size(57, 22);
             this.SDB_PWGT_MX.TabIndex = 488;
+            this.SDB_PWGT_MX.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label12
             // 
