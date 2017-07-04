@@ -349,7 +349,6 @@ namespace CG
             this.menuItem10 = new System.Windows.Forms.MenuItem();
             this.CGD2050C = new System.Windows.Forms.MenuItem();
             this.CGD2041C = new System.Windows.Forms.MenuItem();
-            this.CGD2042C = new System.Windows.Forms.MenuItem();
             this.AGC2430C = new System.Windows.Forms.MenuItem();
             this.AGC2432C = new System.Windows.Forms.MenuItem();
             this.AGC2440C = new System.Windows.Forms.MenuItem();
@@ -362,6 +361,7 @@ namespace CG
             this.CGZ2031C = new System.Windows.Forms.MenuItem();
             this.CGD2060C = new System.Windows.Forms.MenuItem();
             this.CGC2050C = new System.Windows.Forms.MenuItem();
+            this.CGD2042C = new System.Windows.Forms.MenuItem();
             this.WGC1010C = new System.Windows.Forms.MenuItem();
             this.WGC1020C = new System.Windows.Forms.MenuItem();
             this.WGC1030C = new System.Windows.Forms.MenuItem();
@@ -803,12 +803,6 @@ namespace CG
             resources.ApplyResources(this.CGD2041C, "CGD2041C");
             this.CGD2041C.Click += new System.EventHandler(this.CGD2041C_Click);
             // 
-            // CGD2042C
-            // 
-            this.CGD2042C.Index = 14;
-            resources.ApplyResources(this.CGD2042C, "CGD2042C");
-            this.CGD2042C.Click += new System.EventHandler(this.CGD2042C_Click);
-            // 
             // AGC2430C
             // 
             this.AGC2430C.Index = 2;
@@ -880,6 +874,12 @@ namespace CG
             this.CGC2050C.Index = 13;
             resources.ApplyResources(this.CGC2050C, "CGC2050C");
             this.CGC2050C.Click += new System.EventHandler(this.CGC2050C_Click);
+            // 
+            // CGD2042C
+            // 
+            this.CGD2042C.Index = 14;
+            resources.ApplyResources(this.CGD2042C, "CGD2042C");
+            this.CGD2042C.Click += new System.EventHandler(this.CGD2042C_Click);
             // 
             // WGC1010C
             // 
@@ -2480,7 +2480,7 @@ namespace CG
         {
             if (!GeneralCommon.Gf_IsFormLoad("WGC2051C"))
             {
-                WGC2051C WGC2051C = new WGC2051C();
+                AGC2051C WGC2051C = new AGC2051C();
                 WGC2051C.MdiParent = this;
                 WGC2051C.Show();
                 WGC2051C.WindowState = FormWindowState.Maximized;
