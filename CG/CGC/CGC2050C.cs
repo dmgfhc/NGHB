@@ -294,7 +294,7 @@ namespace CG {
 
                 //判断是不是需要关闭连接对象，有时候该方法是在查询过程中调用，关闭对象会导致框架查询报错 韩超
 
-                GeneralCommon.M_CN1.Close();
+                //GeneralCommon.M_CN1.Close();
 
                 AdoRs = null;
 

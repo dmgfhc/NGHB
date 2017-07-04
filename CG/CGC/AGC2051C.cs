@@ -188,57 +188,6 @@ namespace CG
 
         }
 
-        public override void Form_Pro()
-        {
-            int iCount;
-            int START_FOR=0;
-            string sDateFrom;
-            string sDateTo;
-            string sPlateNo;
-            double iORG_WGT = 0;
-            double iWGT =0;
-
-            int inum;
-            int lRow;
-
-            for (iCount = 1; iCount <= ss1.ActiveSheet.RowCount; iCount++)
-            {
-                ss1.ActiveSheet.RowHeader.Cells[iCount-1,0].Text = "修改";
-                iORG_WGT = convertX(ss1.ActiveSheet.Cells[iCount-1,SPD_ORG_WGT].Text);
-                iWGT = iWGT + convertX(ss1.ActiveSheet.Cells[iCount - 1, SPD_WGT].Text);
-                if (ss1.ActiveSheet.Cells[iCount - 1, SPD_DS_LAST_YN].Text == "True")
-                {
-                    START_FOR = iCount;
-                    break; // TODO: might not be correct. Was : Exit For
-                }
-            }
-
-            if (iWGT > iORG_WGT * 1.05)
-            {
-                GeneralCommon.Gp_MsgBoxDisplay("分板重量大于原钢板重量，请确认", "I", "");
-                return;
-            }
-
-            if (START_FOR < 2)
-            {
-                GeneralCommon.Gp_MsgBoxDisplay("钢板分板块数应大于1块，请确认", "I", "");
-                return;
-            }
-
-            if (START_FOR > ss1.ActiveSheet.RowCount)
-            {
-                START_FOR = START_FOR + 1;
-                for (iCount = START_FOR; iCount <= ss1.ActiveSheet.RowCount; iCount++)
-                {
-                    ss1.ActiveSheet.RowHeader.Cells[iCount-1,0].Text = "";
-                }
-            }
-
-            p_Pro(2, 1, true, true);
-
-            Form_Ref();
-        }
-
 
         private void AGC2051C_Load(object sender, EventArgs e)
         {
@@ -271,8 +220,262 @@ namespace CG
                     Gp_Sp_BlockColor(ss2, SS2_URGNT_FL, SS2_URGNT_FL, iCount - 1, iCount - 1, Color.Green, Color.White);
                 }
             }
+        }
 
-            
+        public override void Form_Pro()
+        {
+            int iCount;
+            int START_FOR = 0;
+            string sDateFrom;
+            string sDateTo;
+            string sPlateNo;
+            double iORG_WGT = 0;
+            double iWGT = 0;
+
+            int inum;
+            int lRow;
+
+            for (iCount = 1; iCount <= ss1.ActiveSheet.RowCount; iCount++)
+            {
+
+                ss1.ActiveSheet.RowHeader.Cells[iCount - 1, 0].Text = "修改";
+                iORG_WGT = convertX(ss1.ActiveSheet.Cells[iCount - 1, SPD_ORG_WGT].Text);
+                iWGT = iWGT + convertX(ss1.ActiveSheet.Cells[iCount - 1, SPD_WGT].Text);
+                if (ss1.ActiveSheet.Cells[iCount - 1, SPD_DS_LAST_YN].Text == "True")
+                {
+                    START_FOR = iCount;
+                    break; // TODO: might not be correct. Was : Exit For
+                }
+            }
+
+            if (iWGT > iORG_WGT * 1.05)
+            {
+                GeneralCommon.Gp_MsgBoxDisplay("分板重量大于原钢板重量，请确认", "I", "提示");
+                return;
+            }
+
+            if (START_FOR < 2)
+            {
+                GeneralCommon.Gp_MsgBoxDisplay("钢板分板块数应大于1块，请确认", "I", "提示");
+                return;
+            }
+
+            if (START_FOR > ss1.ActiveSheet.RowCount)
+            {
+                START_FOR = START_FOR + 1;
+                for (iCount = START_FOR; iCount <= ss1.ActiveSheet.RowCount; iCount++)
+                {
+                    ss1.ActiveSheet.RowHeader.Cells[iCount-1,0].Text = "";
+                }
+            }
+
+            p_pro(2, 1, true, true);
+
+            Form_Ref();
+
+        }
+
+        private double Cal_Plate_Wgt(string sMode, string sEndUseCd, string sStlgrd, double dThk, double dWid, double dLen)
+        {
+
+            double Plate_Wgt = 0;
+
+            sQuery = "SELECT  Gf_Cal_Plate_Wgt('" + sMode + "'";
+            sQuery = sQuery + "             ,'" + sEndUseCd + "'";
+            sQuery = sQuery + "             ,'" + sStlgrd + "'";
+            sQuery = sQuery + "             ," + dThk;
+            sQuery = sQuery + "             ," + dWid;
+            sQuery = sQuery + "             ," + dLen;
+            sQuery = sQuery + "             ,0 )";
+            sQuery = sQuery + "       FROM  DUAL ";
+
+            if (GeneralCommon.M_CN1.State == 0)
+                if (!GeneralCommon.GF_DbConnect()) return Plate_Wgt;
+
+
+            ADODB.Recordset AdoRs = new ADODB.Recordset();
+            try
+            {
+                AdoRs.Open(sQuery, GeneralCommon.M_CN1, ADODB.CursorTypeEnum.adOpenStatic, ADODB.LockTypeEnum.adLockReadOnly);
+
+                if (!AdoRs.BOF && !AdoRs.EOF)
+                {
+                    //RltValue = true;
+                    while (!AdoRs.EOF)
+                    {
+                        Plate_Wgt = Convert.ToDouble(AdoRs.Fields[0].Value);
+                        AdoRs.MoveNext();
+                    }
+                }
+
+                //判断是不是需要关闭连接对象，有时候该方法是在查询过程中调用，关闭对象会导致框架查询报错 韩超
+
+                //GeneralCommon.M_CN1.Close();
+
+                AdoRs = null;
+
+                return Plate_Wgt;
+            }
+            catch (Exception ex)
+            {
+                // if (GeneralCommon.M_CN1.State != 0) GeneralCommon.M_CN1.Close();
+                AdoRs = null;
+                return 0;
+            }
+
+        }
+
+        private void ss1_ButtonClk(int Col, int ROW)
+        {
+            int FOR_CNT;
+            int START_FOR;
+            if (Col != SPD_DS_LAST_YN)
+                return;
+            for (FOR_CNT = 0; FOR_CNT < ss1.ActiveSheet.RowCount; FOR_CNT++)
+            {
+                if (FOR_CNT != ROW)
+                {
+                    ss1.ActiveSheet.Cells[FOR_CNT, SPD_DS_LAST_YN].Text = "False";
+                }
+            }
+
+        }
+
+        private void ss1_DblClk(int Col, int ROW)
+        {
+            string sDate;
+            string sDateTo;
+            int FOR_CNT;
+            string tmpYYMMDD;
+
+            if (ss1.ActiveSheet.RowCount<=0)
+                return;
+            if (Col < 10)
+                return;
+
+            tmpYYMMDD = GeneralCommon.Gf_CodeFind(GeneralCommon.M_CN1, "SELECT TO_CHAR(SYSDATE,'YYYY-MM-DD HH24:MI:SS') FROM DUAL");
+
+            for (FOR_CNT = 1; FOR_CNT <= ss1.ActiveSheet.RowCount; FOR_CNT++)
+            {
+
+                ss1.ActiveSheet.Cells[FOR_CNT-1,12].Text = tmpYYMMDD;
+
+                ss1_Row_Edit(FOR_CNT);
+            }
+
+        }
+
+        private void ss1_EditChange(int Col, int ROW)
+        {
+
+            double dThk;
+            double dWid;
+            double dLen;
+            string sEndUseCd;
+            string sStlgrd;
+
+            if (ss1.ActiveSheet.RowCount <= 0) return;
+
+
+            if (Col == SPD_THK | Col == SPD_WID | Col == SPD_LEN)
+            {
+                dThk = convertX(ss1.ActiveSheet.Cells[ROW, SPD_THK].Text);
+                dWid = convertX(ss1.ActiveSheet.Cells[ROW, SPD_WID].Text);
+                dLen = convertX(ss1.ActiveSheet.Cells[ROW, SPD_LEN].Text);
+                sEndUseCd = ss1.ActiveSheet.Cells[ROW, SPD_END_USE].Text;
+                sStlgrd = ss1.ActiveSheet.Cells[ROW, SPD_APLY_STDSPEC].Text;
+                if (dThk > 0 & dWid > 0 & dLen > 0)
+                {
+                    ss1.ActiveSheet.Cells[ROW, SPD_WGT].Text = Cal_Plate_Wgt("WGT", sEndUseCd, sStlgrd, dThk, dWid, dLen).ToString();
+                }
+            }
+
+            ss1_Row_Edit(ROW);
+        }
+
+        private void ss1_Change(int Col, int ROW)
+        {
+            if (ss1.ActiveSheet.RowCount <= 0)
+                return;
+
+            ss1_Row_Edit(ROW);
+
+        }
+
+        private void ss1_Data_Edit()
+        {
+            int iIdr;
+            double iThk;
+            double iWid;
+            double iLen;
+            double iWGT;
+            int ROW;
+            string sDate;
+            string sDateTo;
+
+            for (iIdr = 1; iIdr <= ss1.ActiveSheet.RowCount; iIdr++)
+            {
+
+                    iThk = convertX(ss1.ActiveSheet.Cells[iIdr - 1, 1].Text);
+
+                    iWid = convertX(ss1.ActiveSheet.Cells[iIdr - 1, 2].Text);
+
+                    iLen = convertX(ss1.ActiveSheet.Cells[iIdr - 1, 3].Text);
+
+                    ss1.ActiveSheet.Cells[iIdr - 1, SPD_SHIFT].Text = Gf_ShiftSet3("");
+                    ss1.ActiveSheet.Cells[iIdr - 1, SPD_GROUP_CD].Text = Gf_GroupSet(Gf_ShiftSet3(""), Gf_DTSet("", "X"));
+                    ss1.ActiveSheet.Cells[iIdr - 1, SPD_EMP_CD].Text = GeneralCommon.sUserID;
+                    ss1.ActiveSheet.Cells[iIdr - 1, SPD_PLT].Text = txt_WkPlt.Text;
+                    ss1.ActiveSheet.Cells[iIdr - 1, SPD_PRC_LINE].Text = txt_PrcLine.Text;
+            }
+        }
+
+        private void ss1_Row_Edit(int ROW)
+        {
+            int iIdr;
+            string sLastFlag;
+
+
+            switch (ss1.ActiveSheet.RowHeader.Cells[ROW, 0].Text)
+            {
+                case "增加":
+                case "修改":
+                case "删除":
+                    break;
+                default:
+                    ss1.ActiveSheet.RowHeader.Cells[ROW, 0].Text = "修改";
+                    break;
+            }
+
+            sLastFlag = "";
+            //lbl_moplate_wgt.Caption = "";
+            //for (iIdr = 1; iIdr <= ss1.MaxRows; iIdr++)
+            //{
+            // ss1.Col = 17;
+            //  lbl_moplate_wgt.Caption = Val(lbl_moplate_wgt.Caption + "") + Val(ss1.Text + "");
+            //}
+
+        }
+
+        private void ss2_DblClk(int Col, int ROW)
+        {
+            int iCount;
+
+            if (ss2.ActiveSheet.RowCount<=0)
+                return;
+
+            TXT_MPLATE_NO.Text = ss2.ActiveSheet.Cells[ROW,0].Text;
+            TXT_PRODCD.Text = ss2.ActiveSheet.Cells[ROW, 2].Text;
+
+            if (TXT_MPLATE_NO.Text.Trim() != "")
+            {
+
+                p_Ref(2, 1, true, true);
+                ss1_Data_Edit();
+
+                ss1.ActiveSheet.Cells[ss1.ActiveSheet.RowCount - 1, SPD_DS_LAST_YN].Text = "True";
+
+            }
         }
 
         #endregion
@@ -283,7 +486,6 @@ namespace CG
             base.Form_Cls();
             txt_WkPlt.Text = "C3";
             return true;
-           
         }
 
         #region 公共方法
