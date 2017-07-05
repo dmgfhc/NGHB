@@ -434,6 +434,8 @@ namespace CG
 
             int iCount;
 
+            i_ScCurrSeq = 1;
+
             sPlateNo = "";
 
             {

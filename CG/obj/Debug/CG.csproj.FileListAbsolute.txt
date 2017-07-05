@@ -175,7 +175,6 @@ C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.WGC2030C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.WGC2035C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.WGC2040C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.WGC2050C.resources
-C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.WGC2051C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.WGC2052C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.WGC2060C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.WGC2070C.resources
@@ -234,3 +233,4 @@ C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGD2081C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGZ2031C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGD2060C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGC2050C.resources
+C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.AGC2051C.resources

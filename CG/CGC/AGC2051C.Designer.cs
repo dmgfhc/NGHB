@@ -30,7 +30,7 @@
         {
             CommonClass.BControlFiledSetting bControlFiledSetting1 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting2 = new CommonClass.BControlFiledSetting();
-            CommonClass.BControlFiledSetting bControlFiledSetting3 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting4 = new CommonClass.BControlFiledSetting();
             this.txt_WkPlt = new CommonClass.F4ETCR();
             this.txt_plt = new CommonClass.F4ETCR();
             this.txt_plt_name = new System.Windows.Forms.TextBox();
@@ -80,10 +80,10 @@
             // 
             bControlFiledSetting2.ColumnID = "CD";
             bControlFiledSetting2.TargetControl = this.txt_plt;
-            bControlFiledSetting3.ColumnID = "CD_SHORT_NAME";
-            bControlFiledSetting3.TargetControl = this.txt_plt_name;
+            bControlFiledSetting4.ColumnID = "CD_SHORT_NAME";
+            bControlFiledSetting4.TargetControl = this.txt_plt_name;
             this.txt_plt.CustomSetting.Add(bControlFiledSetting2);
-            this.txt_plt.CustomSetting.Add(bControlFiledSetting3);
+            this.txt_plt.CustomSetting.Add(bControlFiledSetting4);
             this.txt_plt.InputControl = this.txt_plt;
             this.txt_plt.Location = new System.Drawing.Point(109, 42);
             this.txt_plt.MaxLength = 2;
@@ -133,7 +133,7 @@
             this.txt_PrcLine.Name = "txt_PrcLine";
             this.txt_PrcLine.Size = new System.Drawing.Size(32, 22);
             this.txt_PrcLine.TabIndex = 564;
-            this.txt_PrcLine.Text = "C";
+            this.txt_PrcLine.Text = "3";
             this.txt_PrcLine.Visible = false;
             // 
             // TXT_MPLATE_NO
@@ -177,6 +177,7 @@
             this.cbo_PrcLine.Name = "cbo_PrcLine";
             this.cbo_PrcLine.Size = new System.Drawing.Size(86, 21);
             this.cbo_PrcLine.TabIndex = 559;
+            this.cbo_PrcLine.TextChanged += new System.EventHandler(this.cbo_PrcLine_TextChanged);
             // 
             // label1
             // 
@@ -247,6 +248,7 @@
             this.ss2_Sheet1});
             this.ss2.Size = new System.Drawing.Size(1051, 353);
             this.ss2.TabIndex = 2;
+            this.ss2.CellDoubleClick += new FarPoint.Win.Spread.CellClickEventHandler(this.ss2_CellDoubleClick);
             // 
             // ss2_Sheet1
             // 
@@ -263,6 +265,10 @@
             this.ss1_Sheet1});
             this.ss1.Size = new System.Drawing.Size(1051, 178);
             this.ss1.TabIndex = 0;
+            this.ss1.Change += new FarPoint.Win.Spread.ChangeEventHandler(this.ss1_Change);
+            this.ss1.CellDoubleClick += new FarPoint.Win.Spread.CellClickEventHandler(this.ss1_CellDoubleClick);
+            this.ss1.ButtonClicked += new FarPoint.Win.Spread.EditorNotifyEventHandler(this.ss1_ButtonClicked);
+            this.ss1.EditChange += new FarPoint.Win.Spread.EditorNotifyEventHandler(this.ss1_EditChange);
             // 
             // ss1_Sheet1
             // 

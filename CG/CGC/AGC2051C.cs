@@ -175,7 +175,7 @@ namespace CG
             SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_END_USE, true);
         }
 
-        private void cbo_PrcLine_Chge()
+        private void cbo_PrcLine_Chg()
         {
             if (cbo_PrcLine.Text == "一号线")
             {
@@ -269,7 +269,7 @@ namespace CG
                 }
             }
 
-            p_pro(2, 1, true, true);
+           // p_pro(2, 1, true, true);
 
             Form_Ref();
 
@@ -360,7 +360,7 @@ namespace CG
 
                 ss1.ActiveSheet.Cells[FOR_CNT-1,12].Text = tmpYYMMDD;
 
-                ss1_Row_Edit(FOR_CNT);
+               // ss1_Row_Edit(FOR_CNT);
             }
 
         }
@@ -390,7 +390,7 @@ namespace CG
                 }
             }
 
-            ss1_Row_Edit(ROW);
+            //ss1_Row_Edit(ROW);
         }
 
         private void ss1_Change(int Col, int ROW)
@@ -398,7 +398,7 @@ namespace CG
             if (ss1.ActiveSheet.RowCount <= 0)
                 return;
 
-            ss1_Row_Edit(ROW);
+            //ss1_Row_Edit(ROW);
 
         }
 
@@ -430,32 +430,6 @@ namespace CG
             }
         }
 
-        private void ss1_Row_Edit(int ROW)
-        {
-            int iIdr;
-            string sLastFlag;
-
-
-            switch (ss1.ActiveSheet.RowHeader.Cells[ROW, 0].Text)
-            {
-                case "增加":
-                case "修改":
-                case "删除":
-                    break;
-                default:
-                    ss1.ActiveSheet.RowHeader.Cells[ROW, 0].Text = "修改";
-                    break;
-            }
-
-            sLastFlag = "";
-            //lbl_moplate_wgt.Caption = "";
-            //for (iIdr = 1; iIdr <= ss1.MaxRows; iIdr++)
-            //{
-            // ss1.Col = 17;
-            //  lbl_moplate_wgt.Caption = Val(lbl_moplate_wgt.Caption + "") + Val(ss1.Text + "");
-            //}
-
-        }
 
         private void ss2_DblClk(int Col, int ROW)
         {
@@ -478,6 +452,119 @@ namespace CG
             }
         }
 
+        public override void Spread_Ins()
+        {
+            double dThk = 0;
+            double dWid = 0;
+            double dLen = 0;
+            double dWgt = 0;
+            int lRow = 0;
+            string sPlateNo = "";
+            string sClipText;
+            string mPlateNo = "";
+            int iDivCnt;
+            int iIdc;
+            string sTemp;
+
+            int iIdr;
+
+            int iCount;
+
+            sPlateNo = "";
+
+            i_ScCurrSeq = 1;
+
+
+            if (ss1.ActiveSheet.RowCount <= 0)
+            {
+                if (TXT_MPLATE_NO.Text.Length == 12)
+                {
+                    base.Spread_Ins();
+                    ss1.ActiveSheet.Cells[0, 0].Text = TXT_MPLATE_NO.Text + "01";
+                }
+                else
+                {
+                    GeneralCommon.Gp_MsgBoxDisplay("请正确输入母板号 ！", "I", "");
+                }
+                return;
+            }
+            for (iCount = ss1.ActiveSheet.ActiveRowIndex; iCount < ss1.ActiveSheet.RowCount; iCount++)
+            {
+                if (sPlateNo == "" || ss1.ActiveSheet.Cells[iCount, 0].Text.Substring(0, 12) == sPlateNo.Substring(0, 12))
+                {
+                    sPlateNo = ss1.ActiveSheet.Cells[iCount, 0].Text;
+                    lRow = iCount;
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+
+            sPlateNo = "";
+
+            ss1.ActiveSheet.SetActiveCell(lRow, 0);
+            base.Spread_Ins();
+
+
+            //ss1.ReDraw = false;
+            if (lRow >= 0)
+            {
+                sPlateNo = ss1.ActiveSheet.Cells[lRow, SPD_PLATE_NO].Text;
+                dThk = convertX(ss1.ActiveSheet.Cells[lRow, SPD_THK].Text);
+                dWid = convertX(ss1.ActiveSheet.Cells[lRow, SPD_WID].Text);
+                dLen = convertX(ss1.ActiveSheet.Cells[lRow, SPD_LEN].Text);
+                dWgt = convertX(ss1.ActiveSheet.Cells[lRow, SPD_WGT].Text);
+                mPlateNo = ss1.ActiveSheet.Cells[lRow, SPD_MOPLATE].Text;
+            }
+            else
+            {
+                sPlateNo = TXT_MPLATE_NO.Text + "00";
+            }
+
+            lRow = lRow + 1;
+            ss1.ActiveSheet.Cells[lRow, SPD_PLATE_NO].Text = sPlateNo;
+            ss1.ActiveSheet.Cells[lRow, SPD_THK].Text = dThk.ToString();
+            ss1.ActiveSheet.Cells[lRow, SPD_WID].Text = dWid.ToString();
+            ss1.ActiveSheet.Cells[lRow, SPD_LEN].Text = dLen.ToString();
+            ss1.ActiveSheet.Cells[lRow, SPD_WGT].Text = dWgt.ToString();
+            ss1.ActiveSheet.Cells[lRow, SPD_MOPLATE].Text = mPlateNo;
+            ss1.ActiveSheet.RowHeader.Cells[lRow, 0].Text = "增加";
+            ss1.ActiveSheet.Cells[lRow, SPD_PLATE_NO].Text = string.Format("{0:D14}", Convert.ToInt64(ss1.ActiveSheet.Cells[lRow, SPD_PLATE_NO].Text) + 1);
+            ss1.ActiveSheet.SetActiveCell(lRow, 0);
+
+            iDivCnt = ss1.ActiveSheet.RowCount;
+
+            for (iIdr = 1; iIdr <= iDivCnt; iIdr++)
+            {
+                ss1.ActiveSheet.Cells[iIdr - 1, 0].Text = TXT_MPLATE_NO.Text.Substring(0, 12) + Convert.ToString(iIdr) + TXT_MPLATE_NO.Text.Substring(0, 13);
+
+                if (iIdr < iDivCnt)
+                {
+                    for (iIdc = 2; iIdc <= ss1.ActiveSheet.ColumnCount; iIdc++)
+                    {
+                        sTemp = ss1.ActiveSheet.Cells[iIdr - 1, iIdc - 1].Text;
+
+                        ss1.ActiveSheet.Cells[iIdr, iIdc - 1].Text = sTemp;
+                    }
+                }
+
+                ss1.ActiveSheet.Cells[iIdr - 1, SPD_SMP_FL2].Text = "False";
+                ss1.ActiveSheet.Cells[iIdr - 1, SPD_SHIFT].Text = Gf_ShiftSet3("");
+                ss1.ActiveSheet.Cells[iIdr - 1, SPD_GROUP_CD].Text = Gf_GroupSet(Gf_ShiftSet3(""), Gf_DTSet("", "X"));
+                ss1.ActiveSheet.Cells[iIdr - 1, SPD_EMP_CD].Text = GeneralCommon.sUserID;
+                ss1.ActiveSheet.Cells[iIdr - 1, SPD_PLT].Text = txt_WkPlt.Text;
+                ss1.ActiveSheet.Cells[iIdr - 1, SPD_PRC_LINE].Text = txt_PrcLine.Text;
+                if (iIdr == ss1.ActiveSheet.RowCount)
+                {
+                    ss1.ActiveSheet.Cells[iIdr - 1, SPD_DS_LAST_YN].Text = "True";
+                    ss1.ActiveSheet.Cells[iIdr - 2, SPD_DS_LAST_YN].Text = "False";
+                }
+
+            }
+        }
+
         #endregion
 
         
@@ -485,6 +572,7 @@ namespace CG
         {
             base.Form_Cls();
             txt_WkPlt.Text = "C3";
+            cbo_PrcLine_Chg();
             return true;
         }
 
@@ -806,7 +894,35 @@ namespace CG
 
         #endregion
 
-        
+        private void cbo_PrcLine_TextChanged(object sender, EventArgs e)
+        {
+            cbo_PrcLine_Chg();
+        }
+
+        private void ss1_ButtonClicked(object sender, EditorNotifyEventArgs e)
+        {
+            ss1_ButtonClk(e.Column, e.Row);
+        }
+
+        private void ss1_CellDoubleClick(object sender, CellClickEventArgs e)
+        {
+            ss1_DblClk(e.Column, e.Row);
+        }
+
+        private void ss1_EditChange(object sender, EditorNotifyEventArgs e)
+        {
+            ss1_EditChange(e.Column, e.Row);
+        }
+
+        private void ss1_Change(object sender, ChangeEventArgs e)
+        {
+            ss1_Change(e.Column, e.Row);
+        }
+
+        private void ss2_CellDoubleClick(object sender, CellClickEventArgs e)
+        {
+            ss2_DblClk(e.Column, e.Row);
+        }
 
     }
 }
