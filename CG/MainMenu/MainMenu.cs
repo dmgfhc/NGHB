@@ -363,6 +363,7 @@ namespace CG
             this.CGD2060C = new System.Windows.Forms.MenuItem();
             this.CGC2050C = new System.Windows.Forms.MenuItem();
             this.CGD2042C = new System.Windows.Forms.MenuItem();
+            this.AGC2051C = new System.Windows.Forms.MenuItem();
             this.WGC1010C = new System.Windows.Forms.MenuItem();
             this.WGC1020C = new System.Windows.Forms.MenuItem();
             this.WGC1030C = new System.Windows.Forms.MenuItem();
@@ -487,7 +488,6 @@ namespace CG
             this.MenuItem22 = new System.Windows.Forms.MenuItem();
             this.ImageList2 = new System.Windows.Forms.ImageList(this.components);
             this.ImageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.AGC2051C = new System.Windows.Forms.MenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.StatusBarPanel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatusBarPanel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatusBarPanel3)).BeginInit();
@@ -883,6 +883,12 @@ namespace CG
             this.CGD2042C.Index = 14;
             resources.ApplyResources(this.CGD2042C, "CGD2042C");
             this.CGD2042C.Click += new System.EventHandler(this.CGD2042C_Click);
+            // 
+            // AGC2051C
+            // 
+            this.AGC2051C.Index = 15;
+            resources.ApplyResources(this.AGC2051C, "AGC2051C");
+            this.AGC2051C.Click += new System.EventHandler(this.AGC2051C_Click);
             // 
             // WGC1010C
             // 
@@ -1695,12 +1701,6 @@ namespace CG
             this.ImageList1.Images.SetKeyName(9, "M10_1.gif");
             this.ImageList1.Images.SetKeyName(10, "M11_1.gif");
             this.ImageList1.Images.SetKeyName(11, "M12_1.gif");
-            // 
-            // AGC2051C
-            // 
-            this.AGC2051C.Index = 15;
-            resources.ApplyResources(this.AGC2051C, "AGC2051C");
-            this.AGC2051C.Click += new System.EventHandler(this.AGC2051C_Click);
             // 
             // MainMenu
             // 
