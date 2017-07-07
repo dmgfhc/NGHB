@@ -405,12 +405,6 @@
     <Compile Include="CGD\CGD2050C.Designer.cs">
       <DependentUpon>CGD2050C.cs</DependentUpon>
     </Compile>
-    <Compile Include="CGD\CGE2021C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGD\CGE2021C.Designer.cs">
-      <DependentUpon>CGE2021C.cs</DependentUpon>
-    </Compile>
     <Compile Include="CGD\CGD2081C.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -422,6 +416,18 @@
     </Compile>
     <Compile Include="CGD\CGD2060C.Designer.cs">
       <DependentUpon>CGD2060C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CGE\CGE2020C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CGE\CGE2020C.Designer.cs">
+      <DependentUpon>CGE2020C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CGE\CGE2021C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CGE\CGE2021C.Designer.cs">
+      <DependentUpon>CGE2021C.cs</DependentUpon>
     </Compile>
     <Compile Include="CGZ\CGZ2031C.cs">
       <SubType>Form</SubType>
@@ -875,14 +881,17 @@
     <EmbeddedResource Include="CGD\CGD2050C.resx">
       <DependentUpon>CGD2050C.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CGD\CGE2021C.resx">
-      <DependentUpon>CGE2021C.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CGD\CGD2081C.resx">
       <DependentUpon>CGD2081C.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CGD\CGD2060C.resx">
       <DependentUpon>CGD2060C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CGE\CGE2020C.resx">
+      <DependentUpon>CGE2020C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CGE\CGE2021C.resx">
+      <DependentUpon>CGE2021C.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CGZ\CGZ2031C.resx">
       <DependentUpon>CGZ2031C.cs</DependentUpon>

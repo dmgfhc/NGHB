@@ -179,6 +179,7 @@ namespace CG
         private MenuItem CGD2060C;
         private MenuItem CGC2050C;
         private MenuItem AGC2051C;
+        private MenuItem CGE2020C;
         //private MenuItem menuItem4;
         //private MenuItem menuItem7;
 		///'''fdfdsfdsfds
@@ -381,6 +382,15 @@ namespace CG
             this.WGC3030C = new System.Windows.Forms.MenuItem();
             this.menuItem46 = new System.Windows.Forms.MenuItem();
             this.WGC2035C = new System.Windows.Forms.MenuItem();
+            this.menuItem21 = new System.Windows.Forms.MenuItem();
+            this.CGE2020C = new System.Windows.Forms.MenuItem();
+            this.WGE1010C = new System.Windows.Forms.MenuItem();
+            this.WGE1020C = new System.Windows.Forms.MenuItem();
+            this.WGE2010C = new System.Windows.Forms.MenuItem();
+            this.WGE2020C = new System.Windows.Forms.MenuItem();
+            this.menuItem3 = new System.Windows.Forms.MenuItem();
+            this.menuItem4 = new System.Windows.Forms.MenuItem();
+            this.menuItem6 = new System.Windows.Forms.MenuItem();
             this.menuItem12 = new System.Windows.Forms.MenuItem();
             this.WGF1010C = new System.Windows.Forms.MenuItem();
             this.WGF1020C = new System.Windows.Forms.MenuItem();
@@ -390,14 +400,6 @@ namespace CG
             this.WGF1070C = new System.Windows.Forms.MenuItem();
             this.WGF1080C = new System.Windows.Forms.MenuItem();
             this.menuItem24 = new System.Windows.Forms.MenuItem();
-            this.menuItem21 = new System.Windows.Forms.MenuItem();
-            this.WGE1010C = new System.Windows.Forms.MenuItem();
-            this.WGE1020C = new System.Windows.Forms.MenuItem();
-            this.WGE2010C = new System.Windows.Forms.MenuItem();
-            this.WGE2020C = new System.Windows.Forms.MenuItem();
-            this.menuItem3 = new System.Windows.Forms.MenuItem();
-            this.menuItem4 = new System.Windows.Forms.MenuItem();
-            this.menuItem6 = new System.Windows.Forms.MenuItem();
             this.menuItem23 = new System.Windows.Forms.MenuItem();
             this.WGT1010C = new System.Windows.Forms.MenuItem();
             this.WGT1020C = new System.Windows.Forms.MenuItem();
@@ -568,8 +570,8 @@ namespace CG
             this.menuItem27,
             this.menuItem9,
             this.menuItem10,
-            this.menuItem12,
             this.menuItem21,
+            this.menuItem12,
             this.menuItem23,
             this.Mnu_Control,
             this.MenuItem1,
@@ -992,9 +994,71 @@ namespace CG
             resources.ApplyResources(this.WGC2035C, "WGC2035C");
             this.WGC2035C.Click += new System.EventHandler(this.WGC2035C_Click);
             // 
+            // menuItem21
+            // 
+            this.menuItem21.Index = 3;
+            this.menuItem21.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.CGE2020C,
+            this.WGE1010C,
+            this.WGE1020C,
+            this.WGE2010C,
+            this.WGE2020C,
+            this.menuItem3,
+            this.menuItem4,
+            this.menuItem6});
+            resources.ApplyResources(this.menuItem21, "menuItem21");
+            // 
+            // CGE2020C
+            // 
+            this.CGE2020C.Index = 0;
+            resources.ApplyResources(this.CGE2020C, "CGE2020C");
+            this.CGE2020C.Click += new System.EventHandler(this.CGE2020C_Click);
+            // 
+            // WGE1010C
+            // 
+            this.WGE1010C.Index = 1;
+            resources.ApplyResources(this.WGE1010C, "WGE1010C");
+            this.WGE1010C.Click += new System.EventHandler(this.WGE1010C_Click);
+            // 
+            // WGE1020C
+            // 
+            this.WGE1020C.Index = 2;
+            resources.ApplyResources(this.WGE1020C, "WGE1020C");
+            this.WGE1020C.Click += new System.EventHandler(this.WGE1020C_Click);
+            // 
+            // WGE2010C
+            // 
+            this.WGE2010C.Index = 3;
+            resources.ApplyResources(this.WGE2010C, "WGE2010C");
+            this.WGE2010C.Click += new System.EventHandler(this.WGE2010C_Click);
+            // 
+            // WGE2020C
+            // 
+            this.WGE2020C.Index = 4;
+            resources.ApplyResources(this.WGE2020C, "WGE2020C");
+            this.WGE2020C.Click += new System.EventHandler(this.WGE2020C_Click);
+            // 
+            // menuItem3
+            // 
+            this.menuItem3.Index = 5;
+            resources.ApplyResources(this.menuItem3, "menuItem3");
+            this.menuItem3.Click += new System.EventHandler(this.menuItem3_Click);
+            // 
+            // menuItem4
+            // 
+            this.menuItem4.Index = 6;
+            resources.ApplyResources(this.menuItem4, "menuItem4");
+            this.menuItem4.Click += new System.EventHandler(this.menuItem4_Click);
+            // 
+            // menuItem6
+            // 
+            this.menuItem6.Index = 7;
+            resources.ApplyResources(this.menuItem6, "menuItem6");
+            this.menuItem6.Click += new System.EventHandler(this.menuItem6_Click_1);
+            // 
             // menuItem12
             // 
-            this.menuItem12.Index = 3;
+            this.menuItem12.Index = 4;
             this.menuItem12.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.WGF1010C,
             this.WGF1020C,
@@ -1053,61 +1117,6 @@ namespace CG
             this.menuItem24.Index = 7;
             resources.ApplyResources(this.menuItem24, "menuItem24");
             this.menuItem24.Click += new System.EventHandler(this.menuItem24_Click);
-            // 
-            // menuItem21
-            // 
-            this.menuItem21.Index = 4;
-            this.menuItem21.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-            this.WGE1010C,
-            this.WGE1020C,
-            this.WGE2010C,
-            this.WGE2020C,
-            this.menuItem3,
-            this.menuItem4,
-            this.menuItem6});
-            resources.ApplyResources(this.menuItem21, "menuItem21");
-            // 
-            // WGE1010C
-            // 
-            this.WGE1010C.Index = 0;
-            resources.ApplyResources(this.WGE1010C, "WGE1010C");
-            this.WGE1010C.Click += new System.EventHandler(this.WGE1010C_Click);
-            // 
-            // WGE1020C
-            // 
-            this.WGE1020C.Index = 1;
-            resources.ApplyResources(this.WGE1020C, "WGE1020C");
-            this.WGE1020C.Click += new System.EventHandler(this.WGE1020C_Click);
-            // 
-            // WGE2010C
-            // 
-            this.WGE2010C.Index = 2;
-            resources.ApplyResources(this.WGE2010C, "WGE2010C");
-            this.WGE2010C.Click += new System.EventHandler(this.WGE2010C_Click);
-            // 
-            // WGE2020C
-            // 
-            this.WGE2020C.Index = 3;
-            resources.ApplyResources(this.WGE2020C, "WGE2020C");
-            this.WGE2020C.Click += new System.EventHandler(this.WGE2020C_Click);
-            // 
-            // menuItem3
-            // 
-            this.menuItem3.Index = 4;
-            resources.ApplyResources(this.menuItem3, "menuItem3");
-            this.menuItem3.Click += new System.EventHandler(this.menuItem3_Click);
-            // 
-            // menuItem4
-            // 
-            this.menuItem4.Index = 5;
-            resources.ApplyResources(this.menuItem4, "menuItem4");
-            this.menuItem4.Click += new System.EventHandler(this.menuItem4_Click);
-            // 
-            // menuItem6
-            // 
-            this.menuItem6.Index = 6;
-            resources.ApplyResources(this.menuItem6, "menuItem6");
-            this.menuItem6.Click += new System.EventHandler(this.menuItem6_Click_1);
             // 
             // menuItem23
             // 
@@ -3441,6 +3450,17 @@ namespace CG
                 AGC2051C.MdiParent = this;
                 AGC2051C.Show();
                 AGC2051C.WindowState = FormWindowState.Maximized;
+            }
+        }
+
+        private void CGE2020C_Click(object sender, EventArgs e)
+        {
+            if (!GeneralCommon.Gf_IsFormLoad("CGE2020C"))
+            {
+                CGE2020C CGE2020C = new CGE2020C();
+                CGE2020C.MdiParent = this;
+                CGE2020C.Show();
+                CGE2020C.WindowState = FormWindowState.Maximized;
             }
         }
      

@@ -149,7 +149,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAC2
-        GwAAAk1TRnQBSQFMAgEBDAEAAWwBBgFsAQYBKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        GwAAAk1TRnQBSQFMAgEBDAEAAXwBBgF8AQYBKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABoAMAAXgDAAEBAQABCAYAAUsYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -453,6 +453,33 @@
   <data name="menuItem10.Text" xml:space="preserve">
     <value>精整作业实绩管理</value>
   </data>
+  <data name="CGE2020C.Text" xml:space="preserve">
+    <value>在线钢板入库界面_CGE2020C</value>
+  </data>
+  <data name="WGE1010C.Text" xml:space="preserve">
+    <value>钢板半成品指定垛位管理界面_WGE1010C</value>
+  </data>
+  <data name="WGE1020C.Text" xml:space="preserve">
+    <value>钢板半成品垛位管理界面_WGE1020C</value>
+  </data>
+  <data name="WGE2010C.Text" xml:space="preserve">
+    <value>钢板成品入库界面_WGE2010C</value>
+  </data>
+  <data name="WGE2020C.Text" xml:space="preserve">
+    <value>钢板成品垛位管理界面_WGE2020C</value>
+  </data>
+  <data name="menuItem3.Text" xml:space="preserve">
+    <value>宽厚板库区区位查询和维护界面_WGE3010C</value>
+  </data>
+  <data name="menuItem4.Text" xml:space="preserve">
+    <value>宽厚板库区垛位图形化显示_WGE4030C</value>
+  </data>
+  <data name="menuItem6.Text" xml:space="preserve">
+    <value>钢板库库图管理_WGE4040C</value>
+  </data>
+  <data name="menuItem21.Text" xml:space="preserve">
+    <value>钢板库管理</value>
+  </data>
   <data name="WGF1010C.Text" xml:space="preserve">
     <value>轧辊入库管理界面_WGF1010C</value>
   </data>
@@ -479,30 +506,6 @@
   </data>
   <data name="menuItem12.Text" xml:space="preserve">
     <value>轧辊管理</value>
-  </data>
-  <data name="WGE1010C.Text" xml:space="preserve">
-    <value>钢板半成品指定垛位管理界面_WGE1010C</value>
-  </data>
-  <data name="WGE1020C.Text" xml:space="preserve">
-    <value>钢板半成品垛位管理界面_WGE1020C</value>
-  </data>
-  <data name="WGE2010C.Text" xml:space="preserve">
-    <value>钢板成品入库界面_WGE2010C</value>
-  </data>
-  <data name="WGE2020C.Text" xml:space="preserve">
-    <value>钢板成品垛位管理界面_WGE2020C</value>
-  </data>
-  <data name="menuItem3.Text" xml:space="preserve">
-    <value>宽厚板库区区位查询和维护界面_WGE3010C</value>
-  </data>
-  <data name="menuItem4.Text" xml:space="preserve">
-    <value>宽厚板库区垛位图形化显示_WGE4030C</value>
-  </data>
-  <data name="menuItem6.Text" xml:space="preserve">
-    <value>钢板库库图管理_WGE4040C</value>
-  </data>
-  <data name="menuItem21.Text" xml:space="preserve">
-    <value>钢板库管理</value>
   </data>
   <data name="WGT1010C.Text" xml:space="preserve">
     <value>加热炉实绩查询界面_WGT1010C</value>
@@ -944,7 +947,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAC2
-        GwAAAk1TRnQBSQFMAgEBDAEAAWwBBgFsAQYBKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        GwAAAk1TRnQBSQFMAgEBDAEAAXwBBgF8AQYBKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABoAMAAXgDAAEBAQABCAYAAUsYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -1073,7 +1076,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABi
-        GwAAAk1TRnQBSQFMAgEBDAEAAWwBBgFsAQYBKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        GwAAAk1TRnQBSQFMAgEBDAEAAXwBBgF8AQYBKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABoAMAAXgDAAEBAQABCAYAAUsYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -1686,6 +1689,60 @@
   <data name="&gt;&gt;WGC2035C.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;menuItem21.Name" xml:space="preserve">
+    <value>menuItem21</value>
+  </data>
+  <data name="&gt;&gt;menuItem21.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CGE2020C.Name" xml:space="preserve">
+    <value>CGE2020C</value>
+  </data>
+  <data name="&gt;&gt;CGE2020C.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;WGE1010C.Name" xml:space="preserve">
+    <value>WGE1010C</value>
+  </data>
+  <data name="&gt;&gt;WGE1010C.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;WGE1020C.Name" xml:space="preserve">
+    <value>WGE1020C</value>
+  </data>
+  <data name="&gt;&gt;WGE1020C.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;WGE2010C.Name" xml:space="preserve">
+    <value>WGE2010C</value>
+  </data>
+  <data name="&gt;&gt;WGE2010C.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;WGE2020C.Name" xml:space="preserve">
+    <value>WGE2020C</value>
+  </data>
+  <data name="&gt;&gt;WGE2020C.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem3.Name" xml:space="preserve">
+    <value>menuItem3</value>
+  </data>
+  <data name="&gt;&gt;menuItem3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem4.Name" xml:space="preserve">
+    <value>menuItem4</value>
+  </data>
+  <data name="&gt;&gt;menuItem4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuItem6.Name" xml:space="preserve">
+    <value>menuItem6</value>
+  </data>
+  <data name="&gt;&gt;menuItem6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;menuItem12.Name" xml:space="preserve">
     <value>menuItem12</value>
   </data>
@@ -1738,54 +1795,6 @@
     <value>menuItem24</value>
   </data>
   <data name="&gt;&gt;menuItem24.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuItem21.Name" xml:space="preserve">
-    <value>menuItem21</value>
-  </data>
-  <data name="&gt;&gt;menuItem21.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGE1010C.Name" xml:space="preserve">
-    <value>WGE1010C</value>
-  </data>
-  <data name="&gt;&gt;WGE1010C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGE1020C.Name" xml:space="preserve">
-    <value>WGE1020C</value>
-  </data>
-  <data name="&gt;&gt;WGE1020C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGE2010C.Name" xml:space="preserve">
-    <value>WGE2010C</value>
-  </data>
-  <data name="&gt;&gt;WGE2010C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGE2020C.Name" xml:space="preserve">
-    <value>WGE2020C</value>
-  </data>
-  <data name="&gt;&gt;WGE2020C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuItem3.Name" xml:space="preserve">
-    <value>menuItem3</value>
-  </data>
-  <data name="&gt;&gt;menuItem3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuItem4.Name" xml:space="preserve">
-    <value>menuItem4</value>
-  </data>
-  <data name="&gt;&gt;menuItem4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuItem6.Name" xml:space="preserve">
-    <value>menuItem6</value>
-  </data>
-  <data name="&gt;&gt;menuItem6.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;menuItem23.Name" xml:space="preserve">
