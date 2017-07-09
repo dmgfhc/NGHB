@@ -134,6 +134,8 @@ namespace CG
 
         private void setButtonFlat(object[,] stdYardRecords)
         {
+            string countQuery;
+            string count;
             if (stdYardRecords == null) return;
             int recordCount = stdYardRecords.Length / 14;
             for (int i = 0; i < recordCount; i++)
@@ -154,8 +156,18 @@ namespace CG
                 bt.Height = int.Parse((Math.Round(Height / actWidth * this.pl.Height)).ToString());
                 bt.Width = int.Parse((Math.Round(Width / actLength * this.pl.Width)).ToString());
 
-                bt.Text = stdYardRecords[i, 5].ToString();
+                countQuery = "SELECT COUNT(B.PLATE_NO) FROM NISCO.GP_PLATEYARD A, NISCO.GP_PLATE B WHERE A.YARD_ADDR = '" + stdYardRecords[i, 5].ToString() + "'AND A.PLATE_NO = B.PLATE_NO AND B.PROD_CD = 'PP' ORDER BY A.BED_SEQ";
+                count = plSqlReturn(countQuery)[0,0].ToString();
 
+                if (count == "0")
+                {
+                    bt.Text = stdYardRecords[i, 5].ToString();
+                }
+                else
+                {
+                    bt.Text = stdYardRecords[i, 5].ToString() + "（"+ count + "）";
+                    bt.ForeColor = Color.Yellow;
+                }
                 bt.TextAlign = ContentAlignment.MiddleCenter;
 
                 //bt.MouseClick += new MouseEventHandler(bt_MouseClick);
@@ -170,7 +182,7 @@ namespace CG
         private void bt_MouseClick(object sender, MouseEventArgs e)
         {
             Button bt = (Button)sender;
-            yard.Text = bt.Text;
+            yard.Text = bt.Text.Substring(0, 7);
             //yard.Text = "P3C0211";
             p_Ref(1, 1, true, false);
 
