@@ -180,6 +180,7 @@ namespace CG
         private MenuItem CGC2050C;
         private MenuItem AGC2051C;
         private MenuItem CGE2020C;
+        private MenuItem CGE2030C;
         //private MenuItem menuItem4;
         //private MenuItem menuItem7;
 		///'''fdfdsfdsfds
@@ -490,6 +491,7 @@ namespace CG
             this.MenuItem22 = new System.Windows.Forms.MenuItem();
             this.ImageList2 = new System.Windows.Forms.ImageList(this.components);
             this.ImageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.CGE2030C = new System.Windows.Forms.MenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.StatusBarPanel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatusBarPanel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatusBarPanel3)).BeginInit();
@@ -999,6 +1001,7 @@ namespace CG
             this.menuItem21.Index = 3;
             this.menuItem21.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.CGE2020C,
+            this.CGE2030C,
             this.WGE1010C,
             this.WGE1020C,
             this.WGE2010C,
@@ -1016,43 +1019,43 @@ namespace CG
             // 
             // WGE1010C
             // 
-            this.WGE1010C.Index = 1;
+            this.WGE1010C.Index = 2;
             resources.ApplyResources(this.WGE1010C, "WGE1010C");
             this.WGE1010C.Click += new System.EventHandler(this.WGE1010C_Click);
             // 
             // WGE1020C
             // 
-            this.WGE1020C.Index = 2;
+            this.WGE1020C.Index = 3;
             resources.ApplyResources(this.WGE1020C, "WGE1020C");
             this.WGE1020C.Click += new System.EventHandler(this.WGE1020C_Click);
             // 
             // WGE2010C
             // 
-            this.WGE2010C.Index = 3;
+            this.WGE2010C.Index = 4;
             resources.ApplyResources(this.WGE2010C, "WGE2010C");
             this.WGE2010C.Click += new System.EventHandler(this.WGE2010C_Click);
             // 
             // WGE2020C
             // 
-            this.WGE2020C.Index = 4;
+            this.WGE2020C.Index = 5;
             resources.ApplyResources(this.WGE2020C, "WGE2020C");
             this.WGE2020C.Click += new System.EventHandler(this.WGE2020C_Click);
             // 
             // menuItem3
             // 
-            this.menuItem3.Index = 5;
+            this.menuItem3.Index = 6;
             resources.ApplyResources(this.menuItem3, "menuItem3");
             this.menuItem3.Click += new System.EventHandler(this.menuItem3_Click);
             // 
             // menuItem4
             // 
-            this.menuItem4.Index = 6;
+            this.menuItem4.Index = 7;
             resources.ApplyResources(this.menuItem4, "menuItem4");
             this.menuItem4.Click += new System.EventHandler(this.menuItem4_Click);
             // 
             // menuItem6
             // 
-            this.menuItem6.Index = 7;
+            this.menuItem6.Index = 8;
             resources.ApplyResources(this.menuItem6, "menuItem6");
             this.menuItem6.Click += new System.EventHandler(this.menuItem6_Click_1);
             // 
@@ -1710,6 +1713,12 @@ namespace CG
             this.ImageList1.Images.SetKeyName(9, "M10_1.gif");
             this.ImageList1.Images.SetKeyName(10, "M11_1.gif");
             this.ImageList1.Images.SetKeyName(11, "M12_1.gif");
+            // 
+            // CGE2030C
+            // 
+            this.CGE2030C.Index = 1;
+            resources.ApplyResources(this.CGE2030C, "CGE2030C");
+            this.CGE2030C.Click += new System.EventHandler(this.CGE2030C_Click);
             // 
             // MainMenu
             // 
@@ -3461,6 +3470,17 @@ namespace CG
                 CGE2020C.MdiParent = this;
                 CGE2020C.Show();
                 CGE2020C.WindowState = FormWindowState.Maximized;
+            }
+        }
+
+        private void CGE2030C_Click(object sender, EventArgs e)
+        {
+            if (!GeneralCommon.Gf_IsFormLoad("CGE2030C"))
+            {
+                CGE2030C CGE2030C = new CGE2030C();
+                CGE2030C.MdiParent = this;
+                CGE2030C.Show();
+                CGE2030C.WindowState = FormWindowState.Maximized;
             }
         }
      
