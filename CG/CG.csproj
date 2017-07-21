@@ -459,6 +459,18 @@
     <Compile Include="CGE\WGE4030C.Designer.cs">
       <DependentUpon>WGE4030C.cs</DependentUpon>
     </Compile>
+    <Compile Include="CGF\CGF2010C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CGF\CGF2010C.Designer.cs">
+      <DependentUpon>CGF2010C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CGF\WGF1010C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CGF\WGF1010C.Designer.cs">
+      <DependentUpon>WGF1010C.cs</DependentUpon>
+    </Compile>
     <Compile Include="CGZ\CGZ2031C.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -626,12 +638,6 @@
     </Compile>
     <Compile Include="CGE\YardDetail.Designer.cs">
       <DependentUpon>YardDetail.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGF\WGF1010C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGF\WGF1010C.Designer.cs">
-      <DependentUpon>WGF1010C.cs</DependentUpon>
     </Compile>
     <Compile Include="CGF\WGF1020C.cs">
       <SubType>Form</SubType>
@@ -926,6 +932,12 @@
     <EmbeddedResource Include="CGE\WGE4030C.resx">
       <DependentUpon>WGE4030C.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CGF\CGF2010C.resx">
+      <DependentUpon>CGF2010C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CGF\WGF1010C.resx">
+      <DependentUpon>WGF1010C.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CGZ\CGZ2031C.resx">
       <DependentUpon>CGZ2031C.cs</DependentUpon>
     </EmbeddedResource>
@@ -1010,9 +1022,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CGE\YardDetail.resx">
       <DependentUpon>YardDetail.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGF\WGF1010C.resx">
-      <DependentUpon>WGF1010C.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CGF\WGF1020C.resx">
       <DependentUpon>WGF1020C.cs</DependentUpon>
