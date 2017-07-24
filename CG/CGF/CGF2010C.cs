@@ -32,17 +32,17 @@ using CommonClass;
 //-- System Name       宽厚板轧钢作业
 //-- Sub_System Name   轧辊管理
 //-- Program Name      轧辊入库管理界面
-//-- Program ID        WGF1010C
+//-- Program ID        CGF2010C
 //-- Document No       Q-00-0010(Specification)
-//-- Designer          李 超
-//-- Coder             李 超
-//-- Date              2012.12.27
+//-- Designer          韩超
+//-- Coder             韩超
+//-- Date              2017.07.24
 //-- Description
 //-------------------------------------------------------------------------------
 //-- UPDATE HISTORY  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //-------------------------------------------------------------------------------
 //-- VER       DATE          EDITOR       DESCRIPTION
-//-- 1.00    2012.12.27       李超        轧辊入库管理
+//-- 1.00    2017.07.24       韩超        轧辊入库管理
 //-------------------------------------------------------------------------------
 //-- DECLARATION     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //-------------------------------------------------------------------------------
@@ -57,7 +57,6 @@ namespace CG
         }
 
         Collection Mc1 = new Collection();
-        Collection Sc1 = new Collection();
 
         #region 界面初始化
 
@@ -78,7 +77,7 @@ namespace CG
             p_SetMc(UTP_ROLL_IN_TIME, "NIR", "", "", "", imcseq, "");
             p_SetMc("轧辊标识号",TXT_ROLL_NO, "NIR", "", "", "", "",imcseq);
             p_SetMc(TXT_ROLL_MAKER, "IR", "", "", "", imcseq, "");
-            p_SetMc("入库辊径",NMB_ROLL_DIA, "NIR", "", "", "","", imcseq);
+            p_SetMc("入库辊径",SDB_ROLL_DIA, "NIR", "", "", "","", imcseq);
             p_SetMc(NMB_ROLL_SHLD_DIA, "IR", "", "", "", imcseq, "");
             p_SetMc(NMB_ROLL_NECK_DIA, "IR", "", "", "", imcseq, "");
             p_SetMc(NMB_ROLL_WGT, "NIR", "", "", "", imcseq, "");

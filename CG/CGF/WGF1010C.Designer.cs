@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TXT_PLT = new System.Windows.Forms.TextBox();
             this.TXT_ROLL_IN_EMP = new System.Windows.Forms.TextBox();
             this.CMB_GROUP = new System.Windows.Forms.ComboBox();
             this.CMB_SHIFT = new System.Windows.Forms.ComboBox();
@@ -81,7 +82,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.TXT_PLT = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -104,6 +104,16 @@
             this.groupBox1.Size = new System.Drawing.Size(1018, 54);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // TXT_PLT
+            // 
+            this.TXT_PLT.Location = new System.Drawing.Point(342, 17);
+            this.TXT_PLT.Name = "TXT_PLT";
+            this.TXT_PLT.ReadOnly = true;
+            this.TXT_PLT.Size = new System.Drawing.Size(71, 22);
+            this.TXT_PLT.TabIndex = 4;
+            this.TXT_PLT.Text = "C2";
+            this.TXT_PLT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TXT_ROLL_IN_EMP
             // 
@@ -244,7 +254,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 54);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1018, 568);
+            this.groupBox2.Size = new System.Drawing.Size(1018, 588);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
@@ -670,19 +680,9 @@
             this.label6.Text = "入库时间";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // TXT_PLT
-            // 
-            this.TXT_PLT.Location = new System.Drawing.Point(342, 17);
-            this.TXT_PLT.Name = "TXT_PLT";
-            this.TXT_PLT.ReadOnly = true;
-            this.TXT_PLT.Size = new System.Drawing.Size(71, 22);
-            this.TXT_PLT.TabIndex = 4;
-            this.TXT_PLT.Text = "C2";
-            this.TXT_PLT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // WGF1010C
             // 
-            this.ClientSize = new System.Drawing.Size(1018, 622);
+            this.ClientSize = new System.Drawing.Size(1018, 642);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "WGF1010C";
