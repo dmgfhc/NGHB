@@ -57,42 +57,94 @@ namespace CG
         }
 
         Collection Mc1 = new Collection();
+        Collection Mc2 = new Collection();
+        Collection Mc3 = new Collection();
+        Collection Mc4 = new Collection();
 
         #region 界面初始化
 
         protected override void p_SubFormInit()
         {
-
-            int iheadrow;
             int imcseq;
-            int iscseq;
             p_McIni(Mc1, true);
             imcseq = 1;
-            p_SetMc("轧辊号",CBO_ROLL_NO, "PNIR", "", "", "","", imcseq);
-            p_SetMc("工厂",TXT_PLT, "NIR", "", "", "","", imcseq);
-            p_SetMc(CBO_SHIFT, "NI", "", "", "", imcseq, "");
-            p_SetMc("班别",CBO_GROUP, "NI", "", "", "","", imcseq);
-            p_SetMc(TXT_ROLL_IN_EMP, "NI", "", "", "", imcseq, "");
+            p_SetMc("轧辊号",CBO_ROLL_NO, "PNIR", "", "", "","", imcseq);//0
+            p_SetMc("工厂代码", CBO_PLT, "NIR", "", "", "", "", imcseq);//1
+            p_SetMc("班次", CBO_SHIFT, "NI", "", "", "", "", imcseq);//2
+            p_SetMc("", CBO_GROUP, "I", "", "", "", "", imcseq);//3
+            p_SetMc("作业人员", TXT_ROLL_IN_EMP, "NI", "", "", "", "", imcseq);//4
+            p_SetMc("入库时间", UTP_ROLL_IN_TIME, "NIR", "", "", "", "", imcseq);//5
+            p_SetMc("轧辊标识号", TXT_ROLL_NO, "NIR", "", "", "", "", imcseq);//6
+            p_SetMc("", TXT_ROLL_MAKER, "IR", "", "", "", "", imcseq);//7
+            p_SetMc("入库辊径", SDB_ROLL_DIA, "NIR", "", "", "", "", imcseq);//8
+            p_SetMc("", SDB_ROLL_DIA_Y, "RL", "", "", "", "", imcseq);//9
+            p_SetMc("", SDB_ROLL_SHLD_DIA, "IR", "", "", "", "", imcseq);//10
+            p_SetMc("", SDB_ROLL_NECK_DIA, "IR", "", "", "", "", imcseq);//11
+            p_SetMc("轧辊重量", SDB_ROLL_WGT, "NIR", "", "", "", "", imcseq);//12
+            p_SetMc("", SDB_ROLL_IN_W_HARD, "IR", "", "", "", "", imcseq);//13
+            p_SetMc("", SDB_ROLL_W_DIA2, "IR", "", "", "", "", imcseq);//14
+            p_SetMc("", SDB_ROLL_IN_C_HARD, "IR", "", "", "", "", imcseq);//15
+            p_SetMc("", SDB_ROLL_IN_D_HARD, "IR", "", "", "", "", imcseq);//16
+            p_SetMc("", SDB_ROLL_D_DIA2, "IR", "", "", "", "", imcseq);//17
+            p_SetMc("", SDB_ROLL_IN_AVE_HARD, "RL", "", "", "", "", imcseq);//18
+            p_SetMc("", TXT_ROLL_MATERIAL, "IR", "", "", "", "", imcseq);//19
+            p_SetMc("", TXT_MAKER_NO, "IR", "", "", "", "", imcseq);//20
+            p_SetMc("", TXT_R_SHIFT, "RL", "", "", "", "", imcseq);//21
+            p_SetMc("", TXT_R_GROUP, "RL", "", "", "", "", imcseq);//22
+            p_SetMc("", TXT_R_IN_EMP, "RL", "", "", "", "", imcseq);//23
+            p_SetMc("", TXT_LOC, "IR", "", "", "", "", imcseq);//24
+            p_SetMc("", txt_sec_treat_mtd, "IR", "", "", "", "", imcseq);//25
+            p_SetMc("", txt_ISSUETALLYNO, "IR", "", "", "", "", imcseq);//26
+            p_SetMc("料号", txt_MTRLNO, "NIR", "", "", "", "", imcseq);//27
+            p_SetMc("", txt_ROLL_PRICE, "IR", "", "", "", "", imcseq);//28
+            p_SetMc("限位辊径", txt_PLAN_DIA, "NIR", "", "", "", "", imcseq);//29
 
-            p_SetMc(UTP_ROLL_IN_TIME, "NIR", "", "", "", imcseq, "");
-            p_SetMc("轧辊标识号",TXT_ROLL_NO, "NIR", "", "", "", "",imcseq);
-            p_SetMc(TXT_ROLL_MAKER, "IR", "", "", "", imcseq, "");
-            p_SetMc("入库辊径",SDB_ROLL_DIA, "NIR", "", "", "","", imcseq);
-            p_SetMc(NMB_ROLL_SHLD_DIA, "IR", "", "", "", imcseq, "");
-            p_SetMc(NMB_ROLL_NECK_DIA, "IR", "", "", "", imcseq, "");
-            p_SetMc(NMB_ROLL_WGT, "NIR", "", "", "", imcseq, "");
-            p_SetMc(NMB_ROLL_IN_W_HARD, "IR", "", "", "", imcseq, "");
-            p_SetMc(NMB_ROLL_IN_C_HARD, "IR", "", "", "", imcseq, "");
-            p_SetMc(NMB_ROLL_IN_D_HARD, "IR", "", "", "", imcseq, "");
-            p_SetMc(NMB_ROLL_IN_AVE_HARD, "RL", "", "", "", imcseq, "");
-            p_SetMc(TXT_ROLL_MATERIAL, "IR", "", "", "", imcseq, "");
-            p_SetMc(TXT_R_SHIFT, "RL", "", "", "", imcseq, "");
-            p_SetMc(TXT_R_GROUP, "RL", "", "", "", imcseq, "");
-            p_SetMc(TXT_R_IN_EMP, "RL", "", "", "", imcseq, "");
-            p_SetMc(txt_ISSUETALLYNO, "IR", "", "", "", imcseq, "");
-            p_SetMc("料号",txt_MTRLNO, "NIR", "", "", "","", imcseq);
-            p_SetMc(txt_ROLL_PRICE, "IR", "", "", "", imcseq, "");
-            p_SetMc("限位辊径",txt_PLAN_DIA, "NIR", "", "", "","", imcseq);
+            p_McIni(Mc2, true);
+            imcseq = 2;
+            p_SetMc("轧辊号", CBO_ROLL_NO, "PNIR", "", "", "", "", imcseq);//0
+            p_SetMc("班次", CBO_SHIFT, "NI", "", "", "", "", imcseq);//1
+            p_SetMc("", CBO_GROUP, "I", "", "", "", "", imcseq);//2
+            p_SetMc("作业人员", TXT_ROLL_IN_EMP, "NI", "", "", "", "", imcseq);//3
+            p_SetMc("入库时间", UTP_B_ROLL_IN_TIME, "NIR", "", "", "", "", imcseq);//4
+            p_SetMc("", UTP_B_ROLL_USE_TIME, "IR", "", "", "", "", imcseq);//5
+            p_SetMc("轴承座标识号", TXT_CHOCK_NO, "NIR", "", "", "", "", imcseq);//6
+            p_SetMc("", TXT_B_ROLL_MAKER, "IR", "", "", "", "", imcseq);//7
+            p_SetMc("", SDB_B_IN_DIA, "IR", "", "", "", "", imcseq);//8
+            p_SetMc("", SDB_B_OUT_DIA, "IR", "", "", "", "", imcseq);//9
+            p_SetMc("", TXT_B_ROLL_MATERIAL, "IR", "", "", "", "", imcseq);//10
+            p_SetMc("", TXT_B_SHIFT, "RL", "", "", "", "", imcseq);//11
+            p_SetMc("", TXT_B_GROUP, "RL", "", "", "", "", imcseq);//12
+            p_SetMc("", TXT_B_IN_EMP, "RL", "", "", "", "", imcseq);//13
+
+            p_McIni(Mc3, true);
+            imcseq = 3;
+            p_SetMc("轧辊号", CBO_ROLL_NO, "PNIR", "", "", "", "", imcseq);//0
+            p_SetMc("班次", CBO_SHIFT, "NI", "", "", "", "", imcseq);//1
+            p_SetMc("", CBO_GROUP, "I", "", "", "", "", imcseq);//2
+            p_SetMc("作业人员", TXT_ROLL_IN_EMP, "NI", "", "", "", "", imcseq);//3
+            p_SetMc("入库时间", UTP_C_ROLL_IN_TIME, "NIR", "", "", "", "", imcseq);//4
+            p_SetMc("轴承标识号", TXT_BEAR_NO, "NIR", "", "", "", "", imcseq);//5
+            p_SetMc("", TXT_C_ROLL_MAKER, "IR", "", "", "", "", imcseq);//6
+            p_SetMc("", SDB_C_IN_DIA, "IR", "", "", "", "", imcseq);//7
+            p_SetMc("", SDB_C_OUT_DIA, "IR", "", "", "", "", imcseq);//8
+            p_SetMc("", SDB_C_ROLL_WID, "IR", "", "", "", "", imcseq);//9
+            p_SetMc("", TXT_C_SHIFT, "RL", "", "", "", "", imcseq);//10
+            p_SetMc("", TXT_C_GROUP, "RL", "", "", "", "", imcseq);//11
+            p_SetMc("", TXT_C_IN_EMP, "RL", "", "", "", "", imcseq);//12
+
+            p_McIni(Mc4, true);
+            imcseq = 4;
+            p_SetMc("轧辊号", CBO_ROLL_NO, "PNIR", "", "", "", "", imcseq);//0
+            p_SetMc("班次", CBO_SHIFT, "NI", "", "", "", "", imcseq);//1
+            p_SetMc("", CBO_GROUP, "I", "", "", "", "", imcseq);//2
+            p_SetMc("作业人员", TXT_ROLL_IN_EMP, "NI", "", "", "", "", imcseq);//3
+            p_SetMc("入库时间", UTP_P_ROLL_IN_TIME, "NIR", "", "", "", "", imcseq);//4
+            p_SetMc("护板标识号", TXT_PLANK_NO, "NIR", "", "", "", "", imcseq);//5
+            p_SetMc("", TXT_P_ROLL_MAKER, "IR", "", "", "", "", imcseq);//6
+            p_SetMc("", TXT_P_SHIFT, "RL", "", "", "", "", imcseq);//7
+            p_SetMc("", TXT_P_GROUP, "RL", "", "", "", "", imcseq);//8
+            p_SetMc("", TXT_P_IN_EMP, "RL", "", "", "", "", imcseq);//9
+          
         }
 
 
@@ -185,6 +237,7 @@ namespace CG
                 GeneralCommon.Gp_MsgBoxDisplay("轧辊重量不能为空！", "", "");
                 return;
             }
+            
 
             p_pro(1, 0, true, true);
            

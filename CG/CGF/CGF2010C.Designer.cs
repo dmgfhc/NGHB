@@ -38,130 +38,130 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.ULabel16 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.TXT_R_IN_EMP = new System.Windows.Forms.TextBox();
-            this.ULabel39 = new System.Windows.Forms.Label();
-            this.ULabel38 = new System.Windows.Forms.Label();
-            this.TXT_R_GROUP = new System.Windows.Forms.TextBox();
-            this.TXT_R_SHIFT = new System.Windows.Forms.TextBox();
-            this.ULabel37 = new System.Windows.Forms.Label();
-            this.SSC3 = new System.Windows.Forms.CheckBox();
-            this.SSC2 = new System.Windows.Forms.CheckBox();
-            this.SSC1 = new System.Windows.Forms.CheckBox();
-            this.SSC0 = new System.Windows.Forms.CheckBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
+            this.TXT_ROLL_MATERIAL = new CommonClass.F4COMN();
+            this.txt_sec_treat_mtd = new System.Windows.Forms.TextBox();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.txt_ROLL_PRICE = new CommonClass.NumBox();
+            this.txt_PLAN_DIA = new CommonClass.NumBox();
+            this.txt_MTRLNO = new System.Windows.Forms.TextBox();
+            this.txt_ISSUETALLYNO = new System.Windows.Forms.TextBox();
+            this.TXT_LOC = new System.Windows.Forms.TextBox();
+            this.TXT_MAKER_NO = new System.Windows.Forms.TextBox();
+            this.SDB_ROLL_IN_AVE_HARD = new CommonClass.NumBox();
+            this.SDB_ROLL_D_DIA2 = new CommonClass.NumBox();
+            this.SDB_ROLL_IN_D_HARD = new CommonClass.NumBox();
+            this.SDB_ROLL_IN_C_HARD = new CommonClass.NumBox();
             this.label25 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.TXT_R_IN_EMP = new System.Windows.Forms.TextBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.ULabel39 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
+            this.SDB_ROLL_DIA_Y = new CommonClass.NumBox();
+            this.ULabel38 = new System.Windows.Forms.Label();
+            this.SDB_ROLL_SHLD_DIA = new CommonClass.NumBox();
+            this.TXT_R_GROUP = new System.Windows.Forms.TextBox();
+            this.SDB_ROLL_NECK_DIA = new CommonClass.NumBox();
+            this.SDB_ROLL_WGT = new CommonClass.NumBox();
+            this.TXT_R_SHIFT = new System.Windows.Forms.TextBox();
+            this.SDB_ROLL_IN_W_HARD = new CommonClass.NumBox();
+            this.ULabel37 = new System.Windows.Forms.Label();
+            this.SDB_ROLL_W_DIA2 = new CommonClass.NumBox();
+            this.SDB_ROLL_DIA = new CommonClass.NumBox();
+            this.SSC3 = new System.Windows.Forms.CheckBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.SSC2 = new System.Windows.Forms.CheckBox();
+            this.TXT_ROLL_MAKER = new CommonClass.F4COMN();
+            this.SSC1 = new System.Windows.Forms.CheckBox();
+            this.TXT_ROLL_NO = new System.Windows.Forms.TextBox();
+            this.SSC0 = new System.Windows.Forms.CheckBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.UTP_ROLL_IN_TIME = new CommonClass.MaskedDate();
+            this.label6 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.sc1 = new System.Windows.Forms.CheckBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.sc2 = new System.Windows.Forms.CheckBox();
-            this.splitter2 = new System.Windows.Forms.Splitter();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.sc3 = new System.Windows.Forms.CheckBox();
-            this.splitter3 = new System.Windows.Forms.Splitter();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.sc4 = new System.Windows.Forms.CheckBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.UTP_ROLL_IN_TIME = new CommonClass.MaskedDate();
-            this.TXT_ROLL_NO = new System.Windows.Forms.TextBox();
-            this.TXT_ROLL_MAKER = new CommonClass.F4COMN();
-            this.SDB_ROLL_DIA = new CommonClass.NumBox();
-            this.SDB_ROLL_W_DIA2 = new CommonClass.NumBox();
-            this.SDB_ROLL_IN_W_HARD = new CommonClass.NumBox();
-            this.SDB_ROLL_WGT = new CommonClass.NumBox();
-            this.SDB_ROLL_NECK_DIA = new CommonClass.NumBox();
-            this.SDB_ROLL_SHLD_DIA = new CommonClass.NumBox();
-            this.SDB_ROLL_DIA_Y = new CommonClass.NumBox();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.SDB_ROLL_IN_C_HARD = new CommonClass.NumBox();
-            this.SDB_ROLL_IN_D_HARD = new CommonClass.NumBox();
-            this.SDB_ROLL_D_DIA2 = new CommonClass.NumBox();
-            this.SDB_ROLL_IN_AVE_HARD = new CommonClass.NumBox();
-            this.TXT_MAKER_NO = new System.Windows.Forms.TextBox();
-            this.TXT_LOC = new System.Windows.Forms.TextBox();
-            this.txt_ISSUETALLYNO = new System.Windows.Forms.TextBox();
-            this.txt_MTRLNO = new System.Windows.Forms.TextBox();
-            this.txt_PLAN_DIA = new CommonClass.NumBox();
-            this.txt_ROLL_PRICE = new CommonClass.NumBox();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
-            this.txt_sec_treat_mtd = new System.Windows.Forms.TextBox();
-            this.UTP_B_ROLL_IN_TIME = new CommonClass.MaskedDate();
-            this.TXT_CHOCK_NO = new System.Windows.Forms.TextBox();
-            this.TXT_B_ROLL_MAKER = new CommonClass.F4COMN();
-            this.SDB_B_IN_DIA = new CommonClass.NumBox();
-            this.SDB_B_OUT_DIA = new CommonClass.NumBox();
-            this.TXT_ROLL_MATERIAL = new CommonClass.F4COMN();
-            this.TXT_B_ROLL_MATERIAL = new CommonClass.F4COMN();
-            this.UTP_B_ROLL_USE_TIME = new CommonClass.MaskedDate();
-            this.UTP_C_ROLL_IN_TIME = new CommonClass.MaskedDate();
-            this.TXT_BEAR_NO = new System.Windows.Forms.TextBox();
-            this.TXT_C_ROLL_MAKER = new CommonClass.F4COMN();
-            this.SDB_C_IN_DIA = new CommonClass.NumBox();
-            this.SDB_C_OUT_DIA = new CommonClass.NumBox();
-            this.SDB_C_ROLL_WID = new CommonClass.NumBox();
-            this.UTP_P_ROLL_IN_TIME = new CommonClass.MaskedDate();
-            this.TXT_PLANK_NO = new System.Windows.Forms.TextBox();
-            this.TXT_P_ROLL_MAKER = new CommonClass.F4COMN();
             this.TXT_B_IN_EMP = new System.Windows.Forms.TextBox();
             this.label52 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
             this.TXT_B_GROUP = new System.Windows.Forms.TextBox();
             this.TXT_B_SHIFT = new System.Windows.Forms.TextBox();
             this.label54 = new System.Windows.Forms.Label();
+            this.UTP_B_ROLL_USE_TIME = new CommonClass.MaskedDate();
+            this.TXT_B_ROLL_MATERIAL = new CommonClass.F4COMN();
+            this.SDB_B_OUT_DIA = new CommonClass.NumBox();
+            this.SDB_B_IN_DIA = new CommonClass.NumBox();
+            this.TXT_B_ROLL_MAKER = new CommonClass.F4COMN();
+            this.TXT_CHOCK_NO = new System.Windows.Forms.TextBox();
+            this.UTP_B_ROLL_IN_TIME = new CommonClass.MaskedDate();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.sc2 = new System.Windows.Forms.CheckBox();
+            this.splitter2 = new System.Windows.Forms.Splitter();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.TXT_C_IN_EMP = new System.Windows.Forms.TextBox();
             this.label55 = new System.Windows.Forms.Label();
             this.label56 = new System.Windows.Forms.Label();
             this.TXT_C_GROUP = new System.Windows.Forms.TextBox();
             this.TXT_C_SHIFT = new System.Windows.Forms.TextBox();
             this.label57 = new System.Windows.Forms.Label();
+            this.SDB_C_ROLL_WID = new CommonClass.NumBox();
+            this.SDB_C_OUT_DIA = new CommonClass.NumBox();
+            this.SDB_C_IN_DIA = new CommonClass.NumBox();
+            this.TXT_C_ROLL_MAKER = new CommonClass.F4COMN();
+            this.TXT_BEAR_NO = new System.Windows.Forms.TextBox();
+            this.UTP_C_ROLL_IN_TIME = new CommonClass.MaskedDate();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.sc3 = new System.Windows.Forms.CheckBox();
+            this.splitter3 = new System.Windows.Forms.Splitter();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.TXT_P_IN_EMP = new System.Windows.Forms.TextBox();
             this.label58 = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
             this.TXT_P_GROUP = new System.Windows.Forms.TextBox();
             this.TXT_P_SHIFT = new System.Windows.Forms.TextBox();
             this.label60 = new System.Windows.Forms.Label();
+            this.TXT_P_ROLL_MAKER = new CommonClass.F4COMN();
+            this.TXT_PLANK_NO = new System.Windows.Forms.TextBox();
+            this.UTP_P_ROLL_IN_TIME = new CommonClass.MaskedDate();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.sc4 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -180,7 +180,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.ULabel16);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
@@ -280,15 +280,15 @@
             this.label2.Text = "工厂代码";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // ULabel16
             // 
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Location = new System.Drawing.Point(26, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "轧辊号";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ULabel16.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.ULabel16.Location = new System.Drawing.Point(26, 18);
+            this.ULabel16.Name = "ULabel16";
+            this.ULabel16.Size = new System.Drawing.Size(84, 19);
+            this.ULabel16.TabIndex = 0;
+            this.ULabel16.Text = "轧辊号";
+            this.ULabel16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox2
             // 
@@ -360,124 +360,182 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
-            // TXT_R_IN_EMP
+            // TXT_ROLL_MATERIAL
             // 
-            this.TXT_R_IN_EMP.Location = new System.Drawing.Point(166, 559);
-            this.TXT_R_IN_EMP.MaxLength = 1;
-            this.TXT_R_IN_EMP.Name = "TXT_R_IN_EMP";
-            this.TXT_R_IN_EMP.Size = new System.Drawing.Size(80, 22);
-            this.TXT_R_IN_EMP.TabIndex = 579;
-            this.TXT_R_IN_EMP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TXT_ROLL_MATERIAL.Location = new System.Drawing.Point(96, 426);
+            this.TXT_ROLL_MATERIAL.MaxLength = 1;
+            this.TXT_ROLL_MATERIAL.Name = "TXT_ROLL_MATERIAL";
+            this.TXT_ROLL_MATERIAL.Size = new System.Drawing.Size(100, 22);
+            this.TXT_ROLL_MATERIAL.sJoin = "";
+            this.TXT_ROLL_MATERIAL.sKey = "G0004";
+            this.TXT_ROLL_MATERIAL.TabIndex = 610;
+            this.TXT_ROLL_MATERIAL.Tag = "";
             // 
-            // ULabel39
+            // txt_sec_treat_mtd
             // 
-            this.ULabel39.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.ULabel39.ForeColor = System.Drawing.Color.Black;
-            this.ULabel39.Location = new System.Drawing.Point(166, 534);
-            this.ULabel39.Name = "ULabel39";
-            this.ULabel39.Size = new System.Drawing.Size(80, 22);
-            this.ULabel39.TabIndex = 578;
-            this.ULabel39.Text = "作业人员";
-            this.ULabel39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txt_sec_treat_mtd.Location = new System.Drawing.Point(279, 518);
+            this.txt_sec_treat_mtd.Name = "txt_sec_treat_mtd";
+            this.txt_sec_treat_mtd.Size = new System.Drawing.Size(62, 22);
+            this.txt_sec_treat_mtd.TabIndex = 609;
+            this.txt_sec_treat_mtd.Visible = false;
             // 
-            // ULabel38
+            // label51
             // 
-            this.ULabel38.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.ULabel38.Location = new System.Drawing.Point(86, 534);
-            this.ULabel38.Name = "ULabel38";
-            this.ULabel38.Size = new System.Drawing.Size(80, 22);
-            this.ULabel38.TabIndex = 577;
-            this.ULabel38.Text = "班别";
-            this.ULabel38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(202, 232);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(21, 13);
+            this.label51.TabIndex = 608;
+            this.label51.Text = "kg";
             // 
-            // TXT_R_GROUP
+            // label50
             // 
-            this.TXT_R_GROUP.Location = new System.Drawing.Point(86, 558);
-            this.TXT_R_GROUP.MaxLength = 1;
-            this.TXT_R_GROUP.Name = "TXT_R_GROUP";
-            this.TXT_R_GROUP.Size = new System.Drawing.Size(80, 22);
-            this.TXT_R_GROUP.TabIndex = 576;
-            this.TXT_R_GROUP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(202, 200);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(21, 13);
+            this.label50.TabIndex = 607;
+            this.label50.Text = "mm";
             // 
-            // TXT_R_SHIFT
+            // label49
             // 
-            this.TXT_R_SHIFT.Location = new System.Drawing.Point(6, 558);
-            this.TXT_R_SHIFT.MaxLength = 1;
-            this.TXT_R_SHIFT.Name = "TXT_R_SHIFT";
-            this.TXT_R_SHIFT.Size = new System.Drawing.Size(80, 22);
-            this.TXT_R_SHIFT.TabIndex = 575;
-            this.TXT_R_SHIFT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(202, 172);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(21, 13);
+            this.label49.TabIndex = 606;
+            this.label49.Text = "mm";
             // 
-            // ULabel37
+            // label48
             // 
-            this.ULabel37.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.ULabel37.Location = new System.Drawing.Point(6, 534);
-            this.ULabel37.Name = "ULabel37";
-            this.ULabel37.Size = new System.Drawing.Size(80, 22);
-            this.ULabel37.TabIndex = 574;
-            this.ULabel37.Text = "班次";
-            this.ULabel37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(202, 144);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(21, 13);
+            this.label48.TabIndex = 605;
+            this.label48.Text = "mm";
             // 
-            // SSC3
+            // label47
             // 
-            this.SSC3.AutoSize = true;
-            this.SSC3.Location = new System.Drawing.Point(92, 507);
-            this.SSC3.Name = "SSC3";
-            this.SSC3.Size = new System.Drawing.Size(78, 17);
-            this.SSC3.TabIndex = 29;
-            this.SSC3.Text = "车削加工";
-            this.SSC3.UseVisualStyleBackColor = true;
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(202, 113);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(21, 13);
+            this.label47.TabIndex = 604;
+            this.label47.Text = "mm";
             // 
-            // SSC2
+            // label46
             // 
-            this.SSC2.AutoSize = true;
-            this.SSC2.Location = new System.Drawing.Point(8, 507);
-            this.SSC2.Name = "SSC2";
-            this.SSC2.Size = new System.Drawing.Size(78, 17);
-            this.SSC2.TabIndex = 28;
-            this.SSC2.Text = "激光强化";
-            this.SSC2.UseVisualStyleBackColor = true;
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(435, 175);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(55, 13);
+            this.label46.TabIndex = 603;
+            this.label46.Text = "元(RMB)";
             // 
-            // SSC1
+            // txt_ROLL_PRICE
             // 
-            this.SSC1.AutoSize = true;
-            this.SSC1.Location = new System.Drawing.Point(92, 479);
-            this.SSC1.Name = "SSC1";
-            this.SSC1.Size = new System.Drawing.Size(78, 17);
-            this.SSC1.TabIndex = 27;
-            this.SSC1.Text = "堆焊处理";
-            this.SSC1.UseVisualStyleBackColor = true;
+            this.txt_ROLL_PRICE.Location = new System.Drawing.Point(331, 169);
+            this.txt_ROLL_PRICE.MaxLength = 8;
+            this.txt_ROLL_PRICE.Name = "txt_ROLL_PRICE";
+            this.txt_ROLL_PRICE.NumValue = 0D;
+            this.txt_ROLL_PRICE.Scale = 2;
+            this.txt_ROLL_PRICE.ShowZero = false;
+            this.txt_ROLL_PRICE.Size = new System.Drawing.Size(100, 22);
+            this.txt_ROLL_PRICE.TabIndex = 602;
+            this.txt_ROLL_PRICE.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // SSC0
+            // txt_PLAN_DIA
             // 
-            this.SSC0.AutoSize = true;
-            this.SSC0.Location = new System.Drawing.Point(8, 479);
-            this.SSC0.Name = "SSC0";
-            this.SSC0.Size = new System.Drawing.Size(78, 17);
-            this.SSC0.TabIndex = 26;
-            this.SSC0.Text = "激光修复";
-            this.SSC0.UseVisualStyleBackColor = true;
+            this.txt_PLAN_DIA.Location = new System.Drawing.Point(331, 197);
+            this.txt_PLAN_DIA.MaxLength = 8;
+            this.txt_PLAN_DIA.Name = "txt_PLAN_DIA";
+            this.txt_PLAN_DIA.NumValue = 0D;
+            this.txt_PLAN_DIA.Scale = 2;
+            this.txt_PLAN_DIA.ShowZero = false;
+            this.txt_PLAN_DIA.Size = new System.Drawing.Size(100, 22);
+            this.txt_PLAN_DIA.TabIndex = 601;
+            this.txt_PLAN_DIA.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // label27
+            // txt_MTRLNO
             // 
-            this.label27.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label27.Location = new System.Drawing.Point(6, 457);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(195, 19);
-            this.label27.TabIndex = 25;
-            this.label27.Text = "二次处理方式";
-            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txt_MTRLNO.Location = new System.Drawing.Point(331, 140);
+            this.txt_MTRLNO.MaxLength = 12;
+            this.txt_MTRLNO.Name = "txt_MTRLNO";
+            this.txt_MTRLNO.Size = new System.Drawing.Size(100, 22);
+            this.txt_MTRLNO.TabIndex = 600;
             // 
-            // label26
+            // txt_ISSUETALLYNO
             // 
-            this.label26.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label26.ForeColor = System.Drawing.Color.Blue;
-            this.label26.Location = new System.Drawing.Point(241, 197);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(84, 19);
-            this.label26.TabIndex = 24;
-            this.label26.Text = "限位辊径";
-            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txt_ISSUETALLYNO.Location = new System.Drawing.Point(331, 110);
+            this.txt_ISSUETALLYNO.MaxLength = 15;
+            this.txt_ISSUETALLYNO.Name = "txt_ISSUETALLYNO";
+            this.txt_ISSUETALLYNO.Size = new System.Drawing.Size(100, 22);
+            this.txt_ISSUETALLYNO.TabIndex = 599;
+            // 
+            // TXT_LOC
+            // 
+            this.TXT_LOC.Location = new System.Drawing.Point(331, 83);
+            this.TXT_LOC.MaxLength = 10;
+            this.TXT_LOC.Name = "TXT_LOC";
+            this.TXT_LOC.Size = new System.Drawing.Size(100, 22);
+            this.TXT_LOC.TabIndex = 598;
+            // 
+            // TXT_MAKER_NO
+            // 
+            this.TXT_MAKER_NO.Location = new System.Drawing.Point(331, 53);
+            this.TXT_MAKER_NO.MaxLength = 25;
+            this.TXT_MAKER_NO.Name = "TXT_MAKER_NO";
+            this.TXT_MAKER_NO.Size = new System.Drawing.Size(100, 22);
+            this.TXT_MAKER_NO.TabIndex = 597;
+            // 
+            // SDB_ROLL_IN_AVE_HARD
+            // 
+            this.SDB_ROLL_IN_AVE_HARD.Location = new System.Drawing.Point(96, 395);
+            this.SDB_ROLL_IN_AVE_HARD.MaxLength = 2;
+            this.SDB_ROLL_IN_AVE_HARD.Name = "SDB_ROLL_IN_AVE_HARD";
+            this.SDB_ROLL_IN_AVE_HARD.NumValue = 0D;
+            this.SDB_ROLL_IN_AVE_HARD.Scale = 0;
+            this.SDB_ROLL_IN_AVE_HARD.ShowZero = false;
+            this.SDB_ROLL_IN_AVE_HARD.Size = new System.Drawing.Size(100, 22);
+            this.SDB_ROLL_IN_AVE_HARD.TabIndex = 595;
+            this.SDB_ROLL_IN_AVE_HARD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // SDB_ROLL_D_DIA2
+            // 
+            this.SDB_ROLL_D_DIA2.Location = new System.Drawing.Point(96, 366);
+            this.SDB_ROLL_D_DIA2.MaxLength = 2;
+            this.SDB_ROLL_D_DIA2.Name = "SDB_ROLL_D_DIA2";
+            this.SDB_ROLL_D_DIA2.NumValue = 0D;
+            this.SDB_ROLL_D_DIA2.Scale = 0;
+            this.SDB_ROLL_D_DIA2.ShowZero = false;
+            this.SDB_ROLL_D_DIA2.Size = new System.Drawing.Size(100, 22);
+            this.SDB_ROLL_D_DIA2.TabIndex = 594;
+            this.SDB_ROLL_D_DIA2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // SDB_ROLL_IN_D_HARD
+            // 
+            this.SDB_ROLL_IN_D_HARD.Location = new System.Drawing.Point(96, 338);
+            this.SDB_ROLL_IN_D_HARD.MaxLength = 2;
+            this.SDB_ROLL_IN_D_HARD.Name = "SDB_ROLL_IN_D_HARD";
+            this.SDB_ROLL_IN_D_HARD.NumValue = 0D;
+            this.SDB_ROLL_IN_D_HARD.Scale = 0;
+            this.SDB_ROLL_IN_D_HARD.ShowZero = false;
+            this.SDB_ROLL_IN_D_HARD.Size = new System.Drawing.Size(100, 22);
+            this.SDB_ROLL_IN_D_HARD.TabIndex = 593;
+            this.SDB_ROLL_IN_D_HARD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // SDB_ROLL_IN_C_HARD
+            // 
+            this.SDB_ROLL_IN_C_HARD.Location = new System.Drawing.Point(96, 309);
+            this.SDB_ROLL_IN_C_HARD.MaxLength = 2;
+            this.SDB_ROLL_IN_C_HARD.Name = "SDB_ROLL_IN_C_HARD";
+            this.SDB_ROLL_IN_C_HARD.NumValue = 0D;
+            this.SDB_ROLL_IN_C_HARD.Scale = 0;
+            this.SDB_ROLL_IN_C_HARD.ShowZero = false;
+            this.SDB_ROLL_IN_C_HARD.Size = new System.Drawing.Size(100, 22);
+            this.SDB_ROLL_IN_C_HARD.TabIndex = 592;
+            this.SDB_ROLL_IN_C_HARD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label25
             // 
@@ -490,6 +548,57 @@
             this.label25.Text = "单价";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label45
+            // 
+            this.label45.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label45.Location = new System.Drawing.Point(6, 226);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(84, 19);
+            this.label45.TabIndex = 591;
+            this.label45.Text = "轧辊重量";
+            this.label45.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label26
+            // 
+            this.label26.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label26.ForeColor = System.Drawing.Color.Blue;
+            this.label26.Location = new System.Drawing.Point(241, 197);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(84, 19);
+            this.label26.TabIndex = 24;
+            this.label26.Text = "限位辊径";
+            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TXT_R_IN_EMP
+            // 
+            this.TXT_R_IN_EMP.Location = new System.Drawing.Point(166, 559);
+            this.TXT_R_IN_EMP.MaxLength = 1;
+            this.TXT_R_IN_EMP.Name = "TXT_R_IN_EMP";
+            this.TXT_R_IN_EMP.Size = new System.Drawing.Size(80, 22);
+            this.TXT_R_IN_EMP.TabIndex = 579;
+            this.TXT_R_IN_EMP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label44
+            // 
+            this.label44.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label44.Location = new System.Drawing.Point(6, 169);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(84, 19);
+            this.label44.TabIndex = 590;
+            this.label44.Text = "辊肩直径";
+            this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ULabel39
+            // 
+            this.ULabel39.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.ULabel39.ForeColor = System.Drawing.Color.Black;
+            this.ULabel39.Location = new System.Drawing.Point(166, 534);
+            this.ULabel39.Name = "ULabel39";
+            this.ULabel39.Size = new System.Drawing.Size(80, 22);
+            this.ULabel39.TabIndex = 578;
+            this.ULabel39.Text = "作业人员";
+            this.ULabel39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // label24
             // 
             this.label24.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -501,6 +610,255 @@
             this.label24.Text = "料号";
             this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // SDB_ROLL_DIA_Y
+            // 
+            this.SDB_ROLL_DIA_Y.Location = new System.Drawing.Point(96, 138);
+            this.SDB_ROLL_DIA_Y.MaxLength = 7;
+            this.SDB_ROLL_DIA_Y.Name = "SDB_ROLL_DIA_Y";
+            this.SDB_ROLL_DIA_Y.NumValue = 0D;
+            this.SDB_ROLL_DIA_Y.Scale = 2;
+            this.SDB_ROLL_DIA_Y.ShowZero = false;
+            this.SDB_ROLL_DIA_Y.Size = new System.Drawing.Size(100, 22);
+            this.SDB_ROLL_DIA_Y.TabIndex = 589;
+            this.SDB_ROLL_DIA_Y.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // ULabel38
+            // 
+            this.ULabel38.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.ULabel38.Location = new System.Drawing.Point(86, 534);
+            this.ULabel38.Name = "ULabel38";
+            this.ULabel38.Size = new System.Drawing.Size(80, 22);
+            this.ULabel38.TabIndex = 577;
+            this.ULabel38.Text = "班别";
+            this.ULabel38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // SDB_ROLL_SHLD_DIA
+            // 
+            this.SDB_ROLL_SHLD_DIA.Location = new System.Drawing.Point(96, 166);
+            this.SDB_ROLL_SHLD_DIA.MaxLength = 7;
+            this.SDB_ROLL_SHLD_DIA.Name = "SDB_ROLL_SHLD_DIA";
+            this.SDB_ROLL_SHLD_DIA.NumValue = 0D;
+            this.SDB_ROLL_SHLD_DIA.Scale = 2;
+            this.SDB_ROLL_SHLD_DIA.ShowZero = false;
+            this.SDB_ROLL_SHLD_DIA.Size = new System.Drawing.Size(100, 22);
+            this.SDB_ROLL_SHLD_DIA.TabIndex = 588;
+            this.SDB_ROLL_SHLD_DIA.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // TXT_R_GROUP
+            // 
+            this.TXT_R_GROUP.Location = new System.Drawing.Point(86, 558);
+            this.TXT_R_GROUP.MaxLength = 1;
+            this.TXT_R_GROUP.Name = "TXT_R_GROUP";
+            this.TXT_R_GROUP.Size = new System.Drawing.Size(80, 22);
+            this.TXT_R_GROUP.TabIndex = 576;
+            this.TXT_R_GROUP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // SDB_ROLL_NECK_DIA
+            // 
+            this.SDB_ROLL_NECK_DIA.Location = new System.Drawing.Point(96, 194);
+            this.SDB_ROLL_NECK_DIA.MaxLength = 7;
+            this.SDB_ROLL_NECK_DIA.Name = "SDB_ROLL_NECK_DIA";
+            this.SDB_ROLL_NECK_DIA.NumValue = 0D;
+            this.SDB_ROLL_NECK_DIA.Scale = 2;
+            this.SDB_ROLL_NECK_DIA.ShowZero = false;
+            this.SDB_ROLL_NECK_DIA.Size = new System.Drawing.Size(100, 22);
+            this.SDB_ROLL_NECK_DIA.TabIndex = 587;
+            this.SDB_ROLL_NECK_DIA.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // SDB_ROLL_WGT
+            // 
+            this.SDB_ROLL_WGT.Location = new System.Drawing.Point(96, 226);
+            this.SDB_ROLL_WGT.MaxLength = 10;
+            this.SDB_ROLL_WGT.Name = "SDB_ROLL_WGT";
+            this.SDB_ROLL_WGT.NumValue = 0D;
+            this.SDB_ROLL_WGT.Scale = 0;
+            this.SDB_ROLL_WGT.ShowZero = false;
+            this.SDB_ROLL_WGT.Size = new System.Drawing.Size(100, 22);
+            this.SDB_ROLL_WGT.TabIndex = 586;
+            this.SDB_ROLL_WGT.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // TXT_R_SHIFT
+            // 
+            this.TXT_R_SHIFT.Location = new System.Drawing.Point(6, 558);
+            this.TXT_R_SHIFT.MaxLength = 1;
+            this.TXT_R_SHIFT.Name = "TXT_R_SHIFT";
+            this.TXT_R_SHIFT.Size = new System.Drawing.Size(80, 22);
+            this.TXT_R_SHIFT.TabIndex = 575;
+            this.TXT_R_SHIFT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // SDB_ROLL_IN_W_HARD
+            // 
+            this.SDB_ROLL_IN_W_HARD.Location = new System.Drawing.Point(96, 254);
+            this.SDB_ROLL_IN_W_HARD.MaxLength = 2;
+            this.SDB_ROLL_IN_W_HARD.Name = "SDB_ROLL_IN_W_HARD";
+            this.SDB_ROLL_IN_W_HARD.NumValue = 0D;
+            this.SDB_ROLL_IN_W_HARD.Scale = 0;
+            this.SDB_ROLL_IN_W_HARD.ShowZero = false;
+            this.SDB_ROLL_IN_W_HARD.Size = new System.Drawing.Size(100, 22);
+            this.SDB_ROLL_IN_W_HARD.TabIndex = 585;
+            this.SDB_ROLL_IN_W_HARD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // ULabel37
+            // 
+            this.ULabel37.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.ULabel37.Location = new System.Drawing.Point(6, 534);
+            this.ULabel37.Name = "ULabel37";
+            this.ULabel37.Size = new System.Drawing.Size(80, 22);
+            this.ULabel37.TabIndex = 574;
+            this.ULabel37.Text = "班次";
+            this.ULabel37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // SDB_ROLL_W_DIA2
+            // 
+            this.SDB_ROLL_W_DIA2.Location = new System.Drawing.Point(96, 282);
+            this.SDB_ROLL_W_DIA2.MaxLength = 2;
+            this.SDB_ROLL_W_DIA2.Name = "SDB_ROLL_W_DIA2";
+            this.SDB_ROLL_W_DIA2.NumValue = 0D;
+            this.SDB_ROLL_W_DIA2.Scale = 0;
+            this.SDB_ROLL_W_DIA2.ShowZero = false;
+            this.SDB_ROLL_W_DIA2.Size = new System.Drawing.Size(100, 22);
+            this.SDB_ROLL_W_DIA2.TabIndex = 584;
+            this.SDB_ROLL_W_DIA2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // SDB_ROLL_DIA
+            // 
+            this.SDB_ROLL_DIA.Location = new System.Drawing.Point(96, 110);
+            this.SDB_ROLL_DIA.MaxLength = 7;
+            this.SDB_ROLL_DIA.Name = "SDB_ROLL_DIA";
+            this.SDB_ROLL_DIA.NumValue = 0D;
+            this.SDB_ROLL_DIA.Scale = 2;
+            this.SDB_ROLL_DIA.ShowZero = false;
+            this.SDB_ROLL_DIA.Size = new System.Drawing.Size(100, 22);
+            this.SDB_ROLL_DIA.TabIndex = 583;
+            this.SDB_ROLL_DIA.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // SSC3
+            // 
+            this.SSC3.AutoSize = true;
+            this.SSC3.Location = new System.Drawing.Point(92, 507);
+            this.SSC3.Name = "SSC3";
+            this.SSC3.Size = new System.Drawing.Size(78, 17);
+            this.SSC3.TabIndex = 29;
+            this.SSC3.Text = "车削加工";
+            this.SSC3.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label7.Location = new System.Drawing.Point(6, 54);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(84, 19);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "轧辊标识号";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // SSC2
+            // 
+            this.SSC2.AutoSize = true;
+            this.SSC2.Location = new System.Drawing.Point(8, 507);
+            this.SSC2.Name = "SSC2";
+            this.SSC2.Size = new System.Drawing.Size(78, 17);
+            this.SSC2.TabIndex = 28;
+            this.SSC2.Text = "激光强化";
+            this.SSC2.UseVisualStyleBackColor = true;
+            // 
+            // TXT_ROLL_MAKER
+            // 
+            this.TXT_ROLL_MAKER.Location = new System.Drawing.Point(96, 82);
+            this.TXT_ROLL_MAKER.MaxLength = 2;
+            this.TXT_ROLL_MAKER.Name = "TXT_ROLL_MAKER";
+            this.TXT_ROLL_MAKER.Size = new System.Drawing.Size(100, 22);
+            this.TXT_ROLL_MAKER.sJoin = "";
+            this.TXT_ROLL_MAKER.sKey = "G0005";
+            this.TXT_ROLL_MAKER.TabIndex = 582;
+            // 
+            // SSC1
+            // 
+            this.SSC1.AutoSize = true;
+            this.SSC1.Location = new System.Drawing.Point(92, 479);
+            this.SSC1.Name = "SSC1";
+            this.SSC1.Size = new System.Drawing.Size(78, 17);
+            this.SSC1.TabIndex = 27;
+            this.SSC1.Text = "堆焊处理";
+            this.SSC1.UseVisualStyleBackColor = true;
+            // 
+            // TXT_ROLL_NO
+            // 
+            this.TXT_ROLL_NO.Location = new System.Drawing.Point(96, 54);
+            this.TXT_ROLL_NO.MaxLength = 6;
+            this.TXT_ROLL_NO.Name = "TXT_ROLL_NO";
+            this.TXT_ROLL_NO.Size = new System.Drawing.Size(100, 22);
+            this.TXT_ROLL_NO.TabIndex = 581;
+            // 
+            // SSC0
+            // 
+            this.SSC0.AutoSize = true;
+            this.SSC0.Location = new System.Drawing.Point(8, 479);
+            this.SSC0.Name = "SSC0";
+            this.SSC0.Size = new System.Drawing.Size(78, 17);
+            this.SSC0.TabIndex = 26;
+            this.SSC0.Text = "激光修复";
+            this.SSC0.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label8.ForeColor = System.Drawing.Color.Blue;
+            this.label8.Location = new System.Drawing.Point(6, 82);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(84, 19);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "供货商";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label27
+            // 
+            this.label27.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label27.Location = new System.Drawing.Point(6, 457);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(195, 19);
+            this.label27.TabIndex = 25;
+            this.label27.Text = "二次处理方式";
+            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label9
+            // 
+            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label9.Location = new System.Drawing.Point(6, 112);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(84, 19);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "入库辊径";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label10
+            // 
+            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label10.Location = new System.Drawing.Point(6, 141);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(84, 19);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "当前辊径";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // UTP_ROLL_IN_TIME
+            // 
+            this.UTP_ROLL_IN_TIME.Location = new System.Drawing.Point(96, 26);
+            this.UTP_ROLL_IN_TIME.Mask = "0000-00-00 90:00:00";
+            this.UTP_ROLL_IN_TIME.Name = "UTP_ROLL_IN_TIME";
+            this.UTP_ROLL_IN_TIME.Size = new System.Drawing.Size(144, 22);
+            this.UTP_ROLL_IN_TIME.TabIndex = 580;
+            // 
+            // label6
+            // 
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label6.Location = new System.Drawing.Point(6, 26);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(84, 19);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "入库时间";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // label23
             // 
             this.label23.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -511,6 +869,56 @@
             this.label23.TabIndex = 21;
             this.label23.Text = "领料单号";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label20
+            // 
+            this.label20.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label20.Location = new System.Drawing.Point(241, 82);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(84, 19);
+            this.label20.TabIndex = 18;
+            this.label20.Text = "辊架位置";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label12
+            // 
+            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label12.Location = new System.Drawing.Point(6, 197);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(84, 19);
+            this.label12.TabIndex = 10;
+            this.label12.Text = "辊颈直径";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label14
+            // 
+            this.label14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label14.Location = new System.Drawing.Point(6, 254);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(84, 19);
+            this.label14.TabIndex = 12;
+            this.label14.Text = "传动侧硬度1";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label15
+            // 
+            this.label15.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label15.Location = new System.Drawing.Point(6, 284);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(84, 19);
+            this.label15.TabIndex = 13;
+            this.label15.Text = "传动侧硬度2";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label19
+            // 
+            this.label19.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label19.Location = new System.Drawing.Point(6, 398);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(84, 19);
+            this.label19.TabIndex = 17;
+            this.label19.Text = "平均硬度";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label22
             // 
@@ -534,36 +942,6 @@
             this.label21.Text = "材质代码";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label20
-            // 
-            this.label20.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label20.Location = new System.Drawing.Point(241, 82);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(84, 19);
-            this.label20.TabIndex = 18;
-            this.label20.Text = "辊架位置";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label19
-            // 
-            this.label19.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label19.Location = new System.Drawing.Point(6, 398);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(84, 19);
-            this.label19.TabIndex = 17;
-            this.label19.Text = "平均硬度";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label18
-            // 
-            this.label18.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label18.Location = new System.Drawing.Point(6, 369);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(84, 19);
-            this.label18.TabIndex = 16;
-            this.label18.Text = "操作侧硬度2";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label17
             // 
             this.label17.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -584,25 +962,25 @@
             this.label16.Text = "中部硬度";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label15
+            // sc1
             // 
-            this.label15.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label15.Location = new System.Drawing.Point(6, 284);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(84, 19);
-            this.label15.TabIndex = 13;
-            this.label15.Text = "传动侧硬度2";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.sc1.AutoSize = true;
+            this.sc1.Location = new System.Drawing.Point(6, 6);
+            this.sc1.Name = "sc1";
+            this.sc1.Size = new System.Drawing.Size(52, 17);
+            this.sc1.TabIndex = 0;
+            this.sc1.Text = "轧辊";
+            this.sc1.UseVisualStyleBackColor = true;
             // 
-            // label14
+            // label18
             // 
-            this.label14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label14.Location = new System.Drawing.Point(6, 254);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(84, 19);
-            this.label14.TabIndex = 12;
-            this.label14.Text = "传动侧硬度1";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label18.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label18.Location = new System.Drawing.Point(6, 369);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(84, 19);
+            this.label18.TabIndex = 16;
+            this.label18.Text = "操作侧硬度2";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label13
             // 
@@ -614,16 +992,6 @@
             this.label13.Text = "轧辊重量";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label12
-            // 
-            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label12.Location = new System.Drawing.Point(6, 197);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(84, 19);
-            this.label12.TabIndex = 10;
-            this.label12.Text = "辊颈直径";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label11
             // 
             this.label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -633,67 +1001,6 @@
             this.label11.TabIndex = 9;
             this.label11.Text = "辊肩直径";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label10
-            // 
-            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label10.Location = new System.Drawing.Point(6, 141);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(84, 19);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "当前辊径";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label9
-            // 
-            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label9.Location = new System.Drawing.Point(6, 112);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(84, 19);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "入库辊径";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label8
-            // 
-            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label8.ForeColor = System.Drawing.Color.Blue;
-            this.label8.Location = new System.Drawing.Point(6, 82);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 19);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "供货商";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label7
-            // 
-            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label7.Location = new System.Drawing.Point(6, 54);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(84, 19);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "轧辊标识号";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label6.Location = new System.Drawing.Point(6, 26);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 19);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "入库时间";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // sc1
-            // 
-            this.sc1.AutoSize = true;
-            this.sc1.Location = new System.Drawing.Point(6, 6);
-            this.sc1.Name = "sc1";
-            this.sc1.Size = new System.Drawing.Size(52, 17);
-            this.sc1.TabIndex = 0;
-            this.sc1.Text = "轧辊";
-            this.sc1.UseVisualStyleBackColor = true;
             // 
             // splitter1
             // 
@@ -734,730 +1041,6 @@
             this.groupBox3.Size = new System.Drawing.Size(263, 588);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
-            // 
-            // sc2
-            // 
-            this.sc2.AutoSize = true;
-            this.sc2.Location = new System.Drawing.Point(6, 6);
-            this.sc2.Name = "sc2";
-            this.sc2.Size = new System.Drawing.Size(65, 17);
-            this.sc2.TabIndex = 1;
-            this.sc2.Text = "轴承座";
-            this.sc2.UseVisualStyleBackColor = true;
-            // 
-            // splitter2
-            // 
-            this.splitter2.Location = new System.Drawing.Point(756, 54);
-            this.splitter2.Name = "splitter2";
-            this.splitter2.Size = new System.Drawing.Size(3, 588);
-            this.splitter2.TabIndex = 5;
-            this.splitter2.TabStop = false;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.TXT_C_IN_EMP);
-            this.groupBox4.Controls.Add(this.label55);
-            this.groupBox4.Controls.Add(this.label56);
-            this.groupBox4.Controls.Add(this.TXT_C_GROUP);
-            this.groupBox4.Controls.Add(this.TXT_C_SHIFT);
-            this.groupBox4.Controls.Add(this.label57);
-            this.groupBox4.Controls.Add(this.SDB_C_ROLL_WID);
-            this.groupBox4.Controls.Add(this.SDB_C_OUT_DIA);
-            this.groupBox4.Controls.Add(this.SDB_C_IN_DIA);
-            this.groupBox4.Controls.Add(this.TXT_C_ROLL_MAKER);
-            this.groupBox4.Controls.Add(this.TXT_BEAR_NO);
-            this.groupBox4.Controls.Add(this.UTP_C_ROLL_IN_TIME);
-            this.groupBox4.Controls.Add(this.label35);
-            this.groupBox4.Controls.Add(this.label36);
-            this.groupBox4.Controls.Add(this.label37);
-            this.groupBox4.Controls.Add(this.label38);
-            this.groupBox4.Controls.Add(this.label39);
-            this.groupBox4.Controls.Add(this.label40);
-            this.groupBox4.Controls.Add(this.sc3);
-            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox4.Location = new System.Drawing.Point(759, 54);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(270, 588);
-            this.groupBox4.TabIndex = 6;
-            this.groupBox4.TabStop = false;
-            // 
-            // sc3
-            // 
-            this.sc3.AutoSize = true;
-            this.sc3.Location = new System.Drawing.Point(6, 6);
-            this.sc3.Name = "sc3";
-            this.sc3.Size = new System.Drawing.Size(52, 17);
-            this.sc3.TabIndex = 2;
-            this.sc3.Text = "轴承";
-            this.sc3.UseVisualStyleBackColor = true;
-            // 
-            // splitter3
-            // 
-            this.splitter3.Location = new System.Drawing.Point(1029, 54);
-            this.splitter3.Name = "splitter3";
-            this.splitter3.Size = new System.Drawing.Size(3, 588);
-            this.splitter3.TabIndex = 7;
-            this.splitter3.TabStop = false;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.TXT_P_IN_EMP);
-            this.groupBox5.Controls.Add(this.label58);
-            this.groupBox5.Controls.Add(this.label59);
-            this.groupBox5.Controls.Add(this.TXT_P_GROUP);
-            this.groupBox5.Controls.Add(this.TXT_P_SHIFT);
-            this.groupBox5.Controls.Add(this.label60);
-            this.groupBox5.Controls.Add(this.TXT_P_ROLL_MAKER);
-            this.groupBox5.Controls.Add(this.TXT_PLANK_NO);
-            this.groupBox5.Controls.Add(this.UTP_P_ROLL_IN_TIME);
-            this.groupBox5.Controls.Add(this.label41);
-            this.groupBox5.Controls.Add(this.label42);
-            this.groupBox5.Controls.Add(this.label43);
-            this.groupBox5.Controls.Add(this.sc4);
-            this.groupBox5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox5.Location = new System.Drawing.Point(1032, 54);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(277, 588);
-            this.groupBox5.TabIndex = 8;
-            this.groupBox5.TabStop = false;
-            // 
-            // sc4
-            // 
-            this.sc4.AutoSize = true;
-            this.sc4.Location = new System.Drawing.Point(6, 6);
-            this.sc4.Name = "sc4";
-            this.sc4.Size = new System.Drawing.Size(52, 17);
-            this.sc4.TabIndex = 3;
-            this.sc4.Text = "护板";
-            this.sc4.UseVisualStyleBackColor = true;
-            // 
-            // label28
-            // 
-            this.label28.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label28.Location = new System.Drawing.Point(6, 26);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(104, 19);
-            this.label28.TabIndex = 580;
-            this.label28.Text = "入库时间";
-            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label29
-            // 
-            this.label29.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label29.Location = new System.Drawing.Point(6, 64);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(104, 19);
-            this.label29.TabIndex = 581;
-            this.label29.Text = "轴承座标识号";
-            this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label30
-            // 
-            this.label30.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label30.ForeColor = System.Drawing.Color.Blue;
-            this.label30.Location = new System.Drawing.Point(3, 102);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(104, 19);
-            this.label30.TabIndex = 582;
-            this.label30.Text = "供货商";
-            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label31
-            // 
-            this.label31.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label31.Location = new System.Drawing.Point(6, 140);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(104, 19);
-            this.label31.TabIndex = 583;
-            this.label31.Text = "内径";
-            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label32
-            // 
-            this.label32.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label32.Location = new System.Drawing.Point(6, 178);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(104, 19);
-            this.label32.TabIndex = 584;
-            this.label32.Text = "外径";
-            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label33
-            // 
-            this.label33.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label33.ForeColor = System.Drawing.Color.Blue;
-            this.label33.Location = new System.Drawing.Point(6, 216);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(104, 19);
-            this.label33.TabIndex = 585;
-            this.label33.Text = "材质代码";
-            this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label34
-            // 
-            this.label34.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label34.Location = new System.Drawing.Point(6, 257);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(104, 19);
-            this.label34.TabIndex = 586;
-            this.label34.Text = "开始使用时间";
-            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label36
-            // 
-            this.label36.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label36.Location = new System.Drawing.Point(6, 178);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(104, 19);
-            this.label36.TabIndex = 590;
-            this.label36.Text = "外径";
-            this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label37
-            // 
-            this.label37.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label37.Location = new System.Drawing.Point(6, 140);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(104, 19);
-            this.label37.TabIndex = 589;
-            this.label37.Text = "内径";
-            this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label38
-            // 
-            this.label38.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label38.ForeColor = System.Drawing.Color.Blue;
-            this.label38.Location = new System.Drawing.Point(6, 102);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(104, 19);
-            this.label38.TabIndex = 588;
-            this.label38.Text = "供货商";
-            this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label39
-            // 
-            this.label39.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label39.Location = new System.Drawing.Point(6, 64);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(104, 19);
-            this.label39.TabIndex = 587;
-            this.label39.Text = "轴承座标识号";
-            this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label40
-            // 
-            this.label40.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label40.Location = new System.Drawing.Point(6, 26);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(104, 19);
-            this.label40.TabIndex = 586;
-            this.label40.Text = "入库时间";
-            this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label35
-            // 
-            this.label35.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label35.Location = new System.Drawing.Point(6, 216);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(104, 19);
-            this.label35.TabIndex = 591;
-            this.label35.Text = "宽度";
-            this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label41
-            // 
-            this.label41.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label41.ForeColor = System.Drawing.Color.Blue;
-            this.label41.Location = new System.Drawing.Point(6, 102);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(104, 19);
-            this.label41.TabIndex = 591;
-            this.label41.Text = "供货商";
-            this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label42
-            // 
-            this.label42.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label42.Location = new System.Drawing.Point(6, 64);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(104, 19);
-            this.label42.TabIndex = 590;
-            this.label42.Text = "护板标识号";
-            this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label43
-            // 
-            this.label43.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label43.Location = new System.Drawing.Point(6, 26);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(104, 19);
-            this.label43.TabIndex = 589;
-            this.label43.Text = "入库时间";
-            this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // UTP_ROLL_IN_TIME
-            // 
-            this.UTP_ROLL_IN_TIME.Location = new System.Drawing.Point(96, 26);
-            this.UTP_ROLL_IN_TIME.Mask = "0000-00-00 90:00:00";
-            this.UTP_ROLL_IN_TIME.Name = "UTP_ROLL_IN_TIME";
-            this.UTP_ROLL_IN_TIME.Size = new System.Drawing.Size(144, 22);
-            this.UTP_ROLL_IN_TIME.TabIndex = 580;
-            // 
-            // TXT_ROLL_NO
-            // 
-            this.TXT_ROLL_NO.Location = new System.Drawing.Point(96, 54);
-            this.TXT_ROLL_NO.MaxLength = 6;
-            this.TXT_ROLL_NO.Name = "TXT_ROLL_NO";
-            this.TXT_ROLL_NO.Size = new System.Drawing.Size(100, 22);
-            this.TXT_ROLL_NO.TabIndex = 581;
-            // 
-            // TXT_ROLL_MAKER
-            // 
-            this.TXT_ROLL_MAKER.Location = new System.Drawing.Point(96, 82);
-            this.TXT_ROLL_MAKER.MaxLength = 2;
-            this.TXT_ROLL_MAKER.Name = "TXT_ROLL_MAKER";
-            this.TXT_ROLL_MAKER.Size = new System.Drawing.Size(100, 22);
-            this.TXT_ROLL_MAKER.sJoin = "";
-            this.TXT_ROLL_MAKER.sKey = "G0005";
-            this.TXT_ROLL_MAKER.TabIndex = 582;
-            // 
-            // SDB_ROLL_DIA
-            // 
-            this.SDB_ROLL_DIA.Location = new System.Drawing.Point(96, 110);
-            this.SDB_ROLL_DIA.MaxLength = 7;
-            this.SDB_ROLL_DIA.Name = "SDB_ROLL_DIA";
-            this.SDB_ROLL_DIA.NumValue = 0D;
-            this.SDB_ROLL_DIA.Scale = 2;
-            this.SDB_ROLL_DIA.ShowZero = false;
-            this.SDB_ROLL_DIA.Size = new System.Drawing.Size(100, 22);
-            this.SDB_ROLL_DIA.TabIndex = 583;
-            this.SDB_ROLL_DIA.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // SDB_ROLL_W_DIA2
-            // 
-            this.SDB_ROLL_W_DIA2.Location = new System.Drawing.Point(96, 282);
-            this.SDB_ROLL_W_DIA2.MaxLength = 2;
-            this.SDB_ROLL_W_DIA2.Name = "SDB_ROLL_W_DIA2";
-            this.SDB_ROLL_W_DIA2.NumValue = 0D;
-            this.SDB_ROLL_W_DIA2.Scale = 0;
-            this.SDB_ROLL_W_DIA2.ShowZero = false;
-            this.SDB_ROLL_W_DIA2.Size = new System.Drawing.Size(100, 22);
-            this.SDB_ROLL_W_DIA2.TabIndex = 584;
-            this.SDB_ROLL_W_DIA2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // SDB_ROLL_IN_W_HARD
-            // 
-            this.SDB_ROLL_IN_W_HARD.Location = new System.Drawing.Point(96, 254);
-            this.SDB_ROLL_IN_W_HARD.MaxLength = 2;
-            this.SDB_ROLL_IN_W_HARD.Name = "SDB_ROLL_IN_W_HARD";
-            this.SDB_ROLL_IN_W_HARD.NumValue = 0D;
-            this.SDB_ROLL_IN_W_HARD.Scale = 0;
-            this.SDB_ROLL_IN_W_HARD.ShowZero = false;
-            this.SDB_ROLL_IN_W_HARD.Size = new System.Drawing.Size(100, 22);
-            this.SDB_ROLL_IN_W_HARD.TabIndex = 585;
-            this.SDB_ROLL_IN_W_HARD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // SDB_ROLL_WGT
-            // 
-            this.SDB_ROLL_WGT.Location = new System.Drawing.Point(96, 226);
-            this.SDB_ROLL_WGT.MaxLength = 10;
-            this.SDB_ROLL_WGT.Name = "SDB_ROLL_WGT";
-            this.SDB_ROLL_WGT.NumValue = 0D;
-            this.SDB_ROLL_WGT.Scale = 0;
-            this.SDB_ROLL_WGT.ShowZero = false;
-            this.SDB_ROLL_WGT.Size = new System.Drawing.Size(100, 22);
-            this.SDB_ROLL_WGT.TabIndex = 586;
-            this.SDB_ROLL_WGT.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // SDB_ROLL_NECK_DIA
-            // 
-            this.SDB_ROLL_NECK_DIA.Location = new System.Drawing.Point(96, 194);
-            this.SDB_ROLL_NECK_DIA.MaxLength = 7;
-            this.SDB_ROLL_NECK_DIA.Name = "SDB_ROLL_NECK_DIA";
-            this.SDB_ROLL_NECK_DIA.NumValue = 0D;
-            this.SDB_ROLL_NECK_DIA.Scale = 2;
-            this.SDB_ROLL_NECK_DIA.ShowZero = false;
-            this.SDB_ROLL_NECK_DIA.Size = new System.Drawing.Size(100, 22);
-            this.SDB_ROLL_NECK_DIA.TabIndex = 587;
-            this.SDB_ROLL_NECK_DIA.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // SDB_ROLL_SHLD_DIA
-            // 
-            this.SDB_ROLL_SHLD_DIA.Location = new System.Drawing.Point(96, 166);
-            this.SDB_ROLL_SHLD_DIA.MaxLength = 7;
-            this.SDB_ROLL_SHLD_DIA.Name = "SDB_ROLL_SHLD_DIA";
-            this.SDB_ROLL_SHLD_DIA.NumValue = 0D;
-            this.SDB_ROLL_SHLD_DIA.Scale = 2;
-            this.SDB_ROLL_SHLD_DIA.ShowZero = false;
-            this.SDB_ROLL_SHLD_DIA.Size = new System.Drawing.Size(100, 22);
-            this.SDB_ROLL_SHLD_DIA.TabIndex = 588;
-            this.SDB_ROLL_SHLD_DIA.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // SDB_ROLL_DIA_Y
-            // 
-            this.SDB_ROLL_DIA_Y.Location = new System.Drawing.Point(96, 138);
-            this.SDB_ROLL_DIA_Y.MaxLength = 7;
-            this.SDB_ROLL_DIA_Y.Name = "SDB_ROLL_DIA_Y";
-            this.SDB_ROLL_DIA_Y.NumValue = 0D;
-            this.SDB_ROLL_DIA_Y.Scale = 2;
-            this.SDB_ROLL_DIA_Y.ShowZero = false;
-            this.SDB_ROLL_DIA_Y.Size = new System.Drawing.Size(100, 22);
-            this.SDB_ROLL_DIA_Y.TabIndex = 589;
-            this.SDB_ROLL_DIA_Y.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label44
-            // 
-            this.label44.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label44.Location = new System.Drawing.Point(6, 169);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(84, 19);
-            this.label44.TabIndex = 590;
-            this.label44.Text = "辊肩直径";
-            this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label45
-            // 
-            this.label45.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label45.Location = new System.Drawing.Point(6, 226);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(84, 19);
-            this.label45.TabIndex = 591;
-            this.label45.Text = "轧辊重量";
-            this.label45.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // SDB_ROLL_IN_C_HARD
-            // 
-            this.SDB_ROLL_IN_C_HARD.Location = new System.Drawing.Point(96, 309);
-            this.SDB_ROLL_IN_C_HARD.MaxLength = 2;
-            this.SDB_ROLL_IN_C_HARD.Name = "SDB_ROLL_IN_C_HARD";
-            this.SDB_ROLL_IN_C_HARD.NumValue = 0D;
-            this.SDB_ROLL_IN_C_HARD.Scale = 0;
-            this.SDB_ROLL_IN_C_HARD.ShowZero = false;
-            this.SDB_ROLL_IN_C_HARD.Size = new System.Drawing.Size(100, 22);
-            this.SDB_ROLL_IN_C_HARD.TabIndex = 592;
-            this.SDB_ROLL_IN_C_HARD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // SDB_ROLL_IN_D_HARD
-            // 
-            this.SDB_ROLL_IN_D_HARD.Location = new System.Drawing.Point(96, 338);
-            this.SDB_ROLL_IN_D_HARD.MaxLength = 2;
-            this.SDB_ROLL_IN_D_HARD.Name = "SDB_ROLL_IN_D_HARD";
-            this.SDB_ROLL_IN_D_HARD.NumValue = 0D;
-            this.SDB_ROLL_IN_D_HARD.Scale = 0;
-            this.SDB_ROLL_IN_D_HARD.ShowZero = false;
-            this.SDB_ROLL_IN_D_HARD.Size = new System.Drawing.Size(100, 22);
-            this.SDB_ROLL_IN_D_HARD.TabIndex = 593;
-            this.SDB_ROLL_IN_D_HARD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // SDB_ROLL_D_DIA2
-            // 
-            this.SDB_ROLL_D_DIA2.Location = new System.Drawing.Point(96, 366);
-            this.SDB_ROLL_D_DIA2.MaxLength = 2;
-            this.SDB_ROLL_D_DIA2.Name = "SDB_ROLL_D_DIA2";
-            this.SDB_ROLL_D_DIA2.NumValue = 0D;
-            this.SDB_ROLL_D_DIA2.Scale = 0;
-            this.SDB_ROLL_D_DIA2.ShowZero = false;
-            this.SDB_ROLL_D_DIA2.Size = new System.Drawing.Size(100, 22);
-            this.SDB_ROLL_D_DIA2.TabIndex = 594;
-            this.SDB_ROLL_D_DIA2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // SDB_ROLL_IN_AVE_HARD
-            // 
-            this.SDB_ROLL_IN_AVE_HARD.Location = new System.Drawing.Point(96, 395);
-            this.SDB_ROLL_IN_AVE_HARD.MaxLength = 2;
-            this.SDB_ROLL_IN_AVE_HARD.Name = "SDB_ROLL_IN_AVE_HARD";
-            this.SDB_ROLL_IN_AVE_HARD.NumValue = 0D;
-            this.SDB_ROLL_IN_AVE_HARD.Scale = 0;
-            this.SDB_ROLL_IN_AVE_HARD.ShowZero = false;
-            this.SDB_ROLL_IN_AVE_HARD.Size = new System.Drawing.Size(100, 22);
-            this.SDB_ROLL_IN_AVE_HARD.TabIndex = 595;
-            this.SDB_ROLL_IN_AVE_HARD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // TXT_MAKER_NO
-            // 
-            this.TXT_MAKER_NO.Location = new System.Drawing.Point(331, 53);
-            this.TXT_MAKER_NO.MaxLength = 25;
-            this.TXT_MAKER_NO.Name = "TXT_MAKER_NO";
-            this.TXT_MAKER_NO.Size = new System.Drawing.Size(100, 22);
-            this.TXT_MAKER_NO.TabIndex = 597;
-            // 
-            // TXT_LOC
-            // 
-            this.TXT_LOC.Location = new System.Drawing.Point(331, 83);
-            this.TXT_LOC.MaxLength = 10;
-            this.TXT_LOC.Name = "TXT_LOC";
-            this.TXT_LOC.Size = new System.Drawing.Size(100, 22);
-            this.TXT_LOC.TabIndex = 598;
-            // 
-            // txt_ISSUETALLYNO
-            // 
-            this.txt_ISSUETALLYNO.Location = new System.Drawing.Point(331, 110);
-            this.txt_ISSUETALLYNO.MaxLength = 15;
-            this.txt_ISSUETALLYNO.Name = "txt_ISSUETALLYNO";
-            this.txt_ISSUETALLYNO.Size = new System.Drawing.Size(100, 22);
-            this.txt_ISSUETALLYNO.TabIndex = 599;
-            // 
-            // txt_MTRLNO
-            // 
-            this.txt_MTRLNO.Location = new System.Drawing.Point(331, 140);
-            this.txt_MTRLNO.MaxLength = 12;
-            this.txt_MTRLNO.Name = "txt_MTRLNO";
-            this.txt_MTRLNO.Size = new System.Drawing.Size(100, 22);
-            this.txt_MTRLNO.TabIndex = 600;
-            // 
-            // txt_PLAN_DIA
-            // 
-            this.txt_PLAN_DIA.Location = new System.Drawing.Point(331, 197);
-            this.txt_PLAN_DIA.MaxLength = 8;
-            this.txt_PLAN_DIA.Name = "txt_PLAN_DIA";
-            this.txt_PLAN_DIA.NumValue = 0D;
-            this.txt_PLAN_DIA.Scale = 2;
-            this.txt_PLAN_DIA.ShowZero = false;
-            this.txt_PLAN_DIA.Size = new System.Drawing.Size(100, 22);
-            this.txt_PLAN_DIA.TabIndex = 601;
-            this.txt_PLAN_DIA.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txt_ROLL_PRICE
-            // 
-            this.txt_ROLL_PRICE.Location = new System.Drawing.Point(331, 169);
-            this.txt_ROLL_PRICE.MaxLength = 8;
-            this.txt_ROLL_PRICE.Name = "txt_ROLL_PRICE";
-            this.txt_ROLL_PRICE.NumValue = 0D;
-            this.txt_ROLL_PRICE.Scale = 2;
-            this.txt_ROLL_PRICE.ShowZero = false;
-            this.txt_ROLL_PRICE.Size = new System.Drawing.Size(100, 22);
-            this.txt_ROLL_PRICE.TabIndex = 602;
-            this.txt_ROLL_PRICE.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(435, 175);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(55, 13);
-            this.label46.TabIndex = 603;
-            this.label46.Text = "元(RMB)";
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(202, 113);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(21, 13);
-            this.label47.TabIndex = 604;
-            this.label47.Text = "mm";
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(202, 144);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(21, 13);
-            this.label48.TabIndex = 605;
-            this.label48.Text = "mm";
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(202, 172);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(21, 13);
-            this.label49.TabIndex = 606;
-            this.label49.Text = "mm";
-            // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(202, 200);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(21, 13);
-            this.label50.TabIndex = 607;
-            this.label50.Text = "mm";
-            // 
-            // label51
-            // 
-            this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(202, 232);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(21, 13);
-            this.label51.TabIndex = 608;
-            this.label51.Text = "kg";
-            // 
-            // txt_sec_treat_mtd
-            // 
-            this.txt_sec_treat_mtd.Location = new System.Drawing.Point(279, 518);
-            this.txt_sec_treat_mtd.Name = "txt_sec_treat_mtd";
-            this.txt_sec_treat_mtd.Size = new System.Drawing.Size(62, 22);
-            this.txt_sec_treat_mtd.TabIndex = 609;
-            this.txt_sec_treat_mtd.Visible = false;
-            // 
-            // UTP_B_ROLL_IN_TIME
-            // 
-            this.UTP_B_ROLL_IN_TIME.Location = new System.Drawing.Point(116, 26);
-            this.UTP_B_ROLL_IN_TIME.Mask = "0000-00-00 90:00:00";
-            this.UTP_B_ROLL_IN_TIME.Name = "UTP_B_ROLL_IN_TIME";
-            this.UTP_B_ROLL_IN_TIME.Size = new System.Drawing.Size(144, 22);
-            this.UTP_B_ROLL_IN_TIME.TabIndex = 610;
-            // 
-            // TXT_CHOCK_NO
-            // 
-            this.TXT_CHOCK_NO.Location = new System.Drawing.Point(116, 64);
-            this.TXT_CHOCK_NO.MaxLength = 6;
-            this.TXT_CHOCK_NO.Name = "TXT_CHOCK_NO";
-            this.TXT_CHOCK_NO.Size = new System.Drawing.Size(100, 22);
-            this.TXT_CHOCK_NO.TabIndex = 610;
-            // 
-            // TXT_B_ROLL_MAKER
-            // 
-            this.TXT_B_ROLL_MAKER.Location = new System.Drawing.Point(116, 102);
-            this.TXT_B_ROLL_MAKER.MaxLength = 2;
-            this.TXT_B_ROLL_MAKER.Name = "TXT_B_ROLL_MAKER";
-            this.TXT_B_ROLL_MAKER.Size = new System.Drawing.Size(100, 22);
-            this.TXT_B_ROLL_MAKER.sJoin = "";
-            this.TXT_B_ROLL_MAKER.sKey = "G0005";
-            this.TXT_B_ROLL_MAKER.TabIndex = 610;
-            // 
-            // SDB_B_IN_DIA
-            // 
-            this.SDB_B_IN_DIA.Location = new System.Drawing.Point(116, 141);
-            this.SDB_B_IN_DIA.MaxLength = 10;
-            this.SDB_B_IN_DIA.Name = "SDB_B_IN_DIA";
-            this.SDB_B_IN_DIA.NumValue = 0D;
-            this.SDB_B_IN_DIA.Scale = 2;
-            this.SDB_B_IN_DIA.ShowZero = false;
-            this.SDB_B_IN_DIA.Size = new System.Drawing.Size(100, 22);
-            this.SDB_B_IN_DIA.TabIndex = 610;
-            this.SDB_B_IN_DIA.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // SDB_B_OUT_DIA
-            // 
-            this.SDB_B_OUT_DIA.Location = new System.Drawing.Point(116, 179);
-            this.SDB_B_OUT_DIA.MaxLength = 10;
-            this.SDB_B_OUT_DIA.Name = "SDB_B_OUT_DIA";
-            this.SDB_B_OUT_DIA.NumValue = 0D;
-            this.SDB_B_OUT_DIA.Scale = 2;
-            this.SDB_B_OUT_DIA.ShowZero = false;
-            this.SDB_B_OUT_DIA.Size = new System.Drawing.Size(100, 22);
-            this.SDB_B_OUT_DIA.TabIndex = 611;
-            this.SDB_B_OUT_DIA.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // TXT_ROLL_MATERIAL
-            // 
-            this.TXT_ROLL_MATERIAL.Location = new System.Drawing.Point(96, 426);
-            this.TXT_ROLL_MATERIAL.MaxLength = 1;
-            this.TXT_ROLL_MATERIAL.Name = "TXT_ROLL_MATERIAL";
-            this.TXT_ROLL_MATERIAL.Size = new System.Drawing.Size(100, 22);
-            this.TXT_ROLL_MATERIAL.sJoin = "";
-            this.TXT_ROLL_MATERIAL.sKey = "G0004";
-            this.TXT_ROLL_MATERIAL.TabIndex = 610;
-            this.TXT_ROLL_MATERIAL.Tag = "";
-            // 
-            // TXT_B_ROLL_MATERIAL
-            // 
-            this.TXT_B_ROLL_MATERIAL.Location = new System.Drawing.Point(116, 216);
-            this.TXT_B_ROLL_MATERIAL.MaxLength = 1;
-            this.TXT_B_ROLL_MATERIAL.Name = "TXT_B_ROLL_MATERIAL";
-            this.TXT_B_ROLL_MATERIAL.Size = new System.Drawing.Size(100, 22);
-            this.TXT_B_ROLL_MATERIAL.sJoin = "";
-            this.TXT_B_ROLL_MATERIAL.sKey = "G0004";
-            this.TXT_B_ROLL_MATERIAL.TabIndex = 611;
-            this.TXT_B_ROLL_MATERIAL.Tag = "";
-            // 
-            // UTP_B_ROLL_USE_TIME
-            // 
-            this.UTP_B_ROLL_USE_TIME.Location = new System.Drawing.Point(116, 257);
-            this.UTP_B_ROLL_USE_TIME.Mask = "0000-00-00 90:00:00";
-            this.UTP_B_ROLL_USE_TIME.Name = "UTP_B_ROLL_USE_TIME";
-            this.UTP_B_ROLL_USE_TIME.Size = new System.Drawing.Size(144, 22);
-            this.UTP_B_ROLL_USE_TIME.TabIndex = 612;
-            // 
-            // UTP_C_ROLL_IN_TIME
-            // 
-            this.UTP_C_ROLL_IN_TIME.Location = new System.Drawing.Point(116, 23);
-            this.UTP_C_ROLL_IN_TIME.Mask = "0000-00-00 90:00:00";
-            this.UTP_C_ROLL_IN_TIME.Name = "UTP_C_ROLL_IN_TIME";
-            this.UTP_C_ROLL_IN_TIME.Size = new System.Drawing.Size(144, 22);
-            this.UTP_C_ROLL_IN_TIME.TabIndex = 613;
-            // 
-            // TXT_BEAR_NO
-            // 
-            this.TXT_BEAR_NO.Location = new System.Drawing.Point(116, 64);
-            this.TXT_BEAR_NO.MaxLength = 6;
-            this.TXT_BEAR_NO.Name = "TXT_BEAR_NO";
-            this.TXT_BEAR_NO.Size = new System.Drawing.Size(100, 22);
-            this.TXT_BEAR_NO.TabIndex = 613;
-            // 
-            // TXT_C_ROLL_MAKER
-            // 
-            this.TXT_C_ROLL_MAKER.Location = new System.Drawing.Point(116, 102);
-            this.TXT_C_ROLL_MAKER.MaxLength = 2;
-            this.TXT_C_ROLL_MAKER.Name = "TXT_C_ROLL_MAKER";
-            this.TXT_C_ROLL_MAKER.Size = new System.Drawing.Size(100, 22);
-            this.TXT_C_ROLL_MAKER.sJoin = "";
-            this.TXT_C_ROLL_MAKER.sKey = "G0005";
-            this.TXT_C_ROLL_MAKER.TabIndex = 613;
-            // 
-            // SDB_C_IN_DIA
-            // 
-            this.SDB_C_IN_DIA.Location = new System.Drawing.Point(116, 140);
-            this.SDB_C_IN_DIA.MaxLength = 10;
-            this.SDB_C_IN_DIA.Name = "SDB_C_IN_DIA";
-            this.SDB_C_IN_DIA.NumValue = 0D;
-            this.SDB_C_IN_DIA.Scale = 2;
-            this.SDB_C_IN_DIA.ShowZero = false;
-            this.SDB_C_IN_DIA.Size = new System.Drawing.Size(100, 22);
-            this.SDB_C_IN_DIA.TabIndex = 613;
-            this.SDB_C_IN_DIA.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // SDB_C_OUT_DIA
-            // 
-            this.SDB_C_OUT_DIA.Location = new System.Drawing.Point(116, 176);
-            this.SDB_C_OUT_DIA.MaxLength = 10;
-            this.SDB_C_OUT_DIA.Name = "SDB_C_OUT_DIA";
-            this.SDB_C_OUT_DIA.NumValue = 0D;
-            this.SDB_C_OUT_DIA.Scale = 2;
-            this.SDB_C_OUT_DIA.ShowZero = false;
-            this.SDB_C_OUT_DIA.Size = new System.Drawing.Size(100, 22);
-            this.SDB_C_OUT_DIA.TabIndex = 613;
-            this.SDB_C_OUT_DIA.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // SDB_C_ROLL_WID
-            // 
-            this.SDB_C_ROLL_WID.Location = new System.Drawing.Point(116, 216);
-            this.SDB_C_ROLL_WID.MaxLength = 10;
-            this.SDB_C_ROLL_WID.Name = "SDB_C_ROLL_WID";
-            this.SDB_C_ROLL_WID.NumValue = 0D;
-            this.SDB_C_ROLL_WID.Scale = 2;
-            this.SDB_C_ROLL_WID.ShowZero = false;
-            this.SDB_C_ROLL_WID.Size = new System.Drawing.Size(100, 22);
-            this.SDB_C_ROLL_WID.TabIndex = 614;
-            this.SDB_C_ROLL_WID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // UTP_P_ROLL_IN_TIME
-            // 
-            this.UTP_P_ROLL_IN_TIME.Location = new System.Drawing.Point(116, 26);
-            this.UTP_P_ROLL_IN_TIME.Mask = "0000-00-00 90:00:00";
-            this.UTP_P_ROLL_IN_TIME.Name = "UTP_P_ROLL_IN_TIME";
-            this.UTP_P_ROLL_IN_TIME.Size = new System.Drawing.Size(144, 22);
-            this.UTP_P_ROLL_IN_TIME.TabIndex = 615;
-            // 
-            // TXT_PLANK_NO
-            // 
-            this.TXT_PLANK_NO.Location = new System.Drawing.Point(116, 64);
-            this.TXT_PLANK_NO.MaxLength = 3;
-            this.TXT_PLANK_NO.Name = "TXT_PLANK_NO";
-            this.TXT_PLANK_NO.Size = new System.Drawing.Size(100, 22);
-            this.TXT_PLANK_NO.TabIndex = 615;
-            // 
-            // TXT_P_ROLL_MAKER
-            // 
-            this.TXT_P_ROLL_MAKER.Location = new System.Drawing.Point(116, 102);
-            this.TXT_P_ROLL_MAKER.MaxLength = 2;
-            this.TXT_P_ROLL_MAKER.Name = "TXT_P_ROLL_MAKER";
-            this.TXT_P_ROLL_MAKER.Size = new System.Drawing.Size(100, 22);
-            this.TXT_P_ROLL_MAKER.sJoin = "";
-            this.TXT_P_ROLL_MAKER.sKey = "G0005";
-            this.TXT_P_ROLL_MAKER.TabIndex = 615;
             // 
             // TXT_B_IN_EMP
             // 
@@ -1517,6 +1100,193 @@
             this.label54.Text = "班次";
             this.label54.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // UTP_B_ROLL_USE_TIME
+            // 
+            this.UTP_B_ROLL_USE_TIME.Location = new System.Drawing.Point(116, 257);
+            this.UTP_B_ROLL_USE_TIME.Mask = "0000-00-00 90:00:00";
+            this.UTP_B_ROLL_USE_TIME.Name = "UTP_B_ROLL_USE_TIME";
+            this.UTP_B_ROLL_USE_TIME.Size = new System.Drawing.Size(144, 22);
+            this.UTP_B_ROLL_USE_TIME.TabIndex = 612;
+            // 
+            // TXT_B_ROLL_MATERIAL
+            // 
+            this.TXT_B_ROLL_MATERIAL.Location = new System.Drawing.Point(116, 216);
+            this.TXT_B_ROLL_MATERIAL.MaxLength = 1;
+            this.TXT_B_ROLL_MATERIAL.Name = "TXT_B_ROLL_MATERIAL";
+            this.TXT_B_ROLL_MATERIAL.Size = new System.Drawing.Size(100, 22);
+            this.TXT_B_ROLL_MATERIAL.sJoin = "";
+            this.TXT_B_ROLL_MATERIAL.sKey = "G0004";
+            this.TXT_B_ROLL_MATERIAL.TabIndex = 611;
+            this.TXT_B_ROLL_MATERIAL.Tag = "";
+            // 
+            // SDB_B_OUT_DIA
+            // 
+            this.SDB_B_OUT_DIA.Location = new System.Drawing.Point(116, 179);
+            this.SDB_B_OUT_DIA.MaxLength = 10;
+            this.SDB_B_OUT_DIA.Name = "SDB_B_OUT_DIA";
+            this.SDB_B_OUT_DIA.NumValue = 0D;
+            this.SDB_B_OUT_DIA.Scale = 2;
+            this.SDB_B_OUT_DIA.ShowZero = false;
+            this.SDB_B_OUT_DIA.Size = new System.Drawing.Size(100, 22);
+            this.SDB_B_OUT_DIA.TabIndex = 611;
+            this.SDB_B_OUT_DIA.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // SDB_B_IN_DIA
+            // 
+            this.SDB_B_IN_DIA.Location = new System.Drawing.Point(116, 141);
+            this.SDB_B_IN_DIA.MaxLength = 10;
+            this.SDB_B_IN_DIA.Name = "SDB_B_IN_DIA";
+            this.SDB_B_IN_DIA.NumValue = 0D;
+            this.SDB_B_IN_DIA.Scale = 2;
+            this.SDB_B_IN_DIA.ShowZero = false;
+            this.SDB_B_IN_DIA.Size = new System.Drawing.Size(100, 22);
+            this.SDB_B_IN_DIA.TabIndex = 610;
+            this.SDB_B_IN_DIA.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // TXT_B_ROLL_MAKER
+            // 
+            this.TXT_B_ROLL_MAKER.Location = new System.Drawing.Point(116, 102);
+            this.TXT_B_ROLL_MAKER.MaxLength = 2;
+            this.TXT_B_ROLL_MAKER.Name = "TXT_B_ROLL_MAKER";
+            this.TXT_B_ROLL_MAKER.Size = new System.Drawing.Size(100, 22);
+            this.TXT_B_ROLL_MAKER.sJoin = "";
+            this.TXT_B_ROLL_MAKER.sKey = "G0005";
+            this.TXT_B_ROLL_MAKER.TabIndex = 610;
+            // 
+            // TXT_CHOCK_NO
+            // 
+            this.TXT_CHOCK_NO.Location = new System.Drawing.Point(116, 64);
+            this.TXT_CHOCK_NO.MaxLength = 6;
+            this.TXT_CHOCK_NO.Name = "TXT_CHOCK_NO";
+            this.TXT_CHOCK_NO.Size = new System.Drawing.Size(100, 22);
+            this.TXT_CHOCK_NO.TabIndex = 610;
+            // 
+            // UTP_B_ROLL_IN_TIME
+            // 
+            this.UTP_B_ROLL_IN_TIME.Location = new System.Drawing.Point(116, 26);
+            this.UTP_B_ROLL_IN_TIME.Mask = "0000-00-00 90:00:00";
+            this.UTP_B_ROLL_IN_TIME.Name = "UTP_B_ROLL_IN_TIME";
+            this.UTP_B_ROLL_IN_TIME.Size = new System.Drawing.Size(144, 22);
+            this.UTP_B_ROLL_IN_TIME.TabIndex = 610;
+            // 
+            // label34
+            // 
+            this.label34.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label34.Location = new System.Drawing.Point(6, 257);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(104, 19);
+            this.label34.TabIndex = 586;
+            this.label34.Text = "开始使用时间";
+            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label33
+            // 
+            this.label33.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label33.ForeColor = System.Drawing.Color.Blue;
+            this.label33.Location = new System.Drawing.Point(6, 216);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(104, 19);
+            this.label33.TabIndex = 585;
+            this.label33.Text = "材质代码";
+            this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label32
+            // 
+            this.label32.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label32.Location = new System.Drawing.Point(6, 178);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(104, 19);
+            this.label32.TabIndex = 584;
+            this.label32.Text = "外径";
+            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label31
+            // 
+            this.label31.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label31.Location = new System.Drawing.Point(6, 140);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(104, 19);
+            this.label31.TabIndex = 583;
+            this.label31.Text = "内径";
+            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label30
+            // 
+            this.label30.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label30.ForeColor = System.Drawing.Color.Blue;
+            this.label30.Location = new System.Drawing.Point(3, 102);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(104, 19);
+            this.label30.TabIndex = 582;
+            this.label30.Text = "供货商";
+            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label29
+            // 
+            this.label29.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label29.Location = new System.Drawing.Point(6, 64);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(104, 19);
+            this.label29.TabIndex = 581;
+            this.label29.Text = "轴承座标识号";
+            this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label28
+            // 
+            this.label28.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label28.Location = new System.Drawing.Point(6, 26);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(104, 19);
+            this.label28.TabIndex = 580;
+            this.label28.Text = "入库时间";
+            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // sc2
+            // 
+            this.sc2.AutoSize = true;
+            this.sc2.Location = new System.Drawing.Point(6, 6);
+            this.sc2.Name = "sc2";
+            this.sc2.Size = new System.Drawing.Size(65, 17);
+            this.sc2.TabIndex = 1;
+            this.sc2.Text = "轴承座";
+            this.sc2.UseVisualStyleBackColor = true;
+            // 
+            // splitter2
+            // 
+            this.splitter2.Location = new System.Drawing.Point(756, 54);
+            this.splitter2.Name = "splitter2";
+            this.splitter2.Size = new System.Drawing.Size(3, 588);
+            this.splitter2.TabIndex = 5;
+            this.splitter2.TabStop = false;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.TXT_C_IN_EMP);
+            this.groupBox4.Controls.Add(this.label55);
+            this.groupBox4.Controls.Add(this.label56);
+            this.groupBox4.Controls.Add(this.TXT_C_GROUP);
+            this.groupBox4.Controls.Add(this.TXT_C_SHIFT);
+            this.groupBox4.Controls.Add(this.label57);
+            this.groupBox4.Controls.Add(this.SDB_C_ROLL_WID);
+            this.groupBox4.Controls.Add(this.SDB_C_OUT_DIA);
+            this.groupBox4.Controls.Add(this.SDB_C_IN_DIA);
+            this.groupBox4.Controls.Add(this.TXT_C_ROLL_MAKER);
+            this.groupBox4.Controls.Add(this.TXT_BEAR_NO);
+            this.groupBox4.Controls.Add(this.UTP_C_ROLL_IN_TIME);
+            this.groupBox4.Controls.Add(this.label35);
+            this.groupBox4.Controls.Add(this.label36);
+            this.groupBox4.Controls.Add(this.label37);
+            this.groupBox4.Controls.Add(this.label38);
+            this.groupBox4.Controls.Add(this.label39);
+            this.groupBox4.Controls.Add(this.label40);
+            this.groupBox4.Controls.Add(this.sc3);
+            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox4.Location = new System.Drawing.Point(759, 54);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(270, 588);
+            this.groupBox4.TabIndex = 6;
+            this.groupBox4.TabStop = false;
+            // 
             // TXT_C_IN_EMP
             // 
             this.TXT_C_IN_EMP.Location = new System.Drawing.Point(176, 559);
@@ -1574,6 +1344,169 @@
             this.label57.TabIndex = 615;
             this.label57.Text = "班次";
             this.label57.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // SDB_C_ROLL_WID
+            // 
+            this.SDB_C_ROLL_WID.Location = new System.Drawing.Point(116, 216);
+            this.SDB_C_ROLL_WID.MaxLength = 10;
+            this.SDB_C_ROLL_WID.Name = "SDB_C_ROLL_WID";
+            this.SDB_C_ROLL_WID.NumValue = 0D;
+            this.SDB_C_ROLL_WID.Scale = 2;
+            this.SDB_C_ROLL_WID.ShowZero = false;
+            this.SDB_C_ROLL_WID.Size = new System.Drawing.Size(100, 22);
+            this.SDB_C_ROLL_WID.TabIndex = 614;
+            this.SDB_C_ROLL_WID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // SDB_C_OUT_DIA
+            // 
+            this.SDB_C_OUT_DIA.Location = new System.Drawing.Point(116, 176);
+            this.SDB_C_OUT_DIA.MaxLength = 10;
+            this.SDB_C_OUT_DIA.Name = "SDB_C_OUT_DIA";
+            this.SDB_C_OUT_DIA.NumValue = 0D;
+            this.SDB_C_OUT_DIA.Scale = 2;
+            this.SDB_C_OUT_DIA.ShowZero = false;
+            this.SDB_C_OUT_DIA.Size = new System.Drawing.Size(100, 22);
+            this.SDB_C_OUT_DIA.TabIndex = 613;
+            this.SDB_C_OUT_DIA.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // SDB_C_IN_DIA
+            // 
+            this.SDB_C_IN_DIA.Location = new System.Drawing.Point(116, 140);
+            this.SDB_C_IN_DIA.MaxLength = 10;
+            this.SDB_C_IN_DIA.Name = "SDB_C_IN_DIA";
+            this.SDB_C_IN_DIA.NumValue = 0D;
+            this.SDB_C_IN_DIA.Scale = 2;
+            this.SDB_C_IN_DIA.ShowZero = false;
+            this.SDB_C_IN_DIA.Size = new System.Drawing.Size(100, 22);
+            this.SDB_C_IN_DIA.TabIndex = 613;
+            this.SDB_C_IN_DIA.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // TXT_C_ROLL_MAKER
+            // 
+            this.TXT_C_ROLL_MAKER.Location = new System.Drawing.Point(116, 102);
+            this.TXT_C_ROLL_MAKER.MaxLength = 2;
+            this.TXT_C_ROLL_MAKER.Name = "TXT_C_ROLL_MAKER";
+            this.TXT_C_ROLL_MAKER.Size = new System.Drawing.Size(100, 22);
+            this.TXT_C_ROLL_MAKER.sJoin = "";
+            this.TXT_C_ROLL_MAKER.sKey = "G0005";
+            this.TXT_C_ROLL_MAKER.TabIndex = 613;
+            // 
+            // TXT_BEAR_NO
+            // 
+            this.TXT_BEAR_NO.Location = new System.Drawing.Point(116, 64);
+            this.TXT_BEAR_NO.MaxLength = 6;
+            this.TXT_BEAR_NO.Name = "TXT_BEAR_NO";
+            this.TXT_BEAR_NO.Size = new System.Drawing.Size(100, 22);
+            this.TXT_BEAR_NO.TabIndex = 613;
+            // 
+            // UTP_C_ROLL_IN_TIME
+            // 
+            this.UTP_C_ROLL_IN_TIME.Location = new System.Drawing.Point(116, 23);
+            this.UTP_C_ROLL_IN_TIME.Mask = "0000-00-00 90:00:00";
+            this.UTP_C_ROLL_IN_TIME.Name = "UTP_C_ROLL_IN_TIME";
+            this.UTP_C_ROLL_IN_TIME.Size = new System.Drawing.Size(144, 22);
+            this.UTP_C_ROLL_IN_TIME.TabIndex = 613;
+            // 
+            // label35
+            // 
+            this.label35.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label35.Location = new System.Drawing.Point(6, 216);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(104, 19);
+            this.label35.TabIndex = 591;
+            this.label35.Text = "宽度";
+            this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label36
+            // 
+            this.label36.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label36.Location = new System.Drawing.Point(6, 178);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(104, 19);
+            this.label36.TabIndex = 590;
+            this.label36.Text = "外径";
+            this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label37
+            // 
+            this.label37.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label37.Location = new System.Drawing.Point(6, 140);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(104, 19);
+            this.label37.TabIndex = 589;
+            this.label37.Text = "内径";
+            this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label38
+            // 
+            this.label38.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label38.ForeColor = System.Drawing.Color.Blue;
+            this.label38.Location = new System.Drawing.Point(6, 102);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(104, 19);
+            this.label38.TabIndex = 588;
+            this.label38.Text = "供货商";
+            this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label39
+            // 
+            this.label39.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label39.Location = new System.Drawing.Point(6, 64);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(104, 19);
+            this.label39.TabIndex = 587;
+            this.label39.Text = "轴承标识号";
+            this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label40
+            // 
+            this.label40.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label40.Location = new System.Drawing.Point(6, 26);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(104, 19);
+            this.label40.TabIndex = 586;
+            this.label40.Text = "入库时间";
+            this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // sc3
+            // 
+            this.sc3.AutoSize = true;
+            this.sc3.Location = new System.Drawing.Point(6, 6);
+            this.sc3.Name = "sc3";
+            this.sc3.Size = new System.Drawing.Size(52, 17);
+            this.sc3.TabIndex = 2;
+            this.sc3.Text = "轴承";
+            this.sc3.UseVisualStyleBackColor = true;
+            // 
+            // splitter3
+            // 
+            this.splitter3.Location = new System.Drawing.Point(1029, 54);
+            this.splitter3.Name = "splitter3";
+            this.splitter3.Size = new System.Drawing.Size(3, 588);
+            this.splitter3.TabIndex = 7;
+            this.splitter3.TabStop = false;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.TXT_P_IN_EMP);
+            this.groupBox5.Controls.Add(this.label58);
+            this.groupBox5.Controls.Add(this.label59);
+            this.groupBox5.Controls.Add(this.TXT_P_GROUP);
+            this.groupBox5.Controls.Add(this.TXT_P_SHIFT);
+            this.groupBox5.Controls.Add(this.label60);
+            this.groupBox5.Controls.Add(this.TXT_P_ROLL_MAKER);
+            this.groupBox5.Controls.Add(this.TXT_PLANK_NO);
+            this.groupBox5.Controls.Add(this.UTP_P_ROLL_IN_TIME);
+            this.groupBox5.Controls.Add(this.label41);
+            this.groupBox5.Controls.Add(this.label42);
+            this.groupBox5.Controls.Add(this.label43);
+            this.groupBox5.Controls.Add(this.sc4);
+            this.groupBox5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox5.Location = new System.Drawing.Point(1032, 54);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(277, 588);
+            this.groupBox5.TabIndex = 8;
+            this.groupBox5.TabStop = false;
             // 
             // TXT_P_IN_EMP
             // 
@@ -1633,6 +1566,73 @@
             this.label60.Text = "班次";
             this.label60.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // TXT_P_ROLL_MAKER
+            // 
+            this.TXT_P_ROLL_MAKER.Location = new System.Drawing.Point(116, 102);
+            this.TXT_P_ROLL_MAKER.MaxLength = 2;
+            this.TXT_P_ROLL_MAKER.Name = "TXT_P_ROLL_MAKER";
+            this.TXT_P_ROLL_MAKER.Size = new System.Drawing.Size(100, 22);
+            this.TXT_P_ROLL_MAKER.sJoin = "";
+            this.TXT_P_ROLL_MAKER.sKey = "G0005";
+            this.TXT_P_ROLL_MAKER.TabIndex = 615;
+            // 
+            // TXT_PLANK_NO
+            // 
+            this.TXT_PLANK_NO.Location = new System.Drawing.Point(116, 64);
+            this.TXT_PLANK_NO.MaxLength = 3;
+            this.TXT_PLANK_NO.Name = "TXT_PLANK_NO";
+            this.TXT_PLANK_NO.Size = new System.Drawing.Size(100, 22);
+            this.TXT_PLANK_NO.TabIndex = 615;
+            // 
+            // UTP_P_ROLL_IN_TIME
+            // 
+            this.UTP_P_ROLL_IN_TIME.Location = new System.Drawing.Point(116, 26);
+            this.UTP_P_ROLL_IN_TIME.Mask = "0000-00-00 90:00:00";
+            this.UTP_P_ROLL_IN_TIME.Name = "UTP_P_ROLL_IN_TIME";
+            this.UTP_P_ROLL_IN_TIME.Size = new System.Drawing.Size(144, 22);
+            this.UTP_P_ROLL_IN_TIME.TabIndex = 615;
+            // 
+            // label41
+            // 
+            this.label41.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label41.ForeColor = System.Drawing.Color.Blue;
+            this.label41.Location = new System.Drawing.Point(6, 102);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(104, 19);
+            this.label41.TabIndex = 591;
+            this.label41.Text = "供货商";
+            this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label42
+            // 
+            this.label42.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label42.Location = new System.Drawing.Point(6, 64);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(104, 19);
+            this.label42.TabIndex = 590;
+            this.label42.Text = "护板标识号";
+            this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label43
+            // 
+            this.label43.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label43.Location = new System.Drawing.Point(6, 26);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(104, 19);
+            this.label43.TabIndex = 589;
+            this.label43.Text = "入库时间";
+            this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // sc4
+            // 
+            this.sc4.AutoSize = true;
+            this.sc4.Location = new System.Drawing.Point(6, 6);
+            this.sc4.Name = "sc4";
+            this.sc4.Size = new System.Drawing.Size(52, 17);
+            this.sc4.TabIndex = 3;
+            this.sc4.Text = "护板";
+            this.sc4.UseVisualStyleBackColor = true;
+            // 
             // CGF2010C
             // 
             this.ClientSize = new System.Drawing.Size(1313, 642);
@@ -1672,7 +1672,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label ULabel16;
         private System.Windows.Forms.ComboBox CBO_PLT;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Splitter splitter1;
