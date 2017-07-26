@@ -39,7 +39,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ULabel16 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.sf1 = new System.Windows.Forms.GroupBox();
             this.TXT_ROLL_MATERIAL = new CommonClass.F4COMN();
             this.txt_sec_treat_mtd = new System.Windows.Forms.TextBox();
             this.label51 = new System.Windows.Forms.Label();
@@ -104,7 +104,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.splitter1 = new System.Windows.Forms.Splitter();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.sf2 = new System.Windows.Forms.GroupBox();
             this.TXT_B_IN_EMP = new System.Windows.Forms.TextBox();
             this.label52 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
@@ -127,7 +127,7 @@
             this.label28 = new System.Windows.Forms.Label();
             this.sc2 = new System.Windows.Forms.CheckBox();
             this.splitter2 = new System.Windows.Forms.Splitter();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.sf3 = new System.Windows.Forms.GroupBox();
             this.TXT_C_IN_EMP = new System.Windows.Forms.TextBox();
             this.label55 = new System.Windows.Forms.Label();
             this.label56 = new System.Windows.Forms.Label();
@@ -148,7 +148,7 @@
             this.label40 = new System.Windows.Forms.Label();
             this.sc3 = new System.Windows.Forms.CheckBox();
             this.splitter3 = new System.Windows.Forms.Splitter();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.sf4 = new System.Windows.Forms.GroupBox();
             this.TXT_P_IN_EMP = new System.Windows.Forms.TextBox();
             this.label58 = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
@@ -163,10 +163,10 @@
             this.label43 = new System.Windows.Forms.Label();
             this.sc4 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
+            this.sf1.SuspendLayout();
+            this.sf2.SuspendLayout();
+            this.sf3.SuspendLayout();
+            this.sf4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -290,75 +290,75 @@
             this.ULabel16.Text = "轧辊号";
             this.ULabel16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // groupBox2
+            // sf1
             // 
-            this.groupBox2.Controls.Add(this.TXT_ROLL_MATERIAL);
-            this.groupBox2.Controls.Add(this.txt_sec_treat_mtd);
-            this.groupBox2.Controls.Add(this.label51);
-            this.groupBox2.Controls.Add(this.label50);
-            this.groupBox2.Controls.Add(this.label49);
-            this.groupBox2.Controls.Add(this.label48);
-            this.groupBox2.Controls.Add(this.label47);
-            this.groupBox2.Controls.Add(this.label46);
-            this.groupBox2.Controls.Add(this.txt_ROLL_PRICE);
-            this.groupBox2.Controls.Add(this.txt_PLAN_DIA);
-            this.groupBox2.Controls.Add(this.txt_MTRLNO);
-            this.groupBox2.Controls.Add(this.txt_ISSUETALLYNO);
-            this.groupBox2.Controls.Add(this.TXT_LOC);
-            this.groupBox2.Controls.Add(this.TXT_MAKER_NO);
-            this.groupBox2.Controls.Add(this.SDB_ROLL_IN_AVE_HARD);
-            this.groupBox2.Controls.Add(this.SDB_ROLL_D_DIA2);
-            this.groupBox2.Controls.Add(this.SDB_ROLL_IN_D_HARD);
-            this.groupBox2.Controls.Add(this.SDB_ROLL_IN_C_HARD);
-            this.groupBox2.Controls.Add(this.label25);
-            this.groupBox2.Controls.Add(this.label45);
-            this.groupBox2.Controls.Add(this.label26);
-            this.groupBox2.Controls.Add(this.TXT_R_IN_EMP);
-            this.groupBox2.Controls.Add(this.label44);
-            this.groupBox2.Controls.Add(this.ULabel39);
-            this.groupBox2.Controls.Add(this.label24);
-            this.groupBox2.Controls.Add(this.SDB_ROLL_DIA_Y);
-            this.groupBox2.Controls.Add(this.ULabel38);
-            this.groupBox2.Controls.Add(this.SDB_ROLL_SHLD_DIA);
-            this.groupBox2.Controls.Add(this.TXT_R_GROUP);
-            this.groupBox2.Controls.Add(this.SDB_ROLL_NECK_DIA);
-            this.groupBox2.Controls.Add(this.SDB_ROLL_WGT);
-            this.groupBox2.Controls.Add(this.TXT_R_SHIFT);
-            this.groupBox2.Controls.Add(this.SDB_ROLL_IN_W_HARD);
-            this.groupBox2.Controls.Add(this.ULabel37);
-            this.groupBox2.Controls.Add(this.SDB_ROLL_W_DIA2);
-            this.groupBox2.Controls.Add(this.SDB_ROLL_DIA);
-            this.groupBox2.Controls.Add(this.SSC3);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.SSC2);
-            this.groupBox2.Controls.Add(this.TXT_ROLL_MAKER);
-            this.groupBox2.Controls.Add(this.SSC1);
-            this.groupBox2.Controls.Add(this.TXT_ROLL_NO);
-            this.groupBox2.Controls.Add(this.SSC0);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.label27);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.UTP_ROLL_IN_TIME);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label23);
-            this.groupBox2.Controls.Add(this.label20);
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.label19);
-            this.groupBox2.Controls.Add(this.label22);
-            this.groupBox2.Controls.Add(this.label21);
-            this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Controls.Add(this.sc1);
-            this.groupBox2.Controls.Add(this.label18);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox2.Location = new System.Drawing.Point(0, 54);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(490, 588);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
+            this.sf1.Controls.Add(this.TXT_ROLL_MATERIAL);
+            this.sf1.Controls.Add(this.txt_sec_treat_mtd);
+            this.sf1.Controls.Add(this.label51);
+            this.sf1.Controls.Add(this.label50);
+            this.sf1.Controls.Add(this.label49);
+            this.sf1.Controls.Add(this.label48);
+            this.sf1.Controls.Add(this.label47);
+            this.sf1.Controls.Add(this.label46);
+            this.sf1.Controls.Add(this.txt_ROLL_PRICE);
+            this.sf1.Controls.Add(this.txt_PLAN_DIA);
+            this.sf1.Controls.Add(this.txt_MTRLNO);
+            this.sf1.Controls.Add(this.txt_ISSUETALLYNO);
+            this.sf1.Controls.Add(this.TXT_LOC);
+            this.sf1.Controls.Add(this.TXT_MAKER_NO);
+            this.sf1.Controls.Add(this.SDB_ROLL_IN_AVE_HARD);
+            this.sf1.Controls.Add(this.SDB_ROLL_D_DIA2);
+            this.sf1.Controls.Add(this.SDB_ROLL_IN_D_HARD);
+            this.sf1.Controls.Add(this.SDB_ROLL_IN_C_HARD);
+            this.sf1.Controls.Add(this.label25);
+            this.sf1.Controls.Add(this.label45);
+            this.sf1.Controls.Add(this.label26);
+            this.sf1.Controls.Add(this.TXT_R_IN_EMP);
+            this.sf1.Controls.Add(this.label44);
+            this.sf1.Controls.Add(this.ULabel39);
+            this.sf1.Controls.Add(this.label24);
+            this.sf1.Controls.Add(this.SDB_ROLL_DIA_Y);
+            this.sf1.Controls.Add(this.ULabel38);
+            this.sf1.Controls.Add(this.SDB_ROLL_SHLD_DIA);
+            this.sf1.Controls.Add(this.TXT_R_GROUP);
+            this.sf1.Controls.Add(this.SDB_ROLL_NECK_DIA);
+            this.sf1.Controls.Add(this.SDB_ROLL_WGT);
+            this.sf1.Controls.Add(this.TXT_R_SHIFT);
+            this.sf1.Controls.Add(this.SDB_ROLL_IN_W_HARD);
+            this.sf1.Controls.Add(this.ULabel37);
+            this.sf1.Controls.Add(this.SDB_ROLL_W_DIA2);
+            this.sf1.Controls.Add(this.SDB_ROLL_DIA);
+            this.sf1.Controls.Add(this.SSC3);
+            this.sf1.Controls.Add(this.label7);
+            this.sf1.Controls.Add(this.SSC2);
+            this.sf1.Controls.Add(this.TXT_ROLL_MAKER);
+            this.sf1.Controls.Add(this.SSC1);
+            this.sf1.Controls.Add(this.TXT_ROLL_NO);
+            this.sf1.Controls.Add(this.SSC0);
+            this.sf1.Controls.Add(this.label8);
+            this.sf1.Controls.Add(this.label27);
+            this.sf1.Controls.Add(this.label9);
+            this.sf1.Controls.Add(this.label10);
+            this.sf1.Controls.Add(this.UTP_ROLL_IN_TIME);
+            this.sf1.Controls.Add(this.label6);
+            this.sf1.Controls.Add(this.label23);
+            this.sf1.Controls.Add(this.label20);
+            this.sf1.Controls.Add(this.label12);
+            this.sf1.Controls.Add(this.label14);
+            this.sf1.Controls.Add(this.label15);
+            this.sf1.Controls.Add(this.label19);
+            this.sf1.Controls.Add(this.label22);
+            this.sf1.Controls.Add(this.label21);
+            this.sf1.Controls.Add(this.label17);
+            this.sf1.Controls.Add(this.label16);
+            this.sf1.Controls.Add(this.sc1);
+            this.sf1.Controls.Add(this.label18);
+            this.sf1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sf1.Location = new System.Drawing.Point(0, 54);
+            this.sf1.Name = "sf1";
+            this.sf1.Size = new System.Drawing.Size(490, 588);
+            this.sf1.TabIndex = 1;
+            this.sf1.TabStop = false;
             // 
             // TXT_ROLL_MATERIAL
             // 
@@ -1010,37 +1010,37 @@
             this.splitter1.TabIndex = 2;
             this.splitter1.TabStop = false;
             // 
-            // groupBox3
+            // sf2
             // 
-            this.groupBox3.Controls.Add(this.TXT_B_IN_EMP);
-            this.groupBox3.Controls.Add(this.label52);
-            this.groupBox3.Controls.Add(this.label53);
-            this.groupBox3.Controls.Add(this.TXT_B_GROUP);
-            this.groupBox3.Controls.Add(this.TXT_B_SHIFT);
-            this.groupBox3.Controls.Add(this.label54);
-            this.groupBox3.Controls.Add(this.UTP_B_ROLL_USE_TIME);
-            this.groupBox3.Controls.Add(this.TXT_B_ROLL_MATERIAL);
-            this.groupBox3.Controls.Add(this.SDB_B_OUT_DIA);
-            this.groupBox3.Controls.Add(this.SDB_B_IN_DIA);
-            this.groupBox3.Controls.Add(this.TXT_B_ROLL_MAKER);
-            this.groupBox3.Controls.Add(this.TXT_CHOCK_NO);
-            this.groupBox3.Controls.Add(this.UTP_B_ROLL_IN_TIME);
-            this.groupBox3.Controls.Add(this.label34);
-            this.groupBox3.Controls.Add(this.label33);
-            this.groupBox3.Controls.Add(this.label32);
-            this.groupBox3.Controls.Add(this.label31);
-            this.groupBox3.Controls.Add(this.label30);
-            this.groupBox3.Controls.Add(this.label29);
-            this.groupBox3.Controls.Add(this.label28);
-            this.groupBox3.Controls.Add(this.sc2);
-            this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox3.Location = new System.Drawing.Point(493, 54);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(263, 588);
-            this.groupBox3.TabIndex = 4;
-            this.groupBox3.TabStop = false;
+            this.sf2.Controls.Add(this.TXT_B_IN_EMP);
+            this.sf2.Controls.Add(this.label52);
+            this.sf2.Controls.Add(this.label53);
+            this.sf2.Controls.Add(this.TXT_B_GROUP);
+            this.sf2.Controls.Add(this.TXT_B_SHIFT);
+            this.sf2.Controls.Add(this.label54);
+            this.sf2.Controls.Add(this.UTP_B_ROLL_USE_TIME);
+            this.sf2.Controls.Add(this.TXT_B_ROLL_MATERIAL);
+            this.sf2.Controls.Add(this.SDB_B_OUT_DIA);
+            this.sf2.Controls.Add(this.SDB_B_IN_DIA);
+            this.sf2.Controls.Add(this.TXT_B_ROLL_MAKER);
+            this.sf2.Controls.Add(this.TXT_CHOCK_NO);
+            this.sf2.Controls.Add(this.UTP_B_ROLL_IN_TIME);
+            this.sf2.Controls.Add(this.label34);
+            this.sf2.Controls.Add(this.label33);
+            this.sf2.Controls.Add(this.label32);
+            this.sf2.Controls.Add(this.label31);
+            this.sf2.Controls.Add(this.label30);
+            this.sf2.Controls.Add(this.label29);
+            this.sf2.Controls.Add(this.label28);
+            this.sf2.Controls.Add(this.sc2);
+            this.sf2.Controls.Add(this.label11);
+            this.sf2.Controls.Add(this.label13);
+            this.sf2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sf2.Location = new System.Drawing.Point(493, 54);
+            this.sf2.Name = "sf2";
+            this.sf2.Size = new System.Drawing.Size(263, 588);
+            this.sf2.TabIndex = 4;
+            this.sf2.TabStop = false;
             // 
             // TXT_B_IN_EMP
             // 
@@ -1259,33 +1259,33 @@
             this.splitter2.TabIndex = 5;
             this.splitter2.TabStop = false;
             // 
-            // groupBox4
+            // sf3
             // 
-            this.groupBox4.Controls.Add(this.TXT_C_IN_EMP);
-            this.groupBox4.Controls.Add(this.label55);
-            this.groupBox4.Controls.Add(this.label56);
-            this.groupBox4.Controls.Add(this.TXT_C_GROUP);
-            this.groupBox4.Controls.Add(this.TXT_C_SHIFT);
-            this.groupBox4.Controls.Add(this.label57);
-            this.groupBox4.Controls.Add(this.SDB_C_ROLL_WID);
-            this.groupBox4.Controls.Add(this.SDB_C_OUT_DIA);
-            this.groupBox4.Controls.Add(this.SDB_C_IN_DIA);
-            this.groupBox4.Controls.Add(this.TXT_C_ROLL_MAKER);
-            this.groupBox4.Controls.Add(this.TXT_BEAR_NO);
-            this.groupBox4.Controls.Add(this.UTP_C_ROLL_IN_TIME);
-            this.groupBox4.Controls.Add(this.label35);
-            this.groupBox4.Controls.Add(this.label36);
-            this.groupBox4.Controls.Add(this.label37);
-            this.groupBox4.Controls.Add(this.label38);
-            this.groupBox4.Controls.Add(this.label39);
-            this.groupBox4.Controls.Add(this.label40);
-            this.groupBox4.Controls.Add(this.sc3);
-            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox4.Location = new System.Drawing.Point(759, 54);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(270, 588);
-            this.groupBox4.TabIndex = 6;
-            this.groupBox4.TabStop = false;
+            this.sf3.Controls.Add(this.TXT_C_IN_EMP);
+            this.sf3.Controls.Add(this.label55);
+            this.sf3.Controls.Add(this.label56);
+            this.sf3.Controls.Add(this.TXT_C_GROUP);
+            this.sf3.Controls.Add(this.TXT_C_SHIFT);
+            this.sf3.Controls.Add(this.label57);
+            this.sf3.Controls.Add(this.SDB_C_ROLL_WID);
+            this.sf3.Controls.Add(this.SDB_C_OUT_DIA);
+            this.sf3.Controls.Add(this.SDB_C_IN_DIA);
+            this.sf3.Controls.Add(this.TXT_C_ROLL_MAKER);
+            this.sf3.Controls.Add(this.TXT_BEAR_NO);
+            this.sf3.Controls.Add(this.UTP_C_ROLL_IN_TIME);
+            this.sf3.Controls.Add(this.label35);
+            this.sf3.Controls.Add(this.label36);
+            this.sf3.Controls.Add(this.label37);
+            this.sf3.Controls.Add(this.label38);
+            this.sf3.Controls.Add(this.label39);
+            this.sf3.Controls.Add(this.label40);
+            this.sf3.Controls.Add(this.sc3);
+            this.sf3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sf3.Location = new System.Drawing.Point(759, 54);
+            this.sf3.Name = "sf3";
+            this.sf3.Size = new System.Drawing.Size(270, 588);
+            this.sf3.TabIndex = 6;
+            this.sf3.TabStop = false;
             // 
             // TXT_C_IN_EMP
             // 
@@ -1486,27 +1486,27 @@
             this.splitter3.TabIndex = 7;
             this.splitter3.TabStop = false;
             // 
-            // groupBox5
+            // sf4
             // 
-            this.groupBox5.Controls.Add(this.TXT_P_IN_EMP);
-            this.groupBox5.Controls.Add(this.label58);
-            this.groupBox5.Controls.Add(this.label59);
-            this.groupBox5.Controls.Add(this.TXT_P_GROUP);
-            this.groupBox5.Controls.Add(this.TXT_P_SHIFT);
-            this.groupBox5.Controls.Add(this.label60);
-            this.groupBox5.Controls.Add(this.TXT_P_ROLL_MAKER);
-            this.groupBox5.Controls.Add(this.TXT_PLANK_NO);
-            this.groupBox5.Controls.Add(this.UTP_P_ROLL_IN_TIME);
-            this.groupBox5.Controls.Add(this.label41);
-            this.groupBox5.Controls.Add(this.label42);
-            this.groupBox5.Controls.Add(this.label43);
-            this.groupBox5.Controls.Add(this.sc4);
-            this.groupBox5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox5.Location = new System.Drawing.Point(1032, 54);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(277, 588);
-            this.groupBox5.TabIndex = 8;
-            this.groupBox5.TabStop = false;
+            this.sf4.Controls.Add(this.TXT_P_IN_EMP);
+            this.sf4.Controls.Add(this.label58);
+            this.sf4.Controls.Add(this.label59);
+            this.sf4.Controls.Add(this.TXT_P_GROUP);
+            this.sf4.Controls.Add(this.TXT_P_SHIFT);
+            this.sf4.Controls.Add(this.label60);
+            this.sf4.Controls.Add(this.TXT_P_ROLL_MAKER);
+            this.sf4.Controls.Add(this.TXT_PLANK_NO);
+            this.sf4.Controls.Add(this.UTP_P_ROLL_IN_TIME);
+            this.sf4.Controls.Add(this.label41);
+            this.sf4.Controls.Add(this.label42);
+            this.sf4.Controls.Add(this.label43);
+            this.sf4.Controls.Add(this.sc4);
+            this.sf4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sf4.Location = new System.Drawing.Point(1032, 54);
+            this.sf4.Name = "sf4";
+            this.sf4.Size = new System.Drawing.Size(277, 588);
+            this.sf4.TabIndex = 8;
+            this.sf4.TabStop = false;
             // 
             // TXT_P_IN_EMP
             // 
@@ -1636,27 +1636,27 @@
             // CGF2010C
             // 
             this.ClientSize = new System.Drawing.Size(1313, 642);
-            this.Controls.Add(this.groupBox5);
+            this.Controls.Add(this.sf4);
             this.Controls.Add(this.splitter3);
-            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.sf3);
             this.Controls.Add(this.splitter2);
-            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.sf2);
             this.Controls.Add(this.splitter1);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.sf1);
             this.Controls.Add(this.groupBox1);
             this.Name = "CGF2010C";
             this.Text = "轧辊、轴承座和轴承的入库、查询及修改界面_CGF2010C";
             this.Load += new System.EventHandler(this.Form_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
+            this.sf1.ResumeLayout(false);
+            this.sf1.PerformLayout();
+            this.sf2.ResumeLayout(false);
+            this.sf2.PerformLayout();
+            this.sf3.ResumeLayout(false);
+            this.sf3.PerformLayout();
+            this.sf4.ResumeLayout(false);
+            this.sf4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1674,13 +1674,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label ULabel16;
         private System.Windows.Forms.ComboBox CBO_PLT;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox sf1;
         private System.Windows.Forms.Splitter splitter1;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox sf2;
         private System.Windows.Forms.Splitter splitter2;
-        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox sf3;
         private System.Windows.Forms.Splitter splitter3;
-        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox sf4;
         private System.Windows.Forms.CheckBox sc1;
         private System.Windows.Forms.CheckBox sc2;
         private System.Windows.Forms.CheckBox sc3;
