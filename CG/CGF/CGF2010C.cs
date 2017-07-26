@@ -152,7 +152,7 @@ namespace CG
         {
             if (CBO_ROLL_NO.Text.Trim().Length == 7)
             {
-                TXT_ROLL_NO.Text = CBO_ROLL_NO.Text.Substring(5, 2);
+                TXT_ROLL_NO.Text = substr(CBO_ROLL_NO.Text, 5, 2);
             }
         }
 
@@ -171,10 +171,10 @@ namespace CG
             sc2.Checked = false;
             sc3.Checked = false;
             sc4.Checked = false;
-            sf1.Enabled = true;
-            sf2.Enabled = false;
-            sf3.Enabled = false;
-            sf4.Enabled = false;
+            //sf1.Enabled = true;
+            //sf2.Enabled = false;
+            //sf3.Enabled = false;
+            //sf4.Enabled = false;
             ULabel16.Text = "轧辊号";
             //轧辊号栏显示轧辊号
             string sQuery = "";
@@ -197,10 +197,10 @@ namespace CG
                 sc2.Checked = false;
                 sc3.Checked = false;
                 sc4.Checked = false;
-                sf1.Enabled = true;
-                sf2.Enabled = false;
-                sf3.Enabled = false;
-                sf4.Enabled = false;
+                //sf1.Enabled = true;
+                //sf2.Enabled = false;
+                //sf3.Enabled = false;
+                //sf4.Enabled = false;
 
                 CBO_ROLL_NO.Text = "";
                 CBO_GROUP.Text = "";
@@ -212,17 +212,25 @@ namespace CG
         {
             string sQuery_Rt;
             int i;
-            if (CBO_ROLL_NO.Text.Substring(0, 1) == "J" || CBO_ROLL_NO.Text.Substring(0, 1) == "C")
+
+            if (substr(CBO_ROLL_NO.Text, 0, 1) == "J" || substr(CBO_ROLL_NO.Text, 0, 1) == "C")
             {
                 if (p_Ref(1, 0, true, true))
                 {
-                    // if (txt_sec_treat_mtd.Text != "") {
-                    //     for (i = 1; i <= txt_sec_treat_mtd.Text.Length; i++) {
-                    //         SSC(Convert.ToInt32(Mid(txt_sec_treat_mtd.Text, i, 1)) - 1).Value = -1;
-                    //         SSC(Convert.ToInt32(Mid(txt_sec_treat_mtd.Text, i, 1)) - 1).ForeColor = 0xff L;
-                    //         //red
-                    //     }
-                    // }
+                    ArrayList SSC = new ArrayList();
+                    SSC.Add(SSC0);
+                    SSC.Add(SSC1);
+                    SSC.Add(SSC2);
+                    SSC.Add(SSC3);
+                    if (txt_sec_treat_mtd.Text != "")
+                    {
+                        for (i = 1; i <= txt_sec_treat_mtd.Text.Length; i++)
+                        {
+                            ((CheckBox)SSC[Convert.ToInt32(substr(txt_sec_treat_mtd.Text, i - 1, 1)) - 1]).Checked = true;
+                            ((CheckBox)SSC[Convert.ToInt32(substr(txt_sec_treat_mtd.Text, i - 1, 1)) - 1]).ForeColor = Color.Red;
+                            //red
+                        }
+                    }
                 }
             }
 
@@ -243,7 +251,7 @@ namespace CG
             }
         }
 
-        public void Form_Pro()
+        public override void Form_Pro()
         {
             string SMESG;
             int i;
@@ -456,10 +464,10 @@ namespace CG
             sc3.Checked = false;
             sc4.ForeColor = Color.Black;
             sc4.Checked = false;
-            sf1.Enabled = true;
-            sf2.Enabled = false;
-            sf3.Enabled = false;
-            sf4.Enabled = false;
+            //sf1.Enabled = true;
+            //sf2.Enabled = false;
+            //sf3.Enabled = false;
+            //sf4.Enabled = false;
             ULabel16.Text = "轧辊号";
             sQuery_load = "SELECT ROLL_NO FROM GP_ROLL3 WHERE ROLL_STATUS<>'DL'  ";
             GeneralCommon.Gf_ComboAdd(CBO_ROLL_NO, sQuery_load);
@@ -489,10 +497,10 @@ namespace CG
             sc3.Checked = false;
             sc4.ForeColor = Color.Black;
             sc4.Checked = false;
-            sf2.Enabled = true;
-            sf1.Enabled = false;
-            sf3.Enabled = false;
-            sf4.Enabled = false;
+            //sf2.Enabled = true;
+            //sf1.Enabled = false;
+            //sf3.Enabled = false;
+            //sf4.Enabled = false;
             ULabel16.Text = "轴承座号";
             sQuery_load = "SELECT CHOCK_ID FROM GP_CHOCK3    ";
             GeneralCommon.Gf_ComboAdd(CBO_ROLL_NO, sQuery_load);
@@ -523,10 +531,10 @@ namespace CG
             sc2.Checked = false;
             sc4.ForeColor = Color.Black;
             sc4.Checked = false;
-            sf3.Enabled = true;
-            sf1.Enabled = false;
-            sf2.Enabled = false;
-            sf4.Enabled = false;
+            //sf3.Enabled = true;
+            //sf1.Enabled = false;
+            //sf2.Enabled = false;
+            //sf4.Enabled = false;
             ULabel16.Text = "轴承号";
             sQuery_load = "SELECT BEARING_ID FROM GP_BEARING3    ";
             GeneralCommon.Gf_ComboAdd(CBO_ROLL_NO, sQuery_load);
@@ -557,10 +565,10 @@ namespace CG
             sc2.Checked = false;
             sc3.ForeColor = Color.Black;
             sc3.Checked = false;
-            sf4.Enabled = true;
-            sf1.Enabled = false;
-            sf2.Enabled = false;
-            sf3.Enabled = false;
+            //sf4.Enabled = true;
+            //sf1.Enabled = false;
+            //sf2.Enabled = false;
+            //sf3.Enabled = false;
             ULabel16.Text = "护板号";
             sQuery_load = "SELECT PLANK_NO FROM GP_PLANK3    ";
             GeneralCommon.Gf_ComboAdd(CBO_ROLL_NO, sQuery_load);
@@ -588,7 +596,7 @@ namespace CG
                     if (CNT > 3)
                     {
                         ((CheckBox)sender).Checked = false;
-                        //          MsgBox "最多只能选择3种二次处理方式！", vbCritical, "系统提示信息"
+                        GeneralCommon.Gp_MsgBoxDisplay("最多只能选择3种二次处理方式！", "I", "提示");
                         return;
                     }
                 }
@@ -897,10 +905,55 @@ namespace CG
 
         #endregion
 
-       
+        private void CBO_ROLL_NO_TextChanged(object sender, EventArgs e)
+        {
+            CBO_ROLL_NO_Chg();
+        }
+
+        private void sc1_CheckedChanged(object sender, EventArgs e)
+        {
+            sc1_Clk();
+        }
+
+        private void sc2_CheckedChanged(object sender, EventArgs e)
+        {
+            sc2_Clk();
+        }
+
+        private void sc3_CheckedChanged(object sender, EventArgs e)
+        {
+            sc3_Clk();
+        }
+
+        private void sc4_CheckedChanged(object sender, EventArgs e)
+        {
+            sc4_Clk();
+        }
+
+        private void SSC0_CheckedChanged(object sender, EventArgs e)
+        {
+            SSC_Clk(sender);
+        }
+
+        private void SSC1_CheckedChanged(object sender, EventArgs e)
+        {
+            SSC_Clk(sender);
+        }
+
+        private void SSC2_CheckedChanged(object sender, EventArgs e)
+        {
+            SSC_Clk(sender);
+        }
+
+        private void SSC3_CheckedChanged(object sender, EventArgs e)
+        {
+            SSC_Clk(sender);
+        }
 
 
-        
+
+
+
 
     }
 }

@@ -81,7 +81,7 @@
             this.CUD_PAINT_TO_DATE.Location = new System.Drawing.Point(245, 22);
             this.CUD_PAINT_TO_DATE.Name = "CUD_PAINT_TO_DATE";
             this.CUD_PAINT_TO_DATE.RawDate = "";
-            this.CUD_PAINT_TO_DATE.Size = new System.Drawing.Size(106, 21);
+            this.CUD_PAINT_TO_DATE.Size = new System.Drawing.Size(143, 21);
             this.CUD_PAINT_TO_DATE.TabIndex = 1;
             // 
             // CUD_PAINT_DATE
