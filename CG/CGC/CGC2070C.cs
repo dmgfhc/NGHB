@@ -65,14 +65,14 @@ namespace CG {
         const int SS1_LINE3 = 15;
         const int SS1_LINE4 = 16;
         const int SS1_OFFLINE_DATE = 17;
-        const int SS1_USERID = 22;
-        const int SS1_PLAN_SMP = 23;
-        const int SS1_PRC_LINE = 24;
-        const int SS1_ORD_CNT = 25;
+        const int SS1_USERID = 24;
+        const int SS1_PLAN_SMP = 25;
+        const int SS1_PRC_LINE = 26;
+        const int SS1_ORD_CNT = 27;
         //一坯多订单  2011-08-18  by  LiQian
-        const int SS1_URGNT_FL = 26;
+        const int SS1_URGNT_FL = 28;
         //紧急订单绿色标记 2012-08-16  by  LiQian
-        const int SS1_IMP_CONT = 27;
+        const int SS1_IMP_CONT = 29;
 
         //const int SPD_PLAN_PROD_WGT = 33,
 
@@ -93,7 +93,7 @@ namespace CG {
             p_SetMc("已分线母板", CBO_NUM, "P", "", "", "", "", imcseq);
 
 
-            p_ScIni(ss1, Sc1, 22, true, true);
+            p_ScIni(ss1, Sc1, 24, true, true);
             iheadrow = 1;
             iscseq = 1;
 
@@ -118,17 +118,19 @@ namespace CG {
             p_SetSc("计划/实绩", "E", "10", "L", "", "", "", iscseq, iheadrow, "M"); //18
             p_SetSc("母板分段时间", "DT", "", "L", "", "", "", iscseq, iheadrow, "M"); //19
             p_SetSc("宽度", "E", "60", "L", "", "", "", iscseq, iheadrow, "R"); //20
-            p_SetSc("长度", "E", "60", "L", "", "", "", iscseq, iheadrow, "R"); //21
-            p_SetSc("作业人员", "E", "20", "IL", "", "", "", iscseq, iheadrow, "L"); //22
-            p_SetSc("计划取样", "E", "10", "L", "", "", "", iscseq, iheadrow, "M"); //23
-            p_SetSc("作业线", "E", "1", "L", "", "", "", iscseq, iheadrow, "M"); //24
-            p_SetSc("订单数量", "E", "2", "L", "", "", "", iscseq, iheadrow, "M"); //25
-            p_SetSc("是否紧急订单", "E", "1", "L", "", "", "", iscseq, iheadrow, "M"); //26
-            p_SetSc("重点订单", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //27
+            p_SetSc("宽度放尺范围", "E", "60", "L", "", "", "", iscseq, iheadrow, "R"); //21
+            p_SetSc("长度", "E", "60", "L", "", "", "", iscseq, iheadrow, "R"); //22
+            p_SetSc("长度放尺范围", "E", "60", "L", "", "", "", iscseq, iheadrow, "R"); //23
+            p_SetSc("作业人员", "E", "20", "IL", "", "", "", iscseq, iheadrow, "L"); //24
+            p_SetSc("计划取样", "E", "10", "L", "", "", "", iscseq, iheadrow, "M"); //25
+            p_SetSc("作业线", "E", "1", "L", "", "", "", iscseq, iheadrow, "M"); //26
+            p_SetSc("订单数量", "E", "2", "L", "", "", "", iscseq, iheadrow, "M"); //27
+            p_SetSc("是否紧急订单", "E", "1", "L", "", "", "", iscseq, iheadrow, "M"); //28
+            p_SetSc("重点订单", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //29
 
 
             iheadrow = 0;
-            p_spanSpread("成品尺寸", 20, 21, iscseq, iheadrow, 1);
+            p_spanSpread("成品尺寸", 20, 23, iscseq, iheadrow, 1);
 
             //SpreadCommon.Gp_Sp_ColHidden(ss1, 16, true);
             //SpreadCommon.Gp_Sp_ColHidden(ss1, 17, true);
