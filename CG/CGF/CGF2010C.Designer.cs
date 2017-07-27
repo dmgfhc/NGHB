@@ -378,7 +378,6 @@
             this.txt_sec_treat_mtd.Name = "txt_sec_treat_mtd";
             this.txt_sec_treat_mtd.Size = new System.Drawing.Size(62, 22);
             this.txt_sec_treat_mtd.TabIndex = 609;
-            this.txt_sec_treat_mtd.Visible = false;
             // 
             // label51
             // 

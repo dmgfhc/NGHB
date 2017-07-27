@@ -249,6 +249,7 @@ namespace CG
                     p_Ref(4, 0, true, true);
                     break;
             }
+            CBO_ROLL_NO.Enabled = true;
         }
 
         public override void Form_Pro()
