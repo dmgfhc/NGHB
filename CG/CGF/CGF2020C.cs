@@ -31,18 +31,18 @@ using CommonClass;
 //-------------------------------------------------------------------------------
 //-- System Name       宽厚板轧钢作业
 //-- Sub_System Name   轧辊管理
-//-- Program Name      轧辊入库管理界面
-//-- Program ID        CGF2010C
+//-- Program Name      轧辊、轴承座和轴承的报废、查询及修改界面_CGF2020C
+//-- Program ID        CGF2020C
 //-- Document No       Q-00-0010(Specification)
 //-- Designer          韩超
 //-- Coder             韩超
-//-- Date              2017.07.24
+//-- Date              2017.07.31
 //-- Description
 //-------------------------------------------------------------------------------
 //-- UPDATE HISTORY  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //-------------------------------------------------------------------------------
 //-- VER       DATE          EDITOR       DESCRIPTION
-//-- 1.00    2017.07.24       韩超        轧辊入库管理
+//-- 1.00    2017.07.31       韩超        轧辊、轴承座和轴承的报废、查询及修改界面_CGF2020C
 //-------------------------------------------------------------------------------
 //-- DECLARATION     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //-------------------------------------------------------------------------------
@@ -72,96 +72,72 @@ namespace CG
             p_SetMc("轧辊号", CB0_ROLL_ID, "PNIR", "", "", "", "", imcseq); //0
             p_SetMc("工厂代码", CBO_PLT, "NIR", "", "", "", "", imcseq); //1
             p_SetMc("班次", CBO_SHIFT, "NI", "", "", "", "", imcseq); //2
-            p_SetMc("", CBO_GROUP, "I", "", "", "", "", imcseq); //3
+            p_SetMc("班别", CBO_GROUP, "NI", "", "", "", "", imcseq); //3
             p_SetMc("作业人员", TXT_EMP_CD, "NI", "", "", "", "", imcseq); //4
-            p_SetMc("入库时间", TXT_UTP_ROLL_DISUSE_TIME, "NIR", "", "", "", "", imcseq); //5
-            p_SetMc("轧辊标识号", TXT_ROLL_NO, "NIR", "", "", "", "", imcseq); //6
-            p_SetMc("", TXT_ROLL_MAKER, "IR", "", "", "", "", imcseq); //7
-            p_SetMc("入库辊径", SDB_ROLL_DISUSE_DIA, "NIR", "", "", "", "", imcseq); //8
-            p_SetMc("", SDB_ROLL_DIA_Y, "RL", "", "", "", "", imcseq); //9
-            p_SetMc("", SDB_ROLL_SHLD_DIA, "IR", "", "", "", "", imcseq); //10
-            p_SetMc("", SDB_ROLL_NECK_DIA, "IR", "", "", "", "", imcseq); //11
-            p_SetMc("轧辊重量", SDB_ROLL_WGT, "NIR", "", "", "", "", imcseq); //12
-            p_SetMc("", SDB_ROLL_IN_W_HARD, "IR", "", "", "", "", imcseq); //13
-            p_SetMc("", SDB_ROLL_W_DIA2, "IR", "", "", "", "", imcseq); //14
-            p_SetMc("", SDB_ROLL_IN_AVE_HARD, "IR", "", "", "", "", imcseq); //15
-            p_SetMc("", SDB_ROLL_IN_D_HARD, "IR", "", "", "", "", imcseq); //16
-            p_SetMc("", SDB_ROLL_D_DIA2, "IR", "", "", "", "", imcseq); //17
-            p_SetMc("", SDB_ROLL_IN_AVE_HARD, "RL", "", "", "", "", imcseq); //18
-            p_SetMc("", TXT_ROLL_MATERIAL, "IR", "", "", "", "", imcseq); //19
-            p_SetMc("", TXT_MAKER_NO, "IR", "", "", "", "", imcseq); //20
-            p_SetMc("", TXT_R_SHIFT, "RL", "", "", "", "", imcseq); //21
-            p_SetMc("", TXT_R_GROUP, "RL", "", "", "", "", imcseq); //22
-            p_SetMc("", TXT_R_IN_EMP, "RL", "", "", "", "", imcseq); //23
-            p_SetMc("", TXT_LOC, "IR", "", "", "", "", imcseq); //24
-            p_SetMc("", txt_treat_mtd, "IR", "", "", "", "", imcseq); //25
-            p_SetMc("", txt_ISSUETALLYNO, "IR", "", "", "", "", imcseq); //26
-            p_SetMc("料号", txt_MTRLNO, "NIR", "", "", "", "", imcseq); //27
-            p_SetMc("", txt_ROLL_PRICE, "IR", "", "", "", "", imcseq); //28
-            p_SetMc("限位辊径", txt_PLAN_DIA, "NIR", "", "", "", "", imcseq); //29
+            p_SetMc("报废时间", TXT_UTP_ROLL_DISUSE_TIME, "NIR", "", "", "", "", imcseq); //5
+            p_SetMc("报废辊身直径", SDB_ROLL_DISUSE_DIA, "NIR", "", "", "", "", imcseq); //6
+            p_SetMc("", SDB_ROLL_IN_AVE_HARD, "RL", "", "", "", "", imcseq); //7
+            p_SetMc("", TXT_ROLL_DISUSE_RES, "IR", "", "", "", "", imcseq); //8
+            p_SetMc("", SDB_ROLL_USE_NUM, "IR", "", "", "", "", imcseq); //9
+            p_SetMc("", SDB_TOT_MILL_WGT, "IR", "", "", "", "", imcseq); //10
+            p_SetMc("", SDB_TOT_MILL_LEN, "IR", "", "", "", "", imcseq); //11
+            p_SetMc("", TXT_R_SHIFT, "RL", "", "", "", "", imcseq); //12
+            p_SetMc("", TXT_R_GROUP, "RL", "", "", "", "", imcseq); //13
+            p_SetMc("", TXT_R_IN_EMP, "RL", "", "", "", "", imcseq); //14
+            p_SetMc("", TXT_ROLL_MAKER, "RL", "", "", "", "", imcseq); //15
+            p_SetMc("", TXT_ROLL_MATERIAL, "RL", "", "", "", "", imcseq); //16
+            p_SetMc("", TXT_MAKER_NO, "RL", "", "", "", "", imcseq); //17
+            p_SetMc("", txt_treat_mtd, "IR", "", "", "", "", imcseq); //18
 
             p_McIni(Mc2, true);
             imcseq = 2;
             p_SetMc("轧辊号", CB0_ROLL_ID, "PNIR", "", "", "", "", imcseq); //0
-            p_SetMc("班次", CBO_SHIFT, "NI", "", "", "", "", imcseq); //1
-            p_SetMc("", CBO_GROUP, "I", "", "", "", "", imcseq); //2
-            p_SetMc("作业人员", TXT_EMP_CD, "NI", "", "", "", "", imcseq); //3
-            p_SetMc("入库时间", TXT_UTP_B_ROLL_DISUSE_TIME, "NIR", "", "", "", "", imcseq); //4
-            p_SetMc("", UTP_B_ROLL_USE_TIME, "IR", "", "", "", "", imcseq); //5
-            p_SetMc("轴承座标识号", TXT_CHOCK_NO, "NIR", "", "", "", "", imcseq); //6
-            p_SetMc("", TXT_B_ROLL_MAKER, "IR", "", "", "", "", imcseq); //7
-            p_SetMc("", SDB_B_IN_DIA, "IR", "", "", "", "", imcseq); //8
-            p_SetMc("", SDB_B_OUT_DIA, "IR", "", "", "", "", imcseq); //9
-            p_SetMc("", TXT_B_ROLL_MATERIAL, "IR", "", "", "", "", imcseq); //10
-            p_SetMc("", TXT_B_SHIFT, "RL", "", "", "", "", imcseq); //11
-            p_SetMc("", TXT_B_GROUP, "RL", "", "", "", "", imcseq); //12
-            p_SetMc("", TXT_B_IN_EMP, "RL", "", "", "", "", imcseq); //13
+            p_SetMc("班次", CBO_SHIFT, "NI", "", "", "", "", imcseq); //2
+            p_SetMc("班别", CBO_GROUP, "NI", "", "", "", "", imcseq); //3
+            p_SetMc("作业人员", TXT_EMP_CD, "NI", "", "", "", "", imcseq); //4
+            p_SetMc("", TXT_UTP_B_ROLL_DISUSE_TIME, "NIR", "", "", "", "", imcseq); //5
+            p_SetMc("", TXT_B_ROLL_DISUSE_RES, "IR", "", "", "", "", imcseq); //6
+            p_SetMc("", TXT_B_SHIFT, "RL", "", "", "", "", imcseq); //7
+            p_SetMc("", TXT_B_GROUP, "RL", "", "", "", "", imcseq); //8
+            p_SetMc("", TXT_B_IN_EMP, "RL", "", "", "", "", imcseq); //8
+
+
 
             p_McIni(Mc3, true);
             imcseq = 3;
             p_SetMc("轧辊号", CB0_ROLL_ID, "PNIR", "", "", "", "", imcseq); //0
-            p_SetMc("班次", CBO_SHIFT, "NI", "", "", "", "", imcseq); //1
-            p_SetMc("", CBO_GROUP, "I", "", "", "", "", imcseq); //2
-            p_SetMc("作业人员", TXT_EMP_CD, "NI", "", "", "", "", imcseq); //3
-            p_SetMc("入库时间", TXT_UTP_C_ROLL_DISUSE_TIME, "NIR", "", "", "", "", imcseq); //4
-            p_SetMc("轴承标识号", TXT_BEAR_NO, "NIR", "", "", "", "", imcseq); //5
-            p_SetMc("", TXT_C_ROLL_MAKER, "IR", "", "", "", "", imcseq); //6
-            p_SetMc("", SDB_C_IN_DIA, "IR", "", "", "", "", imcseq); //7
-            p_SetMc("", SDB_C_OUT_DIA, "IR", "", "", "", "", imcseq); //8
-            p_SetMc("", SDB_C_ROLL_WID, "IR", "", "", "", "", imcseq); //9
-            p_SetMc("", TXT_C_SHIFT, "RL", "", "", "", "", imcseq); //10
-            p_SetMc("", TXT_C_GROUP, "RL", "", "", "", "", imcseq); //11
-            p_SetMc("", TXT_C_IN_EMP, "RL", "", "", "", "", imcseq); //12
+            p_SetMc("班次", CBO_SHIFT, "NI", "", "", "", "", imcseq); //2
+            p_SetMc("班别", CBO_GROUP, "NI", "", "", "", "", imcseq); //3
+            p_SetMc("作业人员", TXT_EMP_CD, "NI", "", "", "", "", imcseq); //4
+            p_SetMc("", TXT_UTP_C_ROLL_DISUSE_TIME, "NIR", "", "", "", "", imcseq); //5
+            p_SetMc("", TXT_C_ROLL_DISUSE_RES, "IR", "", "", "", "", imcseq); //6
+            p_SetMc("", TXT_C_SHIFT, "RL", "", "", "", "", imcseq); //7
+            p_SetMc("", TXT_C_GROUP, "RL", "", "", "", "", imcseq); //8
+            p_SetMc("", TXT_C_IN_EMP, "RL", "", "", "", "", imcseq); //9
+
 
             p_McIni(Mc4, true);
             imcseq = 4;
             p_SetMc("轧辊号", CB0_ROLL_ID, "PNIR", "", "", "", "", imcseq); //0
-            p_SetMc("班次", CBO_SHIFT, "NI", "", "", "", "", imcseq); //1
-            p_SetMc("", CBO_GROUP, "I", "", "", "", "", imcseq); //2
-            p_SetMc("作业人员", TXT_EMP_CD, "NI", "", "", "", "", imcseq); //3
-            p_SetMc("入库时间", TXT_UTP_P_ROLL_DISUSE_TIME, "NIR", "", "", "", "", imcseq); //4
-            p_SetMc("护板标识号", TXT_PLANK_NO, "NIR", "", "", "", "", imcseq); //5
-            p_SetMc("", TXT_P_ROLL_MAKER, "IR", "", "", "", "", imcseq); //6
+            p_SetMc("班次", CBO_SHIFT, "NI", "", "", "", "", imcseq); //2
+            p_SetMc("班别", CBO_GROUP, "NI", "", "", "", "", imcseq); //3
+            p_SetMc("作业人员", TXT_EMP_CD, "NI", "", "", "", "", imcseq); //4
+            p_SetMc("", TXT_UTP_P_ROLL_DISUSE_TIME, "NIR", "", "", "", "", imcseq); //5
+            p_SetMc("", TXT_P_ROLL_DISUSE_RES, "NIR", "", "", "", "", imcseq); //6
             p_SetMc("", TXT_P_SHIFT, "RL", "", "", "", "", imcseq); //7
             p_SetMc("", TXT_P_GROUP, "RL", "", "", "", "", imcseq); //8
             p_SetMc("", TXT_P_IN_EMP, "RL", "", "", "", "", imcseq); //9
 
-        }
 
-        private void CBO_ROLL_NO_Chg()
-        {
-            if (CB0_ROLL_ID.Text.Trim().Length == 7)
-            {
-                TXT_ROLL_NO.Text = substr(CB0_ROLL_ID.Text, 5, 2);
-            }
         }
 
         public void Form_Load(object sender, System.EventArgs e)
         {
-            base.sSvrPgmPkgName = "CGF2010NC";
+            base.sSvrPgmPkgName = "CGF2020NC";
             Form_Define();
             TXT_EMP_CD.Text = GeneralCommon.sUserID;
             CBO_PLT.Text = "C3";
+
 
             sc1.ForeColor = Color.Red;
             sc2.ForeColor = Color.Black;
@@ -175,12 +151,12 @@ namespace CG
             //sf2.Enabled = false;
             //sf3.Enabled = false;
             //sf4.Enabled = false;
-            ULabel16.Text = "轧辊号";
-            //轧辊号栏显示轧辊号
-            string sQuery = "";
-            sQuery = "SELECT ROLL_NO FROM GP_ROLL3 WHERE ROLL_STATUS<>'DL' ORDER BY SUBSTR(ROLL_NO,1,1) DESC, SUBSTR(ROLL_NO,6,2) ";
-            GeneralCommon.Gf_ComboAdd(CB0_ROLL_ID, sQuery);
+
+           // string sQuery_load = "";
+            sQuery_load = "SELECT ROLL_NO FROM GP_ROLL3 WHERE ROLL_STATUS<>'DL' ORDER BY SUBSTR(ROLL_NO,1,1) DESC, SUBSTR(ROLL_NO,6,2) ";
+            GeneralCommon.Gf_ComboAdd(CB0_ROLL_ID, sQuery_load);
         }
+        
 
         public override bool Form_Cls()
         {
@@ -188,6 +164,7 @@ namespace CG
             {
                 TXT_EMP_CD.Text = GeneralCommon.sUserID;
                 CBO_PLT.Text = "C3";
+                ULabel16.Text = "轧辊号";
 
                 sc1.ForeColor = Color.Red;
                 sc2.ForeColor = Color.Black;
@@ -204,47 +181,27 @@ namespace CG
 
                 CB0_ROLL_ID.Text = "";
                 CBO_GROUP.Text = "";
+
+                sQuery_load = "SELECT ROLL_NO FROM GP_ROLL3 WHERE ROLL_STATUS<>'DL' ORDER BY SUBSTR(ROLL_NO,1,1) DESC, SUBSTR(ROLL_NO,6,2) ";
+                GeneralCommon.Gf_ComboAdd(CB0_ROLL_ID, sQuery_load);
             }
             return true;
         }
 
         public override void Form_Ref()
         {
-            string sQuery_Rt;
-            int i;
-
-            if (substr(CB0_ROLL_ID.Text, 0, 1) == "J" || substr(CB0_ROLL_ID.Text, 0, 1) == "C")
-            {
-                if (p_Ref(1, 0, true, true))
-                {
-                    ArrayList SSC = new ArrayList();
-                    SSC.Add(SSC);
-                    SSC.Add(SSC1);
-                    SSC.Add(SSC2);
-                    SSC.Add(SSC3);
-                    if (txt_treat_mtd.Text != "")
-                    {
-                        for (i = 1; i <= txt_treat_mtd.Text.Length; i++)
-                        {
-                            ((CheckBox)SSC[Convert.ToInt32(substr(txt_treat_mtd.Text, i - 1, 1)) - 1]).Checked = true;
-                            ((CheckBox)SSC[Convert.ToInt32(substr(txt_treat_mtd.Text, i - 1, 1)) - 1]).ForeColor = Color.Red;
-                            //red
-                        }
-                    }
-                }
-            }
-
             switch (CB0_ROLL_ID.Text.Trim().Substring(0, 1))
             {
 
+                case "J":
+                    p_Ref(1, 0, true, true);
+                    break;
                 case "B":
                     p_Ref(3, 0, true, true);
                     break;
-                //           Case "C"
-                //              If Gf_Ms_Refer(M_CN1, Mc2, Mc2("pControl"), Mc2("pControl")) Then
-                //                 Call MDIMain.FormMenuSetting(Me, FormType, "RE", sAuthority)
-                //'                 Call Gp_Ms_ControlLock(Mc1("pControl"), True)
-                //              End If
+                case "C":
+                    p_Ref(2, 0, true, true);
+                    break;
                 case "P":
                     p_Ref(4, 0, true, true);
                     break;
@@ -256,30 +213,20 @@ namespace CG
         {
             string SMESG;
             int i;
+            bool mResult;
 
             TXT_EMP_CD.Text = GeneralCommon.sUserID;
 
-
-            //    If sc1.ForeColor = &HFF& Then
-            //
-            //       If Mid(CBO_ROLL_NO.Text, 1, 1) <> "J" Then
-            //          sMesg = " 请输入正确的轧辊号 ！"
-            //          Call Gp_MsgBoxDisplay(sMesg)
-            //          Exit Sub
-            //       End If
-            //    End If
-
-            if (sc2.Checked)
+            if (sc1.Checked)
             {
 
-                if (substr(CB0_ROLL_ID.Text, 0, 1) != "C")
+                if (substr(CB0_ROLL_ID.Text, 0, 1) != "J" && substr(CB0_ROLL_ID.Text, 0, 1) != "C")
                 {
-                    SMESG = " 请输入正确的轴承座号 ！";
+                    SMESG = " 请输入正确的轧辊号 ！";
                     GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "提示");
                     return;
                 }
             }
-
 
             if (sc3.Checked)
             {
@@ -306,29 +253,24 @@ namespace CG
 
             switch (substr(CB0_ROLL_ID.Text, 0, 1))
             {
-
                 case "J":
+                     SMESG = "您确定要报废轧辊" + CB0_ROLL_ID.Text + "吗？";
+                     mResult = GeneralCommon.Gf_MessConfirm(SMESG, "I", "提示");
+                     if (!mResult) return;
+ 
                     if (!Gp_DateCheck(TXT_UTP_ROLL_DISUSE_TIME.Text, ""))
                     {
-                        SMESG = " 请正确输入轧辊入库时间 ！";
+                        SMESG = " 请正确输入轧辊报废时间 ！";
                         GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "提示");
                         return;
                     }
                     ///'added by guoli at 20081229 103600 for ERP'''''
-                    if (txt_ISSUETALLYNO.Text.Trim() == "" && txt_ROLL_PRICE.Text.Trim() == "")
+                    if (SDB_ROLL_DISUSE_DIA.NumValue == 0)
                     {
-                        SMESG = "领料单号和单价不能同时为空!";
+                        SMESG = "请输入报废辊身直径 ！";
                         GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "提示");
                         return;
                     }
-
-                    if (SDB_ROLL_WGT.NumValue == 0)
-                    {
-                        SMESG = "轧辊重量不能为空!";
-                        GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "提示");
-                        return;
-                    }
-                    ///'''''''''''''''''''''''''''''''''''''''''''''''
 
                     txt_treat_mtd.Text = "";
 
@@ -342,26 +284,26 @@ namespace CG
                     }
                     if (SSC2.Checked)
                     {
-                        txt_treat_mtd.Text = txt_treat_mtd.Text + Convert.ToString(2 + 1);
-                    }
-                    if (SSC3.Checked)
-                    {
-                        txt_treat_mtd.Text = txt_treat_mtd.Text + Convert.ToString(3 + 1);
+                        txt_treat_mtd.Text = txt_treat_mtd.Text + "9";
                     }
 
                     p_pro(1, 0, true, true);
                     break;
                 case "C":
-                    if (!Gp_DateCheck(TXT_UTP_ROLL_DISUSE_TIME.Text, ""))
+                     SMESG = "您确定要报废轧辊" + CB0_ROLL_ID.Text + "吗？";
+                     mResult = GeneralCommon.Gf_MessConfirm(SMESG, "I", "提示");
+                     if (!mResult) return;
+
+                     if (!Gp_DateCheck(TXT_UTP_ROLL_DISUSE_TIME.Text, ""))
                     {
-                        SMESG = " 请正确输入轧辊入库时间 ！";
+                        SMESG = " 请正确输入轧辊报废时间 ！";
                         GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "提示");
                         return;
                     }
-                    ///'added by guoli at 20081229 103600 for ERP
-                    if (txt_ISSUETALLYNO.Text.Trim() == "" && txt_ROLL_PRICE.Text.Trim() == "")
+                    ///'added by guoli at 20081229 103600 for ERP'''''
+                     if (SDB_ROLL_DISUSE_DIA.NumValue == 0)
                     {
-                        SMESG = "领料单号和单价不能同时为空!";
+                        SMESG = "请输入报废辊身直径 ！";
                         GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "提示");
                         return;
                     }
@@ -378,67 +320,41 @@ namespace CG
                     }
                     if (SSC2.Checked)
                     {
-                        txt_treat_mtd.Text = txt_treat_mtd.Text + Convert.ToString(2 + 1);
-                    }
-                    if (SSC3.Checked)
-                    {
-                        txt_treat_mtd.Text = txt_treat_mtd.Text + Convert.ToString(3 + 1);
+                        txt_treat_mtd.Text = txt_treat_mtd.Text + "9";
                     }
 
                     p_pro(1, 0, true, true);
-
                     break;
 
                 case "B":
-                    if (!Gp_DateCheck(TXT_UTP_B_ROLL_DISUSE_TIME.Text, ""))
+                     SMESG = "您确定要报废轴承座" + CB0_ROLL_ID.Text + "吗？";
+                     mResult = GeneralCommon.Gf_MessConfirm(SMESG, "I", "提示");
+                     if (!mResult) return;
+
+                     if (!Gp_DateCheck(TXT_UTP_C_ROLL_DISUSE_TIME.Text, ""))
                     {
-                        SMESG = " 请正确输入轴承座入库时间 ！";
+                        SMESG = " 请正确输入轴承报废时间 ！";
                         GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "提示");
                         return;
                     }
+                    ///'added by guoli at 20081229 103600 for ERP'''''
+
                     p_pro(3, 0, true, true);
                     break;
                 case "P":
-                    if (!Gp_DateCheck(TXT_UTP_P_ROLL_DISUSE_TIME.Text, ""))
+                    SMESG = "您确定要报废轧辊" + CB0_ROLL_ID.Text + "吗？";
+                     mResult = GeneralCommon.Gf_MessConfirm(SMESG, "I", "提示");
+                     if (!mResult) return;
+
+                     if (!Gp_DateCheck(TXT_UTP_P_ROLL_DISUSE_TIME.Text, ""))
                     {
-                        SMESG = " 请正确输入护板入库时间 ！";
+                        SMESG = " 请正确输入护板报废时间 ！";
                         GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "提示");
                         return;
                     }
+                    ///'added by guoli at 20081229 103600 for ERP'''''
+
                     p_pro(4, 0, true, true);
-                    break;
-            }
-
-            if (substr(CB0_ROLL_ID.Text, 0, 1) == "C")
-            {
-                if (!Gp_DateCheck(TXT_UTP_C_ROLL_DISUSE_TIME.Text, ""))
-                {
-                    SMESG = " 请正确输入轴承入库时间 ！";
-                    GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "提示");
-                    return;
-                }
-                p_pro(2, 0, true, true);
-            }
-
-        }
-
-        public override void Form_Del()
-        {
-            switch (substr(CB0_ROLL_ID.Text, 0, 1))
-            {
-                case "J":
-                    CB0_ROLL_ID.Enabled = false;
-                    p_del(1, 0, true);
-                    CB0_ROLL_ID.Enabled = true;
-                    break;
-                case "B":
-                    p_del(3, 0, true);
-                    break;
-                case "C":
-                    p_del(2, 0, true);
-                    break;
-                case "P":
-                    p_del(4, 0, true);
                     break;
             }
         }
@@ -470,10 +386,9 @@ namespace CG
             //sf3.Enabled = false;
             //sf4.Enabled = false;
             ULabel16.Text = "轧辊号";
-            sQuery_load = "SELECT ROLL_NO FROM GP_ROLL3 WHERE ROLL_STATUS<>'DL'  ";
+            sQuery_load = "SELECT ROLL_NO FROM GP_ROLL3 WHERE ROLL_STATUS<>'DL' ORDER BY SUBSTR(ROLL_NO,1,1) DESC, SUBSTR(ROLL_NO,6,2) ";
             GeneralCommon.Gf_ComboAdd(CB0_ROLL_ID, sQuery_load);
         }
-
 
         private void sc2_Clk()
         {
@@ -540,7 +455,6 @@ namespace CG
             sQuery_load = "SELECT BEARING_ID FROM GP_BEARING3    ";
             GeneralCommon.Gf_ComboAdd(CB0_ROLL_ID, sQuery_load);
 
-
         }
 
         private void sc4_Clk()
@@ -575,9 +489,6 @@ namespace CG
             GeneralCommon.Gf_ComboAdd(CB0_ROLL_ID, sQuery_load);
 
         }
-
-
-
         private void SSC_Clk(object sender)
         {
             int i;
@@ -586,22 +497,6 @@ namespace CG
             SSC.Add(SSC);
             SSC.Add(SSC1);
             SSC.Add(SSC2);
-            SSC.Add(SSC3);
-
-
-            for (i = 0; i <= 3; i++)
-            {
-                if (((CheckBox)SSC[i]).Checked)
-                {
-                    CNT = CNT + 1;
-                    if (CNT > 3)
-                    {
-                        ((CheckBox)sender).Checked = false;
-                        GeneralCommon.Gp_MsgBoxDisplay("最多只能选择3种二次处理方式！", "I", "提示");
-                        return;
-                    }
-                }
-            }
 
             if (((CheckBox)sender).Checked)
             {
@@ -614,6 +509,7 @@ namespace CG
                 //black
             }
         }
+
 
         # region 公共方法
 
@@ -906,11 +802,6 @@ namespace CG
 
         #endregion
 
-        private void CBO_ROLL_NO_TextChanged(object sender, EventArgs e)
-        {
-            CBO_ROLL_NO_Chg();
-        }
-
         private void sc1_CheckedChanged(object sender, EventArgs e)
         {
             sc1_Clk();
@@ -946,10 +837,7 @@ namespace CG
             SSC_Clk(sender);
         }
 
-        private void SSC3_CheckedChanged(object sender, EventArgs e)
-        {
-            SSC_Clk(sender);
-        }
+       
 
 
 

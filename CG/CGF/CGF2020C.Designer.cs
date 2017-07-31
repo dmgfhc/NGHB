@@ -29,17 +29,27 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.CB0_ROLL_ID = new System.Windows.Forms.ComboBox();
             this.CBO_PLT = new System.Windows.Forms.ComboBox();
             this.TXT_EMP_CD = new System.Windows.Forms.TextBox();
             this.CBO_GROUP = new System.Windows.Forms.ComboBox();
             this.CBO_SHIFT = new System.Windows.Forms.ComboBox();
-            this.CB0_ROLL_ID = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ULabel16 = new System.Windows.Forms.Label();
             this.sf1 = new System.Windows.Forms.GroupBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.SDB_TOT_MILL_LEN = new CommonClass.NumBox();
+            this.SDB_TOT_MILL_WGT = new CommonClass.NumBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.SDB_ROLL_USE_NUM = new CommonClass.NumBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.TXT_ROLL_DISUSE_RES = new CommonClass.F4COMN();
+            this.label1 = new System.Windows.Forms.Label();
             this.TXT_ROLL_MATERIAL = new CommonClass.F4COMN();
             this.txt_treat_mtd = new System.Windows.Forms.TextBox();
             this.label47 = new System.Windows.Forms.Label();
@@ -67,6 +77,8 @@
             this.sc1 = new System.Windows.Forms.CheckBox();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.sf2 = new System.Windows.Forms.GroupBox();
+            this.TXT_B_ROLL_DISUSE_RES = new CommonClass.F4COMN();
+            this.label11 = new System.Windows.Forms.Label();
             this.TXT_B_IN_EMP = new System.Windows.Forms.TextBox();
             this.label52 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
@@ -78,6 +90,8 @@
             this.sc2 = new System.Windows.Forms.CheckBox();
             this.splitter2 = new System.Windows.Forms.Splitter();
             this.sf3 = new System.Windows.Forms.GroupBox();
+            this.TXT_C_ROLL_DISUSE_RES = new CommonClass.F4COMN();
+            this.label13 = new System.Windows.Forms.Label();
             this.TXT_C_IN_EMP = new System.Windows.Forms.TextBox();
             this.label55 = new System.Windows.Forms.Label();
             this.label56 = new System.Windows.Forms.Label();
@@ -89,6 +103,8 @@
             this.sc3 = new System.Windows.Forms.CheckBox();
             this.splitter3 = new System.Windows.Forms.Splitter();
             this.sf4 = new System.Windows.Forms.GroupBox();
+            this.TXT_P_ROLL_DISUSE_RES = new CommonClass.F4COMN();
+            this.label14 = new System.Windows.Forms.Label();
             this.TXT_P_IN_EMP = new System.Windows.Forms.TextBox();
             this.label58 = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
@@ -98,22 +114,6 @@
             this.TXT_UTP_P_ROLL_DISUSE_TIME = new CommonClass.MaskedDate();
             this.label43 = new System.Windows.Forms.Label();
             this.sc4 = new System.Windows.Forms.CheckBox();
-            this.TXT_ROLL_DISUSE_RES = new CommonClass.F4COMN();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.SDB_ROLL_USE_NUM = new CommonClass.NumBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.SDB_TOT_MILL_WGT = new CommonClass.NumBox();
-            this.SDB_TOT_MILL_LEN = new CommonClass.NumBox();
-            this.TXT_B_ROLL_DISUSE_RES = new CommonClass.F4COMN();
-            this.label11 = new System.Windows.Forms.Label();
-            this.TXT_C_ROLL_DISUSE_RES = new CommonClass.F4COMN();
-            this.label13 = new System.Windows.Forms.Label();
-            this.TXT_P_ROLL_DISUSE_RES = new CommonClass.F4COMN();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.sf1.SuspendLayout();
             this.sf2.SuspendLayout();
@@ -123,11 +123,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.CB0_ROLL_ID);
             this.groupBox1.Controls.Add(this.CBO_PLT);
             this.groupBox1.Controls.Add(this.TXT_EMP_CD);
             this.groupBox1.Controls.Add(this.CBO_GROUP);
             this.groupBox1.Controls.Add(this.CBO_SHIFT);
-            this.groupBox1.Controls.Add(this.CB0_ROLL_ID);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -139,6 +139,15 @@
             this.groupBox1.Size = new System.Drawing.Size(1362, 54);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // CB0_ROLL_ID
+            // 
+            this.CB0_ROLL_ID.FormattingEnabled = true;
+            this.CB0_ROLL_ID.Location = new System.Drawing.Point(116, 18);
+            this.CB0_ROLL_ID.MaxLength = 7;
+            this.CB0_ROLL_ID.Name = "CB0_ROLL_ID";
+            this.CB0_ROLL_ID.Size = new System.Drawing.Size(105, 21);
+            this.CB0_ROLL_ID.TabIndex = 622;
             // 
             // CBO_PLT
             // 
@@ -182,16 +191,6 @@
             this.CBO_SHIFT.Name = "CBO_SHIFT";
             this.CBO_SHIFT.Size = new System.Drawing.Size(49, 21);
             this.CBO_SHIFT.TabIndex = 1;
-            // 
-            // CB0_ROLL_ID
-            // 
-            this.CB0_ROLL_ID.FormattingEnabled = true;
-            this.CB0_ROLL_ID.Location = new System.Drawing.Point(112, 18);
-            this.CB0_ROLL_ID.MaxLength = 7;
-            this.CB0_ROLL_ID.Name = "CB0_ROLL_ID";
-            this.CB0_ROLL_ID.Size = new System.Drawing.Size(105, 21);
-            this.CB0_ROLL_ID.TabIndex = 1;
-            this.CB0_ROLL_ID.TextChanged += new System.EventHandler(this.CBO_ROLL_NO_TextChanged);
             // 
             // label5
             // 
@@ -287,6 +286,111 @@
             this.sf1.TabIndex = 1;
             this.sf1.TabStop = false;
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(234, 219);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(14, 13);
+            this.label17.TabIndex = 620;
+            this.label17.Text = "t";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(234, 254);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(21, 13);
+            this.label15.TabIndex = 619;
+            this.label15.Text = "km";
+            // 
+            // SDB_TOT_MILL_LEN
+            // 
+            this.SDB_TOT_MILL_LEN.Location = new System.Drawing.Point(128, 254);
+            this.SDB_TOT_MILL_LEN.MaxLength = 10;
+            this.SDB_TOT_MILL_LEN.Name = "SDB_TOT_MILL_LEN";
+            this.SDB_TOT_MILL_LEN.NumValue = 0D;
+            this.SDB_TOT_MILL_LEN.Scale = 0;
+            this.SDB_TOT_MILL_LEN.ShowZero = false;
+            this.SDB_TOT_MILL_LEN.Size = new System.Drawing.Size(100, 22);
+            this.SDB_TOT_MILL_LEN.TabIndex = 618;
+            this.SDB_TOT_MILL_LEN.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // SDB_TOT_MILL_WGT
+            // 
+            this.SDB_TOT_MILL_WGT.Location = new System.Drawing.Point(128, 219);
+            this.SDB_TOT_MILL_WGT.MaxLength = 10;
+            this.SDB_TOT_MILL_WGT.Name = "SDB_TOT_MILL_WGT";
+            this.SDB_TOT_MILL_WGT.NumValue = 0D;
+            this.SDB_TOT_MILL_WGT.Scale = 0;
+            this.SDB_TOT_MILL_WGT.ShowZero = false;
+            this.SDB_TOT_MILL_WGT.Size = new System.Drawing.Size(100, 22);
+            this.SDB_TOT_MILL_WGT.TabIndex = 617;
+            this.SDB_TOT_MILL_WGT.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label12
+            // 
+            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label12.Location = new System.Drawing.Point(26, 257);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(96, 19);
+            this.label12.TabIndex = 616;
+            this.label12.Text = "轧制公里数";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label10
+            // 
+            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label10.Location = new System.Drawing.Point(26, 219);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(96, 19);
+            this.label10.TabIndex = 615;
+            this.label10.Text = "轧制吨位";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // SDB_ROLL_USE_NUM
+            // 
+            this.SDB_ROLL_USE_NUM.Location = new System.Drawing.Point(128, 178);
+            this.SDB_ROLL_USE_NUM.MaxLength = 10;
+            this.SDB_ROLL_USE_NUM.Name = "SDB_ROLL_USE_NUM";
+            this.SDB_ROLL_USE_NUM.NumValue = 0D;
+            this.SDB_ROLL_USE_NUM.Scale = 0;
+            this.SDB_ROLL_USE_NUM.ShowZero = false;
+            this.SDB_ROLL_USE_NUM.Size = new System.Drawing.Size(100, 22);
+            this.SDB_ROLL_USE_NUM.TabIndex = 614;
+            this.SDB_ROLL_USE_NUM.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label7
+            // 
+            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label7.Location = new System.Drawing.Point(26, 178);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(96, 19);
+            this.label7.TabIndex = 613;
+            this.label7.Text = "使用次数";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TXT_ROLL_DISUSE_RES
+            // 
+            this.TXT_ROLL_DISUSE_RES.Location = new System.Drawing.Point(128, 140);
+            this.TXT_ROLL_DISUSE_RES.MaxLength = 2;
+            this.TXT_ROLL_DISUSE_RES.Name = "TXT_ROLL_DISUSE_RES";
+            this.TXT_ROLL_DISUSE_RES.Size = new System.Drawing.Size(100, 22);
+            this.TXT_ROLL_DISUSE_RES.sJoin = "";
+            this.TXT_ROLL_DISUSE_RES.sKey = "G0008";
+            this.TXT_ROLL_DISUSE_RES.TabIndex = 612;
+            // 
+            // label1
+            // 
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.Location = new System.Drawing.Point(26, 140);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(96, 19);
+            this.label1.TabIndex = 611;
+            this.label1.Text = "报废原因";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // TXT_ROLL_MATERIAL
             // 
             this.TXT_ROLL_MATERIAL.Location = new System.Drawing.Point(128, 331);
@@ -304,6 +408,7 @@
             this.txt_treat_mtd.Name = "txt_treat_mtd";
             this.txt_treat_mtd.Size = new System.Drawing.Size(62, 22);
             this.txt_treat_mtd.TabIndex = 609;
+            this.txt_treat_mtd.Visible = false;
             // 
             // label47
             // 
@@ -319,7 +424,7 @@
             this.TXT_MAKER_NO.Location = new System.Drawing.Point(128, 368);
             this.TXT_MAKER_NO.MaxLength = 25;
             this.TXT_MAKER_NO.Name = "TXT_MAKER_NO";
-            this.TXT_MAKER_NO.Size = new System.Drawing.Size(100, 22);
+            this.TXT_MAKER_NO.Size = new System.Drawing.Size(156, 22);
             this.TXT_MAKER_NO.TabIndex = 597;
             // 
             // SDB_ROLL_IN_AVE_HARD
@@ -568,6 +673,27 @@
             this.sf2.TabIndex = 4;
             this.sf2.TabStop = false;
             // 
+            // TXT_B_ROLL_DISUSE_RES
+            // 
+            this.TXT_B_ROLL_DISUSE_RES.Location = new System.Drawing.Point(116, 67);
+            this.TXT_B_ROLL_DISUSE_RES.MaxLength = 2;
+            this.TXT_B_ROLL_DISUSE_RES.Name = "TXT_B_ROLL_DISUSE_RES";
+            this.TXT_B_ROLL_DISUSE_RES.Size = new System.Drawing.Size(144, 22);
+            this.TXT_B_ROLL_DISUSE_RES.sJoin = "";
+            this.TXT_B_ROLL_DISUSE_RES.sKey = "G0008";
+            this.TXT_B_ROLL_DISUSE_RES.TabIndex = 620;
+            // 
+            // label11
+            // 
+            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label11.ForeColor = System.Drawing.Color.Blue;
+            this.label11.Location = new System.Drawing.Point(6, 67);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(104, 19);
+            this.label11.TabIndex = 619;
+            this.label11.Text = "报废原因";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // TXT_B_IN_EMP
             // 
             this.TXT_B_IN_EMP.Location = new System.Drawing.Point(166, 494);
@@ -682,6 +808,27 @@
             this.sf3.Size = new System.Drawing.Size(290, 522);
             this.sf3.TabIndex = 6;
             this.sf3.TabStop = false;
+            // 
+            // TXT_C_ROLL_DISUSE_RES
+            // 
+            this.TXT_C_ROLL_DISUSE_RES.Location = new System.Drawing.Point(116, 67);
+            this.TXT_C_ROLL_DISUSE_RES.MaxLength = 2;
+            this.TXT_C_ROLL_DISUSE_RES.Name = "TXT_C_ROLL_DISUSE_RES";
+            this.TXT_C_ROLL_DISUSE_RES.Size = new System.Drawing.Size(144, 22);
+            this.TXT_C_ROLL_DISUSE_RES.sJoin = "";
+            this.TXT_C_ROLL_DISUSE_RES.sKey = "G0008";
+            this.TXT_C_ROLL_DISUSE_RES.TabIndex = 622;
+            // 
+            // label13
+            // 
+            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label13.ForeColor = System.Drawing.Color.Blue;
+            this.label13.Location = new System.Drawing.Point(6, 67);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(104, 19);
+            this.label13.TabIndex = 621;
+            this.label13.Text = "报废原因";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // TXT_C_IN_EMP
             // 
@@ -798,6 +945,27 @@
             this.sf4.TabIndex = 8;
             this.sf4.TabStop = false;
             // 
+            // TXT_P_ROLL_DISUSE_RES
+            // 
+            this.TXT_P_ROLL_DISUSE_RES.Location = new System.Drawing.Point(116, 67);
+            this.TXT_P_ROLL_DISUSE_RES.MaxLength = 2;
+            this.TXT_P_ROLL_DISUSE_RES.Name = "TXT_P_ROLL_DISUSE_RES";
+            this.TXT_P_ROLL_DISUSE_RES.Size = new System.Drawing.Size(144, 22);
+            this.TXT_P_ROLL_DISUSE_RES.sJoin = "";
+            this.TXT_P_ROLL_DISUSE_RES.sKey = "G0022";
+            this.TXT_P_ROLL_DISUSE_RES.TabIndex = 623;
+            // 
+            // label14
+            // 
+            this.label14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label14.ForeColor = System.Drawing.Color.Blue;
+            this.label14.Location = new System.Drawing.Point(6, 67);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(104, 19);
+            this.label14.TabIndex = 622;
+            this.label14.Text = "报废原因";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // TXT_P_IN_EMP
             // 
             this.TXT_P_IN_EMP.Location = new System.Drawing.Point(175, 494);
@@ -885,174 +1053,6 @@
             this.sc4.UseVisualStyleBackColor = true;
             this.sc4.CheckedChanged += new System.EventHandler(this.sc4_CheckedChanged);
             // 
-            // TXT_ROLL_DISUSE_RES
-            // 
-            this.TXT_ROLL_DISUSE_RES.Location = new System.Drawing.Point(128, 140);
-            this.TXT_ROLL_DISUSE_RES.MaxLength = 2;
-            this.TXT_ROLL_DISUSE_RES.Name = "TXT_ROLL_DISUSE_RES";
-            this.TXT_ROLL_DISUSE_RES.Size = new System.Drawing.Size(100, 22);
-            this.TXT_ROLL_DISUSE_RES.sJoin = "";
-            this.TXT_ROLL_DISUSE_RES.sKey = "G0008";
-            this.TXT_ROLL_DISUSE_RES.TabIndex = 612;
-            // 
-            // label1
-            // 
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(26, 140);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 19);
-            this.label1.TabIndex = 611;
-            this.label1.Text = "报废原因";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label7
-            // 
-            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label7.Location = new System.Drawing.Point(26, 178);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(96, 19);
-            this.label7.TabIndex = 613;
-            this.label7.Text = "使用次数";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // SDB_ROLL_USE_NUM
-            // 
-            this.SDB_ROLL_USE_NUM.Location = new System.Drawing.Point(128, 178);
-            this.SDB_ROLL_USE_NUM.MaxLength = 10;
-            this.SDB_ROLL_USE_NUM.Name = "SDB_ROLL_USE_NUM";
-            this.SDB_ROLL_USE_NUM.NumValue = 0D;
-            this.SDB_ROLL_USE_NUM.Scale = 0;
-            this.SDB_ROLL_USE_NUM.ShowZero = false;
-            this.SDB_ROLL_USE_NUM.Size = new System.Drawing.Size(100, 22);
-            this.SDB_ROLL_USE_NUM.TabIndex = 614;
-            this.SDB_ROLL_USE_NUM.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label10
-            // 
-            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label10.Location = new System.Drawing.Point(26, 219);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(96, 19);
-            this.label10.TabIndex = 615;
-            this.label10.Text = "轧制吨位";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label12
-            // 
-            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label12.Location = new System.Drawing.Point(26, 257);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(96, 19);
-            this.label12.TabIndex = 616;
-            this.label12.Text = "轧制公里数";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // SDB_TOT_MILL_WGT
-            // 
-            this.SDB_TOT_MILL_WGT.Location = new System.Drawing.Point(128, 219);
-            this.SDB_TOT_MILL_WGT.MaxLength = 10;
-            this.SDB_TOT_MILL_WGT.Name = "SDB_TOT_MILL_WGT";
-            this.SDB_TOT_MILL_WGT.NumValue = 0D;
-            this.SDB_TOT_MILL_WGT.Scale = 0;
-            this.SDB_TOT_MILL_WGT.ShowZero = false;
-            this.SDB_TOT_MILL_WGT.Size = new System.Drawing.Size(100, 22);
-            this.SDB_TOT_MILL_WGT.TabIndex = 617;
-            this.SDB_TOT_MILL_WGT.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // SDB_TOT_MILL_LEN
-            // 
-            this.SDB_TOT_MILL_LEN.Location = new System.Drawing.Point(128, 254);
-            this.SDB_TOT_MILL_LEN.MaxLength = 10;
-            this.SDB_TOT_MILL_LEN.Name = "SDB_TOT_MILL_LEN";
-            this.SDB_TOT_MILL_LEN.NumValue = 0D;
-            this.SDB_TOT_MILL_LEN.Scale = 0;
-            this.SDB_TOT_MILL_LEN.ShowZero = false;
-            this.SDB_TOT_MILL_LEN.Size = new System.Drawing.Size(100, 22);
-            this.SDB_TOT_MILL_LEN.TabIndex = 618;
-            this.SDB_TOT_MILL_LEN.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // TXT_B_ROLL_DISUSE_RES
-            // 
-            this.TXT_B_ROLL_DISUSE_RES.Location = new System.Drawing.Point(116, 64);
-            this.TXT_B_ROLL_DISUSE_RES.MaxLength = 2;
-            this.TXT_B_ROLL_DISUSE_RES.Name = "TXT_B_ROLL_DISUSE_RES";
-            this.TXT_B_ROLL_DISUSE_RES.Size = new System.Drawing.Size(144, 22);
-            this.TXT_B_ROLL_DISUSE_RES.sJoin = "";
-            this.TXT_B_ROLL_DISUSE_RES.sKey = "G0008";
-            this.TXT_B_ROLL_DISUSE_RES.TabIndex = 620;
-            // 
-            // label11
-            // 
-            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label11.ForeColor = System.Drawing.Color.Blue;
-            this.label11.Location = new System.Drawing.Point(6, 67);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(104, 19);
-            this.label11.TabIndex = 619;
-            this.label11.Text = "报废原因";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // TXT_C_ROLL_DISUSE_RES
-            // 
-            this.TXT_C_ROLL_DISUSE_RES.Location = new System.Drawing.Point(116, 67);
-            this.TXT_C_ROLL_DISUSE_RES.MaxLength = 2;
-            this.TXT_C_ROLL_DISUSE_RES.Name = "TXT_C_ROLL_DISUSE_RES";
-            this.TXT_C_ROLL_DISUSE_RES.Size = new System.Drawing.Size(144, 22);
-            this.TXT_C_ROLL_DISUSE_RES.sJoin = "";
-            this.TXT_C_ROLL_DISUSE_RES.sKey = "G0008";
-            this.TXT_C_ROLL_DISUSE_RES.TabIndex = 622;
-            // 
-            // label13
-            // 
-            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label13.ForeColor = System.Drawing.Color.Blue;
-            this.label13.Location = new System.Drawing.Point(6, 67);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(104, 19);
-            this.label13.TabIndex = 621;
-            this.label13.Text = "报废原因";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // TXT_P_ROLL_DISUSE_RES
-            // 
-            this.TXT_P_ROLL_DISUSE_RES.Location = new System.Drawing.Point(116, 67);
-            this.TXT_P_ROLL_DISUSE_RES.MaxLength = 2;
-            this.TXT_P_ROLL_DISUSE_RES.Name = "TXT_P_ROLL_DISUSE_RES";
-            this.TXT_P_ROLL_DISUSE_RES.Size = new System.Drawing.Size(144, 22);
-            this.TXT_P_ROLL_DISUSE_RES.sJoin = "";
-            this.TXT_P_ROLL_DISUSE_RES.sKey = "G0008";
-            this.TXT_P_ROLL_DISUSE_RES.TabIndex = 623;
-            // 
-            // label14
-            // 
-            this.label14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label14.ForeColor = System.Drawing.Color.Blue;
-            this.label14.Location = new System.Drawing.Point(6, 67);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(104, 19);
-            this.label14.TabIndex = 622;
-            this.label14.Text = "报废原因";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(234, 254);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(21, 13);
-            this.label15.TabIndex = 619;
-            this.label15.Text = "km";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(234, 219);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(14, 13);
-            this.label17.TabIndex = 620;
-            this.label17.Text = "t";
-            // 
             // CGF2020C
             // 
             this.ClientSize = new System.Drawing.Size(1362, 576);
@@ -1087,7 +1087,6 @@
         private System.Windows.Forms.TextBox TXT_EMP_CD;
         private System.Windows.Forms.ComboBox CBO_GROUP;
         private System.Windows.Forms.ComboBox CBO_SHIFT;
-        private System.Windows.Forms.ComboBox CB0_ROLL_ID;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -1169,5 +1168,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox CB0_ROLL_ID;
     }
 }
