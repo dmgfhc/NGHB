@@ -58,8 +58,7 @@ namespace CG
 
         Collection Mc1 = new Collection();
         Collection Mc2 = new Collection();
-        Collection Mc3 = new Collection();
-        Collection Mc4 = new Collection();
+        Collection Sc1 = new Collection();
         string sQuery_load;
 
 
@@ -69,93 +68,212 @@ namespace CG
             int imcseq;
             p_McIni(Mc1, true);
             imcseq = 1;
-            p_SetMc("轧辊号", CBO_ROLL_ID, "PNIR", "", "", "", "", imcseq); //0
-            p_SetMc("工厂代码", CBO_PLT, "NIR", "", "", "", "", imcseq); //1
-            p_SetMc("班次", CBO_SHIFT, "NI", "", "", "", "", imcseq); //2
-            p_SetMc("班别", CBO_GROUP, "NI", "", "", "", "", imcseq); //3
-            p_SetMc("作业人员", TXT_EMP_CD, "NI", "", "", "", "", imcseq); //4
-            p_SetMc("报废时间", TXT_GRID_STA_TIME, "NIR", "", "", "", "", imcseq); //5
-            p_SetMc("报废辊身直径", SDB_ROLL_DISUSE_DIA, "NIR", "", "", "", "", imcseq); //6
-            p_SetMc("", SDB_ROLL_CROWN, "RL", "", "", "", "", imcseq); //7
-            p_SetMc("", TXT_GRID_RESON, "IR", "", "", "", "", imcseq); //8
-            p_SetMc("", SDB_ROLL_USE_NUM, "IR", "", "", "", "", imcseq); //9
-            p_SetMc("", SDB_TOT_MILL_WGT, "IR", "", "", "", "", imcseq); //10
-            p_SetMc("", SDB_TOT_MILL_LEN, "IR", "", "", "", "", imcseq); //11
-            p_SetMc("", TXT_R_SHIFT, "RL", "", "", "", "", imcseq); //12
-            p_SetMc("", TXT_R_GROUP, "RL", "", "", "", "", imcseq); //13
-            p_SetMc("", TXT_R_IN_EMP, "RL", "", "", "", "", imcseq); //14
-            p_SetMc("", TXT_ROLL_MAKER, "RL", "", "", "", "", imcseq); //15
-            p_SetMc("", TXT_ROLL_MATERIAL, "RL", "", "", "", "", imcseq); //16
-            p_SetMc("", TXT_MAKER_NO, "RL", "", "", "", "", imcseq); //17
-            p_SetMc("", txt_treat_mtd, "IR", "", "", "", "", imcseq); //18
+            p_SetMc("轧辊号", CBO_ROLL_ID, "PNIR", "", "", "", "", imcseq);//0
+            p_SetMc("", SDB_SEQ_NO, "IRL", "", "", "", "", imcseq);//1
+            p_SetMc("工厂代码", CBO_PLT, "NIR", "", "", "", "", imcseq);//2
+            p_SetMc("班次", CBO_SHIFT, "NIR", "", "", "", "", imcseq);//3
+            p_SetMc("", CBO_GROUP, "IR", "", "", "", "", imcseq);//4
+            p_SetMc("作业人员1", CBO_EMP1, "NIR", "", "", "", "", imcseq);//5
+            p_SetMc("", CBO_EMP2, "IR", "", "", "", "", imcseq);//6
+            p_SetMc("", CBO_EMP3, "IR", "", "", "", "", imcseq);//7
+            p_SetMc("", CBO_EMP4, "IR", "", "", "", "", imcseq);//8
+            p_SetMc("磨削开始时间", TXT_GRID_STA_TIME, "NIR", "", "", "", "", imcseq);//9
+            p_SetMc("", SDB_GRID_NUM, "RL", "", "", "", "", imcseq);//10
+            p_SetMc("磨削前辊径 中部", SDB_BEF_GRID_DIA, "NIR", "", "", "", "", imcseq);//11
+            p_SetMc("磨削后辊径 中部", SDB_AFT_GRID_DIA, "NIR", "", "", "", "", imcseq);//12
+            p_SetMc("", SDB_GRID_WGT, "IR", "", "", "", "", imcseq);//13
+            p_SetMc("", TXT_GRID_RESON, "IR", "", "", "", "", imcseq);//14
+            p_SetMc("", TXT_GRID_POS, "IR", "", "", "", "", imcseq);//15
+            p_SetMc("磨削结束时间", TXT_GRID_END_TIME, "NIR", "", "", "", "", imcseq);//16
+            p_SetMc("", SDB_ROLL_CROWN, "IR", "", "", "", "", imcseq);//17
+            p_SetMc("", SDB_ROLL_TEMP, "IR", "", "", "", "", imcseq);//18
+            p_SetMc("", SDB_BEF_GRID_DA_DIA, "IR", "", "", "", "", imcseq);//19
+            p_SetMc("", SDB_BEF_GRID_DB_DIA, "IR", "", "", "", "", imcseq);//20
+            p_SetMc("", SDB_BEF_GRID_OA_DIA, "IR", "", "", "", "", imcseq);//21
+            p_SetMc("", SDB_BEF_GRID_OB_DIA, "IR", "", "", "", "", imcseq);//22
+            p_SetMc("磨削后辊径 驱动侧A", SDB_AFT_GRID_DA_DIA, "NIR", "", "", "", "", imcseq);//23
+            p_SetMc("磨削后辊径 驱动侧B", SDB_AFT_GRID_DB_DIA, "NIR", "", "", "", "", imcseq);//24
+            p_SetMc("磨削后辊径 工作侧A", SDB_AFT_GRID_OA_DIA, "NIR", "", "", "", "", imcseq);//25
+            p_SetMc("磨削后辊径 工作侧B", SDB_AFT_GRID_OB_DIA, "NIR", "", "", "", "", imcseq);//26
+            p_SetMc("", SDB_AFT_GRID_DN_DIA, "IR", "", "", "", "", imcseq);//27
+            p_SetMc("", SDB_AFT_GRID_ON_DIA, "IR", "", "", "", "", imcseq);//28
+            p_SetMc("", SDB_ROLL_HARD, "IR", "", "", "", "", imcseq);//29
+            p_SetMc("", SDB_ROLL_MILL_WGT, "RL", "", "", "", "", imcseq);//30
+            p_SetMc("", SDB_ROLL_MILL_LEN, "RL", "", "", "", "", imcseq);//31
+            p_SetMc("", TXT_ROLL_QX, "IR", "", "", "", "", imcseq);//32
+            p_SetMc("", TXT_ROLL_UST, "IR", "", "", "", "", imcseq);//33
+
 
             p_McIni(Mc2, true);
             imcseq = 2;
-            p_SetMc("轧辊号", CBO_ROLL_ID, "PNIR", "", "", "", "", imcseq); //0
-            p_SetMc("班次", CBO_SHIFT, "NI", "", "", "", "", imcseq); //2
-            p_SetMc("班别", CBO_GROUP, "NI", "", "", "", "", imcseq); //3
-            p_SetMc("作业人员", TXT_EMP_CD, "NI", "", "", "", "", imcseq); //4
-            p_SetMc("", TXT_UTP_B_ROLL_DISUSE_TIME, "NIR", "", "", "", "", imcseq); //5
-            p_SetMc("", TXT_B_ROLL_DISUSE_RES, "IR", "", "", "", "", imcseq); //6
-            p_SetMc("", TXT_B_SHIFT, "RL", "", "", "", "", imcseq); //7
-            p_SetMc("", TXT_B_GROUP, "RL", "", "", "", "", imcseq); //8
-            p_SetMc("", TXT_B_IN_EMP, "RL", "", "", "", "", imcseq); //8
+            p_SetMc("轧辊号", CBO_ROLL_ID, "PR", "", "", "", "", imcseq); //0
+            p_SetMc("", TXT_ROLL_MAKER, "RL", "", "", "", "", imcseq); //0
+            p_SetMc("", TXT_ROLL_MATERIAL, "RL", "", "", "", "", imcseq); //0
+            p_SetMc("", TXT_MAKER_NO, "RL", "", "", "", "", imcseq); //0
+            p_SetMc("", SDB_ROLL_CROWN_LAST, "RL", "", "", "", "", imcseq); //0
+            p_SetMc("", SDB_AFT_GRID_DIA_LAST, "RL", "", "", "", "", imcseq); //0
+            p_SetMc("", TXT_ROLL_QX_LAST, "RL", "", "", "", "", imcseq); //0
 
+            p_ScIni(ss1, Sc1, 0, false, true);
+            int iscseq;
+            int iheadrow;
+            iheadrow = 0;
+            iscseq = 1;
 
+            p_SetSc("磨削序列号", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //0
+            p_SetSc("磨削开始时间", "DT", "", "L", "", "", "", iscseq, iheadrow, "M"); //1
+            p_SetSc("磨削结束时间", "DT", "", "L", "", "", "", iscseq, iheadrow, "M"); //2
+            p_SetSc("磨削原因代码", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //3
+            p_SetSc("辊型曲线", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //4
+            p_SetSc("轧辊探伤", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //5
+            p_SetSc("磨前温度", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //6
+            p_SetSc("轧辊硬度", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //7
+            p_SetSc("材质代码", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //8
+            p_SetSc("供货商", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //9
+            p_SetSc("制造商编号", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //10
+            p_SetSc("磨削次数", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //11
+            p_SetSc("轧制公里数", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //12
+            p_SetSc("轧制吨位", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //13
+            p_SetSc("缺陷部位", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //14
+            p_SetSc("磨削前辊径", "E", "60", "L", "", "", "", iscseq, iheadrow, "R"); //15
+            p_SetSc("磨削后辊径", "E", "60", "L", "", "", "", iscseq, iheadrow, "R"); //16
+            p_SetSc("辊身磨削量", "E", "60", "L", "", "", "", iscseq, iheadrow, "R"); //17
+            p_SetSc("轧辊凸度", "E", "60", "L", "", "", "", iscseq, iheadrow, "R"); //18
 
-            p_McIni(Mc3, true);
-            imcseq = 3;
-            p_SetMc("轧辊号", CBO_ROLL_ID, "PNIR", "", "", "", "", imcseq); //0
-            p_SetMc("班次", CBO_SHIFT, "NI", "", "", "", "", imcseq); //2
-            p_SetMc("班别", CBO_GROUP, "NI", "", "", "", "", imcseq); //3
-            p_SetMc("作业人员", TXT_EMP_CD, "NI", "", "", "", "", imcseq); //4
-            p_SetMc("", TXT_UTP_C_ROLL_DISUSE_TIME, "NIR", "", "", "", "", imcseq); //5
-            p_SetMc("", TXT_C_ROLL_DISUSE_RES, "IR", "", "", "", "", imcseq); //6
-            p_SetMc("", TXT_C_SHIFT, "RL", "", "", "", "", imcseq); //7
-            p_SetMc("", TXT_C_GROUP, "RL", "", "", "", "", imcseq); //8
-            p_SetMc("", TXT_C_IN_EMP, "RL", "", "", "", "", imcseq); //9
+            sQuery_load = "SELECT ROLL_NO FROM GP_ROLL3 WHERE ROLL_STATUS<>'DL' ORDER BY SUBSTR(ROLL_NO,1,1) DESC, SUBSTR(ROLL_NO,2,1), SUBSTR(ROLL_NO,6,2) ";
 
+        }
 
-            p_McIni(Mc4, true);
-            imcseq = 4;
-            p_SetMc("轧辊号", CBO_ROLL_ID, "PNIR", "", "", "", "", imcseq); //0
-            p_SetMc("班次", CBO_SHIFT, "NI", "", "", "", "", imcseq); //2
-            p_SetMc("班别", CBO_GROUP, "NI", "", "", "", "", imcseq); //3
-            p_SetMc("作业人员", TXT_EMP_CD, "NI", "", "", "", "", imcseq); //4
-            p_SetMc("", TXT_UTP_P_ROLL_DISUSE_TIME, "NIR", "", "", "", "", imcseq); //5
-            p_SetMc("", TXT_P_ROLL_DISUSE_RES, "NIR", "", "", "", "", imcseq); //6
-            p_SetMc("", TXT_P_SHIFT, "RL", "", "", "", "", imcseq); //7
-            p_SetMc("", TXT_P_GROUP, "RL", "", "", "", "", imcseq); //8
-            p_SetMc("", TXT_P_IN_EMP, "RL", "", "", "", "", imcseq); //9
+        private void CBO_ROLL_ID_Chg()
+        {
+            if (CBO_ROLL_ID.Text.Trim().Length == 7)
+            {
+                p_Ref(2, 0, true, true);
+            }
+            else
+            {
+                TXT_ROLL_MAKER.Text = "";
+                TXT_ROLL_MATERIAL.Text = "";
+                TXT_MAKER_NO.Text = "";
+                SDB_ROLL_CROWN_LAST.Text = "";
+                SDB_AFT_GRID_DIA_LAST.Text = "";
+                TXT_ROLL_QX_LAST.Text = "";
+            }
+        }
 
+        private void CBO_ROLL_ID_Clk()
+        {
+            if (CBO_ROLL_ID.Text.Trim().Length == 7)
+            {
+                p_Ref(2, 0, true, true);
+            }
+        }
 
+        private void chk_c_Click()
+        {
+            if (!chk_c.Checked)
+            {
+                if (!chk_w.Checked && !chk_d.Checked)
+                {
+                    //  CHK_T_T_PART.Value = ssCBChecked
+                    TXT_GRID_POS.Text = " ";
+                }
+                return;
+            }
+
+            TXT_GRID_POS.Text = "C";
+
+            chk_c.ForeColor = Color.Red;
+            chk_c.Checked = true;
+
+            chk_w.ForeColor = Color.Black;
+            chk_w.Checked = false;
+            chk_d.ForeColor = Color.Black;
+            chk_d.Checked = false;
+        }
+
+        private void chk_d_Click()
+        {
+            if (!chk_d.Checked)
+            {
+                if (!chk_w.Checked && !chk_c.Checked)
+                {
+                    //  CHK_T_T_PART.Value = ssCBChecked
+                    TXT_GRID_POS.Text = " ";
+                }
+                return;
+            }
+
+            TXT_GRID_POS.Text = "D";
+
+            chk_d.ForeColor = Color.Red;
+            chk_d.Checked = true;
+
+            chk_w.ForeColor = Color.Black;
+            chk_w.Checked = false;
+            chk_c.ForeColor = Color.Black;
+            chk_c.Checked = false;
+        }
+
+        private void chk_w_Click()
+        {
+            if (!chk_w.Checked)
+            {
+                if (!chk_c.Checked&&!chk_d.Checked)
+                {
+                    //  CHK_T_T_PART.Value = ssCBChecked
+                    TXT_GRID_POS.Text = " ";
+                }
+                return;
+            }
+
+            TXT_GRID_POS.Text = "W";
+
+            chk_w.ForeColor = Color.Red;
+            chk_w.Checked = true;
+
+            chk_c.ForeColor = Color.Black;
+            chk_c.Checked = false;
+            chk_d.ForeColor = Color.Black;
+            chk_d.Checked = false;
         }
 
         public void Form_Load(object sender, System.EventArgs e)
         {
-            base.sSvrPgmPkgName = "CGF2020NC";
+            base.sSvrPgmPkgName = "CGF2030NC";
             Form_Define();
-            TXT_EMP_CD.Text = GeneralCommon.sUserID;
+            CBO_EMP1.Text = GeneralCommon.sUserID;
             CBO_PLT.Text = "C3";
 
-
-            sc1.ForeColor = Color.Red;
-            sc2.ForeColor = Color.Black;
-            sc3.ForeColor = Color.Black;
-            sc4.ForeColor = Color.Black;
-            sc1.Checked = true;
-            sc2.Checked = false;
-            sc3.Checked = false;
-            sc4.Checked = false;
-            //sf1.Enabled = true;
-            //sf2.Enabled = false;
-            //sf3.Enabled = false;
-            //sf4.Enabled = false;
-
-           // string sQuery_load = "";
-            sQuery_load = "SELECT ROLL_NO FROM GP_ROLL3 WHERE ROLL_STATUS<>'DL' ORDER BY SUBSTR(ROLL_NO,1,1) DESC, SUBSTR(ROLL_NO,6,2) ";
-            GeneralCommon.Gf_ComboAdd(CBO_ROLL_ID, sQuery_load);
+            GeneralCommon.Gf_ComboAdd(CBO_EMP2, "SELECT EMP_ID  FROM ZP_EMPLOYEE WHERE EMP_ID LIKE '1ZBR%' ");
+            GeneralCommon.Gf_ComboAdd(CBO_EMP3, "SELECT EMP_ID  FROM ZP_EMPLOYEE WHERE EMP_ID LIKE '1ZBR%' ");
+            GeneralCommon.Gf_ComboAdd(CBO_EMP4, "SELECT EMP_ID  FROM ZP_EMPLOYEE WHERE EMP_ID LIKE '1ZBR%' ");
+          
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
         
 
         public override bool Form_Cls()
