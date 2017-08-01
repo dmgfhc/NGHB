@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.SDB_SEQ_NO = new System.Windows.Forms.TextBox();
             this.label42 = new System.Windows.Forms.Label();
             this.CBO_EMP4 = new System.Windows.Forms.ComboBox();
             this.label41 = new System.Windows.Forms.Label();
@@ -120,7 +121,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.ss1 = new FarPoint.Win.Spread.FpSpread();
             this.fpSpread1_Sheet1 = new FarPoint.Win.Spread.SheetView();
-            this.SDB_SEQ_NO = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -154,15 +154,24 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
+            // SDB_SEQ_NO
+            // 
+            this.SDB_SEQ_NO.Location = new System.Drawing.Point(225, 18);
+            this.SDB_SEQ_NO.MaxLength = 20;
+            this.SDB_SEQ_NO.Name = "SDB_SEQ_NO";
+            this.SDB_SEQ_NO.Size = new System.Drawing.Size(78, 22);
+            this.SDB_SEQ_NO.TabIndex = 686;
+            // 
             // label42
             // 
             this.label42.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label42.Location = new System.Drawing.Point(1015, 18);
+            this.label42.Location = new System.Drawing.Point(1054, 18);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(75, 19);
             this.label42.TabIndex = 630;
             this.label42.Text = "作业人员4";
             this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label42.Visible = false;
             // 
             // CBO_EMP4
             // 
@@ -183,7 +192,7 @@
             "1ZB3012",
             "1ZB3013",
             "1ZB3014"});
-            this.CBO_EMP4.Location = new System.Drawing.Point(1096, 18);
+            this.CBO_EMP4.Location = new System.Drawing.Point(1135, 18);
             this.CBO_EMP4.MaxLength = 7;
             this.CBO_EMP4.Name = "CBO_EMP4";
             this.CBO_EMP4.Size = new System.Drawing.Size(69, 21);
@@ -193,12 +202,13 @@
             // label41
             // 
             this.label41.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label41.Location = new System.Drawing.Point(859, 18);
+            this.label41.Location = new System.Drawing.Point(898, 18);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(75, 19);
             this.label41.TabIndex = 628;
             this.label41.Text = "作业人员3";
             this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label41.Visible = false;
             // 
             // CBO_EMP3
             // 
@@ -219,7 +229,7 @@
             "1ZB3012",
             "1ZB3013",
             "1ZB3014"});
-            this.CBO_EMP3.Location = new System.Drawing.Point(940, 18);
+            this.CBO_EMP3.Location = new System.Drawing.Point(979, 18);
             this.CBO_EMP3.MaxLength = 7;
             this.CBO_EMP3.Name = "CBO_EMP3";
             this.CBO_EMP3.Size = new System.Drawing.Size(69, 21);
@@ -229,12 +239,13 @@
             // label5
             // 
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label5.Location = new System.Drawing.Point(703, 18);
+            this.label5.Location = new System.Drawing.Point(742, 18);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(75, 19);
             this.label5.TabIndex = 626;
             this.label5.Text = "作业人员2";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.Visible = false;
             // 
             // CBO_EMP2
             // 
@@ -255,7 +266,7 @@
             "1ZB3012",
             "1ZB3013",
             "1ZB3014"});
-            this.CBO_EMP2.Location = new System.Drawing.Point(784, 18);
+            this.CBO_EMP2.Location = new System.Drawing.Point(823, 18);
             this.CBO_EMP2.MaxLength = 7;
             this.CBO_EMP2.Name = "CBO_EMP2";
             this.CBO_EMP2.Size = new System.Drawing.Size(69, 21);
@@ -294,7 +305,7 @@
             this.CBO_EMP1.Location = new System.Drawing.Point(628, 18);
             this.CBO_EMP1.MaxLength = 7;
             this.CBO_EMP1.Name = "CBO_EMP1";
-            this.CBO_EMP1.Size = new System.Drawing.Size(69, 21);
+            this.CBO_EMP1.Size = new System.Drawing.Size(87, 21);
             this.CBO_EMP1.TabIndex = 623;
             // 
             // CBO_ROLL_ID
@@ -305,6 +316,7 @@
             this.CBO_ROLL_ID.Name = "CBO_ROLL_ID";
             this.CBO_ROLL_ID.Size = new System.Drawing.Size(105, 21);
             this.CBO_ROLL_ID.TabIndex = 622;
+            this.CBO_ROLL_ID.TextChanged += new System.EventHandler(this.CBO_ROLL_ID_TextChanged);
             // 
             // CBO_PLT
             // 
@@ -472,6 +484,7 @@
             this.chk_d.TabIndex = 685;
             this.chk_d.Text = "驱动侧";
             this.chk_d.UseVisualStyleBackColor = true;
+            this.chk_d.CheckedChanged += new System.EventHandler(this.chk_d_CheckedChanged);
             // 
             // chk_c
             // 
@@ -482,6 +495,7 @@
             this.chk_c.TabIndex = 684;
             this.chk_c.Text = "中部";
             this.chk_c.UseVisualStyleBackColor = true;
+            this.chk_c.CheckedChanged += new System.EventHandler(this.chk_c_CheckedChanged);
             // 
             // chk_w
             // 
@@ -492,6 +506,7 @@
             this.chk_w.TabIndex = 683;
             this.chk_w.Text = "工作侧";
             this.chk_w.UseVisualStyleBackColor = true;
+            this.chk_w.CheckedChanged += new System.EventHandler(this.chk_w_CheckedChanged);
             // 
             // label39
             // 
@@ -1233,14 +1248,6 @@
             // 
             this.fpSpread1_Sheet1.Reset();
             this.fpSpread1_Sheet1.SheetName = "Sheet1";
-            // 
-            // SDB_SEQ_NO
-            // 
-            this.SDB_SEQ_NO.Location = new System.Drawing.Point(225, 18);
-            this.SDB_SEQ_NO.MaxLength = 20;
-            this.SDB_SEQ_NO.Name = "SDB_SEQ_NO";
-            this.SDB_SEQ_NO.Size = new System.Drawing.Size(78, 22);
-            this.SDB_SEQ_NO.TabIndex = 686;
             // 
             // CGF2030C
             // 

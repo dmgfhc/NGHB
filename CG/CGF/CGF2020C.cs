@@ -515,7 +515,6 @@ namespace CG
 
         public bool Gp_DateCheck(string DateCheck, string sDTChk)
         {
-            sDTChk = "M";
             string iDateCheck;
             string iDateMatch;
             string iDate;
@@ -531,6 +530,10 @@ namespace CG
                 iDateCheck = iDateCheck.Replace(" ", "");
                 iDateCheck = iDateCheck.Replace(":", "");
             }
+            if (iDateCheck == "")
+            {
+                return false;
+            }
 
             if (Convert.ToInt32(iDateCheck.Substring(0, 4)) > 2020 | Convert.ToInt32(iDateCheck.Substring(0, 4)) < 2000)
             {
@@ -541,15 +544,15 @@ namespace CG
             {
                 case 8:
                     iDate = iDateCheck.Substring(0, 4) + "-" + iDateCheck.Substring(4, 2) + "-" + iDateCheck.Substring(6, 2);
-                    iCheck = Convert.ToDateTime(iDate.Substring(1, 10));
+                    iCheck = Convert.ToDateTime(iDate);
                     break;
                 case 12:
                     iDate = iDateCheck.Substring(0, 4) + "-" + iDateCheck.Substring(4, 2) + "-" + iDateCheck.Substring(6, 2) + " " + iDateCheck.Substring(8, 2) + ":" + iDateCheck.Substring(10, 2);
-                    iCheck = Convert.ToDateTime(iDate.Substring(1, 16));
+                    iCheck = Convert.ToDateTime(iDate);
                     break;
                 case 14:
                     iDate = iDateCheck.Substring(0, 4) + "-" + iDateCheck.Substring(4, 2) + "-" + iDateCheck.Substring(6, 2) + " " + iDateCheck.Substring(8, 2) + ":" + iDateCheck.Substring(10, 2) + ":" + iDateCheck.Substring(12, 2);
-                    iCheck = Convert.ToDateTime(iDate.Substring(1, 19));
+                    iCheck = Convert.ToDateTime(iDate);
                     break;
                 default:
                     return false;
@@ -558,7 +561,7 @@ namespace CG
 
             iDateMatch = iCheck.ToString("yyyyMM");
 
-            if (iDateMatch != iDateCheck.Substring(0, 8))
+            if (iDateMatch != iDateCheck.Substring(0, 6))
             {
                 return false;
             }

@@ -58,6 +58,7 @@ namespace CG
 
         Collection Mc1 = new Collection();
         Collection Mc2 = new Collection();
+        Collection Mc3 = new Collection();
         Collection Sc1 = new Collection();
         string sQuery_load;
 
@@ -113,6 +114,10 @@ namespace CG
             p_SetMc("", SDB_ROLL_CROWN_LAST, "RL", "", "", "", "", imcseq); //0
             p_SetMc("", SDB_AFT_GRID_DIA_LAST, "RL", "", "", "", "", imcseq); //0
             p_SetMc("", TXT_ROLL_QX_LAST, "RL", "", "", "", "", imcseq); //0
+
+            p_McIni(Mc3, false);
+            imcseq = 3;
+            p_SetMc("轧辊号", CBO_ROLL_ID, "P", "", "", "", "", imcseq);//0
 
             p_ScIni(ss1, Sc1, 0, false, true);
             int iscseq;
@@ -245,395 +250,102 @@ namespace CG
             CBO_EMP1.Text = GeneralCommon.sUserID;
             CBO_PLT.Text = "C3";
 
+            GeneralCommon.Gf_ComboAdd(CBO_ROLL_ID, sQuery_load);
             GeneralCommon.Gf_ComboAdd(CBO_EMP2, "SELECT EMP_ID  FROM ZP_EMPLOYEE WHERE EMP_ID LIKE '1ZBR%' ");
             GeneralCommon.Gf_ComboAdd(CBO_EMP3, "SELECT EMP_ID  FROM ZP_EMPLOYEE WHERE EMP_ID LIKE '1ZBR%' ");
             GeneralCommon.Gf_ComboAdd(CBO_EMP4, "SELECT EMP_ID  FROM ZP_EMPLOYEE WHERE EMP_ID LIKE '1ZBR%' ");
           
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-        
-
         public override bool Form_Cls()
         {
             if (base.Form_Cls())
             {
-                TXT_EMP_CD.Text = GeneralCommon.sUserID;
+                CBO_EMP1.Text = GeneralCommon.sUserID;
                 CBO_PLT.Text = "C3";
-                ULabel16.Text = "轧辊号";
 
-                sc1.ForeColor = Color.Red;
-                sc2.ForeColor = Color.Black;
-                sc3.ForeColor = Color.Black;
-                sc4.ForeColor = Color.Black;
-                sc1.Checked = true;
-                sc2.Checked = false;
-                sc3.Checked = false;
-                sc4.Checked = false;
-                //sf1.Enabled = true;
-                //sf2.Enabled = false;
-                //sf3.Enabled = false;
-                //sf4.Enabled = false;
-
-                CBO_ROLL_ID.Text = "";
-                CBO_GROUP.Text = "";
-
-                sQuery_load = "SELECT ROLL_NO FROM GP_ROLL3 WHERE ROLL_STATUS<>'DL' ORDER BY SUBSTR(ROLL_NO,1,1) DESC, SUBSTR(ROLL_NO,6,2) ";
-                GeneralCommon.Gf_ComboAdd(CBO_ROLL_ID, sQuery_load);
             }
             return true;
         }
 
         public override void Form_Ref()
         {
-            switch (CBO_ROLL_ID.Text.Trim().Substring(0, 1))
+            if (p_Ref(1, 0, true, true))
             {
-
-                case "J":
-                    p_Ref(1, 0, true, true);
-                    break;
-                case "B":
-                    p_Ref(3, 0, true, true);
-                    break;
-                case "C":
-                    p_Ref(2, 0, true, true);
-                    break;
-                case "P":
-                    p_Ref(4, 0, true, true);
-                    break;
+                p_Ref(3, 1, true, true);
             }
-            CBO_ROLL_ID.Enabled = true;
         }
 
         public override void Form_Pro()
         {
             string SMESG;
-            int i;
             bool mResult;
 
-            TXT_EMP_CD.Text = GeneralCommon.sUserID;
+            CBO_EMP1.Text = GeneralCommon.sUserID;
 
-            if (sc1.Checked)
+            if (!Gp_DateCheck(TXT_GRID_STA_TIME.Text,""))
             {
+                SMESG = " 请正确输入磨削开始时间 ！";
+                GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "提示");
+                return;
+            }
 
-                if (substr(CBO_ROLL_ID.Text, 0, 1) != "J" && substr(CBO_ROLL_ID.Text, 0, 1) != "C")
+            if (TXT_GRID_STA_TIME.Text != "    -  -     :  :" & TXT_GRID_END_TIME.Text != "    -  -     :  :")
+            {
+                if (!Gp_DateCheck(TXT_GRID_END_TIME.Text,""))
                 {
-                    SMESG = " 请输入正确的轧辊号 ！";
+                    SMESG = " 请正确输入磨削结束时间 ！";
+                    GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "提示");
+                    return;
+                }
+                if (convertX(TXT_GRID_STA_TIME.Text.Replace("-", "").Replace(" ", "").Replace(":", "")) - convertX(TXT_GRID_END_TIME.Text.Replace("-", "").Replace(" ", "").Replace(":", "")) > 0)
+                {
+                    SMESG = " 磨削结束时间应大于磨削开始时间，请正确输入时间信息 ！";
                     GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "提示");
                     return;
                 }
             }
 
-            if (sc3.Checked)
+            ///ADDED BY GUOLI AT 20090401201200 FOR 杨海涛''''''''
+            if (CBO_ROLL_ID.Enabled == true)
             {
-
-                if (substr(CBO_ROLL_ID.Text, 0, 1) != "B")
+                SMESG = "请您确定是否保存";
+                mResult = GeneralCommon.Gf_MessConfirm(SMESG, "I", "提示");
+                if (!mResult)
                 {
-                    SMESG = " 请输入正确的轴承号 ！";
-                    GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "提示");
                     return;
                 }
             }
-
-
-            if (sc4.Checked)
+            else if (CBO_ROLL_ID.Enabled == false)
             {
-
-                if (substr(CBO_ROLL_ID.Text, 0, 1) != "P")
+                SMESG = "请您确定是修改内容还是第二次保存内容，若是第二次保存相同内容，将影响ERP计算轧辊辊耗成本，系统将记住您的操作并考核";
+                mResult = GeneralCommon.Gf_MessConfirm(SMESG, "I", "提示");
+                if (!mResult)
                 {
-                    SMESG = " 请输入正确的护板号 ！";
-                    GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "提示");
                     return;
                 }
             }
+            ///'''''''''''''''''''''''''''''''''''''''''''''''''''
 
-            switch (substr(CBO_ROLL_ID.Text, 0, 1))
+            if (p_Pro(1, 0, true, true))
             {
-                case "J":
-                     SMESG = "您确定要报废轧辊" + CBO_ROLL_ID.Text + "吗？";
-                     mResult = GeneralCommon.Gf_MessConfirm(SMESG, "I", "提示");
-                     if (!mResult) return;
- 
-                    if (!Gp_DateCheck(TXT_GRID_STA_TIME.Text, ""))
-                    {
-                        SMESG = " 请正确输入轧辊报废时间 ！";
-                        GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "提示");
-                        return;
-                    }
-                    ///'added by guoli at 20081229 103600 for ERP'''''
-                    if (SDB_ROLL_DISUSE_DIA.NumValue == 0)
-                    {
-                        SMESG = "请输入报废辊身直径 ！";
-                        GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "提示");
-                        return;
-                    }
-
-                    txt_treat_mtd.Text = "";
-
-                    if (SSC0.Checked)
-                    {
-                        txt_treat_mtd.Text = txt_treat_mtd.Text + Convert.ToString(0 + 1);
-                    }
-                    if (SSC1.Checked)
-                    {
-                        txt_treat_mtd.Text = txt_treat_mtd.Text + Convert.ToString(1 + 1);
-                    }
-                    if (SSC2.Checked)
-                    {
-                        txt_treat_mtd.Text = txt_treat_mtd.Text + "9";
-                    }
-
-                    p_pro(1, 0, true, true);
-                    break;
-                case "C":
-                     SMESG = "您确定要报废轧辊" + CBO_ROLL_ID.Text + "吗？";
-                     mResult = GeneralCommon.Gf_MessConfirm(SMESG, "I", "提示");
-                     if (!mResult) return;
-
-                     if (!Gp_DateCheck(TXT_GRID_STA_TIME.Text, ""))
-                    {
-                        SMESG = " 请正确输入轧辊报废时间 ！";
-                        GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "提示");
-                        return;
-                    }
-                    ///'added by guoli at 20081229 103600 for ERP'''''
-                     if (SDB_ROLL_DISUSE_DIA.NumValue == 0)
-                    {
-                        SMESG = "请输入报废辊身直径 ！";
-                        GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "提示");
-                        return;
-                    }
-
-                    txt_treat_mtd.Text = "";
-
-                    if (SSC0.Checked)
-                    {
-                        txt_treat_mtd.Text = txt_treat_mtd.Text + Convert.ToString(0 + 1);
-                    }
-                    if (SSC1.Checked)
-                    {
-                        txt_treat_mtd.Text = txt_treat_mtd.Text + Convert.ToString(1 + 1);
-                    }
-                    if (SSC2.Checked)
-                    {
-                        txt_treat_mtd.Text = txt_treat_mtd.Text + "9";
-                    }
-
-                    p_pro(1, 0, true, true);
-                    break;
-
-                case "B":
-                     SMESG = "您确定要报废轴承座" + CBO_ROLL_ID.Text + "吗？";
-                     mResult = GeneralCommon.Gf_MessConfirm(SMESG, "I", "提示");
-                     if (!mResult) return;
-
-                     if (!Gp_DateCheck(TXT_UTP_C_ROLL_DISUSE_TIME.Text, ""))
-                    {
-                        SMESG = " 请正确输入轴承报废时间 ！";
-                        GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "提示");
-                        return;
-                    }
-                    ///'added by guoli at 20081229 103600 for ERP'''''
-
-                    p_pro(3, 0, true, true);
-                    break;
-                case "P":
-                    SMESG = "您确定要报废轧辊" + CBO_ROLL_ID.Text + "吗？";
-                     mResult = GeneralCommon.Gf_MessConfirm(SMESG, "I", "提示");
-                     if (!mResult) return;
-
-                     if (!Gp_DateCheck(TXT_UTP_P_ROLL_DISUSE_TIME.Text, ""))
-                    {
-                        SMESG = " 请正确输入护板报废时间 ！";
-                        GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "提示");
-                        return;
-                    }
-                    ///'added by guoli at 20081229 103600 for ERP'''''
-
-                    p_pro(4, 0, true, true);
-                    break;
-            }
-        }
-
-        private void sc1_Clk()
-        {
-
-            CBO_ROLL_ID.Enabled = true;
-            MasterCommon.Gp_Ms_Cls((Collection)Mc1["rControl"]);
-
-            if (!sc1.Checked)
-            {
-                if (!sc2.Checked & !sc3.Checked & !sc4.Checked)
-                {
-                    sc1.Checked = true;
-
-                }
-                return;
-            }
-            sc1.ForeColor = Color.Red;
-            sc2.ForeColor = Color.Black;
-            sc2.Checked = false;
-            sc3.ForeColor = Color.Black;
-            sc3.Checked = false;
-            sc4.ForeColor = Color.Black;
-            sc4.Checked = false;
-            //sf1.Enabled = true;
-            //sf2.Enabled = false;
-            //sf3.Enabled = false;
-            //sf4.Enabled = false;
-            ULabel16.Text = "轧辊号";
-            sQuery_load = "SELECT ROLL_NO FROM GP_ROLL3 WHERE ROLL_STATUS<>'DL' ORDER BY SUBSTR(ROLL_NO,1,1) DESC, SUBSTR(ROLL_NO,6,2) ";
-            GeneralCommon.Gf_ComboAdd(CBO_ROLL_ID, sQuery_load);
-        }
-
-        private void sc2_Clk()
-        {
-
-            CBO_ROLL_ID.Enabled = true;
-            MasterCommon.Gp_Ms_Cls((Collection)Mc2["rControl"]);
-
-            if (!sc2.Checked)
-            {
-                if (!sc1.Checked & !sc3.Checked & !sc4.Checked)
-                {
-                    sc2.Checked = true;
-
-                }
-                return;
-            }
-
-            sc2.ForeColor = Color.Red;
-            sc1.ForeColor = Color.Black;
-            sc1.Checked = false;
-            sc3.ForeColor = Color.Black;
-            sc3.Checked = false;
-            sc4.ForeColor = Color.Black;
-            sc4.Checked = false;
-            //sf2.Enabled = true;
-            //sf1.Enabled = false;
-            //sf3.Enabled = false;
-            //sf4.Enabled = false;
-            ULabel16.Text = "轴承座号";
-            sQuery_load = "SELECT CHOCK_ID FROM GP_CHOCK3    ";
-            GeneralCommon.Gf_ComboAdd(CBO_ROLL_ID, sQuery_load);
-        }
-
-
-        private void sc3_Clk()
-        {
-
-            CBO_ROLL_ID.Enabled = true;
-            MasterCommon.Gp_Ms_Cls((Collection)Mc3["rControl"]);
-
-            if (!sc3.Checked)
-            {
-                if (!sc1.Checked & !sc2.Checked & !sc4.Checked)
-                {
-                    sc3.Checked = true;
-
-                }
-                return;
-            }
-
-            //  If sc2.Value = -1 Then    '-1: ssCBChecked
-            sc3.ForeColor = Color.Red;
-            sc1.ForeColor = Color.Black;
-            sc1.Checked = false;
-            sc2.ForeColor = Color.Black;
-            sc2.Checked = false;
-            sc4.ForeColor = Color.Black;
-            sc4.Checked = false;
-            //sf3.Enabled = true;
-            //sf1.Enabled = false;
-            //sf2.Enabled = false;
-            //sf4.Enabled = false;
-            ULabel16.Text = "轴承号";
-            sQuery_load = "SELECT BEARING_ID FROM GP_BEARING3    ";
-            GeneralCommon.Gf_ComboAdd(CBO_ROLL_ID, sQuery_load);
-
-        }
-
-        private void sc4_Clk()
-        {
-
-            CBO_ROLL_ID.Enabled = true;
-            MasterCommon.Gp_Ms_Cls((Collection)Mc4["rControl"]);
-
-            if (!sc4.Checked)
-            {
-                if (!sc1.Checked & !sc2.Checked & !sc3.Checked)
-                {
-                    sc4.Checked = true;
-
-                }
-                return;
-            }
-
-            sc4.ForeColor = Color.Red;
-            sc1.ForeColor = Color.Black;
-            sc1.Checked = false;
-            sc2.ForeColor = Color.Black;
-            sc2.Checked = false;
-            sc3.ForeColor = Color.Black;
-            sc3.Checked = false;
-            //sf4.Enabled = true;
-            //sf1.Enabled = false;
-            //sf2.Enabled = false;
-            //sf3.Enabled = false;
-            ULabel16.Text = "护板号";
-            sQuery_load = "SELECT PLANK_NO FROM GP_PLANK3    ";
-            GeneralCommon.Gf_ComboAdd(CBO_ROLL_ID, sQuery_load);
-
-        }
-        private void SSC_Clk(object sender)
-        {
-            int i;
-            int CNT = 0;
-            ArrayList SSC = new ArrayList();
-            SSC.Add(SSC);
-            SSC.Add(SSC1);
-            SSC.Add(SSC2);
-
-            if (((CheckBox)sender).Checked)
-            {
-                ((CheckBox)sender).ForeColor = Color.Red;
-                //red
+                Form_Ref();
             }
             else
             {
-                ((CheckBox)sender).ForeColor = Color.Black;
-                //black
+                return;
             }
         }
 
+        public override void Form_Del()
+        {
+            p_del(1, 0, true);
+        }
 
         # region 公共方法
 
         public bool Gp_DateCheck(string DateCheck, string sDTChk)
         {
-            sDTChk = "M";
             string iDateCheck;
             string iDateMatch;
             string iDate;
@@ -649,6 +361,10 @@ namespace CG
                 iDateCheck = iDateCheck.Replace(" ", "");
                 iDateCheck = iDateCheck.Replace(":", "");
             }
+            if (iDateCheck == "")
+            {
+                return false;
+            }
 
             if (Convert.ToInt32(iDateCheck.Substring(0, 4)) > 2020 | Convert.ToInt32(iDateCheck.Substring(0, 4)) < 2000)
             {
@@ -659,15 +375,15 @@ namespace CG
             {
                 case 8:
                     iDate = iDateCheck.Substring(0, 4) + "-" + iDateCheck.Substring(4, 2) + "-" + iDateCheck.Substring(6, 2);
-                    iCheck = Convert.ToDateTime(iDate.Substring(1, 10));
+                    iCheck = Convert.ToDateTime(iDate);
                     break;
                 case 12:
                     iDate = iDateCheck.Substring(0, 4) + "-" + iDateCheck.Substring(4, 2) + "-" + iDateCheck.Substring(6, 2) + " " + iDateCheck.Substring(8, 2) + ":" + iDateCheck.Substring(10, 2);
-                    iCheck = Convert.ToDateTime(iDate.Substring(1, 16));
+                    iCheck = Convert.ToDateTime(iDate);
                     break;
                 case 14:
                     iDate = iDateCheck.Substring(0, 4) + "-" + iDateCheck.Substring(4, 2) + "-" + iDateCheck.Substring(6, 2) + " " + iDateCheck.Substring(8, 2) + ":" + iDateCheck.Substring(10, 2) + ":" + iDateCheck.Substring(12, 2);
-                    iCheck = Convert.ToDateTime(iDate.Substring(1, 19));
+                    iCheck = Convert.ToDateTime(iDate);
                     break;
                 default:
                     return false;
@@ -676,7 +392,7 @@ namespace CG
 
             iDateMatch = iCheck.ToString("yyyyMM");
 
-            if (iDateMatch != iDateCheck.Substring(0, 8))
+            if (iDateMatch != iDateCheck.Substring(0, 6))
             {
                 return false;
             }
@@ -918,44 +634,37 @@ namespace CG
             return "";
         }
 
+        public double convertX(string value)
+        {
+            if (value != "")
+            {
+                return Convert.ToDouble(value);
+            }
+            return 0;
+        }
+
         #endregion
 
-        private void sc1_CheckedChanged(object sender, EventArgs e)
+        private void CBO_ROLL_ID_TextChanged(object sender, EventArgs e)
         {
-            sc1_Clk();
+            CBO_ROLL_ID_Chg();
         }
 
-        private void sc2_CheckedChanged(object sender, EventArgs e)
+        private void chk_c_CheckedChanged(object sender, EventArgs e)
         {
-            sc2_Clk();
+            chk_c_Click();
         }
 
-        private void sc3_CheckedChanged(object sender, EventArgs e)
+        private void chk_d_CheckedChanged(object sender, EventArgs e)
         {
-            sc3_Clk();
+            chk_d_Click();
         }
 
-        private void sc4_CheckedChanged(object sender, EventArgs e)
+        private void chk_w_CheckedChanged(object sender, EventArgs e)
         {
-            sc4_Clk();
+            chk_w_Click();
         }
 
-        private void SSC0_CheckedChanged(object sender, EventArgs e)
-        {
-            SSC_Clk(sender);
-        }
-
-        private void SSC1_CheckedChanged(object sender, EventArgs e)
-        {
-            SSC_Clk(sender);
-        }
-
-        private void SSC2_CheckedChanged(object sender, EventArgs e)
-        {
-            SSC_Clk(sender);
-        }
-
-       
 
 
 
