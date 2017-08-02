@@ -190,7 +190,7 @@ namespace CG
 
         public override void Form_Ref()
         {
-            switch (CB0_ROLL_ID.Text.Trim().Substring(0, 1))
+            switch (substr(CB0_ROLL_ID.Text.Trim(),0,1))
             {
 
                 case "J":

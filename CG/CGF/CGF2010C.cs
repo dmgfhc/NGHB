@@ -234,7 +234,7 @@ namespace CG
                 }
             }
 
-            switch (CBO_ROLL_NO.Text.Trim().Substring(0, 1))
+            switch (substr(CBO_ROLL_NO.Text.Trim(),0,1))
             {
 
                 case "B":
