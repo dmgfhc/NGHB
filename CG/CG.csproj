@@ -477,6 +477,12 @@
     <Compile Include="CGF\CGF2030C.Designer.cs">
       <DependentUpon>CGF2030C.cs</DependentUpon>
     </Compile>
+    <Compile Include="CGF\CGF2031C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CGF\CGF2031C.Designer.cs">
+      <DependentUpon>CGF2031C.cs</DependentUpon>
+    </Compile>
     <Compile Include="CGF\WGF1010C.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -489,11 +495,11 @@
     <Compile Include="CGF\CGF2032C.Designer.cs">
       <DependentUpon>CGF2032C.cs</DependentUpon>
     </Compile>
-    <Compile Include="CGF\CGF2031C.cs">
+    <Compile Include="CGF\CGF2050C.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CGF\CGF2031C.Designer.cs">
-      <DependentUpon>CGF2031C.cs</DependentUpon>
+    <Compile Include="CGF\CGF2050C.Designer.cs">
+      <DependentUpon>CGF2050C.cs</DependentUpon>
     </Compile>
     <Compile Include="CGZ\CGZ2031C.cs">
       <SubType>Form</SubType>
@@ -965,14 +971,17 @@
     <EmbeddedResource Include="CGF\CGF2030C.resx">
       <DependentUpon>CGF2030C.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CGF\CGF2031C.resx">
+      <DependentUpon>CGF2031C.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CGF\WGF1010C.resx">
       <DependentUpon>WGF1010C.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CGF\CGF2032C.resx">
       <DependentUpon>CGF2032C.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CGF\CGF2031C.resx">
-      <DependentUpon>CGF2031C.cs</DependentUpon>
+    <EmbeddedResource Include="CGF\CGF2050C.resx">
+      <DependentUpon>CGF2050C.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CGZ\CGZ2031C.resx">
       <DependentUpon>CGZ2031C.cs</DependentUpon>
