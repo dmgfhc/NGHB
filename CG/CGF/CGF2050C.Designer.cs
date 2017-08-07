@@ -325,6 +325,7 @@
             this.CBO_ROLL_ID.Name = "CBO_ROLL_ID";
             this.CBO_ROLL_ID.Size = new System.Drawing.Size(74, 21);
             this.CBO_ROLL_ID.TabIndex = 622;
+            this.CBO_ROLL_ID.TextChanged += new System.EventHandler(this.CBO_ROLL_ID_TextChanged);
             // 
             // CBO_PLT
             // 
@@ -1048,6 +1049,8 @@
             this.CBO_PIAR_ROLL_ID.Name = "CBO_PIAR_ROLL_ID";
             this.CBO_PIAR_ROLL_ID.Size = new System.Drawing.Size(100, 21);
             this.CBO_PIAR_ROLL_ID.TabIndex = 639;
+            this.CBO_PIAR_ROLL_ID.TextChanged += new System.EventHandler(this.CBO_PIAR_ROLL_ID_TextChanged);
+            this.CBO_PIAR_ROLL_ID.Click += new System.EventHandler(this.CBO_PIAR_ROLL_ID_Click);
             // 
             // label25
             // 
