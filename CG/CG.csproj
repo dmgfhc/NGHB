@@ -189,6 +189,12 @@
     <Compile Include="CGA\CGA2080C.Designer.cs">
       <DependentUpon>CGA2080C.cs</DependentUpon>
     </Compile>
+    <Compile Include="CGA\CGA2120C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CGA\CGA2120C.Designer.cs">
+      <DependentUpon>CGA2120C.cs</DependentUpon>
+    </Compile>
     <Compile Include="CGA\CGA3000C.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,12 +260,6 @@
     </Compile>
     <Compile Include="CGA\CGA2110C.Designer.cs">
       <DependentUpon>CGA2110C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGA\CGA2120C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGA\CGA2120C.Designer.cs">
-      <DependentUpon>CGA2120C.cs</DependentUpon>
     </Compile>
     <Compile Include="CGB\CGB2020C.cs">
       <SubType>Form</SubType>
@@ -482,6 +482,12 @@
     </Compile>
     <Compile Include="CGF\CGF2031C.Designer.cs">
       <DependentUpon>CGF2031C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CGF\CGF2051C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CGF\CGF2051C.Designer.cs">
+      <DependentUpon>CGF2051C.cs</DependentUpon>
     </Compile>
     <Compile Include="CGF\WGF1010C.cs">
       <SubType>Form</SubType>
@@ -827,6 +833,9 @@
     <EmbeddedResource Include="CGA\CGA2080C.resx">
       <DependentUpon>CGA2080C.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CGA\CGA2120C.resx">
+      <DependentUpon>CGA2120C.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CGA\CGA3000C.resx">
       <DependentUpon>CGA3000C.cs</DependentUpon>
     </EmbeddedResource>
@@ -859,9 +868,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CGA\CGA2110C.resx">
       <DependentUpon>CGA2110C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGA\CGA2120C.resx">
-      <DependentUpon>CGA2120C.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CGB\CGB2020C.resx">
       <DependentUpon>CGB2020C.cs</DependentUpon>
@@ -973,6 +979,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CGF\CGF2031C.resx">
       <DependentUpon>CGF2031C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CGF\CGF2051C.resx">
+      <DependentUpon>CGF2051C.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CGF\WGF1010C.resx">
       <DependentUpon>WGF1010C.cs</DependentUpon>
