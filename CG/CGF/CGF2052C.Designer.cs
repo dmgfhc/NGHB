@@ -1,6 +1,6 @@
 ﻿namespace CG
 {
-    partial class CGF2051C
+    partial class CGF2052C
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -78,11 +78,11 @@
             // 
             this.SDT_IN_DATE_TO.Font = new System.Drawing.Font("宋体", 9.75F);
             this.SDT_IN_DATE_TO.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.SDT_IN_DATE_TO.Location = new System.Drawing.Point(229, 18);
+            this.SDT_IN_DATE_TO.Location = new System.Drawing.Point(231, 18);
             this.SDT_IN_DATE_TO.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SDT_IN_DATE_TO.Name = "SDT_IN_DATE_TO";
             this.SDT_IN_DATE_TO.RawDate = "";
-            this.SDT_IN_DATE_TO.Size = new System.Drawing.Size(96, 21);
+            this.SDT_IN_DATE_TO.Size = new System.Drawing.Size(94, 21);
             this.SDT_IN_DATE_TO.TabIndex = 583;
             this.SDT_IN_DATE_TO.Tag = "结束时间";
             // 
@@ -94,7 +94,7 @@
             this.SDT_IN_DATE_FROM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SDT_IN_DATE_FROM.Name = "SDT_IN_DATE_FROM";
             this.SDT_IN_DATE_FROM.RawDate = "";
-            this.SDT_IN_DATE_FROM.Size = new System.Drawing.Size(93, 21);
+            this.SDT_IN_DATE_FROM.Size = new System.Drawing.Size(95, 21);
             this.SDT_IN_DATE_FROM.TabIndex = 582;
             this.SDT_IN_DATE_FROM.Tag = "开始时间";
             // 
@@ -124,13 +124,13 @@
             this.fpSpread1_Sheet1.Reset();
             this.fpSpread1_Sheet1.SheetName = "Sheet1";
             // 
-            // CGF2051C
+            // CGF2052C
             // 
             this.ClientSize = new System.Drawing.Size(1129, 622);
             this.Controls.Add(this.ss1);
             this.Controls.Add(this.groupBox1);
-            this.Name = "CGF2051C";
-            this.Text = "轧辊装配实绩查询(按时间)_CGF2051C";
+            this.Name = "CGF2052C";
+            this.Text = "轧辊装配实绩查询及发送_CGF2052C";
             this.Load += new System.EventHandler(this.Form_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ss1)).EndInit();
