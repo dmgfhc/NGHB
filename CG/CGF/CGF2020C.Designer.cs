@@ -442,7 +442,7 @@
             // TXT_R_IN_EMP
             // 
             this.TXT_R_IN_EMP.Location = new System.Drawing.Point(186, 494);
-            this.TXT_R_IN_EMP.MaxLength = 1;
+            this.TXT_R_IN_EMP.MaxLength = 10;
             this.TXT_R_IN_EMP.Name = "TXT_R_IN_EMP";
             this.TXT_R_IN_EMP.Size = new System.Drawing.Size(80, 22);
             this.TXT_R_IN_EMP.TabIndex = 579;
@@ -697,7 +697,7 @@
             // TXT_B_IN_EMP
             // 
             this.TXT_B_IN_EMP.Location = new System.Drawing.Point(166, 494);
-            this.TXT_B_IN_EMP.MaxLength = 1;
+            this.TXT_B_IN_EMP.MaxLength = 10;
             this.TXT_B_IN_EMP.Name = "TXT_B_IN_EMP";
             this.TXT_B_IN_EMP.Size = new System.Drawing.Size(80, 22);
             this.TXT_B_IN_EMP.TabIndex = 618;
@@ -833,7 +833,7 @@
             // TXT_C_IN_EMP
             // 
             this.TXT_C_IN_EMP.Location = new System.Drawing.Point(166, 494);
-            this.TXT_C_IN_EMP.MaxLength = 1;
+            this.TXT_C_IN_EMP.MaxLength = 10;
             this.TXT_C_IN_EMP.Name = "TXT_C_IN_EMP";
             this.TXT_C_IN_EMP.Size = new System.Drawing.Size(80, 22);
             this.TXT_C_IN_EMP.TabIndex = 620;
@@ -969,7 +969,7 @@
             // TXT_P_IN_EMP
             // 
             this.TXT_P_IN_EMP.Location = new System.Drawing.Point(175, 494);
-            this.TXT_P_IN_EMP.MaxLength = 1;
+            this.TXT_P_IN_EMP.MaxLength = 10;
             this.TXT_P_IN_EMP.Name = "TXT_P_IN_EMP";
             this.TXT_P_IN_EMP.Size = new System.Drawing.Size(80, 22);
             this.TXT_P_IN_EMP.TabIndex = 621;
