@@ -32,17 +32,17 @@ using CommonClass;
 //-- System Name       宽厚板轧钢作业
 //-- Sub_System Name   轧辊管理
 //-- Program Name      轧辊使用实绩查询及修改界面_CGF2060C
-//-- Program ID        CGF2020C
+//-- Program ID        CGF2060C
 //-- Document No       Q-00-0010(Specification)
 //-- Designer          韩超
 //-- Coder             韩超
-//-- Date              2017.08.10
+//-- Date              2017.08.11
 //-- Description
 //-------------------------------------------------------------------------------
 //-- UPDATE HISTORY  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //-------------------------------------------------------------------------------
 //-- VER       DATE          EDITOR       DESCRIPTION
-//-- 1.00    2017.07.31       韩超        轧辊使用实绩查询及修改界面_CGF2060C
+//-- 1.00    2017.08.11       韩超        轧辊使用实绩查询及修改界面_CGF2060C
 //-------------------------------------------------------------------------------
 //-- DECLARATION     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //-------------------------------------------------------------------------------
@@ -94,8 +94,6 @@ namespace CG
             p_SetMc("", TXT_ROLL_MAKER, "RL", "", "", "", "", imcseq); //22
             p_SetMc("", TXT_MAKER_NO, "RL", "", "", "", "", imcseq); //23
             p_SetMc("", SDB_TOT_ROLL_CNT, "RL", "", "", "", "", imcseq); //24
-            
-           
 
 
             p_McIni(Mc2, true);
@@ -107,6 +105,9 @@ namespace CG
             p_SetMc("", TXT_ROLL_MAKER, "R", "", "", "", "", imcseq); //0
             p_SetMc("", TXT_MAKER_NO, "R", "", "", "", "", imcseq); //0
 
+            p_McIni(Mc3, false);
+            imcseq = 3;
+            p_SetMc("轧辊号", CBO_ROLL_ID, "PN", "", "", "", "", imcseq); //0
             p_ScIni(ss1, Sc1, 0, false, true);
             int iscseq;
             int iheadrow;
@@ -118,31 +119,37 @@ namespace CG
             p_SetSc("结束使用时间", "DT", "", "L", "", "", "", iscseq, iheadrow, "M"); //2
             p_SetSc("使用持续时间", "E", "60", "L", "", "", "", iscseq, iheadrow, "R"); //3
             p_SetSc("辊身直径", "N", "10,3", "L", "", "", "", iscseq, iheadrow, "R"); //4
-            p_SetSc("辊颈直径", "E", "10,3", "L", "", "", "", iscseq, iheadrow, "R"); //5
+            p_SetSc("辊颈直径", "N", "10,3", "L", "", "", "", iscseq, iheadrow, "R"); //5
             p_SetSc("轧制重量", "E", "60", "L", "", "", "", iscseq, iheadrow, "R"); //6
             p_SetSc("轧制板坯数", "E", "60", "L", "", "", "", iscseq, iheadrow, "R"); //7
             p_SetSc("轧制公里数", "E", "60", "L", "", "", "", iscseq, iheadrow, "R"); //8
             p_SetSc("轧辊凸度", "E", "60", "L", "", "", "", iscseq, iheadrow, "R"); //9
             p_SetSc("配辊号", "E", "60", "L", "", "", "", iscseq, iheadrow, "R"); //10
-           
+
 
         }
 
         private void CBO_ROLL_ID_Chg()
         {
+            string SMESG;
+            if (CBO_ROLL_ID.Text.Trim().Length > 7)
+            {
+                SMESG = "轧辊号长度不能超过7位，请确认轧辊号 ！！！";
+                GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "提示");
+                return;
+            }
             if (CBO_ROLL_ID.Text.Trim().Length == 7)
             {
                 p_Ref(2, 0, true, true);
             }
             else
             {
-                TXT_ROLL_MAKER.Text = "";
+                CBO_PIAR_ROLL_ID.Text = "";
                 TXT_ROLL_MATERIAL.Text = "";
                 TXT_MAKER_NO.Text = "";
-                SDB_ROLL_CROWN_LAST.Text = "";
-                SDB_AFT_GRID_DIA_LAST.Text = "";
-                TXT_ROLL_QX_LAST.Text = "";
+                TXT_ROLL_MAKER.Text = "";
             }
+
         }
 
         private void CBO_ROLL_ID_Clk()
@@ -151,89 +158,29 @@ namespace CG
             {
                 p_Ref(2, 0, true, true);
             }
-        }
-
-        private void chk_c_Click()
-        {
-            if (!chk_c.Checked)
+            else
             {
-                if (!chk_w.Checked && !chk_d.Checked)
-                {
-                    //  CHK_T_T_PART.Value = ssCBChecked
-                    TXT_GRID_POS.Text = " ";
-                }
-                return;
+                CBO_PIAR_ROLL_ID.Text = "";
+                TXT_ROLL_MATERIAL.Text = "";
+                TXT_MAKER_NO.Text = "";
+                TXT_ROLL_MAKER.Text = "";
             }
-
-            TXT_GRID_POS.Text = "C";
-
-            chk_c.ForeColor = Color.Red;
-            chk_c.Checked = true;
-
-            chk_w.ForeColor = Color.Black;
-            chk_w.Checked = false;
-            chk_d.ForeColor = Color.Black;
-            chk_d.Checked = false;
-        }
-
-        private void chk_d_Click()
-        {
-            if (!chk_d.Checked)
-            {
-                if (!chk_w.Checked && !chk_c.Checked)
-                {
-                    //  CHK_T_T_PART.Value = ssCBChecked
-                    TXT_GRID_POS.Text = " ";
-                }
-                return;
-            }
-
-            TXT_GRID_POS.Text = "D";
-
-            chk_d.ForeColor = Color.Red;
-            chk_d.Checked = true;
-
-            chk_w.ForeColor = Color.Black;
-            chk_w.Checked = false;
-            chk_c.ForeColor = Color.Black;
-            chk_c.Checked = false;
-        }
-
-        private void chk_w_Click()
-        {
-            if (!chk_w.Checked)
-            {
-                if (!chk_c.Checked&&!chk_d.Checked)
-                {
-                    //  CHK_T_T_PART.Value = ssCBChecked
-                    TXT_GRID_POS.Text = " ";
-                }
-                return;
-            }
-
-            TXT_GRID_POS.Text = "W";
-
-            chk_w.ForeColor = Color.Red;
-            chk_w.Checked = true;
-
-            chk_c.ForeColor = Color.Black;
-            chk_c.Checked = false;
-            chk_d.ForeColor = Color.Black;
-            chk_d.Checked = false;
         }
 
         public void Form_Load(object sender, System.EventArgs e)
         {
-            base.sSvrPgmPkgName = "CGF2030NC";
+            base.sSvrPgmPkgName = "CGF2060NC";
             Form_Define();
             TXT_UPD_EMP.Text = GeneralCommon.sUserID;
             CBO_PLT.Text = "C3";
+            sQuery_load = "SELECT ROLL_NO FROM GP_ROLL3 WHERE ROLL_STATUS <> 'DL' ORDER BY SUBSTR(ROLL_NO,1,1) DESC, SUBSTR(ROLL_NO,6,2)  ";
 
             GeneralCommon.Gf_ComboAdd(CBO_ROLL_ID, sQuery_load);
-            GeneralCommon.Gf_ComboAdd(CBO_EMP2, "SELECT EMP_ID  FROM ZP_EMPLOYEE WHERE EMP_ID LIKE '1ZBR%' ");
-            GeneralCommon.Gf_ComboAdd(CBO_EMP3, "SELECT EMP_ID  FROM ZP_EMPLOYEE WHERE EMP_ID LIKE '1ZBR%' ");
-            GeneralCommon.Gf_ComboAdd(CBO_EMP4, "SELECT EMP_ID  FROM ZP_EMPLOYEE WHERE EMP_ID LIKE '1ZBR%' ");
-          
+            GeneralCommon.Gf_ComboAdd(CBO_PIAR_ROLL_ID, sQuery_load);
+
+            CBO_ROLL_ID.Enabled = true;
+
+
         }
 
         public override bool Form_Cls()
@@ -249,71 +196,39 @@ namespace CG
 
         public override void Form_Ref()
         {
-            if (p_Ref(1, 0, true, true))
-            {
-                p_Ref(3, 1, true, true);
-            }
+            p_Ref(1, 0, true, true);
+            p_Ref(3, 1, true, true);
+            TXT_UPD_EMP.Text = GeneralCommon.sUserID;
+
         }
 
         public override void Form_Pro()
         {
             string SMESG;
-            bool mResult;
-
             TXT_UPD_EMP.Text = GeneralCommon.sUserID;
-
-            if (!Gp_DateCheck(TXT_GRID_STA_TIME.Text,""))
+            if (!Gp_DateCheck(TXT_MILL_STA_TIME.Text, ""))
             {
-                SMESG = " 请正确输入磨削开始时间 ！";
+                SMESG = " 请正确输入开始使用时间 ！";
                 GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "提示");
                 return;
             }
 
-            if (TXT_GRID_STA_TIME.Text != "    -  -     :  :" & TXT_GRID_END_TIME.Text != "    -  -     :  :")
+            if (TXT_MILL_STA_TIME.Text != "    -  -     :  :" & TXT_MILL_END_TIME.Text != "    -  -     :  :")
             {
-                if (!Gp_DateCheck(TXT_GRID_END_TIME.Text,""))
+                if (!Gp_DateCheck(TXT_MILL_END_TIME.Text, ""))
                 {
-                    SMESG = " 请正确输入磨削结束时间 ！";
+                    SMESG = " 请正确输入结束使用时间 ！";
                     GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "提示");
                     return;
                 }
-                if (convertX(TXT_GRID_STA_TIME.Text.Replace("-", "").Replace(" ", "").Replace(":", "")) - convertX(TXT_GRID_END_TIME.Text.Replace("-", "").Replace(" ", "").Replace(":", "")) > 0)
+                if (convertX(TXT_MILL_STA_TIME.Text.Replace("-", "").Replace(" ", "").Replace(":", "")) - convertX(TXT_MILL_END_TIME.Text.Replace("-", "").Replace(" ", "").Replace(":", "")) > 0)
                 {
-                    SMESG = " 磨削结束时间应大于磨削开始时间，请正确输入时间信息 ！";
+                    SMESG = " 结束使用时间应大于开始使用时间，请正确输入时间信息 ！";
                     GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "提示");
                     return;
                 }
             }
-
-            ///ADDED BY GUOLI AT 20090401201200 FOR 杨海涛''''''''
-            if (CBO_ROLL_ID.Enabled == true)
-            {
-                SMESG = "请您确定是否保存";
-                mResult = GeneralCommon.Gf_MessConfirm(SMESG, "I", "提示");
-                if (!mResult)
-                {
-                    return;
-                }
-            }
-            else if (CBO_ROLL_ID.Enabled == false)
-            {
-                SMESG = "请您确定是修改内容还是第二次保存内容，若是第二次保存相同内容，将影响ERP计算轧辊辊耗成本，系统将记住您的操作并考核";
-                mResult = GeneralCommon.Gf_MessConfirm(SMESG, "I", "提示");
-                if (!mResult)
-                {
-                    return;
-                }
-            }
-            ///'''''''''''''''''''''''''''''''''''''''''''''''''''
-
-            if (p_Pro(1, 0, true, true))
-            {
-                Form_Ref();
-            }
-            else
-            {
-                return;
-            }
+            p_Pro(1, 0, true, true);
         }
 
         public override void Form_Del()
@@ -628,27 +543,6 @@ namespace CG
         {
             CBO_ROLL_ID_Chg();
         }
-
-        private void chk_c_CheckedChanged(object sender, EventArgs e)
-        {
-            chk_c_Click();
-        }
-
-        private void chk_d_CheckedChanged(object sender, EventArgs e)
-        {
-            chk_d_Click();
-        }
-
-        private void chk_w_CheckedChanged(object sender, EventArgs e)
-        {
-            chk_w_Click();
-        }
-
-
-
-
-
-
 
     }
 }
