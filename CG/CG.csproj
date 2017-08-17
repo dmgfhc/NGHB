@@ -279,6 +279,12 @@
     <Compile Include="CGB\CGB2010C.Designer.cs">
       <DependentUpon>CGB2010C.cs</DependentUpon>
     </Compile>
+    <Compile Include="CGB\WGB1050C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CGB\WGB1050C.Designer.cs">
+      <DependentUpon>WGB1050C.cs</DependentUpon>
+    </Compile>
     <Compile Include="CGC\AGC2051C.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -537,6 +543,12 @@
     <Compile Include="CGF\CGF2090C.Designer.cs">
       <DependentUpon>CGF2090C.cs</DependentUpon>
     </Compile>
+    <Compile Include="CGG\CGG2040C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CGG\CGG2040C.Designer.cs">
+      <DependentUpon>CGG2040C.cs</DependentUpon>
+    </Compile>
     <Compile Include="CGZ\CGZ2031C.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -578,12 +590,6 @@
     </Compile>
     <Compile Include="CGB\WGB1040C.Designer.cs">
       <DependentUpon>WGB1040C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGB\WGB1050C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGB\WGB1050C.Designer.cs">
-      <DependentUpon>WGB1050C.cs</DependentUpon>
     </Compile>
     <Compile Include="CGB\WGB1060C.cs">
       <SubType>Form</SubType>
@@ -908,6 +914,9 @@
     <EmbeddedResource Include="CGB\CGB2010C.resx">
       <DependentUpon>CGB2010C.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CGB\WGB1050C.resx">
+      <DependentUpon>WGB1050C.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CGC\AGC2051C.resx">
       <DependentUpon>AGC2051C.cs</DependentUpon>
     </EmbeddedResource>
@@ -1037,6 +1046,9 @@
     <EmbeddedResource Include="CGF\CGF2090C.resx">
       <DependentUpon>CGF2090C.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CGG\CGG2040C.resx">
+      <DependentUpon>CGG2040C.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CGZ\CGZ2031C.resx">
       <DependentUpon>CGZ2031C.cs</DependentUpon>
     </EmbeddedResource>
@@ -1058,9 +1070,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CGB\WGB1040C.resx">
       <DependentUpon>WGB1040C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGB\WGB1050C.resx">
-      <DependentUpon>WGB1050C.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CGB\WGB1060C.resx">
       <DependentUpon>WGB1060C.cs</DependentUpon>

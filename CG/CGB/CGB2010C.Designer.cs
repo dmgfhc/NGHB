@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            CommonClass.BControlFiledSetting bControlFiledSetting5 = new CommonClass.BControlFiledSetting();
-            CommonClass.BControlFiledSetting bControlFiledSetting6 = new CommonClass.BControlFiledSetting();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CGB2010C));
             CommonClass.BControlFiledSetting bControlFiledSetting1 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting2 = new CommonClass.BControlFiledSetting();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CGB2010C));
+            CommonClass.BControlFiledSetting bControlFiledSetting3 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting4 = new CommonClass.BControlFiledSetting();
             this.TXT_REASON_CD = new CommonClass.F4ETCR();
             this.TXT_REASON_NAME = new System.Windows.Forms.TextBox();
             this.TXT_EMP = new CommonClass.F4ETCR();
@@ -140,12 +140,12 @@
             // 
             // TXT_REASON_CD
             // 
-            bControlFiledSetting5.ColumnID = "CD";
-            bControlFiledSetting5.TargetControl = this.TXT_REASON_CD;
-            bControlFiledSetting6.ColumnID = "CD_SHORT_NAME";
-            bControlFiledSetting6.TargetControl = this.TXT_REASON_NAME;
-            this.TXT_REASON_CD.CustomSetting.Add(bControlFiledSetting5);
-            this.TXT_REASON_CD.CustomSetting.Add(bControlFiledSetting6);
+            bControlFiledSetting1.ColumnID = "CD";
+            bControlFiledSetting1.TargetControl = this.TXT_REASON_CD;
+            bControlFiledSetting2.ColumnID = "CD_SHORT_NAME";
+            bControlFiledSetting2.TargetControl = this.TXT_REASON_NAME;
+            this.TXT_REASON_CD.CustomSetting.Add(bControlFiledSetting1);
+            this.TXT_REASON_CD.CustomSetting.Add(bControlFiledSetting2);
             this.TXT_REASON_CD.InputControl = this.TXT_REASON_CD;
             this.TXT_REASON_CD.Location = new System.Drawing.Point(116, 96);
             this.TXT_REASON_CD.Name = "TXT_REASON_CD";
@@ -166,9 +166,9 @@
             // 
             // TXT_EMP
             // 
-            bControlFiledSetting1.ColumnID = "EMP_ID";
-            bControlFiledSetting1.TargetControl = this.TXT_EMP;
-            this.TXT_EMP.CustomSetting.Add(bControlFiledSetting1);
+            bControlFiledSetting3.ColumnID = "EMP_ID";
+            bControlFiledSetting3.TargetControl = this.TXT_EMP;
+            this.TXT_EMP.CustomSetting.Add(bControlFiledSetting3);
             this.TXT_EMP.InputControl = this.TXT_EMP;
             this.TXT_EMP.Location = new System.Drawing.Point(183, 213);
             this.TXT_EMP.Name = "TXT_EMP";
@@ -181,9 +181,9 @@
             // 
             // TXT_REJ_EMP
             // 
-            bControlFiledSetting2.ColumnID = "EMP_ID";
-            bControlFiledSetting2.TargetControl = this.TXT_REJ_EMP;
-            this.TXT_REJ_EMP.CustomSetting.Add(bControlFiledSetting2);
+            bControlFiledSetting4.ColumnID = "EMP_ID";
+            bControlFiledSetting4.TargetControl = this.TXT_REJ_EMP;
+            this.TXT_REJ_EMP.CustomSetting.Add(bControlFiledSetting4);
             this.TXT_REJ_EMP.InputControl = this.TXT_REJ_EMP;
             this.TXT_REJ_EMP.Location = new System.Drawing.Point(182, 208);
             this.TXT_REJ_EMP.Name = "TXT_REJ_EMP";
@@ -285,7 +285,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1024, 403);
+            this.tabControl1.Size = new System.Drawing.Size(1024, 347);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
@@ -297,7 +297,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 23);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1016, 376);
+            this.tabPage1.Size = new System.Drawing.Size(1016, 320);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "装炉等待";
             // 
@@ -309,7 +309,7 @@
             this.ss1.Name = "ss1";
             this.ss1.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
             this.ss1_Sheet1});
-            this.ss1.Size = new System.Drawing.Size(1010, 327);
+            this.ss1.Size = new System.Drawing.Size(1010, 271);
             this.ss1.TabIndex = 4;
             this.ss1.CellClick += new FarPoint.Win.Spread.CellClickEventHandler(this.ss1_CellClick);
             this.ss1.CellDoubleClick += new FarPoint.Win.Spread.CellClickEventHandler(this.ss1_CellDoubleClick);
@@ -1084,12 +1084,12 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(0, 295);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1024, 403);
+            this.panel6.Size = new System.Drawing.Size(1024, 347);
             this.panel6.TabIndex = 496;
             // 
             // CGB2010C
             // 
-            this.ClientSize = new System.Drawing.Size(1024, 698);
+            this.ClientSize = new System.Drawing.Size(1024, 642);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Name = "CGB2010C";
