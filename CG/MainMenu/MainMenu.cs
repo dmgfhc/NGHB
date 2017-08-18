@@ -195,6 +195,8 @@ namespace CG
         private MenuItem CGF2070C;
         private MenuItem CGF2040C;
         private MenuItem CGF2090C;
+        private MenuItem menuItem28;
+        private MenuItem CGG2040C;
         //private MenuItem menuItem4;
         //private MenuItem menuItem7;
 		///'''fdfdsfdsfds
@@ -429,6 +431,7 @@ namespace CG
             this.WGF1070C = new System.Windows.Forms.MenuItem();
             this.WGF1080C = new System.Windows.Forms.MenuItem();
             this.menuItem24 = new System.Windows.Forms.MenuItem();
+            this.CGF2090C = new System.Windows.Forms.MenuItem();
             this.menuItem23 = new System.Windows.Forms.MenuItem();
             this.WGT1010C = new System.Windows.Forms.MenuItem();
             this.WGT1020C = new System.Windows.Forms.MenuItem();
@@ -519,7 +522,8 @@ namespace CG
             this.MenuItem22 = new System.Windows.Forms.MenuItem();
             this.ImageList2 = new System.Windows.Forms.ImageList(this.components);
             this.ImageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.CGF2090C = new System.Windows.Forms.MenuItem();
+            this.menuItem28 = new System.Windows.Forms.MenuItem();
+            this.CGG2040C = new System.Windows.Forms.MenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.StatusBarPanel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatusBarPanel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatusBarPanel3)).BeginInit();
@@ -602,6 +606,7 @@ namespace CG
             this.menuItem10,
             this.menuItem21,
             this.menuItem12,
+            this.menuItem28,
             this.menuItem23,
             this.Mnu_Control,
             this.MenuItem1,
@@ -1247,9 +1252,15 @@ namespace CG
             resources.ApplyResources(this.menuItem24, "menuItem24");
             this.menuItem24.Click += new System.EventHandler(this.menuItem24_Click);
             // 
+            // CGF2090C
+            // 
+            this.CGF2090C.Index = 19;
+            resources.ApplyResources(this.CGF2090C, "CGF2090C");
+            this.CGF2090C.Click += new System.EventHandler(this.CGF2090C_Click);
+            // 
             // menuItem23
             // 
-            this.menuItem23.Index = 5;
+            this.menuItem23.Index = 6;
             this.menuItem23.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.WGT1010C,
             this.WGT1020C,
@@ -1367,7 +1378,7 @@ namespace CG
             // 
             // Mnu_Control
             // 
-            this.Mnu_Control.Index = 6;
+            this.Mnu_Control.Index = 7;
             this.Mnu_Control.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.Mnu_Clear,
             this.Mnu_Refer,
@@ -1523,7 +1534,7 @@ namespace CG
             // 
             // MenuItem1
             // 
-            this.MenuItem1.Index = 7;
+            this.MenuItem1.Index = 8;
             this.MenuItem1.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.MenuItem17,
             this.MenuItem2,
@@ -1553,7 +1564,7 @@ namespace CG
             // 
             // Mnu_Windows
             // 
-            this.Mnu_Windows.Index = 8;
+            this.Mnu_Windows.Index = 9;
             this.Mnu_Windows.MdiList = true;
             this.Mnu_Windows.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.Mnu_Horiz,
@@ -1840,11 +1851,18 @@ namespace CG
             this.ImageList1.Images.SetKeyName(10, "M11_1.gif");
             this.ImageList1.Images.SetKeyName(11, "M12_1.gif");
             // 
-            // CGF2090C
+            // menuItem28
             // 
-            this.CGF2090C.Index = 19;
-            resources.ApplyResources(this.CGF2090C, "CGF2090C");
-            this.CGF2090C.Click += new System.EventHandler(this.CGF2090C_Click);
+            this.menuItem28.Index = 5;
+            this.menuItem28.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.CGG2040C});
+            resources.ApplyResources(this.menuItem28, "menuItem28");
+            // 
+            // CGG2040C
+            // 
+            this.CGG2040C.Index = 0;
+            resources.ApplyResources(this.CGG2040C, "CGG2040C");
+            this.CGG2040C.Click += new System.EventHandler(this.CGG2040C_Click);
             // 
             // MainMenu
             // 
@@ -3766,6 +3784,17 @@ namespace CG
                 CGF2090C.WindowState = FormWindowState.Maximized;
             }
 
+        }
+
+        private void CGG2040C_Click(object sender, EventArgs e)
+        {
+            if (!GeneralCommon.Gf_IsFormLoad("CGG2040C"))
+            {
+                CGG2040C CGG2040C = new CGG2040C();
+                CGG2040C.MdiParent = this;
+                CGG2040C.Show();
+                CGG2040C.WindowState = FormWindowState.Maximized;
+            }
         }
      
     }

@@ -617,8 +617,6 @@ namespace CG
                 {
                     GeneralCommon.Gp_MsgBoxDisplay(ex.ToString(), "W", "警告");
                 }
-
-
             }
 
             private void button3_Click(object sender, EventArgs e)
@@ -639,9 +637,6 @@ namespace CG
                 {
                     GeneralCommon.Gp_MsgBoxDisplay(ex.ToString(), "W", "警告");
                 }
-
-
-
             }
 
 
