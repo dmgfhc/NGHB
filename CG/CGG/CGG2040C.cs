@@ -24,21 +24,21 @@ using CommonClass;
 ///-------------------------------------------------------------------------------
 ///-- 程序头注释 ++++++++++++++++++++++++++++++++++++++++++++++++++++++  
 ///-------------------------------------------------------------------------------
-///-- 系统名            宽厚板轧钢作业管理系统                                              
+///-- 系统名            中板轧钢作业管理系统                                              
 ///-- 子系统名          轧钢作业管理                                                 
-///-- 程序名            冷床实绩管理界面                                
-///-- 程序ID            WGB1050C    
+///-- 程序名            轧钢计划查询界面_CGG2040C                                
+///-- 程序ID            _CGG2040C    
 ///-- 版本              1.1                                                   
 ///-- 文档号                                                         
-///-- 设计              李骞                                                    
-///-- 代码              李骞                                                     
-///-- 代码日期          2013.01.06                                                
-///-- 处理描述          冷床实绩管理界面                                                                         
+///-- 设计              韩超                                                    
+///-- 代码              韩超                                                     
+///-- 代码日期          2017.08.16                                                
+///-- 处理描述          轧钢计划查询界面_CGG2040C                                                                         
 ///-------------------------------------------------------------------------------
 ///-- 更新历史  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++     
 ///-------------------------------------------------------------------------------
 ///-- 版本      日期              修改人         修改内容                             
-///   1.1       2013.01.06        李骞                                                                                                                          
+///   1.1       2017.08.16        韩超                                                                                                                          
 ///-------------------------------------------------------------------------------
 ///-- 程序头注释结束++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ///-------------------------------------------------------------------------------
@@ -53,14 +53,10 @@ namespace CG
         }
         Collection Mc1 = new Collection();
         Collection Mc2 = new Collection();
+        Collection Mc3 = new Collection();
         Collection Sc1 = new Collection();
         Collection Sc2 = new Collection();
-
-        public const int iSs1_Slab_No = 0;  //SS1物料号
-        public const int iSs2_Slab_No = 0;  //SS2物料号
-        public const int iSs2_Bed_Fl = 4;  //SS2物料号
-
-        #region 界面初始化
+        Collection Sc3 = new Collection();
 
         protected override void p_SubFormInit()
         {
@@ -68,82 +64,123 @@ namespace CG
             int imcseq;
             p_McIni(Mc1, false);
             imcseq = 1;
-            p_SetMc("物料号", txt_mill_no, "P", "", "", "", "", imcseq);
-            p_SetMc("轧制日期", udt_prod_date, "P", "", "", "", "", imcseq);
-            p_SetMc("班次", cbo_shift, "P", "", "", "", "", imcseq);
-            p_SetMc("冷床", txt_bed_fl, "P", "", "", "", "", imcseq);
+            p_SetMc("起始板坯号", TXT_SLAB_NO, "P", "", "", "", "", imcseq);
 
-            p_McIni(Mc2, true);
+
+            p_McIni(Mc2, false);
             imcseq = 2;
-            p_SetMc("物料号", txt_mill_no, "PNIR", "", "", "", "", imcseq);
-            p_SetMc("冷床", txt_bed_fl, "PNIR", "", "", "", "", imcseq);
-            p_SetMc("冷床代码", txt_bed_cd, "PNI", "", "", "", "", imcseq);
-            p_SetMc("上/下冷床时间", mdt_cb_time, "NIR", "", "", "", "", imcseq);
-            p_SetMc("上/下冷床温度", sdb_cb_temp, "IR", "", "", "", "", imcseq);
-            p_SetMc("作业人员", txt_emp_cd, "NIR", "", "", "", "", imcseq);
+            p_SetMc("查询日期", udFmDate, "P", "", "", "", "", imcseq);
+            p_SetMc("查询日期", udToDate, "P", "", "", "", "", imcseq);
+
+            p_McIni(Mc3, false);
+            imcseq = 3;
+            p_SetMc("查询日期", udFmDate2, "P", "", "", "", "", imcseq);
+            p_SetMc("查询日期", udToDate2, "P", "", "", "", "", imcseq);
+            p_SetMc("是否切割完成", CBO_CUTYN, "P", "", "", "", "", imcseq);
 
             int iheadrow;
             int iscseq;
-            p_ScIni(ss1, Sc1, 0, true, true);
+            p_ScIni(ss1, Sc1, 0, false, true);
             iheadrow = 0;
             iscseq = 1;
-            //0-6
-            p_SetSc("物料号", "E", "12", "P", "", "", "", iscseq, iheadrow);
-            p_SetSc("厚度", "N", "6,2", "L", "", "", "", iscseq, iheadrow);
-            p_SetSc("宽度", "N", "6", "L", "", "", "", iscseq, iheadrow);
-            p_SetSc("长度", "N", "8,1", "L", "", "", "", iscseq, iheadrow);
-            p_SetSc("重量", "N", "15,3", "L", "", "", "", iscseq, iheadrow);
-            p_SetSc("钢板数量", "N", "3", "L", "", "", "", iscseq, iheadrow);
-            //6-7
-            p_SetSc("生产日期", "DT", "19", "L", "", "", "", iscseq, iheadrow);
-            p_SetSc("班次", "E", "1", "L", "", "", "", iscseq, iheadrow,"M");
 
-            p_ScIni(ss2, Sc2, 0, true, true);
+            p_SetSc("板坯号", "E", "60", "L", "", "", "", iscseq, iheadrow,"L");//0
+            p_SetSc("轧批号", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//1
+            p_SetSc("轧制钢种", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//2
+            p_SetSc("订单标准", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//3
+            p_SetSc("断面排钢", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//4
+            p_SetSc("轧制方式", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//5
+            p_SetSc("坯厚", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//6
+            p_SetSc("坯宽", "N", "10", "L", "", "", "", iscseq, iheadrow, "R");//7
+            p_SetSc("坯长", "N", "10", "L", "", "", "", iscseq, iheadrow, "R");//8
+            p_SetSc("坯实重", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "R");//9
+            p_SetSc("坯料堆放位置", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//10
+            p_SetSc("成品厚度", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//11
+            p_SetSc("成品宽度", "E", "10", "L", "", "", "", iscseq, iheadrow, "R");//12
+            p_SetSc("成品长度", "E", "10", "L", "", "", "", iscseq, iheadrow, "R");//13
+            p_SetSc("分段剪", "E", "50", "L", "", "", "", iscseq, iheadrow, "L");//14
+            p_SetSc("子板块数", "N", "10", "L", "", "", "", iscseq, iheadrow, "M");//15
+            p_SetSc("厚度公差上限", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//16
+            p_SetSc("厚度公差下限", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R");//17
+            p_SetSc("定尺区分", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//18
+            p_SetSc("是否控轧", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//19
+            p_SetSc("是否切边", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//20
+            p_SetSc("探伤区分", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//21
+            p_SetSc("取样号", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//22
+            p_SetSc("备注", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//23
+            p_SetSc("INS_DATE", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//24
+
+
+            p_ScIni(ss2, Sc2, 0, false, true);
             iheadrow = 1;
             iscseq = 2;
-            //0-5
-            p_SetSc("物料号", "E", "12", "L", "", "", "", iscseq, iheadrow);            
-            p_SetSc("厚度", "N", "6,2", "L", "", "", "", iscseq, iheadrow);
-            p_SetSc("宽度", "N", "6", "L", "", "", "", iscseq, iheadrow);
-            p_SetSc("长度", "N", "8,1", "L", "", "", "", iscseq, iheadrow);
-            p_SetSc("冷床", "E", "10", "L", "", "", "", iscseq, iheadrow,"M");
-            p_SetSc("时间", "DT", "19", "L", "", "", "", iscseq, iheadrow);
-            //6-8
-            p_SetSc("温度", "N", "4", "L", "", "", "", iscseq, iheadrow);
-            p_SetSc("班次", "E", "1", "L", "", "", "", iscseq, iheadrow,"M");
-            p_SetSc("作业人员", "E", "7", "L", "", "", "", iscseq, iheadrow);
+            p_SetSc("计划日期", "E", "50", "L", "", "", "", iscseq, iheadrow, "L");//0  
+            p_SetSc("序列", "E", "14", "L", "", "", "", iscseq, iheadrow, "L");//1
+            p_SetSc("钢种名称", "E", "30", "L", "", "", "", iscseq, iheadrow, "L");//2
+            p_SetSc("厚度", "N", "10", "L", "", "", "", iscseq, iheadrow, "R");//3
+            p_SetSc("宽度", "N", "10", "L", "", "", "", iscseq, iheadrow, "R");//4
+            p_SetSc("长度", "N", "10", "L", "", "", "", iscseq, iheadrow, "R");//5  
+            p_SetSc("H/C", "E", "1", "L", "", "", "", iscseq, iheadrow, "M");//6
+            p_SetSc("块数", "N", "4", "L", "", "", "", iscseq, iheadrow, "R");//7
+            p_SetSc("板坯重量", "N", "10,3", "L", "", "", "", iscseq, iheadrow, "R");//8
+            p_SetSc("订单号", "E", "20", "L", "", "", "", iscseq, iheadrow, "L");//9
+            p_SetSc("序列", "E", "10", "L", "", "", "", iscseq, iheadrow, "M");//10
+            p_SetSc("代码", "E", "6", "L", "", "", "", iscseq, iheadrow, "M");//11
+            p_SetSc("名称", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//12
+            p_SetSc("标准号", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//13
+            p_SetSc("厚度", "N", "4,2", "L", "", "", "", iscseq, iheadrow, "R");//14
+            p_SetSc("宽度", "E", "4", "L", "", "", "", iscseq, iheadrow, "R");//15 
+            p_SetSc("长度", "E", "4", "L", "", "", "", iscseq, iheadrow, "R");//16
+            p_SetSc("探伤", "E", "10", "L", "", "", "", iscseq, iheadrow, "M");//17
+            p_SetSc("热处理", "E", "10", "L", "", "", "", iscseq, iheadrow, "M");//18
+            p_SetSc("备注", "E", "500", "L", "", "", "", iscseq, iheadrow, "L");//19
+            p_SetSc("编辑人员", "E", "10", "L", "", "", "", iscseq, iheadrow, "L");//20  
+            p_SetSc("计划时间", "D", "", "L", "", "", "", iscseq, iheadrow, "M");//21
+
             iheadrow = 0;
-            p_spanSpread("上冷床", 5, 8, iscseq, iheadrow, 1);
+            p_spanSpread("板坯", 3, 5, iscseq, iheadrow, 1);
+            p_spanSpread("客户", 11, 12, iscseq, iheadrow, 1);
+            p_spanSpread("产品", 14, 16, iscseq, iheadrow, 1);
 
+            p_ScIni(ss3, Sc3, 0, false, true);
+            iheadrow = 1;
+            iscseq = 3;
+            p_SetSc("计划日期", "E", "50", "L", "", "", "", iscseq, iheadrow, "L");//0
+            p_SetSc("序列", "E", "14", "L", "", "", "", iscseq, iheadrow, "L");//0
+            p_SetSc("订单号", "E", "30", "L", "", "", "", iscseq, iheadrow, "L");//0
+            p_SetSc("序列", "E", "20", "L", "", "", "", iscseq, iheadrow, "M");//0
+            p_SetSc("钢种/标准", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//0
+            p_SetSc("厚度", "N", "10,1", "L", "", "", "", iscseq, iheadrow, "R");//0
+            p_SetSc("宽度", "N", "10", "L", "", "", "", iscseq, iheadrow, "R");//0
+            p_SetSc("长度", "N", "10", "L", "", "", "", iscseq, iheadrow, "R");//0
+            p_SetSc("计划", "N", "10", "L", "", "", "", iscseq, iheadrow, "M");//0
+            p_SetSc("实绩", "N", "10", "L", "", "", "", iscseq, iheadrow, "M");//0
+            p_SetSc("剩余", "N", "10", "L", "", "", "", iscseq, iheadrow, "M");//0
+            p_SetSc("厚度", "N", "10,1", "L", "", "", "", iscseq, iheadrow, "R");//0
+            p_SetSc("宽度", "N", "10", "L", "", "", "", iscseq, iheadrow, "R");//0
+            p_SetSc("长度", "N", "10", "L", "", "", "", iscseq, iheadrow, "R");//0
+            p_SetSc("倍尺", "N", "10", "L", "", "", "", iscseq, iheadrow, "M");//0
+            p_SetSc("备注", "E", "500", "L", "", "", "", iscseq, iheadrow, "L");//0
+            p_SetSc("编辑人员", "E", "10", "L", "", "", "", iscseq, iheadrow, "L");//0
+            p_SetSc("编辑时间", "DT", "", "L", "", "", "", iscseq, iheadrow, "M");//0
+            p_SetSc("切割人员", "E", "10", "L", "", "", "", iscseq, iheadrow, "L");//0
+            p_SetSc("切割时间", "DT", "", "L", "", "", "", iscseq, iheadrow, "M");//0
+
+
+
+            iheadrow = 0;
+            p_spanSpread("板坯", 5, 7, iscseq, iheadrow, 1);
+            p_spanSpread("切割块数", 8, 10, iscseq, iheadrow, 1);
+            p_spanSpread("产品", 11, 14, iscseq, iheadrow, 1);
         }
-        private void WGB1050C_Load(object sender, EventArgs e)
+
+        private void CGG2040C_Load(object sender, EventArgs e)
         {
-            //base.sSvrPgmPkgName = "PKG_LIQIAN_TEST";
+            base.sSvrPgmPkgName = "CGG2040NC";
             Form_Define();
-         //   base.sAuthority = "1111";
-            base.i_ScCurrSeq = 1;
-            txt_bed_cd.Text = "1";
         }
-        #endregion
+        
 
-        // 分别点选上/下冷床操作
-        private void tab_bed_cd_Selected(object sender, TabControlEventArgs e)
-        {
-            if (e.TabPage == tabPage1)
-            {
-                base.i_ScCurrSeq = 1;
-                txt_bed_cd.Text = "1";
-                lab_bed_time.Text = "上冷床时间";
-                lab_bed_temp.Text = "上冷床温度";
-            }
-            else
-            {
-                base.i_ScCurrSeq = 2;
-                txt_bed_cd.Text = "2";
-                lab_bed_time.Text = "下冷床时间";
-                lab_bed_temp.Text = "下冷床温度";
-            }
-        }
 
         // 重写查询
         public override void Form_Ref()
@@ -167,28 +204,8 @@ namespace CG
             p_Pro(2, 0, true, false);
         }
 
-        private void listb_bed_fl_Click(object sender, EventArgs e)
-        {
-            txt_bed_fl.Text = Convert.ToString(listb_bed_fl.SelectedItem).Substring(0, 1);
-        }
 
-        private void ss1_CellClick(object sender, CellClickEventArgs e)
-        {
-            if (ss1.ActiveSheet.RowCount == 0)
-            {
-                return;
-            }
-            txt_mill_no.Text = ss1.ActiveSheet.Cells[e.Row, iSs1_Slab_No].Text;
-        }
 
-        private void ss2_CellClick(object sender, CellClickEventArgs e)
-        {
-            if (ss2.ActiveSheet.RowCount == 0)
-            {
-                return;
-            }
-            txt_bed_fl.Text = ss2.ActiveSheet.Cells[e.Row, iSs2_Bed_Fl].Text;
-            txt_mill_no.Text = ss2.ActiveSheet.Cells[e.Row, iSs2_Slab_No].Text;
-        }
+      
     }
 }
