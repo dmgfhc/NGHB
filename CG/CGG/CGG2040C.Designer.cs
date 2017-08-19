@@ -228,6 +228,7 @@
             this.SCmd2.TabIndex = 587;
             this.SCmd2.Text = "上传计划";
             this.SCmd2.UseVisualStyleBackColor = true;
+            this.SCmd2.Click += new System.EventHandler(this.SCmd2_Click);
             // 
             // udToDate
             // 
@@ -346,6 +347,7 @@
             this.SCmd3.TabIndex = 592;
             this.SCmd3.Text = "上传计划";
             this.SCmd3.UseVisualStyleBackColor = true;
+            this.SCmd3.Click += new System.EventHandler(this.SCmd3_Click);
             // 
             // CBO_CUTYN
             // 

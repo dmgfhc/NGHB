@@ -145,12 +145,15 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>D:\Program Files\GrapeCity\Spread.WinForms.5.dotNet35\v5.0.3522\Bin\policy.5.0.FarPoint.Win.Spread.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CGA\CGA2010C.cs">
@@ -548,6 +551,12 @@
     </Compile>
     <Compile Include="CGG\CGG2040C.Designer.cs">
       <DependentUpon>CGG2040C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CGG\LoadExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CGG\LoadExcel.Designer.cs">
+      <DependentUpon>LoadExcel.cs</DependentUpon>
     </Compile>
     <Compile Include="CGZ\CGZ2031C.cs">
       <SubType>Form</SubType>
@@ -1049,6 +1058,9 @@
     <EmbeddedResource Include="CGG\CGG2040C.resx">
       <DependentUpon>CGG2040C.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CGG\LoadExcel.resx">
+      <DependentUpon>LoadExcel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CGZ\CGZ2031C.resx">
       <DependentUpon>CGZ2031C.cs</DependentUpon>
     </EmbeddedResource>
@@ -1263,7 +1275,6 @@
       <Name>CommonClass</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

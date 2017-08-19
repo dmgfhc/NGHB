@@ -690,6 +690,28 @@ namespace CG
 
         #endregion
 
+        private void SCmd2_Click(object sender, EventArgs e)
+        {
+            if (!GeneralCommon.Gf_IsFormLoad("LoadExcel"))
+            {
+                LoadExcel LoadExcel = new LoadExcel();
+                LoadExcel.MdiParent = GeneralCommon.MDIMain;
+                LoadExcel.Show();
+                LoadExcel.WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void SCmd3_Click(object sender, EventArgs e)
+        {
+            if (!GeneralCommon.Gf_IsFormLoad("LoadExcel"))
+            {
+                LoadExcel LoadExcel = new LoadExcel();
+                LoadExcel.MdiParent = GeneralCommon.MDIMain;
+                LoadExcel.Show();
+                LoadExcel.WindowState = FormWindowState.Normal;
+            }
+        }
+
       
     }
 }

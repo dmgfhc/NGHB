@@ -251,3 +251,4 @@ C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGF2070C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGF2040C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGF2090C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGG2040C.resources
+C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.LoadExcel.resources

@@ -1158,6 +1158,30 @@
             使用代码编辑器修改此方法的内容。
             </summary>
         </member>
+        <member name="M:CG.LoadExcel.openFile_Click(System.Object,System.EventArgs)">
+            <summary>
+            打开选择EXCEL
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:CG.LoadExcel.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:CG.LoadExcel.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:CG.LoadExcel.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
         <member name="F:CG.CGZ2031C.components">
             <summary>
             必需的设计器变量。
