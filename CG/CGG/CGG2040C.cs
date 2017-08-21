@@ -73,7 +73,7 @@ namespace CG
 
         protected override void p_SubFormInit()
         {
- 
+
             int imcseq;
             p_McIni(Mc1, false);
             imcseq = 1;
@@ -97,7 +97,7 @@ namespace CG
             iheadrow = 0;
             iscseq = 1;
 
-            p_SetSc("板坯号", "E", "60", "L", "", "", "", iscseq, iheadrow,"L");//0
+            p_SetSc("板坯号", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//0
             p_SetSc("轧批号", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//1
             p_SetSc("轧制钢种", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//2
             p_SetSc("订单标准", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//3
@@ -190,7 +190,7 @@ namespace CG
             base.sSvrPgmPkgName = "CGG2040NC";
             Form_Define();
         }
-        
+
 
 
         // 重写查询
@@ -229,8 +229,8 @@ namespace CG
                     break;
                 case 2:
                     p_Pro(0
-                        
-                        
+
+
                         , 3, true, true);
                     SS3_Format();
                     break;
@@ -289,7 +289,7 @@ namespace CG
 
         //EXCEL功能实现
 
-        private void ExcelPrn(string Ex_File_Name,FpSpread e)
+        private void ExcelPrn(string Ex_File_Name, FpSpread e)
         {
             try
             {
@@ -357,7 +357,7 @@ namespace CG
 
         public override void Spread_Exc()
         {
-            ExcelPrn("CGG2040C",ss1);
+            ExcelPrn("CGG2040C", ss1);
         }
 
         # region 公共方法
@@ -712,6 +712,34 @@ namespace CG
             }
         }
 
-      
+        private void Cmd_Edit_Click(object sender, EventArgs e)
+        {
+            if (!GeneralCommon.Gf_MessConfirm("您确定要更新轧钢作业计划数据吗？", "Q", "更新数据"))
+            {
+                return;
+            }
+
+            string[] Para1 = new string[1];
+
+            Para1[0] = "C3";
+
+
+            //在这里调用Gf_ExecProcedure这个函数要特别注意后台包传出值得问题，后台包out必须传出两项，负责会报错，因为在该函数中，默认接受两个值。
+            // P_RTN_CODE            OUT   NUMBER,
+            //P_RTN_MSG             OUT   VARCHAR2
+            //根据该函数的逻辑定义，包运行正常P_RTN_CODE:=0 包运行不正常P_RTN_CODE:=1/EDIT BY HANCHAO 20170821
+            if (GeneralCommon.Gf_ExecProcedure(GeneralCommon.M_CN1, "CGG2040NP", Para1))
+            {
+
+                GeneralCommon.Gp_MsgBoxDisplay("数据更新成功", "I", "系统提示信息");
+
+            }
+            else
+            {
+                GeneralCommon.Gp_MsgBoxDisplay("数据更新失败", "I", "系统提示信息");
+            }
+        }
+
+
     }
 }

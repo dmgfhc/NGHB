@@ -136,6 +136,7 @@
             this.Cmd_Edit.TabIndex = 584;
             this.Cmd_Edit.Text = "更新数据";
             this.Cmd_Edit.UseVisualStyleBackColor = true;
+            this.Cmd_Edit.Click += new System.EventHandler(this.Cmd_Edit_Click);
             // 
             // label7
             // 
