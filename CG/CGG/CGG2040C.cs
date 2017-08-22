@@ -473,22 +473,22 @@ namespace CG
 
             int i;
             int k;
-            string sDateText;
-            string sDate;
-            string sDateNext;
-            sDate = DateTime.Now.ToString("yyyyMMddHHmm");
-            sDateText = sDate.Substring(0, 4) + "年" + sDate.Substring(4, 2) + "月" + sDate.Substring(6, 2) + "日 " + sDate.Substring(8, 2) + "点" + sDate.Substring(10, 2) + "分";
-            appExcel.Cells[2, 1] = sDateText;
+            //string sDateText;
+            //string sDate;
+            //string sDateNext;
+            //sDate = DateTime.Now.ToString("yyyyMMddHHmm");
+            //sDateText = sDate.Substring(0, 4) + "年" + sDate.Substring(4, 2) + "月" + sDate.Substring(6, 2) + "日 " + sDate.Substring(8, 2) + "点" + sDate.Substring(10, 2) + "分";
+            //appExcel.Cells[2, 1] = sDateText;
             for (i = 0; i < ss1.ActiveSheet.RowCount; i++)
             {
-                appExcel.Cells[i + 4, 1] = i + 1;
+                //appExcel.Cells[i + 4, 1] = i + 1;
                 //EXCEL里面数组从1开始，SPREAD从0开始，注意循环赋值的时候索引值需要错开，也就是让EXCEL的顺序和SPREAD的顺序保持一致
-                for (k = 0; k <= 8; k++)
+                for (k = 0; k <= 0; k++)
                 {
-                    appExcel.Cells[i + 4, k + 2] = ss1.ActiveSheet.Cells[i, k].Text;
+                    appExcel.Cells[i + 4, k + 1] = ss1.ActiveSheet.Cells[i, k].Text;
                 }
                 //EXCEL里面数组从1开始，SPREAD从0开始，注意循环赋值的时候索引值需要错开，也就是让EXCEL的顺序和SPREAD的顺序保持一致
-                for (k = 11; k <= 22; k++)
+                for (k = 2; k <= 15; k++)
                 {
                     appExcel.Cells[i + 4, k] = ss1.ActiveSheet.Cells[i, k].Text;
                 }
