@@ -288,7 +288,11 @@ namespace CG
         }
 
         //EXCEL功能实现
-
+        /// <summary>
+        /// 轧钢作业计划打印
+        /// </summary>
+        /// <param name="Ex_File_Name"></param>
+        /// <param name="e"></param>
         private void ExcelPrn(string Ex_File_Name, FpSpread e)
         {
             try
@@ -354,10 +358,161 @@ namespace CG
             appExcel = null;
             return;
         }
+        /// <summary>
+        /// 轧钢大计划打印
+        /// </summary>
+        /// <param name="Ex_File_Name"></param>
+        /// <param name="e"></param>
+        private void ExcelPrn1(string Ex_File_Name, FpSpread e)
+        {
+            try
+            {
+                string currentReportPath = System.Windows.Forms.Application.StartupPath + "\\南钢中板导出Excel文件夹";
+                string targetExcelName = currentReportPath + "\\" + Ex_File_Name + ".xls";
+                if (!Directory.Exists(currentReportPath))
+                {
+                    Directory.CreateDirectory(currentReportPath);
+                }
+                string sourceExcelName = System.Windows.Forms.Application.StartupPath + "\\" + Ex_File_Name + ".xls";
+
+                if (File.Exists(targetExcelName))
+                {
+                    File.Delete(targetExcelName);
+                }
+                File.Copy(sourceExcelName, targetExcelName);
+                int rowCount = e.ActiveSheet.RowCount;
+                setExcelText1(targetExcelName, rowCount);
+            }
+            catch (Exception ex)
+            {
+                GeneralCommon.Gp_MsgBoxDisplay(ex.ToString(), "W", "警告");
+            }
+        }
+
+        private void setExcelText1(string targetExcelName, int rowCount)
+        {
+            Microsoft.Office.Interop.Excel.Application appExcel = null;
+            appExcel = new Microsoft.Office.Interop.Excel.Application();
+            appExcel.DisplayAlerts = true;
+            appExcel.AlertBeforeOverwriting = true;
+            Microsoft.Office.Interop.Excel.Workbook workbook = appExcel.Workbooks.Open(targetExcelName,
+                Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+                Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+                Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+                Type.Missing, Type.Missing);
+
+            int i;
+            int k;
+            //string sDateText;
+            //string sDate;
+            //string sDateNext;
+            //sDate = DateTime.Now.ToString("yyyyMMddHHmm");
+            //sDateText = sDate.Substring(0, 4) + "年" + sDate.Substring(4, 2) + "月" + sDate.Substring(6, 2) + "日 " + sDate.Substring(8, 2) + "点" + sDate.Substring(10, 2) + "分";
+            //appExcel.Cells[2, 1] = sDateText;
+            for (i = 0; i < ss1.ActiveSheet.RowCount; i++)
+            {
+                //appExcel.Cells[i + 4, 1] = i + 1;
+                //EXCEL里面数组从1开始，SPREAD从0开始，注意循环赋值的时候索引值需要错开，也就是让EXCEL的顺序和SPREAD的顺序保持一致
+                for (k = 0; k <= 0; k++)
+                {
+                    appExcel.Cells[i + 4, k + 1] = ss1.ActiveSheet.Cells[i, k].Text;
+                }
+                //EXCEL里面数组从1开始，SPREAD从0开始，注意循环赋值的时候索引值需要错开，也就是让EXCEL的顺序和SPREAD的顺序保持一致
+                for (k = 2; k <= 19; k++)
+                {
+                    appExcel.Cells[i + 4, k] = ss1.ActiveSheet.Cells[i, k].Text;
+                }
+            }
+            appExcel.Visible = true;
+            //  appExcel.Quit();//从内存中退出
+            appExcel = null;
+            return;
+        }
+        /// <summary>
+        /// 余坯切割计划打印
+        /// </summary>
+        /// <param name="Ex_File_Name"></param>
+        /// <param name="e"></param>
+        private void ExcelPrn2(string Ex_File_Name, FpSpread e)
+        {
+            try
+            {
+                string currentReportPath = System.Windows.Forms.Application.StartupPath + "\\南钢中板导出Excel文件夹";
+                string targetExcelName = currentReportPath + "\\" + Ex_File_Name + ".xls";
+                if (!Directory.Exists(currentReportPath))
+                {
+                    Directory.CreateDirectory(currentReportPath);
+                }
+                string sourceExcelName = System.Windows.Forms.Application.StartupPath + "\\" + Ex_File_Name + ".xls";
+
+                if (File.Exists(targetExcelName))
+                {
+                    File.Delete(targetExcelName);
+                }
+                File.Copy(sourceExcelName, targetExcelName);
+                int rowCount = e.ActiveSheet.RowCount;
+                setExcelText2(targetExcelName, rowCount);
+            }
+            catch (Exception ex)
+            {
+                GeneralCommon.Gp_MsgBoxDisplay(ex.ToString(), "W", "警告");
+            }
+        }
+
+        private void setExcelText2(string targetExcelName, int rowCount)
+        {
+            Microsoft.Office.Interop.Excel.Application appExcel = null;
+            appExcel = new Microsoft.Office.Interop.Excel.Application();
+            appExcel.DisplayAlerts = true;
+            appExcel.AlertBeforeOverwriting = true;
+            Microsoft.Office.Interop.Excel.Workbook workbook = appExcel.Workbooks.Open(targetExcelName,
+                Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+                Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+                Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+                Type.Missing, Type.Missing);
+
+            int i;
+            int k;
+            string sDateText;
+            string sDate;
+            string sDateNext;
+            sDate = DateTime.Now.ToString("yyyyMMddHHmm");
+            sDateText = sDate.Substring(0, 4) + "年" + sDate.Substring(4, 2) + "月" + sDate.Substring(6, 2) + "日 " + sDate.Substring(8, 2) + "点" + sDate.Substring(10, 2) + "分";
+            appExcel.Cells[2, 1] = sDateText;
+            for (i = 0; i < ss1.ActiveSheet.RowCount; i++)
+            {
+                appExcel.Cells[i + 4, 1] = i + 1;
+                //EXCEL里面数组从1开始，SPREAD从0开始，注意循环赋值的时候索引值需要错开，也就是让EXCEL的顺序和SPREAD的顺序保持一致
+                for (k = 0; k <= 8; k++)
+                {
+                    appExcel.Cells[i + 4, k + 2] = ss1.ActiveSheet.Cells[i, k].Text;
+                }
+                //EXCEL里面数组从1开始，SPREAD从0开始，注意循环赋值的时候索引值需要错开，也就是让EXCEL的顺序和SPREAD的顺序保持一致
+                for (k = 11; k <= 22; k++)
+                {
+                    appExcel.Cells[i + 4, k] = ss1.ActiveSheet.Cells[i, k].Text;
+                }
+            }
+            appExcel.Visible = true;
+            //  appExcel.Quit();//从内存中退出
+            appExcel = null;
+            return;
+        }
 
         public override void Spread_Exc()
         {
-            ExcelPrn("CGG2040C", ss1);
+            switch (tab_bed_cd.SelectedIndex)
+            {
+                case 0:
+                    ExcelPrn("CGG2040C", ss1);
+                    break;
+                case 1:
+                    ExcelPrn1("CGG2041C", ss2);
+                    break;
+                case 2:
+                    ExcelPrn2("CGG2042C", ss3);
+                    break;
+            }
         }
 
         # region 公共方法
@@ -724,7 +879,7 @@ namespace CG
             Para1[0] = "C3";
 
 
-            //在这里调用Gf_ExecProcedure这个函数要特别注意后台包传出值得问题，后台包out必须传出两项，负责会报错，因为在该函数中，默认接受两个值。
+            //在这里调用Gf_ExecProcedure这个函数要特别注意后台包传出值得问题，后台包out必须传出两项，否则会报错，因为在该函数中，默认接受两个值。
             // P_RTN_CODE            OUT   NUMBER,
             //P_RTN_MSG             OUT   VARCHAR2
             //根据该函数的逻辑定义，包运行正常P_RTN_CODE:=0 包运行不正常P_RTN_CODE:=1/EDIT BY HANCHAO 20170821
