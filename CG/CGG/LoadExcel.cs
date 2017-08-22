@@ -20,7 +20,7 @@ namespace CG
 
         string path = "";
         List<string> list = new List<string>();//定义list变量，存放获取到的路径
-        string currentReportPath = System.Windows.Forms.Application.StartupPath + "\\南钢中板导出Excel文件夹";
+        string currentReportPath = System.Windows.Forms.Application.StartupPath + "\\南钢中板轧钢计划查询导出Excel文件夹";
 
         /// <summary>
         /// 打开选择EXCEL
@@ -29,7 +29,7 @@ namespace CG
         /// <param name="e"></param>
         private void openFile_Click(object sender, EventArgs e)
         {
-            string path;
+            string openPath;
             FolderBrowserDialog dialog = new FolderBrowserDialog();
             dialog.SelectedPath = currentReportPath;
             dialog.Description = "请选择EXCEL所在文件夹";
@@ -40,14 +40,14 @@ namespace CG
                     GeneralCommon.Gp_MsgBoxDisplay("文件夹路径不能为空", "I", "提示");
                     return;
                 }
-                path = dialog.SelectedPath;
-                open(path);
+                openPath = dialog.SelectedPath;
+                open(openPath);
             }
         }
 
-        public void open(string path)
+        public void open(string excelPath)
         {
-            DirectoryInfo dir = new DirectoryInfo(path);
+            DirectoryInfo dir = new DirectoryInfo(excelPath);
             FileInfo[] fil = dir.GetFiles("*.xls");
             listBox1.Items.Clear();//清空所有值
             list.Clear();//清空集合中元素
@@ -56,8 +56,15 @@ namespace CG
                 list.Add(f.FullName);//添加文件的路径到列表
                 listBox1.Items.Add(f.Name);
             }
-            listBox1.SelectedIndex = 0;
-            path = list[listBox1.SelectedIndex];
+            if (listBox1.Items.Count > 0)
+            {
+                listBox1.SelectedIndex = 0;
+                path = list[listBox1.SelectedIndex];
+            }
+            else
+            {
+                path = "";
+            }
         }
 
 

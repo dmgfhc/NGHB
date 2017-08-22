@@ -52,7 +52,7 @@
             this.listBox1.ItemHeight = 12;
             this.listBox1.Location = new System.Drawing.Point(167, 52);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(259, 184);
+            this.listBox1.Size = new System.Drawing.Size(277, 184);
             this.listBox1.TabIndex = 1;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -79,7 +79,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(453, 364);
+            this.ClientSize = new System.Drawing.Size(465, 364);
             this.Controls.Add(this.btnCal);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.listBox1);

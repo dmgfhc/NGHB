@@ -297,7 +297,7 @@ namespace CG
         {
             try
             {
-                string currentReportPath = System.Windows.Forms.Application.StartupPath + "\\南钢中板导出Excel文件夹";
+                string currentReportPath = System.Windows.Forms.Application.StartupPath + "\\南钢中板轧钢计划查询导出Excel文件夹";
                 string targetExcelName = currentReportPath + "\\" + Ex_File_Name + ".xls";
                 if (!Directory.Exists(currentReportPath))
                 {
@@ -367,7 +367,7 @@ namespace CG
         {
             try
             {
-                string currentReportPath = System.Windows.Forms.Application.StartupPath + "\\南钢中板导出Excel文件夹";
+                string currentReportPath = System.Windows.Forms.Application.StartupPath + "\\南钢中板轧钢计划查询导出Excel文件夹";
                 string targetExcelName = currentReportPath + "\\" + Ex_File_Name + ".xls";
                 if (!Directory.Exists(currentReportPath))
                 {
@@ -437,7 +437,7 @@ namespace CG
         {
             try
             {
-                string currentReportPath = System.Windows.Forms.Application.StartupPath + "\\南钢中板导出Excel文件夹";
+                string currentReportPath = System.Windows.Forms.Application.StartupPath + "\\南钢中板轧钢计划查询导出Excel文件夹";
                 string targetExcelName = currentReportPath + "\\" + Ex_File_Name + ".xls";
                 if (!Directory.Exists(currentReportPath))
                 {
