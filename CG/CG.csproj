@@ -540,12 +540,6 @@
     <Compile Include="CGF\CGF2040C.Designer.cs">
       <DependentUpon>CGF2040C.cs</DependentUpon>
     </Compile>
-    <Compile Include="CGF\CGF2090C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGF\CGF2090C.Designer.cs">
-      <DependentUpon>CGF2090C.cs</DependentUpon>
-    </Compile>
     <Compile Include="CGG\CGG2040C.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -564,8 +558,11 @@
     <Compile Include="CGZ\CGZ2031C.Designer.cs">
       <DependentUpon>CGZ2031C.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainMenu\MainMenu.cs">
+    <Compile Include="CK\CKG2030C.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CK\CKG2030C.Designer.cs">
+      <DependentUpon>CKG2030C.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Application.Designer.cs">
@@ -1052,9 +1049,6 @@
     <EmbeddedResource Include="CGF\CGF2040C.resx">
       <DependentUpon>CGF2040C.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CGF\CGF2090C.resx">
-      <DependentUpon>CGF2090C.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CGG\CGG2040C.resx">
       <DependentUpon>CGG2040C.cs</DependentUpon>
     </EmbeddedResource>
@@ -1064,8 +1058,8 @@
     <EmbeddedResource Include="CGZ\CGZ2031C.resx">
       <DependentUpon>CGZ2031C.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainMenu\MainMenu.resx">
-      <DependentUpon>MainMenu.cs</DependentUpon>
+    <EmbeddedResource Include="CK\CKG2030C.resx">
+      <DependentUpon>CKG2030C.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
