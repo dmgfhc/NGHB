@@ -60,6 +60,10 @@ namespace CG
         Collection Mc2 = new Collection();
         Collection Sc1 = new Collection();
         Collection Sc2 = new Collection();
+        Collection Sc3 = new Collection();
+        Collection Sc4 = new Collection();
+        Collection Sc5 = new Collection();
+        Collection Sc6 = new Collection();
         const int SS2_BLOCK_SEQ = 1;
         const int SS2_SEQ = 2;
         const int SS2_PROD_CD = 3;
@@ -115,9 +119,103 @@ namespace CG
             iheadrow = 0;
             p_spanSpread("轧制实绩", 4, 6, iscseq, iheadrow, 1);
 
-            p_ScIni(ss2, Sc2, 0, false, true);
-            iheadrow = 0;
+            p_ScIni(ss1, Sc2, 0, false, true);
+            iheadrow = 1;
             iscseq = 2;
+
+            p_SetSc("板坯号", "E", "12", "L", "", "", "", iscseq, iheadrow, "L"); //0
+            p_SetSc("数据来源", "E", "10", "L", "", "", "", iscseq, iheadrow, "M"); //1
+            p_SetSc("轧制方式", "E", "10", "L", "", "", "", iscseq, iheadrow, "M"); //2
+            p_SetSc("轧制标准", "E", "40", "L", "", "", "", iscseq, iheadrow, "L"); //3
+            p_SetSc("厚度", "E", "20", "L", "", "", "", iscseq, iheadrow, "R"); //4
+            p_SetSc("长度", "E", "20", "L", "", "", "", iscseq, iheadrow, "R"); //5
+            p_SetSc("重量", "E", "10", "L", "", "", "", iscseq, iheadrow, "R"); //6
+            p_SetSc("订单厚度", "E", "10", "L", "", "", "", iscseq, iheadrow, "R"); //7
+            p_SetSc("目标厚度", "E", "10", "L", "", "", "", iscseq, iheadrow, "R"); //8
+            p_SetSc("厚度下限", "E", "10", "L", "", "", "", iscseq, iheadrow, "R"); //9
+            p_SetSc("厚度上限", "E", "10", "L", "", "", "", iscseq, iheadrow, "R"); //10
+            p_SetSc("订单数量", "E", "3", "L", "", "", "", iscseq, iheadrow, "M"); //11
+            p_SetSc("母板数量", "E", "3", "L", "", "", "", iscseq, iheadrow, "M"); //12
+            p_SetSc("轧制订单", "E", "20", "L", "", "", "", iscseq, iheadrow, "L"); //13
+            p_SetSc("轧制结束时间", "DT", "", "L", "", "", "", iscseq, iheadrow, "M"); //14
+            p_SetSc("板坯规格", "E", "30", "L", "", "", "", iscseq, iheadrow, "L"); //15
+
+            iheadrow = 0;
+            p_spanSpread("轧制实绩", 4, 6, iscseq, iheadrow, 1);
+
+            p_ScIni(ss1, Sc3, 0, false, true);
+            iheadrow = 1;
+            iscseq = 3;
+
+            p_SetSc("板坯号", "E", "12", "L", "", "", "", iscseq, iheadrow, "L"); //0
+            p_SetSc("数据来源", "E", "10", "L", "", "", "", iscseq, iheadrow, "M"); //1
+            p_SetSc("轧制方式", "E", "10", "L", "", "", "", iscseq, iheadrow, "M"); //2
+            p_SetSc("轧制标准", "E", "40", "L", "", "", "", iscseq, iheadrow, "L"); //3
+            p_SetSc("厚度", "E", "20", "L", "", "", "", iscseq, iheadrow, "R"); //4
+            p_SetSc("长度", "E", "20", "L", "", "", "", iscseq, iheadrow, "R"); //5
+            p_SetSc("重量", "E", "10", "L", "", "", "", iscseq, iheadrow, "R"); //6
+            p_SetSc("订单厚度", "E", "10", "L", "", "", "", iscseq, iheadrow, "R"); //7
+            p_SetSc("目标厚度", "E", "10", "L", "", "", "", iscseq, iheadrow, "R"); //8
+            p_SetSc("厚度下限", "E", "10", "L", "", "", "", iscseq, iheadrow, "R"); //9
+            p_SetSc("厚度上限", "E", "10", "L", "", "", "", iscseq, iheadrow, "R"); //10
+            p_SetSc("订单数量", "E", "3", "L", "", "", "", iscseq, iheadrow, "M"); //11
+            p_SetSc("母板数量", "E", "3", "L", "", "", "", iscseq, iheadrow, "M"); //12
+            p_SetSc("轧制订单", "E", "20", "L", "", "", "", iscseq, iheadrow, "L"); //13
+            p_SetSc("轧制结束时间", "DT", "", "L", "", "", "", iscseq, iheadrow, "M"); //14
+            p_SetSc("板坯规格", "E", "30", "L", "", "", "", iscseq, iheadrow, "L"); //15
+
+            iheadrow = 0;
+            p_spanSpread("轧制实绩", 4, 6, iscseq, iheadrow, 1);
+
+            p_ScIni(ss2, Sc4, 0, false, true);
+            iheadrow = 0;
+            iscseq = 4;
+
+            p_SetSc("板坯号", "E", "14", "L", "", "", "", iscseq, iheadrow, "L"); //0
+            p_SetSc("母板顺序", "E", "2", "L", "", "", "", iscseq, iheadrow, "M"); //1
+            p_SetSc("钢板顺序", "E", "2", "L", "", "", "", iscseq, iheadrow, "M"); //2
+            p_SetSc("产品分类", "E", "10", "L", "", "", "", iscseq, iheadrow, "L"); //3
+            p_SetSc("厚度", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //4
+            p_SetSc("宽度", "N", "9", "L", "", "", "", iscseq, iheadrow, "R"); //5
+            p_SetSc("长度", "N", "9", "L", "", "", "", iscseq, iheadrow, "R"); //6
+            p_SetSc("重量", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "R"); //7
+            p_SetSc("订单号", "E", "20", "L", "", "", "", iscseq, iheadrow, "L"); //8
+            p_SetSc("标准", "E", "40", "L", "", "", "", iscseq, iheadrow, "L"); //9
+            p_SetSc("牌号", "E", "40", "L", "", "", "", iscseq, iheadrow, "L"); //10
+            p_SetSc("定尺", "E", "10", "L", "", "", "", iscseq, iheadrow, "M"); //11
+            p_SetSc("切边", "E", "10", "L", "", "", "", iscseq, iheadrow, "M"); //12
+            p_SetSc("探伤", "E", "40", "L", "", "", "", iscseq, iheadrow, "L"); //13
+            p_SetSc("热处理", "E", "20", "L", "", "", "", iscseq, iheadrow, "L"); //14
+            p_SetSc("船号", "E", "30", "L", "", "", "", iscseq, iheadrow, "L"); //15
+            p_SetSc("订单备注", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //16
+            p_SetSc("生产备注", "E", "100", "L", "", "", "", iscseq, iheadrow, "L"); //17
+
+            p_ScIni(ss2, Sc5, 0, false, true);
+            iheadrow = 0;
+            iscseq = 5;
+
+            p_SetSc("板坯号", "E", "14", "L", "", "", "", iscseq, iheadrow, "L"); //0
+            p_SetSc("母板顺序", "E", "2", "L", "", "", "", iscseq, iheadrow, "M"); //1
+            p_SetSc("钢板顺序", "E", "2", "L", "", "", "", iscseq, iheadrow, "M"); //2
+            p_SetSc("产品分类", "E", "10", "L", "", "", "", iscseq, iheadrow, "L"); //3
+            p_SetSc("厚度", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R"); //4
+            p_SetSc("宽度", "N", "9", "L", "", "", "", iscseq, iheadrow, "R"); //5
+            p_SetSc("长度", "N", "9", "L", "", "", "", iscseq, iheadrow, "R"); //6
+            p_SetSc("重量", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "R"); //7
+            p_SetSc("订单号", "E", "20", "L", "", "", "", iscseq, iheadrow, "L"); //8
+            p_SetSc("标准", "E", "40", "L", "", "", "", iscseq, iheadrow, "L"); //9
+            p_SetSc("牌号", "E", "40", "L", "", "", "", iscseq, iheadrow, "L"); //10
+            p_SetSc("定尺", "E", "10", "L", "", "", "", iscseq, iheadrow, "M"); //11
+            p_SetSc("切边", "E", "10", "L", "", "", "", iscseq, iheadrow, "M"); //12
+            p_SetSc("探伤", "E", "40", "L", "", "", "", iscseq, iheadrow, "L"); //13
+            p_SetSc("热处理", "E", "20", "L", "", "", "", iscseq, iheadrow, "L"); //14
+            p_SetSc("船号", "E", "30", "L", "", "", "", iscseq, iheadrow, "L"); //15
+            p_SetSc("订单备注", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //16
+            p_SetSc("生产备注", "E", "100", "L", "", "", "", iscseq, iheadrow, "L"); //17
+
+            p_ScIni(ss2, Sc6, 0, false, true);
+            iheadrow = 0;
+            iscseq = 6;
 
             p_SetSc("板坯号", "E", "14", "L", "", "", "", iscseq, iheadrow, "L"); //0
             p_SetSc("母板顺序", "E", "2", "L", "", "", "", iscseq, iheadrow, "M"); //1
@@ -145,59 +243,102 @@ namespace CG
         {
             base.sSvrPgmPkgName = "CKG2030NC";
             Form_Define();
-            TXT_EMP_CD.Text = GeneralCommon.sUserID;
-            CBO_PLT.Text = "C3";
-            sQuery_load = "SELECT ROLL_NO FROM GP_ROLL3 WHERE ROLL_STATUS<>'DL' ORDER BY ROLL_NO";
-
-            GeneralCommon.Gf_ComboAdd(CBO_ROLL_ID, sQuery_load);
-           
-            CBO_ROLL_ID.Enabled = true;
         }
 
-        private void CBO_ROLL_ID_Clk()
-        {
-            string sQuery1;
-            string sQuery2;
-            string MAXSEQ;
-            int MAXSEQ_1;
-            string BEF_GRID;
 
-            if (CBO_ROLL_ID.Text != " ")
-            {
-                sQuery1 = "SELECT ROLL_DIA FROM GP_ROLL3 WHERE ROLL_NO = '" + CBO_ROLL_ID.Text + "' ";
-                BEF_GRID = GeneralCommon.Gf_CodeFind(GeneralCommon.M_CN1, sQuery1);
-                SDB_AFT_GRID_DIA.Text = BEF_GRID;
-            }
-        }
 
         public override bool Form_Cls()
         {
             if (base.Form_Cls())
             {
-                TXT_EMP_CD.Text = GeneralCommon.sUserID;
-                CBO_PLT.Text = "C3";
-
             }
             return true;
         }
 
         public override void Form_Ref()
         {
-            p_Ref(1, 0, true, true);
-            p_Ref(2, 1, true, true);
 
+            if (OPT_FP_SLAB_DES.Checked)
+            {
+                p_Ref(1, 1, true, true);
+            }
+            else if (OPT_FP_SLAB_DES1.Checked)
+            {
+                p_Ref(1, 2, true, true);
+            }
+            else
+            {
+                p_Ref(1, 3, true, true);
+            }
         }
 
-        public override void Form_Pro()
+        private void ss1_Click(int Col, int ROW)
         {
-            p_Pro(1, 0, true, true);
-            Form_Ref();
+
+            int lRow;
+            string sBlockSeq;
+            string sSeq;
+
+            //    Call Gp_Sp_Sort(sc1.Item("Spread"), Col, ROW)
+
+            //lBlkcol1 = 0;
+            //lBlkcol2 = 0;
+            //lBlkrow1 = 0;
+            //lBlkrow2 = 0;
+
+            if (ROW < 0) return;
+            if (Col > 0) return;
+
+            TXT_SLAB_NO.Text = ss1.ActiveSheet.Cells[ROW, 0].Text;
+
+            Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, ROW, ROW, Color.Black, SSP1.BackColor);
+            if (OPT_FP_SLAB_DES.Checked)
+            {
+                p_Ref(2, 4, true, true);
+            }
+            else if (OPT_FP_SLAB_DES1.Checked)
+            {
+                p_Ref(2, 5, true, true);
+            }
+            else
+            {
+                p_Ref(2, 6, true, true);
+            }
+            TXT_SLAB_NO.Text = "";
+
+            for (lRow = 1; lRow <= ss2.ActiveSheet.RowCount; lRow++)
+            {
+                sBlockSeq = ss2.ActiveSheet.Cells[lRow - 1, SS2_BLOCK_SEQ].Text;
+                sSeq = ss2.ActiveSheet.Cells[lRow - 1, SS2_SEQ].Text;
+
+                if (sBlockSeq + sSeq == "0000")
+                {
+                    Gp_Sp_BlockColor(ss2, 0, ss2.ActiveSheet.ColumnCount - 1, lRow - 1, lRow - 1, Color.Black, SSP1.BackColor);
+                    ss2.ActiveSheet.Cells[lRow - 1, SS2_PROD_CD].Text = "轧件";
+                }
+                else if (sSeq == "00")
+                {
+                    Gp_Sp_BlockColor(ss2, 0, ss2.ActiveSheet.ColumnCount - 1, lRow - 1, lRow - 1, Color.Black, SSP2.BackColor);
+                    ss2.ActiveSheet.Cells[lRow - 1, SS2_PROD_CD].Text = "母板" + sBlockSeq;
+                }
+                else
+                {
+                    Gp_Sp_BlockColor(ss2, 0, ss2.ActiveSheet.ColumnCount - 1, lRow - 1, lRow - 1, Color.Black, SSP3.BackColor);
+                    ss2.ActiveSheet.Cells[lRow - 1, SS2_PROD_CD].Text = "钢板";
+                }
+            }
         }
 
-        public override void Form_Del()
-        {
-            p_del(1, 0, true);
-        }
+        //public override void Form_Pro()
+        //{
+        //    p_Pro(1, 0, true, true);
+        //    Form_Ref();
+        //}
+
+        //public override void Form_Del()
+        //{
+        //    p_del(1, 0, true);
+        //}
 
         # region 公共方法
 
@@ -499,13 +640,36 @@ namespace CG
             }
             return 0;
         }
+        //重写了框架的颜色方法，原来的框架在解锁方面有点问题，不方便在框架直接修改，所以重新写了一个
+        public void Gp_Sp_BlockColor(FpSpread oSpread, int iCol1, int iCol2, int iRow1, int iRow2, Color fColor, Color bColor)
+        {
+
+            FarPoint.Win.Spread.SheetView with_1 = oSpread.ActiveSheet;
+            for (int row = iRow1; row <= iRow2; row++)
+            {
+                for (int col = iCol1; col <= iCol2; col++)
+                {
+                    bool locked = with_1.Columns[col].Locked;
+                    with_1.Columns[col].Locked = false;
+                    with_1.Cells[row, col].Locked = false;
+                    //我在这里加了一个颜色的判断，防止多个颜色的时候，颜色覆盖替换的问题，所以在赋值的时候，黑色字体和白色背景不会被传入进行修改
+                    if (fColor != Color.Black)
+                    {
+                        with_1.Cells[row, col].ForeColor = fColor;
+                    }
+                    if (bColor != Color.White)
+                    {
+                        with_1.Cells[row, col].BackColor = bColor;
+                    }
+                    with_1.Cells[row, col].Locked = locked;
+                    with_1.Columns[col].Locked = locked;
+                }
+            }
+
+        }
 
         #endregion
 
-        private void CBO_ROLL_ID_TextChanged(object sender, EventArgs e)
-        {
-            CBO_ROLL_ID_Clk();
-        }
 
 
     }
