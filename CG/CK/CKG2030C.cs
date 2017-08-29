@@ -82,7 +82,7 @@ namespace CG
         protected override void p_SubFormInit()
         {
             int imcseq;
-            p_McIni(Mc1, true);
+            p_McIni(Mc1, false);
             imcseq = 1;
             p_SetMc("板坯号", TXT_SLAB_NO, "P", "", "", "", "", imcseq);//0
             p_SetMc("轧制时间", SDT_PROD_DATE_FROM, "P", "", "", "", "", imcseq); //1
@@ -243,6 +243,7 @@ namespace CG
         {
             base.sSvrPgmPkgName = "CKG2030NC";
             Form_Define();
+            OPT_FP_SLAB_DES.Checked = true;
         }
 
 
@@ -291,7 +292,8 @@ namespace CG
 
             TXT_SLAB_NO.Text = ss1.ActiveSheet.Cells[ROW, 0].Text;
 
-            Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, ROW, ROW, Color.Black, SSP1.BackColor);
+            //unlockSpread(ss1);
+            //SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, ROW, ROW, Color.Black, SSP1.BackColor);
             if (OPT_FP_SLAB_DES.Checked)
             {
                 p_Ref(2, 4, true, true);
@@ -305,7 +307,7 @@ namespace CG
                 p_Ref(2, 6, true, true);
             }
             TXT_SLAB_NO.Text = "";
-
+            unlockSpread(ss2);
             for (lRow = 1; lRow <= ss2.ActiveSheet.RowCount; lRow++)
             {
                 sBlockSeq = ss2.ActiveSheet.Cells[lRow - 1, SS2_BLOCK_SEQ].Text;
@@ -313,20 +315,21 @@ namespace CG
 
                 if (sBlockSeq + sSeq == "0000")
                 {
-                    Gp_Sp_BlockColor(ss2, 0, ss2.ActiveSheet.ColumnCount - 1, lRow - 1, lRow - 1, Color.Black, SSP1.BackColor);
+                    SpreadCommon.Gp_Sp_BlockColor(ss2, 0, ss2.ActiveSheet.ColumnCount - 1, lRow - 1, lRow - 1, Color.Black, SSP1.BackColor);
                     ss2.ActiveSheet.Cells[lRow - 1, SS2_PROD_CD].Text = "轧件";
                 }
                 else if (sSeq == "00")
                 {
-                    Gp_Sp_BlockColor(ss2, 0, ss2.ActiveSheet.ColumnCount - 1, lRow - 1, lRow - 1, Color.Black, SSP2.BackColor);
+                    SpreadCommon.Gp_Sp_BlockColor(ss2, 0, ss2.ActiveSheet.ColumnCount - 1, lRow - 1, lRow - 1, Color.Black, SSP2.BackColor);
                     ss2.ActiveSheet.Cells[lRow - 1, SS2_PROD_CD].Text = "母板" + sBlockSeq;
                 }
                 else
                 {
-                    Gp_Sp_BlockColor(ss2, 0, ss2.ActiveSheet.ColumnCount - 1, lRow - 1, lRow - 1, Color.Black, SSP3.BackColor);
+                    SpreadCommon.Gp_Sp_BlockColor(ss2, 0, ss2.ActiveSheet.ColumnCount - 1, lRow - 1, lRow - 1, Color.Black, SSP3.BackColor);
                     ss2.ActiveSheet.Cells[lRow - 1, SS2_PROD_CD].Text = "钢板";
                 }
             }
+            lockSpread(ss2);
         }
 
         //public override void Form_Pro()
@@ -640,37 +643,24 @@ namespace CG
             }
             return 0;
         }
-        //重写了框架的颜色方法，原来的框架在解锁方面有点问题，不方便在框架直接修改，所以重新写了一个
-        public void Gp_Sp_BlockColor(FpSpread oSpread, int iCol1, int iCol2, int iRow1, int iRow2, Color fColor, Color bColor)
-        {
-
-            FarPoint.Win.Spread.SheetView with_1 = oSpread.ActiveSheet;
-            for (int row = iRow1; row <= iRow2; row++)
-            {
-                for (int col = iCol1; col <= iCol2; col++)
-                {
-                    bool locked = with_1.Columns[col].Locked;
-                    with_1.Columns[col].Locked = false;
-                    with_1.Cells[row, col].Locked = false;
-                    //我在这里加了一个颜色的判断，防止多个颜色的时候，颜色覆盖替换的问题，所以在赋值的时候，黑色字体和白色背景不会被传入进行修改
-                    if (fColor != Color.Black)
-                    {
-                        with_1.Cells[row, col].ForeColor = fColor;
-                    }
-                    if (bColor != Color.White)
-                    {
-                        with_1.Cells[row, col].BackColor = bColor;
-                    }
-                    with_1.Cells[row, col].Locked = locked;
-                    with_1.Columns[col].Locked = locked;
-                }
-            }
-
-        }
 
         #endregion
 
+        private void ss1_CellClick(object sender, CellClickEventArgs e)
+        {
+            ss1_Click(e.Column, e.Row);
+        }
 
-
+        public override void Spread_Exc()
+        {
+            if (chk_detail.Checked)
+            {
+                SpreadCommon.Gp_Sp_Excel(ss2);
+            }
+            else
+            {
+                SpreadCommon.Gp_Sp_Excel(ss1);
+            }
+        }
     }
 }

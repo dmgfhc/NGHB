@@ -102,6 +102,7 @@
             this.OPT_EP_SLAB_DES.TabStop = true;
             this.OPT_EP_SLAB_DES.Text = "炼钢计划";
             this.OPT_EP_SLAB_DES.UseVisualStyleBackColor = true;
+            this.OPT_EP_SLAB_DES.Visible = false;
             // 
             // OPT_FP_SLAB_DES1
             // 
@@ -228,6 +229,7 @@
             this.ss1_Sheet1});
             this.ss1.Size = new System.Drawing.Size(1237, 163);
             this.ss1.TabIndex = 2;
+            this.ss1.CellClick += new FarPoint.Win.Spread.CellClickEventHandler(this.ss1_CellClick);
             // 
             // ss1_Sheet1
             // 

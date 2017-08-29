@@ -516,6 +516,12 @@
     <Compile Include="CGF\CGF2060C.Designer.cs">
       <DependentUpon>CGF2060C.cs</DependentUpon>
     </Compile>
+    <Compile Include="CGF\CGF2090C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CGF\CGF2090C.Designer.cs">
+      <DependentUpon>CGF2090C.cs</DependentUpon>
+    </Compile>
     <Compile Include="CGF\WGF1010C.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -563,6 +569,9 @@
     </Compile>
     <Compile Include="CK\CKG2030C.Designer.cs">
       <DependentUpon>CKG2030C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu\MainMenu.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Application.Designer.cs">
@@ -1037,6 +1046,9 @@
     <EmbeddedResource Include="CGF\CGF2060C.resx">
       <DependentUpon>CGF2060C.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CGF\CGF2090C.resx">
+      <DependentUpon>CGF2090C.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CGF\WGF1010C.resx">
       <DependentUpon>WGF1010C.cs</DependentUpon>
     </EmbeddedResource>
@@ -1060,6 +1072,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CK\CKG2030C.resx">
       <DependentUpon>CKG2030C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu\MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
