@@ -29,10 +29,10 @@ using CommonClass;
 //-------------------------------------------------------------------------------
 //-- PROGRAM HEADER  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //-------------------------------------------------------------------------------
-//-- System Name       宽厚板轧钢作业
-//-- Sub_System Name   轧辊管理
-//-- Program Name      轧辊堆焊实绩查询及修改界面_CGF2090C
-//-- Program ID        CGF2090C
+//-- System Name       中板轧钢作业
+//-- Sub_System Name   指示下达
+//-- Program Name      录入精整作业指示_CGD2070C
+//-- Program ID        _CGD2070C
 //-- Document No       Q-00-0010(Specification)
 //-- Designer          韩超
 //-- Coder             韩超
@@ -42,7 +42,7 @@ using CommonClass;
 //-- UPDATE HISTORY  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //-------------------------------------------------------------------------------
 //-- VER       DATE          EDITOR       DESCRIPTION
-//-- 1.00    2017.08.15       韩超        轧辊堆焊实绩查询及修改界面_CGF2090C
+//-- 1.00    2017.08.15       韩超        录入精整作业指示_CGD2070C
 //-------------------------------------------------------------------------------
 //-- DECLARATION     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //-------------------------------------------------------------------------------
@@ -59,67 +59,134 @@ namespace CG
         Collection Mc1 = new Collection();
         Collection Mc2 = new Collection();
         Collection Sc1 = new Collection();
-        string sQuery_load;
+
+        const int SS1_CONF_TIME = 0;
+        const int SS1_LINE = 1;
+        const int SS1_PLATE_NO = 2;
+        const int SS1_PROD_CD = 3;
+        const int SS1_PROC_CD = 4;
+        const int SS1_SPEC_FL = 5;
+        const int SS1_SPEC_NAME = 6;
+        const int SS1_DEL_DATE_TO = 8;
+        const int SS1_GAS_FL = 12;
+        const int SS1_GRID_FL = 15;
+        const int SS1_CL_FL = 17;
+        const int SS1_UST_FL = 19;
+        const int SS1_UST_M = 20;
+        const int SS1_SB_FL = 24;
+        const int SS1_SB_M = 25;
+        const int SS1_HTM_FL = 27;
+        const int SS1_HTM_M1 = 30;
+        const int SS1_HTM_C1 = 31;
+        const int SS1_HTM_M2 = 32;
+        const int SS1_HTM_C2 = 33;
+        const int SS1_HTM_M3 = 34;
+        const int SS1_HTM_C3 = 35;
+        const int SS1_REMARK = 37;
+        const int SS1_USERID = 45;
+        const int SPD_URGNT_FL = 51;
 
 
 
         protected override void p_SubFormInit()
         {
             int imcseq;
-            p_McIni(Mc1, true);
+            p_McIni(Mc1, false);
             imcseq = 1;
-            p_SetMc("轧辊号", CBO_ROLL_ID, "PNIR", "", "", "", "", imcseq);//0
-            p_SetMc("", SDB_SEQ_NO, "IRL", "", "", "", "", imcseq); //1
-            p_SetMc("工厂代码", CBO_PLT, "NIR", "", "", "", "", imcseq); //2
-            p_SetMc("班次", cbo_shift, "NI", "", "", "", "", imcseq); //3
-            p_SetMc("", CBO_GROUP, "NI", "", "", "", "", imcseq); //4
-            p_SetMc("作业人员", TXT_EMP_CD, "NI", "", "", "", "", imcseq); //5
-            p_SetMc("堆焊时间", TXT_ROLL_DH_DATE, "NIR", "", "", "", "", imcseq); //6
-            p_SetMc("堆焊辊径", SDB_ROLL_DIA, "NIR", "", "", "", "", imcseq); //7
-            p_SetMc("堆焊重量", SDB_ROLL_WGT, "NIR", "", "", "", "", imcseq); //8
-            p_SetMc("对焊金额", txt_ROLL_PRICE, "NIR", "", "", "", "", imcseq); //9
-            p_SetMc("验收单号", txt_ISSUETALLYNO, "NIR", "", "", "", "", imcseq); //10
-            p_SetMc("料号", txt_MTRLNO, "NIR", "", "", "", "", imcseq); //11
-            p_SetMc("", SDB_AFT_GRID_DIA, "IRL", "", "", "", "", imcseq); //12
-         
+            p_SetMc("", txt_PrcLine, "PA", "", "", "", "", imcseq);//0
+            p_SetMc("", TXT_PLATE_NO, "P", "", "", "", "", imcseq);//1
+            p_SetMc("", SDT_PROD_DATE_FROM, "P", "", "", "", "", imcseq);//2
+            p_SetMc("", SDT_PROD_DATE_TO, "P", "", "", "", "", imcseq);//3
+            p_SetMc("", cbo_shift, "P", "", "", "", "", imcseq);//4
+            p_SetMc("生产工厂", txt_plt, "PN", "", "", "", "", imcseq);//5
+            p_SetMc("当前库", txt_cur_inv_code, "PN", "", "", "", "", imcseq);//6
+            p_SetMc("", txt_stdspec_chg, "P", "", "", "", "", imcseq);//7
+            p_SetMc("", SDB_THK, "P", "", "", "", "", imcseq);//8
+            p_SetMc("", SDB_WID, "P", "", "", "", "", imcseq);//9
+            p_SetMc("", txt_lot_no, "P", "", "", "", "", imcseq);//10
+            p_SetMc("", TXT_LOC, "P", "", "", "", "", imcseq);//11
+            p_SetMc("", SDB_THK_TO, "P", "", "", "", "", imcseq);//12
+            p_SetMc("", SDB_WID_TO, "P", "", "", "", "", imcseq);//13
+            p_SetMc("", cbo_prod_cd, "P", "", "", "", "", imcseq);//14
 
-
-            p_McIni(Mc2, false);
+            p_McIni(Mc2, true);
             imcseq = 2;
-            p_SetMc("轧辊号", CBO_ROLL_ID, "PN", "", "", "", "", imcseq);//0
+            p_SetMc("钢板号", Text1_PLATE_NO, "PI", "", "", "", "", imcseq);//0
+            p_SetMc("备注", txt_REMARKS, "IR", "", "", "", "", imcseq);//0
 
-            p_ScIni(ss1, Sc1, 0, false, true);
+            p_ScIni(ss1, Sc1, 45, false, true);
             int iscseq;
             int iheadrow;
-            iheadrow = 0;
+            iheadrow = 1;
             iscseq = 1;
 
-            p_SetSc("轧辊号", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //0
-            p_SetSc("对焊次数", "E", "8", "L", "", "", "", iscseq, iheadrow, "M"); //1
-            p_SetSc("工厂", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //2
-            p_SetSc("堆焊时间", "DT", "", "L", "", "", "", iscseq, iheadrow, "M"); //3
-            p_SetSc("堆焊辊径", "N", "10,3", "L", "", "", "", iscseq, iheadrow, "R"); //4
-            p_SetSc("堆焊重量", "N", "10,3", "L", "", "", "", iscseq, iheadrow, "R"); //5
-            p_SetSc("堆焊单价", "N", "10,2", "L", "", "", "", iscseq, iheadrow, "R"); //6
-            p_SetSc("验收单号", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //7
-            p_SetSc("料号", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //8
-            p_SetSc("剩余辊径", "N", "10,3", "L", "", "", "", iscseq, iheadrow, "R"); //9
+            p_SetSc("确认时间", "E", "60", "I", "", "", "", iscseq, iheadrow, "M"); //0
+            p_SetSc("Line", "E", "60", "IA", "", "", "", iscseq, iheadrow, "M"); //1
+            p_SetSc("钢板号", "E", "14", "PI", "", "", "", iscseq, iheadrow, "M"); //2
+            p_SetSc("产品代码", "E", "14", "L", "", "", "", iscseq, iheadrow, "M"); //3
+            p_SetSc("进程代码", "E", "14", "L", "", "", "", iscseq, iheadrow, "M"); //4
+            p_SetSc("指定", "C", "", "I", "", "", "", iscseq, iheadrow, "M"); //5
+            p_SetSc("名称", "E", "20", "IL", "", "", "", iscseq, iheadrow, "M"); //6
+            p_SetSc("入库日期", "D", "", "L", "", "", "", iscseq, iheadrow, "M"); //7
+            p_SetSc("交货期", "D", "", "L", "", "", "", iscseq, iheadrow, "M"); //8
+            p_SetSc("标准号", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //9
+            p_SetSc("厚度*宽度*长度", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //10
+            p_SetSc("重量", "E", "20", "L", "", "", "", iscseq, iheadrow, "R"); //11
+            p_SetSc("指定", "C", "", "I", "", "", "", iscseq, iheadrow, "M"); //12
+            p_SetSc("切割", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //13
+            p_SetSc("切割块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //14
+            p_SetSc("指定", "C", "", "I", "", "", "", iscseq, iheadrow, "M"); //15
+            p_SetSc("修磨", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //16
+            p_SetSc("指定", "C", "", "I", "", "", "", iscseq, iheadrow, "M"); //17
+            p_SetSc("冷矫直", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //18
+            p_SetSc("指定", "C", "", "I", "", "", "", iscseq, iheadrow, "M"); //19
+            p_SetSc("新指示", "E", "60", "I", "", "", "", iscseq, iheadrow, "L"); //20
+            p_SetSc("探伤", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //21
+            p_SetSc("指定", "C", "", "I", "", "", "", iscseq, iheadrow, "M"); //22
+            p_SetSc("压平", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //23
+            p_SetSc("指定", "C", "", "I", "", "", "", iscseq, iheadrow, "M"); //24
+            p_SetSc("新指示", "E", "60", "I", "", "", "", iscseq, iheadrow, "L"); //25
+            p_SetSc("抛丸", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //26
+            p_SetSc("指定", "C", "", "I", "", "", "", iscseq, iheadrow, "M"); //27
+            p_SetSc("热处理实绩", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //28
+            p_SetSc("热处理", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //29
+            p_SetSc("方法一", "E", "60", "I", "", "", "", iscseq, iheadrow, "M"); //30
+            p_SetSc("条件一", "E", "60", "I", "", "", "", iscseq, iheadrow, "M"); //31
+            p_SetSc("方法二", "E", "60", "I", "", "", "", iscseq, iheadrow, "M"); //32
+            p_SetSc("条件二", "E", "60", "I", "", "", "", iscseq, iheadrow, "M"); //33
+            p_SetSc("方法三", "E", "60", "I", "", "", "", iscseq, iheadrow, "M"); //34
+            p_SetSc("条件三", "E", "60", "I", "", "", "", iscseq, iheadrow, "M"); //35
+            p_SetSc("定单备注", "E", "100", "L", "", "", "", iscseq, iheadrow, "L"); //36
+            p_SetSc("生产备注", "E", "100", "I", "", "", "", iscseq, iheadrow, "L"); //37
+            p_SetSc("产品等级", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //38
+            p_SetSc("表面等级", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //39
+            p_SetSc("取样代码", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //40
+            p_SetSc("试样号", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //41
+            p_SetSc("生产时间", "DT", "", "L", "", "", "", iscseq, iheadrow, "M"); //42
+            p_SetSc("订单号", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //43
+            p_SetSc("客户", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //44
+            p_SetSc("作业人", "E", "60", "I", "", "", "", iscseq, iheadrow, "M"); //45
+            p_SetSc("轧批号", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //46
+            p_SetSc("库", "E", "20", "L", "", "", "", iscseq, iheadrow, "M"); //47
+            p_SetSc("垛位", "E", "20", "L", "", "", "", iscseq, iheadrow, "L"); //48
+            p_SetSc("修改作业人员", "E", "12", "L", "", "", "", iscseq, iheadrow, "M"); //49
+            p_SetSc("修改时间", "DT", "", "L", "", "", "", iscseq, iheadrow, "M"); //50
+            p_SetSc("紧急订单", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //51
 
-
+            iheadrow = 0;
+            p_spanSpread("特殊工序", 5, 6, iscseq, iheadrow, 1);
+            p_spanSpread("钢板信息", 9, 11, iscseq, iheadrow, 1);
+            p_spanSpread("精整指示及实绩", 12, 23, iscseq, iheadrow, 1);
+            p_spanSpread("热处理指示及实绩", 24, 35, iscseq, iheadrow, 1);
+            
 
         }
 
         public void Form_Load(object sender, System.EventArgs e)
         {
-            base.sSvrPgmPkgName = "CGF2090NC";
+            base.sSvrPgmPkgName = "CGD2070NC";
             Form_Define();
-            TXT_EMP_CD.Text = GeneralCommon.sUserID;
-            CBO_PLT.Text = "C3";
-            sQuery_load = "SELECT ROLL_NO FROM GP_ROLL3 WHERE ROLL_STATUS<>'DL' ORDER BY ROLL_NO";
 
-            GeneralCommon.Gf_ComboAdd(CBO_ROLL_ID, sQuery_load);
-           
-            CBO_ROLL_ID.Enabled = true;
         }
 
         private void CBO_ROLL_ID_Clk()
