@@ -86,8 +86,6 @@ namespace CG
         const int SS1_USERID = 45;
         const int SPD_URGNT_FL = 51;
 
-
-
         protected override void p_SubFormInit()
         {
             int imcseq;
@@ -179,15 +177,89 @@ namespace CG
             p_spanSpread("精整指示及实绩", 12, 23, iscseq, iheadrow, 1);
             p_spanSpread("热处理指示及实绩", 24, 35, iscseq, iheadrow, 1);
             
+        }
 
+        private void chk_can_Clk()
+        {
+            if (chk_can0.Checked == true)
+            {
+                chk_can0.ForeColor = Color.Red;
+                chk_can1.ForeColor = Color.Black;
+                chk_can2.ForeColor = Color.Black;
+                chk_can1.Checked = false;
+                chk_can2.Checked = false;
+            }
+            else if (chk_can1.Checked == true)
+            {
+                chk_can0.ForeColor = Color.Black;
+                chk_can1.ForeColor = Color.Red;
+                chk_can2.ForeColor = Color.Black;
+                chk_can0.Checked = false;
+                chk_can2.Checked = false;
+            }
+            else if (chk_can2.Checked == true)
+            {
+                chk_can0.ForeColor = Color.Black;
+                chk_can1.ForeColor = Color.Black;
+                chk_can2.ForeColor = Color.Red;
+                chk_can0.Checked = false;
+                chk_can1.Checked = false;
+            }
+        }
+
+        private void opt_LineFlag_Clk()
+        {
+            List<RadioButton> opt_LineFlag = new List<RadioButton>();
+
+            opt_LineFlag.Add(opt_LineFlag0);
+            opt_LineFlag.Add(opt_LineFlag2);
+
+            foreach (var LineFlag in opt_LineFlag)
+            {
+                if (LineFlag.Checked == true)
+                {
+                    LineFlag.ForeColor = Color.Red;
+                }
+                else
+                {
+                    LineFlag.ForeColor = Color.Black;
+                }
+            }
+        }
+
+        private void txt_HTM_COND1_Chg()
+        {
+            if (txt_HTM_COND1.Text.Trim().Length == 4)
+            {
+                if (txt_HTM_METH1.Text.Trim() != substr(txt_HTM_COND1.Text, 0, 1))
+                {
+                    GeneralCommon.Gp_MsgBoxDisplay("热处理方法与热处理条件不一样", "I", "");
+                    txt_HTM_COND1.Text = "";
+                }
+            }
         }
 
         public void Form_Load(object sender, System.EventArgs e)
         {
             base.sSvrPgmPkgName = "CGD2070NC";
             Form_Define();
-
+             txt_plt.Text = "C3";
+             txt_cur_inv_code.Text = "ZB";
+            SDT_PROD_DATE_FROM.RawDate = Gf_DTSet("D","");
+            SDT_PROD_DATE_TO.RawDate = Gf_DTSet("D","");
         }
+
+
+
+
+
+
+
+
+
+
+
+
 
         private void CBO_ROLL_ID_Clk()
         {
