@@ -249,6 +249,71 @@ namespace CG
             SDT_PROD_DATE_TO.RawDate = Gf_DTSet("D","");
         }
 
+        public override bool Form_Cls()
+        {
+            if (base.Form_Cls())
+            {
+                txt_plt.Text = "C3";
+                txt_cur_inv_code.Text = "ZB";
+                SDT_PROD_DATE_FROM.RawDate = Gf_DTSet("D", "");
+                SDT_PROD_DATE_TO.RawDate = Gf_DTSet("D", "");
+                Text1_PLATE_NO.Text = "";
+
+            }
+            return true;
+        }
+
+        public override void Form_Ref()
+        {
+            string SMESG;
+
+            int iRow;
+            string sCurDate;
+            string sDel_To_Date;
+            string sURGNT;
+
+            sCurDate = DateTime.Now.ToString("yyyyMMdd");
+
+            if (!opt_LineFlag0.Checked & !opt_LineFlag2.Checked)
+            {
+                GeneralCommon.Gp_MsgBoxDisplay("请选择精整等待或精整保留...!", "I", "");
+                return;
+            }
+
+            p_Ref(1, 1, true, true);
+
+
+            //超交货期用红色显示 add by liqian 2012-07-23
+            {
+                for (iRow = 1; iRow <= ss1.ActiveSheet.RowCount; iRow++)
+                {
+                    sDel_To_Date = substr(ss1.ActiveSheet.Cells[iRow - 1, SS1_DEL_DATE_TO].Text, 0, 6);
+                    if (convertX(sDel_To_Date) < convertX(sCurDate))
+                    {
+                        SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, iRow - 1, iRow - 1, Color.Red, Color.White);
+                    }
+
+                    //是否紧急订单警示
+                    sURGNT = ss1.ActiveSheet.Cells[iRow - 1, SPD_URGNT_FL].Text;
+                    if (sURGNT == "Y")
+                    {
+                        SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, iRow - 1, iRow - 1, Color.Green, Color.White);
+                    }
+                }
+
+                Text1_PLATE_NO.Text = ss1.ActiveSheet.Cells[0, SS1_PLATE_NO].Text;
+
+                p_Ref(2, 0, true, true);
+            }
+
+        }
+
+        public override void Form_Pro()
+        {
+            p_Pro(1, 1, true, true);
+
+            p_Pro(2, 0, true, true);
+        }
 
 
 
@@ -277,16 +342,6 @@ namespace CG
             }
         }
 
-        public override bool Form_Cls()
-        {
-            if (base.Form_Cls())
-            {
-                TXT_EMP_CD.Text = GeneralCommon.sUserID;
-                CBO_PLT.Text = "C3";
-
-            }
-            return true;
-        }
 
         public override void Form_Ref()
         {
