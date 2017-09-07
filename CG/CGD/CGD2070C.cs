@@ -176,7 +176,7 @@ namespace CG
             p_spanSpread("钢板信息", 9, 11, iscseq, iheadrow, 1);
             p_spanSpread("精整指示及实绩", 12, 23, iscseq, iheadrow, 1);
             p_spanSpread("热处理指示及实绩", 24, 35, iscseq, iheadrow, 1);
-            
+
         }
 
         private void chk_can_Clk()
@@ -243,46 +243,21 @@ namespace CG
         {
             base.sSvrPgmPkgName = "CGD2070NC";
             Form_Define();
-             txt_plt.Text = "C3";
-             txt_cur_inv_code.Text = "ZB";
-            SDT_PROD_DATE_FROM.RawDate = Gf_DTSet("D","");
-            SDT_PROD_DATE_TO.RawDate = Gf_DTSet("D","");
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-        private void CBO_ROLL_ID_Clk()
-        {
-            string sQuery1;
-            string sQuery2;
-            string MAXSEQ;
-            int MAXSEQ_1;
-            string BEF_GRID;
-
-            if (CBO_ROLL_ID.Text != " ")
-            {
-                sQuery1 = "SELECT ROLL_DIA FROM GP_ROLL3 WHERE ROLL_NO = '" + CBO_ROLL_ID.Text + "' ";
-                BEF_GRID = GeneralCommon.Gf_CodeFind(GeneralCommon.M_CN1, sQuery1);
-                SDB_AFT_GRID_DIA.Text = BEF_GRID;
-            }
+            txt_plt.Text = "C3";
+            txt_cur_inv_code.Text = "ZB";
+            SDT_PROD_DATE_FROM.RawDate = Gf_DTSet("D", "");
+            SDT_PROD_DATE_TO.RawDate = Gf_DTSet("D", "");
         }
 
         public override bool Form_Cls()
         {
             if (base.Form_Cls())
             {
-                TXT_EMP_CD.Text = GeneralCommon.sUserID;
-                CBO_PLT.Text = "C3";
+                txt_plt.Text = "C3";
+                txt_cur_inv_code.Text = "ZB";
+                SDT_PROD_DATE_FROM.RawDate = Gf_DTSet("D", "");
+                SDT_PROD_DATE_TO.RawDate = Gf_DTSet("D", "");
+                Text1_PLATE_NO.Text = "";
 
             }
             return true;
@@ -290,20 +265,241 @@ namespace CG
 
         public override void Form_Ref()
         {
-            p_Ref(1, 0, true, true);
-            p_Ref(2, 1, true, true);
+            string SMESG;
+
+            int iRow;
+            string sCurDate;
+            string sDel_To_Date;
+            string sURGNT;
+
+            sCurDate = DateTime.Now.ToString("yyyyMMdd");
+
+            if (!opt_LineFlag0.Checked & !opt_LineFlag2.Checked)
+            {
+                GeneralCommon.Gp_MsgBoxDisplay("请选择精整等待或精整保留...!", "I", "");
+                return;
+            }
+
+            p_Ref(1, 1, true, true);
+
+
+            //超交货期用红色显示 add by liqian 2012-07-23
+            {
+                for (iRow = 1; iRow <= ss1.ActiveSheet.RowCount; iRow++)
+                {
+                    sDel_To_Date = substr(ss1.ActiveSheet.Cells[iRow - 1, SS1_DEL_DATE_TO].Text, 0, 6);
+                    if (convertX(sDel_To_Date) < convertX(sCurDate))
+                    {
+                        SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, iRow - 1, iRow - 1, Color.Red, Color.White);
+                    }
+
+                    //是否紧急订单警示
+                    sURGNT = ss1.ActiveSheet.Cells[iRow - 1, SPD_URGNT_FL].Text;
+                    if (sURGNT == "Y")
+                    {
+                        SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, iRow - 1, iRow - 1, Color.Green, Color.White);
+                    }
+                }
+
+                Text1_PLATE_NO.Text = ss1.ActiveSheet.Cells[0, SS1_PLATE_NO].Text;
+
+                p_Ref(2, 0, true, true);
+            }
 
         }
 
         public override void Form_Pro()
         {
-            p_Pro(1, 0, true, true);
-            Form_Ref();
+            p_Pro(1, 1, true, true);
+
+            p_Pro(2, 0, true, true);
         }
 
-        public override void Form_Del()
+        private void ss1_Clk(int Col, int ROW)
         {
-            p_del(1, 0, true);
+            int ForCnt;
+            string chkFL;
+            string chkOrd;
+            int ORGCOL;
+
+            if (ss1.ActiveSheet.RowCount < 0) return;
+
+            lBlkcol1 = 0;
+            lBlkcol2 = 0;
+            lBlkrow1 = 0;
+            lBlkrow2 = 0;
+
+            ORGCOL = Col;
+
+            if (txt_PrcLine.Text == "1" | txt_PrcLine.Text == "3")
+            {
+
+                ss1.ActiveSheet.Cells[ROW, SS1_USERID].Text = GeneralCommon.sUserID;
+
+
+                if (ORGCOL == SS1_GAS_FL | ORGCOL == SS1_GRID_FL | ORGCOL == SS1_CL_FL)
+                {
+                    ss1.ActiveSheet.Cells[ROW, SS1_LINE].Text = txt_PrcLine.Text;
+                }
+
+                if (ORGCOL == SS1_SPEC_FL)
+                {
+                    if (txt_PrcLine.Text == "1")
+                    {
+                        if (TXT_SPEC_PROC.Text.Length != 1)
+                        {
+                            GeneralCommon.Gp_MsgBoxDisplay("请确认特殊工序", "I", "");
+                            return;
+                        }
+                        ss1.ActiveSheet.Cells[ROW, SS1_LINE].Text = txt_PrcLine.Text;
+                        ss1.ActiveSheet.Cells[ROW, SS1_SPEC_NAME].Text = TXT_SPEC_PROC.Text;
+                    }
+                }
+
+                if (ORGCOL == SS1_UST_FL)
+                {
+                    if (txt_PrcLine.Text == "1")
+                    {
+                        if (txt_UST.Text.Length != 4)
+                        {
+                            GeneralCommon.Gp_MsgBoxDisplay("请确认探伤方法", "I", "");
+                            return;
+                        }
+                        ss1.ActiveSheet.Cells[ROW, SS1_LINE].Text = txt_PrcLine.Text;
+                        ss1.ActiveSheet.Cells[ROW, SS1_UST_M].Text = txt_UST.Text;
+                    }
+                }
+
+                if (ORGCOL == SS1_SB_FL)
+                {
+                    if (txt_PrcLine.Text == "1")
+                    {
+                        if (txt_SB.Text.Trim() == "")
+                        {
+                            GeneralCommon.Gp_MsgBoxDisplay("请确认抛丸方法", "I", "");
+                            return;
+                        }
+                        ss1.ActiveSheet.Cells[ROW, SS1_LINE].Text = txt_PrcLine.Text;
+                        ss1.ActiveSheet.Cells[ROW, SS1_SB_M].Text = txt_SB.Text;
+                    }
+                }
+
+                if (ORGCOL == SS1_HTM_FL)
+                {
+
+                    if (txt_PrcLine.Text == "1")
+                    {
+
+                        if (txt_HTM_METH1.Text == "" && txt_HTM_METH2.Text == "" && txt_HTM_METH3.Text == "")
+                        {
+                            GeneralCommon.Gp_MsgBoxDisplay("请确认热处理方法", "I", "");
+                            return;
+                        }
+
+                        if (txt_HTM_METH1.Text == "" && txt_HTM_METH2.Text != "")
+                        {
+                            GeneralCommon.Gp_MsgBoxDisplay("请确认热处理方法一", "I", "");
+                            return;
+                        }
+
+                        if (txt_HTM_METH2.Text == "" && txt_HTM_METH3.Text != "")
+                        {
+                            GeneralCommon.Gp_MsgBoxDisplay("请确认热处理方法二", "I", "");
+                            return;
+                        }
+
+                        if (txt_HTM_METH1.Text != "" && txt_HTM_COND1.Text == "")
+                        {
+                            GeneralCommon.Gp_MsgBoxDisplay("请确认热处理条件一", "I", "");
+                            return;
+                        }
+
+                        if (txt_HTM_METH2.Text != "" && txt_HTM_COND2.Text == "")
+                        {
+                            GeneralCommon.Gp_MsgBoxDisplay("请确认热处理条件二", "I", "");
+                            return;
+                        }
+
+                        if (txt_HTM_METH3.Text != "" && txt_HTM_COND3.Text == "")
+                        {
+                            GeneralCommon.Gp_MsgBoxDisplay("请确认热处理条件三", "I", "");
+                            return;
+                        }
+
+                        ss1.ActiveSheet.Cells[ROW, SS1_LINE].Text = txt_PrcLine.Text;
+                        ss1.ActiveSheet.Cells[ROW, SS1_HTM_M1].Text = txt_HTM_METH1.Text;
+                        ss1.ActiveSheet.Cells[ROW, SS1_HTM_C1].Text = txt_HTM_COND1.Text;
+                        ss1.ActiveSheet.Cells[ROW, SS1_HTM_M2].Text = txt_HTM_METH2.Text;
+                        ss1.ActiveSheet.Cells[ROW, SS1_HTM_C2].Text = txt_HTM_COND2.Text;
+                        ss1.ActiveSheet.Cells[ROW, SS1_HTM_M3].Text = txt_HTM_METH3.Text;
+                        ss1.ActiveSheet.Cells[ROW, SS1_HTM_C3].Text = txt_HTM_COND3.Text;
+
+                    }
+                    else
+                    {
+
+                        if (!chk_can0.Checked & !chk_can1.Checked & !chk_can2.Checked)
+                        {
+                            GeneralCommon.Gp_MsgBoxDisplay("请选择取消方法", "I", "");
+                            return;
+                        }
+
+                        if (chk_can0.Checked & !chk_can1.Checked & chk_can2.Checked)
+                        {
+                            GeneralCommon.Gp_MsgBoxDisplay("请按顺序选择取消方法", "I", "");
+                            return;
+                        }
+
+                        if (chk_can0.Checked)
+                        {
+                            ss1.ActiveSheet.Cells[ROW, SS1_HTM_M1].Text = "";
+                            ss1.ActiveSheet.Cells[ROW, SS1_HTM_C1].Text = "";
+                        }
+
+                        if (chk_can1.Checked)
+                        {
+                            ss1.ActiveSheet.Cells[ROW, SS1_HTM_M2].Text = "";
+                            ss1.ActiveSheet.Cells[ROW, SS1_HTM_C2].Text = "";
+                        }
+
+                        if (chk_can2.Checked)
+                        {
+                            ss1.ActiveSheet.Cells[ROW, SS1_HTM_M3].Text = "";
+                            ss1.ActiveSheet.Cells[ROW, SS1_HTM_C3].Text = "";
+                        }
+
+                    }
+
+                }
+
+                if (ORGCOL == SS1_REMARK)
+                {
+
+                    //            If txt_PrcLine = "1" Then
+                    //                If Trim(txt_REMARKS) = "" Then
+                    //                   MsgBox "请确认备注内容", vbOKOnly + vbQuestion, "提示"
+                    //                   Exit Sub
+                    //                End If
+                    //            End If
+
+                    ss1.ActiveSheet.RowHeader.Cells[ROW, 0].Text = "修改";
+                    ss1.ActiveSheet.Cells[ROW, SS1_LINE].Text = txt_PrcLine.Text;
+                    ss1.ActiveSheet.Cells[ROW, SS1_REMARK].Text = ss1.ActiveSheet.Cells[ROW, SS1_REMARK].Text;
+                    //ss1.Text = txt_REMARKS
+
+                }
+            }
+
+            Text1_PLATE_NO.Text = "";
+
+            txt_REMARKS.Text = "";
+
+
+            Text1_PLATE_NO.Text = ss1.ActiveSheet.Cells[ROW, SS1_PLATE_NO].Text;
+            //ss1.Text = txt_REMARKS
+
+            p_Ref(2, 0, true, true);
+
         }
 
         # region 公共方法
@@ -609,9 +805,9 @@ namespace CG
 
         #endregion
 
-        private void CBO_ROLL_ID_TextChanged(object sender, EventArgs e)
+        private void ss1_CellClick(object sender, CellClickEventArgs e)
         {
-            CBO_ROLL_ID_Clk();
+            ss1_Clk(e.Column, e.Row);
         }
 
 

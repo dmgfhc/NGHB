@@ -859,6 +859,7 @@
             this.fpSpread1_Sheet1});
             this.ss1.Size = new System.Drawing.Size(1237, 314);
             this.ss1.TabIndex = 2;
+            this.ss1.CellClick += new FarPoint.Win.Spread.CellClickEventHandler(this.ss1_CellClick);
             // 
             // fpSpread1_Sheet1
             // 
