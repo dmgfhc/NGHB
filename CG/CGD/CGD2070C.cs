@@ -219,10 +219,12 @@ namespace CG
                 if (LineFlag.Checked == true)
                 {
                     LineFlag.ForeColor = Color.Red;
+                    txt_PrcLine.Text = "1";
                 }
                 else
                 {
                     LineFlag.ForeColor = Color.Black;
+                    txt_PrcLine.Text = "3";
                 }
             }
         }
@@ -247,6 +249,8 @@ namespace CG
             txt_cur_inv_code.Text = "ZB";
             SDT_PROD_DATE_FROM.RawDate = Gf_DTSet("D", "");
             SDT_PROD_DATE_TO.RawDate = Gf_DTSet("D", "");
+            opt_LineFlag0.Checked = true;
+            txt_PrcLine.Text = "1";
         }
 
         public override bool Form_Cls()
@@ -258,60 +262,10 @@ namespace CG
                 SDT_PROD_DATE_FROM.RawDate = Gf_DTSet("D", "");
                 SDT_PROD_DATE_TO.RawDate = Gf_DTSet("D", "");
                 Text1_PLATE_NO.Text = "";
+                opt_LineFlag0.Checked = true;
+                txt_PrcLine.Text = "1";
             }
             return true;
-        }
-
-        public override void Form_Ref()
-        {
-            string SMESG;
-
-            int iRow;
-            string sCurDate;
-            string sDel_To_Date;
-            string sURGNT;
-
-            sCurDate = DateTime.Now.ToString("yyyyMMdd");
-
-            if (!opt_LineFlag0.Checked & !opt_LineFlag2.Checked)
-            {
-                GeneralCommon.Gp_MsgBoxDisplay("请选择精整等待或精整保留...!", "I", "");
-                return;
-            }
-
-            p_Ref(1, 1, true, true);
-
-
-            //超交货期用红色显示 add by liqian 2012-07-23
-            {
-                for (iRow = 1; iRow <= ss1.ActiveSheet.RowCount; iRow++)
-                {
-                    sDel_To_Date = substr(ss1.ActiveSheet.Cells[iRow - 1, SS1_DEL_DATE_TO].Text, 0, 6);
-                    if (convertX(sDel_To_Date) < convertX(sCurDate))
-                    {
-                        SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, iRow - 1, iRow - 1, Color.Red, Color.White);
-                    }
-
-                    //是否紧急订单警示
-                    sURGNT = ss1.ActiveSheet.Cells[iRow - 1, SPD_URGNT_FL].Text;
-                    if (sURGNT == "Y")
-                    {
-                        SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, iRow - 1, iRow - 1, Color.Green, Color.White);
-                    }
-                }
-
-                Text1_PLATE_NO.Text = ss1.ActiveSheet.Cells[0, SS1_PLATE_NO].Text;
-
-                p_Ref(2, 0, true, true);
-            }
-
-        }
-
-        public override void Form_Pro()
-        {
-            p_Pro(1, 1, true, true);
-
-            p_Pro(2, 0, true, true);
         }
 
         public override void Form_Ref()
@@ -860,6 +814,36 @@ namespace CG
         private void ss1_CellClick(object sender, CellClickEventArgs e)
         {
             ss1_Clk(e.Column, e.Row);
+        }
+
+        private void chk_can0_CheckedChanged(object sender, EventArgs e)
+        {
+            chk_can_Clk();
+        }
+
+        private void chk_can1_CheckedChanged(object sender, EventArgs e)
+        {
+            chk_can_Clk();
+        }
+
+        private void chk_can2_CheckedChanged(object sender, EventArgs e)
+        {
+            chk_can_Clk();
+        }
+
+        private void opt_LineFlag0_CheckedChanged(object sender, EventArgs e)
+        {
+            opt_LineFlag_Clk();
+        }
+
+        private void opt_LineFlag2_CheckedChanged(object sender, EventArgs e)
+        {
+            opt_LineFlag_Clk();
+        }
+
+        private void txt_HTM_COND1_TextChanged(object sender, EventArgs e)
+        {
+            txt_HTM_COND1_Chg();
         }
 
 

@@ -236,6 +236,7 @@
             this.txt_HTM_COND1.sSqletc = resources.GetString("txt_HTM_COND1.sSqletc");
             this.txt_HTM_COND1.TabIndex = 749;
             this.txt_HTM_COND1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_HTM_COND1.TextChanged += new System.EventHandler(this.txt_HTM_COND1_TextChanged);
             // 
             // txt_HTM_COND2
             // 
@@ -610,6 +611,7 @@
             this.opt_LineFlag2.TabIndex = 1;
             this.opt_LineFlag2.Text = "指示取消";
             this.opt_LineFlag2.UseVisualStyleBackColor = true;
+            this.opt_LineFlag2.CheckedChanged += new System.EventHandler(this.opt_LineFlag2_CheckedChanged);
             // 
             // txt_PrcLine
             // 
@@ -631,6 +633,7 @@
             this.opt_LineFlag0.TabStop = true;
             this.opt_LineFlag0.Text = "精整指示";
             this.opt_LineFlag0.UseVisualStyleBackColor = true;
+            this.opt_LineFlag0.CheckedChanged += new System.EventHandler(this.opt_LineFlag0_CheckedChanged);
             // 
             // cbo_shift
             // 
@@ -716,6 +719,7 @@
             this.chk_can2.TabIndex = 758;
             this.chk_can2.Text = "取消三";
             this.chk_can2.UseVisualStyleBackColor = true;
+            this.chk_can2.CheckedChanged += new System.EventHandler(this.chk_can2_CheckedChanged);
             // 
             // chk_can1
             // 
@@ -726,6 +730,7 @@
             this.chk_can1.TabIndex = 757;
             this.chk_can1.Text = "取消二";
             this.chk_can1.UseVisualStyleBackColor = true;
+            this.chk_can1.CheckedChanged += new System.EventHandler(this.chk_can1_CheckedChanged);
             // 
             // chk_can0
             // 
@@ -736,6 +741,7 @@
             this.chk_can0.TabIndex = 756;
             this.chk_can0.Text = "取消一";
             this.chk_can0.UseVisualStyleBackColor = true;
+            this.chk_can0.CheckedChanged += new System.EventHandler(this.chk_can0_CheckedChanged);
             // 
             // label22
             // 
