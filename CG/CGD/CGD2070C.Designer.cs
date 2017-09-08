@@ -38,9 +38,6 @@
             CommonClass.BControlFiledSetting bControlFiledSetting7 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting8 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting9 = new CommonClass.BControlFiledSetting();
-            CommonClass.BControlFiledSetting bControlFiledSetting10 = new CommonClass.BControlFiledSetting();
-            CommonClass.BControlFiledSetting bControlFiledSetting11 = new CommonClass.BControlFiledSetting();
-            CommonClass.BControlFiledSetting bControlFiledSetting12 = new CommonClass.BControlFiledSetting();
             this.txt_plt = new CommonClass.F4ETCR();
             this.txt_plt_name = new System.Windows.Forms.TextBox();
             this.txt_cur_inv_code = new CommonClass.F4ETCR();
@@ -48,10 +45,7 @@
             this.txt_SB = new CommonClass.F4ETCR();
             this.TXT_SPEC_PROC = new CommonClass.F4ETCR();
             this.txt_HTM_METH1 = new CommonClass.F4ETCR();
-            this.txt_HTM_COND1 = new CommonClass.F4ETCR();
-            this.txt_HTM_COND2 = new CommonClass.F4ETCR();
             this.txt_HTM_METH2 = new CommonClass.F4ETCR();
-            this.txt_HTM_COND3 = new CommonClass.F4ETCR();
             this.txt_HTM_METH3 = new CommonClass.F4ETCR();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.TXT_LOC = new System.Windows.Forms.TextBox();
@@ -85,13 +79,15 @@
             this.cbo_shift = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txt_HTM_COND3 = new CommonClass.F4ETCN();
+            this.txt_HTM_COND2 = new CommonClass.F4ETCN();
+            this.txt_HTM_COND1 = new CommonClass.F4ETCN();
             this.txt_REMARKS = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.chk_can2 = new System.Windows.Forms.CheckBox();
             this.chk_can1 = new System.Windows.Forms.CheckBox();
             this.chk_can0 = new System.Windows.Forms.CheckBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -103,6 +99,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.ss1 = new FarPoint.Win.Spread.FpSpread();
             this.fpSpread1_Sheet1 = new FarPoint.Win.Spread.SheetView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -221,43 +218,13 @@
     "D         like \'%\'  ORDER  BY  CD  ASC ";
             this.txt_HTM_METH1.TabIndex = 748;
             this.txt_HTM_METH1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txt_HTM_COND1
-            // 
-            bControlFiledSetting8.ColumnID = "CD";
-            bControlFiledSetting8.TargetControl = this.txt_HTM_COND1;
-            this.txt_HTM_COND1.CustomSetting.Add(bControlFiledSetting8);
-            this.txt_HTM_COND1.InputControl = this.txt_HTM_COND1;
-            this.txt_HTM_COND1.Location = new System.Drawing.Point(348, 38);
-            this.txt_HTM_COND1.MaxLength = 100;
-            this.txt_HTM_COND1.Name = "txt_HTM_COND1";
-            this.txt_HTM_COND1.Size = new System.Drawing.Size(55, 22);
-            this.txt_HTM_COND1.sJoin = "";
-            this.txt_HTM_COND1.sSqletc = resources.GetString("txt_HTM_COND1.sSqletc");
-            this.txt_HTM_COND1.TabIndex = 749;
-            this.txt_HTM_COND1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txt_HTM_COND1.TextChanged += new System.EventHandler(this.txt_HTM_COND1_TextChanged);
-            // 
-            // txt_HTM_COND2
-            // 
-            bControlFiledSetting9.ColumnID = "CD";
-            bControlFiledSetting9.TargetControl = this.txt_HTM_COND2;
-            this.txt_HTM_COND2.CustomSetting.Add(bControlFiledSetting9);
-            this.txt_HTM_COND2.InputControl = this.txt_HTM_COND2;
-            this.txt_HTM_COND2.Location = new System.Drawing.Point(453, 38);
-            this.txt_HTM_COND2.MaxLength = 100;
-            this.txt_HTM_COND2.Name = "txt_HTM_COND2";
-            this.txt_HTM_COND2.Size = new System.Drawing.Size(55, 22);
-            this.txt_HTM_COND2.sJoin = "";
-            this.txt_HTM_COND2.sSqletc = resources.GetString("txt_HTM_COND2.sSqletc");
-            this.txt_HTM_COND2.TabIndex = 751;
-            this.txt_HTM_COND2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_HTM_METH1.TextChanged += new System.EventHandler(this.txt_HTM_METH1_TextChanged);
             // 
             // txt_HTM_METH2
             // 
-            bControlFiledSetting10.ColumnID = "CD";
-            bControlFiledSetting10.TargetControl = this.txt_HTM_METH2;
-            this.txt_HTM_METH2.CustomSetting.Add(bControlFiledSetting10);
+            bControlFiledSetting8.ColumnID = "CD";
+            bControlFiledSetting8.TargetControl = this.txt_HTM_METH2;
+            this.txt_HTM_METH2.CustomSetting.Add(bControlFiledSetting8);
             this.txt_HTM_METH2.InputControl = this.txt_HTM_METH2;
             this.txt_HTM_METH2.Location = new System.Drawing.Point(409, 38);
             this.txt_HTM_METH2.MaxLength = 100;
@@ -269,27 +236,13 @@
     "D         like \'%\'  ORDER  BY  CD  ASC ";
             this.txt_HTM_METH2.TabIndex = 750;
             this.txt_HTM_METH2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txt_HTM_COND3
-            // 
-            bControlFiledSetting11.ColumnID = "CD";
-            bControlFiledSetting11.TargetControl = this.txt_HTM_COND3;
-            this.txt_HTM_COND3.CustomSetting.Add(bControlFiledSetting11);
-            this.txt_HTM_COND3.InputControl = this.txt_HTM_COND3;
-            this.txt_HTM_COND3.Location = new System.Drawing.Point(558, 38);
-            this.txt_HTM_COND3.MaxLength = 100;
-            this.txt_HTM_COND3.Name = "txt_HTM_COND3";
-            this.txt_HTM_COND3.Size = new System.Drawing.Size(55, 22);
-            this.txt_HTM_COND3.sJoin = "";
-            this.txt_HTM_COND3.sSqletc = resources.GetString("txt_HTM_COND3.sSqletc");
-            this.txt_HTM_COND3.TabIndex = 753;
-            this.txt_HTM_COND3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_HTM_METH2.TextChanged += new System.EventHandler(this.txt_HTM_METH2_TextChanged);
             // 
             // txt_HTM_METH3
             // 
-            bControlFiledSetting12.ColumnID = "CD";
-            bControlFiledSetting12.TargetControl = this.txt_HTM_METH3;
-            this.txt_HTM_METH3.CustomSetting.Add(bControlFiledSetting12);
+            bControlFiledSetting9.ColumnID = "CD";
+            bControlFiledSetting9.TargetControl = this.txt_HTM_METH3;
+            this.txt_HTM_METH3.CustomSetting.Add(bControlFiledSetting9);
             this.txt_HTM_METH3.InputControl = this.txt_HTM_METH3;
             this.txt_HTM_METH3.Location = new System.Drawing.Point(514, 38);
             this.txt_HTM_METH3.MaxLength = 100;
@@ -301,6 +254,7 @@
     "D         like \'%\'  ORDER  BY  CD  ASC ";
             this.txt_HTM_METH3.TabIndex = 752;
             this.txt_HTM_METH3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_HTM_METH3.TextChanged += new System.EventHandler(this.txt_HTM_METH3_TextChanged);
             // 
             // groupBox1
             // 
@@ -660,18 +614,18 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txt_HTM_COND3);
+            this.groupBox2.Controls.Add(this.txt_HTM_COND2);
+            this.groupBox2.Controls.Add(this.txt_HTM_COND1);
             this.groupBox2.Controls.Add(this.txt_REMARKS);
             this.groupBox2.Controls.Add(this.label23);
             this.groupBox2.Controls.Add(this.chk_can2);
             this.groupBox2.Controls.Add(this.chk_can1);
             this.groupBox2.Controls.Add(this.chk_can0);
             this.groupBox2.Controls.Add(this.label22);
-            this.groupBox2.Controls.Add(this.label21);
-            this.groupBox2.Controls.Add(this.txt_HTM_COND3);
             this.groupBox2.Controls.Add(this.txt_HTM_METH3);
-            this.groupBox2.Controls.Add(this.txt_HTM_COND2);
             this.groupBox2.Controls.Add(this.txt_HTM_METH2);
-            this.groupBox2.Controls.Add(this.txt_HTM_COND1);
             this.groupBox2.Controls.Add(this.txt_HTM_METH1);
             this.groupBox2.Controls.Add(this.label20);
             this.groupBox2.Controls.Add(this.label19);
@@ -690,6 +644,40 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
+            // txt_HTM_COND3
+            // 
+            this.txt_HTM_COND3.Location = new System.Drawing.Point(566, 38);
+            this.txt_HTM_COND3.MaxLength = 18;
+            this.txt_HTM_COND3.Name = "txt_HTM_COND3";
+            this.txt_HTM_COND3.sFcontrol = "HTM_COND";
+            this.txt_HTM_COND3.Size = new System.Drawing.Size(47, 22);
+            this.txt_HTM_COND3.sJoin = "";
+            this.txt_HTM_COND3.sSqletc = resources.GetString("txt_HTM_COND3.sSqletc");
+            this.txt_HTM_COND3.TabIndex = 763;
+            // 
+            // txt_HTM_COND2
+            // 
+            this.txt_HTM_COND2.Location = new System.Drawing.Point(461, 38);
+            this.txt_HTM_COND2.MaxLength = 18;
+            this.txt_HTM_COND2.Name = "txt_HTM_COND2";
+            this.txt_HTM_COND2.sFcontrol = "HTM_COND";
+            this.txt_HTM_COND2.Size = new System.Drawing.Size(47, 22);
+            this.txt_HTM_COND2.sJoin = "";
+            this.txt_HTM_COND2.sSqletc = resources.GetString("txt_HTM_COND2.sSqletc");
+            this.txt_HTM_COND2.TabIndex = 762;
+            // 
+            // txt_HTM_COND1
+            // 
+            this.txt_HTM_COND1.Location = new System.Drawing.Point(356, 38);
+            this.txt_HTM_COND1.MaxLength = 18;
+            this.txt_HTM_COND1.Name = "txt_HTM_COND1";
+            this.txt_HTM_COND1.sFcontrol = "HTM_COND";
+            this.txt_HTM_COND1.Size = new System.Drawing.Size(47, 22);
+            this.txt_HTM_COND1.sJoin = "";
+            this.txt_HTM_COND1.sSqletc = resources.GetString("txt_HTM_COND1.sSqletc");
+            this.txt_HTM_COND1.TabIndex = 761;
+            this.txt_HTM_COND1.TextChanged += new System.EventHandler(this.txt_HTM_COND1_TextChanged);
+            // 
             // txt_REMARKS
             // 
             this.txt_REMARKS.Location = new System.Drawing.Point(766, 15);
@@ -701,7 +689,7 @@
             // 
             // label23
             // 
-            this.label23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.label23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.label23.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label23.Location = new System.Drawing.Point(692, 15);
             this.label23.Name = "label23";
@@ -753,16 +741,6 @@
             this.label22.Text = "热处理取消";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label21
-            // 
-            this.label21.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label21.Location = new System.Drawing.Point(199, 38);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(99, 22);
-            this.label21.TabIndex = 754;
-            this.label21.Text = "热处理指示";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label20
             // 
             this.label20.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -798,7 +776,7 @@
             this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label8.Location = new System.Drawing.Point(199, 10);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(99, 22);
+            this.label8.Size = new System.Drawing.Size(99, 50);
             this.label8.TabIndex = 744;
             this.label8.Text = "热处理指示";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -871,6 +849,13 @@
             // 
             this.fpSpread1_Sheet1.Reset();
             this.fpSpread1_Sheet1.SheetName = "Sheet1";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(356, 94);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 764;
             // 
             // CGD2070C
             // 
@@ -945,12 +930,8 @@
         private System.Windows.Forms.CheckBox chk_can1;
         private System.Windows.Forms.CheckBox chk_can0;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label21;
-        private CommonClass.F4ETCR txt_HTM_COND3;
         private CommonClass.F4ETCR txt_HTM_METH3;
-        private CommonClass.F4ETCR txt_HTM_COND2;
         private CommonClass.F4ETCR txt_HTM_METH2;
-        private CommonClass.F4ETCR txt_HTM_COND1;
         private CommonClass.F4ETCR txt_HTM_METH1;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
@@ -959,5 +940,9 @@
         private System.Windows.Forms.TextBox txt_REMARKS;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox TXT_LOC;
+        private CommonClass.F4ETCN txt_HTM_COND1;
+        private CommonClass.F4ETCN txt_HTM_COND3;
+        private CommonClass.F4ETCN txt_HTM_COND2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

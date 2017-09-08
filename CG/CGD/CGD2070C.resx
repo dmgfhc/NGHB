@@ -123,13 +123,13 @@
   <data name="txt_UST.sSqletc" xml:space="preserve">
     <value>SELECT CD "代码", CD_SHORT_NAME "代码简称", CD_NAME "代码名称",        CD_SHORT_ENG "代码英文简称", CD_FULL_ENG "代码英文名称" FROM NISCO.ZP_CD  WHERE CD_MANA_NO =    'Q0046'    AND CD         like '%'  AND NVL(APLY_STD,'N') =    'Y' ORDER  BY  CD  ASC </value>
   </data>
-  <data name="txt_HTM_COND1.sSqletc" xml:space="preserve">
+  <data name="txt_HTM_COND3.sSqletc" xml:space="preserve">
     <value>SELECT HTM_COND "热处理条件", HEAT_TEMP_AIM "保温温度" ,HEAT_RATE_AIM  "升温速率",         HEAT_TIME_AIM "保温时间",WATER_TEMP_AIM "水冷返红温度",       HTM_COOL_TYP  "冷却方式", COOL_PATTERN_TYPE  "冷却模式"  FROM NISCO.QP_HEAT_TECH WHERE HTM_COND             LIKE      '%'  ORDER  BY  HTM_COND  ASC</value>
   </data>
   <data name="txt_HTM_COND2.sSqletc" xml:space="preserve">
     <value>SELECT HTM_COND "热处理条件", HEAT_TEMP_AIM "保温温度" ,HEAT_RATE_AIM  "升温速率",         HEAT_TIME_AIM "保温时间",WATER_TEMP_AIM "水冷返红温度",       HTM_COOL_TYP  "冷却方式", COOL_PATTERN_TYPE  "冷却模式"  FROM NISCO.QP_HEAT_TECH WHERE HTM_COND             LIKE      '%'  ORDER  BY  HTM_COND  ASC</value>
   </data>
-  <data name="txt_HTM_COND3.sSqletc" xml:space="preserve">
+  <data name="txt_HTM_COND1.sSqletc" xml:space="preserve">
     <value>SELECT HTM_COND "热处理条件", HEAT_TEMP_AIM "保温温度" ,HEAT_RATE_AIM  "升温速率",         HEAT_TIME_AIM "保温时间",WATER_TEMP_AIM "水冷返红温度",       HTM_COOL_TYP  "冷却方式", COOL_PATTERN_TYPE  "冷却模式"  FROM NISCO.QP_HEAT_TECH WHERE HTM_COND             LIKE      '%'  ORDER  BY  HTM_COND  ASC</value>
   </data>
   <metadata name="fpSpread1_Sheet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

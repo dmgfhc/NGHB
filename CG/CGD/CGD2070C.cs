@@ -91,7 +91,7 @@ namespace CG
             int imcseq;
             p_McIni(Mc1, false);
             imcseq = 1;
-            p_SetMc("", txt_PrcLine, "PA", "", "", "", "", imcseq);//0
+            p_SetMc("", txt_PrcLine, "P", "", "", "", "", imcseq);//0
             p_SetMc("", TXT_PLATE_NO, "P", "", "", "", "", imcseq);//1
             p_SetMc("", SDT_PROD_DATE_FROM, "P", "", "", "", "", imcseq);//2
             p_SetMc("", SDT_PROD_DATE_TO, "P", "", "", "", "", imcseq);//3
@@ -125,8 +125,8 @@ namespace CG
             p_SetSc("进程代码", "E", "14", "L", "", "", "", iscseq, iheadrow, "M"); //4
             p_SetSc("指定", "C", "", "I", "", "", "", iscseq, iheadrow, "M"); //5
             p_SetSc("名称", "E", "20", "IL", "", "", "", iscseq, iheadrow, "M"); //6
-            p_SetSc("入库日期", "D", "", "L", "", "", "", iscseq, iheadrow, "M"); //7
-            p_SetSc("交货期", "D", "", "L", "", "", "", iscseq, iheadrow, "M"); //8
+            p_SetSc("入库日期", "E", "20", "L", "", "", "", iscseq, iheadrow, "M"); //7
+            p_SetSc("交货期", "E", "20", "L", "", "", "", iscseq, iheadrow, "M"); //8
             p_SetSc("标准号", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //9
             p_SetSc("厚度*宽度*长度", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //10
             p_SetSc("重量", "E", "20", "L", "", "", "", iscseq, iheadrow, "R"); //11
@@ -176,6 +176,10 @@ namespace CG
             p_spanSpread("钢板信息", 9, 11, iscseq, iheadrow, 1);
             p_spanSpread("精整指示及实绩", 12, 23, iscseq, iheadrow, 1);
             p_spanSpread("热处理指示及实绩", 24, 35, iscseq, iheadrow, 1);
+
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SS1_CONF_TIME, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SS1_LINE, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SS1_USERID, true);
 
         }
 
@@ -247,10 +251,19 @@ namespace CG
             Form_Define();
             txt_plt.Text = "C3";
             txt_cur_inv_code.Text = "ZB";
+            txt_plt_name.Text = "中板厂";
             SDT_PROD_DATE_FROM.RawDate = Gf_DTSet("D", "");
             SDT_PROD_DATE_TO.RawDate = Gf_DTSet("D", "");
             opt_LineFlag0.Checked = true;
             txt_PrcLine.Text = "1";
+            txt_REMARKS.Width = 229;
+            txt_REMARKS.Height = 77;
+            label23.Width = 68;
+            label23.Height = 77;
+            label23.TextAlign = ContentAlignment.MiddleCenter;
+            label8.Width = 99;
+            label8.Height = 50;
+            label8.TextAlign = ContentAlignment.MiddleCenter;
         }
 
         public override bool Form_Cls()
@@ -258,6 +271,7 @@ namespace CG
             if (base.Form_Cls())
             {
                 txt_plt.Text = "C3";
+                txt_plt_name.Text = "中板厂";
                 txt_cur_inv_code.Text = "ZB";
                 SDT_PROD_DATE_FROM.RawDate = Gf_DTSet("D", "");
                 SDT_PROD_DATE_TO.RawDate = Gf_DTSet("D", "");
@@ -277,7 +291,7 @@ namespace CG
             string sDel_To_Date;
             string sURGNT;
 
-            sCurDate = DateTime.Now.ToString("yyyyMMdd");
+            sCurDate = DateTime.Now.ToString("yyyyMM");
 
             if (!opt_LineFlag0.Checked & !opt_LineFlag2.Checked)
             {
@@ -293,7 +307,7 @@ namespace CG
                 for (iRow = 1; iRow <= ss1.ActiveSheet.RowCount; iRow++)
                 {
                     sDel_To_Date = substr(ss1.ActiveSheet.Cells[iRow - 1, SS1_DEL_DATE_TO].Text, 0, 6);
-                    if (convertX(sDel_To_Date) < convertX(sCurDate))
+                    if (sDel_To_Date!="" && convertX(sDel_To_Date) < convertX(sCurDate))
                     {
                         SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, iRow - 1, iRow - 1, Color.Red, Color.White);
                     }
@@ -308,7 +322,7 @@ namespace CG
 
                 Text1_PLATE_NO.Text = ss1.ActiveSheet.Cells[0, SS1_PLATE_NO].Text;
 
-                p_Ref(2, 0, true, true);
+                p_Ref(2, 0, true, false);
             }
 
         }
@@ -504,7 +518,7 @@ namespace CG
             Text1_PLATE_NO.Text = ss1.ActiveSheet.Cells[ROW, SS1_PLATE_NO].Text;
             //ss1.Text = txt_REMARKS
 
-            p_Ref(2, 0, true, true);
+            p_Ref(2, 0, true, false);
 
         }
 
@@ -844,6 +858,21 @@ namespace CG
         private void txt_HTM_COND1_TextChanged(object sender, EventArgs e)
         {
             txt_HTM_COND1_Chg();
+        }
+
+        private void txt_HTM_METH2_TextChanged(object sender, EventArgs e)
+        {
+            txt_HTM_COND2.sSqletc = "SELECT HTM_COND \"热处理条件\", HEAT_TEMP_AIM \"保温温度\" ,HEAT_RATE_AIM  \"升温速率\",HEAT_TIME_AIM \"保温时间\",WATER_TEMP_AIM \"水冷返红温度\",HTM_COOL_TYP \"冷却方式\", COOL_PATTERN_TYPE \"冷却模式\" FROM NISCO.QP_HEAT_TECH WHERE HTM_COND LIKE" + "'" + txt_HTM_METH2.Text.Trim() + "%'  ORDER  BY  HTM_COND  ASC";
+        }
+
+        private void txt_HTM_METH3_TextChanged(object sender, EventArgs e)
+        {
+            txt_HTM_COND3.sSqletc = "SELECT HTM_COND \"热处理条件\", HEAT_TEMP_AIM \"保温温度\" ,HEAT_RATE_AIM  \"升温速率\",HEAT_TIME_AIM \"保温时间\",WATER_TEMP_AIM \"水冷返红温度\",HTM_COOL_TYP \"冷却方式\", COOL_PATTERN_TYPE \"冷却模式\" FROM NISCO.QP_HEAT_TECH WHERE HTM_COND LIKE" + "'" + txt_HTM_METH3.Text.Trim() + "%'  ORDER  BY  HTM_COND  ASC";
+        }
+
+        private void txt_HTM_METH1_TextChanged(object sender, EventArgs e)
+        {
+            txt_HTM_COND1.sSqletc = "SELECT HTM_COND \"热处理条件\", HEAT_TEMP_AIM \"保温温度\" ,HEAT_RATE_AIM  \"升温速率\",HEAT_TIME_AIM \"保温时间\",WATER_TEMP_AIM \"水冷返红温度\",HTM_COOL_TYP \"冷却方式\", COOL_PATTERN_TYPE \"冷却模式\" FROM NISCO.QP_HEAT_TECH WHERE HTM_COND LIKE" + "'" + txt_HTM_METH1.Text.Trim() + "%'  ORDER  BY  HTM_COND  ASC";
         }
 
 
