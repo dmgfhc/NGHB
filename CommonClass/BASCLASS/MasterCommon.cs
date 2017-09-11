@@ -15,7 +15,7 @@ namespace CommonClass
         public bool iMcRecord;//前台Mc是否记录操作 20130228
        /// <summary>
        /// 根据传入的squery，执行squery中对应的后台程序，执行成功返回true，否则返回false。
-       /// </summary>
+       /// </summary>Gf_Ms_ExecQuery
        /// <param name="Conn"></param>
        /// <param name="sQuery"></param>
        /// <returns></returns>

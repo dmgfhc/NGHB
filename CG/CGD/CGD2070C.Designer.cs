@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            CommonClass.BControlFiledSetting bControlFiledSetting10 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting11 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting1 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting2 = new CommonClass.BControlFiledSetting();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CGD2070C));
             CommonClass.BControlFiledSetting bControlFiledSetting3 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting4 = new CommonClass.BControlFiledSetting();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CGD2070C));
             CommonClass.BControlFiledSetting bControlFiledSetting5 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting6 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting7 = new CommonClass.BControlFiledSetting();
-            CommonClass.BControlFiledSetting bControlFiledSetting8 = new CommonClass.BControlFiledSetting();
-            CommonClass.BControlFiledSetting bControlFiledSetting9 = new CommonClass.BControlFiledSetting();
             this.txt_plt = new CommonClass.F4ETCR();
             this.txt_plt_name = new System.Windows.Forms.TextBox();
             this.txt_cur_inv_code = new CommonClass.F4ETCR();
@@ -79,6 +79,7 @@
             this.cbo_shift = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.txt_HTM_COND3 = new CommonClass.F4ETCN();
             this.txt_HTM_COND2 = new CommonClass.F4ETCN();
             this.txt_HTM_COND1 = new CommonClass.F4ETCN();
@@ -99,7 +100,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.ss1 = new FarPoint.Win.Spread.FpSpread();
             this.fpSpread1_Sheet1 = new FarPoint.Win.Spread.SheetView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -110,12 +110,12 @@
             // 
             // txt_plt
             // 
-            bControlFiledSetting1.ColumnID = "CD";
-            bControlFiledSetting1.TargetControl = this.txt_plt;
-            bControlFiledSetting2.ColumnID = "CD_SHORT_NAME";
-            bControlFiledSetting2.TargetControl = this.txt_plt_name;
-            this.txt_plt.CustomSetting.Add(bControlFiledSetting1);
-            this.txt_plt.CustomSetting.Add(bControlFiledSetting2);
+            bControlFiledSetting10.ColumnID = "CD";
+            bControlFiledSetting10.TargetControl = this.txt_plt;
+            bControlFiledSetting11.ColumnID = "CD_SHORT_NAME";
+            bControlFiledSetting11.TargetControl = this.txt_plt_name;
+            this.txt_plt.CustomSetting.Add(bControlFiledSetting10);
+            this.txt_plt.CustomSetting.Add(bControlFiledSetting11);
             this.txt_plt.InputControl = this.txt_plt;
             this.txt_plt.Location = new System.Drawing.Point(232, 15);
             this.txt_plt.MaxLength = 2;
@@ -138,9 +138,9 @@
             // 
             // txt_cur_inv_code
             // 
-            bControlFiledSetting3.ColumnID = "CD";
-            bControlFiledSetting3.TargetControl = this.txt_cur_inv_code;
-            this.txt_cur_inv_code.CustomSetting.Add(bControlFiledSetting3);
+            bControlFiledSetting1.ColumnID = "CD";
+            bControlFiledSetting1.TargetControl = this.txt_cur_inv_code;
+            this.txt_cur_inv_code.CustomSetting.Add(bControlFiledSetting1);
             this.txt_cur_inv_code.InputControl = this.txt_cur_inv_code;
             this.txt_cur_inv_code.Location = new System.Drawing.Point(474, 81);
             this.txt_cur_inv_code.MaxLength = 2;
@@ -155,9 +155,9 @@
             // 
             // txt_UST
             // 
-            bControlFiledSetting4.ColumnID = "CD";
-            bControlFiledSetting4.TargetControl = this.txt_UST;
-            this.txt_UST.CustomSetting.Add(bControlFiledSetting4);
+            bControlFiledSetting2.ColumnID = "CD";
+            bControlFiledSetting2.TargetControl = this.txt_UST;
+            this.txt_UST.CustomSetting.Add(bControlFiledSetting2);
             this.txt_UST.InputControl = this.txt_UST;
             this.txt_UST.Location = new System.Drawing.Point(101, 10);
             this.txt_UST.MaxLength = 100;
@@ -170,9 +170,9 @@
             // 
             // txt_SB
             // 
-            bControlFiledSetting5.ColumnID = "CD";
-            bControlFiledSetting5.TargetControl = this.txt_SB;
-            this.txt_SB.CustomSetting.Add(bControlFiledSetting5);
+            bControlFiledSetting3.ColumnID = "CD";
+            bControlFiledSetting3.TargetControl = this.txt_SB;
+            this.txt_SB.CustomSetting.Add(bControlFiledSetting3);
             this.txt_SB.InputControl = this.txt_SB;
             this.txt_SB.Location = new System.Drawing.Point(100, 38);
             this.txt_SB.MaxLength = 100;
@@ -187,9 +187,9 @@
             // 
             // TXT_SPEC_PROC
             // 
-            bControlFiledSetting6.ColumnID = "CD";
-            bControlFiledSetting6.TargetControl = this.TXT_SPEC_PROC;
-            this.TXT_SPEC_PROC.CustomSetting.Add(bControlFiledSetting6);
+            bControlFiledSetting4.ColumnID = "CD";
+            bControlFiledSetting4.TargetControl = this.TXT_SPEC_PROC;
+            this.TXT_SPEC_PROC.CustomSetting.Add(bControlFiledSetting4);
             this.TXT_SPEC_PROC.InputControl = this.TXT_SPEC_PROC;
             this.TXT_SPEC_PROC.Location = new System.Drawing.Point(101, 70);
             this.TXT_SPEC_PROC.MaxLength = 100;
@@ -204,9 +204,9 @@
             // 
             // txt_HTM_METH1
             // 
-            bControlFiledSetting7.ColumnID = "CD";
-            bControlFiledSetting7.TargetControl = this.txt_HTM_METH1;
-            this.txt_HTM_METH1.CustomSetting.Add(bControlFiledSetting7);
+            bControlFiledSetting5.ColumnID = "CD";
+            bControlFiledSetting5.TargetControl = this.txt_HTM_METH1;
+            this.txt_HTM_METH1.CustomSetting.Add(bControlFiledSetting5);
             this.txt_HTM_METH1.InputControl = this.txt_HTM_METH1;
             this.txt_HTM_METH1.Location = new System.Drawing.Point(304, 38);
             this.txt_HTM_METH1.MaxLength = 100;
@@ -222,9 +222,9 @@
             // 
             // txt_HTM_METH2
             // 
-            bControlFiledSetting8.ColumnID = "CD";
-            bControlFiledSetting8.TargetControl = this.txt_HTM_METH2;
-            this.txt_HTM_METH2.CustomSetting.Add(bControlFiledSetting8);
+            bControlFiledSetting6.ColumnID = "CD";
+            bControlFiledSetting6.TargetControl = this.txt_HTM_METH2;
+            this.txt_HTM_METH2.CustomSetting.Add(bControlFiledSetting6);
             this.txt_HTM_METH2.InputControl = this.txt_HTM_METH2;
             this.txt_HTM_METH2.Location = new System.Drawing.Point(409, 38);
             this.txt_HTM_METH2.MaxLength = 100;
@@ -240,9 +240,9 @@
             // 
             // txt_HTM_METH3
             // 
-            bControlFiledSetting9.ColumnID = "CD";
-            bControlFiledSetting9.TargetControl = this.txt_HTM_METH3;
-            this.txt_HTM_METH3.CustomSetting.Add(bControlFiledSetting9);
+            bControlFiledSetting7.ColumnID = "CD";
+            bControlFiledSetting7.TargetControl = this.txt_HTM_METH3;
+            this.txt_HTM_METH3.CustomSetting.Add(bControlFiledSetting7);
             this.txt_HTM_METH3.InputControl = this.txt_HTM_METH3;
             this.txt_HTM_METH3.Location = new System.Drawing.Point(514, 38);
             this.txt_HTM_METH3.MaxLength = 100;
@@ -552,9 +552,8 @@
             // 
             this.Text1_PLATE_NO.Location = new System.Drawing.Point(42, 14);
             this.Text1_PLATE_NO.Name = "Text1_PLATE_NO";
-            this.Text1_PLATE_NO.Size = new System.Drawing.Size(46, 22);
+            this.Text1_PLATE_NO.Size = new System.Drawing.Size(72, 22);
             this.Text1_PLATE_NO.TabIndex = 730;
-            this.Text1_PLATE_NO.Visible = false;
             // 
             // opt_LineFlag2
             // 
@@ -643,6 +642,13 @@
             this.groupBox2.Size = new System.Drawing.Size(1243, 123);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(356, 94);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 764;
             // 
             // txt_HTM_COND3
             // 
@@ -849,13 +855,6 @@
             // 
             this.fpSpread1_Sheet1.Reset();
             this.fpSpread1_Sheet1.SheetName = "Sheet1";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(356, 94);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 764;
             // 
             // CGD2070C
             // 

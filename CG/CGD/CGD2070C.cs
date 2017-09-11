@@ -301,6 +301,9 @@ namespace CG
 
             p_Ref(1, 1, true, true);
 
+            //无数据则退出
+            if (ss1.ActiveSheet.RowCount <= 0) return;
+
 
             //超交货期用红色显示 add by liqian 2012-07-23
             {
@@ -322,6 +325,8 @@ namespace CG
 
                 Text1_PLATE_NO.Text = ss1.ActiveSheet.Cells[0, SS1_PLATE_NO].Text;
 
+                txt_REMARKS.Text = "";
+
                 p_Ref(2, 0, true, false);
             }
 
@@ -329,6 +334,7 @@ namespace CG
 
         public override void Form_Pro()
         {
+            
             p_Pro(1, 1, true, true);
 
             p_Pro(2, 0, true, true);

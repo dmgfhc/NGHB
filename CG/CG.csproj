@@ -282,6 +282,12 @@
     <Compile Include="CGB\CGB2010C.Designer.cs">
       <DependentUpon>CGB2010C.cs</DependentUpon>
     </Compile>
+    <Compile Include="CGB\WGB1010C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CGB\WGB1010C.designer.cs">
+      <DependentUpon>WGB1010C.cs</DependentUpon>
+    </Compile>
     <Compile Include="CGB\WGB1050C.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -934,6 +940,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CGB\CGB2010C.resx">
       <DependentUpon>CGB2010C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CGB\WGB1010C.resx">
+      <DependentUpon>WGB1010C.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CGB\WGB1050C.resx">
       <DependentUpon>WGB1050C.cs</DependentUpon>
