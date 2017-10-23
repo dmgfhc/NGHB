@@ -570,6 +570,12 @@
     <Compile Include="CGG\LoadExcel.Designer.cs">
       <DependentUpon>LoadExcel.cs</DependentUpon>
     </Compile>
+    <Compile Include="CGT\CGT2000C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CGT\CGT2000C.Designer.cs">
+      <DependentUpon>CGT2000C.cs</DependentUpon>
+    </Compile>
     <Compile Include="CGZ\CGZ2031C.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1084,6 +1090,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CGG\LoadExcel.resx">
       <DependentUpon>LoadExcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CGT\CGT2000C.resx">
+      <DependentUpon>CGT2000C.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CGZ\CGZ2031C.resx">
       <DependentUpon>CGZ2031C.cs</DependentUpon>

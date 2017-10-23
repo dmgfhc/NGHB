@@ -285,7 +285,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1024, 347);
+            this.tabControl1.Size = new System.Drawing.Size(1024, 339);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
@@ -297,7 +297,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 23);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1016, 320);
+            this.tabPage1.Size = new System.Drawing.Size(1016, 312);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "装炉等待";
             // 
@@ -309,7 +309,7 @@
             this.ss1.Name = "ss1";
             this.ss1.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
             this.ss1_Sheet1});
-            this.ss1.Size = new System.Drawing.Size(1010, 271);
+            this.ss1.Size = new System.Drawing.Size(1010, 263);
             this.ss1.TabIndex = 4;
             this.ss1.CellClick += new FarPoint.Win.Spread.CellClickEventHandler(this.ss1_CellClick);
             this.ss1.CellDoubleClick += new FarPoint.Win.Spread.CellClickEventHandler(this.ss1_CellDoubleClick);
@@ -370,7 +370,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 23);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1016, 376);
+            this.tabPage2.Size = new System.Drawing.Size(1016, 320);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "装炉实绩";
             // 
@@ -382,7 +382,7 @@
             this.ss2.Name = "ss2";
             this.ss2.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
             this.ss2_Sheet1});
-            this.ss2.Size = new System.Drawing.Size(1010, 327);
+            this.ss2.Size = new System.Drawing.Size(1010, 271);
             this.ss2.TabIndex = 4;
             this.ss2.CellClick += new FarPoint.Win.Spread.CellClickEventHandler(this.ss2_CellClick);
             this.ss2.CellDoubleClick += new FarPoint.Win.Spread.CellClickEventHandler(this.ss2_CellDoubleClick);
@@ -1084,12 +1084,12 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(0, 295);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1024, 347);
+            this.panel6.Size = new System.Drawing.Size(1024, 339);
             this.panel6.TabIndex = 496;
             // 
             // CGB2010C
             // 
-            this.ClientSize = new System.Drawing.Size(1024, 642);
+            this.ClientSize = new System.Drawing.Size(1024, 634);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Name = "CGB2010C";
