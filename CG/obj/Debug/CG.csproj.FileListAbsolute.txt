@@ -255,3 +255,4 @@ C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.LoadExcel.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CKG2030C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGD2070C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.WGB1010C.resources
+C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGT2000C.resources

@@ -106,7 +106,7 @@ namespace CommonClass
                     {
                         //Security.DESMain();
                         //M_CN1.ConnectionString = Security.DecryptString(oIni.sdGetIniInfo("iniConnectString"));
-                        M_CN1.ConnectionString = "Provider=MSDAORA.1;User ID=nisco/nisco01;Data Source=web;Persist Security Info=True";
+                        M_CN1.ConnectionString = "Provider=MSDAORA.1;User ID=nisco/nisco01;Data Source=ora9;Persist Security Info=True";
 
 
                          //M_CN1.ConnectionString = getConStr(Application.StartupPath + "\\server_config.txt");

@@ -28,11 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            CommonClass.BControlFiledSetting bControlFiledSetting1 = new CommonClass.BControlFiledSetting();
-            CommonClass.BControlFiledSetting bControlFiledSetting2 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting3 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting4 = new CommonClass.BControlFiledSetting();
             this.txt_stlgrd = new CommonClass.F4ETCR();
             this.txt_STLGRD_Name = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.OPT_CH = new System.Windows.Forms.RadioButton();
+            this.OPT_DISCH = new System.Windows.Forms.RadioButton();
+            this.OPT_REJECT = new System.Windows.Forms.RadioButton();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.SSP4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.SSPpdt = new System.Windows.Forms.Label();
@@ -40,9 +46,6 @@
             this.SDT_PROD_DATE_TO = new CommonClass.CeriUDate();
             this.SDT_PROD_DATE_FROM = new CommonClass.CeriUDate();
             this.TXT_CH_CD = new System.Windows.Forms.TextBox();
-            this.OPT_REJECT = new System.Windows.Forms.RadioButton();
-            this.OPT_DISCH = new System.Windows.Forms.RadioButton();
-            this.OPT_CH = new System.Windows.Forms.RadioButton();
             this.TXT_SLAB_NO = new System.Windows.Forms.TextBox();
             this.CBO_PRC_LINE = new System.Windows.Forms.ComboBox();
             this.CBO_SHIFT = new System.Windows.Forms.ComboBox();
@@ -50,27 +53,24 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.ULabel5 = new System.Windows.Forms.Label();
             this.ss1 = new FarPoint.Win.Spread.FpSpread();
             this.fpSpread1_Sheet1 = new FarPoint.Win.Spread.SheetView();
-            this.label9 = new System.Windows.Forms.Label();
-            this.SDB_WGT = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.SDB_WGT = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ss1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fpSpread1_Sheet1)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txt_stlgrd
             // 
-            bControlFiledSetting1.ColumnID = "STLGRD";
-            bControlFiledSetting1.TargetControl = this.txt_stlgrd;
-            bControlFiledSetting2.ColumnID = "STEEL_GRD_DETAIL";
-            bControlFiledSetting2.TargetControl = this.txt_STLGRD_Name;
-            this.txt_stlgrd.CustomSetting.Add(bControlFiledSetting1);
-            this.txt_stlgrd.CustomSetting.Add(bControlFiledSetting2);
+            bControlFiledSetting3.ColumnID = "STLGRD";
+            bControlFiledSetting3.TargetControl = this.txt_stlgrd;
+            bControlFiledSetting4.ColumnID = "STEEL_GRD_DETAIL";
+            bControlFiledSetting4.TargetControl = this.txt_STLGRD_Name;
+            this.txt_stlgrd.CustomSetting.Add(bControlFiledSetting3);
+            this.txt_stlgrd.CustomSetting.Add(bControlFiledSetting4);
             this.txt_stlgrd.InputControl = this.txt_stlgrd;
             this.txt_stlgrd.Location = new System.Drawing.Point(445, 52);
             this.txt_stlgrd.MaxLength = 12;
@@ -91,9 +91,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.SDB_WGT);
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.SDB_WGT);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.SSP4);
             this.groupBox1.Controls.Add(this.label7);
@@ -111,13 +111,77 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.ULabel5);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1009, 91);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.OPT_CH);
+            this.panel1.Controls.Add(this.OPT_DISCH);
+            this.panel1.Controls.Add(this.OPT_REJECT);
+            this.panel1.Location = new System.Drawing.Point(806, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(170, 34);
+            this.panel1.TabIndex = 139;
+            // 
+            // OPT_CH
+            // 
+            this.OPT_CH.Checked = true;
+            this.OPT_CH.ForeColor = System.Drawing.Color.Red;
+            this.OPT_CH.Location = new System.Drawing.Point(6, 5);
+            this.OPT_CH.Name = "OPT_CH";
+            this.OPT_CH.Size = new System.Drawing.Size(51, 23);
+            this.OPT_CH.TabIndex = 1;
+            this.OPT_CH.TabStop = true;
+            this.OPT_CH.Text = "装炉";
+            this.OPT_CH.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.OPT_CH.UseVisualStyleBackColor = true;
+            this.OPT_CH.CheckedChanged += new System.EventHandler(this.OPT_CH_CheckedChanged);
+            // 
+            // OPT_DISCH
+            // 
+            this.OPT_DISCH.Location = new System.Drawing.Point(63, 5);
+            this.OPT_DISCH.Name = "OPT_DISCH";
+            this.OPT_DISCH.Size = new System.Drawing.Size(51, 23);
+            this.OPT_DISCH.TabIndex = 1;
+            this.OPT_DISCH.Text = "出炉";
+            this.OPT_DISCH.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.OPT_DISCH.UseVisualStyleBackColor = true;
+            this.OPT_DISCH.CheckedChanged += new System.EventHandler(this.OPT_DISCH_CheckedChanged);
+            // 
+            // OPT_REJECT
+            // 
+            this.OPT_REJECT.Location = new System.Drawing.Point(116, 5);
+            this.OPT_REJECT.Name = "OPT_REJECT";
+            this.OPT_REJECT.Size = new System.Drawing.Size(51, 23);
+            this.OPT_REJECT.TabIndex = 1;
+            this.OPT_REJECT.Text = "回炉";
+            this.OPT_REJECT.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.OPT_REJECT.UseVisualStyleBackColor = true;
+            this.OPT_REJECT.CheckedChanged += new System.EventHandler(this.OPT_REJECT_CheckedChanged);
+            // 
+            // label11
+            // 
+            this.label11.ForeColor = System.Drawing.Color.Blue;
+            this.label11.Location = new System.Drawing.Point(938, 57);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(50, 20);
+            this.label11.TabIndex = 138;
+            this.label11.Text = "吨";
+            // 
+            // label9
+            // 
+            this.label9.ForeColor = System.Drawing.Color.Blue;
+            this.label9.Location = new System.Drawing.Point(822, 57);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(41, 20);
+            this.label9.TabIndex = 136;
+            this.label9.Text = "重量";
             // 
             // SSP4
             // 
@@ -186,40 +250,7 @@
             this.TXT_CH_CD.Name = "TXT_CH_CD";
             this.TXT_CH_CD.Size = new System.Drawing.Size(18, 22);
             this.TXT_CH_CD.TabIndex = 2;
-            this.TXT_CH_CD.Visible = false;
-            // 
-            // OPT_REJECT
-            // 
-            this.OPT_REJECT.Location = new System.Drawing.Point(116, 5);
-            this.OPT_REJECT.Name = "OPT_REJECT";
-            this.OPT_REJECT.Size = new System.Drawing.Size(51, 23);
-            this.OPT_REJECT.TabIndex = 1;
-            this.OPT_REJECT.Text = "回炉";
-            this.OPT_REJECT.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.OPT_REJECT.UseVisualStyleBackColor = true;
-            this.OPT_REJECT.Click += new System.EventHandler(this.OPT_REJECT_Click);
-            // 
-            // OPT_DISCH
-            // 
-            this.OPT_DISCH.Location = new System.Drawing.Point(63, 5);
-            this.OPT_DISCH.Name = "OPT_DISCH";
-            this.OPT_DISCH.Size = new System.Drawing.Size(51, 23);
-            this.OPT_DISCH.TabIndex = 1;
-            this.OPT_DISCH.Text = "出炉";
-            this.OPT_DISCH.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.OPT_DISCH.UseVisualStyleBackColor = true;
-            this.OPT_DISCH.Click += new System.EventHandler(this.OPT_DISCH_Click);
-            // 
-            // OPT_CH
-            // 
-            this.OPT_CH.Location = new System.Drawing.Point(6, 5);
-            this.OPT_CH.Name = "OPT_CH";
-            this.OPT_CH.Size = new System.Drawing.Size(51, 23);
-            this.OPT_CH.TabIndex = 1;
-            this.OPT_CH.Text = "装炉";
-            this.OPT_CH.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.OPT_CH.UseVisualStyleBackColor = true;
-            this.OPT_CH.Click += new System.EventHandler(this.OPT_CH_Click);
+            this.TXT_CH_CD.Text = "C";
             // 
             // TXT_SLAB_NO
             // 
@@ -295,15 +326,15 @@
             this.label3.Text = "班次/别";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // ULabel5
             // 
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Location = new System.Drawing.Point(30, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 21);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "装炉时间";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ULabel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.ULabel5.Location = new System.Drawing.Point(30, 18);
+            this.ULabel5.Name = "ULabel5";
+            this.ULabel5.Size = new System.Drawing.Size(71, 21);
+            this.ULabel5.TabIndex = 0;
+            this.ULabel5.Text = "装炉时间";
+            this.ULabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ss1
             // 
@@ -321,40 +352,13 @@
             this.fpSpread1_Sheet1.Reset();
             this.fpSpread1_Sheet1.SheetName = "Sheet1";
             // 
-            // label9
-            // 
-            this.label9.ForeColor = System.Drawing.Color.Blue;
-            this.label9.Location = new System.Drawing.Point(829, 57);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(50, 20);
-            this.label9.TabIndex = 136;
-            this.label9.Text = "重量（";
-            // 
             // SDB_WGT
             // 
-            this.SDB_WGT.Location = new System.Drawing.Point(872, 55);
+            this.SDB_WGT.Location = new System.Drawing.Point(869, 57);
+            this.SDB_WGT.MaxLength = 10;
             this.SDB_WGT.Name = "SDB_WGT";
-            this.SDB_WGT.Size = new System.Drawing.Size(51, 20);
-            this.SDB_WGT.TabIndex = 137;
-            // 
-            // label11
-            // 
-            this.label11.ForeColor = System.Drawing.Color.Blue;
-            this.label11.Location = new System.Drawing.Point(926, 57);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(50, 20);
-            this.label11.TabIndex = 138;
-            this.label11.Text = "）吨";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.OPT_CH);
-            this.panel1.Controls.Add(this.OPT_DISCH);
-            this.panel1.Controls.Add(this.OPT_REJECT);
-            this.panel1.Location = new System.Drawing.Point(806, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(170, 34);
-            this.panel1.TabIndex = 139;
+            this.SDB_WGT.Size = new System.Drawing.Size(63, 22);
+            this.SDB_WGT.TabIndex = 140;
             // 
             // CGT2000C
             // 
@@ -363,12 +367,12 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "CGT2000C";
             this.Text = "加热炉实绩查询_CGT2000C";
-            this.Load += new System.EventHandler(this.Form_Load);
+            this.Load += new System.EventHandler(this.CGT2000C_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ss1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fpSpread1_Sheet1)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -376,7 +380,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label ULabel5;
         private System.Windows.Forms.RadioButton OPT_REJECT;
         private System.Windows.Forms.RadioButton OPT_DISCH;
         private System.Windows.Forms.RadioButton OPT_CH;
@@ -399,8 +403,8 @@
         private System.Windows.Forms.TextBox txt_STLGRD_Name;
         private System.Windows.Forms.Label SSP4;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label SDB_WGT;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox SDB_WGT;
     }
 }
