@@ -819,7 +819,6 @@ namespace CG
         //重写了框架的颜色方法，原来的框架在解锁方面有点问题，不方便在框架直接修改，所以重新写了一个
         public void Gp_Sp_BlockColor(FpSpread oSpread, int iCol1, int iCol2, int iRow1, int iRow2, Color fColor, Color bColor)
         {
-
             FarPoint.Win.Spread.SheetView with_1 = oSpread.ActiveSheet;
             for (int row = iRow1; row <= iRow2; row++)
             {
