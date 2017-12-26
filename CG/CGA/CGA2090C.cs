@@ -164,7 +164,7 @@ namespace CG
             //SpreadCommon.Gp_Sp_ColHidden(ss1, 23, true);
         }
 
-        private void cmd_get_info_Click()
+        private void cmd_get_info_Click(object sender, EventArgs e)
         {
             string Mon;
             string HeatNo;
@@ -564,8 +564,8 @@ namespace CG
             txt_InPltCo.Visible = false;
             txt_InPltCoDesc.Visible = false;
             txt_OldSlabNo2.Visible = false;
-            label6.Visible = false;
-            txt_seq.Visible = false;
+            label6.Visible = true;
+            txt_seq.Visible = true;
             txt_InPltCo.sSqletc = "SELECT  CUST_CD \"客户代码\", CUST_NM \"客户名称\", CUST_NM_ENG \"客户英文名称\" FROM NISCO.BP_CUST_CD  WHERE CUST_CD LIKE '%' AND CUST_TYP  IN ('Z','P')";
 
             txt_cen.Text = GeneralCommon.Gf_CodeFind(GeneralCommon.M_CN1, "SELECT SUBSTR(TO_CHAR(SYSDATE,'YYYY'),3,2) FROM DUAL");
@@ -878,8 +878,8 @@ namespace CG
                 txt_InPltCo.Visible = false;
                 txt_InPltCoDesc.Visible = false;
                 txt_OldSlabNo2.Visible = false;
-                label6.Visible = false;
-                txt_seq.Visible = false;
+                label6.Visible = true;
+                txt_seq.Visible = true;
             }
             else
             {
@@ -887,8 +887,8 @@ namespace CG
                 txt_InPltCo.Visible = true;
                 txt_InPltCoDesc.Visible = true;
                 txt_OldSlabNo2.Visible = true;
-                label6.Visible = true;
-                txt_seq.Visible = true;
+                label6.Visible = false;
+                txt_seq.Visible = false;
 
             }
         }
@@ -1215,6 +1215,11 @@ namespace CG
             {
                 txt_wgt.Text = (txt_thk.NumValue * txt_wid.NumValue * txt_len.NumValue * txt_slabcnt.NumValue * 7.85 / 1000000000).ToString();
             }
+        }
+
+        private void cmd_get_info_Click()
+        {
+
         }
 
 

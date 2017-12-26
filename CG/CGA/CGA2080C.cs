@@ -95,7 +95,7 @@ namespace CG
             
     
 
-            p_ScIni(ss2, Sc2, 0, true, true);
+            p_ScIni(ss2, Sc2, 0, true, false);
 
             p_SetSc("子板坯号", "E", "", "PNIL", "", "", "", 2, 0);//0
             p_SetSc("厚度", "N", "6", "IL", "", "", "", 2, 0);//1
@@ -118,7 +118,7 @@ namespace CG
             SpreadCommon.Gp_Sp_ColHidden(ss2, 11, true);
             SpreadCommon.Gp_Sp_ColHidden(ss2, 12, true);
 
-            p_ScIni(ss3, Sc3, 0, true, true);
+            p_ScIni(ss3, Sc3, 0, true, false);
 
             p_SetSc("板坯号", "E", "", "L", "", "", "", 3, 0, "M");//0
             p_SetSc("切割顺序", "E", "", "L", "", "", "", 3, 0, "M");//1
@@ -141,7 +141,7 @@ namespace CG
             p_SetSc("订单标准号", "E", "", "L", "", "", "", 3, 0, "L");//18
             p_SetSc("重点订单", "E", "", "L", "", "", "", 3, 0, "M");//19
 
-            p_ScIni(ss4, Sc4, 0, true, true);
+            p_ScIni(ss4, Sc4, 0, true, false);
 
             p_SetSc("钢种", "E", "", "L", "", "", "", 4, 0, "L");//0
             p_SetSc("厚度", "E", "", "L", "", "", "", 4, 0, "R");//1
@@ -207,47 +207,49 @@ namespace CG
             txt_total_wgt.Text = "";
             txt_scrap_wgt.Text = "";
             p_Ref(1, 1, true, true);
-            for (int i = 0; i < ss1_Sheet1.RowCount; i++)
-            {
-                if (this.ss1_Sheet1.Cells[i, 31].Text == "Y")
-                {
-                    this.ss1_Sheet1.Rows.Get(i).ForeColor = Color.Blue;
-                }
-                if (this.ss1_Sheet1.Cells[i, 32].Text == "Y" || this.ss1_Sheet1.Cells[i, 32].Text == "A")
-                {
-                    this.ss1_Sheet1.Rows.Get(i).ForeColor = Color.Orange;
-                }
-
-            }
-            this.ss2_Sheet1.RowCount = 0;
 
 
-            string nowTime = GeneralCommon.Gf_CodeFind(GeneralCommon.M_CN1, "SELECT TO_CHAR(SYSDATE,'YYYYMMDD') FROM DUAL");
-            for (int i = 0; i < this.ss1_Sheet1.RowCount; i++)
-            {
-                if (this.ss1_Sheet1.Cells[i, 24].Text.Replace("-", "") == "" || (int.Parse(this.ss1_Sheet1.Cells[i, 24].Text.Replace("-", "")) < int.Parse(nowTime)))
-                    this.ss1_Sheet1.Rows.Get(i).ForeColor = Color.Red;
-            }
+            //for (int i = 0; i < ss1_Sheet1.RowCount; i++)
+            //{
+            //    if (this.ss1_Sheet1.Cells[i, 31].Text == "Y")
+            //    {
+            //        this.ss1_Sheet1.Rows.Get(i).ForeColor = Color.Blue;
+            //    }
+            //    if (this.ss1_Sheet1.Cells[i, 32].Text == "Y" || this.ss1_Sheet1.Cells[i, 32].Text == "A")
+            //    {
+            //        this.ss1_Sheet1.Rows.Get(i).ForeColor = Color.Orange;
+            //    }
 
-            if (txt_Status.Text == "1")
-            {
-                GeneralCommon.ImageList0.Images[4] = GeneralCommon.ImageList2.Images[4];
-                GeneralCommon.MDIToolBar.Buttons[6].Tag = "F";
-                GeneralCommon.ImageList0.Images[5] = GeneralCommon.ImageList2.Images[5];
-                GeneralCommon.MDIToolBar.Buttons[7].Tag = "F";
-                GeneralCommon.ImageList0.Images[6] = GeneralCommon.ImageList2.Images[6];
-                GeneralCommon.MDIToolBar.Buttons[8].Tag = "F";
-            }
-            else
-            {
-                GeneralCommon.ImageList0.Images[4] = GeneralCommon.ImageList2.Images[4];
-                GeneralCommon.MDIToolBar.Buttons[6].Tag = "F";
-                GeneralCommon.ImageList0.Images[5] = GeneralCommon.ImageList1.Images[5];
-                GeneralCommon.MDIToolBar.Buttons[7].Tag = "T";
-                GeneralCommon.ImageList0.Images[6] = GeneralCommon.ImageList1.Images[6];
-                GeneralCommon.MDIToolBar.Buttons[8].Tag = "T";
-            }
-            GeneralCommon.MDIToolBar.Refresh();
+            //}
+            //this.ss2_Sheet1.RowCount = 0;
+
+
+            //string nowTime = GeneralCommon.Gf_CodeFind(GeneralCommon.M_CN1, "SELECT TO_CHAR(SYSDATE,'YYYYMMDD') FROM DUAL");
+            //for (int i = 0; i < this.ss1_Sheet1.RowCount; i++)
+            //{
+            //    if (this.ss1_Sheet1.Cells[i, 24].Text.Replace("-", "") == "" || (int.Parse(this.ss1_Sheet1.Cells[i, 24].Text.Replace("-", "")) < int.Parse(nowTime)))
+            //        this.ss1_Sheet1.Rows.Get(i).ForeColor = Color.Red;
+            //}
+
+            //if (txt_Status.Text == "1")
+            //{
+            //    GeneralCommon.ImageList0.Images[4] = GeneralCommon.ImageList2.Images[4];
+            //    GeneralCommon.MDIToolBar.Buttons[6].Tag = "F";
+            //    GeneralCommon.ImageList0.Images[5] = GeneralCommon.ImageList2.Images[5];
+            //    GeneralCommon.MDIToolBar.Buttons[7].Tag = "F";
+            //    GeneralCommon.ImageList0.Images[6] = GeneralCommon.ImageList2.Images[6];
+            //    GeneralCommon.MDIToolBar.Buttons[8].Tag = "F";
+            //}
+            //else
+            //{
+            //    GeneralCommon.ImageList0.Images[4] = GeneralCommon.ImageList2.Images[4];
+            //    GeneralCommon.MDIToolBar.Buttons[6].Tag = "F";
+            //    GeneralCommon.ImageList0.Images[5] = GeneralCommon.ImageList1.Images[5];
+            //    GeneralCommon.MDIToolBar.Buttons[7].Tag = "T";
+            //    GeneralCommon.ImageList0.Images[6] = GeneralCommon.ImageList1.Images[6];
+            //    GeneralCommon.MDIToolBar.Buttons[8].Tag = "T";
+            //}
+            //GeneralCommon.MDIToolBar.Refresh();
 
 
         }
@@ -735,6 +737,7 @@ namespace CG
 
 
         }
+
 
     }
 }

@@ -156,12 +156,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CGA\CGA2010C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGA\CGA2010C.designer.cs">
-      <DependentUpon>CGA2010C.cs</DependentUpon>
-    </Compile>
     <Compile Include="CGA\CGA2011C.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,30 +198,6 @@
     <Compile Include="CGA\CGA3000C.Designer.cs">
       <DependentUpon>CGA3000C.cs</DependentUpon>
     </Compile>
-    <Compile Include="CGA\WGA1011C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGA\WGA1011C.Designer.cs">
-      <DependentUpon>WGA1011C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGA\WGA1031C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGA\WGA1031C.Designer.cs">
-      <DependentUpon>WGA1031C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGA\WGA1040C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGA\WGA1040C.Designer.cs">
-      <DependentUpon>WGA1040C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGA\WGA1050C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGA\WGA1050C.Designer.cs">
-      <DependentUpon>WGA1050C.cs</DependentUpon>
-    </Compile>
     <Compile Include="CGA\CGA2030C.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,6 +233,12 @@
     </Compile>
     <Compile Include="CGA\CGA2110C.Designer.cs">
       <DependentUpon>CGA2110C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CGA\CGA2010C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CGA\CGA2010C.designer.cs">
+      <DependentUpon>CGA2010C.cs</DependentUpon>
     </Compile>
     <Compile Include="CGB\CGB2020C.cs">
       <SubType>Form</SubType>
@@ -902,9 +878,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="CGA\CGA2010C.resx">
-      <DependentUpon>CGA2010C.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CGA\CGA2011C.resx">
       <DependentUpon>CGA2011C.cs</DependentUpon>
     </EmbeddedResource>
@@ -926,18 +899,6 @@
     <EmbeddedResource Include="CGA\CGA3000C.resx">
       <DependentUpon>CGA3000C.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CGA\WGA1011C.resx">
-      <DependentUpon>WGA1011C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGA\WGA1031C.resx">
-      <DependentUpon>WGA1031C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGA\WGA1040C.resx">
-      <DependentUpon>WGA1040C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGA\WGA1050C.resx">
-      <DependentUpon>WGA1050C.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CGA\CGA2030C.resx">
       <DependentUpon>CGA2030C.cs</DependentUpon>
     </EmbeddedResource>
@@ -955,6 +916,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CGA\CGA2110C.resx">
       <DependentUpon>CGA2110C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CGA\CGA2010C.resx">
+      <DependentUpon>CGA2010C.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CGB\CGB2020C.resx">
       <DependentUpon>CGB2020C.cs</DependentUpon>

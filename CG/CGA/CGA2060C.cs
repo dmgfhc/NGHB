@@ -77,7 +77,7 @@ namespace CG
             p_SetMc("开始时间",sdt_in_plt_date, "NP", "", "", "", "", imcseq);
             p_SetMc("结束时间",sdt_out_plt_date, "NP", "", "", "", "",imcseq);
 
-            p_ScIni(ss1, Sc1, 0, true, true);
+            p_ScIni(ss1, Sc1, 0, true, false);
             
             iheadrow = 1;
             iscseq = 1;

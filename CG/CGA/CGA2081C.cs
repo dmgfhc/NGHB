@@ -129,14 +129,15 @@ namespace CG
 
         public void Form_Load(object sender, System.EventArgs e)
         {
-
-
             base.sSvrPgmPkgName = "CGA2081NC";
             Form_Define();
             TXT_FLAG.Text = "1";
             ULabel10.Text = "产生日期";
             ULabel10.ForeColor = Color.Red;
             OPT_SCRAP_WAIT.Checked = true;
+
+            TXT_To_Date.RawDate = DateTime.Now.ToString("yyyyMMdd");
+            TXT_From_Date.RawDate = DateTime.Now.ToString("yyyyMMdd").Substring(0, 6) + "01";
 
             //txt_cur_inv.Text = "ZB";
             //txt_prod_cd.Text = "SL";

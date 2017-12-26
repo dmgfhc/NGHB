@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            CommonClass.BControlFiledSetting bControlFiledSetting3 = new CommonClass.BControlFiledSetting();
-            CommonClass.BControlFiledSetting bControlFiledSetting4 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting1 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting2 = new CommonClass.BControlFiledSetting();
             this.txt_stlgrd = new CommonClass.F4ETCR();
             this.txt_STLGRD_Name = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.SDB_WGT = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.OPT_CH = new System.Windows.Forms.RadioButton();
             this.OPT_DISCH = new System.Windows.Forms.RadioButton();
@@ -56,7 +57,6 @@
             this.ULabel5 = new System.Windows.Forms.Label();
             this.ss1 = new FarPoint.Win.Spread.FpSpread();
             this.fpSpread1_Sheet1 = new FarPoint.Win.Spread.SheetView();
-            this.SDB_WGT = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ss1)).BeginInit();
@@ -65,12 +65,12 @@
             // 
             // txt_stlgrd
             // 
-            bControlFiledSetting3.ColumnID = "STLGRD";
-            bControlFiledSetting3.TargetControl = this.txt_stlgrd;
-            bControlFiledSetting4.ColumnID = "STEEL_GRD_DETAIL";
-            bControlFiledSetting4.TargetControl = this.txt_STLGRD_Name;
-            this.txt_stlgrd.CustomSetting.Add(bControlFiledSetting3);
-            this.txt_stlgrd.CustomSetting.Add(bControlFiledSetting4);
+            bControlFiledSetting1.ColumnID = "STLGRD";
+            bControlFiledSetting1.TargetControl = this.txt_stlgrd;
+            bControlFiledSetting2.ColumnID = "STEEL_GRD_DETAIL";
+            bControlFiledSetting2.TargetControl = this.txt_STLGRD_Name;
+            this.txt_stlgrd.CustomSetting.Add(bControlFiledSetting1);
+            this.txt_stlgrd.CustomSetting.Add(bControlFiledSetting2);
             this.txt_stlgrd.InputControl = this.txt_stlgrd;
             this.txt_stlgrd.Location = new System.Drawing.Point(445, 52);
             this.txt_stlgrd.MaxLength = 12;
@@ -118,6 +118,14 @@
             this.groupBox1.Size = new System.Drawing.Size(1009, 91);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // SDB_WGT
+            // 
+            this.SDB_WGT.Location = new System.Drawing.Point(869, 57);
+            this.SDB_WGT.MaxLength = 10;
+            this.SDB_WGT.Name = "SDB_WGT";
+            this.SDB_WGT.Size = new System.Drawing.Size(63, 22);
+            this.SDB_WGT.TabIndex = 140;
             // 
             // panel1
             // 
@@ -251,6 +259,7 @@
             this.TXT_CH_CD.Size = new System.Drawing.Size(18, 22);
             this.TXT_CH_CD.TabIndex = 2;
             this.TXT_CH_CD.Text = "C";
+            this.TXT_CH_CD.Visible = false;
             // 
             // TXT_SLAB_NO
             // 
@@ -351,14 +360,6 @@
             // 
             this.fpSpread1_Sheet1.Reset();
             this.fpSpread1_Sheet1.SheetName = "Sheet1";
-            // 
-            // SDB_WGT
-            // 
-            this.SDB_WGT.Location = new System.Drawing.Point(869, 57);
-            this.SDB_WGT.MaxLength = 10;
-            this.SDB_WGT.Name = "SDB_WGT";
-            this.SDB_WGT.Size = new System.Drawing.Size(63, 22);
-            this.SDB_WGT.TabIndex = 140;
             // 
             // CGT2000C
             // 

@@ -135,8 +135,8 @@
             this.txt_plt.Size = new System.Drawing.Size(38, 22);
             this.txt_plt.sJoin = "";
             this.txt_plt.sSqletc = "SELECT CD \"代码\", CD_SHORT_NAME \"代码简称\", CD_NAME \"代码名称\",        CD_SHORT_ENG \"代码英文简称" +
-                "\", CD_FULL_ENG \"代码英文名称\" FROM NISCO.ZP_CD  WHERE CD_MANA_NO =    \'C0001\'    AND C" +
-                "D         like \'%\'  ORDER  BY  CD  ASC ";
+    "\", CD_FULL_ENG \"代码英文名称\" FROM NISCO.ZP_CD  WHERE CD_MANA_NO =    \'C0001\'    AND C" +
+    "D         like \'%\'  ORDER  BY  CD  ASC ";
             this.txt_plt.TabIndex = 500;
             this.txt_plt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -157,7 +157,7 @@
             this.txt_act_stlgrd.Size = new System.Drawing.Size(86, 22);
             this.txt_act_stlgrd.sJoin = "";
             this.txt_act_stlgrd.sSqletc = "SELECT STLGRD 钢种, STEEL_GRD_DETAIL 目标说明 FROM  NISCO.QP_NISCO_CHMC WHERE STLGRD_FL" +
-                " =  \'N\' ORDER BY STEEL_GRD_DETAIL";
+    " =  \'N\' ORDER BY STEEL_GRD_DETAIL";
             this.txt_act_stlgrd.TabIndex = 521;
             // 
             // txt_act_stlgrd_dec
@@ -925,7 +925,6 @@
             this.cbo_cutcnt.Name = "cbo_cutcnt";
             this.cbo_cutcnt.Size = new System.Drawing.Size(45, 21);
             this.cbo_cutcnt.TabIndex = 514;
-            //this.cbo_cutcnt.Click += new System.EventHandler(this.cbo_cutcnt_Click);
             // 
             // ULabel4
             // 

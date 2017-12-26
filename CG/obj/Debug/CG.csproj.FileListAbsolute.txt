@@ -139,10 +139,6 @@ C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGA2090C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGA2020C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGA2080C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGA3000C.resources
-C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.WGA1011C.resources
-C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.WGA1031C.resources
-C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.WGA1040C.resources
-C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.WGA1050C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGA2030C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGA2060C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGA2061C.resources
@@ -258,3 +254,4 @@ C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.WGB1010C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGT2000C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.WGT3030C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGT2010C.resources
+C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGT2020C.resources

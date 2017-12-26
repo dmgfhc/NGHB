@@ -32,6 +32,7 @@
             CommonClass.BControlFiledSetting bControlFiledSetting3 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting4 = new CommonClass.BControlFiledSetting();
             this.txt_stlgrd = new CommonClass.F4ETCR();
+            this.txt_STLGRD_Name = new System.Windows.Forms.TextBox();
             this.txt_stdspec = new CommonClass.F4ETCR();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.SSPpdt = new System.Windows.Forms.Button();
@@ -88,7 +89,6 @@
             this.ULabel5 = new System.Windows.Forms.Label();
             this.ss1 = new FarPoint.Win.Spread.FpSpread();
             this.fpSpread1_Sheet1 = new FarPoint.Win.Spread.SheetView();
-            this.txt_STLGRD_Name = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ss1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fpSpread1_Sheet1)).BeginInit();
@@ -111,6 +111,14 @@
             this.txt_stlgrd.sSqletc = "SELECT STLGRD \"钢种\", STEEL_GRD_DETAIL \"目标说明\" FROM  NISCO.QP_NISCO_CHMC  WHERE STLG" +
     "RD like \'%\'  AND NVL(STEEL_GRD_DETAIL,\'%\')   like \'%\'  ORDER  BY  STLGRD  ASC";
             this.txt_stlgrd.TabIndex = 141;
+            // 
+            // txt_STLGRD_Name
+            // 
+            this.txt_STLGRD_Name.Location = new System.Drawing.Point(253, 145);
+            this.txt_STLGRD_Name.MaxLength = 50;
+            this.txt_STLGRD_Name.Name = "txt_STLGRD_Name";
+            this.txt_STLGRD_Name.Size = new System.Drawing.Size(112, 22);
+            this.txt_STLGRD_Name.TabIndex = 195;
             // 
             // txt_stdspec
             // 
@@ -241,6 +249,7 @@
             this.CMD_CARD.TabIndex = 191;
             this.CMD_CARD.Text = "取样单导出";
             this.CMD_CARD.UseVisualStyleBackColor = true;
+            this.CMD_CARD.Click += new System.EventHandler(this.CMD_CARD_Click);
             // 
             // SSP4
             // 
@@ -650,7 +659,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(100, 22);
             this.label5.TabIndex = 151;
-            this.label5.Text = "轧批号";
+            this.label5.Text = "板坯号";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // TXT_MILL_LOT_NO
@@ -753,7 +762,7 @@
             // 
             // ss1
             // 
-            this.ss1.AccessibleDescription = "";
+            this.ss1.AccessibleDescription = "ss1, Sheet1, Row 0, Column 0, ";
             this.ss1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ss1.Location = new System.Drawing.Point(0, 178);
             this.ss1.Name = "ss1";
@@ -766,14 +775,6 @@
             // 
             this.fpSpread1_Sheet1.Reset();
             this.fpSpread1_Sheet1.SheetName = "Sheet1";
-            // 
-            // txt_STLGRD_Name
-            // 
-            this.txt_STLGRD_Name.Location = new System.Drawing.Point(253, 145);
-            this.txt_STLGRD_Name.MaxLength = 50;
-            this.txt_STLGRD_Name.Name = "txt_STLGRD_Name";
-            this.txt_STLGRD_Name.Size = new System.Drawing.Size(112, 22);
-            this.txt_STLGRD_Name.TabIndex = 195;
             // 
             // CGT2020C
             // 

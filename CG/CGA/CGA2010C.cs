@@ -66,6 +66,30 @@ namespace CG
             p_SetSc("F-ADDR", "E", "", "IL", "", "", "", 2, 0, "M");//15
         }
 
+        //private void WGA1040C_Load(object sender, EventArgs e)
+        //{
+        //    base.sSvrPgmPkgName = "WGA1010C";
+        //    Form_Define();
+        //    setSpread(ss1);
+        //    setSpread(ss2);
+        //    opt_Left_Right.Checked = true;
+
+        //    opt_Left_Right.ForeColor = Color.Red;
+        //    opt_Right_Left.ForeColor = Color.Black;
+
+        //    ss1.Enabled = true;
+        //    ss2.Enabled = false;
+
+        //    ssc_move.Enabled = false;
+        //    ssc_can.Enabled = false;
+        //    txt_slab_cnt.Enabled = false;
+        //    txt_p_row.Enabled = false;
+
+        //    CBO_CUR_INV.Text = "HB";
+        //    text_cur_inv.Text = "宽厚板厂";
+        //}
+
+
         int proNum = 0;
         public override void Form_Ref()
         {
@@ -671,7 +695,7 @@ namespace CG
                 adoCmd = new ADODB.Command();
                 adoCmd.ActiveConnection = GeneralCommon.M_CN1;
                 adoCmd.CommandType = ADODB.CommandTypeEnum.adCmdStoredProc;
-                adoCmd.CommandText = "CGA2010NC.P_LOC_TUN";
+                adoCmd.CommandText = "WGA1010C.P_LOC_TUN";
                 GeneralCommon.M_CN1.BeginTrans();
 
                 for (int i = 1; i <= 2; i++)
@@ -913,8 +937,10 @@ namespace CG
             Form_Ref();
         }
 
-        private void CGA2010C_Load(object sender, EventArgs e)
+        private void WGA1010C_Load(object sender, EventArgs e)
         {
+            GeneralCommon.Gf_ComboAdd(comboBox1, "select '1a','2a','3a' from dual");
+            
             base.sSvrPgmPkgName = "CGA2010NC";
             Form_Define();
             setSpread(ss1);
@@ -957,6 +983,20 @@ namespace CG
                 }
             }
 
-        }  
+
+
+
+
+        }
+
+       
+
+      
+
+
+
+
+
+      
     }
 }

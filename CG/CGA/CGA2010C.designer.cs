@@ -51,6 +51,7 @@
             this.ss1 = new FarPoint.Win.Spread.FpSpread();
             this.ss1_Sheet1 = new FarPoint.Win.Spread.SheetView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.ssc_can = new System.Windows.Forms.Button();
             this.ssc_move = new System.Windows.Forms.Button();
             this.txt_p_row = new System.Windows.Forms.TextBox();
@@ -102,7 +103,7 @@
     "\", CD_FULL_ENG \"代码英文名称\" FROM NISCO.ZP_CD  WHERE CD_MANA_NO =    \'C0013\'    AND C" +
     "D         like \'%\'  ORDER  BY  CD  ASC ";
             this.CBO_CUR_INV.TabIndex = 550;
-            this.CBO_CUR_INV.Text = "00";
+            this.CBO_CUR_INV.Text = "ZB";
             this.CBO_CUR_INV.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.CBO_CUR_INV.TextChanged += new System.EventHandler(this.CBO_CUR_INV_TextChanged);
             // 
@@ -113,7 +114,7 @@
             this.text_cur_inv.Name = "text_cur_inv";
             this.text_cur_inv.Size = new System.Drawing.Size(98, 22);
             this.text_cur_inv.TabIndex = 551;
-            this.text_cur_inv.Text = "中厚板卷厂";
+            this.text_cur_inv.Text = "中板厂";
             // 
             // txt_o_t_addr
             // 
@@ -256,6 +257,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.ssc_can);
             this.groupBox2.Controls.Add(this.ssc_move);
             this.groupBox2.Controls.Add(this.txt_p_row);
@@ -274,6 +276,14 @@
             this.groupBox2.Size = new System.Drawing.Size(1362, 64);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(315, 39);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 564;
             // 
             // ssc_can
             // 
@@ -507,7 +517,7 @@
             this.Controls.Add(this.panel4);
             this.Name = "CGA2010C";
             this.Text = "板坯库库存修改及查询界面_CGA2010C";
-            this.Load += new System.EventHandler(this.CGA2010C_Load);
+            this.Load += new System.EventHandler(this.WGA1010C_Load);
             this.panel4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -563,5 +573,6 @@
         private System.Windows.Forms.Label label13;
         private CommonClass.F4ETCN txt_t_addr;
         public CommonClass.F4ETCN txt_f_addr;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

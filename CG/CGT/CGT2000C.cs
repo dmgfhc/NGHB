@@ -98,7 +98,7 @@ namespace CG
             p_SetMc(txt_stlgrd, "P", "", "", "", imcseq, "");
             p_SetMc(TXT_CH_CD, "P", "", "", "", imcseq, "");
 
-            p_ScIni(ss1, Sc1, 0, true, true);
+            p_ScIni(ss1, Sc1, 0, false, false);
             iheadrow = 1;
             iscseq = 1;
 
@@ -241,8 +241,6 @@ namespace CG
                 return;
             }
 
-            unlockSpread(ss1);
-
             for (iCount = 1; iCount <= ss1.ActiveSheet.RowCount; iCount++)
             {
 
@@ -276,7 +274,7 @@ namespace CG
                 SDB_WGT.Text = (convertX(SDB_WGT.Text) + convertX(ss1.ActiveSheet.Cells[iCount - 1, SS1_SLAB_WGT].Text)).ToString();
                 if (ss1.ActiveSheet.Cells[iCount - 1, SS1_CUST_CD].Text.Length == 2)
                 {
-                   SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, iCount - 1, iCount - 1, Color.Black, SSPpdt.BackColor);
+                   Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, iCount - 1, iCount - 1, Color.Black, SSPpdt.BackColor);
 
                 }
 
@@ -284,31 +282,26 @@ namespace CG
                 {
                     if (Convert.ToDateTime(dReheat_I_date) > Convert.ToDateTime(dReheat_O_date))
                     {
-                        SpreadCommon.Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, iCount - 1, iCount - 1, Color.Black, Color.Yellow);
+                        Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, iCount - 1, iCount - 1, Color.Black, Color.Yellow);
                     }
                 }
 
                 //紧急订单绿色标记 2012-08-16  by  LiQian
                 if (ss1.ActiveSheet.Cells[iCount - 1, SS1_URGNT_FL].Text == "Y")
                 {
-                    SpreadCommon.Gp_Sp_BlockColor(ss1, SS1_SLAB_NO, SS1_SLAB_NO, iCount - 1, iCount - 1, Color.Green, Color.White);
-                    SpreadCommon.Gp_Sp_BlockColor(ss1, SS1_ORD_NO, SS1_ORD_NO, iCount - 1, iCount - 1, Color.Green, Color.White);
-                    SpreadCommon.Gp_Sp_BlockColor(ss1, SS1_URGNT_FL, SS1_URGNT_FL, iCount - 1, iCount - 1, Color.Green, Color.White);
+                    Gp_Sp_BlockColor(ss1, SS1_SLAB_NO, SS1_SLAB_NO, iCount - 1, iCount - 1, Color.Green, Color.White);
+                    Gp_Sp_BlockColor(ss1, SS1_ORD_NO, SS1_ORD_NO, iCount - 1, iCount - 1, Color.Green, Color.White);
+                    Gp_Sp_BlockColor(ss1, SS1_URGNT_FL, SS1_URGNT_FL, iCount - 1, iCount - 1, Color.Green, Color.White);
                 }
 
 
                 simpcont = ss1.ActiveSheet.Cells[iCount - 1, SS1_IMP_CONT].Text.Trim();
                 if (simpcont == "Y")
                 {
-                    SpreadCommon.Gp_Sp_BlockColor(ss1, SS1_SLAB_NO, SS1_SLAB_NO, iCount - 1, iCount - 1, SSP4.BackColor, Color.White);
-                    SpreadCommon.Gp_Sp_BlockColor(ss1, SS1_IMP_CONT, SS1_IMP_CONT, iCount - 1, iCount - 1, SSP4.BackColor, Color.White);
+                    Gp_Sp_BlockColor(ss1, SS1_SLAB_NO, SS1_SLAB_NO, iCount - 1, iCount - 1, SSP4.BackColor, Color.White);
+                    Gp_Sp_BlockColor(ss1, SS1_IMP_CONT, SS1_IMP_CONT, iCount - 1, iCount - 1, SSP4.BackColor, Color.White);
                 }
             }
-
-            lockSpread(ss1);
-
-            int[] arr = {1,56,59,62,63};
-            unlockColumn(ss1, arr);
         }
 
         # region 公共方法
@@ -622,6 +615,32 @@ namespace CG
                 return Convert.ToDouble(value);
             }
             return 0;
+        }
+
+        //重写了框架的颜色方法，原来的框架在解锁方面有点问题，不方便在框架直接修改，所以重新写了一个
+        public void Gp_Sp_BlockColor(FpSpread oSpread, int iCol1, int iCol2, int iRow1, int iRow2, Color fColor, Color bColor)
+        {
+            FarPoint.Win.Spread.SheetView with_1 = oSpread.ActiveSheet;
+            for (int row = iRow1; row <= iRow2; row++)
+            {
+                for (int col = iCol1; col <= iCol2; col++)
+                {
+                    bool locked = with_1.Columns[col].Locked;
+                    with_1.Columns[col].Locked = false;
+                    with_1.Cells[row, col].Locked = false;
+                    //我在这里加了一个颜色的判断，防止多个颜色的时候，颜色覆盖替换的问题，所以在赋值的时候，黑色字体和白色背景不会被传入进行修改
+                    if (fColor != Color.Black)
+                    {
+                        with_1.Cells[row, col].ForeColor = fColor;
+                    }
+                    if (bColor != Color.White)
+                    {
+                        with_1.Cells[row, col].BackColor = bColor;
+                    }
+                    with_1.Cells[row, col].Locked = locked;
+                    with_1.Columns[col].Locked = locked;
+                }
+            }
         }
 
         #endregion

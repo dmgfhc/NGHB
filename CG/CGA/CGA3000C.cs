@@ -61,7 +61,7 @@ namespace CG
 
         //const int SPD_PLAN_PROD_WGT = 33,
 
-        string s1 = "SELECT '9无','0手写号','1标识不清','2毛刺','3尺寸不符','4接坯','5裂纹','6凹坑','7角裂','8割缝' FROM DUAL";
+       // string s1 = "SELECT '9无','0手写号','1标识不清','2毛刺','3尺寸不符','4接坯','5裂纹','6凹坑','7角裂','8割缝' FROM DUAL";
                  
 
         #region 界面初始化
@@ -83,33 +83,33 @@ namespace CG
             p_SetMc(TXT_FLAG, "P", "", "", "", imcseq, "");
 
 
-            p_ScIni(ss1, Sc1, 18, true, true);
+            p_ScIni(ss1, Sc1, 18, true, false);
             iheadrow = 0;
             iscseq = 1;
 
-            p_SetSc("板坯号", "E", "60", "PNIL", "", "", "", iscseq, iheadrow,"M");//0 
+            p_SetSc("板坯号", "E", "60", "NIL", "", "", "", iscseq, iheadrow,"M");//0 
             p_SetSc("坯料类别", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//1
-            p_SetSc("铸机号", "E", "60", "L", "", "", "", iscseq, iheadrow,"M");//2
+            p_SetSc("铸机号", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//2
             p_SetSc("H/C", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//3
-            p_SetSc("钢种", "E", "60", "IL", "", "", "", iscseq, iheadrow,"M");//4
+            p_SetSc("钢种", "E", "60", "IL", "", "", "", iscseq, iheadrow, "M");//4
             p_SetSc("板坯厚度", "N", "8", "IL", "", "", "", iscseq, iheadrow, "R");//5
             p_SetSc("板坯宽度", "N", "8", "IL", "", "", "", iscseq, iheadrow, "R");//6
             p_SetSc("板坯长度", "N", "8", "IL", "", "", "", iscseq, iheadrow, "R");//7
             p_SetSc("板坯重量", "N", "8,2", "L", "", "", "", iscseq, iheadrow, "R");//8
-            p_SetSc("检验厚度", "N", "8", "NI", "", "", "", iscseq, iheadrow,"R");//9
+            p_SetSc("检验厚度", "N", "8", "NI", "", "", "", iscseq, iheadrow, "R");//9
             p_SetSc("检验宽度", "N", "8", "NI", "", "", "", iscseq, iheadrow, "R");//10
 
             p_SetSc("检验长度", "N", "8", "NI", "", "", "", iscseq, iheadrow, "R");//11
-            p_SetSc("缺陷记录", "OE", "60", "I", "", "", "", iscseq, iheadrow, "M");//12
+            p_SetSc("缺陷记录", "E", "60", "I", "", "", "", iscseq, iheadrow, "M");//12
             p_SetSc("处理结果", "E", "60", "I", "", "", "", iscseq, iheadrow, "L");//13
-            p_SetSc("判定结果", "OE", "60", "I", "", "", "", iscseq, iheadrow, "L");//14
- 
+            p_SetSc("判定结果", "E", "60", "I", "", "", "", iscseq, iheadrow, "L");//14
+
             p_SetSc("班次", "E", "20", "IL", "", "", "", iscseq, iheadrow, "M");//15
             p_SetSc("班别", "E", "20", "IL", "", "", "", iscseq, iheadrow, "M");//16
             p_SetSc("作业日期", "E", "20", "IL", "", "", "", iscseq, iheadrow, "M");//17
             p_SetSc("作业人员", "E", "20", "IL", "", "", "", iscseq, iheadrow, "M");//18
-            p_SetSc("修改日期", "E", "20", "L", "", "", "", iscseq, iheadrow, "M");//17
-            p_SetSc("修改人员", "E", "20", "L", "", "", "", iscseq, iheadrow, "M");//18
+            p_SetSc("修改日期", "E", "20", "L", "", "", "", iscseq, iheadrow, "M");//19
+            p_SetSc("修改人员", "E", "20", "L", "", "", "", iscseq, iheadrow, "M");//20
            
             //iheadrow = 0;
             //p_spanSpread("当垛位号", 3, 5, iscseq, iheadrow, 1);
@@ -121,7 +121,7 @@ namespace CG
 
         public void Form_Load(object sender, System.EventArgs e)
         {
-            base.sSvrPgmPkgName = "CGA3000NC";
+            base.sSvrPgmPkgName = "CGA3000C";
             Form_Define();
             txt_OCCR_TS.RawDate = System.DateTime.Now.ToString();
             txt_OCCR_TS2.RawDate = System.DateTime.Now.ToString();
@@ -132,6 +132,19 @@ namespace CG
             label3.Visible = false;
             CBO_SHIFT.Visible = false;
             TXT_FLAG.Text = "1";
+
+            FarPoint.Win.Spread.CellType.ComboBoxCellType cb4 = new FarPoint.Win.Spread.CellType.ComboBoxCellType();
+            //cb4.ListWidth = 96;
+            //cb4.Editable = true;
+            //cb4.MaxDrop = 10;
+            //cb4.MaxLength = 1;
+            //添加选项代码
+            string[] priceTagList = new string[] { "9无","0手写号","1标识不清","2毛刺","3尺寸不符","4接坯","5裂纹","6凹坑","7角裂","8割缝" };
+            cb4.Items = priceTagList;
+            ss1.ActiveSheet.Columns[12].CellType = cb4;
+            priceTagList = new string[] {"0:合格","1:不合格"};
+            cb4.Items = priceTagList;
+            ss1.ActiveSheet.Columns[14].CellType = cb4;
 
             //txt_cur_inv.Text = "ZB";
             //txt_prod_cd.Text = "SL";
@@ -148,8 +161,6 @@ namespace CG
                 return;
 
             }
-
-
 
             if ((txt_OCCR_TS.RawDate == "" | txt_OCCR_TS2.RawDate == "") & (txt_CUT_TS.RawDate == "" | txt_CUT_TS2.RawDate == "") & txt_slab_no.Text == "" & CBO_SHIFT.Text == "")
             {

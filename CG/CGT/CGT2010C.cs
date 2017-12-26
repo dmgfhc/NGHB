@@ -91,7 +91,7 @@ namespace CG
             p_SetMc(TXT_CH_CD, "P", "", "", "", imcseq, "");//11
 
 
-            p_ScIni(ss1, Sc1, 0, false, true);
+            p_ScIni(ss1, Sc1, 0, false, false);
             iheadrow = 1;
             iscseq = 1;
 
@@ -231,7 +231,7 @@ namespace CG
             p_Ref(1, 1, true, true);
 
             dMillCal_Wgt = 0;
-            {
+            
                 if (ss1.ActiveSheet.RowCount <= 1)
                 {
                     return;
@@ -266,7 +266,6 @@ namespace CG
                         Gp_Sp_BlockColor(ss1, SS1_IMP_CONT, SS1_IMP_CONT, iCount - 1, iCount - 1, SSP4.BackColor, Color.White);
                     }
                 }
-            }
         }
 
         private void OPT_Cm_Clk(int Index)
@@ -633,6 +632,35 @@ namespace CG
                 return Convert.ToDouble(value);
             }
             return 0;
+        }
+
+        //解锁并且保存权限并且锁定
+
+        List<bool> spreadPer = new List<bool>();
+
+        public void unlockSpread(FpSpread e, bool locked)
+        {
+            int columnCount = e.Sheets[0].ColumnCount;
+            int rowCount = e.Sheets[0].RowCount;
+
+            if (locked)
+            {
+                spreadPer.Clear();
+
+                for (int i = 0; i < columnCount; i++)
+                {
+                    spreadPer.Add(e.ActiveSheet.Columns[i].Locked);
+                    e.ActiveSheet.Columns[i].Locked = false;
+                }
+            }
+            if (!locked)
+            {
+                for (int i = 0; i < columnCount; i++)
+                {
+                    e.ActiveSheet.Columns[i].Locked = spreadPer[i];
+                }
+            }
+
         }
 
         //重写了框架的颜色方法，原来的框架在解锁方面有点问题，不方便在框架直接修改，所以重新写了一个

@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            CommonClass.BControlFiledSetting bControlFiledSetting5 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting6 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting1 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting2 = new CommonClass.BControlFiledSetting();
-            CommonClass.BControlFiledSetting bControlFiledSetting3 = new CommonClass.BControlFiledSetting();
-            CommonClass.BControlFiledSetting bControlFiledSetting4 = new CommonClass.BControlFiledSetting();
             this.txt_act_stlgrd = new CommonClass.F4ETCR();
             this.txt_act_stlgrd_dec = new System.Windows.Forms.TextBox();
             this.txt_InPltCo = new CommonClass.F4ETCR();
@@ -152,12 +152,12 @@
             // 
             // txt_act_stlgrd
             // 
-            bControlFiledSetting1.ColumnID = "STLGRD";
-            bControlFiledSetting1.TargetControl = this.txt_act_stlgrd;
-            bControlFiledSetting2.ColumnID = "STEEL_GRD_DETAIL";
-            bControlFiledSetting2.TargetControl = this.txt_act_stlgrd_dec;
-            this.txt_act_stlgrd.CustomSetting.Add(bControlFiledSetting1);
-            this.txt_act_stlgrd.CustomSetting.Add(bControlFiledSetting2);
+            bControlFiledSetting5.ColumnID = "STLGRD";
+            bControlFiledSetting5.TargetControl = this.txt_act_stlgrd;
+            bControlFiledSetting6.ColumnID = "STEEL_GRD_DETAIL";
+            bControlFiledSetting6.TargetControl = this.txt_act_stlgrd_dec;
+            this.txt_act_stlgrd.CustomSetting.Add(bControlFiledSetting5);
+            this.txt_act_stlgrd.CustomSetting.Add(bControlFiledSetting6);
             this.txt_act_stlgrd.InputControl = this.txt_act_stlgrd;
             this.txt_act_stlgrd.Location = new System.Drawing.Point(87, 118);
             this.txt_act_stlgrd.MaxLength = 11;
@@ -165,7 +165,7 @@
             this.txt_act_stlgrd.Size = new System.Drawing.Size(102, 22);
             this.txt_act_stlgrd.sJoin = "";
             this.txt_act_stlgrd.sSqletc = "SELECT  STLGRD \"钢种\", STEEL_GRD_DETAIL \"目标说明\" FROM NISCO.QP_NISCO_CHMC  WHERE STLG" +
-                "RD LIKE \'%\' AND NVL(STEEL_GRD_DETAIL,\'%\') LIKE \'%\'   ORDER  BY  STLGRD  ASC ";
+    "RD LIKE \'%\' AND NVL(STEEL_GRD_DETAIL,\'%\') LIKE \'%\'   ORDER  BY  STLGRD  ASC ";
             this.txt_act_stlgrd.TabIndex = 572;
             this.txt_act_stlgrd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_act_stlgrd.TextChanged += new System.EventHandler(this.txt_act_stlgrd_TextChanged);
@@ -181,12 +181,12 @@
             // 
             // txt_InPltCo
             // 
-            bControlFiledSetting3.ColumnID = "CUST_CD";
-            bControlFiledSetting3.TargetControl = this.txt_InPltCo;
-            bControlFiledSetting4.ColumnID = "CUST_NM";
-            bControlFiledSetting4.TargetControl = this.txt_InPltCoDesc;
-            this.txt_InPltCo.CustomSetting.Add(bControlFiledSetting3);
-            this.txt_InPltCo.CustomSetting.Add(bControlFiledSetting4);
+            bControlFiledSetting1.ColumnID = "CUST_CD";
+            bControlFiledSetting1.TargetControl = this.txt_InPltCo;
+            bControlFiledSetting2.ColumnID = "CUST_NM";
+            bControlFiledSetting2.TargetControl = this.txt_InPltCoDesc;
+            this.txt_InPltCo.CustomSetting.Add(bControlFiledSetting1);
+            this.txt_InPltCo.CustomSetting.Add(bControlFiledSetting2);
             this.txt_InPltCo.InputControl = this.txt_InPltCo;
             this.txt_InPltCo.Location = new System.Drawing.Point(336, 27);
             this.txt_InPltCo.MaxLength = 6;
@@ -194,7 +194,7 @@
             this.txt_InPltCo.Size = new System.Drawing.Size(58, 22);
             this.txt_InPltCo.sJoin = "";
             this.txt_InPltCo.sSqletc = "SELECT  CUST_CD \"客户代码\", CUST_NM \"客户名称\", CUST_NM_ENG \"客户英文名称\" FROM NISCO.BP_CUST_C" +
-                "D  WHERE CUST_CD LIKE \'%\' AND CUST_TYP  IN (\'Z\',\'P\')";
+    "D  WHERE CUST_CD LIKE \'%\' AND CUST_TYP  IN (\'Z\',\'P\')";
             this.txt_InPltCo.TabIndex = 656;
             this.txt_InPltCo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_InPltCo.Visible = false;
@@ -357,6 +357,7 @@
             this.cmd_get_info.Text = "确认";
             this.cmd_get_info.UseVisualStyleBackColor = true;
             this.cmd_get_info.Visible = false;
+            this.cmd_get_info.Click += new System.EventHandler(this.cmd_get_info_Click);
             // 
             // txt_OldSlabNo2
             // 
@@ -1376,7 +1377,6 @@
             this.txt_seq.Name = "txt_seq";
             this.txt_seq.Size = new System.Drawing.Size(58, 22);
             this.txt_seq.TabIndex = 532;
-            this.txt_seq.Visible = false;
             this.txt_seq.TextChanged += new System.EventHandler(this.txt_seq_TextChanged);
             this.txt_seq.Leave += new System.EventHandler(this.txt_seq_Leave);
             // 
@@ -1393,7 +1393,6 @@
             this.label6.TabIndex = 531;
             this.label6.Text = "生产顺序号";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label6.Visible = false;
             // 
             // txt_heat
             // 
