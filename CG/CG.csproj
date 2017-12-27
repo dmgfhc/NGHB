@@ -570,6 +570,12 @@
     <Compile Include="CGT\WGT3030C.Designer.cs">
       <DependentUpon>WGT3030C.cs</DependentUpon>
     </Compile>
+    <Compile Include="CGT\CGT2040C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CGT\CGT2040C.Designer.cs">
+      <DependentUpon>CGT2040C.cs</DependentUpon>
+    </Compile>
     <Compile Include="CGZ\CGZ2031C.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1084,6 +1090,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CGT\WGT3030C.resx">
       <DependentUpon>WGT3030C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CGT\CGT2040C.resx">
+      <DependentUpon>CGT2040C.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CGZ\CGZ2031C.resx">
       <DependentUpon>CGZ2031C.cs</DependentUpon>

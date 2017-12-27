@@ -255,3 +255,4 @@ C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGT2000C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.WGT3030C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGT2010C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGT2020C.resources
+C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGT2040C.resources
