@@ -274,6 +274,9 @@ namespace CG
             OPT_PLATE.Checked = true;
             SSC1.Checked = false;
 
+            TXT_SP_CD.Text = "P";
+            ULabel27.Text = "生产时间";
+
             ss1.ActiveSheet.FrozenColumnCount = 2;
 
             list.Add(OPT_PLATE);
@@ -293,6 +296,9 @@ namespace CG
 
             OPT_PLATE.Checked = true;
             SSC1.Checked = false;
+
+            TXT_SP_CD.Text = "P";
+            ULabel27.Text = "生产时间";
 
             return true;
         }
@@ -330,7 +336,7 @@ namespace CG
 
             double sWgt;
 
-            sCurDate = DateTime.Now.ToString("yyyyMMdd");
+            sCurDate = DateTime.Now.ToString("yyyyMM");
 
             if (convertX(SDT_PROD_DATE_FROM.RawDate) - convertX(SDT_PROD_DATE_TO.RawDate) > 0)
             {
@@ -356,27 +362,27 @@ namespace CG
                         s1num = s1num + 1;
                         s1wgt = s1wgt + sWgt;
                     }
-                    if (ss1.ActiveSheet.Cells[iCount - 1, SPD_SURF_GRD].Text == "正品")
+                    if (ss1.ActiveSheet.Cells[iCount - 1, SPD_SURF_GRD].Text == "改判")
                     {
                         s2num = s2num + 1;
                         s2wgt = s2wgt + sWgt;
                     }
-                    if (ss1.ActiveSheet.Cells[iCount - 1, SPD_SURF_GRD].Text == "正品")
+                    if (ss1.ActiveSheet.Cells[iCount - 1, SPD_SURF_GRD].Text == "协议")
                     {
                         s3num = s3num + 1;
                         s3wgt = s3wgt + sWgt;
                     }
-                    if (ss1.ActiveSheet.Cells[iCount - 1, SPD_SURF_GRD].Text == "正品")
+                    if (ss1.ActiveSheet.Cells[iCount - 1, SPD_SURF_GRD].Text == "待判")
                     {
                         s4num = s4num + 1;
                         s4wgt = s4wgt + sWgt;
                     }
-                    if (ss1.ActiveSheet.Cells[iCount - 1, SPD_SURF_GRD].Text == "正品")
+                    if (ss1.ActiveSheet.Cells[iCount - 1, SPD_SURF_GRD].Text == "次品")
                     {
                         s5num = s5num + 1;
                         s5wgt = s5wgt + sWgt;
                     }
-                    if (ss1.ActiveSheet.Cells[iCount - 1, SPD_SURF_GRD].Text == "正品")
+                    if (ss1.ActiveSheet.Cells[iCount - 1, SPD_SURF_GRD].Text == "废品")
                     {
                         s7num = s7num + 1;
                         s7wgt = s7wgt + sWgt;
@@ -801,6 +807,11 @@ namespace CG
             if (!((RadioButton)sender).Checked) return;
 
             radioColor();
+
+            TXT_SP_CD.Text = "P";
+            ULabel27.Text = "生产时间";
+
+
         }
 
         private void OPT_SLAB_CheckedChanged(object sender, EventArgs e)
@@ -808,6 +819,9 @@ namespace CG
             if (!((RadioButton)sender).Checked) return;
 
             radioColor();
+
+            TXT_SP_CD.Text = "S";
+            ULabel27.Text = "轧制时间";
         }
 
         private void OPT_CUT_CheckedChanged(object sender, EventArgs e)
@@ -815,6 +829,9 @@ namespace CG
             if (!((RadioButton)sender).Checked) return;
 
             radioColor();
+
+            TXT_SP_CD.Text = "C";
+            ULabel27.Text = "剪切时间";
         }
 
         private void OPT_CUR_CheckedChanged(object sender, EventArgs e)
@@ -822,6 +839,9 @@ namespace CG
             if (!((RadioButton)sender).Checked) return;
 
             radioColor();
+
+            TXT_SP_CD.Text = "U";
+            ULabel27.Text = "入库时间";
         }
 
         private void OPT_GAS_CheckedChanged(object sender, EventArgs e)
@@ -829,6 +849,9 @@ namespace CG
             if (!((RadioButton)sender).Checked) return;
 
             radioColor();
+
+            TXT_SP_CD.Text = "G";
+            ULabel27.Text = "火切时间";
         }
 
 

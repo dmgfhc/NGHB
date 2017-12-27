@@ -45,7 +45,7 @@
             this.txt_STLGRD_Name1 = new System.Windows.Forms.TextBox();
             this.ss1 = new FarPoint.Win.Spread.FpSpread();
             this.fpSpread1_Sheet1 = new FarPoint.Win.Spread.SheetView();
-            this.ULabel5 = new System.Windows.Forms.Label();
+            this.ULabel27 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SDT_PROD_DATE_FROM = new CommonClass.CeriUDate();
             this.SDT_PROD_DATE_TO = new CommonClass.CeriUDate();
@@ -72,6 +72,23 @@
             this.label13 = new System.Windows.Forms.Label();
             this.TXT_SMP_NO = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.SSPpdt = new System.Windows.Forms.Button();
+            this.SSP1 = new System.Windows.Forms.Button();
+            this.SSP4 = new System.Windows.Forms.Button();
+            this.SSC1 = new System.Windows.Forms.CheckBox();
+            this.TXT_XS_WGT = new System.Windows.Forms.TextBox();
+            this.TXT_FG_WGT = new System.Windows.Forms.TextBox();
+            this.TXT_FG_NUM = new System.Windows.Forms.TextBox();
+            this.TXT_NO_WGT = new System.Windows.Forms.TextBox();
+            this.TXT_NO_NUM = new System.Windows.Forms.TextBox();
+            this.TXT_XY_WGT = new System.Windows.Forms.TextBox();
+            this.TXT_XY_NUM = new System.Windows.Forms.TextBox();
+            this.TXT_GP_WGT = new System.Windows.Forms.TextBox();
+            this.TXT_GP_NUM = new System.Windows.Forms.TextBox();
+            this.TXT_ZP_WGT = new System.Windows.Forms.TextBox();
+            this.TXT_ZP_NUM = new System.Windows.Forms.TextBox();
+            this.TXT_PLATE_WGT = new System.Windows.Forms.TextBox();
+            this.TXT_PLATE_NUM = new System.Windows.Forms.TextBox();
             this.TXT_SP_CD = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.OPT_GAS = new System.Windows.Forms.RadioButton();
@@ -120,23 +137,6 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.TXT_PLATE_NUM = new System.Windows.Forms.TextBox();
-            this.TXT_PLATE_WGT = new System.Windows.Forms.TextBox();
-            this.TXT_ZP_NUM = new System.Windows.Forms.TextBox();
-            this.TXT_ZP_WGT = new System.Windows.Forms.TextBox();
-            this.TXT_GP_NUM = new System.Windows.Forms.TextBox();
-            this.TXT_GP_WGT = new System.Windows.Forms.TextBox();
-            this.TXT_XY_NUM = new System.Windows.Forms.TextBox();
-            this.TXT_XY_WGT = new System.Windows.Forms.TextBox();
-            this.TXT_NO_NUM = new System.Windows.Forms.TextBox();
-            this.TXT_NO_WGT = new System.Windows.Forms.TextBox();
-            this.TXT_FG_NUM = new System.Windows.Forms.TextBox();
-            this.TXT_FG_WGT = new System.Windows.Forms.TextBox();
-            this.TXT_XS_WGT = new System.Windows.Forms.TextBox();
-            this.SSC1 = new System.Windows.Forms.CheckBox();
-            this.SSP4 = new System.Windows.Forms.Button();
-            this.SSP1 = new System.Windows.Forms.Button();
-            this.SSPpdt = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ss1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fpSpread1_Sheet1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -258,15 +258,15 @@
             this.fpSpread1_Sheet1.Reset();
             this.fpSpread1_Sheet1.SheetName = "Sheet1";
             // 
-            // ULabel5
+            // ULabel27
             // 
-            this.ULabel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.ULabel5.Location = new System.Drawing.Point(30, 18);
-            this.ULabel5.Name = "ULabel5";
-            this.ULabel5.Size = new System.Drawing.Size(84, 21);
-            this.ULabel5.TabIndex = 0;
-            this.ULabel5.Text = "生产日期";
-            this.ULabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ULabel27.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.ULabel27.Location = new System.Drawing.Point(30, 18);
+            this.ULabel27.Name = "ULabel27";
+            this.ULabel27.Size = new System.Drawing.Size(84, 21);
+            this.ULabel27.TabIndex = 0;
+            this.ULabel27.Text = "生产日期";
+            this.ULabel27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -604,13 +604,170 @@
             this.groupBox1.Controls.Add(this.SDT_PROD_DATE_TO);
             this.groupBox1.Controls.Add(this.SDT_PROD_DATE_FROM);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.ULabel5);
+            this.groupBox1.Controls.Add(this.ULabel27);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1269, 203);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // SSPpdt
+            // 
+            this.SSPpdt.BackColor = System.Drawing.Color.White;
+            this.SSPpdt.FlatAppearance.BorderSize = 0;
+            this.SSPpdt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SSPpdt.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.SSPpdt.ForeColor = System.Drawing.Color.Red;
+            this.SSPpdt.Location = new System.Drawing.Point(791, 136);
+            this.SSPpdt.Name = "SSPpdt";
+            this.SSPpdt.Size = new System.Drawing.Size(90, 24);
+            this.SSPpdt.TabIndex = 259;
+            this.SSPpdt.Text = "一坯多订单";
+            this.SSPpdt.UseVisualStyleBackColor = false;
+            // 
+            // SSP1
+            // 
+            this.SSP1.BackColor = System.Drawing.Color.Fuchsia;
+            this.SSP1.FlatAppearance.BorderSize = 0;
+            this.SSP1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SSP1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.SSP1.ForeColor = System.Drawing.Color.Blue;
+            this.SSP1.Location = new System.Drawing.Point(685, 136);
+            this.SSP1.Name = "SSP1";
+            this.SSP1.Size = new System.Drawing.Size(90, 24);
+            this.SSP1.TabIndex = 258;
+            this.SSP1.Text = "一坯多订单";
+            this.SSP1.UseVisualStyleBackColor = false;
+            // 
+            // SSP4
+            // 
+            this.SSP4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.SSP4.FlatAppearance.BorderSize = 0;
+            this.SSP4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SSP4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.SSP4.ForeColor = System.Drawing.Color.Blue;
+            this.SSP4.Location = new System.Drawing.Point(587, 135);
+            this.SSP4.Name = "SSP4";
+            this.SSP4.Size = new System.Drawing.Size(90, 24);
+            this.SSP4.TabIndex = 257;
+            this.SSP4.Text = "重点订单";
+            this.SSP4.UseVisualStyleBackColor = false;
+            // 
+            // SSC1
+            // 
+            this.SSC1.AutoSize = true;
+            this.SSC1.Location = new System.Drawing.Point(936, 148);
+            this.SSC1.Name = "SSC1";
+            this.SSC1.Size = new System.Drawing.Size(89, 17);
+            this.SSC1.TabIndex = 256;
+            this.SSC1.Text = "checkBox1";
+            this.SSC1.UseVisualStyleBackColor = true;
+            this.SSC1.Visible = false;
+            // 
+            // TXT_XS_WGT
+            // 
+            this.TXT_XS_WGT.Location = new System.Drawing.Point(968, 167);
+            this.TXT_XS_WGT.Name = "TXT_XS_WGT";
+            this.TXT_XS_WGT.Size = new System.Drawing.Size(26, 22);
+            this.TXT_XS_WGT.TabIndex = 255;
+            this.TXT_XS_WGT.Visible = false;
+            // 
+            // TXT_FG_WGT
+            // 
+            this.TXT_FG_WGT.Location = new System.Drawing.Point(936, 170);
+            this.TXT_FG_WGT.Name = "TXT_FG_WGT";
+            this.TXT_FG_WGT.Size = new System.Drawing.Size(26, 22);
+            this.TXT_FG_WGT.TabIndex = 254;
+            this.TXT_FG_WGT.Visible = false;
+            // 
+            // TXT_FG_NUM
+            // 
+            this.TXT_FG_NUM.Location = new System.Drawing.Point(907, 170);
+            this.TXT_FG_NUM.Name = "TXT_FG_NUM";
+            this.TXT_FG_NUM.Size = new System.Drawing.Size(26, 22);
+            this.TXT_FG_NUM.TabIndex = 253;
+            this.TXT_FG_NUM.Visible = false;
+            // 
+            // TXT_NO_WGT
+            // 
+            this.TXT_NO_WGT.Location = new System.Drawing.Point(875, 169);
+            this.TXT_NO_WGT.Name = "TXT_NO_WGT";
+            this.TXT_NO_WGT.Size = new System.Drawing.Size(26, 22);
+            this.TXT_NO_WGT.TabIndex = 252;
+            this.TXT_NO_WGT.Visible = false;
+            // 
+            // TXT_NO_NUM
+            // 
+            this.TXT_NO_NUM.Location = new System.Drawing.Point(843, 167);
+            this.TXT_NO_NUM.Name = "TXT_NO_NUM";
+            this.TXT_NO_NUM.Size = new System.Drawing.Size(26, 22);
+            this.TXT_NO_NUM.TabIndex = 251;
+            this.TXT_NO_NUM.Visible = false;
+            // 
+            // TXT_XY_WGT
+            // 
+            this.TXT_XY_WGT.Location = new System.Drawing.Point(811, 167);
+            this.TXT_XY_WGT.Name = "TXT_XY_WGT";
+            this.TXT_XY_WGT.Size = new System.Drawing.Size(26, 22);
+            this.TXT_XY_WGT.TabIndex = 250;
+            this.TXT_XY_WGT.Visible = false;
+            // 
+            // TXT_XY_NUM
+            // 
+            this.TXT_XY_NUM.Location = new System.Drawing.Point(779, 168);
+            this.TXT_XY_NUM.Name = "TXT_XY_NUM";
+            this.TXT_XY_NUM.Size = new System.Drawing.Size(26, 22);
+            this.TXT_XY_NUM.TabIndex = 249;
+            this.TXT_XY_NUM.Visible = false;
+            // 
+            // TXT_GP_WGT
+            // 
+            this.TXT_GP_WGT.Location = new System.Drawing.Point(747, 167);
+            this.TXT_GP_WGT.Name = "TXT_GP_WGT";
+            this.TXT_GP_WGT.Size = new System.Drawing.Size(26, 22);
+            this.TXT_GP_WGT.TabIndex = 248;
+            this.TXT_GP_WGT.Visible = false;
+            // 
+            // TXT_GP_NUM
+            // 
+            this.TXT_GP_NUM.Location = new System.Drawing.Point(715, 168);
+            this.TXT_GP_NUM.Name = "TXT_GP_NUM";
+            this.TXT_GP_NUM.Size = new System.Drawing.Size(26, 22);
+            this.TXT_GP_NUM.TabIndex = 247;
+            this.TXT_GP_NUM.Visible = false;
+            // 
+            // TXT_ZP_WGT
+            // 
+            this.TXT_ZP_WGT.Location = new System.Drawing.Point(683, 168);
+            this.TXT_ZP_WGT.Name = "TXT_ZP_WGT";
+            this.TXT_ZP_WGT.Size = new System.Drawing.Size(26, 22);
+            this.TXT_ZP_WGT.TabIndex = 246;
+            this.TXT_ZP_WGT.Visible = false;
+            // 
+            // TXT_ZP_NUM
+            // 
+            this.TXT_ZP_NUM.Location = new System.Drawing.Point(651, 169);
+            this.TXT_ZP_NUM.Name = "TXT_ZP_NUM";
+            this.TXT_ZP_NUM.Size = new System.Drawing.Size(26, 22);
+            this.TXT_ZP_NUM.TabIndex = 245;
+            this.TXT_ZP_NUM.Visible = false;
+            // 
+            // TXT_PLATE_WGT
+            // 
+            this.TXT_PLATE_WGT.Location = new System.Drawing.Point(619, 167);
+            this.TXT_PLATE_WGT.Name = "TXT_PLATE_WGT";
+            this.TXT_PLATE_WGT.Size = new System.Drawing.Size(26, 22);
+            this.TXT_PLATE_WGT.TabIndex = 244;
+            this.TXT_PLATE_WGT.Visible = false;
+            // 
+            // TXT_PLATE_NUM
+            // 
+            this.TXT_PLATE_NUM.Location = new System.Drawing.Point(587, 168);
+            this.TXT_PLATE_NUM.Name = "TXT_PLATE_NUM";
+            this.TXT_PLATE_NUM.Size = new System.Drawing.Size(26, 22);
+            this.TXT_PLATE_NUM.TabIndex = 243;
+            this.TXT_PLATE_NUM.Visible = false;
             // 
             // TXT_SP_CD
             // 
@@ -1095,163 +1252,6 @@
             this.label25.Text = "钢板量/总重量(Ton)";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // TXT_PLATE_NUM
-            // 
-            this.TXT_PLATE_NUM.Location = new System.Drawing.Point(587, 168);
-            this.TXT_PLATE_NUM.Name = "TXT_PLATE_NUM";
-            this.TXT_PLATE_NUM.Size = new System.Drawing.Size(26, 22);
-            this.TXT_PLATE_NUM.TabIndex = 243;
-            this.TXT_PLATE_NUM.Visible = false;
-            // 
-            // TXT_PLATE_WGT
-            // 
-            this.TXT_PLATE_WGT.Location = new System.Drawing.Point(619, 167);
-            this.TXT_PLATE_WGT.Name = "TXT_PLATE_WGT";
-            this.TXT_PLATE_WGT.Size = new System.Drawing.Size(26, 22);
-            this.TXT_PLATE_WGT.TabIndex = 244;
-            this.TXT_PLATE_WGT.Visible = false;
-            // 
-            // TXT_ZP_NUM
-            // 
-            this.TXT_ZP_NUM.Location = new System.Drawing.Point(651, 169);
-            this.TXT_ZP_NUM.Name = "TXT_ZP_NUM";
-            this.TXT_ZP_NUM.Size = new System.Drawing.Size(26, 22);
-            this.TXT_ZP_NUM.TabIndex = 245;
-            this.TXT_ZP_NUM.Visible = false;
-            // 
-            // TXT_ZP_WGT
-            // 
-            this.TXT_ZP_WGT.Location = new System.Drawing.Point(683, 168);
-            this.TXT_ZP_WGT.Name = "TXT_ZP_WGT";
-            this.TXT_ZP_WGT.Size = new System.Drawing.Size(26, 22);
-            this.TXT_ZP_WGT.TabIndex = 246;
-            this.TXT_ZP_WGT.Visible = false;
-            // 
-            // TXT_GP_NUM
-            // 
-            this.TXT_GP_NUM.Location = new System.Drawing.Point(715, 168);
-            this.TXT_GP_NUM.Name = "TXT_GP_NUM";
-            this.TXT_GP_NUM.Size = new System.Drawing.Size(26, 22);
-            this.TXT_GP_NUM.TabIndex = 247;
-            this.TXT_GP_NUM.Visible = false;
-            // 
-            // TXT_GP_WGT
-            // 
-            this.TXT_GP_WGT.Location = new System.Drawing.Point(747, 167);
-            this.TXT_GP_WGT.Name = "TXT_GP_WGT";
-            this.TXT_GP_WGT.Size = new System.Drawing.Size(26, 22);
-            this.TXT_GP_WGT.TabIndex = 248;
-            this.TXT_GP_WGT.Visible = false;
-            // 
-            // TXT_XY_NUM
-            // 
-            this.TXT_XY_NUM.Location = new System.Drawing.Point(779, 168);
-            this.TXT_XY_NUM.Name = "TXT_XY_NUM";
-            this.TXT_XY_NUM.Size = new System.Drawing.Size(26, 22);
-            this.TXT_XY_NUM.TabIndex = 249;
-            this.TXT_XY_NUM.Visible = false;
-            // 
-            // TXT_XY_WGT
-            // 
-            this.TXT_XY_WGT.Location = new System.Drawing.Point(811, 167);
-            this.TXT_XY_WGT.Name = "TXT_XY_WGT";
-            this.TXT_XY_WGT.Size = new System.Drawing.Size(26, 22);
-            this.TXT_XY_WGT.TabIndex = 250;
-            this.TXT_XY_WGT.Visible = false;
-            // 
-            // TXT_NO_NUM
-            // 
-            this.TXT_NO_NUM.Location = new System.Drawing.Point(843, 167);
-            this.TXT_NO_NUM.Name = "TXT_NO_NUM";
-            this.TXT_NO_NUM.Size = new System.Drawing.Size(26, 22);
-            this.TXT_NO_NUM.TabIndex = 251;
-            this.TXT_NO_NUM.Visible = false;
-            // 
-            // TXT_NO_WGT
-            // 
-            this.TXT_NO_WGT.Location = new System.Drawing.Point(875, 169);
-            this.TXT_NO_WGT.Name = "TXT_NO_WGT";
-            this.TXT_NO_WGT.Size = new System.Drawing.Size(26, 22);
-            this.TXT_NO_WGT.TabIndex = 252;
-            this.TXT_NO_WGT.Visible = false;
-            // 
-            // TXT_FG_NUM
-            // 
-            this.TXT_FG_NUM.Location = new System.Drawing.Point(907, 170);
-            this.TXT_FG_NUM.Name = "TXT_FG_NUM";
-            this.TXT_FG_NUM.Size = new System.Drawing.Size(26, 22);
-            this.TXT_FG_NUM.TabIndex = 253;
-            this.TXT_FG_NUM.Visible = false;
-            // 
-            // TXT_FG_WGT
-            // 
-            this.TXT_FG_WGT.Location = new System.Drawing.Point(936, 170);
-            this.TXT_FG_WGT.Name = "TXT_FG_WGT";
-            this.TXT_FG_WGT.Size = new System.Drawing.Size(26, 22);
-            this.TXT_FG_WGT.TabIndex = 254;
-            this.TXT_FG_WGT.Visible = false;
-            // 
-            // TXT_XS_WGT
-            // 
-            this.TXT_XS_WGT.Location = new System.Drawing.Point(968, 167);
-            this.TXT_XS_WGT.Name = "TXT_XS_WGT";
-            this.TXT_XS_WGT.Size = new System.Drawing.Size(26, 22);
-            this.TXT_XS_WGT.TabIndex = 255;
-            this.TXT_XS_WGT.Visible = false;
-            // 
-            // SSC1
-            // 
-            this.SSC1.AutoSize = true;
-            this.SSC1.Location = new System.Drawing.Point(936, 148);
-            this.SSC1.Name = "SSC1";
-            this.SSC1.Size = new System.Drawing.Size(89, 17);
-            this.SSC1.TabIndex = 256;
-            this.SSC1.Text = "checkBox1";
-            this.SSC1.UseVisualStyleBackColor = true;
-            this.SSC1.Visible = false;
-            // 
-            // SSP4
-            // 
-            this.SSP4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.SSP4.FlatAppearance.BorderSize = 0;
-            this.SSP4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SSP4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.SSP4.ForeColor = System.Drawing.Color.Blue;
-            this.SSP4.Location = new System.Drawing.Point(587, 135);
-            this.SSP4.Name = "SSP4";
-            this.SSP4.Size = new System.Drawing.Size(90, 24);
-            this.SSP4.TabIndex = 257;
-            this.SSP4.Text = "重点订单";
-            this.SSP4.UseVisualStyleBackColor = false;
-            // 
-            // SSP1
-            // 
-            this.SSP1.BackColor = System.Drawing.Color.Fuchsia;
-            this.SSP1.FlatAppearance.BorderSize = 0;
-            this.SSP1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SSP1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.SSP1.ForeColor = System.Drawing.Color.Blue;
-            this.SSP1.Location = new System.Drawing.Point(685, 136);
-            this.SSP1.Name = "SSP1";
-            this.SSP1.Size = new System.Drawing.Size(90, 24);
-            this.SSP1.TabIndex = 258;
-            this.SSP1.Text = "一坯多订单";
-            this.SSP1.UseVisualStyleBackColor = false;
-            // 
-            // SSPpdt
-            // 
-            this.SSPpdt.BackColor = System.Drawing.Color.White;
-            this.SSPpdt.FlatAppearance.BorderSize = 0;
-            this.SSPpdt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SSPpdt.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.SSPpdt.ForeColor = System.Drawing.Color.Red;
-            this.SSPpdt.Location = new System.Drawing.Point(791, 136);
-            this.SSPpdt.Name = "SSPpdt";
-            this.SSPpdt.Size = new System.Drawing.Size(90, 24);
-            this.SSPpdt.TabIndex = 259;
-            this.SSPpdt.Text = "一坯多订单";
-            this.SSPpdt.UseVisualStyleBackColor = false;
-            // 
             // CGT2040C
             // 
             this.ClientSize = new System.Drawing.Size(1269, 622);
@@ -1277,7 +1277,7 @@
 
         private FarPoint.Win.Spread.FpSpread ss1;
         private FarPoint.Win.Spread.SheetView fpSpread1_Sheet1;
-        private System.Windows.Forms.Label ULabel5;
+        private System.Windows.Forms.Label ULabel27;
         private System.Windows.Forms.Label label2;
         private CommonClass.CeriUDate SDT_PROD_DATE_FROM;
         private CommonClass.CeriUDate SDT_PROD_DATE_TO;
