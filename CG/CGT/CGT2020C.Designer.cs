@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            CommonClass.BControlFiledSetting bControlFiledSetting1 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting2 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting3 = new CommonClass.BControlFiledSetting();
-            CommonClass.BControlFiledSetting bControlFiledSetting4 = new CommonClass.BControlFiledSetting();
             this.txt_stlgrd = new CommonClass.F4ETCR();
             this.txt_STLGRD_Name = new System.Windows.Forms.TextBox();
             this.txt_stdspec = new CommonClass.F4ETCR();
@@ -96,12 +96,12 @@
             // 
             // txt_stlgrd
             // 
-            bControlFiledSetting2.ColumnID = "STLGRD";
-            bControlFiledSetting2.TargetControl = this.txt_stlgrd;
-            bControlFiledSetting3.ColumnID = "STEEL_GRD_DETAIL";
-            bControlFiledSetting3.TargetControl = this.txt_STLGRD_Name;
+            bControlFiledSetting1.ColumnID = "STLGRD";
+            bControlFiledSetting1.TargetControl = this.txt_stlgrd;
+            bControlFiledSetting2.ColumnID = "STEEL_GRD_DETAIL";
+            bControlFiledSetting2.TargetControl = this.txt_STLGRD_Name;
+            this.txt_stlgrd.CustomSetting.Add(bControlFiledSetting1);
             this.txt_stlgrd.CustomSetting.Add(bControlFiledSetting2);
-            this.txt_stlgrd.CustomSetting.Add(bControlFiledSetting3);
             this.txt_stlgrd.InputControl = this.txt_stlgrd;
             this.txt_stlgrd.Location = new System.Drawing.Point(136, 145);
             this.txt_stlgrd.MaxLength = 12;
@@ -122,9 +122,9 @@
             // 
             // txt_stdspec
             // 
-            bControlFiledSetting4.ColumnID = "StdSPEC";
-            bControlFiledSetting4.TargetControl = this.txt_stdspec;
-            this.txt_stdspec.CustomSetting.Add(bControlFiledSetting4);
+            bControlFiledSetting3.ColumnID = "StdSPEC";
+            bControlFiledSetting3.TargetControl = this.txt_stdspec;
+            this.txt_stdspec.CustomSetting.Add(bControlFiledSetting3);
             this.txt_stdspec.InputControl = this.txt_stdspec;
             this.txt_stdspec.Location = new System.Drawing.Point(136, 114);
             this.txt_stdspec.MaxLength = 18;
@@ -783,7 +783,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "CGT2020C";
             this.Text = "母板分段实绩查询_CGT2020C";
-            this.Load += new System.EventHandler(this.CGT2010C_Load);
+            this.Load += new System.EventHandler(this.CGT2020C_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ss1)).EndInit();

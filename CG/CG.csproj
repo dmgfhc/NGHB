@@ -564,6 +564,12 @@
     <Compile Include="CGT\CGT2020C.Designer.cs">
       <DependentUpon>CGT2020C.cs</DependentUpon>
     </Compile>
+    <Compile Include="CGT\CGT2060C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CGT\CGT2060C.Designer.cs">
+      <DependentUpon>CGT2060C.cs</DependentUpon>
+    </Compile>
     <Compile Include="CGT\WGT3030C.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -575,6 +581,24 @@
     </Compile>
     <Compile Include="CGT\CGT2040C.Designer.cs">
       <DependentUpon>CGT2040C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CGT\CGT2050C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CGT\CGT2050C.Designer.cs">
+      <DependentUpon>CGT2050C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CGT\CGT2001C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CGT\CGT2001C.Designer.cs">
+      <DependentUpon>CGT2001C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CGT\CGT2001C_POP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CGT\CGT2001C_POP.Designer.cs">
+      <DependentUpon>CGT2001C_POP.cs</DependentUpon>
     </Compile>
     <Compile Include="CGZ\CGZ2031C.cs">
       <SubType>Form</SubType>
@@ -1088,11 +1112,23 @@
     <EmbeddedResource Include="CGT\CGT2020C.resx">
       <DependentUpon>CGT2020C.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CGT\CGT2060C.resx">
+      <DependentUpon>CGT2060C.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CGT\WGT3030C.resx">
       <DependentUpon>WGT3030C.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CGT\CGT2040C.resx">
       <DependentUpon>CGT2040C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CGT\CGT2050C.resx">
+      <DependentUpon>CGT2050C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CGT\CGT2001C.resx">
+      <DependentUpon>CGT2001C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CGT\CGT2001C_POP.resx">
+      <DependentUpon>CGT2001C_POP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CGZ\CGZ2031C.resx">
       <DependentUpon>CGZ2031C.cs</DependentUpon>

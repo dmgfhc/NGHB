@@ -32,27 +32,27 @@ using System.IO;
 //-------------------------------------------------------------------------------
 //-- System Name       中板轧钢作业
 //-- Sub_System Name   统计分析管理
-//-- Program Name      母板分段实绩查询_CGT2020C
-//-- Program ID        CGT2020C
+//-- Program Name      火切实绩查询界面_CGT2060C
+//-- Program ID        CGT2060C
 //-- Document No       Q-00-0010(Specification)
 //-- Designer          韩超
 //-- Coder             韩超
-//-- Date              2017.12.22
+//-- Date              2017.12.28
 //-- Description
 //-------------------------------------------------------------------------------
 //-- UPDATE HISTORY  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //-------------------------------------------------------------------------------
 //-- VER       DATE          EDITOR       DESCRIPTION
-//-- 1.00    2017.12.22       韩超        母板分段实绩查询_CGT2020C
+//-- 1.00    2017.12.28       韩超        火切实绩查询界面_CGT2060C
 //-------------------------------------------------------------------------------
 //-- DECLARATION     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //-------------------------------------------------------------------------------
 
 namespace CG
 {
-    public partial class CGT2020C : CommonClass.FORMBASE
+    public partial class CGT2060C : CommonClass.FORMBASE
     {
-        public CGT2020C()
+        public CGT2060C()
         {
             InitializeComponent();
         }
@@ -61,28 +61,19 @@ namespace CG
         Collection Sc1 = new Collection();
 
         const int SS1_PLATE_NO = 0;
-        const int SS1_TRNS_CMPY_CD = 3;
-        const int SS1_MILL_LOT_NO = 5;
-        const int SS1_APLY_STDSPEC = 15;
-        const int SS1_PROD_THK = 16;
-        const int SS1_ORD_THK = 21;
-        const int SS1_ORD_WID = 22;
-        const int SS1_ORD_LEN = 23;
-        const int SS1_PROD_CAL_UNIT_WGT = 24;
-        const int SS1_TRIM_FL = 25;
-        const int SS1_SIZE_KND = 26;
-        const int SS1_HTM_METH1 = 29;
-        //是否热处理标记蓝色 2013-05-28  by  LiQian
-        const int SS1_PROD_DATE = 32;
-        const int SS1_SHIFT = 36;
-        const int SS1_GROUP_CD = 37;
-        const int SS1_LEN_TOL = 47;
-        const int SS1_DEL_TO_DATE = 50;
-        const int SS1_ORD_CNT = 52;
-        const int SS1_URGNT_FL = 53;
+        const int SS1_PROC_CD = 3;
+        const int SS1_STDSPEC = 4;
+        const int SS1_AFER_SIZE = 7;
+        const int SS1_AFER_WGT = 8;
+        const int SS1_EMP_NO = 22;
+        const int SS1_LOC = 23;
+        const int SS1_REMARK = 25;
+        const int SS1_CUST_CD = 32;
+        const int SS1_ORD = 30;
+        const int SS1_SIZE = 33;
+        const int SS1_URGNT_FL = 34;
         //紧急订单绿色标记 2012-08-16  by  LiQian
-        const int SS1_IMP_CONT = 56;
-        const int SS1_PILECOOL = 57;
+        const int SS1_IMP_CONT = 35;
 
         protected override void p_SubFormInit()
         {
@@ -92,222 +83,141 @@ namespace CG
             int iscseq;
             p_McIni(Mc1, false);
             imcseq = 1;
-            p_SetMc(TXT_SLAB_NO, "P", "", "", "", imcseq, "");//1
-            p_SetMc(TXT_MILL_LOT_NO, "P", "", "", "", imcseq, "");//2
-            p_SetMc(SDT_PROD_DATE_FROM, "P", "", "", "", imcseq, "");//3
-            p_SetMc(SDT_PROD_DATE_TO, "P", "", "", "", imcseq, "");//4
-            p_SetMc(CBO_SHIFT, "P", "", "", "", imcseq, "");//5
-            p_SetMc(txt_stdspec, "P", "", "", "", imcseq, "");//6
-            p_SetMc(SDB_THK, "P", "", "", "", imcseq, "");//7
-            p_SetMc(SDB_THK_TO, "P", "", "", "", imcseq, "");//8
-            p_SetMc(SDB_WID, "P", "", "", "", imcseq, "");//9
-            p_SetMc(SDB_WID_TO, "P", "", "", "", imcseq, "");//10
-            p_SetMc(SDB_LEN, "P", "", "", "", imcseq, "");//11
-            p_SetMc(SDB_LEN_TO, "P", "", "", "", imcseq, "");//12
-            p_SetMc(cbo_gas_fl, "P", "", "", "", imcseq, "");//13
-            p_SetMc(SDB_THK_PLAN, "P", "", "", "", imcseq, "");//14
-            p_SetMc(SDB_THK_PLAN_TO, "P", "", "", "", imcseq, "");//15
-            p_SetMc(SDB_WID_PLAN, "P", "", "", "", imcseq, "");//16
-            p_SetMc(SDB_WID_PLAN_TO, "P", "", "", "", imcseq, "");//17
-            p_SetMc(SDB_LEN_PLAN, "P", "", "", "", imcseq, "");//18
-            p_SetMc(SDB_LEN_PLAN_TO, "P", "", "", "", imcseq, "");//19
-            p_SetMc(cbo_plate_yn, "P", "", "", "", imcseq, "");//20
-            p_SetMc(cbo_scrap, "P", "", "", "", imcseq, "");//21
-            p_SetMc(TXT_TRNS_CMPY_CD, "P", "", "", "", imcseq, "");//22
-            p_SetMc(TXT_TRNS_CMPY_CD_TO, "P", "", "", "", imcseq, "");//23
-            p_SetMc(txt_stlgrd, "P", "", "", "", imcseq, "");//24
+            p_SetMc(TXT_LOT_NO, "P", "", "", "", imcseq, "");//1
+            p_SetMc(SDT_PROD_DATE, "P", "", "", "", imcseq, "");//2
+            p_SetMc(SDT_PROD_TO_DATE, "P", "", "", "", imcseq, "");//3
+            p_SetMc(CBO_SHIFT, "P", "", "", "", imcseq, "");//4
+            p_SetMc(CBO_GROUP, "P", "", "", "", imcseq, "");//5
+            p_SetMc(TXT_PLATE_NO, "P", "", "", "", imcseq, "");//6
+            p_SetMc(CHK_FROM_DATE, "P", "", "", "", imcseq, "");//7
+            p_SetMc(CHK_TO_DATE, "P", "", "", "", imcseq, "");//8
+            p_SetMc(CBO_SURFGRD, "P", "", "", "", imcseq, "");//9
+            p_SetMc(CBO_PRODGRD, "P", "", "", "", imcseq, "");//10
+            p_SetMc(txt_stdspec, "P", "", "", "", imcseq, "");//11
+            p_SetMc(txt_loc, "P", "", "", "", imcseq, "");//12
+            p_SetMc(SDB_THK, "P", "", "", "", imcseq, "");//13
+            p_SetMc(SDB_THK_TO, "P", "", "", "", imcseq, "");//14
+            p_SetMc(SDB_WID, "P", "", "", "", imcseq, "");//15
+            p_SetMc(SDB_WID_TO, "P", "", "", "", imcseq, "");//16
+            p_SetMc(SDB_LEN, "P", "", "", "", imcseq, "");//17
+            p_SetMc(SDB_LEN_TO, "P", "", "", "", imcseq, "");//18
+            p_SetMc(CBO_MILLGROUP, "P", "", "", "", imcseq, "");//19
+            p_SetMc(cbo_cut_place, "P", "", "", "", imcseq, "");//20
+
             
-            p_ScIni(ss1, Sc1, 0, false, false);
+            p_ScIni(ss1, Sc1, 22, true, false);
             iheadrow = 1;
             iscseq = 1;
 
-            p_SetSc("母板号", "E", "60", "PL", "", "", "", iscseq, iheadrow, "L");//0
-            p_SetSc("日期", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//1
-            p_SetSc("班次", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//2
-            p_SetSc("分段号", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//3
-            p_SetSc("喷印号", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//4
-            p_SetSc("轧批号", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//5
-            p_SetSc("原始坯料钢种", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//6
-            p_SetSc("板坯钢种", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//7
-            p_SetSc("标准钢种", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//8
-            p_SetSc("厚度", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R");//9
-            p_SetSc("宽度", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R");//10
-            p_SetSc("长度", "N", "9,1", "L", "", "", "", iscseq, iheadrow, "R");//11
-            p_SetSc("重量", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "R");//12
-            p_SetSc("取样方式", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//13
-            p_SetSc("取样长度", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R");//14
-            p_SetSc("产品标准号", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//15
-            p_SetSc("厚度公差", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//16
-            p_SetSc("钢板不平度1", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//17
-            p_SetSc("测量长度1", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//18
-            p_SetSc("钢板不平度2", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//19
-            p_SetSc("测量长度2", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//20
-            p_SetSc("厚度", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R");//21
-            p_SetSc("宽度", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R");//22
-            p_SetSc("长度", "N", "9,1", "L", "", "", "", iscseq, iheadrow, "R");//23
-            p_SetSc("重量", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "R");//24
-            p_SetSc("切边", "E", "10", "L", "", "", "", iscseq, iheadrow, "M");//25
-            p_SetSc("定尺", "E", "10", "L", "", "", "", iscseq, iheadrow, "M");//26
-            p_SetSc("探伤", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//27
-            p_SetSc("抛丸", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//28
-            p_SetSc("热处理方法1", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//29
-            p_SetSc("热处理方法2", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//30
-            p_SetSc("喷涂交货", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//31
-            p_SetSc("母板切割日期", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//32
-            p_SetSc("实际成品量", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "R");//33
-            p_SetSc("是否剪切", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//34
-            p_SetSc("原料量", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "R");//35
-            p_SetSc("班次", "E", "2", "L", "", "", "", iscseq, iheadrow, "M");//36
-            p_SetSc("班别", "E", "2", "L", "", "", "", iscseq, iheadrow, "M");//37
-            p_SetSc("作业人", "E", "8", "L", "", "", "", iscseq, iheadrow, "M");//38
-            p_SetSc("订单号", "E", "20", "L", "", "", "", iscseq, iheadrow, "L");//39
-            p_SetSc("订单序列号", "E", "10", "L", "", "", "", iscseq, iheadrow, "L");//40
-            p_SetSc("是否判废", "E", "4", "L", "", "", "", iscseq, iheadrow, "M");//41
-            p_SetSc("订单备注", "E", "500", "L", "", "", "", iscseq, iheadrow, "L");//42
-            p_SetSc("当前库", "E", "12", "L", "", "", "", iscseq, iheadrow, "M");//43
-            p_SetSc("垛位", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//44
-            p_SetSc("打印标准", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//45
-            p_SetSc("钢种", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//46
-            p_SetSc("长度范围", "E", "30", "L", "", "", "", iscseq, iheadrow, "L");//47
-            p_SetSc("客户名称", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//48
-            p_SetSc("开始时间", "E", "20", "L", "", "", "", iscseq, iheadrow, "M");//49
-            p_SetSc("结束时间", "E", "20", "L", "", "", "", iscseq, iheadrow, "M");//50
-            p_SetSc("铸机号", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//51
-            p_SetSc("订单数量", "E", "10", "L", "", "", "", iscseq, iheadrow, "M");//52
-            p_SetSc("是否紧急订单", "E", "1", "L", "", "", "", iscseq, iheadrow, "M");//53
-            p_SetSc("是否翻板", "E", "1", "L", "", "", "", iscseq, iheadrow, "M");//54
-            p_SetSc("经RH", "E", "1", "L", "", "", "", iscseq, iheadrow, "M");//55
-            p_SetSc("重点订单", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//56
-            p_SetSc("堆冷标识", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//57
-            p_SetSc("上限", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//58
-            p_SetSc("下限", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//59
-            p_SetSc("客户代码", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//60
-            p_SetSc("试样备注", "E", "200", "L", "", "", "", iscseq, iheadrow, "L");//61
-            p_SetSc("尺寸备注", "E", "200", "L", "", "", "", iscseq, iheadrow, "L");//62
-            p_SetSc("打包备注", "E", "200", "L", "", "", "", iscseq, iheadrow, "L");//63
-            p_SetSc("表面客户要求", "E", "200", "L", "", "", "", iscseq, iheadrow, "L");//64
-            p_SetSc("转库日期", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//65
-            p_SetSc("到达日期", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//66
-            p_SetSc("订单特殊要求", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//67
+            p_SetSc("钢板号", "E", "14", "PIL", "", "", "", iscseq, iheadrow, "L");//0
+            p_SetSc("序号", "E", "60", "IL", "", "", "", iscseq, iheadrow, "M");//1
+            p_SetSc("轧批号", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//2
+            p_SetSc("进程状态", "E", "20", "L", "", "", "", iscseq, iheadrow, "M");//3
+            p_SetSc("标准号", "E", "30", "L", "", "", "", iscseq, iheadrow, "L");//4
+            p_SetSc("厚度*宽度*长度", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//5
+            p_SetSc("来料重量", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "R");//6
+            p_SetSc("厚度*宽度*长度", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//7
+            p_SetSc("切后重量", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "R");//8
+            p_SetSc("原料量", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "R");//9
+            p_SetSc("切割时间", "DT", "", "I", "", "", "", iscseq, iheadrow, "M");//10
+            p_SetSc("检查时间", "DT", "", "L", "", "", "", iscseq, iheadrow, "M");//11
+            p_SetSc("表面等级", "E", "10", "L", "", "", "", iscseq, iheadrow, "M");//12
+            p_SetSc("缺陷", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//13
+            p_SetSc("取样代码", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//14
+            p_SetSc("试样号", "E", "14", "L", "", "", "", iscseq, iheadrow, "M");//15
+            p_SetSc("切边", "C", "", "I", "", "", "", iscseq, iheadrow, "M");//16
+            p_SetSc("切头", "C", "", "I", "", "", "", iscseq, iheadrow, "M");//17
+            p_SetSc("切尾", "C", "", "I", "", "", "", iscseq, iheadrow, "M");//18
+            p_SetSc("取样次数", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//19
+            p_SetSc("班次", "E", "2", "L", "", "", "", iscseq, iheadrow, "M");//20
+            p_SetSc("班别", "E", "2", "L", "", "", "", iscseq, iheadrow, "M");//21
+            p_SetSc("作业人员", "E", "7", "IL", "", "", "", iscseq, iheadrow, "M");//22
+            p_SetSc("垛位号", "E", "60", "I", "", "", "", iscseq, iheadrow, "L");//23
+            p_SetSc("探伤实绩", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//24
+            p_SetSc("备注", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//25
+            p_SetSc("轧制班别", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//26
+            p_SetSc("入库日期", "DT", "", "L", "", "", "", iscseq, iheadrow, "M");//27
+            p_SetSc("切割场地", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//28
+            p_SetSc("改判前标准号", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//29
+            p_SetSc("订单号", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//30
+            p_SetSc("铸机号", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//31
+            p_SetSc("客户名称", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//32
+            p_SetSc("定尺区分", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//33
+            p_SetSc("是否紧急订单", "E", "1", "L", "", "", "", iscseq, iheadrow, "M");//34
+            p_SetSc("重点订单", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//35
+            p_SetSc("精轧厚度", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//36
 
             iheadrow = 0;
 
-            p_spanSpread("母板实绩", 9, 12, iscseq, iheadrow, 1);
-            p_spanSpread("产品计划", 16, 22, iscseq, iheadrow, 1);
-            p_spanSpread("作业指示", 27, 30, iscseq, iheadrow, 1);
-            p_spanSpread("标识", 45, 46, iscseq, iheadrow, 1);
-            p_spanSpread("客户交货期", 49, 50, iscseq, iheadrow, 1);
-            p_spanSpread("厚度公差", 58, 59, iscseq, iheadrow, 1);
+            p_spanSpread("来料规格", 5, 5, iscseq, iheadrow, 1);
+            p_spanSpread("切后规格", 7, 7, iscseq, iheadrow, 1);
 
         }
 
-        private void CGT2020C_Load(object sender, EventArgs e)
+        private void CGT2060C_Load(object sender, EventArgs e)
         {
-            base.sSvrPgmPkgName = "CGT2020NC";
+            base.sSvrPgmPkgName = "CGT2060NC";
             Form_Define();
 
-            SDT_PROD_DATE_FROM.RawDate = Gf_DTSet("D", "");
-            SDT_PROD_DATE_TO.RawDate = Gf_DTSet("D", "");
+            SDT_PROD_DATE.RawDate = Gf_DTSet("D", "");
+            SDT_PROD_TO_DATE.RawDate = Gf_DTSet("D", "");
 
             ss1.ActiveSheet.FrozenColumnCount = 2;
+
         }
 
         public override bool Form_Cls()
         {
             base.Form_Cls();
 
-            //激活下事件
-            TXT_TRNS_CMPY_CD.Text = "";
-            TXT_TRNS_CMPY_CD_TO.Text = "";
-
             return true;
+        }
+
+        public override void Form_Pro()
+        {
+            p_Pro(1, 1, true, true);
         }
 
         public override void Form_Ref()
         {
             int iRow;
             int iCol;
-            string sCurDate;
-            string sDel_To_Date;
-            double sord_cnt;
-            Color sBackColor;
-            string sHtm_Meth;
+            string sUrgnt_Fl;
+            string SMESG;
             string simpcont;
-            string PILECOOL;
 
-            sCurDate = DateTime.Now.ToString("yyyyMMdd");
-
-            if (TXT_TRNS_CMPY_CD.Text != "" | TXT_TRNS_CMPY_CD_TO.Text != "")
+            if (SDT_PROD_DATE.RawDate == "" | SDT_PROD_TO_DATE.RawDate == "")
             {
-                if (SDT_PROD_DATE_FROM.RawDate == SDT_PROD_DATE_TO.RawDate)
-                {
-                }
-                else
-                {
-                    GeneralCommon.Gp_MsgBoxDisplay("切割时间必须为同一天", "I", "系统提示信息");
-                    return;
-                }
+                SDT_PROD_DATE.RawDate = Gf_DTSet("D","");
+                SDT_PROD_TO_DATE.RawDate = Gf_DTSet("D","");
+            }
+
+            if (convertX(SDT_PROD_DATE.RawDate) - convertX(SDT_PROD_TO_DATE.RawDate) > 0)
+            {
+                SMESG = " 时间范围输入错误，请重新输入时间信息 ！！！";
+                GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "错误提示");
+                return;
             }
 
             p_Ref(1, 1, true, true);
 
-            for (iRow = 1; iRow <= ss1.ActiveSheet.RowCount; iRow++)
-            {
-                sord_cnt = convertX(ss1.ActiveSheet.Cells[iRow - 1, SS1_ORD_CNT].Text);
-
-                if (sord_cnt > 1)
+            //紧急订单绿色显示 add by liqian 2012-08-15
+                for (iRow = 1; iRow <= ss1.ActiveSheet.RowCount; iRow++)
                 {
-                 Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, iRow - 1, iRow - 1, Color.Black, SSP1.BackColor);
-                }
+                    sUrgnt_Fl = ss1.ActiveSheet.Cells[iRow - 1, SS1_URGNT_FL].Text.Trim();
+                    simpcont = ss1.ActiveSheet.Cells[iRow - 1, SS1_IMP_CONT].Text.Trim();
 
-                sDel_To_Date = ss1.ActiveSheet.Cells[iRow - 1, SS1_DEL_TO_DATE].Text.Substring(0, 6);
-                if (convertX(sDel_To_Date) < convertX(sCurDate))
-                {
-                    if (sord_cnt > 1)
+                    if (sUrgnt_Fl == "Y")
                     {
-                        sBackColor = SSP1.BackColor;
+                        Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount-1, iRow-1, iRow-1, Color.Green,Color.White);
                     }
-                    else
+
+                    if (simpcont == "Y")
                     {
-                        sBackColor = Color.White;
+                        Gp_Sp_BlockColor(ss1, SS1_PLATE_NO, SS1_PLATE_NO, iRow-1, iRow-1, SSP4.BackColor,Color.White);
+                        Gp_Sp_BlockColor(ss1, SS1_IMP_CONT, SS1_IMP_CONT, iRow-1, iRow-1, SSP4.BackColor,Color.White);
                     }
-                    Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, iRow - 1, iRow - 1, Color.Black, sBackColor);
                 }
-
-                sHtm_Meth = ss1.ActiveSheet.Cells[iRow - 1, SS1_HTM_METH1].Text;
-                if (sHtm_Meth != "")
-                {
-                    Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, iRow - 1, iRow - 1, Color.Black, SSPanel1.BackColor);
-                }
-
-                //紧急订单绿色标记 2012-08-16  by  LiQian
-                if (ss1.ActiveSheet.Cells[iRow - 1, SS1_URGNT_FL].Text == "Y")
-                {
-                    Gp_Sp_BlockColor(ss1, SS1_PLATE_NO, SS1_PLATE_NO, iRow - 1, iRow - 1, Color.Green, Color.White);
-                }
-
-                simpcont = ss1.ActiveSheet.Cells[iRow - 1, SS1_IMP_CONT].Text;
-                if (simpcont == "Y")
-                {
-                    Gp_Sp_BlockColor(ss1, SS1_PLATE_NO, SS1_PLATE_NO, iRow - 1, iRow - 1, SSP4.BackColor, Color.White);
-                    Gp_Sp_BlockColor(ss1, SS1_IMP_CONT, SS1_IMP_CONT, iRow - 1, iRow - 1, SSP4.BackColor, Color.White);
-                }
-
-                PILECOOL = ss1.ActiveSheet.Cells[iRow - 1, SS1_PILECOOL].Text;
-                simpcont = ss1.ActiveSheet.Cells[iRow - 1, SS1_IMP_CONT].Text;
-
-                if (PILECOOL == "Y" & simpcont != "Y")
-                {
-                    Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, iRow - 1, iRow - 1, Color.Black, Color.Yellow);
-                }
-
-            }
-
-           // checkBox1.Checked = ss1.ActiveSheet.Columns[0].Locked;
-
-           // ss1.ActiveSheet.Cells[0, 0].BackColor = Color.RoyalBlue;
-
-
 
         }
 
@@ -318,7 +228,7 @@ namespace CG
             {
                 Directory.CreateDirectory(currentReportPath);
             }
-            string sourceExcelName = System.Windows.Forms.Application.StartupPath + "\\model" + "\\CGT2020C.xls";//表喷信息EXCEL路径
+            string sourceExcelName = System.Windows.Forms.Application.StartupPath + "\\model" + "\\CGT2060C.xls";//切割码堆报告路径
 
             if (File.Exists(targetExcelName))
             {
@@ -339,33 +249,116 @@ namespace CG
                 Type.Missing, Type.Missing, Type.Missing, Type.Missing,
                 Type.Missing, Type.Missing);
 
-            for (int i = 1; i <= ss1.ActiveSheet.RowCount; i++)
+            string sShift;
+            string sDate1;
+            string sDate2;
+            string sDate;
+            int sPage_Num = 31;
+            int sPage_X = 32;
+            int sPage;
+            int sLastPage;
+            double Weight;
+            int sRow1;
+            int sRow2;
+            int sRow3;
+
+            int rowCount = ss1.ActiveSheet.RowCount;
+
+            sDate1 = SDT_PROD_DATE.RawDate;
+            sDate2 = SDT_PROD_TO_DATE.RawDate;
+            sDate = "日期：";
+
+            if (sDate1 != "" && sDate2 != "")
             {
-
-                int j = i - 1;
-                int k = i + 2;
-
-                appExcel.Cells[k, 1] = this.ss1.ActiveSheet.Cells[j, SS1_PLATE_NO].Text;//
-                appExcel.Cells[k, 2] = this.ss1.ActiveSheet.Cells[j, SS1_TRNS_CMPY_CD].Text;//
-                appExcel.Cells[k, 3] = this.ss1.ActiveSheet.Cells[j, SS1_MILL_LOT_NO].Text;//
-                appExcel.Cells[k, 4] = this.ss1.ActiveSheet.Cells[j, SS1_APLY_STDSPEC].Text;//
-                appExcel.Cells[k, 5] = this.ss1.ActiveSheet.Cells[j, SS1_PROD_THK].Text;//
-                appExcel.Cells[k, 6] = this.ss1.ActiveSheet.Cells[j, SS1_ORD_THK].Text;//
-                appExcel.Cells[k, 7] = this.ss1.ActiveSheet.Cells[j, SS1_ORD_WID].Text;//
-                appExcel.Cells[k, 8] = this.ss1.ActiveSheet.Cells[j, SS1_ORD_LEN].Text;//
-                appExcel.Cells[k, 9] = this.ss1.ActiveSheet.Cells[j, SS1_PROD_CAL_UNIT_WGT].Text;//
-                appExcel.Cells[k, 10] = this.ss1.ActiveSheet.Cells[j, SS1_TRIM_FL].Text;//
-                appExcel.Cells[k, 11] = this.ss1.ActiveSheet.Cells[j, SS1_SIZE_KND].Text;//
-                appExcel.Cells[k, 12] = this.ss1.ActiveSheet.Cells[j, SS1_PROD_DATE].Text;//
-                appExcel.Cells[k, 13] = this.ss1.ActiveSheet.Cells[j, SS1_SHIFT].Text;//
-                appExcel.Cells[k, 14] = this.ss1.ActiveSheet.Cells[j, SS1_GROUP_CD].Text;//
-                appExcel.Cells[k, 15] = this.ss1.ActiveSheet.Cells[j, SS1_LEN_TOL].Text;//
-
+                sDate = "日期：" + sDate1.Substring(0, 4) + "年" + sDate1.Substring(4, 2) + "月" + sDate1.Substring(6, 2) + "日" + " - " + sDate2.Substring(0, 4) + "年" + sDate2.Substring(4, 2) + "月" + sDate2.Substring(6, 2) + "日";
             }
 
-            appExcel.Visible = true;
-            ////appExcel.Quit();//从内存中退出
-            appExcel = null;
+            if (sDate1 == sDate2)
+            {
+                sDate = "日期：" + sDate1.Substring(0, 4) + "年" + sDate1.Substring(4, 2) + "月" + sDate1.Substring(6, 2) + "日";
+            }
+
+
+
+            sShift = "";
+            if (CBO_SHIFT.Text == "1")
+            {
+                sShift = "大夜班";
+            }
+            else if (CBO_SHIFT.Text == "2")
+            {
+                sShift = "白班";
+            }
+            else if (CBO_SHIFT.Text == "3")
+            {
+                sShift = "小夜班";
+            }
+
+            //堆码员
+            string codeName = "select EMP_NAME from zp_employee t where t.emp_id =" + "'" + GeneralCommon.sUserID + "'";
+            appExcel.Cells[2, 4] = "码堆员：" + GeneralCommon.Gf_CodeFind(GeneralCommon.M_CN1, codeName);
+            //班次
+            appExcel.Cells[2, 3] = "班次：" + sShift;
+            sPage = Convert.ToInt32(rowCount / sPage_Num) + 1;
+            sLastPage = rowCount - Convert.ToInt32(rowCount / sPage_Num) * sPage_Num;
+            sPage = sPage - 1;
+            //日期
+            appExcel.Cells[2, 1] = sDate;
+            for (int i = 0; i <= sPage; i++)
+            {
+                int k = 4 + i * sPage_X;
+                sRow1 = 35 + sPage_X * i;
+                sRow3 = 35 + sPage_X * i;
+                Weight = 0;
+                if (i == sPage)
+                {
+                    sRow2 = sPage_Num * i + sLastPage;
+
+                    for (int j = sPage_Num * i; j < sRow2; j++)
+                    {
+                        appExcel.Cells[k, 1] = this.ss1.ActiveSheet.Cells[j, SS1_LOC].Text;//货位
+                        appExcel.Cells[k, 2] = this.ss1.ActiveSheet.Cells[j, SS1_STDSPEC].Text;//钢种
+                        appExcel.Cells[k, 3] = this.ss1.ActiveSheet.Cells[j, SS1_PROC_CD].Text;//进程状态
+                        appExcel.Cells[k, 4] = this.ss1.ActiveSheet.Cells[j, SS1_PLATE_NO].Text;//钢板号
+                        appExcel.Cells[k, 5] = this.ss1.ActiveSheet.Cells[j, SS1_AFER_SIZE].Text;//切割后规格尺寸（mm）
+                        appExcel.Cells[k, 6] = this.ss1.ActiveSheet.Cells[j, SS1_AFER_WGT].Text;//切后重量
+                        appExcel.Cells[k, 7] = this.ss1.ActiveSheet.Cells[j, SS1_CUST_CD].Text;//客户名称
+                        appExcel.Cells[k, 8] = this.ss1.ActiveSheet.Cells[j, SS1_ORD].Text;//订单-项次
+                        appExcel.Cells[k, 9] = this.ss1.ActiveSheet.Cells[j, SS1_SIZE].Text;//定尺区分
+                        Weight = Weight + Convert.ToDouble(this.ss1.ActiveSheet.Cells[j, SS1_AFER_WGT].Text);
+                        k = k + 1;
+                    }
+                    appExcel.Cells[sRow1, 7] = Weight.ToString();
+                    appExcel.Cells[sRow3, 3] = sLastPage.ToString();
+                    appExcel.Visible = true;
+                    //  appExcel.Quit();//从内存中退出
+                    appExcel = null;
+                    return;
+                }
+                else
+                {
+                    sRow2 = sPage_Num * i + sPage_Num;
+                    for (int j = sPage_Num * i; j < sRow2; j++)
+                    {
+                        appExcel.Cells[k, 1] = this.ss1.ActiveSheet.Cells[j, SS1_LOC].Text;//货位
+                        appExcel.Cells[k, 2] = this.ss1.ActiveSheet.Cells[j, SS1_STDSPEC].Text;//钢种
+                        appExcel.Cells[k, 3] = this.ss1.ActiveSheet.Cells[j, SS1_PROC_CD].Text;//进程状态
+                        appExcel.Cells[k, 4] = this.ss1.ActiveSheet.Cells[j, SS1_PLATE_NO].Text;//钢板号
+                        appExcel.Cells[k, 5] = this.ss1.ActiveSheet.Cells[j, SS1_AFER_SIZE].Text;//切割后规格尺寸（mm）
+                        appExcel.Cells[k, 6] = this.ss1.ActiveSheet.Cells[j, SS1_AFER_WGT].Text;//切后重量
+                        appExcel.Cells[k, 7] = this.ss1.ActiveSheet.Cells[j, SS1_CUST_CD].Text;//客户名称
+                        appExcel.Cells[k, 8] = this.ss1.ActiveSheet.Cells[j, SS1_ORD].Text;//订单-项次
+                        appExcel.Cells[k, 9] = this.ss1.ActiveSheet.Cells[j, SS1_SIZE].Text;//定尺区分
+
+                        Weight = Weight + Convert.ToDouble(this.ss1.ActiveSheet.Cells[j, SS1_AFER_WGT].Text);
+
+                        k = k + 1;
+                    }
+
+                    appExcel.Cells[sRow1, 7] = Weight.ToString();
+                    appExcel.Cells[sRow3, 3] = sPage_Num.ToString();
+                }
+            }
         }
 
 
@@ -712,6 +705,12 @@ namespace CG
 
         private void CMD_CARD_Click(object sender, EventArgs e)
         {
+            if (SDT_PROD_DATE.RawDate == "" || SDT_PROD_TO_DATE.RawDate == "" || CBO_SHIFT.Text.Trim() == "")
+            {
+                GeneralCommon.Gp_MsgBoxDisplay("切割时间和班次必须输入！！", "I", "错误提示");
+                return;
+            }
+            
             if (ss1.ActiveSheet.RowCount == 0)
             {
                 return;
@@ -720,7 +719,7 @@ namespace CG
             try
             {
                 string currentReportPath = System.Windows.Forms.Application.StartupPath + "\\南钢中板导出Excel文件夹";
-                string targetExcelName = currentReportPath + "\\" + "CGT2020C.xls";
+                string targetExcelName = currentReportPath + "\\" + "CGT2060C.xls";
                 resetExcelName(currentReportPath, targetExcelName);
                 setExcelText(targetExcelName);
             }
