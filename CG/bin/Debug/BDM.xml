@@ -1237,6 +1237,45 @@
             使用代码编辑器修改此方法的内容。
             </summary>
         </member>
+        <member name="M:CG.CGD2061C.SSCommand1_Click(System.Object,System.EventArgs)">
+            探伤报告
+        </member>
+        <member name="M:CG.CGD2061C.download(System.String,System.String)">
+            <summary>  
+            单个文件下载方法  
+            </summary>  
+            <param name="adss">保存文件的本地路径</param>  
+            <param name="ftpadss">下载文件的FTP路径</param>  
+        </member>
+        <!-- 对于成员“M:CG.CGD2061C.ftp(System.String,System.String,System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="M:CG.CGD2061C.downftp(System.String,System.String,System.String)">
+            <summary>  
+            下载方法 
+            </summary>  
+            <param name="ftpads">FTP路径</param>  
+            <param name="name">需要下载文件路径</param>  
+            <param name="Myads">保存的本地路径</param>  
+        </member>
+        <member name="M:CG.CGD2061C.SSCommand2_Click(System.Object,System.EventArgs)">
+            码堆报告
+        </member>
+        <member name="F:CG.CGD2061C.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:CG.CGD2061C.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:CG.CGD2061C.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
         <member name="F:CG.WGT3030C.components">
             <summary>
             必需的设计器变量。
@@ -2072,29 +2111,6 @@
             <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
         </member>
         <member name="M:CG.WGT2012C.InitializeComponent">
-            <summary>
-            设计器支持所需的方法 - 不要
-            使用代码编辑器修改此方法的内容。
-            </summary>
-        </member>
-        <member name="M:CG.WGT2020C.SSCommand1_Click(System.Object,System.EventArgs)">
-            探伤报告
-        </member>
-        <member name="M:CG.WGT2020C.SSCommand2_Click(System.Object,System.EventArgs)">
-            码堆报告
-        </member>
-        <member name="F:CG.WGT2020C.components">
-            <summary>
-            必需的设计器变量。
-            </summary>
-        </member>
-        <member name="M:CG.WGT2020C.Dispose(System.Boolean)">
-            <summary>
-            清理所有正在使用的资源。
-            </summary>
-            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
-        </member>
-        <member name="M:CG.WGT2020C.InitializeComponent">
             <summary>
             设计器支持所需的方法 - 不要
             使用代码编辑器修改此方法的内容。

@@ -3069,7 +3069,7 @@ namespace CG
         {
             if (!GeneralCommon.Gf_IsFormLoad("WGT2020C"))
             {
-                WGT2020C WGT2020C = new WGT2020C();
+                CGD2061C WGT2020C = new CGD2061C();
                 WGT2020C.MdiParent = this;
                 WGT2020C.Show();
                 WGT2020C.WindowState = FormWindowState.Maximized;
