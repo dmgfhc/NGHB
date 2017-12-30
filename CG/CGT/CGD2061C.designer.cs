@@ -28,17 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            CommonClass.BControlFiledSetting bControlFiledSetting1 = new CommonClass.BControlFiledSetting();
-            CommonClass.BControlFiledSetting bControlFiledSetting2 = new CommonClass.BControlFiledSetting();
-            CommonClass.BControlFiledSetting bControlFiledSetting3 = new CommonClass.BControlFiledSetting();
-            CommonClass.BControlFiledSetting bControlFiledSetting4 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting5 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting6 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting7 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting8 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting1 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting2 = new CommonClass.BControlFiledSetting();
             this.TXT_UST_STAND_REPORT = new CommonClass.F4ETCR();
             this.TXT_UST_GRADE = new System.Windows.Forms.TextBox();
             this.TXT_UST_STAND_NO = new CommonClass.F4ETCR();
             this.TXT_UST_STAND_NAME = new System.Windows.Forms.TextBox();
             this.TXT_STDSPEC = new CommonClass.F4ETCR();
+            this.txt_f_addr = new CommonClass.F4ETCR();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.TXT_CO_CD = new System.Windows.Forms.TextBox();
             this.chk_Cond_J = new System.Windows.Forms.CheckBox();
@@ -125,7 +126,6 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txt_f_addr = new CommonClass.F4ETCR();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ss1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fpSpread1_Sheet1)).BeginInit();
@@ -134,12 +134,12 @@
             // 
             // TXT_UST_STAND_REPORT
             // 
-            bControlFiledSetting1.ColumnID = "CD_SHORT_ENG";
-            bControlFiledSetting1.TargetControl = this.TXT_UST_STAND_REPORT;
-            bControlFiledSetting2.ColumnID = "CD_FULL_ENG";
-            bControlFiledSetting2.TargetControl = this.TXT_UST_GRADE;
-            this.TXT_UST_STAND_REPORT.CustomSetting.Add(bControlFiledSetting1);
-            this.TXT_UST_STAND_REPORT.CustomSetting.Add(bControlFiledSetting2);
+            bControlFiledSetting5.ColumnID = "CD_SHORT_ENG";
+            bControlFiledSetting5.TargetControl = this.TXT_UST_STAND_REPORT;
+            bControlFiledSetting6.ColumnID = "CD_FULL_ENG";
+            bControlFiledSetting6.TargetControl = this.TXT_UST_GRADE;
+            this.TXT_UST_STAND_REPORT.CustomSetting.Add(bControlFiledSetting5);
+            this.TXT_UST_STAND_REPORT.CustomSetting.Add(bControlFiledSetting6);
             this.TXT_UST_STAND_REPORT.InputControl = this.TXT_UST_STAND_REPORT;
             this.TXT_UST_STAND_REPORT.Location = new System.Drawing.Point(288, 93);
             this.TXT_UST_STAND_REPORT.Name = "TXT_UST_STAND_REPORT";
@@ -158,12 +158,12 @@
             // 
             // TXT_UST_STAND_NO
             // 
-            bControlFiledSetting3.ColumnID = "CD";
-            bControlFiledSetting3.TargetControl = this.TXT_UST_STAND_NO;
-            bControlFiledSetting4.ColumnID = "CD_SHORT_NAME";
-            bControlFiledSetting4.TargetControl = this.TXT_UST_STAND_NAME;
-            this.TXT_UST_STAND_NO.CustomSetting.Add(bControlFiledSetting3);
-            this.TXT_UST_STAND_NO.CustomSetting.Add(bControlFiledSetting4);
+            bControlFiledSetting7.ColumnID = "CD";
+            bControlFiledSetting7.TargetControl = this.TXT_UST_STAND_NO;
+            bControlFiledSetting8.ColumnID = "CD_SHORT_NAME";
+            bControlFiledSetting8.TargetControl = this.TXT_UST_STAND_NAME;
+            this.TXT_UST_STAND_NO.CustomSetting.Add(bControlFiledSetting7);
+            this.TXT_UST_STAND_NO.CustomSetting.Add(bControlFiledSetting8);
             this.TXT_UST_STAND_NO.InputControl = this.TXT_UST_STAND_NO;
             this.TXT_UST_STAND_NO.Location = new System.Drawing.Point(99, 43);
             this.TXT_UST_STAND_NO.MaxLength = 12;
@@ -184,9 +184,9 @@
             // 
             // TXT_STDSPEC
             // 
-            bControlFiledSetting5.ColumnID = "CD";
-            bControlFiledSetting5.TargetControl = this.TXT_STDSPEC;
-            this.TXT_STDSPEC.CustomSetting.Add(bControlFiledSetting5);
+            bControlFiledSetting1.ColumnID = "CD";
+            bControlFiledSetting1.TargetControl = this.TXT_STDSPEC;
+            this.TXT_STDSPEC.CustomSetting.Add(bControlFiledSetting1);
             this.TXT_STDSPEC.InputControl = this.TXT_STDSPEC;
             this.TXT_STDSPEC.Location = new System.Drawing.Point(99, 70);
             this.TXT_STDSPEC.MaxLength = 18;
@@ -197,6 +197,22 @@
     "ULL_ENG \"代码英文名称\" FROM NISCO.ZP_CD  WHERE CD_MANA_NO =    \'G0018\'    AND CD like " +
     "\'%\'  ORDER  BY  CD  ASC";
             this.TXT_STDSPEC.TabIndex = 201;
+            // 
+            // txt_f_addr
+            // 
+            bControlFiledSetting2.ColumnID = "CD";
+            bControlFiledSetting2.TargetControl = this.txt_f_addr;
+            this.txt_f_addr.CustomSetting.Add(bControlFiledSetting2);
+            this.txt_f_addr.InputControl = this.txt_f_addr;
+            this.txt_f_addr.Location = new System.Drawing.Point(560, 45);
+            this.txt_f_addr.MaxLength = 18;
+            this.txt_f_addr.Name = "txt_f_addr";
+            this.txt_f_addr.Size = new System.Drawing.Size(83, 22);
+            this.txt_f_addr.sJoin = "";
+            this.txt_f_addr.sSqletc = "SELECT CD \"代码\", CD_SHORT_NAME \"代码简称\", CD_NAME \"代码名称\",        CD_SHORT_ENG \"代码英文简称" +
+    "\", CD_FULL_ENG \"代码英文名称\" FROM NISCO.ZP_CD  WHERE CD_MANA_NO =    \'F0009\'    AND C" +
+    "D         like \'P%\'  ORDER  BY  CD  ASC";
+            this.txt_f_addr.TabIndex = 264;
             // 
             // groupBox1
             // 
@@ -467,6 +483,7 @@
             this.SSCommand2.Text = "码堆报告";
             this.SSCommand2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.SSCommand2.UseVisualStyleBackColor = true;
+            this.SSCommand2.Click += new System.EventHandler(this.SSCommand2_Click);
             // 
             // SDB_WGT
             // 
@@ -520,8 +537,8 @@
             // 
             this.CBO_UST_DEC.FormattingEnabled = true;
             this.CBO_UST_DEC.Items.AddRange(new object[] {
-            "Y :合格",
-            "N :不合格"});
+            "Y",
+            "N"});
             this.CBO_UST_DEC.Location = new System.Drawing.Point(417, 44);
             this.CBO_UST_DEC.MaxLength = 9999;
             this.CBO_UST_DEC.Name = "CBO_UST_DEC";
@@ -823,7 +840,7 @@
             this.cbx_sign.Name = "cbx_sign";
             this.cbx_sign.Size = new System.Drawing.Size(97, 21);
             this.cbx_sign.TabIndex = 52;
-            this.cbx_sign.Text = "左凯";
+            this.cbx_sign.Text = "杨德蓉";
             // 
             // label36
             // 
@@ -900,7 +917,7 @@
             this.cbx_size.Name = "cbx_size";
             this.cbx_size.Size = new System.Drawing.Size(97, 21);
             this.cbx_size.TabIndex = 42;
-            this.cbx_size.Text = "30*4800*6000";
+            this.cbx_size.Text = "30*2000*73500";
             // 
             // cbx_probe
             // 
@@ -912,7 +929,7 @@
             this.cbx_probe.Name = "cbx_probe";
             this.cbx_probe.Size = new System.Drawing.Size(97, 21);
             this.cbx_probe.TabIndex = 41;
-            this.cbx_probe.Text = "SEZ 5R10R4-2";
+            this.cbx_probe.Text = "3STSE 18.3/8PB5";
             // 
             // label32
             // 
@@ -957,14 +974,12 @@
             // 
             this.cbx_type.FormattingEnabled = true;
             this.cbx_type.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3"});
+            "NISCO-2800-1"});
             this.cbx_type.Location = new System.Drawing.Point(493, 43);
             this.cbx_type.Name = "cbx_type";
             this.cbx_type.Size = new System.Drawing.Size(97, 21);
             this.cbx_type.TabIndex = 35;
-            this.cbx_type.Text = "NISCO-4700-1";
+            this.cbx_type.Text = "NISCO-2800-1";
             // 
             // cbx_ins
             // 
@@ -977,7 +992,7 @@
             this.cbx_ins.Name = "cbx_ins";
             this.cbx_ins.Size = new System.Drawing.Size(97, 21);
             this.cbx_ins.TabIndex = 34;
-            this.cbx_ins.Text = "Laubing+Rickman";
+            this.cbx_ins.Text = "HPT/B/LT-TR";
             // 
             // label29
             // 
@@ -1125,7 +1140,7 @@
             this.cbx_level.Name = "cbx_level";
             this.cbx_level.Size = new System.Drawing.Size(80, 21);
             this.cbx_level.TabIndex = 19;
-            this.cbx_level.Text = "2级";
+            this.cbx_level.Text = "3级";
             // 
             // cbx_rate
             // 
@@ -1147,7 +1162,7 @@
             this.cbx_plt.Name = "cbx_plt";
             this.cbx_plt.Size = new System.Drawing.Size(80, 21);
             this.cbx_plt.TabIndex = 14;
-            this.cbx_plt.Text = "宽厚板厂";
+            this.cbx_plt.Text = "中板厂";
             // 
             // label20
             // 
@@ -1198,22 +1213,6 @@
             this.label9.TabIndex = 14;
             this.label9.Text = "检测单位";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txt_f_addr
-            // 
-            bControlFiledSetting6.ColumnID = "CD";
-            bControlFiledSetting6.TargetControl = this.txt_f_addr;
-            this.txt_f_addr.CustomSetting.Add(bControlFiledSetting6);
-            this.txt_f_addr.InputControl = this.txt_f_addr;
-            this.txt_f_addr.Location = new System.Drawing.Point(560, 45);
-            this.txt_f_addr.MaxLength = 18;
-            this.txt_f_addr.Name = "txt_f_addr";
-            this.txt_f_addr.Size = new System.Drawing.Size(83, 22);
-            this.txt_f_addr.sJoin = "";
-            this.txt_f_addr.sSqletc = "SELECT CD \"代码\", CD_SHORT_NAME \"代码简称\", CD_NAME \"代码名称\",        CD_SHORT_ENG \"代码英文简称" +
-    "\", CD_FULL_ENG \"代码英文名称\" FROM NISCO.ZP_CD  WHERE CD_MANA_NO =    \'F0009\'    AND C" +
-    "D         like \'P%\'  ORDER  BY  CD  ASC";
-            this.txt_f_addr.TabIndex = 264;
             // 
             // CGD2061C
             // 

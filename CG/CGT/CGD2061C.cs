@@ -47,6 +47,8 @@ namespace CG
         Collection Mc1 = new Collection();
         Collection Sc1 = new Collection();
 
+        public const string Ex_File_Name = "CGD2063C";
+
         const int SS1_STDSPEC = 0;
         const int SS1_LOC = 1;
         const int SS1_PLATE_NO = 2;
@@ -125,82 +127,72 @@ namespace CG
             p_SetMc("", CBO_SURFGRD, "P", "", "", "", "", imcseq);//17
            
 
-            p_ScIni(ss1, Sc1, 0, true, true);
-            iheadrow = 1;
-            iscseq = 1;
-            p_SetSc("标准号", "E", "18", "L", "", "", "", iscseq, iheadrow);//0
-            p_SetSc("探伤垛位", "E", "20", "L", "", "", "", iscseq, iheadrow);//1
-            p_SetSc("钢板号", "E", "14", "L", "", "", "", iscseq, iheadrow, "M");//2
-            p_SetSc("进程代码", "E", "18", "L", "", "", "", iscseq, iheadrow, "M");//3
-            p_SetSc("尺寸", "E", " ", "L", "", "", "", iscseq, iheadrow);//4
-            p_SetSc("块数", "N", "8", "L", "", "", "", iscseq, iheadrow, "M");//5         
-            p_SetSc("改判标准号", "E", "14", "L", "", "", "", iscseq, iheadrow);//6
-            p_SetSc("改判原因", "E", "20", "L", "", "", "", iscseq, iheadrow);//7
-            p_SetSc("结论", "E", " ", "L", "", "", "", iscseq, iheadrow, "M");//8
-            p_SetSc("产品等级", "E", "", "L", "", "", "", iscseq, iheadrow, "M");//9
-            p_SetSc("表面等级", "E", "", "L", "", "", "", iscseq, iheadrow, "M");//10
-            p_SetSc("仪器型号", "E", "50", "L", "", "", "", iscseq, iheadrow);//11
-            p_SetSc("探头", "E", "50", "L", "", "", "", iscseq, iheadrow);//12
-            p_SetSc("探伤方式", "E", "50", "L", "", "", "", iscseq, iheadrow);//13
-            p_SetSc("探伤灵敏度", "E", "30", "L", "", "", "", iscseq, iheadrow);//14
-            p_SetSc("检查标准", "E", " ", "L", "", "", "", iscseq, iheadrow);//15
-            p_SetSc("探伤时间", "DT", "14", "L", "", "", "", iscseq, iheadrow, "L");//16
-            p_SetSc("探伤班别", "E", "1", "L", "", "", "", iscseq, iheadrow, "M");//17
-            p_SetSc("探伤人员", "E", "7", "L", "", "", "", iscseq, iheadrow, "M");//18
-            p_SetSc("轧制时间", "DT", "14", "L", "", "", "", iscseq, iheadrow, "M");//19
-            p_SetSc("生产时间", "DT", "14", "L", "", "", "", iscseq, iheadrow, "L");//20
-            p_SetSc("备注", "E", " ", "L", "", "", "", iscseq, iheadrow);//21
-            p_SetSc("切割", "E", " ", "L", "", "", "", iscseq, iheadrow, "M");//22
-            p_SetSc("矫直", "E", " ", "L", "", "", "", iscseq, iheadrow, "M");//23         
-            p_SetSc("热处理", "E", " ", "L", "", "", "", iscseq, iheadrow, "M");//24
-            p_SetSc("定尺区分", "E", " ", "L", "", "", "", iscseq, iheadrow);//25
-            p_SetSc("取样代码", "E", "", "L", "", "", "", iscseq, iheadrow, "M");//26
-            p_SetSc("库", "E", " ", "L", "", "", "", iscseq, iheadrow, "M");//27
-            p_SetSc("垛位", "E", "10", "L", "", "", "", iscseq, iheadrow);//28
-            p_SetSc("入库时间", "DT", "14", "L", "", "", "", iscseq, iheadrow, "L");//29
-            p_SetSc("缺陷", "E", "18", "L", "", "", "", iscseq, iheadrow);//30
-            p_SetSc("厚度", "N", "8", "L", "", "", "", iscseq, iheadrow, "R");//31
-            p_SetSc("宽度", "N", "8", "L", "", "", "", iscseq, iheadrow, "R");//32
-            p_SetSc("长度", "N", "8", "L", "", "", "", iscseq, iheadrow, "R");//33
-            p_SetSc("实绩重量", "N", "8,3", "L", "", "", "", iscseq, iheadrow, "R");//34     
-            p_SetSc("订单号", "E", " ", "L", "", "", "", iscseq, iheadrow);//35
-            p_SetSc("原始订单号", "E", " ", "L", "", "", "", iscseq, iheadrow);//36
-            p_SetSc("板坯厚度", "N", "8", "L", "", "", "", iscseq, iheadrow, "R");//37
-            p_SetSc("连铸机号", "E", " ", "L", "", "", "", iscseq, iheadrow, "M");//38
-            p_SetSc("板坯钢种代码", "E", "11", "L", "", "", "", iscseq, iheadrow, "M");//39
-            p_SetSc("板坯钢种名称", "E", "11", "L", "", "", "", iscseq, iheadrow);//40
-            p_SetSc("堆冷时间(小时)", "N", "8", "L", "", "", "", iscseq, iheadrow, "R");//41
-            p_SetSc("经RH", "E", " ", "L", "", "", "", iscseq, iheadrow, "M");//42
-            p_SetSc("异常坯", "E", " ", "L", "", "", "", iscseq, iheadrow);//43
-            p_SetSc("炉座号", "E", " ", "L", "", "", "", iscseq, iheadrow, "M");//44
-            p_SetSc("在炉时间", "E", " ", "L", "", "", "", iscseq, iheadrow, "R");//45
-            p_SetSc("出炉温度", "E", " ", "L", "", "", "", iscseq, iheadrow, "R");//46
-            p_SetSc("板坯切割时间", "DT", " ", "L", "", "", "", iscseq, iheadrow, "R");//47
-            p_SetSc("矫直机号", "E", "1", "L", "", "", "", iscseq, iheadrow, "M");//48
-            p_SetSc("矫直入口温度", "N", "4", "L", "", "", "", iscseq, iheadrow, "R");//49
-            p_SetSc("矫直出口温度", "N", "4", "L", "", "", "", iscseq, iheadrow, "R");//50
-            p_SetSc("订单探伤要求", "E", "1", "L", "", "", "", iscseq, iheadrow, "M");//51
-            p_SetSc("钢板堆冷时间", "N", "5,1", "L", "", "", "", iscseq, iheadrow, "R");//52
-            p_SetSc("轧制至探伤间隔", "N", "5,1", "L", "", "", "", iscseq, iheadrow, "R");//53
-            p_SetSc("其它", "E", "140", "L", "", "", "", iscseq, iheadrow, "L");//54
-            p_SetSc("标准号", "E", "18", "L", "", "", "", iscseq, iheadrow, "L");//55
-
+            p_ScIni(ss1, Sc1, 0, true, false);
             iheadrow = 0;
-            p_spanSpread("作业指示/实绩", 31, 33, iscseq, iheadrow, 1);
+            iscseq = 1;
+            p_SetSc("标准号", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//0
+            p_SetSc("垛位号", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//1
+            p_SetSc("钢板号", "E", "60", "IL", "", "", "", iscseq, iheadrow, "M");//2
+            p_SetSc("坯料类别", "E", "60", "IL", "", "", "", iscseq, iheadrow, "M");//3
+            p_SetSc("轧批号", "E", "20", "IL", "", "", "", iscseq, iheadrow, "M");//4
+            p_SetSc("规格尺寸(mm)", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//5
+            p_SetSc("块数", "E", "1", "IL", "", "", "", iscseq, iheadrow, "M");//6
+            p_SetSc("改判标准号", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//7
+            p_SetSc("改判原因1", "E", "30", "L", "", "", "", iscseq, iheadrow, "L");//8
+            p_SetSc("改判原因2", "E", "30", "L", "", "", "", iscseq, iheadrow, "L");//9
+            p_SetSc("剪前长度", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//10
+            p_SetSc("反剪原因", "E", "30", "L", "", "", "", iscseq, iheadrow, "L");//11
+            p_SetSc("结论", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//12
+            p_SetSc("产品等级", "E", "10", "L", "", "", "", iscseq, iheadrow, "M");//13
+            p_SetSc("表面等级", "E", "10", "L", "", "", "", iscseq, iheadrow, "M");//14
+            p_SetSc("原始重量", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "R");//15
+            p_SetSc("实绩重量", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "R");//16
+            p_SetSc("仪器型号", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//17
+            p_SetSc("探头", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//18
+            p_SetSc("探头方式", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//19
+            p_SetSc("探伤灵敏度", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//20
+            p_SetSc("检查标准", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//21
+            p_SetSc("探伤日", "DT", "", "L", "", "", "", iscseq, iheadrow, "M");//22
+            p_SetSc("探伤人员", "E", "20", "L", "", "", "", iscseq, iheadrow, "M");//23
+            p_SetSc("录入人员", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//24
+            p_SetSc("生产时间", "DT", "", "L", "", "", "", iscseq, iheadrow, "M");//25
+            p_SetSc("备注", "E", "200", "L", "", "", "", iscseq, iheadrow, "L");//26
+            p_SetSc("班次", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//27
+            p_SetSc("班别", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//28
+            p_SetSc("入库日期", "DT", "", "L", "", "", "", iscseq, iheadrow, "M");//29
+            p_SetSc("切割场地", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//30
+            p_SetSc("订单号", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//31
+            p_SetSc("原始订单号", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//32
+            p_SetSc("铸坯厚度", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//33
+            p_SetSc("连铸机号", "E", "1", "L", "", "", "", iscseq, iheadrow, "M");//34
+            p_SetSc("铸坯钢种代码", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//35
+            p_SetSc("铸坯钢种名称", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//36
+            p_SetSc("进程状态", "E", "10", "L", "", "", "", iscseq, iheadrow, "M");//37
+            p_SetSc("客户名称", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//38
+            p_SetSc("定尺区分", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//39
+            p_SetSc("堆冷时间（小时）", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//40
+            p_SetSc("经RH", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//41
+            p_SetSc("堆冷标识", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//42
+            p_SetSc("异常坯", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//43
+            p_SetSc("是否紧急订单", "E", "1", "L", "", "", "", iscseq, iheadrow, "M");//44
+            p_SetSc("炉座号", "E", "1", "L", "", "", "", iscseq, iheadrow, "M");//45
+            p_SetSc("在炉时间", "N", "9", "L", "", "", "", iscseq, iheadrow, "R");//46
+            p_SetSc("出炉温度", "N", "9", "L", "", "", "", iscseq, iheadrow, "R");//47
+            p_SetSc("板坯切割时间", "DT", "", "L", "", "", "", iscseq, iheadrow, "M");//48
+            p_SetSc("精轧结束时间", "DT", "", "L", "", "", "", iscseq, iheadrow, "M");//49
+            p_SetSc("轧制班别", "E", "10", "L", "", "", "", iscseq, iheadrow, "M");//50
+            p_SetSc("加热段驻段时间", "E", "10", "L", "", "", "", iscseq, iheadrow, "L");//51
+            p_SetSc("均热段驻段时间", "E", "10", "L", "", "", "", iscseq, iheadrow, "L");//52
+            p_SetSc("重点订单", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//53
+            p_SetSc("订单探伤要求", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//54
+           
+            //iheadrow = 0;
+            //p_spanSpread("作业指示/实绩", 31, 33, iscseq, iheadrow, 1);
         }
 
         public void Form_Load(object sender, System.EventArgs e)
         {
             Form_Define();
-            //ss1.ActiveSheet.RowCount = 205;
-            //ss1.ActiveSheet.ColumnCount = 44;
-            //for (int i = 0; i < 205; i++)
-            //{
-            //    for (int j = 0; j < 44; j++)
-            //    {
-            //        ss1.ActiveSheet.Cells[i, j].Text = "2";
-            //    }
-            //}
 
             downftp(path, "USTSIGNS", System.Windows.Forms.Application.StartupPath + "\\report\\");
 
@@ -208,19 +200,17 @@ namespace CG
 
             SSCommand1.Enabled = true;
 
+            SDT_PROD_DATE_FROM.RawDate = DateTime.Now.ToString("yyyyMMdd");
+            SDT_PROD_DATE_TO.RawDate = DateTime.Now.ToString("yyyyMMdd");
+
         }
         #endregion
 
         public override void Form_Ref()
         {
-            this.SDB_WGT.Text = "";
-            double sumSlabWeight = 0;//实绩重量合计
-            base.p_Ref(1, 1, true, true);
-            for (int i = 0; i < ss1.ActiveSheet.RowCount; i++)
-            {
-                sumSlabWeight += (ss1.ActiveSheet.Cells[i, 34].Text == "" ? 0 : double.Parse(ss1.ActiveSheet.Cells[i, 34].Text));
-                this.SDB_WGT.Text = sumSlabWeight.ToString();
-            }
+           
+
+
         }
         ///探伤报告
         private void SSCommand1_Click(object sender, EventArgs e)
@@ -236,7 +226,7 @@ namespace CG
                 return;
             }
 
-            string modelName = "UST0002.xls";
+            string modelName = "UST0003.xls";
             Gp_CopyModel(modelName);
             string fileName = AppDomain.CurrentDomain.BaseDirectory.ToString() + "report" + "\\" + modelName;
             Microsoft.Office.Interop.Excel.Application appExcel = null;
@@ -500,20 +490,160 @@ namespace CG
             }
         }
 
-        ///码堆报告
+        private void SSCommand2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string currentReportPath = System.Windows.Forms.Application.StartupPath + "\\南钢中板导出Excel文件夹";
+                string targetExcelName = currentReportPath + "\\" + Ex_File_Name + ".xls";
+                resetExcelName(currentReportPath, targetExcelName);
+                int rowCount = ss1.ActiveSheet.RowCount;
+                setExcelText(targetExcelName, rowCount);
+            }
+            catch (Exception ex)
+            {
+                GeneralCommon.Gp_MsgBoxDisplay(ex.ToString(), "W", "警告");
+            }
+        }
+
+        private void resetExcelName(string currentReportPath, string targetExcelName)
+        {
+            if (!Directory.Exists(currentReportPath))
+            {
+                Directory.CreateDirectory(currentReportPath);
+            }
+            string sourceExcelName = System.Windows.Forms.Application.StartupPath + "\\CGD2063C.xls";
+
+            if (File.Exists(targetExcelName))
+            {
+                File.Delete(targetExcelName);
+            }
+            File.Copy(sourceExcelName, targetExcelName);
+        }
+
+        private void setExcelText(string targetExcelName, int rowCount)
+        {
+            Microsoft.Office.Interop.Excel.Application appExcel = null;
+            appExcel = new Microsoft.Office.Interop.Excel.Application();
+            appExcel.DisplayAlerts = true;
+            appExcel.AlertBeforeOverwriting = true;
+            Microsoft.Office.Interop.Excel.Workbook workbook = appExcel.Workbooks.Open(targetExcelName,
+                Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+                Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+                Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+                Type.Missing, Type.Missing);
+
+            string sShift;
+            string sDate1;
+            string sDate2;
+            string sDate;
+            int sPage_Num = 30;
+            int sPage_X = 32;
+            int sPage;
+            int sLastPage;
+            double Weight;
+            int sRow1;
+            int sRow2;
+            int sRow3;
+            sDate1 = SDT_PROD_DATE_FROM.RawDate;
+            sDate2 = SDT_PROD_DATE_TO.RawDate;
+            sDate = "日期：";
+
+            if (sDate1 != "" && sDate2 != "")
+            {
+                sDate = "日期：" + sDate1.Substring(0, 4) + "年" + sDate1.Substring(4, 2) + "月" + sDate1.Substring(6, 2) + "日" + " - " + sDate1.Substring(0, 4) + "年" + sDate1.Substring(4, 2) + "月" + sDate1.Substring(6, 2) + "日";
+            }
+
+            if (sDate1 != "" && sDate2 == "")
+            {
+                sDate = "日期：" + sDate1.Substring(0, 4) + "年" + sDate1.Substring(4, 2) + "月" + sDate1.Substring(6, 2) + "日";
+            }
 
 
 
+            sShift = "";
+            if (CBO_SHIFT.Text == "1")
+            {
+                sShift = "大夜班";
+            }
+            else if (CBO_SHIFT.Text == "2")
+            {
+                sShift = "白班";
+            }
+            else if (CBO_SHIFT.Text == "3")
+            {
+                sShift = "小夜班";
+            }
 
+            //堆码员
+            string codeName = "select EMP_NAME from zp_employee t where t.emp_id =" + "'" + GeneralCommon.sUserID + "'";
+            appExcel.Cells[2, 5] = "码堆员：" + GeneralCommon.Gf_CodeFind(GeneralCommon.M_CN1, codeName);
+            //班次
+            appExcel.Cells[2, 3] = "班次：" + sShift;
+            sPage = Convert.ToInt32(rowCount / sPage_Num) + 1;
+            sLastPage = rowCount - Convert.ToInt32(rowCount / sPage_Num) * sPage_Num;
+            sPage = sPage - 1;
+            //日期
+            appExcel.Cells[2, 1] = sDate;
+            for (int i = 0; i <= sPage; i++)
+            {
+                int k = 4 + i * sPage_X;
+                sRow1 = 35 + sPage_X * i;
+                sRow3 = 34 + sPage_X * i;
+                Weight = 0;
+                if (i == sPage)
+                {
+                    sRow2 = sPage_Num * i + sLastPage;
 
+                    for (int j = sPage_Num * i; j < sRow2; j++)
+                    {
+                        appExcel.Cells[k, 1] = this.ss1.ActiveSheet.Cells[j, SS1_LOC].Text;//货位
+                        appExcel.Cells[k, 2] = this.ss1.ActiveSheet.Cells[j, SS1_STDSPEC].Text;//品种
+                        appExcel.Cells[k, 3] = this.ss1.ActiveSheet.Cells[j, SS1_PROC_CD].Text;//进程状态
+                        appExcel.Cells[k, 4] = this.ss1.ActiveSheet.Cells[j, SS1_PLATE_NO].Text;//钢板号
+                        appExcel.Cells[k, 5] = this.ss1.ActiveSheet.Cells[j, SS1_PROD_SIZE].Text;//规格尺寸
+                        appExcel.Cells[k, 6] = this.ss1.ActiveSheet.Cells[j, SS1_WGT].Text;//重量
+                        appExcel.Cells[k, 7] = this.ss1.ActiveSheet.Cells[j, SS1_UST_DEC].Text;//结论
+                        appExcel.Cells[k, 8] = this.ss1.ActiveSheet.Cells[j, SS1_CUST_CD].Text;//客户名称
+                        appExcel.Cells[k, 9] = this.ss1.ActiveSheet.Cells[j, SS1_ORD].Text;//订单号
+                        appExcel.Cells[k, 10] = this.ss1.ActiveSheet.Cells[j, SS1_SIZE].Text;//定尺区分
+                        Weight = Weight + Convert.ToDouble(this.ss1.ActiveSheet.Cells[j, SS1_WGT].Text);
+                        k = k + 1;
+                    }
+                    appExcel.Cells[sRow1, 3] = Weight.ToString();
+                    appExcel.Cells[sRow3, 3] = sLastPage.ToString();
+                    appExcel.Visible = true;
+                    //  appExcel.Quit();//从内存中退出
+                    appExcel = null;
+                    return;
+                }
+                else
+                {
+                    sRow2 = sPage_Num * i + sPage_Num;
+                    for (int j = sPage_Num * i; j < sRow2; j++)
+                    {
+                        appExcel.Cells[k, 1] = this.ss1.ActiveSheet.Cells[j, SS1_LOC].Text;//货位
+                        appExcel.Cells[k, 2] = this.ss1.ActiveSheet.Cells[j, SS1_STDSPEC].Text;//品种
+                        appExcel.Cells[k, 3] = this.ss1.ActiveSheet.Cells[j, SS1_PROC_CD].Text;//进程状态
+                        appExcel.Cells[k, 4] = this.ss1.ActiveSheet.Cells[j, SS1_PLATE_NO].Text;//钢板号
+                        appExcel.Cells[k, 5] = this.ss1.ActiveSheet.Cells[j, SS1_PROD_SIZE].Text;//规格尺寸
+                        appExcel.Cells[k, 6] = this.ss1.ActiveSheet.Cells[j, SS1_WGT].Text;//重量
+                        appExcel.Cells[k, 7] = this.ss1.ActiveSheet.Cells[j, SS1_UST_DEC].Text;//结论
+                        appExcel.Cells[k, 8] = this.ss1.ActiveSheet.Cells[j, SS1_CUST_CD].Text;//客户名称
+                        appExcel.Cells[k, 9] = this.ss1.ActiveSheet.Cells[j, SS1_ORD].Text;//订单号
+                        appExcel.Cells[k, 10] = this.ss1.ActiveSheet.Cells[j, SS1_SIZE].Text;//定尺区分
 
+                        Weight = Weight + Convert.ToDouble(this.ss1.ActiveSheet.Cells[j, SS1_WGT].Text);
 
+                        k = k + 1;
+                    }
 
+                    appExcel.Cells[sRow1, 3] = Weight.ToString();
+                    appExcel.Cells[sRow3, 3] = sPage_Num.ToString();
+                }
+            }
 
-
-
-
-
+        }
 
     }
 }
