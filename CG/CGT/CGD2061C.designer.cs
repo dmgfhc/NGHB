@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            CommonClass.BControlFiledSetting bControlFiledSetting5 = new CommonClass.BControlFiledSetting();
-            CommonClass.BControlFiledSetting bControlFiledSetting6 = new CommonClass.BControlFiledSetting();
-            CommonClass.BControlFiledSetting bControlFiledSetting7 = new CommonClass.BControlFiledSetting();
-            CommonClass.BControlFiledSetting bControlFiledSetting8 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting1 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting2 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting3 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting4 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting5 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting6 = new CommonClass.BControlFiledSetting();
             this.TXT_UST_STAND_REPORT = new CommonClass.F4ETCR();
             this.TXT_UST_GRADE = new System.Windows.Forms.TextBox();
             this.TXT_UST_STAND_NO = new CommonClass.F4ETCR();
@@ -134,12 +134,12 @@
             // 
             // TXT_UST_STAND_REPORT
             // 
-            bControlFiledSetting5.ColumnID = "CD_SHORT_ENG";
-            bControlFiledSetting5.TargetControl = this.TXT_UST_STAND_REPORT;
-            bControlFiledSetting6.ColumnID = "CD_FULL_ENG";
-            bControlFiledSetting6.TargetControl = this.TXT_UST_GRADE;
-            this.TXT_UST_STAND_REPORT.CustomSetting.Add(bControlFiledSetting5);
-            this.TXT_UST_STAND_REPORT.CustomSetting.Add(bControlFiledSetting6);
+            bControlFiledSetting1.ColumnID = "CD_SHORT_ENG";
+            bControlFiledSetting1.TargetControl = this.TXT_UST_STAND_REPORT;
+            bControlFiledSetting2.ColumnID = "CD_FULL_ENG";
+            bControlFiledSetting2.TargetControl = this.TXT_UST_GRADE;
+            this.TXT_UST_STAND_REPORT.CustomSetting.Add(bControlFiledSetting1);
+            this.TXT_UST_STAND_REPORT.CustomSetting.Add(bControlFiledSetting2);
             this.TXT_UST_STAND_REPORT.InputControl = this.TXT_UST_STAND_REPORT;
             this.TXT_UST_STAND_REPORT.Location = new System.Drawing.Point(288, 93);
             this.TXT_UST_STAND_REPORT.Name = "TXT_UST_STAND_REPORT";
@@ -158,12 +158,12 @@
             // 
             // TXT_UST_STAND_NO
             // 
-            bControlFiledSetting7.ColumnID = "CD";
-            bControlFiledSetting7.TargetControl = this.TXT_UST_STAND_NO;
-            bControlFiledSetting8.ColumnID = "CD_SHORT_NAME";
-            bControlFiledSetting8.TargetControl = this.TXT_UST_STAND_NAME;
-            this.TXT_UST_STAND_NO.CustomSetting.Add(bControlFiledSetting7);
-            this.TXT_UST_STAND_NO.CustomSetting.Add(bControlFiledSetting8);
+            bControlFiledSetting3.ColumnID = "CD";
+            bControlFiledSetting3.TargetControl = this.TXT_UST_STAND_NO;
+            bControlFiledSetting4.ColumnID = "CD_SHORT_NAME";
+            bControlFiledSetting4.TargetControl = this.TXT_UST_STAND_NAME;
+            this.TXT_UST_STAND_NO.CustomSetting.Add(bControlFiledSetting3);
+            this.TXT_UST_STAND_NO.CustomSetting.Add(bControlFiledSetting4);
             this.TXT_UST_STAND_NO.InputControl = this.TXT_UST_STAND_NO;
             this.TXT_UST_STAND_NO.Location = new System.Drawing.Point(99, 43);
             this.TXT_UST_STAND_NO.MaxLength = 12;
@@ -184,9 +184,9 @@
             // 
             // TXT_STDSPEC
             // 
-            bControlFiledSetting1.ColumnID = "CD";
-            bControlFiledSetting1.TargetControl = this.TXT_STDSPEC;
-            this.TXT_STDSPEC.CustomSetting.Add(bControlFiledSetting1);
+            bControlFiledSetting5.ColumnID = "CD";
+            bControlFiledSetting5.TargetControl = this.TXT_STDSPEC;
+            this.TXT_STDSPEC.CustomSetting.Add(bControlFiledSetting5);
             this.TXT_STDSPEC.InputControl = this.TXT_STDSPEC;
             this.TXT_STDSPEC.Location = new System.Drawing.Point(99, 70);
             this.TXT_STDSPEC.MaxLength = 18;
@@ -200,9 +200,9 @@
             // 
             // txt_f_addr
             // 
-            bControlFiledSetting2.ColumnID = "CD";
-            bControlFiledSetting2.TargetControl = this.txt_f_addr;
-            this.txt_f_addr.CustomSetting.Add(bControlFiledSetting2);
+            bControlFiledSetting6.ColumnID = "CD";
+            bControlFiledSetting6.TargetControl = this.txt_f_addr;
+            this.txt_f_addr.CustomSetting.Add(bControlFiledSetting6);
             this.txt_f_addr.InputControl = this.txt_f_addr;
             this.txt_f_addr.Location = new System.Drawing.Point(560, 45);
             this.txt_f_addr.MaxLength = 18;
@@ -974,7 +974,12 @@
             // 
             this.cbx_type.FormattingEnabled = true;
             this.cbx_type.Items.AddRange(new object[] {
-            "NISCO-2800-1"});
+            "NISCO-2800-1",
+            "NISCO-3500-1",
+            "NISCO-3500-2",
+            "NISCO-4700-1",
+            "NISCO-4700-2",
+            "NISCO-4700-3"});
             this.cbx_type.Location = new System.Drawing.Point(493, 43);
             this.cbx_type.Name = "cbx_type";
             this.cbx_type.Size = new System.Drawing.Size(97, 21);

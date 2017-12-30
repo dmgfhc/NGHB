@@ -1256,9 +1256,6 @@
             <param name="name">需要下载文件路径</param>  
             <param name="Myads">保存的本地路径</param>  
         </member>
-        <member name="M:CG.CGD2061C.SSCommand2_Click(System.Object,System.EventArgs)">
-            码堆报告
-        </member>
         <member name="F:CG.CGD2061C.components">
             <summary>
             必需的设计器变量。
