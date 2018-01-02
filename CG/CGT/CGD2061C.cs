@@ -191,6 +191,9 @@ namespace CG
             p_SetSc("均热段驻段时间", "E", "10", "L", "", "", "", iscseq, iheadrow, "L");//52
             p_SetSc("重点订单", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//53
             p_SetSc("订单探伤要求", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//54
+            p_SetSc("订单号", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//55
+            p_SetSc("牌号", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//56
+            p_SetSc("标准号", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//57
            
             //iheadrow = 0;
             //p_spanSpread("作业指示/实绩", 31, 33, iscseq, iheadrow, 1);
@@ -663,6 +666,7 @@ namespace CG
                         k = k + 1;
                     }
                     appExcel.Cells[sRow1, 3] = Weight.ToString();
+                    appExcel.Cells[sRow3, 5] = "验收标准：EN10160 S3E4";
                     appExcel.Cells[sRow3, 3] = sLastPage.ToString();
                     appExcel.Visible = true;
                     //  appExcel.Quit();//从内存中退出
@@ -691,6 +695,7 @@ namespace CG
                     }
 
                     appExcel.Cells[sRow1, 3] = Weight.ToString();
+                    appExcel.Cells[sRow3, 5] = "验收标准：EN10160 S3E4";
                     appExcel.Cells[sRow3, 3] = sPage_Num.ToString();
                 }
             }

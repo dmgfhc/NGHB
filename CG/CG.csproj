@@ -606,6 +606,12 @@
     <Compile Include="CGT\CGT2001C_POP.Designer.cs">
       <DependentUpon>CGT2001C_POP.cs</DependentUpon>
     </Compile>
+    <Compile Include="CGT\CGD2062C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CGT\CGD2062C.Designer.cs">
+      <DependentUpon>CGD2062C.cs</DependentUpon>
+    </Compile>
     <Compile Include="CGZ\CGZ2031C.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1132,6 +1138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CGT\CGT2001C_POP.resx">
       <DependentUpon>CGT2001C_POP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CGT\CGD2062C.resx">
+      <DependentUpon>CGD2062C.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CGZ\CGZ2031C.resx">
       <DependentUpon>CGZ2031C.cs</DependentUpon>
