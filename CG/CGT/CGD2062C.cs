@@ -102,7 +102,7 @@ namespace CG
 
         }
 
-        private void CGT2020C_Load(object sender, EventArgs e)
+        private void CGD2062C_Load(object sender, EventArgs e)
         {
             base.sSvrPgmPkgName = "CGD2062NC";
             Form_Define();
@@ -110,77 +110,146 @@ namespace CG
             SDT_PROD_DATE_FROM.RawDate = Gf_DTSet("D", "");
             SDT_PROD_DATE_TO.RawDate = Gf_DTSet("D", "");
 
-            ss1.ActiveSheet.FrozenColumnCount = 2;
+            //ss1.ActiveSheet.FrozenColumnCount = 2;
+
+            OPT_ALL.Checked = true;
+
+            if (OPT_ALL.Checked)
+            {
+                TXT_OVER_FL.Text = "1";
+            }
+
+            if (OPT_OVER.Checked)
+            {
+                TXT_OVER_FL.Text = "2";
+            }
+
+            if (OPT_NOT_OVER.Checked)
+            {
+                TXT_OVER_FL.Text = "3";
+            }
+
+            if (OPT_HEAD.Checked)
+            {
+                TXT_OVER_FL.Text = "4";
+            }
+
+            if (OPT_TAIL.Checked)
+            {
+                TXT_OVER_FL.Text = "5";
+            }
+
+
+
         }
 
         public override bool Form_Cls()
         {
             base.Form_Cls();
 
+             OPT_ALL.Checked = true;
+
+             TXT_OVER_FL.Text = "1"; 
+
             return true;
         }
 
         public override void Form_Ref()
         {
-           
+            p_Ref(1, 1, true, true);
+
+            if (ss1.ActiveSheet.RowCount <= 0) return;
+
+            Data_Sum_Edit();
 
         }
 
-        //取样单导出
-        private void resetExcelName(string currentReportPath, string targetExcelName)
+        private void Data_Sum_Edit()
         {
-            if (!Directory.Exists(currentReportPath))
-            {
-                Directory.CreateDirectory(currentReportPath);
-            }
-            string sourceExcelName = System.Windows.Forms.Application.StartupPath + "\\model" + "\\CGT2020C.xls";//表喷信息EXCEL路径
+            double[] cSum = new double[15];
+            double[] cSumTotal = new double[15]; ;
+            string sSpecTemp = "";
+            double dThkTemp;
+            string sSpec;
+            double dThk;
+            int iIdr;
+            int iIdc;
+            int iRow;
 
-            if (File.Exists(targetExcelName))
-            {
-                File.Delete(targetExcelName);
-            }
-            File.Copy(sourceExcelName, targetExcelName);
-        }
+            iRow = 0;
 
-        private void setExcelText(string targetExcelName)
-        {
-            Microsoft.Office.Interop.Excel.Application appExcel = null;
-            appExcel = new Microsoft.Office.Interop.Excel.Application();
-            appExcel.DisplayAlerts = true;
-            appExcel.AlertBeforeOverwriting = true;
-            Microsoft.Office.Interop.Excel.Workbook workbook = appExcel.Workbooks.Open(targetExcelName,
-                Type.Missing, Type.Missing, Type.Missing, Type.Missing,
-                Type.Missing, Type.Missing, Type.Missing, Type.Missing,
-                Type.Missing, Type.Missing, Type.Missing, Type.Missing,
-                Type.Missing, Type.Missing);
+                for (iIdr = 1; iIdr <= ss1.ActiveSheet.RowCount; iIdr++)
+                {
+                    iRow = iRow + 1;
 
-            for (int i = 1; i <= ss1.ActiveSheet.RowCount; i++)
-            {
+                    sSpec = ss1.ActiveSheet.Cells[iRow-1,0].Text;
+                    dThk = convertX(ss1.ActiveSheet.Cells[iRow-1,1].Text);
 
-                int j = i - 1;
-                int k = i + 2;
+                    if (sSpecTemp != sSpec && iRow != 1)
+                    {
+                        //ss1.MaxRows = ss1.MaxRows + 1;
+                        //.InsertRows iRow, 1
+                        //添加一行
+                        ss1.ActiveSheet.Rows.Add(iRow-1, 1);
 
-                appExcel.Cells[k, 1] = this.ss1.ActiveSheet.Cells[j, SS1_PLATE_NO].Text;//
-                appExcel.Cells[k, 2] = this.ss1.ActiveSheet.Cells[j, SS1_TRNS_CMPY_CD].Text;//
-                appExcel.Cells[k, 3] = this.ss1.ActiveSheet.Cells[j, SS1_MILL_LOT_NO].Text;//
-                appExcel.Cells[k, 4] = this.ss1.ActiveSheet.Cells[j, SS1_APLY_STDSPEC].Text;//
-                appExcel.Cells[k, 5] = this.ss1.ActiveSheet.Cells[j, SS1_PROD_THK].Text;//
-                appExcel.Cells[k, 6] = this.ss1.ActiveSheet.Cells[j, SS1_ORD_THK].Text;//
-                appExcel.Cells[k, 7] = this.ss1.ActiveSheet.Cells[j, SS1_ORD_WID].Text;//
-                appExcel.Cells[k, 8] = this.ss1.ActiveSheet.Cells[j, SS1_ORD_LEN].Text;//
-                appExcel.Cells[k, 9] = this.ss1.ActiveSheet.Cells[j, SS1_PROD_CAL_UNIT_WGT].Text;//
-                appExcel.Cells[k, 10] = this.ss1.ActiveSheet.Cells[j, SS1_TRIM_FL].Text;//
-                appExcel.Cells[k, 11] = this.ss1.ActiveSheet.Cells[j, SS1_SIZE_KND].Text;//
-                appExcel.Cells[k, 12] = this.ss1.ActiveSheet.Cells[j, SS1_PROD_DATE].Text;//
-                appExcel.Cells[k, 13] = this.ss1.ActiveSheet.Cells[j, SS1_SHIFT].Text;//
-                appExcel.Cells[k, 14] = this.ss1.ActiveSheet.Cells[j, SS1_GROUP_CD].Text;//
-                appExcel.Cells[k, 15] = this.ss1.ActiveSheet.Cells[j, SS1_LEN_TOL].Text;//
+                        ss1.ActiveSheet.Cells[iRow-1,0].Text = sSpecTemp;
+                        ss1.ActiveSheet.Cells[iRow-1,1].Text = "小计";
 
-            }
+                        for (iIdc = 3; iIdc <= 14; iIdc++)
+                        {
+                            ss1.ActiveSheet.Cells[iRow - 1, iIdc-1].Text = cSum[iIdc-1].ToString();
+                            cSum[iIdc-1] = 0;
+                        }
 
-            appExcel.Visible = true;
-            ////appExcel.Quit();//从内存中退出
-            appExcel = null;
+                        //iIdr = iIdr - 1;
+                        //iRow = iRow - 1;
+                    }
+                    else
+                    {
+                        for (iIdc = 3; iIdc <= 14; iIdc++)
+                        {
+                            cSum[iIdc - 1] = cSum[iIdc - 1] + convertX(ss1.ActiveSheet.Cells[iRow - 1, iIdc-1].Text);
+                            cSumTotal[iIdc - 1] = cSumTotal[iIdc - 1] + convertX(ss1.ActiveSheet.Cells[iRow - 1, iIdc - 1].Text);
+                        }
+                    }
+
+                    sSpecTemp = sSpec;
+                    dThkTemp = dThk;
+                }
+                ss1.ActiveSheet.Rows.Add(ss1.ActiveSheet.RowCount, 1);
+                for (iIdc = 3; iIdc <= 14; iIdc++)
+                {
+                    
+                    ss1.ActiveSheet.Cells[ss1.ActiveSheet.RowCount - 1, 0].Text = sSpecTemp;
+                    ss1.ActiveSheet.Cells[ss1.ActiveSheet.RowCount - 1, 1].Text = "小计";
+                    ss1.ActiveSheet.Cells[ss1.ActiveSheet.RowCount - 1, iIdc - 1].Text = cSum[iIdc - 1].ToString();
+
+                }
+
+                ss1.ActiveSheet.Rows.Add(ss1.ActiveSheet.RowCount, 1);
+                for (iIdc = 3; iIdc <= 14; iIdc++)
+                {
+
+                    ss1.ActiveSheet.Cells[ss1.ActiveSheet.RowCount - 1, 0].Text = "合计";
+                    ss1.ActiveSheet.Cells[ss1.ActiveSheet.RowCount - 1, iIdc - 1].Text = cSumTotal[iIdc - 1].ToString();
+                }
+
+
+
+                //// ReDim cSum(1 To 6)
+
+                for (iIdr = 1; iIdr <= ss1.ActiveSheet.RowCount; iIdr++)
+                {
+                    cSum[1] = convertX(ss1.ActiveSheet.Cells[iIdr - 1, 2].Text);
+                    cSum[2] = convertX(ss1.ActiveSheet.Cells[iIdr - 1, 3].Text);
+                    cSum[3] = convertX(ss1.ActiveSheet.Cells[iIdr - 1, 6].Text);
+                    cSum[4] = convertX(ss1.ActiveSheet.Cells[iIdr - 1, 7].Text);
+                    cSum[5] = convertX(ss1.ActiveSheet.Cells[iIdr - 1, 10].Text);
+                    cSum[6] = convertX(ss1.ActiveSheet.Cells[iIdr - 1, 11].Text);
+                    if (cSum[5] > 0 && cSum[1] > 0) { ss1.ActiveSheet.Cells[iIdr - 1, 14].Text = (cSum[1] / cSum[5] * 100).ToString(); }
+                    if (cSum[6] > 0 && cSum[2] > 0) { ss1.ActiveSheet.Cells[iIdr - 1, 15].Text = (cSum[2] / cSum[6] * 100).ToString(); }
+                    //If cSum(6) > 0 Then .Col = 17:   .Text = cSum(3) / cSum(6) * 100
+                }
         }
 
 
@@ -527,23 +596,56 @@ namespace CG
 
         private void CMD_CARD_Click(object sender, EventArgs e)
         {
-            if (ss1.ActiveSheet.RowCount == 0)
-            {
-                return;
 
-            }
-            try
-            {
-                string currentReportPath = System.Windows.Forms.Application.StartupPath + "\\南钢中板导出Excel文件夹";
-                string targetExcelName = currentReportPath + "\\" + "CGT2020C.xls";
-                resetExcelName(currentReportPath, targetExcelName);
-                setExcelText(targetExcelName);
-            }
-            catch (Exception ex)
-            {
-                GeneralCommon.Gp_MsgBoxDisplay(ex.ToString(), "W", "警告");
-            }
+
+           
         }
+
+        private void OPT_ALL_CheckedChanged(object sender, EventArgs e)
+        {
+            if (OPT_ALL.Checked)
+            {
+                TXT_OVER_FL.Text = "1";
+            }
+
+        }
+
+        private void OPT_OVER_CheckedChanged(object sender, EventArgs e)
+        {
+            if (OPT_OVER.Checked)
+            {
+                TXT_OVER_FL.Text = "2";
+            }
+
+        }
+
+        private void OPT_NOT_OVER_CheckedChanged(object sender, EventArgs e)
+        {
+            if (OPT_NOT_OVER.Checked)
+            {
+                TXT_OVER_FL.Text = "3";
+            }
+
+        }
+
+        private void OPT_HEAD_CheckedChanged(object sender, EventArgs e)
+        {
+            if (OPT_HEAD.Checked)
+            {
+                TXT_OVER_FL.Text = "4";
+            }
+
+        }
+
+        private void OPT_TAIL_CheckedChanged(object sender, EventArgs e)
+        {
+            if (OPT_TAIL.Checked)
+            {
+                TXT_OVER_FL.Text = "5";
+            }
+
+        }
+
 
     }
 }
