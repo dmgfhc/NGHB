@@ -1800,6 +1800,7 @@ namespace CommonClass
         /// </summary>
         /// <param name="Mc"></param>
         /// <param name="bproflag"></param>
+        /// 
        
         protected void p_McIni(Collection Mc, bool bproflag)
         {

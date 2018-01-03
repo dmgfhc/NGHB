@@ -145,6 +145,7 @@
             this.TXT_CD.Name = "TXT_CD";
             this.TXT_CD.Size = new System.Drawing.Size(36, 22);
             this.TXT_CD.TabIndex = 261;
+            this.TXT_CD.Visible = false;
             // 
             // SSP6
             // 
@@ -193,6 +194,7 @@
             this.OPT_MILL.TabStop = true;
             this.OPT_MILL.Text = "轧钢";
             this.OPT_MILL.UseVisualStyleBackColor = true;
+            this.OPT_MILL.Visible = false;
             // 
             // OPT_SMSMILL
             // 
@@ -204,6 +206,7 @@
             this.OPT_SMSMILL.TabStop = true;
             this.OPT_SMSMILL.Text = "综合";
             this.OPT_SMSMILL.UseVisualStyleBackColor = true;
+            this.OPT_SMSMILL.Visible = false;
             // 
             // TXT_MILL_DATE_TO
             // 

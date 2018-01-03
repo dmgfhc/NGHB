@@ -57,6 +57,7 @@ namespace CG
         }
 
         Collection Mc1 = new Collection();
+        Collection Mc2 = new Collection();
         Collection Sc1 = new Collection();
 
         const int SS1_SLENP = 8;//计划长度
@@ -158,99 +159,189 @@ namespace CG
             p_SetMc(TXT_LEN_TO, "P", "", "", "", imcseq, "");//16
             p_SetMc(CBO_GROUP, "P", "", "", "", imcseq, "");//17
 
-
+            p_McIni(Mc2, true);
+            imcseq = 2;
+            p_SetMc(TXT_SLAB_NO, "I", "", "", "", imcseq, "");//1
 
             p_ScIni(ss1, Sc1, 0, false, false);
             iheadrow = 1;
             iscseq = 1;
 
-            p_SetSc("板坯号", "E", "60", "IL", "", "", "", iscseq, iheadrow, "M");//0
-            p_SetSc("首件标识", "C", "", "I", "", "", "", iscseq, iheadrow, "M");//1
-            p_SetSc("轧批号", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//2
-            p_SetSc("坯料来源", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//3
-            p_SetSc("出炉时间", "DT", "", "L", "", "", "", iscseq, iheadrow, "M");//4
-            p_SetSc("粗轧开始时间", "DT", "", "L", "", "", "", iscseq, iheadrow, "M");//5
-            p_SetSc("粗轧结束时间", "DT", "", "L", "", "", "", iscseq, iheadrow, "M");//6
-            p_SetSc("精轧开始时间", "DT", "", "L", "", "", "", iscseq, iheadrow, "M");//7
-            p_SetSc("精轧结束时间", "DT", "", "L", "", "", "", iscseq, iheadrow, "M");//8
-            p_SetSc("轧废时间", "DT", "", "L", "", "", "", iscseq, iheadrow, "M");//9
-            p_SetSc("原始坯料钢种", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//10
-            p_SetSc("板坯钢种", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//11
-            p_SetSc("标准钢种", "E", "30", "L", "", "", "", iscseq, iheadrow, "L");//12
-            p_SetSc("标准号", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//13
-            p_SetSc("板坯厚度", "N", "9", "L", "", "", "", iscseq, iheadrow, "R");//14
-            p_SetSc("板坯宽度", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R");//15
-            p_SetSc("板坯长度", "N", "9,1", "L", "", "", "", iscseq, iheadrow, "R");//16
-            p_SetSc("板坯重量", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "R");//17
-            p_SetSc("粗轧厚*宽*长", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//18
-            p_SetSc("精轧厚*宽*长", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//19
-            p_SetSc("订单厚度", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R");//20
-            p_SetSc("同板差", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R");//21
-            p_SetSc("一阶段温度", "N", "9", "L", "", "", "", iscseq, iheadrow, "R");//22
-            p_SetSc("一阶段厚度", "N", "9", "L", "", "", "", iscseq, iheadrow, "R");//23
-            p_SetSc("二阶段温度", "N", "9", "L", "", "", "", iscseq, iheadrow, "R");//24
-            p_SetSc("二阶段厚度", "N", "9", "L", "", "", "", iscseq, iheadrow, "R");//25
-            p_SetSc("终轧温度", "E", "10", "L", "", "", "", iscseq, iheadrow, "R");//26
-            p_SetSc("粗轧冷却入口温度", "N", "9", "L", "", "", "", iscseq, iheadrow, "R");//27
-            p_SetSc("粗轧冷却速率", "N", "9", "L", "", "", "", iscseq, iheadrow, "R");//28
-            p_SetSc("粗轧冷却出口温度", "N", "9", "L", "", "", "", iscseq, iheadrow, "R");//29
-            p_SetSc("精轧冷却入口温度", "N", "9", "L", "", "", "", iscseq, iheadrow, "R");//30
-            p_SetSc("精轧冷却速率", "N", "9", "L", "", "", "", iscseq, iheadrow, "R");//31
-            p_SetSc("精轧冷却出口温度", "N", "9", "L", "", "", "", iscseq, iheadrow, "R");//32
-            p_SetSc("矫前返红温度", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//33
-            p_SetSc("计划成品重量", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "R");//34
-            p_SetSc("设计成材率（计划）", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//35
-            p_SetSc("计划板坯重量", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "R");//36
-            p_SetSc("实绩成品重量", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//37
-            p_SetSc("轧制间隔（秒）", "N", "9", "L", "", "", "", iscseq, iheadrow, "R");//38
-            p_SetSc("粗轧班次", "E", "2", "L", "", "", "", iscseq, iheadrow, "M");//39
-            p_SetSc("粗轧班别", "E", "2", "L", "", "", "", iscseq, iheadrow, "M");//40
-            p_SetSc("粗轧作业人员", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//41
-            p_SetSc("精轧班次", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//42
-            p_SetSc("精轧班别", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//43
-            p_SetSc("精轧作业人员", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//44
-            p_SetSc("设计成材率", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//45
-            p_SetSc("实设成材率", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//46
-            p_SetSc("成材率差", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//47
-            p_SetSc("实绩成材率", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//48
-            p_SetSc("订单号", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//49
-            p_SetSc("是否定尺", "C", "", "L", "", "", "", iscseq, iheadrow, "M");//50
-            p_SetSc("是否紧急订单", "E", "1", "L", "", "", "", iscseq, iheadrow, "M");//51
-            p_SetSc("重点订单", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//52
-            p_SetSc("计划钢板块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//53
-            p_SetSc("实绩钢板块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//54
-            p_SetSc("宽度差", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//55
-            p_SetSc("目标", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//56
-            p_SetSc("实绩", "E", "60", "I", "", "", "", iscseq, iheadrow, "R");//57
-            p_SetSc("粗轧机除鳞压力", "E", "60", "I", "", "", "", iscseq, iheadrow, "R");//58
-            p_SetSc("粗轧机除鳞次数", "E", "60", "I", "", "", "", iscseq, iheadrow, "R");//59
-            p_SetSc("精轧机除鳞压力", "E", "60", "I", "", "", "", iscseq, iheadrow, "R");//60
-            p_SetSc("精轧机除鳞次数", "E", "60", "I", "", "", "", iscseq, iheadrow, "R");//61
-            p_SetSc("目标", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//62
-            p_SetSc("实绩", "E", "60", "I", "", "", "", iscseq, iheadrow, "R");//63
-            p_SetSc("下限", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//64
-            p_SetSc("上限", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//65
-            p_SetSc("实绩", "E", "60", "I", "", "", "", iscseq, iheadrow, "R");//66
-            p_SetSc("下限", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//67
-            p_SetSc("上限", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//68
-            p_SetSc("实绩", "E", "60", "I", "", "", "", iscseq, iheadrow, "R");//69
-            p_SetSc("下限", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//70
-            p_SetSc("上限", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//71
-            p_SetSc("实绩", "E", "60", "I", "", "", "", iscseq, iheadrow, "R");//72
-            p_SetSc("矫直道次数", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//73
-            p_SetSc("改判", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R");//74
-            p_SetSc("协议", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R");//75
-            p_SetSc("次品", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R");//76
-            p_SetSc("废品", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R");//77
+            //0-86(综合)
+            p_SetSc("板坯号", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//0
+            p_SetSc("坯料类别", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//1
+            p_SetSc("数据来源", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//2
+            p_SetSc("钢板号", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//3
+            p_SetSc("进程状态", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//4
+            p_SetSc("厚度", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//5
+            p_SetSc("宽度", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//6
+            p_SetSc("实际长度", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//7
+            p_SetSc("计划长度", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//8
+            p_SetSc("原料重量", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//9
+            p_SetSc("坯料来源", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//10
+            p_SetSc("铸机号", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//11
+            p_SetSc("订单数量", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//12
+            p_SetSc("板坯钢种", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//13
+            p_SetSc("轧制钢种", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//14
+            p_SetSc("标准号", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//15
+            p_SetSc("订单号", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//16
+            p_SetSc("订单序号", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//17
+            p_SetSc("用户名称", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//18
+            p_SetSc("厚度", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//19
+            p_SetSc("宽度", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//20
+            p_SetSc("长度", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//21
+            p_SetSc("重量", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//22
+            p_SetSc("目标", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//23
+            p_SetSc("实绩", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//24
+            p_SetSc("炉座号", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//25
+            p_SetSc("再装炉指示", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//26
+            p_SetSc("目标", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//27
+            p_SetSc("实绩", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//28
+            p_SetSc("上表", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//29
+            p_SetSc("下表", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//30
+            p_SetSc("下限", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//31
+            p_SetSc("上限", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//32
+            p_SetSc("实绩", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//33
+            p_SetSc("驻段时间", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//34
+            p_SetSc("目标", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//35
+            p_SetSc("实绩", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//36
+            p_SetSc("驻段时间", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//37
+            p_SetSc("温度下限", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//38
+            p_SetSc("温度上限", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//39
+            p_SetSc("实绩", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//40
+            p_SetSc("均热时间下限", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//41
+            p_SetSc("均热时间上限", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//42
+            p_SetSc("实绩", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//43
+            p_SetSc("目标", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//44
+            p_SetSc("实绩", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//45
+            p_SetSc("下限", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//46
+            p_SetSc("上限", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//47
+            p_SetSc("实绩", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//48
+            p_SetSc("加热炉作业时间", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//49
+            p_SetSc("除鳞箱前路压力", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//50
+            p_SetSc("除鳞箱后路压力", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//51
+            p_SetSc("粗除鳞压力", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//52
+            p_SetSc("精除鳞压力", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//53
+            p_SetSc("目标", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//54
+            p_SetSc("实绩", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//55
+            p_SetSc("出炉时间", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//56
+            p_SetSc("煤气热值", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//57
+            p_SetSc("炉内残氧", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//58
+            p_SetSc("开始", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//59
+            p_SetSc("终了", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//60
+            p_SetSc("除鳞出口温度", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//61
+            p_SetSc("目标", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//62
+            p_SetSc("实绩", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//63
+            p_SetSc("目标", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//64
+            p_SetSc("实绩", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//65
+            p_SetSc("粗除鳞次数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//66
+            p_SetSc("粗轧机轧制模式", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//67
+            p_SetSc("粗轧道次数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//68
+            p_SetSc("目标厚度", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//69
+            p_SetSc("厚度（实绩计算）", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//70
+            p_SetSc("宽度（平均测宽）", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//71
+            p_SetSc("长度（计算）", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//72
+            p_SetSc("目标", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//73
+            p_SetSc("实绩", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//74
+            p_SetSc("目标", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//75
+            p_SetSc("实绩", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//76
+            p_SetSc("目标", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//77
+            p_SetSc("实绩", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//78
+            p_SetSc("目标", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//79
+            p_SetSc("实绩", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//80
+            p_SetSc("目标", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//81
+            p_SetSc("实绩", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//82
+            p_SetSc("下限", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//83
+            p_SetSc("上限", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//84
+            p_SetSc("实绩", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//85
+            p_SetSc("精除鳞次数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//86
+            p_SetSc("精轧机轧制模式", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//87
+            p_SetSc("精轧道次数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//88
+            p_SetSc("同板差", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//89
+            p_SetSc("目标厚度", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//90
+            p_SetSc("厚度（IMS或测量）", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//91
+            p_SetSc("宽度（平均测宽）", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//92
+            p_SetSc("长度（板型仪测量）", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//93
+            p_SetSc("下限", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//94
+            p_SetSc("上限", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//95
+            p_SetSc("实绩", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//96
+            p_SetSc("目标", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//97
+            p_SetSc("实绩", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//98
+            p_SetSc("上下流量比", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//99
+            p_SetSc("目标", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//100
+            p_SetSc("实绩", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//101
+            p_SetSc("下限", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//102
+            p_SetSc("上限", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//103
+            p_SetSc("实绩", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//104
+            p_SetSc("喷印号", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//105
+            p_SetSc("工艺异常标注", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//106
+            p_SetSc("试样号", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//107
+            p_SetSc("分段号", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//108
+            p_SetSc("厚度", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//109
+            p_SetSc("宽度", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//110
+            p_SetSc("长度", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//111
+            p_SetSc("矩形度", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//112
+            p_SetSc("不平度", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//113
+            p_SetSc("重量", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//114
+            p_SetSc("定尺", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//115
+            p_SetSc("产品等级", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//116
+            p_SetSc("表面等级", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//117
+            p_SetSc("缺陷", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//118
+            p_SetSc("设计成材率", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//119
+            p_SetSc("实设成材率", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//120
+            p_SetSc("实际成材率", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//121
+            p_SetSc("屈服", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//122
+            p_SetSc("抗拉", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//123
+            p_SetSc("延伸率", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//124
+            p_SetSc("冲击均值", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//125
+            p_SetSc("DWTT", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//126
+            p_SetSc("方式", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//127
+            p_SetSc("加热速率", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//128
+            p_SetSc("加热温度", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//129
+            p_SetSc("保温时间", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//130
+            p_SetSc("出炉温度", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//131
+            p_SetSc("轧制班别", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//132
+            p_SetSc("剪切班别", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//133
+            p_SetSc("粗轧操作工", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//134
+            p_SetSc("精轧操作工", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//135
+            p_SetSc("生产备注", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//136
+            p_SetSc("是否定制配送", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//137
+            p_SetSc("是否出口订单", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//138
+           
 
 
             iheadrow = 0;
 
-            p_spanSpread("粗轧阶段结果", 56, 57, iscseq, iheadrow, 1);
-            p_spanSpread("精轧开机温度", 62, 63, iscseq, iheadrow, 1);
-            p_spanSpread("终轧温度", 64, 66, iscseq, iheadrow, 1);
-            p_spanSpread("入水温度", 67, 69, iscseq, iheadrow, 1);
-            p_spanSpread("返红温度", 70, 72, iscseq, iheadrow, 1);
+            p_spanSpread("板坯规格", 5, 8, iscseq, iheadrow, 1);
+            p_spanSpread("订单规格", 19, 21, iscseq, iheadrow, 1);
+            p_spanSpread("堆冷时间", 23, 24, iscseq, iheadrow, 1);
+            p_spanSpread("入炉温度", 27, 28, iscseq, iheadrow, 1);
+            p_spanSpread("预热段温度", 29, 30, iscseq, iheadrow, 1);
+            p_spanSpread("加热段温度", 31, 34, iscseq, iheadrow, 1);
+            p_spanSpread("加热2段温度", 35, 37, iscseq, iheadrow, 1);
+            p_spanSpread("均热段", 38, 43, iscseq, iheadrow, 1);
+            p_spanSpread("出炉温度", 44, 45, iscseq, iheadrow, 1);
+            p_spanSpread("总加热时间", 46, 48, iscseq, iheadrow, 1);
+            p_spanSpread("温度均匀性", 54, 55, iscseq, iheadrow, 1);
+            p_spanSpread("处鳞压力", 59, 60, iscseq, iheadrow, 1);
+            p_spanSpread("粗轧开轧温度", 62, 63, iscseq, iheadrow, 1);
+            p_spanSpread("粗轧终轧温度", 64, 65, iscseq, iheadrow, 1);
+            p_spanSpread("粗轧阶段结果", 69, 72, iscseq, iheadrow, 1);
+            p_spanSpread("气雾冷却开冷温度", 73, 74, iscseq, iheadrow, 1);
+            p_spanSpread("气雾冷却终冷温度", 75, 76, iscseq, iheadrow, 1);
+            p_spanSpread("气雾冷却速度", 77, 78, iscseq, iheadrow, 1);
+            p_spanSpread("精轧开轧温度", 79, 80, iscseq, iheadrow, 1);
+            p_spanSpread("精轧开轧厚度比", 81, 82, iscseq, iheadrow, 1);
+            p_spanSpread("精轧终轧温度", 83, 85, iscseq, iheadrow, 1);
+            p_spanSpread("精轧结果", 90, 93, iscseq, iheadrow, 1);
+            p_spanSpread("入水温度", 94, 96, iscseq, iheadrow, 1);
+            p_spanSpread("ACC终冷温度", 97, 98, iscseq, iheadrow, 1);
+            p_spanSpread("ACC冷却速度", 100, 101, iscseq, iheadrow, 1);
+            p_spanSpread("返红温度", 102, 104, iscseq, iheadrow, 1);
+            p_spanSpread("成品实绩尺寸", 109, 114, iscseq, iheadrow, 1);
+            p_spanSpread("力学性能", 122, 126, iscseq, iheadrow, 1);
+            p_spanSpread("热处理实绩", 127, 131, iscseq, iheadrow, 1);
+           
 
         }
 
@@ -332,20 +423,59 @@ namespace CG
         public override void Form_Ref()
         {
 
+            string sFlag;
+            string sexport;
+            int iCount;
+
+            if (TXT_SLAB_NO.Text.Length <= 8)
+            {
+                if (TXT_MILL_DATE.RawDate.Trim() == "" || TXT_MILL_DATE_TO.RawDate.Trim() == "")
+                {
+                    GeneralCommon.Gp_MsgBoxDisplay("查询日期未输入!", "I", "系统提示信息");
+                    return;
+                }
+
+                if (TXT_MILL_DATE.RawDate != TXT_MILL_DATE_TO.RawDate)
+                {
+                    GeneralCommon.Gp_MsgBoxDisplay("只能查询一天内信息!", "I", "系统提示信息");
+                    return;
+                }
+            }
+
+            p_Ref(1, 1, true, true);
+
+            {
+                for (iCount = 1; iCount <= ss1.ActiveSheet.RowCount; iCount++)
+                {
+                    sFlag = ss1.ActiveSheet.Cells[iCount - 1, SS1_FLAG].Text;
+                    sexport = ss1.ActiveSheet.Cells[iCount - 1, SS1_EXPORT].Text;
+
+                    //是否定制配送
+                    if (sFlag == "Y")
+                    {
+                        Gp_Sp_BlockColor(ss1, SS1_PLATE_NO, SS1_PLATE_NO, iCount-1, iCount-1, SSP5.BackColor,Color.White);
+                    }
+                    //是否出口订单
+
+                    if (sexport == "Y")
+                    {
+                        Gp_Sp_BlockColor(ss1, SS1_PLATE_NO, SS1_PLATE_NO, iCount-1, iCount-1, SSP6.BackColor, Color.White);
+                    }
+                }
+            }
+
         }
 
 
 
         public override void Form_Pro()
         {
-
+            p_Pro(2, 0, false, true);
         }
 
         public override bool Form_Cls()
         {
             base.Form_Cls();
-
-
 
             return true;
         }
