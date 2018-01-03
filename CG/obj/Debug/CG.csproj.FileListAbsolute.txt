@@ -261,3 +261,4 @@ C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGT2001C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGT2001C_POP.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGD2061C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGD2062C.resources
+C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGT2100C.resources

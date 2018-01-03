@@ -582,6 +582,12 @@
     <Compile Include="CGT\WGT3010C.Designer.cs">
       <DependentUpon>WGT3010C.cs</DependentUpon>
     </Compile>
+    <Compile Include="CGT\WGT3020C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CGT\WGT3020C.Designer.cs">
+      <DependentUpon>WGT3020C.cs</DependentUpon>
+    </Compile>
     <Compile Include="CGT\WGT3030C.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -623,6 +629,12 @@
     </Compile>
     <Compile Include="CGT\CGT2100C.Designer.cs">
       <DependentUpon>CGT2100C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CGT\CGT2101C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CGT\CGT2101C.Designer.cs">
+      <DependentUpon>CGT2101C.cs</DependentUpon>
     </Compile>
     <Compile Include="CGZ\CGZ2031C.cs">
       <SubType>Form</SubType>
@@ -912,12 +924,6 @@
     <Compile Include="CGT\WGT2040C.Designer.cs">
       <DependentUpon>WGT2040C.cs</DependentUpon>
     </Compile>
-    <Compile Include="CGT\WGT3020C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGT\WGT3020C.Designer.cs">
-      <DependentUpon>WGT3020C.cs</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="CGA\CGA2011C.resx">
@@ -1133,6 +1139,9 @@
     <EmbeddedResource Include="CGT\WGT3010C.resx">
       <DependentUpon>WGT3010C.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CGT\WGT3020C.resx">
+      <DependentUpon>WGT3020C.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CGT\WGT3030C.resx">
       <DependentUpon>WGT3030C.cs</DependentUpon>
     </EmbeddedResource>
@@ -1153,6 +1162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CGT\CGT2100C.resx">
       <DependentUpon>CGT2100C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CGT\CGT2101C.resx">
+      <DependentUpon>CGT2101C.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CGZ\CGZ2031C.resx">
       <DependentUpon>CGZ2031C.cs</DependentUpon>
@@ -1298,9 +1310,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CGT\WGT2040C.resx">
       <DependentUpon>WGT2040C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGT\WGT3020C.resx">
-      <DependentUpon>WGT3020C.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

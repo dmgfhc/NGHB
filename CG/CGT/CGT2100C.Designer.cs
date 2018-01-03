@@ -28,14 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            CommonClass.BControlFiledSetting bControlFiledSetting1 = new CommonClass.BControlFiledSetting();
-            CommonClass.BControlFiledSetting bControlFiledSetting2 = new CommonClass.BControlFiledSetting();
-            this.txt_Defect = new CommonClass.F4ETCR();
-            this.txt_Defect_name = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TXT_SLAB_NO = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.TXT_SP_CD = new System.Windows.Forms.TextBox();
-            this.OPT_SLAB = new System.Windows.Forms.RadioButton();
-            this.OPT_PLATE = new System.Windows.Forms.RadioButton();
             this.txt_Group_CD = new System.Windows.Forms.ComboBox();
             this.txt_Shift = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,34 +39,35 @@
             this.txt_DateTo = new CommonClass.CeriUDate();
             this.txt_DateFrom = new CommonClass.CeriUDate();
             this.label1 = new System.Windows.Forms.Label();
+            this.OPT_SLAB = new System.Windows.Forms.RadioButton();
+            this.OPT_PLATE = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.TXT_PROD_CD = new System.Windows.Forms.TextBox();
-            this.opt_Product2 = new System.Windows.Forms.RadioButton();
-            this.opt_Product1 = new System.Windows.Forms.RadioButton();
-            this.opt_Product = new System.Windows.Forms.RadioButton();
+            this.Check1 = new System.Windows.Forms.CheckBox();
+            this.OPT_PILE = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.checkBox17 = new System.Windows.Forms.CheckBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.txt_Disp = new System.Windows.Forms.TextBox();
+            this.txt_Order = new System.Windows.Forms.TextBox();
+            this.chk_Cond17 = new System.Windows.Forms.CheckBox();
+            this.chk_Cond14 = new System.Windows.Forms.CheckBox();
+            this.chk_Cond16 = new System.Windows.Forms.CheckBox();
+            this.chk_Cond15 = new System.Windows.Forms.CheckBox();
             this.txt_Disp_Order = new System.Windows.Forms.TextBox();
-            this.checkBox15 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox16 = new System.Windows.Forms.CheckBox();
-            this.checkBox14 = new System.Windows.Forms.CheckBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
-            this.checkBox13 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.chk_Cond3 = new System.Windows.Forms.CheckBox();
+            this.chk_Cond6 = new System.Windows.Forms.CheckBox();
+            this.chk_Cond2 = new System.Windows.Forms.CheckBox();
+            this.chk_Cond13 = new System.Windows.Forms.CheckBox();
+            this.chk_Cond5 = new System.Windows.Forms.CheckBox();
+            this.chk_Cond4 = new System.Windows.Forms.CheckBox();
+            this.chk_Cond1 = new System.Windows.Forms.CheckBox();
+            this.chk_Cond11 = new System.Windows.Forms.CheckBox();
+            this.chk_Cond7 = new System.Windows.Forms.CheckBox();
+            this.chk_Cond8 = new System.Windows.Forms.CheckBox();
+            this.chk_Cond9 = new System.Windows.Forms.CheckBox();
+            this.chk_Cond10 = new System.Windows.Forms.CheckBox();
+            this.chk_Cond12 = new System.Windows.Forms.CheckBox();
+            this.chk_Cond0 = new System.Windows.Forms.CheckBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.SSTab1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.ss1 = new FarPoint.Win.Spread.FpSpread();
             this.ss1_Sheet1 = new FarPoint.Win.Spread.SheetView();
@@ -81,7 +78,7 @@
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.SSTab1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ss1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ss1_Sheet1)).BeginInit();
@@ -90,35 +87,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.ss2_Sheet1)).BeginInit();
             this.SuspendLayout();
             // 
-            // txt_Defect
-            // 
-            bControlFiledSetting1.ColumnID = "cd";
-            bControlFiledSetting1.TargetControl = this.txt_Defect;
-            bControlFiledSetting2.ColumnID = "cd_name";
-            bControlFiledSetting2.TargetControl = this.txt_Defect_name;
-            this.txt_Defect.CustomSetting.Add(bControlFiledSetting1);
-            this.txt_Defect.CustomSetting.Add(bControlFiledSetting2);
-            this.txt_Defect.InputControl = this.txt_Defect;
-            this.txt_Defect.Location = new System.Drawing.Point(727, 66);
-            this.txt_Defect.Name = "txt_Defect";
-            this.txt_Defect.Size = new System.Drawing.Size(45, 22);
-            this.txt_Defect.sJoin = "";
-            this.txt_Defect.sSqletc = "select cd 代码,cd_name 代码名称,cd_short_name 代码简称,cd_short_eng 英文简称 from zp_cd where c" +
-    "d_mana_no = \'G0002\'";
-            this.txt_Defect.TabIndex = 20;
-            // 
-            // txt_Defect_name
-            // 
-            this.txt_Defect_name.Location = new System.Drawing.Point(772, 66);
-            this.txt_Defect_name.Name = "txt_Defect_name";
-            this.txt_Defect_name.Size = new System.Drawing.Size(153, 22);
-            this.txt_Defect_name.TabIndex = 18;
-            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.TXT_SLAB_NO);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.TXT_SP_CD);
-            this.groupBox1.Controls.Add(this.OPT_SLAB);
-            this.groupBox1.Controls.Add(this.OPT_PLATE);
             this.groupBox1.Controls.Add(this.txt_Group_CD);
             this.groupBox1.Controls.Add(this.txt_Shift);
             this.groupBox1.Controls.Add(this.label3);
@@ -128,9 +101,27 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(743, 44);
+            this.groupBox1.Size = new System.Drawing.Size(793, 44);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // TXT_SLAB_NO
+            // 
+            this.TXT_SLAB_NO.Location = new System.Drawing.Point(651, 15);
+            this.TXT_SLAB_NO.MaxLength = 10;
+            this.TXT_SLAB_NO.Name = "TXT_SLAB_NO";
+            this.TXT_SLAB_NO.Size = new System.Drawing.Size(112, 22);
+            this.TXT_SLAB_NO.TabIndex = 216;
+            // 
+            // label5
+            // 
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label5.Location = new System.Drawing.Point(594, 15);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(54, 21);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "板坯号";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // TXT_SP_CD
             // 
@@ -139,30 +130,6 @@
             this.TXT_SP_CD.Size = new System.Drawing.Size(11, 22);
             this.TXT_SP_CD.TabIndex = 9;
             this.TXT_SP_CD.Visible = false;
-            // 
-            // OPT_SLAB
-            // 
-            this.OPT_SLAB.Location = new System.Drawing.Point(672, 13);
-            this.OPT_SLAB.Name = "OPT_SLAB";
-            this.OPT_SLAB.Size = new System.Drawing.Size(51, 25);
-            this.OPT_SLAB.TabIndex = 8;
-            this.OPT_SLAB.TabStop = true;
-            this.OPT_SLAB.Text = "轧制";
-            this.OPT_SLAB.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.OPT_SLAB.UseVisualStyleBackColor = true;
-            this.OPT_SLAB.Click += new System.EventHandler(this.OPT_SLAB_Click);
-            // 
-            // OPT_PLATE
-            // 
-            this.OPT_PLATE.Location = new System.Drawing.Point(600, 13);
-            this.OPT_PLATE.Name = "OPT_PLATE";
-            this.OPT_PLATE.Size = new System.Drawing.Size(51, 25);
-            this.OPT_PLATE.TabIndex = 7;
-            this.OPT_PLATE.TabStop = true;
-            this.OPT_PLATE.Text = "剪切";
-            this.OPT_PLATE.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.OPT_PLATE.UseVisualStyleBackColor = true;
-            this.OPT_PLATE.Click += new System.EventHandler(this.OPT_PLATE_Click);
             // 
             // txt_Group_CD
             // 
@@ -237,347 +204,365 @@
             this.label1.Text = "生产日期";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // OPT_SLAB
+            // 
+            this.OPT_SLAB.Location = new System.Drawing.Point(150, 10);
+            this.OPT_SLAB.Name = "OPT_SLAB";
+            this.OPT_SLAB.Size = new System.Drawing.Size(51, 25);
+            this.OPT_SLAB.TabIndex = 8;
+            this.OPT_SLAB.TabStop = true;
+            this.OPT_SLAB.Text = "轧制";
+            this.OPT_SLAB.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.OPT_SLAB.UseVisualStyleBackColor = true;
+            this.OPT_SLAB.Click += new System.EventHandler(this.OPT_SLAB_Click);
+            // 
+            // OPT_PLATE
+            // 
+            this.OPT_PLATE.Location = new System.Drawing.Point(78, 10);
+            this.OPT_PLATE.Name = "OPT_PLATE";
+            this.OPT_PLATE.Size = new System.Drawing.Size(51, 25);
+            this.OPT_PLATE.TabIndex = 7;
+            this.OPT_PLATE.TabStop = true;
+            this.OPT_PLATE.Text = "剪切";
+            this.OPT_PLATE.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.OPT_PLATE.UseVisualStyleBackColor = true;
+            this.OPT_PLATE.Click += new System.EventHandler(this.OPT_PLATE_Click);
+            // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.TXT_PROD_CD);
-            this.groupBox2.Controls.Add(this.opt_Product2);
-            this.groupBox2.Controls.Add(this.opt_Product1);
-            this.groupBox2.Controls.Add(this.opt_Product);
-            this.groupBox2.Location = new System.Drawing.Point(746, 3);
+            this.groupBox2.Controls.Add(this.Check1);
+            this.groupBox2.Controls.Add(this.OPT_PILE);
+            this.groupBox2.Controls.Add(this.OPT_SLAB);
+            this.groupBox2.Controls.Add(this.OPT_PLATE);
+            this.groupBox2.Location = new System.Drawing.Point(802, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(612, 44);
+            this.groupBox2.Size = new System.Drawing.Size(556, 44);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
-            // TXT_PROD_CD
+            // Check1
             // 
-            this.TXT_PROD_CD.Location = new System.Drawing.Point(12, 13);
-            this.TXT_PROD_CD.Name = "TXT_PROD_CD";
-            this.TXT_PROD_CD.Size = new System.Drawing.Size(10, 22);
-            this.TXT_PROD_CD.TabIndex = 7;
-            this.TXT_PROD_CD.Visible = false;
+            this.Check1.AutoSize = true;
+            this.Check1.ForeColor = System.Drawing.Color.Blue;
+            this.Check1.Location = new System.Drawing.Point(6, 18);
+            this.Check1.Name = "Check1";
+            this.Check1.Size = new System.Drawing.Size(65, 17);
+            this.Check1.TabIndex = 10;
+            this.Check1.Text = "退磅差";
+            this.Check1.UseVisualStyleBackColor = true;
+            this.Check1.Click += new System.EventHandler(this.Check1_Click);
             // 
-            // opt_Product2
+            // OPT_PILE
             // 
-            this.opt_Product2.Location = new System.Drawing.Point(180, 14);
-            this.opt_Product2.Name = "opt_Product2";
-            this.opt_Product2.Size = new System.Drawing.Size(51, 26);
-            this.opt_Product2.TabIndex = 6;
-            this.opt_Product2.TabStop = true;
-            this.opt_Product2.Text = "LP";
-            this.opt_Product2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.opt_Product2.UseVisualStyleBackColor = true;
-            this.opt_Product2.Click += new System.EventHandler(this.opt_Product2_Click);
-            // 
-            // opt_Product1
-            // 
-            this.opt_Product1.Location = new System.Drawing.Point(115, 13);
-            this.opt_Product1.Name = "opt_Product1";
-            this.opt_Product1.Size = new System.Drawing.Size(51, 25);
-            this.opt_Product1.TabIndex = 5;
-            this.opt_Product1.TabStop = true;
-            this.opt_Product1.Text = "钢板";
-            this.opt_Product1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.opt_Product1.UseVisualStyleBackColor = true;
-            this.opt_Product1.Click += new System.EventHandler(this.opt_Product1_Click);
-            // 
-            // opt_Product
-            // 
-            this.opt_Product.Location = new System.Drawing.Point(45, 13);
-            this.opt_Product.Name = "opt_Product";
-            this.opt_Product.Size = new System.Drawing.Size(51, 25);
-            this.opt_Product.TabIndex = 4;
-            this.opt_Product.TabStop = true;
-            this.opt_Product.Text = "全部";
-            this.opt_Product.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.opt_Product.UseVisualStyleBackColor = true;
-            this.opt_Product.Click += new System.EventHandler(this.opt_Product_Click);
+            this.OPT_PILE.Location = new System.Drawing.Point(217, 11);
+            this.OPT_PILE.Name = "OPT_PILE";
+            this.OPT_PILE.Size = new System.Drawing.Size(51, 25);
+            this.OPT_PILE.TabIndex = 9;
+            this.OPT_PILE.TabStop = true;
+            this.OPT_PILE.Text = "入库";
+            this.OPT_PILE.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.OPT_PILE.UseVisualStyleBackColor = true;
+            this.OPT_PILE.Click += new System.EventHandler(this.OPT_PILE_Click);
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.checkBox17);
-            this.groupBox3.Controls.Add(this.txt_Defect);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.txt_Defect_name);
             this.groupBox3.Controls.Add(this.txt_Disp);
+            this.groupBox3.Controls.Add(this.txt_Order);
+            this.groupBox3.Controls.Add(this.chk_Cond17);
+            this.groupBox3.Controls.Add(this.chk_Cond14);
+            this.groupBox3.Controls.Add(this.chk_Cond16);
+            this.groupBox3.Controls.Add(this.chk_Cond15);
             this.groupBox3.Controls.Add(this.txt_Disp_Order);
-            this.groupBox3.Controls.Add(this.checkBox15);
-            this.groupBox3.Controls.Add(this.checkBox4);
-            this.groupBox3.Controls.Add(this.checkBox9);
-            this.groupBox3.Controls.Add(this.checkBox3);
-            this.groupBox3.Controls.Add(this.checkBox7);
-            this.groupBox3.Controls.Add(this.checkBox8);
-            this.groupBox3.Controls.Add(this.checkBox5);
-            this.groupBox3.Controls.Add(this.checkBox2);
-            this.groupBox3.Controls.Add(this.checkBox16);
-            this.groupBox3.Controls.Add(this.checkBox14);
-            this.groupBox3.Controls.Add(this.checkBox10);
-            this.groupBox3.Controls.Add(this.checkBox11);
-            this.groupBox3.Controls.Add(this.checkBox12);
-            this.groupBox3.Controls.Add(this.checkBox13);
-            this.groupBox3.Controls.Add(this.checkBox6);
-            this.groupBox3.Controls.Add(this.checkBox1);
+            this.groupBox3.Controls.Add(this.chk_Cond3);
+            this.groupBox3.Controls.Add(this.chk_Cond6);
+            this.groupBox3.Controls.Add(this.chk_Cond2);
+            this.groupBox3.Controls.Add(this.chk_Cond13);
+            this.groupBox3.Controls.Add(this.chk_Cond5);
+            this.groupBox3.Controls.Add(this.chk_Cond4);
+            this.groupBox3.Controls.Add(this.chk_Cond1);
+            this.groupBox3.Controls.Add(this.chk_Cond11);
+            this.groupBox3.Controls.Add(this.chk_Cond7);
+            this.groupBox3.Controls.Add(this.chk_Cond8);
+            this.groupBox3.Controls.Add(this.chk_Cond9);
+            this.groupBox3.Controls.Add(this.chk_Cond10);
+            this.groupBox3.Controls.Add(this.chk_Cond12);
+            this.groupBox3.Controls.Add(this.chk_Cond0);
             this.groupBox3.Location = new System.Drawing.Point(3, 48);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(1354, 93);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             // 
-            // checkBox17
-            // 
-            this.checkBox17.AutoSize = true;
-            this.checkBox17.Location = new System.Drawing.Point(102, 71);
-            this.checkBox17.Name = "checkBox17";
-            this.checkBox17.Size = new System.Drawing.Size(78, 17);
-            this.checkBox17.TabIndex = 21;
-            this.checkBox17.Tag = ",O.STLGRD";
-            this.checkBox17.Text = "轧制钢种";
-            this.checkBox17.UseVisualStyleBackColor = true;
-            this.checkBox17.Click += new System.EventHandler(this.checkBox_Click);
-            // 
-            // label4
-            // 
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label4.Location = new System.Drawing.Point(651, 66);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 21);
-            this.label4.TabIndex = 19;
-            this.label4.Tag = "F4";
-            this.label4.Text = "缺陷";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // txt_Disp
             // 
-            this.txt_Disp.Location = new System.Drawing.Point(993, 21);
+            this.txt_Disp.ForeColor = System.Drawing.Color.Red;
+            this.txt_Disp.Location = new System.Drawing.Point(1207, 53);
+            this.txt_Disp.Multiline = true;
             this.txt_Disp.Name = "txt_Disp";
-            this.txt_Disp.Size = new System.Drawing.Size(10, 22);
-            this.txt_Disp.TabIndex = 17;
+            this.txt_Disp.Size = new System.Drawing.Size(45, 26);
+            this.txt_Disp.TabIndex = 26;
+            this.txt_Disp.Tag = "";
             this.txt_Disp.Visible = false;
+            // 
+            // txt_Order
+            // 
+            this.txt_Order.ForeColor = System.Drawing.Color.Red;
+            this.txt_Order.Location = new System.Drawing.Point(1207, 21);
+            this.txt_Order.Multiline = true;
+            this.txt_Order.Name = "txt_Order";
+            this.txt_Order.Size = new System.Drawing.Size(106, 26);
+            this.txt_Order.TabIndex = 25;
+            this.txt_Order.Tag = "";
+            this.txt_Order.Visible = false;
+            // 
+            // chk_Cond17
+            // 
+            this.chk_Cond17.AutoSize = true;
+            this.chk_Cond17.Location = new System.Drawing.Point(15, 72);
+            this.chk_Cond17.Name = "chk_Cond17";
+            this.chk_Cond17.Size = new System.Drawing.Size(78, 17);
+            this.chk_Cond17.TabIndex = 24;
+            this.chk_Cond17.Tag = ",O.STDSPEC";
+            this.chk_Cond17.Text = "轧制标准";
+            this.chk_Cond17.UseVisualStyleBackColor = true;
+            this.chk_Cond17.Click += new System.EventHandler(this.checkBox_Click);
+            // 
+            // chk_Cond14
+            // 
+            this.chk_Cond14.AutoSize = true;
+            this.chk_Cond14.Location = new System.Drawing.Point(637, 46);
+            this.chk_Cond14.Name = "chk_Cond14";
+            this.chk_Cond14.Size = new System.Drawing.Size(78, 17);
+            this.chk_Cond14.TabIndex = 23;
+            this.chk_Cond14.Tag = ",C.PLT";
+            this.chk_Cond14.Text = "坯料来源";
+            this.chk_Cond14.UseVisualStyleBackColor = true;
+            this.chk_Cond14.Click += new System.EventHandler(this.checkBox_Click);
+            // 
+            // chk_Cond16
+            // 
+            this.chk_Cond16.AutoSize = true;
+            this.chk_Cond16.Enabled = false;
+            this.chk_Cond16.Location = new System.Drawing.Point(721, 18);
+            this.chk_Cond16.Name = "chk_Cond16";
+            this.chk_Cond16.Size = new System.Drawing.Size(52, 17);
+            this.chk_Cond16.TabIndex = 22;
+            this.chk_Cond16.Tag = ",H.INF_CUR_INV";
+            this.chk_Cond16.Text = "库别";
+            this.chk_Cond16.UseVisualStyleBackColor = true;
+            this.chk_Cond16.Click += new System.EventHandler(this.checkBox_Click);
+            // 
+            // chk_Cond15
+            // 
+            this.chk_Cond15.AutoSize = true;
+            this.chk_Cond15.Location = new System.Drawing.Point(637, 18);
+            this.chk_Cond15.Name = "chk_Cond15";
+            this.chk_Cond15.Size = new System.Drawing.Size(78, 17);
+            this.chk_Cond15.TabIndex = 21;
+            this.chk_Cond15.Tag = ",B.STLGRD";
+            this.chk_Cond15.Text = "轧制钢种";
+            this.chk_Cond15.UseVisualStyleBackColor = true;
+            this.chk_Cond15.Click += new System.EventHandler(this.checkBox_Click);
             // 
             // txt_Disp_Order
             // 
             this.txt_Disp_Order.ForeColor = System.Drawing.Color.Red;
-            this.txt_Disp_Order.Location = new System.Drawing.Point(651, 15);
+            this.txt_Disp_Order.Location = new System.Drawing.Point(838, 18);
             this.txt_Disp_Order.Multiline = true;
             this.txt_Disp_Order.Name = "txt_Disp_Order";
             this.txt_Disp_Order.Size = new System.Drawing.Size(337, 45);
             this.txt_Disp_Order.TabIndex = 16;
             this.txt_Disp_Order.Tag = "USER";
             // 
-            // checkBox15
+            // chk_Cond3
             // 
-            this.checkBox15.AutoSize = true;
-            this.checkBox15.Location = new System.Drawing.Point(15, 71);
-            this.checkBox15.Name = "checkBox15";
-            this.checkBox15.Size = new System.Drawing.Size(78, 17);
-            this.checkBox15.TabIndex = 15;
-            this.checkBox15.Tag = ",O.STLGRD";
-            this.checkBox15.Text = "成品钢种";
-            this.checkBox15.UseVisualStyleBackColor = true;
-            this.checkBox15.Click += new System.EventHandler(this.checkBox_Click);
+            this.chk_Cond3.AutoSize = true;
+            this.chk_Cond3.Location = new System.Drawing.Point(281, 18);
+            this.chk_Cond3.Name = "chk_Cond3";
+            this.chk_Cond3.Size = new System.Drawing.Size(78, 17);
+            this.chk_Cond3.TabIndex = 14;
+            this.chk_Cond3.Tag = ",B.WID";
+            this.chk_Cond3.Text = "成品宽度";
+            this.chk_Cond3.UseVisualStyleBackColor = true;
+            this.chk_Cond3.Click += new System.EventHandler(this.checkBox_Click);
             // 
-            // checkBox4
+            // chk_Cond6
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(281, 18);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(78, 17);
-            this.checkBox4.TabIndex = 14;
-            this.checkBox4.Tag = ",B.WID";
-            this.checkBox4.Text = "成品宽度";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            this.checkBox4.Click += new System.EventHandler(this.checkBox_Click);
+            this.chk_Cond6.AutoSize = true;
+            this.chk_Cond6.Location = new System.Drawing.Point(102, 46);
+            this.chk_Cond6.Name = "chk_Cond6";
+            this.chk_Cond6.Size = new System.Drawing.Size(65, 17);
+            this.chk_Cond6.TabIndex = 13;
+            this.chk_Cond6.Tag = ",SUBSTR(B.BED_PILE_DATE,1,8)";
+            this.chk_Cond6.Text = "入库日";
+            this.chk_Cond6.UseVisualStyleBackColor = true;
+            this.chk_Cond6.Click += new System.EventHandler(this.checkBox_Click);
             // 
-            // checkBox9
+            // chk_Cond2
             // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(102, 46);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(65, 17);
-            this.checkBox9.TabIndex = 13;
-            this.checkBox9.Tag = ",SUBSTR(B.BED_PILE_DATE,1,8)";
-            this.checkBox9.Text = "入库日";
-            this.checkBox9.UseVisualStyleBackColor = true;
-            this.checkBox9.Click += new System.EventHandler(this.checkBox_Click);
+            this.chk_Cond2.AutoSize = true;
+            this.chk_Cond2.Location = new System.Drawing.Point(186, 18);
+            this.chk_Cond2.Name = "chk_Cond2";
+            this.chk_Cond2.Size = new System.Drawing.Size(78, 17);
+            this.chk_Cond2.TabIndex = 12;
+            this.chk_Cond2.Tag = ",B.THK";
+            this.chk_Cond2.Text = "成品厚度";
+            this.chk_Cond2.UseVisualStyleBackColor = true;
+            this.chk_Cond2.Click += new System.EventHandler(this.checkBox_Click);
             // 
-            // checkBox3
+            // chk_Cond13
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(186, 18);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(78, 17);
-            this.checkBox3.TabIndex = 12;
-            this.checkBox3.Tag = ",B.THK";
-            this.checkBox3.Text = "成品厚度";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            this.checkBox3.Click += new System.EventHandler(this.checkBox_Click);
+            this.chk_Cond13.AutoSize = true;
+            this.chk_Cond13.Location = new System.Drawing.Point(540, 18);
+            this.chk_Cond13.Name = "chk_Cond13";
+            this.chk_Cond13.Size = new System.Drawing.Size(91, 17);
+            this.chk_Cond13.TabIndex = 11;
+            this.chk_Cond13.Tag = ",B.ORD_FL";
+            this.chk_Cond13.Text = "订单材号码";
+            this.chk_Cond13.UseVisualStyleBackColor = true;
+            this.chk_Cond13.Click += new System.EventHandler(this.checkBox_Click);
             // 
-            // checkBox7
+            // chk_Cond5
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(540, 18);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(91, 17);
-            this.checkBox7.TabIndex = 11;
-            this.checkBox7.Tag = ",B.ORD_FL";
-            this.checkBox7.Text = "订单材号码";
-            this.checkBox7.UseVisualStyleBackColor = true;
-            this.checkBox7.Click += new System.EventHandler(this.checkBox_Click);
+            this.chk_Cond5.AutoSize = true;
+            this.chk_Cond5.Location = new System.Drawing.Point(15, 46);
+            this.chk_Cond5.Name = "chk_Cond5";
+            this.chk_Cond5.Size = new System.Drawing.Size(65, 17);
+            this.chk_Cond5.TabIndex = 10;
+            this.chk_Cond5.Tag = ",B.PROD_DATE";
+            this.chk_Cond5.Text = "生产日";
+            this.chk_Cond5.UseVisualStyleBackColor = true;
+            this.chk_Cond5.Click += new System.EventHandler(this.checkBox_Click);
             // 
-            // checkBox8
+            // chk_Cond4
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(15, 46);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(65, 17);
-            this.checkBox8.TabIndex = 10;
-            this.checkBox8.Tag = ",B.PROD_DATE";
-            this.checkBox8.Text = "生产日";
-            this.checkBox8.UseVisualStyleBackColor = true;
-            this.checkBox8.Click += new System.EventHandler(this.checkBox_Click);
+            this.chk_Cond4.AutoSize = true;
+            this.chk_Cond4.Location = new System.Drawing.Point(376, 18);
+            this.chk_Cond4.Name = "chk_Cond4";
+            this.chk_Cond4.Size = new System.Drawing.Size(78, 17);
+            this.chk_Cond4.TabIndex = 9;
+            this.chk_Cond4.Tag = ",B.LEN";
+            this.chk_Cond4.Text = "成品长度";
+            this.chk_Cond4.UseVisualStyleBackColor = true;
+            this.chk_Cond4.Click += new System.EventHandler(this.checkBox_Click);
             // 
-            // checkBox5
+            // chk_Cond1
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(376, 18);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(78, 17);
-            this.checkBox5.TabIndex = 9;
-            this.checkBox5.Tag = ",B.LEN";
-            this.checkBox5.Text = "成品长度";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            this.checkBox5.Click += new System.EventHandler(this.checkBox_Click);
+            this.chk_Cond1.AutoSize = true;
+            this.chk_Cond1.Location = new System.Drawing.Point(102, 19);
+            this.chk_Cond1.Name = "chk_Cond1";
+            this.chk_Cond1.Size = new System.Drawing.Size(78, 17);
+            this.chk_Cond1.TabIndex = 8;
+            this.chk_Cond1.Tag = ",B.APLY_STDSPEC";
+            this.chk_Cond1.Text = "成品标准";
+            this.chk_Cond1.UseVisualStyleBackColor = true;
+            this.chk_Cond1.Click += new System.EventHandler(this.checkBox_Click);
             // 
-            // checkBox2
+            // chk_Cond11
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(102, 19);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(78, 17);
-            this.checkBox2.TabIndex = 8;
-            this.checkBox2.Tag = ",B.APLY_STDSPEC";
-            this.checkBox2.Text = "成品标准";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.Click += new System.EventHandler(this.checkBox_Click);
+            this.chk_Cond11.AutoSize = true;
+            this.chk_Cond11.Location = new System.Drawing.Point(540, 46);
+            this.chk_Cond11.Name = "chk_Cond11";
+            this.chk_Cond11.Size = new System.Drawing.Size(52, 17);
+            this.chk_Cond11.TabIndex = 6;
+            this.chk_Cond11.Tag = ",B.TRIM_FL";
+            this.chk_Cond11.Text = "切边";
+            this.chk_Cond11.UseVisualStyleBackColor = true;
+            this.chk_Cond11.Click += new System.EventHandler(this.checkBox_Click);
             // 
-            // checkBox16
+            // chk_Cond7
             // 
-            this.checkBox16.AutoSize = true;
-            this.checkBox16.Location = new System.Drawing.Point(187, 71);
-            this.checkBox16.Name = "checkBox16";
-            this.checkBox16.Size = new System.Drawing.Size(91, 17);
-            this.checkBox16.TabIndex = 7;
-            this.checkBox16.Tag = ",B.ORD_ITEM";
-            this.checkBox16.Text = "订单序列号";
-            this.checkBox16.UseVisualStyleBackColor = true;
-            this.checkBox16.Visible = false;
-            this.checkBox16.Click += new System.EventHandler(this.checkBox_Click);
+            this.chk_Cond7.AutoSize = true;
+            this.chk_Cond7.Location = new System.Drawing.Point(186, 46);
+            this.chk_Cond7.Name = "chk_Cond7";
+            this.chk_Cond7.Size = new System.Drawing.Size(65, 17);
+            this.chk_Cond7.TabIndex = 5;
+            this.chk_Cond7.Tag = ",B.DSC_DATE";
+            this.chk_Cond7.Text = "综判日";
+            this.chk_Cond7.UseVisualStyleBackColor = true;
+            this.chk_Cond7.Click += new System.EventHandler(this.checkBox_Click);
             // 
-            // checkBox14
+            // chk_Cond8
             // 
-            this.checkBox14.AutoSize = true;
-            this.checkBox14.Location = new System.Drawing.Point(540, 46);
-            this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(52, 17);
-            this.checkBox14.TabIndex = 6;
-            this.checkBox14.Tag = ",B.TRIM_FL";
-            this.checkBox14.Text = "切边";
-            this.checkBox14.UseVisualStyleBackColor = true;
-            this.checkBox14.Click += new System.EventHandler(this.checkBox_Click);
+            this.chk_Cond8.AutoSize = true;
+            this.chk_Cond8.Location = new System.Drawing.Point(281, 46);
+            this.chk_Cond8.Name = "chk_Cond8";
+            this.chk_Cond8.Size = new System.Drawing.Size(65, 17);
+            this.chk_Cond8.TabIndex = 4;
+            this.chk_Cond8.Tag = ",substr(B.plate_no,1,10)";
+            this.chk_Cond8.Text = "板坯号";
+            this.chk_Cond8.UseVisualStyleBackColor = true;
+            this.chk_Cond8.Click += new System.EventHandler(this.checkBox_Click);
             // 
-            // checkBox10
+            // chk_Cond9
             // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.Location = new System.Drawing.Point(186, 46);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(78, 17);
-            this.checkBox10.TabIndex = 5;
-            this.checkBox10.Tag = ",B.DSC_DATE";
-            this.checkBox10.Text = "综判日期";
-            this.checkBox10.UseVisualStyleBackColor = true;
-            this.checkBox10.Click += new System.EventHandler(this.checkBox_Click);
+            this.chk_Cond9.AutoSize = true;
+            this.chk_Cond9.Location = new System.Drawing.Point(376, 46);
+            this.chk_Cond9.Name = "chk_Cond9";
+            this.chk_Cond9.Size = new System.Drawing.Size(52, 17);
+            this.chk_Cond9.TabIndex = 3;
+            this.chk_Cond9.Tag = ",B.GROUP_CD";
+            this.chk_Cond9.Text = "班别";
+            this.chk_Cond9.UseVisualStyleBackColor = true;
+            this.chk_Cond9.Click += new System.EventHandler(this.checkBox_Click);
             // 
-            // checkBox11
+            // chk_Cond10
             // 
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.Location = new System.Drawing.Point(281, 46);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(65, 17);
-            this.checkBox11.TabIndex = 4;
-            this.checkBox11.Tag = ",substr(B.plate_no,1,10)";
-            this.checkBox11.Text = "板坯号";
-            this.checkBox11.UseVisualStyleBackColor = true;
-            this.checkBox11.Click += new System.EventHandler(this.checkBox_Click);
+            this.chk_Cond10.AutoSize = true;
+            this.chk_Cond10.Location = new System.Drawing.Point(460, 46);
+            this.chk_Cond10.Name = "chk_Cond10";
+            this.chk_Cond10.Size = new System.Drawing.Size(52, 17);
+            this.chk_Cond10.TabIndex = 2;
+            this.chk_Cond10.Tag = ",B.SIZE_KND";
+            this.chk_Cond10.Text = "定尺";
+            this.chk_Cond10.UseVisualStyleBackColor = true;
+            this.chk_Cond10.Click += new System.EventHandler(this.checkBox_Click);
             // 
-            // checkBox12
+            // chk_Cond12
             // 
-            this.checkBox12.AutoSize = true;
-            this.checkBox12.Location = new System.Drawing.Point(376, 46);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(52, 17);
-            this.checkBox12.TabIndex = 3;
-            this.checkBox12.Tag = ",B.GROUP_CD";
-            this.checkBox12.Text = "班别";
-            this.checkBox12.UseVisualStyleBackColor = true;
-            this.checkBox12.Click += new System.EventHandler(this.checkBox_Click);
+            this.chk_Cond12.AutoSize = true;
+            this.chk_Cond12.Location = new System.Drawing.Point(460, 19);
+            this.chk_Cond12.Name = "chk_Cond12";
+            this.chk_Cond12.Size = new System.Drawing.Size(65, 17);
+            this.chk_Cond12.TabIndex = 1;
+            this.chk_Cond12.Tag = ",B.ORD_NO||\'-\'||B.ORD_ITEM";
+            this.chk_Cond12.Text = "订单号";
+            this.chk_Cond12.UseVisualStyleBackColor = true;
+            this.chk_Cond12.Click += new System.EventHandler(this.checkBox_Click);
             // 
-            // checkBox13
+            // chk_Cond0
             // 
-            this.checkBox13.AutoSize = true;
-            this.checkBox13.Location = new System.Drawing.Point(460, 46);
-            this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(52, 17);
-            this.checkBox13.TabIndex = 2;
-            this.checkBox13.Tag = ",B.SIZE_KND";
-            this.checkBox13.Text = "定尺";
-            this.checkBox13.UseVisualStyleBackColor = true;
-            this.checkBox13.Click += new System.EventHandler(this.checkBox_Click);
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(460, 19);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(65, 17);
-            this.checkBox6.TabIndex = 1;
-            this.checkBox6.Tag = ",B.ORD_NO";
-            this.checkBox6.Text = "订单号";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            this.checkBox6.Click += new System.EventHandler(this.checkBox_Click);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(15, 19);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(78, 17);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Tag = ",B.STLGRD";
-            this.checkBox1.Text = "板坯钢种";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.Click += new System.EventHandler(this.checkBox_Click);
+            this.chk_Cond0.AutoSize = true;
+            this.chk_Cond0.Location = new System.Drawing.Point(15, 19);
+            this.chk_Cond0.Name = "chk_Cond0";
+            this.chk_Cond0.Size = new System.Drawing.Size(78, 17);
+            this.chk_Cond0.TabIndex = 0;
+            this.chk_Cond0.Tag = ",C.STLGRD";
+            this.chk_Cond0.Text = "板坯钢种";
+            this.chk_Cond0.UseVisualStyleBackColor = true;
+            this.chk_Cond0.Click += new System.EventHandler(this.checkBox_Click);
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.tabControl1);
+            this.groupBox4.Controls.Add(this.SSTab1);
             this.groupBox4.Location = new System.Drawing.Point(3, 143);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(1354, 467);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             // 
-            // tabControl1
+            // SSTab1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(3, 18);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.Padding = new System.Drawing.Point(0, 0);
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1348, 446);
-            this.tabControl1.TabIndex = 0;
-            this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
+            this.SSTab1.Controls.Add(this.tabPage1);
+            this.SSTab1.Controls.Add(this.tabPage2);
+            this.SSTab1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SSTab1.Location = new System.Drawing.Point(3, 18);
+            this.SSTab1.Name = "SSTab1";
+            this.SSTab1.Padding = new System.Drawing.Point(0, 0);
+            this.SSTab1.SelectedIndex = 0;
+            this.SSTab1.Size = new System.Drawing.Size(1348, 446);
+            this.SSTab1.TabIndex = 0;
+            this.SSTab1.Selected += new System.Windows.Forms.TabControlEventHandler(this.SSTab1_Selected);
             // 
             // tabPage1
             // 
@@ -642,7 +627,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "CGT2100C";
             this.Text = "综合查询_CGT2100C";
-            this.Load += new System.EventHandler(this.WGY1205C_Load);
+            this.Load += new System.EventHandler(this.CGT2100C_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -650,7 +635,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
+            this.SSTab1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ss1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ss1_Sheet1)).EndInit();
@@ -674,41 +659,40 @@
         private System.Windows.Forms.ComboBox txt_Shift;
         private System.Windows.Forms.RadioButton OPT_PLATE;
         private System.Windows.Forms.RadioButton OPT_SLAB;
-        private System.Windows.Forms.RadioButton opt_Product2;
-        private System.Windows.Forms.RadioButton opt_Product1;
-        private System.Windows.Forms.RadioButton opt_Product;
         private System.Windows.Forms.TextBox TXT_SP_CD;
-        private System.Windows.Forms.TextBox TXT_PROD_CD;
         private System.Windows.Forms.GroupBox groupBox3;
-        private CommonClass.F4ETCR txt_Defect;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txt_Defect_name;
-        private System.Windows.Forms.TextBox txt_Disp;
         private System.Windows.Forms.TextBox txt_Disp_Order;
-        private System.Windows.Forms.CheckBox checkBox15;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox16;
-        private System.Windows.Forms.CheckBox checkBox14;
-        private System.Windows.Forms.CheckBox checkBox10;
-        private System.Windows.Forms.CheckBox checkBox11;
-        private System.Windows.Forms.CheckBox checkBox12;
-        private System.Windows.Forms.CheckBox checkBox13;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox chk_Cond3;
+        private System.Windows.Forms.CheckBox chk_Cond6;
+        private System.Windows.Forms.CheckBox chk_Cond2;
+        private System.Windows.Forms.CheckBox chk_Cond13;
+        private System.Windows.Forms.CheckBox chk_Cond5;
+        private System.Windows.Forms.CheckBox chk_Cond4;
+        private System.Windows.Forms.CheckBox chk_Cond1;
+        private System.Windows.Forms.CheckBox chk_Cond11;
+        private System.Windows.Forms.CheckBox chk_Cond7;
+        private System.Windows.Forms.CheckBox chk_Cond8;
+        private System.Windows.Forms.CheckBox chk_Cond9;
+        private System.Windows.Forms.CheckBox chk_Cond10;
+        private System.Windows.Forms.CheckBox chk_Cond12;
+        private System.Windows.Forms.CheckBox chk_Cond0;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl SSTab1;
         private System.Windows.Forms.TabPage tabPage1;
         private FarPoint.Win.Spread.FpSpread ss1;
         private FarPoint.Win.Spread.SheetView ss1_Sheet1;
         private System.Windows.Forms.TabPage tabPage2;
         private FarPoint.Win.Spread.FpSpread ss2;
         private FarPoint.Win.Spread.SheetView ss2_Sheet1;
-        private System.Windows.Forms.CheckBox checkBox17;
+        private System.Windows.Forms.CheckBox chk_Cond15;
+        private System.Windows.Forms.CheckBox Check1;
+        private System.Windows.Forms.RadioButton OPT_PILE;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox TXT_SLAB_NO;
+        private System.Windows.Forms.CheckBox chk_Cond17;
+        private System.Windows.Forms.CheckBox chk_Cond14;
+        private System.Windows.Forms.CheckBox chk_Cond16;
+        private System.Windows.Forms.TextBox txt_Order;
+        private System.Windows.Forms.TextBox txt_Disp;
     }
 }
