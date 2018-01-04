@@ -150,7 +150,7 @@ namespace CG
         const int SS4_MILL_PASS_RATE_A36 = 32;
         const int SS4_MILL_RAKING_A36 = 33;
 
-       
+
 
 
         protected override void p_SubFormInit()
@@ -162,7 +162,7 @@ namespace CG
             p_McIni(Mc1, false);
             imcseq = 1;
             p_SetMc(txt_DATE, "P", "", "", "", imcseq, "");
-         
+
 
             p_ScIni(ss1, Sc1, 0, false, false);
             iheadrow = 0;
@@ -196,35 +196,35 @@ namespace CG
             p_SetSc("名称", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//1
             p_SetSc("轧制块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//2
             p_SetSc("达标块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//3
-            p_SetSc("达标率", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//4
+            p_SetSc("达标率", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "M");//4
             p_SetSc("排名", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//5
             p_SetSc("轧制块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//6
             p_SetSc("达标块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//7
-            p_SetSc("达标率", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//8
+            p_SetSc("达标率", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "M");//8
             p_SetSc("排名", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//9
             p_SetSc("轧制块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//10
             p_SetSc("达标块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//11
-            p_SetSc("达标率", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//12
+            p_SetSc("达标率", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "M");//12
             p_SetSc("排名", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//13
             p_SetSc("轧制块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//14
             p_SetSc("达标块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//15
-            p_SetSc("达标率", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//16
+            p_SetSc("达标率", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "M");//16
             p_SetSc("排名", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//17
             p_SetSc("轧制块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//18
             p_SetSc("达标块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//19
-            p_SetSc("达标率", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//20
+            p_SetSc("达标率", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "M");//20
             p_SetSc("排名", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//21
             p_SetSc("轧制块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//22
             p_SetSc("达标块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//23
-            p_SetSc("达标率", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//24
+            p_SetSc("达标率", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "M");//24
             p_SetSc("排名", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//25
             p_SetSc("轧制块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//26
             p_SetSc("达标块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//27
-            p_SetSc("达标率", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//28
+            p_SetSc("达标率", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "M");//28
             p_SetSc("排名", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//29
             p_SetSc("轧制块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//30
             p_SetSc("达标块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//31
-            p_SetSc("达标率", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//32
+            p_SetSc("达标率", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "M");//32
             p_SetSc("排名", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//33
 
             iheadrow = 0;
@@ -246,35 +246,35 @@ namespace CG
             p_SetSc("名称", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//1
             p_SetSc("轧制块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//2
             p_SetSc("达标块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//3
-            p_SetSc("达标率", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//4
+            p_SetSc("达标率", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "M");//4
             p_SetSc("排名", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//5
             p_SetSc("轧制块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//6
             p_SetSc("达标块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//7
-            p_SetSc("达标率", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//8
+            p_SetSc("达标率", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "M");//8
             p_SetSc("排名", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//9
             p_SetSc("轧制块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//10
             p_SetSc("达标块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//11
-            p_SetSc("达标率", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//12
+            p_SetSc("达标率", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "M");//12
             p_SetSc("排名", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//13
             p_SetSc("轧制块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//14
             p_SetSc("达标块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//15
-            p_SetSc("达标率", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//16
+            p_SetSc("达标率", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "M");//16
             p_SetSc("排名", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//17
             p_SetSc("轧制块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//18
             p_SetSc("达标块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//19
-            p_SetSc("达标率", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//20
+            p_SetSc("达标率", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "M");//20
             p_SetSc("排名", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//21
             p_SetSc("轧制块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//22
             p_SetSc("达标块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//23
-            p_SetSc("达标率", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//24
+            p_SetSc("达标率", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "M");//24
             p_SetSc("排名", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//25
             p_SetSc("轧制块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//26
             p_SetSc("达标块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//27
-            p_SetSc("达标率", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//28
+            p_SetSc("达标率", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "M");//28
             p_SetSc("排名", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//29
             p_SetSc("轧制块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//30
             p_SetSc("达标块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//31
-            p_SetSc("达标率", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//32
+            p_SetSc("达标率", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "M");//32
             p_SetSc("排名", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//33
 
             iheadrow = 0;
@@ -286,12 +286,12 @@ namespace CG
             p_spanSpread("容器板（Q245R-345R、112MnNiVR）", 22, 25, iscseq, iheadrow, 1);
             p_spanSpread("普板（Q235A-Q235D)", 26, 29, iscseq, iheadrow, 1);
             p_spanSpread("容器板（Q245R-345R、112MnNiVR）", 30, 33, iscseq, iheadrow, 1);
-          
-          
 
-           // iheadrow = 0;
 
-           
+
+            // iheadrow = 0;
+
+
 
         }
 
@@ -303,7 +303,7 @@ namespace CG
 
         public override void Form_Pro()
         {
-            
+
         }
 
         public override bool Form_Cls()
@@ -316,15 +316,17 @@ namespace CG
 
         public override void Form_Ref()
         {
-            
+
 
             p_Ref(1, 1, false, false);
             p_Ref(1, 2, false, false);
-            //p_Ref(1, 3, false, false);
-            //p_Ref(1, 4, false, false);
+            p_Ref(1, 3, false, false);
+            p_Ref(1, 4, false, false);
 
             ss1_order(ss1);
             ss1_order(ss2);
+            ss3_order(ss3);
+            ss3_order(ss4);
 
         }
 
@@ -569,11 +571,26 @@ namespace CG
                 MILL_STAND = oSpread.ActiveSheet.Cells[iCount - 1, SS1_STAND].Text;
                 if (MILL_STAND == "当日累计")
                 {
-                    MILL_COUNT_1 = convertI(oSpread.ActiveSheet.Cells[iCount - 2, SS1_MILL_COUNT].Text);
-                    MILL_PASS_COUNT_1 = convertI(oSpread.ActiveSheet.Cells[iCount - 2, SS1_MILL_PASS_COUNT].Text);
-                    MILL_COUNT_2 = convertI(oSpread.ActiveSheet.Cells[iCount - 3, SS1_MILL_COUNT].Text);
-                    MILL_PASS_COUNT_2 = convertI(oSpread.ActiveSheet.Cells[iCount - 3, SS1_MILL_PASS_COUNT].Text);
-
+                    if (iCount - 2 >= 0)
+                    {
+                        MILL_COUNT_1 = convertI(oSpread.ActiveSheet.Cells[iCount - 2, SS1_MILL_COUNT].Text);
+                        MILL_PASS_COUNT_1 = convertI(oSpread.ActiveSheet.Cells[iCount - 2, SS1_MILL_PASS_COUNT].Text);
+                    }
+                    else
+                    {
+                        MILL_COUNT_1 = 0;
+                        MILL_PASS_COUNT_1 = 0;
+                    }
+                    if (iCount - 3 >= 0 && (oSpread.ActiveSheet.Cells[iCount - 3, SS1_STAND].Text == "<23" || oSpread.ActiveSheet.Cells[iCount - 3, SS1_STAND].Text == ">=23"))
+                    {
+                        MILL_COUNT_2 = convertI(oSpread.ActiveSheet.Cells[iCount - 3, SS1_MILL_COUNT].Text);
+                        MILL_PASS_COUNT_2 = convertI(oSpread.ActiveSheet.Cells[iCount - 3, SS1_MILL_PASS_COUNT].Text);
+                    }
+                    else
+                    {
+                        MILL_COUNT_2 = 0;
+                        MILL_PASS_COUNT_2 = 0;
+                    }
                     MILL_COUNT = MILL_COUNT_1 + MILL_COUNT_2;
                     MILL_PASS_COUNT = MILL_PASS_COUNT_1 + MILL_PASS_COUNT_2;
 
@@ -812,19 +829,420 @@ namespace CG
                 }
             }
 
-            //EMP1 = null;
-            //EMP2 = null;
-            //EMP3 = null;
-            //EMP4 = null;
-            //EMP5 = null;
-            //EMP6 = null;
-            //n1 = 0;
-            //n2 = 0;
-            //n3 = 0;
-            //n4 = 0;
-            //n5 = 0;
-            //n6 = 0
+        }
 
+        public void ss3_order(FpSpread oSpread)
+        {
+            string GROUP_CD;
+            string GROUP_T = "";
+            string MILL_STAND;
+            string EMP_CD;
+            int iCount;
+            int iRow;
+            int mRow;
+            string T_GROUP_CD;
+            string T_EMP_CD;
+            string T_MILL_STAND;
+            double MILL_COUNT = 0;
+            double MILL_PASS_COUNT = 0;
+            double MILL_COUNT_1 = 0;
+            double MILL_PASS_COUNT_1 = 0;
+            double MILL_COUNT_2 = 0;
+            double MILL_PASS_COUNT_2 = 0;
+            double MILL_COUNT_ALL_1 = 0;
+            double MILL_PASS_COUNT_ALL_1 = 0;
+            double MILL_COUNT_ALL_2 = 0;
+            double MILL_PASS_COUNT_ALL_2 = 0;
+            double MILL_PASS_RATE = 0;
+            double[] EMP1 = new double[100];
+            double[] EMP2 = new double[100];
+            double[] EMP3 = new double[100];
+            double[] EMP4 = new double[100];
+            double[] EMP5 = new double[100];
+            double[] EMP6 = new double[100];
+            double[] EMP7 = new double[100];
+            double[] EMP8 = new double[100];
+            int i;
+            int j;
+            double temp1;
+            double temp2;
+            double temp3;
+            double temp4;
+            double temp5;
+            double temp6;
+            int n1 = 0;
+            int n2 = 0;
+            int n3 = 0;
+            int n4 = 0;
+            int n5 = 0;
+            int n6 = 0;
+            int n7 = 0;
+            int n8 = 0;
+            double STLGRT_WGT_Q345 = 0;
+            double STLGRT_PASS_WGT_Q345 = 0;
+            double STLGRT_WGT_Q390 = 0;
+            double STLGRT_PASS_WGT_Q390 = 0;
+            double STLGRT_WGT_Q460 = 0;
+            double STLGRT_PASS_WGT_Q460 = 0;
+            double STLGRT_WGT_AD = 0;
+            double STLGRT_PASS_WGT_AD = 0;
+            double STLGRT_WGT_R = 0;
+            double STLGRT_PASS_WGT_R = 0;
+            double STLGRT_WGT_X = 0;
+            double STLGRT_PASS_WGT_X = 0;
+            double STLGRT_WGT_Q235 = 0;
+            double STLGRT_PASS_WGT_Q235 = 0;
+            double STLGRT_WGT_A36 = 0;
+            double STLGRT_PASS_WGT_A36 = 0;
+            double MILL_PASS_RATE_Q345 = 0;
+            double MILL_PASS_RATE_Q390;
+            double MILL_PASS_RATE_Q460;
+            double MILL_PASS_RATE_AD;
+            double MILL_PASS_RATE_R;
+            double MILL_PASS_RATE_X;
+            double MILL_PASS_RATE_Q235;
+            double MILL_PASS_RATE_A36;
+
+            if (oSpread.ActiveSheet.RowCount <= 0) return;
+
+            iRow = oSpread.ActiveSheet.RowCount;
+            oSpread.ActiveSheet.Rows.Add(iRow, 1);
+            iRow = iRow - 1;
+
+            for (iCount = 1; iCount <= iRow; iCount++)
+            {
+
+                STLGRT_WGT_Q345 = STLGRT_WGT_Q345 + convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_COUNT_Q345].Text);
+                STLGRT_PASS_WGT_Q345 = STLGRT_PASS_WGT_Q345 + convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_COUNT_Q345].Text);
+
+                STLGRT_WGT_Q390 = STLGRT_WGT_Q390 + convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_COUNT_Q390].Text);
+                STLGRT_PASS_WGT_Q390 = STLGRT_PASS_WGT_Q390 + convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_COUNT_Q390].Text);
+
+
+                STLGRT_WGT_Q460 = STLGRT_WGT_Q460 + convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_COUNT_Q460].Text);
+                STLGRT_PASS_WGT_Q460 = STLGRT_PASS_WGT_Q460 + convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_COUNT_Q460].Text);
+
+                STLGRT_WGT_AD = STLGRT_WGT_AD + convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_COUNT_AD].Text);
+                STLGRT_PASS_WGT_AD = STLGRT_PASS_WGT_AD + convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_COUNT_AD].Text);
+
+                STLGRT_WGT_R = STLGRT_WGT_R + convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_COUNT_R].Text);
+                STLGRT_PASS_WGT_R = STLGRT_PASS_WGT_R + convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_COUNT_R].Text);
+
+                STLGRT_WGT_X = STLGRT_WGT_X + convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_COUNT_X].Text);
+                STLGRT_PASS_WGT_X = STLGRT_PASS_WGT_X + convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_COUNT_X].Text);
+
+                STLGRT_WGT_Q235 = STLGRT_WGT_Q235 + convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_COUNT_Q235].Text);
+                STLGRT_PASS_WGT_Q235 = STLGRT_PASS_WGT_Q235 + convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_COUNT_Q235].Text);
+
+                STLGRT_WGT_A36 = STLGRT_WGT_A36 + convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_COUNT_A36].Text);
+                STLGRT_PASS_WGT_A36 = STLGRT_PASS_WGT_A36 + convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_COUNT_A36].Text);
+
+            }
+
+            oSpread.ActiveSheet.Cells[oSpread.ActiveSheet.RowCount - 1, SS3_GROUP_CD].Text = "全厂";
+            oSpread.ActiveSheet.Cells[oSpread.ActiveSheet.RowCount - 1, SS3_EMP_CD].Text = "当日";
+            oSpread.ActiveSheet.Cells[oSpread.ActiveSheet.RowCount - 1, SS3_MILL_COUNT_Q345].Text = STLGRT_WGT_Q345.ToString();
+            oSpread.ActiveSheet.Cells[oSpread.ActiveSheet.RowCount - 1, SS3_MILL_PASS_COUNT_Q345].Text = STLGRT_PASS_WGT_Q345.ToString();
+
+            oSpread.ActiveSheet.Cells[oSpread.ActiveSheet.RowCount - 1, SS3_MILL_COUNT_Q390].Text = STLGRT_WGT_Q390.ToString();
+            oSpread.ActiveSheet.Cells[oSpread.ActiveSheet.RowCount - 1, SS3_MILL_PASS_COUNT_Q390].Text = STLGRT_PASS_WGT_Q390.ToString();
+
+            oSpread.ActiveSheet.Cells[oSpread.ActiveSheet.RowCount - 1, SS3_MILL_COUNT_Q460].Text = STLGRT_WGT_Q460.ToString();
+            oSpread.ActiveSheet.Cells[oSpread.ActiveSheet.RowCount - 1, SS3_MILL_PASS_COUNT_Q460].Text = STLGRT_PASS_WGT_Q460.ToString();
+
+            oSpread.ActiveSheet.Cells[oSpread.ActiveSheet.RowCount - 1, SS3_MILL_COUNT_AD].Text = STLGRT_WGT_AD.ToString();
+            oSpread.ActiveSheet.Cells[oSpread.ActiveSheet.RowCount - 1, SS3_MILL_PASS_COUNT_AD].Text = STLGRT_PASS_WGT_AD.ToString();
+
+            oSpread.ActiveSheet.Cells[oSpread.ActiveSheet.RowCount - 1, SS3_MILL_COUNT_R].Text = STLGRT_WGT_R.ToString();
+            oSpread.ActiveSheet.Cells[oSpread.ActiveSheet.RowCount - 1, SS3_MILL_PASS_COUNT_R].Text = STLGRT_PASS_WGT_R.ToString();
+
+            oSpread.ActiveSheet.Cells[oSpread.ActiveSheet.RowCount - 1, SS3_MILL_COUNT_X].Text = STLGRT_WGT_X.ToString();
+            oSpread.ActiveSheet.Cells[oSpread.ActiveSheet.RowCount - 1, SS3_MILL_PASS_COUNT_X].Text = STLGRT_PASS_WGT_X.ToString();
+
+            oSpread.ActiveSheet.Cells[oSpread.ActiveSheet.RowCount - 1, SS3_MILL_COUNT_Q235].Text = STLGRT_WGT_Q235.ToString();
+            oSpread.ActiveSheet.Cells[oSpread.ActiveSheet.RowCount - 1, SS3_MILL_PASS_COUNT_Q235].Text = STLGRT_PASS_WGT_Q235.ToString();
+
+            oSpread.ActiveSheet.Cells[oSpread.ActiveSheet.RowCount - 1, SS3_MILL_COUNT_A36].Text = STLGRT_WGT_A36.ToString();
+            oSpread.ActiveSheet.Cells[oSpread.ActiveSheet.RowCount - 1, SS3_MILL_PASS_COUNT_A36].Text = STLGRT_PASS_WGT_A36.ToString();
+
+
+
+            for (iCount = 1; iCount <= oSpread.ActiveSheet.RowCount; iCount++)
+            {
+
+                STLGRT_WGT_Q345 = convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_COUNT_Q345].Text);
+                STLGRT_PASS_WGT_Q345 = convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_COUNT_Q345].Text);
+
+                if (STLGRT_WGT_Q345 > 0)
+                {
+                    oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_RATE_Q345].Text = (STLGRT_PASS_WGT_Q345 / STLGRT_WGT_Q345 * 100).ToString();
+
+                }
+                else
+                {
+                    oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_RATE_Q345].Text = "0";
+                }
+
+
+                STLGRT_WGT_Q390 = convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_COUNT_Q390].Text);
+                STLGRT_PASS_WGT_Q390 = convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_COUNT_Q390].Text);
+
+                if (STLGRT_WGT_Q390 > 0)
+                {
+                    oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_RATE_Q390].Text = (STLGRT_PASS_WGT_Q390 / STLGRT_WGT_Q390 * 100).ToString();
+
+                }
+                else
+                {
+                    oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_RATE_Q390].Text = "0";
+                }
+
+                STLGRT_WGT_Q460 = convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_COUNT_Q460].Text);
+                STLGRT_PASS_WGT_Q460 = convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_COUNT_Q460].Text);
+
+                if (STLGRT_WGT_Q460 > 0)
+                {
+                    oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_RATE_Q460].Text = (STLGRT_PASS_WGT_Q460 / STLGRT_WGT_Q460 * 100).ToString();
+                }
+                else
+                {
+                    oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_RATE_Q460].Text = "0";
+                }
+
+                STLGRT_WGT_AD = convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_COUNT_AD].Text);
+                STLGRT_PASS_WGT_AD = convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_COUNT_AD].Text);
+                if (STLGRT_WGT_AD > 0)
+                {
+                    oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_RATE_AD].Text = (STLGRT_PASS_WGT_AD / STLGRT_WGT_AD * 100).ToString();
+                }
+                else
+                {
+                    oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_RATE_AD].Text = "0";
+                }
+
+                STLGRT_WGT_R = convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_COUNT_R].Text);
+                STLGRT_PASS_WGT_R = convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_COUNT_R].Text);
+
+                if (STLGRT_WGT_R > 0)
+                {
+                    oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_RATE_R].Text = (STLGRT_PASS_WGT_R / STLGRT_WGT_R * 100).ToString();
+                }
+                else
+                {
+                    oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_RATE_R].Text = "0";
+                }
+
+
+                STLGRT_WGT_X = convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_COUNT_X].Text);
+                STLGRT_PASS_WGT_X = convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_COUNT_X].Text);
+
+                if (STLGRT_WGT_X > 0)
+                {
+                    oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_RATE_X].Text = (STLGRT_PASS_WGT_X / STLGRT_WGT_X * 100).ToString();
+
+                }
+                else
+                {
+                    oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_RATE_X].Text = "0";
+                }
+
+                STLGRT_WGT_Q235 = convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_COUNT_Q235].Text);
+                STLGRT_PASS_WGT_Q235 = convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_COUNT_Q235].Text);
+
+
+                if (STLGRT_WGT_Q235 > 0)
+                {
+                    oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_RATE_Q235].Text = (STLGRT_PASS_WGT_Q235 / STLGRT_WGT_Q235 * 100).ToString();
+
+                }
+                else
+                {
+                    oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_RATE_Q235].Text = "0";
+                }
+
+                STLGRT_WGT_A36 = convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_COUNT_A36].Text);
+                STLGRT_PASS_WGT_A36 = convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_COUNT_A36].Text);
+
+                if (STLGRT_WGT_A36 > 0)
+                {
+                    oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_RATE_A36].Text = (STLGRT_PASS_WGT_A36 / STLGRT_WGT_A36 * 100).ToString();
+
+                }
+                else
+                {
+                    oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_RATE_A36].Text = "0";
+                }
+            }
+
+
+            iRow = oSpread.ActiveSheet.RowCount;
+            iRow = iRow - 1;
+
+
+            for (iCount = 1; iCount <= iRow; iCount++)
+            {
+                EMP1[n1] = convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_RATE_Q345].Text);
+                n1 = n1 + 1;
+
+                EMP2[n2] = convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_RATE_Q390].Text);
+                n2 = n2 + 1;
+
+                EMP3[n3] = convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_RATE_Q460].Text);
+                n3 = n3 + 1;
+
+                EMP4[n4] = convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_RATE_AD].Text);
+                n4 = n4 + 1;
+
+                EMP5[n5] = convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_RATE_R].Text);
+                n5 = n5 + 1;
+
+                EMP6[n6] = convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_RATE_X].Text);
+                n6 = n6 + 1;
+
+                EMP7[n7] = convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_RATE_Q235].Text);
+                n7 = n7 + 1;
+
+                EMP8[n8] = convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_RATE_A36].Text);
+                n8 = n8 + 1;
+
+            }
+
+            for (i = 0; i <= n1 - 2; i++)
+            {
+                for (j = 0; j <= n1 - 2 - i; j++)
+                {
+
+                    if (EMP1[j] < EMP1[j + 1])
+                    {
+
+                        temp1 = EMP1[j + 1];
+                        EMP1[j + 1] = EMP1[j];
+                        EMP1[j] = temp1;
+
+                    }
+
+                    if (EMP2[j] < EMP2[j + 1])
+                    {
+                        temp1 = EMP2[j + 1];
+                        EMP2[j + 1] = EMP2[j];
+                        EMP2[j] = temp1;
+                    }
+
+                    if (EMP3[j] < EMP3[j + 1])
+                    {
+                        temp1 = EMP3[j + 1];
+                        EMP3[j + 1] = EMP3[j];
+                        EMP3[j] = temp1;
+                    }
+
+                    if (EMP4[j] < EMP4[j + 1])
+                    {
+                        temp1 = EMP4[j + 1];
+                        EMP4[j + 1] = EMP4[j];
+                        EMP4[j] = temp1;
+                    }
+
+                    if (EMP5[j] < EMP5[j + 1])
+                    {
+                        temp1 = EMP5[j + 1];
+                        EMP5[j + 1] = EMP5[j];
+                        EMP5[j] = temp1;
+                    }
+
+                    if (EMP6[j] < EMP6[j + 1])
+                    {
+                        temp1 = EMP6[j + 1];
+                        EMP6[j + 1] = EMP6[j];
+                        EMP6[j] = temp1;
+                    }
+
+
+                    if (EMP7[j] < EMP7[j + 1])
+                    {
+                        temp1 = EMP7[j + 1];
+                        EMP7[j + 1] = EMP7[j];
+                        EMP7[j] = temp1;
+                    }
+
+
+                    if (EMP8[j] < EMP8[j + 1])
+                    {
+                        temp1 = EMP8[j + 1];
+                        EMP8[j + 1] = EMP8[j];
+                        EMP8[j] = temp1;
+                    }
+
+                }
+
+            }
+
+            for (iCount = 1; iCount <= iRow; iCount++)
+            {
+
+                MILL_PASS_RATE_Q345 = convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_RATE_Q345].Text);
+                MILL_PASS_RATE_Q390 = convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_RATE_Q390].Text);
+                MILL_PASS_RATE_Q460 = convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_RATE_Q460].Text);
+                MILL_PASS_RATE_AD = convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_RATE_AD].Text);
+                MILL_PASS_RATE_R = convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_RATE_R].Text);
+                MILL_PASS_RATE_X = convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_RATE_X].Text);
+                MILL_PASS_RATE_Q235 = convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_RATE_Q235].Text);
+                MILL_PASS_RATE_A36 = convertX(oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_PASS_RATE_A36].Text);
+
+                for (i = n1; i >= 0; i += -1)
+                {
+
+                    if (MILL_PASS_RATE_Q345 > 0 & MILL_PASS_RATE_Q345 == EMP1[i])
+                    {
+                        oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_RAKING_Q345].Text = (i + 1).ToString();
+                    }
+
+                    if (MILL_PASS_RATE_Q390 > 0 & MILL_PASS_RATE_Q390 == EMP2[i])
+                    {
+                        oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_RAKING_Q390].Text = (i + 1).ToString();
+
+                    }
+
+                    if (MILL_PASS_RATE_Q460 > 0 & MILL_PASS_RATE_Q460 == EMP3[i])
+                    {
+                        oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_RAKING_Q460].Text = (i + 1).ToString();
+
+                    }
+
+                    if (MILL_PASS_RATE_AD > 0 & MILL_PASS_RATE_AD == EMP4[i])
+                    {
+                        oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_RAKING_AD].Text = (i + 1).ToString();
+
+                    }
+
+                    if (MILL_PASS_RATE_R > 0 & MILL_PASS_RATE_R == EMP5[i])
+                    {
+                        oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_RAKING_R].Text = (i + 1).ToString();
+
+                    }
+
+                    if (MILL_PASS_RATE_X > 0 & MILL_PASS_RATE_X == EMP6[i])
+                    {
+                        oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_RAKING_X].Text = (i + 1).ToString();
+
+                    }
+
+                    if (MILL_PASS_RATE_Q235 > 0 & MILL_PASS_RATE_Q235 == EMP7[i])
+                    {
+                        oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_RAKING_Q235].Text = (i + 1).ToString();
+
+                    }
+
+                    if (MILL_PASS_RATE_A36 > 0 & MILL_PASS_RATE_A36 == EMP8[i])
+                    {
+                        oSpread.ActiveSheet.Cells[iCount - 1, SS3_MILL_RAKING_A36].Text = (i + 1).ToString();
+
+                    }
+
+                }
+
+
+
+            }
         }
 
 
@@ -834,7 +1252,7 @@ namespace CG
         {
             if (value != "")
             {
-                return Convert.ToDouble(value.Replace(",",""));
+                return Convert.ToDouble(value.Replace(",", ""));
             }
             return 0;
         }
@@ -846,8 +1264,8 @@ namespace CG
                 return Convert.ToInt32(value.Replace(",", ""));
             }
             return 0;
-        }    
-           
+        }
+
 
 
 
