@@ -59,6 +59,11 @@ namespace CG
         Collection Mc1 = new Collection();
         Collection Sc1 = new Collection();
 
+        MSWinsockLib.WinsockClass Winsock1 = new MSWinsockLib.WinsockClass();
+        MSWinsockLib.WinsockClass Winsock2 = new MSWinsockLib.WinsockClass();
+
+        List<CheckBox> chk_Cond = new List<CheckBox>();
+
         const int SPD_LINE1 = 0;
         const int SPD_LINE2 = 1;
         const int SPD_PLATE_NO = 2;
@@ -129,6 +134,16 @@ namespace CG
         //牌号三
         int PRODSPECNOC1;
 
+        public byte LoByte(short Word)
+        {
+            return (byte)(Word & 0xff);
+        }
+
+        public byte HiByte(short Word)
+        {
+            return (byte)(Word >> 8);
+        }
+
 
         protected override void p_SubFormInit()
         {
@@ -189,8 +204,8 @@ namespace CG
             p_SetSc("宽度上限", "N", "9,1", "L", "", "", "", iscseq, iheadrow, "R");//33
             p_SetSc("长度下限", "N", "9,1", "L", "", "", "", iscseq, iheadrow, "R");//34
             p_SetSc("长度上限", "N", "9,1", "L", "", "", "", iscseq, iheadrow, "R");//35
-            p_SetSc("交货期开始", "D", "", "L", "", "", "", iscseq, iheadrow, "M");//36
-            p_SetSc("交货期结束", "D", "", "L", "", "", "", iscseq, iheadrow, "M");//37
+            p_SetSc("交货期开始", "E", "8", "L", "", "", "", iscseq, iheadrow, "M");//36
+            p_SetSc("交货期结束", "E", "8", "L", "", "", "", iscseq, iheadrow, "M");//37
             p_SetSc("客户代码", "E", "20", "L", "", "", "", iscseq, iheadrow, "M");//38
             p_SetSc("目的库", "E", "20", "L", "", "", "", iscseq, iheadrow, "M");//39
             p_SetSc("子公司代码", "E", "10", "L", "", "", "", iscseq, iheadrow, "M");//40
@@ -222,30 +237,137 @@ namespace CG
 
         }
 
-        private void CGT2000C_Load(object sender, EventArgs e)
+        private void chk_Cond_Clk(int Index)
         {
-            base.sSvrPgmPkgName = "CGT2000NC";
+            string strState;
+            string strState2;
+
+            if (Index == 0)
+            {
+                if (chk_Cond[Index].Checked)
+                {
+                    Winsock1.Connect();
+                }
+                else
+                {
+                    Winsock1.Close();
+                    strState = "连接断线";
+                    tcpStatus.BackColor = Color.Red;
+                    chk_Cond[0].ForeColor = Color.Red;
+                    tcpMsg.Text = "标印机状态 : " + strState;
+                }
+            }
+
+            if (Index == 8)
+            {
+                if (chk_Cond[Index].Checked)
+                {
+                    Winsock2.Connect();
+                }
+                else
+                {
+                    Winsock2.Close();
+                    strState2 = "连接断线";
+                    tcpStatus2.BackColor = Color.Red;
+                    chk_Cond[Index].ForeColor = Color.Red;
+                    tcpMsg2.Text = "侧喷机状态 : " + strState2;
+                }
+            }
+
+        }
+
+
+
+        private void CGD2080C_Load(object sender, EventArgs e)
+        {
+            base.sSvrPgmPkgName = "CGD2080NC";
             Form_Define();
 
-            udt_date_fr.RawDate = Gf_DTSet("D", "");
-            udt_date_to.RawDate = Gf_DTSet("D", "");
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_PAINT, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_LABEL, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_LOTCD, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_LINE2, true);
+            txt_plt.Text = "C3";
 
-            SSPpdt.BackColor = Color.Fuchsia;
-
+            txt_line.Text = "1";
+            txt_rec_sts.Text = "1";
+            
+            opt_line1.Checked = true;
+            opt_line3.Checked = true;
         }
 
         public override void Form_Pro()
         {
-            p_pro(1, 1, false, true);
+            int iRow;
+
+            string sMark_no;
+            string sPlate_no;
+            string sThk;
+            string sWid;
+            string sLen;
+            string sWgt;
+            string sSpec;
+            string sStdspec_YY;
+
+            if (txt_rec_sts.Text == "1")
+            {
+                p_Pro(1, 1, true, false);
+            }
+
+            for (iRow = 1; iRow <= ss1.ActiveSheet.RowCount; iRow++)
+            {
+                if (ss1.ActiveSheet.RowHeader.Cells[iRow - 1, 0].Text == "修改" || ss1.ActiveSheet.RowHeader.Cells[iRow - 1, 0].Text == "增加" | ss1.ActiveSheet.RowHeader.Cells[iRow - 1, 0].Text == "删除")
+                {
+                    sPlate_no = ss1.ActiveSheet.Cells[iRow - 1, SPD_PLATE_NO].Text;
+                    if (opt_line5.Checked)
+                    {
+                        sMark_no = ss1.ActiveSheet.Cells[iRow - 1, SPD_PLATE_NO].Text;
+                    }
+                    else
+                    {
+                        sMark_no = ss1.ActiveSheet.Cells[iRow - 1, SPD_LOT_NO].Text;
+                    }
+                    sThk = ss1.ActiveSheet.Cells[iRow-1, SPD_THK].Text.Trim();
+                    sWid = ss1.ActiveSheet.Cells[iRow - 1, SPD_WID].Text.Trim();
+                    sLen = ss1.ActiveSheet.Cells[iRow - 1, SPD_LEN].Text.Trim();
+                    sWgt = ss1.ActiveSheet.Cells[iRow - 1, SPD_WGT].Text.Trim();
+                    if (substr(sWgt, 0, 1) == ".")
+                    {
+                        sWgt = "0" + sWgt;
+                    }
+                    sStdspec_YY = ss1.ActiveSheet.Cells[iRow - 1, SPD_STDSPEC_YY].Text;
+                    sSpec = ss1.ActiveSheet.Cells[iRow - 1, SPD_STLGRD].Text;
+                    if ((chk_Cond[0].Checked || chk_Cond[8].Checked) & ss1.ActiveSheet.RowHeader.Cells[iRow-1,0].Text!= "删除")
+                    {
+                        Cmd_SEND(sMark_no, sThk, sWid, sLen, sWgt, sSpec, sStdspec_YY, sPlate_no);
+                    }
+                    break; // TODO: might not be correct. Was : Exit For
+                }
+            }
+
+            Form_Ref();
+
+            iRow = iRow + 10;
+            if (iRow > ss1.ActiveSheet.RowCount)
+            {
+                iRow = ss1.ActiveSheet.RowCount;
+            }
+            ss1.ActiveSheet.SetActiveCell(iRow - 1, SPD_LEN);
         }
 
         public override bool Form_Cls()
         {
             base.Form_Cls();
 
-            //激活下事件
-            OPT_CH.Checked = false;
-            OPT_CH.Checked = true;
+            txt_plt.Text = "C3";
+
+            txt_line.Text = "1";
+            txt_rec_sts.Text = "1";
+
+            opt_line1.Checked = true;
+            opt_line3.Checked = true;
+
+            txt_stdspec_chg.Text = "";
 
             return true;
 
@@ -254,93 +376,159 @@ namespace CG
         public override void Form_Ref()
         {
             int iCount;
-            double dMillCal_Wgt;
-
-            string dReheat_I_date;
-            string dReheat_O_date;
-
-            string dReheat_Ir_date = "";
-            string dReheat_Or_date = "";
-
-            string dReheat_I_dur;
-            string dReheat_O_dur;
-
+            int iCol;
+            string sCurDate;
+            string sDel_To_Date;
+            string sPlateNo;
+            string sUrgnt_Fl;
             string simpcont;
 
+            //    If Gf_Sp_ProceExist(sc1.Item("Spread")) Then Exit Sub
+
+            sCurDate = DateTime.Now.ToString("yyyyMM");
 
             p_Ref(1, 1, true, true);
 
-            SDB_WGT.Text = "0";
-            if (ss1.ActiveSheet.RowCount == 0)
-            {
-                SDB_WGT.Text = "0";
-            }
-            if (ss1.ActiveSheet.RowCount <= 0)
-            {
-                return;
-            }
-
-            for (iCount = 1; iCount <= ss1.ActiveSheet.RowCount; iCount++)
-            {
-
-                dReheat_I_date = ss1.ActiveSheet.Cells[iCount - 1, SS1_CHARGE_DATE].Text;
-
-                if (dReheat_I_date == "" || dReheat_Ir_date == "")
+                for (iCount = 1; iCount <= ss1.ActiveSheet.RowCount; iCount++)
                 {
-                    dReheat_I_dur = "";
-                }
-                else
-                {
-                    dReheat_I_dur = Convert.ToString(Math.Round((Convert.ToDateTime(dReheat_I_date) - Convert.ToDateTime(dReheat_Ir_date)).TotalMinutes, 1));
-                }
-
-                dReheat_Ir_date = dReheat_I_date;
-
-                dReheat_O_date = ss1.ActiveSheet.Cells[iCount - 1, SS1_DISCHARGE_DATE].Text;
-
-                if (dReheat_O_date == "" | dReheat_Or_date == "")
-                {
-                    dReheat_O_dur = "";
-                }
-                else
-                {
-                    dReheat_O_dur = Convert.ToString(Math.Round(((Convert.ToDateTime(dReheat_O_date) - Convert.ToDateTime(dReheat_Or_date)).TotalMinutes), 1));
-                }
-
-                dReheat_Or_date = dReheat_O_date;
-
-                ss1.ActiveSheet.Cells[iCount - 1, SS1_DELAY_DATE].Text = dReheat_O_dur;
-                SDB_WGT.Text = (convertX(SDB_WGT.Text) + convertX(ss1.ActiveSheet.Cells[iCount - 1, SS1_SLAB_WGT].Text)).ToString();
-                if (ss1.ActiveSheet.Cells[iCount - 1, SS1_CUST_CD].Text.Length == 2)
-                {
-                   Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, iCount - 1, iCount - 1, Color.Black, SSPpdt.BackColor);
-
-                }
-
-                if (OPT_REJECT.Checked)
-                {
-                    if (Convert.ToDateTime(dReheat_I_date) > Convert.ToDateTime(dReheat_O_date))
+                    sPlateNo = ss1.ActiveSheet.Cells[iCount - 1, SPD_PLATE_NO].Text;
+                    if (substr(ss1.ActiveSheet.Cells[iCount - 1, SPD_PLATE_NO].Text, 0, 12) == substr(sPlateNo, 0,12))
                     {
-                        Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, iCount - 1, iCount - 1, Color.Black, Color.Yellow);
+                    }
+                    else
+                    {
+                        ss1.ActiveSheet.Cells[iCount - 2, SPD_LAST_YN].Text = "True";
+                    }
+                    sDel_To_Date = substr(ss1.ActiveSheet.Cells[iCount-1,SPD_DEL_TO_DATE].Text,0,6) ;
+                    if (convertX(sDel_To_Date) < convertX(sCurDate))
+                    {
+                        Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount-1, iCount-1, iCount-1, Color.Red,Color.White);
+                    }
+                    //紧急订单绿色显示 add by liqian 2012-08-16
+                    sUrgnt_Fl = ss1.ActiveSheet.Cells[iCount - 1, SPD_URGNT_FL].Text.Trim();
+                    if (sUrgnt_Fl == "Y")
+                    {
+                        Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount-1, iCount-1, iCount-1, Color.DarkGreen,Color.White);
+                    }
+
+                    simpcont = ss1.ActiveSheet.Cells[iCount - 1, SPD_IMP_CONT].Text.Trim();
+                    if (simpcont == "Y")
+                    {
+                        Gp_Sp_BlockColor(ss1, SPD_PLATE_NO, SPD_PLATE_NO, iCount-1, iCount-1, SSP4.BackColor,Color.White);
+                        Gp_Sp_BlockColor(ss1, SPD_IMP_CONT, SPD_IMP_CONT, iCount-1, iCount-1, SSP4.BackColor,Color.White);
+                    }
+                }
+        }
+
+        public override void Spread_Ins()
+        {
+            double dThk =0;
+            double dWid = 0;
+            double dLen = 0;
+            double dWgt = 0;
+            int lRow = -1;
+            string sPlateNo = "";
+            string sLotNo = "";
+            string sCutNo = "";
+            string sClipText = "";
+
+            string sSize_knd = "";
+            string sTrim_fl = "";
+            string sAply_stdspec = "";
+            string sEmp_cd = "";
+            string sStdspec_YY = "";
+            string sStdspec = "";
+            int iCount =0;
+
+            sPlateNo = "";
+
+                if (ss1.ActiveSheet.RowCount <= 0)
+                {
+                    if (txt_plate_no.Text.Length == 12)
+                    {
+                        base.Spread_Ins();
+                        ss1.ActiveSheet.Cells[0, SPD_PLATE_NO].Text = txt_plate_no.Text + "01";
+                        ss1.ActiveSheet.Cells[0, SPD_THK].Text = "0";
+                        ss1.ActiveSheet.Cells[0, SPD_WID].Text = "0";
+                        ss1.ActiveSheet.Cells[0, SPD_LEN].Text = "0";
+                        ss1.ActiveSheet.Cells[0, SPD_APLY_STDSPEC].Text = "GB-XXX";
+                    }
+                    else
+                    {
+                        GeneralCommon.Gp_MsgBoxDisplay("请正确输入母板号 ！", "I", "提示");
+                    }
+                    return;
+                }
+                for (iCount = ss1.ActiveSheet.ActiveRowIndex ; iCount < ss1.ActiveSheet.RowCount; iCount++)
+                {
+                    if (substr(ss1.ActiveSheet.Cells[iCount, SPD_PLATE_NO].Text, 0,12) == substr(sPlateNo,0,12) || sPlateNo == "")
+                    {
+                        sPlateNo = ss1.ActiveSheet.Cells[iCount, SPD_PLATE_NO].Text;
+                        lRow = iCount;
+                    }
+                    else
+                    {
+                        break; // TODO: might not be correct. Was : Exit For
                     }
                 }
 
-                //紧急订单绿色标记 2012-08-16  by  LiQian
-                if (ss1.ActiveSheet.Cells[iCount - 1, SS1_URGNT_FL].Text == "Y")
-                {
-                    Gp_Sp_BlockColor(ss1, SS1_SLAB_NO, SS1_SLAB_NO, iCount - 1, iCount - 1, Color.Green, Color.White);
-                    Gp_Sp_BlockColor(ss1, SS1_ORD_NO, SS1_ORD_NO, iCount - 1, iCount - 1, Color.Green, Color.White);
-                    Gp_Sp_BlockColor(ss1, SS1_URGNT_FL, SS1_URGNT_FL, iCount - 1, iCount - 1, Color.Green, Color.White);
-                }
+            sPlateNo = "";
 
-
-                simpcont = ss1.ActiveSheet.Cells[iCount - 1, SS1_IMP_CONT].Text.Trim();
-                if (simpcont == "Y")
-                {
-                    Gp_Sp_BlockColor(ss1, SS1_SLAB_NO, SS1_SLAB_NO, iCount - 1, iCount - 1, SSP4.BackColor, Color.White);
-                    Gp_Sp_BlockColor(ss1, SS1_IMP_CONT, SS1_IMP_CONT, iCount - 1, iCount - 1, SSP4.BackColor, Color.White);
-                }
+            if (lRow >= 0)
+            {
+                ss1.ActiveSheet.SetActiveCell(lRow, 0);
             }
+
+            base.Spread_Ins();
+
+                if (lRow >= 0)
+                {
+                    sPlateNo = ss1.ActiveSheet.Cells[lRow, SPD_PLATE_NO].Text;
+                    sLotNo = ss1.ActiveSheet.Cells[lRow, SPD_LOT_NO].Text;
+                    sCutNo = ss1.ActiveSheet.Cells[lRow, SPD_CUT_NO].Text;
+                    dThk = convertX(ss1.ActiveSheet.Cells[lRow, SPD_THK].Text);
+                    //Val(.Text & "")
+                    dWid = convertX(ss1.ActiveSheet.Cells[lRow, SPD_WID].Text);
+                    //Val(.Text & "")
+                    dLen = convertX(ss1.ActiveSheet.Cells[lRow, SPD_LEN].Text);
+                    //Val(.Text & "")
+                    dWgt = convertX(ss1.ActiveSheet.Cells[lRow, SPD_WGT].Text);
+                    //Val(.Text & "")
+                    sSize_knd = ss1.ActiveSheet.Cells[lRow, SPD_SIZE_KND].Text;
+                    sTrim_fl = ss1.ActiveSheet.Cells[lRow, SPD_TRIM_FL].Text;
+                    sAply_stdspec = ss1.ActiveSheet.Cells[lRow, SPD_APLY_STDSPEC].Text;
+                    sStdspec_YY = ss1.ActiveSheet.Cells[lRow, SPD_STDSPEC_YY].Text;
+                    sEmp_cd = ss1.ActiveSheet.Cells[lRow, SPD_EMP_CD].Text;
+                    sStdspec = ss1.ActiveSheet.Cells[lRow, SPD_STLGRD].Text;
+                }
+                else
+                {
+                    sPlateNo = txt_plate_no.Text + "00";
+                }
+
+                ss1.ActiveSheet.Cells[lRow + 1, SPD_PLATE_NO].Text = sPlateNo;
+                ss1.ActiveSheet.Cells[lRow + 1, SPD_LOT_NO].Text = sLotNo;
+                ss1.ActiveSheet.Cells[lRow + 1, SPD_CUT_NO].Text = sCutNo;
+                ss1.ActiveSheet.Cells[lRow + 1, SPD_THK].Text = dThk.ToString();
+                ss1.ActiveSheet.Cells[lRow + 1, SPD_WID].Text = dWid.ToString();
+                ss1.ActiveSheet.Cells[lRow + 1, SPD_LEN].Text = dLen.ToString();
+                ss1.ActiveSheet.Cells[lRow + 1, SPD_WGT].Text = dWgt.ToString();
+                ss1.ActiveSheet.Cells[lRow + 1, SPD_SIZE_KND].Text = sSize_knd;
+                ss1.ActiveSheet.Cells[lRow + 1, SPD_TRIM_FL].Text = sTrim_fl;
+                ss1.ActiveSheet.Cells[lRow + 1, SPD_APLY_STDSPEC].Text = sAply_stdspec;
+                ss1.ActiveSheet.Cells[lRow + 1, SPD_EMP_CD].Text = sEmp_cd;
+                ss1.ActiveSheet.Cells[lRow + 1, SPD_STDSPEC_YY].Text = sStdspec_YY;
+                ss1.ActiveSheet.Cells[lRow + 1, SPD_STLGRD].Text = sStdspec;
+                ss1.ActiveSheet.RowHeader.Cells[lRow + 1, 0].Text = "增加";
+                ss1.ActiveSheet.Cells[lRow + 1, SPD_PLATE_NO].Text = substr(ss1.ActiveSheet.Cells[lRow + 1, SPD_PLATE_NO].Text, 0, 12) + String.Format("{0:D2}", (convertI(substr(ss1.ActiveSheet.Cells[lRow + 1, SPD_PLATE_NO].Text, 12, 2)) + 1));
+                ss1.ActiveSheet.Cells[lRow + 1, SPD_SURF_GRD].Text = "True";
+                ss1.ActiveSheet.Cells[lRow + 1, SPD_MARK_YN].Text = "True";
+                ss1.ActiveSheet.Cells[lRow + 1, SPD_STAMP_YN].Text = "True";
+                ss1.ActiveSheet.Cells[lRow + 1, SPD_BAR_YN].Text = "True";
+                //        .Col = SPD_LINE1:         .Value = 1
+                ss1.ActiveSheet.RowHeader.Cells[lRow + 1, 0].Text = "增加";
+
+                ss1.ActiveSheet.SetActiveCell(lRow + 1, 0);
         }
 
         # region 公共方法
@@ -656,6 +844,15 @@ namespace CG
             return 0;
         }
 
+        public int convertI(string value)
+        {
+            if (value != "")
+            {
+                return Convert.ToInt32(value);
+            }
+            return 0;
+        }
+
         //重写了框架的颜色方法，原来的框架在解锁方面有点问题，不方便在框架直接修改，所以重新写了一个
         public void Gp_Sp_BlockColor(FpSpread oSpread, int iCol1, int iCol2, int iRow1, int iRow2, Color fColor, Color bColor)
         {
@@ -684,117 +881,6 @@ namespace CG
 
         #endregion
 
-        private void OPT_CH_CheckedChanged(object sender, EventArgs e)
-        {
-            if (OPT_CH.Checked)
-            {
-                OPT_CH.ForeColor = Color.Red;
-                OPT_DISCH.ForeColor = Color.Black;
-                OPT_REJECT.ForeColor = Color.Black;
-
-                int iRow;
-                string sTemp;
-
-                base.Form_Cls();
-
-                TXT_CH_CD.Text = "C";
-
-                SpreadCommon.Gp_Sp_ColHidden(ss1, SS1_RHF_CH_ROW, false);
-                SpreadCommon.Gp_Sp_ColHidden(ss1, SS1_MILL_STLGRD, false);
-                SpreadCommon.Gp_Sp_ColHidden(ss1, SS1_DISCHARGE_DATE, false);
-                SpreadCommon.Gp_Sp_ColHidden(ss1, SS1_DELAY_DATE, true);
-                SpreadCommon.Gp_Sp_ColHidden(ss1, SS1_ZAILU_DATE, false);
-                SpreadCommon.Gp_Sp_ColHidden(ss1, SS1_CHARGE_TEMP, false);
-                SpreadCommon.Gp_Sp_ColHidden(ss1, SS1_EXT_TEMP, false);
-                SpreadCommon.Gp_Sp_ColHidden(ss1, SS1_ORD_FL, true);
-                SpreadCommon.Gp_Sp_ColHidden(ss1, SS1_APLY_STDSPEC, true);
-                //隐藏标准号
-
-                ss1.ActiveSheet.ColumnHeader.Cells[0, SS1_CHARGE_DATE].Text = "装炉时间";
-                ULabel5.Text = "装炉时间";
-
-                ss1.ActiveSheet.ColumnHeader.Cells[0, SS1_DISCHARGE_DATE].Text = "出炉时间";
-            }
-            else
-            {
-                OPT_CH.ForeColor = Color.Black;
-            }
-
-        }
-
-        private void OPT_DISCH_CheckedChanged(object sender, EventArgs e)
-        {
-            if (OPT_DISCH.Checked)
-            {
-                OPT_DISCH.ForeColor = Color.Red;
-                OPT_CH.ForeColor = Color.Black;
-                OPT_REJECT.ForeColor = Color.Black;
-
-                int iRow;
-                string sTemp;
-
-                base.Form_Cls();
-
-                TXT_CH_CD.Text = "D";
-
-                SpreadCommon.Gp_Sp_ColHidden(ss1, SS1_RHF_CH_ROW, false);
-                SpreadCommon.Gp_Sp_ColHidden(ss1, SS1_SLAB_STLGRD, false);
-                SpreadCommon.Gp_Sp_ColHidden(ss1, SS1_DISCHARGE_DATE, false);
-                SpreadCommon.Gp_Sp_ColHidden(ss1, SS1_DELAY_DATE, true);
-                SpreadCommon.Gp_Sp_ColHidden(ss1, SS1_ZAILU_DATE, false);
-                SpreadCommon.Gp_Sp_ColHidden(ss1, SS1_CHARGE_TEMP, false);
-                SpreadCommon.Gp_Sp_ColHidden(ss1, SS1_EXT_TEMP, false);
-                SpreadCommon.Gp_Sp_ColHidden(ss1, SS1_ORD_FL, true);
-                SpreadCommon.Gp_Sp_ColHidden(ss1, SS1_APLY_STDSPEC, false);
-                //隐藏标准号
-
-                ss1.ActiveSheet.ColumnHeader.Cells[0, SS1_CHARGE_DATE].Text = "装炉时间";
-                ULabel5.Text = "出炉时间";
-
-            }
-            else
-            {
-                OPT_DISCH.ForeColor = Color.Black;
-            }
-
-        }
-
-        private void OPT_REJECT_CheckedChanged(object sender, EventArgs e)
-        {
-            if (OPT_REJECT.Checked)
-            {
-                OPT_REJECT.ForeColor = Color.Red;
-                OPT_CH.ForeColor = Color.Black;
-                OPT_DISCH.ForeColor = Color.Black;
-
-                int iRow;
-                string sTemp;
-
-                base.Form_Cls();
-
-                TXT_CH_CD.Text = "R";
-
-                SpreadCommon.Gp_Sp_ColHidden(ss1, SS1_RHF_CH_ROW, true);
-                SpreadCommon.Gp_Sp_ColHidden(ss1, SS1_SLAB_STLGRD, true);
-                SpreadCommon.Gp_Sp_ColHidden(ss1, SS1_DELAY_DATE, true);
-                SpreadCommon.Gp_Sp_ColHidden(ss1, SS1_ZAILU_DATE, true);
-                SpreadCommon.Gp_Sp_ColHidden(ss1, SS1_CHARGE_TEMP, true);
-                SpreadCommon.Gp_Sp_ColHidden(ss1, SS1_EXT_TEMP, true);
-                SpreadCommon.Gp_Sp_ColHidden(ss1, SS1_ORD_FL, false);
-                SpreadCommon.Gp_Sp_ColHidden(ss1, SS1_APLY_STDSPEC, true);
-                //隐藏标准号
-
-                ss1.ActiveSheet.ColumnHeader.Cells[0, SS1_CHARGE_DATE].Text = "缺号发生时间";
-                ULabel5.Text = "缺号时间";
-
-                ss1.ActiveSheet.ColumnHeader.Cells[0, SS1_DISCHARGE_DATE].Text = "最后装炉时间";
-            }
-            else
-            {
-                OPT_REJECT.ForeColor = Color.Black;
-            }
-
-        }
 
     }
 }
