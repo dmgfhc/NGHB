@@ -269,3 +269,4 @@ C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGH2020C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGH2030C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGT2200C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGT2090C.resources
+C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGD2080C.resources
