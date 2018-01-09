@@ -271,3 +271,4 @@ C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGT2200C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGT2090C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGD2080C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\Interop.MSWinsockLib.dll
+C:\Users\HAN\Desktop\github\NGHB\CG\bin\Debug\Interop.MSWinsockLib.dll

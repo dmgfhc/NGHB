@@ -149,7 +149,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAC2
-        GwAAAk1TRnQBSQFMAgEBDAEAAfwBBwH8AQcBKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        GwAAAk1TRnQBSQFMAgEBDAEAAQQBCAEEAQgBKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABoAMAAXgDAAEBAQABCAYAAUsYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -353,6 +353,9 @@
   </data>
   <data name="menuItem9.Text" xml:space="preserve">
     <value>轧钢作业实绩管理</value>
+  </data>
+  <data name="CGD2080C.Text" xml:space="preserve">
+    <value>标识（标印、标签）打印信息发送界面_CGD2080C</value>
   </data>
   <data name="CGD2050C.Text" xml:space="preserve">
     <value>表面检查实绩查询及修改界面_CGD2050C</value>
@@ -797,7 +800,7 @@
     <value>NoControl</value>
   </data>
   <data name="StatusBar1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 479</value>
+    <value>0, 459</value>
   </data>
   <data name="StatusBarPanel1.Name" xml:space="preserve">
     <value>StatusBarPanel1</value>
@@ -1064,7 +1067,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAC2
-        GwAAAk1TRnQBSQFMAgEBDAEAAfwBBwH8AQcBKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        GwAAAk1TRnQBSQFMAgEBDAEAAQQBCAEEAQgBKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABoAMAAXgDAAEBAQABCAYAAUsYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -1193,7 +1196,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABi
-        GwAAAk1TRnQBSQFMAgEBDAEAAfwBBwH8AQcBKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        GwAAAk1TRnQBSQFMAgEBDAEAAQQBCAEEAQgBKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABoAMAAXgDAAEBAQABCAYAAUsYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -1319,7 +1322,7 @@
     <value>75</value>
   </metadata>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1024, 501</value>
+    <value>1024, 481</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>宋体, 9.75pt</value>
@@ -2244,6 +2247,12 @@
   <data name="&gt;&gt;menuItem30.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;CGT2090C.Name" xml:space="preserve">
+    <value>CGT2090C</value>
+  </data>
+  <data name="&gt;&gt;CGT2090C.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;Mnu_Control.Name" xml:space="preserve">
     <value>Mnu_Control</value>
   </data>
@@ -2670,10 +2679,10 @@
   <data name="&gt;&gt;ImageList1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;CGT2090C.Name" xml:space="preserve">
-    <value>CGT2090C</value>
+  <data name="&gt;&gt;CGD2080C.Name" xml:space="preserve">
+    <value>CGD2080C</value>
   </data>
-  <data name="&gt;&gt;CGT2090C.Type" xml:space="preserve">
+  <data name="&gt;&gt;CGD2080C.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

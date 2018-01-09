@@ -118,6 +118,7 @@
             this.ss1 = new FarPoint.Win.Spread.FpSpread();
             this.fpSpread1_Sheet1 = new FarPoint.Win.Spread.SheetView();
             this.Timer1 = new System.Windows.Forms.Timer(this.components);
+            this.TXT_CUT_TIME = new CommonClass.CeriUDate();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -366,6 +367,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox2.Controls.Add(this.TXT_CUT_TIME);
             this.groupBox2.Controls.Add(this.TXT_SPEC_DATE);
             this.groupBox2.Controls.Add(this.TXT_SPEC);
             this.groupBox2.Controls.Add(this.TXT_VESSEL_NO);
@@ -753,6 +755,7 @@
             // 
             // panel5
             // 
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.tcpMsg2);
             this.panel5.Controls.Add(this.tcpMsg);
             this.panel5.Controls.Add(this.tcpStatus2);
@@ -822,6 +825,7 @@
             // 
             // panel4
             // 
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.chk_Cond4);
             this.panel4.Controls.Add(this.chk_Cond3);
             this.panel4.Controls.Add(this.chk_Cond2);
@@ -862,6 +866,7 @@
             // 
             // panel3
             // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.opt_line6);
             this.panel3.Controls.Add(this.opt_line5);
             this.panel3.Location = new System.Drawing.Point(499, 16);
@@ -879,6 +884,7 @@
             this.opt_line6.TabStop = true;
             this.opt_line6.Text = "轧批号";
             this.opt_line6.UseVisualStyleBackColor = true;
+            this.opt_line6.Click += new System.EventHandler(this.opt_line6_Click);
             // 
             // opt_line5
             // 
@@ -890,6 +896,7 @@
             this.opt_line5.TabStop = true;
             this.opt_line5.Text = "钢板号";
             this.opt_line5.UseVisualStyleBackColor = true;
+            this.opt_line5.Click += new System.EventHandler(this.opt_line5_Click);
             // 
             // label10
             // 
@@ -913,6 +920,7 @@
             // 
             // panel2
             // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.opt_line4);
             this.panel2.Controls.Add(this.opt_line3);
             this.panel2.Location = new System.Drawing.Point(124, 48);
@@ -930,6 +938,7 @@
             this.opt_line4.TabStop = true;
             this.opt_line4.Text = "实绩";
             this.opt_line4.UseVisualStyleBackColor = true;
+            this.opt_line4.Click += new System.EventHandler(this.opt_line4_Click);
             // 
             // opt_line3
             // 
@@ -941,6 +950,7 @@
             this.opt_line3.TabStop = true;
             this.opt_line3.Text = "计划";
             this.opt_line3.UseVisualStyleBackColor = true;
+            this.opt_line3.Click += new System.EventHandler(this.opt_line3_Click);
             // 
             // label9
             // 
@@ -955,6 +965,7 @@
             // 
             // panel1
             // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.opt_line2);
             this.panel1.Controls.Add(this.opt_line1);
             this.panel1.Location = new System.Drawing.Point(123, 18);
@@ -972,6 +983,7 @@
             this.opt_line2.TabStop = true;
             this.opt_line2.Text = "#2";
             this.opt_line2.UseVisualStyleBackColor = true;
+            this.opt_line2.Click += new System.EventHandler(this.opt_line2_Click);
             // 
             // opt_line1
             // 
@@ -983,6 +995,7 @@
             this.opt_line1.TabStop = true;
             this.opt_line1.Text = "#1";
             this.opt_line1.UseVisualStyleBackColor = true;
+            this.opt_line1.Click += new System.EventHandler(this.opt_line1_Click);
             // 
             // label6
             // 
@@ -1005,11 +1018,26 @@
             this.fpSpread1_Sheet1});
             this.ss1.Size = new System.Drawing.Size(1239, 282);
             this.ss1.TabIndex = 2;
+            this.ss1.CellClick += new FarPoint.Win.Spread.CellClickEventHandler(this.ss1_CellClick);
+            this.ss1.ButtonClicked += new FarPoint.Win.Spread.EditorNotifyEventHandler(this.ss1_ButtonClicked);
             // 
             // fpSpread1_Sheet1
             // 
             this.fpSpread1_Sheet1.Reset();
             this.fpSpread1_Sheet1.SheetName = "Sheet1";
+            // 
+            // TXT_CUT_TIME
+            // 
+            this.TXT_CUT_TIME.Font = new System.Drawing.Font("宋体", 9.75F);
+            this.TXT_CUT_TIME.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.TXT_CUT_TIME.Location = new System.Drawing.Point(679, 17);
+            this.TXT_CUT_TIME.Margin = new System.Windows.Forms.Padding(4);
+            this.TXT_CUT_TIME.Name = "TXT_CUT_TIME";
+            this.TXT_CUT_TIME.RawDate = "";
+            this.TXT_CUT_TIME.Size = new System.Drawing.Size(62, 21);
+            this.TXT_CUT_TIME.TabIndex = 790;
+            this.TXT_CUT_TIME.Tag = "开始时间";
+            this.TXT_CUT_TIME.Visible = false;
             // 
             // CGD2080C
             // 
@@ -1126,5 +1154,6 @@
         private System.Windows.Forms.Timer Timer1;
         private System.Windows.Forms.TextBox TXT_SPEC_DATE;
         private System.Windows.Forms.TextBox TXT_SPEC;
+        public CommonClass.CeriUDate TXT_CUT_TIME;
     }
 }

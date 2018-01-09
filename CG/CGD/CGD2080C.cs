@@ -294,6 +294,15 @@ namespace CG
             
             opt_line1.Checked = true;
             opt_line3.Checked = true;
+
+            TXT_ORD_REMARK.Width = 598;
+            TXT_ORD_REMARK.Height = 48;
+
+            chk_Cond.Add(chk_Cond0);
+            chk_Cond.Add(chk_Cond1);
+            chk_Cond.Add(chk_Cond2);
+            chk_Cond.Add(chk_Cond3); 
+            chk_Cond.Add(chk_Cond4);
         }
 
         public override void Form_Pro()
@@ -339,7 +348,7 @@ namespace CG
                     sSpec = ss1.ActiveSheet.Cells[iRow - 1, SPD_STLGRD].Text;
                     if ((chk_Cond[0].Checked || chk_Cond[8].Checked) & ss1.ActiveSheet.RowHeader.Cells[iRow-1,0].Text!= "删除")
                     {
-                        Cmd_SEND(sMark_no, sThk, sWid, sLen, sWgt, sSpec, sStdspec_YY, sPlate_no);
+                        //Cmd_SEND(sMark_no, sThk, sWid, sLen, sWgt, sSpec, sStdspec_YY, sPlate_no);
                     }
                     break; // TODO: might not be correct. Was : Exit For
                 }
@@ -529,6 +538,90 @@ namespace CG
                 ss1.ActiveSheet.RowHeader.Cells[lRow + 1, 0].Text = "增加";
 
                 ss1.ActiveSheet.SetActiveCell(lRow + 1, 0);
+        }
+
+
+        private void opt_line1_Click(object sender, EventArgs e)
+        {
+
+            if (opt_line1.Checked)
+            {
+                opt_line1.ForeColor = Color.Red;
+                opt_line2.ForeColor = Color.Black;
+                txt_line.Text = "1";
+                if (ss1.ActiveSheet.RowCount > 0) Form_Ref();
+                SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_LINE1, false);
+                SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_LINE2, true);
+                //        Winsock1.RemoteHost = "172.18.43.98" 'Gf_ComnNameFind(M_CN1, "G0034", "01", 1)
+                //        Winsock1.RemotePort = "2121" 'Gf_ComnNameFind(M_CN1, "G0034", "01", 2)
+                //        Winsock2.RemoteHost = "172.18.43.98" 'Gf_ComnNameFind(M_CN1, "G0034", "01", 1)
+                //        Winsock2.RemotePort = "25298" 'Gf_ComnNameFind(M_CN1, "G0034", "01", 2)
+                Winsock1.RemoteHost =GeneralCommon.Gf_ComnNameFind(GeneralCommon.M_CN1, "G0034", "01", 1);
+                Winsock1.RemotePort = convertI(GeneralCommon.Gf_ComnNameFind(GeneralCommon.M_CN1, "G0034", "01", 2));
+                Winsock2.RemoteHost = GeneralCommon.Gf_ComnNameFind(GeneralCommon.M_CN1, "G0040", "01", 1);
+                Winsock2.RemotePort = convertI(GeneralCommon.Gf_ComnNameFind(GeneralCommon.M_CN1, "G0040", "01", 2));
+            }
+
+        }
+
+
+        private void opt_line2_Click(object sender, EventArgs e)
+        {
+            if (opt_line2.Checked)
+            {
+                opt_line2.ForeColor = Color.Red;
+                opt_line1.ForeColor = Color.Black;
+                txt_line.Text = "2";
+                if (ss1.ActiveSheet.RowCount > 0) Form_Ref();
+                SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_LINE2, false);
+                SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_LINE1, true);
+                Winsock1.RemoteHost = GeneralCommon.Gf_ComnNameFind(GeneralCommon.M_CN1, "G0034", "02", 1);
+                Winsock1.RemotePort = convertI(GeneralCommon.Gf_ComnNameFind(GeneralCommon.M_CN1, "G0034", "02", 2));
+                Winsock2.RemoteHost = GeneralCommon.Gf_ComnNameFind(GeneralCommon.M_CN1, "G0040", "02", 1);
+                Winsock2.RemotePort = convertI(GeneralCommon.Gf_ComnNameFind(GeneralCommon.M_CN1, "G0040", "02", 2));
+            }
+
+        }
+
+        private void opt_line3_Click(object sender, EventArgs e)
+        {
+            if (opt_line3.Checked)
+            {
+                opt_line3.ForeColor = Color.Red;
+                opt_line4.ForeColor = Color.Black;
+                txt_rec_sts.Text = "1";
+            }
+        }
+
+        private void opt_line4_Click(object sender, EventArgs e)
+        {
+            if (opt_line4.Checked)
+            {
+                opt_line4.ForeColor = Color.Red;
+                opt_line3.ForeColor = Color.Black;
+                txt_rec_sts.Text = "2";
+            }
+        }
+
+        private void opt_line5_Click(object sender, EventArgs e)
+        {
+            if (opt_line5.Checked)
+            {
+                opt_line5.ForeColor = Color.Red;
+                opt_line6.ForeColor = Color.Black;
+            }
+
+        }
+
+
+        private void opt_line6_Click(object sender, EventArgs e)
+        {
+            if (opt_line6.Checked)
+            {
+                opt_line6.ForeColor = Color.Red;
+                opt_line5.ForeColor = Color.Black;
+            }
+
         }
 
         # region 公共方法
@@ -880,6 +973,170 @@ namespace CG
         }
 
         #endregion
+
+        private void ss1_ButtonClicked(object sender, EditorNotifyEventArgs e)
+        {
+            string sCheck1;
+            string sCheck2;
+
+            int iCol;
+            int iRow;
+            int iMode;
+
+            int iRowNum;
+            int iRowfr;
+            int iRowto;
+
+            iCol = e.Column;
+            iRow = e.Row;
+
+            if (ss1.ActiveSheet.RowCount <= 0) return;
+            if (e.Column != SPD_LINE1 & e.Column != SPD_LINE2) return;
+            if (!GeneralCommon.Gf_Sc_Authority(sAuthority, "U")) return;
+
+            iRowto = iRow - 1;
+            iRowfr = iRow + 1;
+
+            if (iRowto >= 0)
+            {
+                for (iRowNum = 0; iRowNum <= iRowto; iRowNum++)
+                {
+                    if (ss1.ActiveSheet.RowHeader.Cells[iRowNum,0].Text != "")
+                    {
+                        ss1.ActiveSheet.RowHeader.Cells[iRowNum, 0].Text = "";
+                        ss1.ActiveSheet.Cells[iRowNum, SPD_LINE1].Text = "False";
+                        ss1.ActiveSheet.Cells[iRowNum, SPD_LINE2].Text = "False";
+                        break; // TODO: might not be correct. Was : Exit For
+                    }
+                }
+            }
+
+            if (iRowfr <= ss1.ActiveSheet.RowCount-1)
+            {
+                for (iRowNum = iRowfr; iRowNum <= ss1.ActiveSheet.RowCount-1; iRowNum++)
+                {
+                    if (ss1.ActiveSheet.RowHeader.Cells[iRowNum, 0].Text != "")
+                    {
+                        ss1.ActiveSheet.RowHeader.Cells[iRowNum, 0].Text = "";
+                        ss1.ActiveSheet.Cells[iRowNum, SPD_LINE1].Text = "False";
+                        ss1.ActiveSheet.Cells[iRowNum, SPD_LINE2].Text = "False";
+                        break; // TODO: might not be correct. Was : Exit For
+                    }
+                }
+            }
+
+            if (e.Column == SPD_LINE1 & ss1.ActiveSheet.Cells[iRow, e.Column].Text == "True")
+            {
+                ss1.ActiveSheet.Cells[iRow, SPD_LINE2].Text = "False";
+            }
+            else if (e.Column == SPD_LINE2 & ss1.ActiveSheet.Cells[iRow, e.Column].Text == "True")
+            {
+                ss1.ActiveSheet.Cells[iRow, SPD_LINE1].Text = "False";
+            }
+
+            ss1.ActiveSheet.RowHeader.Cells[iRow, 0].Text = "修改";
+
+            sCheck1 = ss1.ActiveSheet.Cells[iRow, SPD_LINE1].Text;
+            sCheck2 = ss1.ActiveSheet.Cells[iRow, SPD_LINE2].Text;
+
+            if (sCheck1 == "False" & sCheck2 == "False")
+            {
+                ss1.ActiveSheet.RowHeader.Cells[iRow, 0].Text = "";
+            }
+
+            ss1.ActiveSheet.Cells[iRow, SPD_EMP_CD].Text = GeneralCommon.sUserID;
+
+            if (chk_Cond[1].Checked)
+            {
+                ss1.ActiveSheet.Cells[iRow, SPD_LABEL].Text = "True";
+            }
+            else
+            {
+                ss1.ActiveSheet.Cells[iRow, SPD_LABEL].Text = "False";
+            }
+
+            if (chk_Cond[0].Checked)
+            {
+                ss1.ActiveSheet.Cells[iRow, SPD_PAINT].Text = "True";
+            }
+            else
+            {
+                ss1.ActiveSheet.Cells[iRow, SPD_PAINT].Text = "False";
+            }
+
+            if (opt_line6.Checked)
+            {
+                ss1.ActiveSheet.Cells[iRow, SPD_LOTCD].Text = "True";
+            }
+            else
+            {
+                ss1.ActiveSheet.Cells[iRow, SPD_LOTCD].Text = "False";
+            }
+
+            //        ss1.Col = SPD_MARK_YN
+            //        If ss1.Value Then                'chk_Cond(2) hanchao 20140325
+            //           ss1.Value = 1
+            //        Else
+            //           ss1.Value = 0
+            //        End If
+            //        ss1.Col = SPD_STAMP_YN
+            //        If ss1.Value Then               'chk_Cond(3) hanchao 20140325
+            //           ss1.Value = 1
+            //        Else
+            //           ss1.Value = 0
+            //        End If
+            //        ss1.Col = SPD_BAR_YN
+            //        If ss1.Value Then             'chk_Cond(4) hanchao 20140325
+            //           ss1.Value = 1
+            //        Else
+            //           ss1.Value = 0
+            //        End If
+
+            //Cmd_SEND_SET(e.Row);
+        }
+
+        private void ss1_CellClick(object sender, CellClickEventArgs e)
+        {
+            //  Dim sStdspec As String
+            //  Dim sStdspec_YY As String
+
+            if (ss1.ActiveSheet.RowCount <= 0) return;
+
+            if (e.Column == SPD_APLY_STDSPEC_NEW)
+            {
+                if (ss1.ActiveSheet.Cells[e.Row, e.Column].Text == "")
+                {
+                    ss1.ActiveSheet.Cells[e.Row, e.Column].Text = txt_stdspec_chg.Text;
+                    if (txt_stdspec_chg.Text != "")
+                    {
+                        //            sStdspec = txt_stdspec_chg
+                        //            sStdspec_YY = "%"
+                        ss1.ActiveSheet.Cells[e.Row, SPD_SURF_GRD].Text = "False";
+                        //            ss1.Col = SPD_STDSPEC_YY:          ss1.Text = Gf_qp_std_headFind(M_CN1, sStdspec, sStdspec_YY, 1)
+                        //            ss1.Col = SPD_STLGRD:              ss1.Text = Gf_qp_std_headFind(M_CN1, sStdspec, sStdspec_YY, 2)
+                        ss1.ActiveSheet.Cells[e.Row, SPD_CUR_UST].Text = "X";
+                    }
+                }
+                else
+                {
+                    //            sStdspec = ss1.Text
+                    //            sStdspec_YY = "%"
+                    ss1.ActiveSheet.Cells[e.Row, SPD_APLY_STDSPEC_NEW].Text = "";
+                    ss1.ActiveSheet.Cells[e.Row, SPD_SURF_GRD].Text = "True";
+                    //            ss1.Col = SPD_STDSPEC_YY:          ss1.Text = Gf_qp_std_headFind(M_CN1, sStdspec, sStdspec_YY, 1)
+                    //            ss1.Col = SPD_STLGRD:              ss1.Text = Gf_qp_std_headFind(M_CN1, sStdspec, sStdspec_YY, 2)
+                    ss1.ActiveSheet.Cells[e.Row, SPD_CUR_UST].Text = "";
+                }
+            }
+
+            if (e.Column == SPD_PROD_DATE)
+            {
+                TXT_CUT_TIME.RawDate = Gf_DTSet("", "X");
+                ss1.ActiveSheet.Cells[e.Row, SPD_PROD_DATE].Text = TXT_CUT_TIME.RawDate;
+            }
+        }
+
+
 
 
     }
