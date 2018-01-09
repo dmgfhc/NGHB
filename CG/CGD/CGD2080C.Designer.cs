@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            CommonClass.BControlFiledSetting bControlFiledSetting2 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting5 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting6 = new CommonClass.BControlFiledSetting();
-            CommonClass.BControlFiledSetting bControlFiledSetting3 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting1 = new CommonClass.BControlFiledSetting();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CGD2080C));
-            CommonClass.BControlFiledSetting bControlFiledSetting4 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting2 = new CommonClass.BControlFiledSetting();
             this.txt_plt = new CommonClass.F4ETCR();
             this.txt_plt_name = new System.Windows.Forms.TextBox();
             this.txt_stdspec = new CommonClass.F4ETCR();
@@ -54,6 +54,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.TXT_CUST_CD = new System.Windows.Forms.TextBox();
+            this.TXT_TO_CUR_INV = new System.Windows.Forms.TextBox();
             this.TXT_CUT_TIME = new CommonClass.CeriUDate();
             this.TXT_SPEC_DATE = new System.Windows.Forms.TextBox();
             this.TXT_SPEC = new System.Windows.Forms.TextBox();
@@ -119,8 +121,6 @@
             this.ss1 = new FarPoint.Win.Spread.FpSpread();
             this.fpSpread1_Sheet1 = new FarPoint.Win.Spread.SheetView();
             this.Timer1 = new System.Windows.Forms.Timer(this.components);
-            this.TXT_TO_CUR_INV = new System.Windows.Forms.TextBox();
-            this.TXT_CUST_CD = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -134,11 +134,11 @@
             // 
             // txt_plt
             // 
-            bControlFiledSetting2.ColumnID = "CD";
-            bControlFiledSetting2.TargetControl = this.txt_plt;
+            bControlFiledSetting5.ColumnID = "CD";
+            bControlFiledSetting5.TargetControl = this.txt_plt;
             bControlFiledSetting6.ColumnID = "CD_SHORT_NAME";
             bControlFiledSetting6.TargetControl = this.txt_plt_name;
-            this.txt_plt.CustomSetting.Add(bControlFiledSetting2);
+            this.txt_plt.CustomSetting.Add(bControlFiledSetting5);
             this.txt_plt.CustomSetting.Add(bControlFiledSetting6);
             this.txt_plt.InputControl = this.txt_plt;
             this.txt_plt.Location = new System.Drawing.Point(99, 18);
@@ -162,9 +162,9 @@
             // 
             // txt_stdspec
             // 
-            bControlFiledSetting3.ColumnID = "StdSPEC";
-            bControlFiledSetting3.TargetControl = this.txt_stdspec;
-            this.txt_stdspec.CustomSetting.Add(bControlFiledSetting3);
+            bControlFiledSetting1.ColumnID = "StdSPEC";
+            bControlFiledSetting1.TargetControl = this.txt_stdspec;
+            this.txt_stdspec.CustomSetting.Add(bControlFiledSetting1);
             this.txt_stdspec.InputControl = this.txt_stdspec;
             this.txt_stdspec.Location = new System.Drawing.Point(552, 51);
             this.txt_stdspec.MaxLength = 9999;
@@ -176,9 +176,9 @@
             // 
             // txt_stdspec_chg
             // 
-            bControlFiledSetting4.ColumnID = "CD_SHORT_NAME";
-            bControlFiledSetting4.TargetControl = this.txt_stdspec_chg;
-            this.txt_stdspec_chg.CustomSetting.Add(bControlFiledSetting4);
+            bControlFiledSetting2.ColumnID = "CD_SHORT_NAME";
+            bControlFiledSetting2.TargetControl = this.txt_stdspec_chg;
+            this.txt_stdspec_chg.CustomSetting.Add(bControlFiledSetting2);
             this.txt_stdspec_chg.InputControl = this.txt_stdspec_chg;
             this.txt_stdspec_chg.Location = new System.Drawing.Point(710, 51);
             this.txt_stdspec_chg.MaxLength = 9999;
@@ -368,7 +368,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.groupBox2.Controls.Add(this.TXT_CUST_CD);
             this.groupBox2.Controls.Add(this.TXT_TO_CUR_INV);
             this.groupBox2.Controls.Add(this.TXT_CUT_TIME);
@@ -424,6 +424,22 @@
             this.groupBox2.Size = new System.Drawing.Size(1239, 260);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
+            // 
+            // TXT_CUST_CD
+            // 
+            this.TXT_CUST_CD.Location = new System.Drawing.Point(748, 18);
+            this.TXT_CUST_CD.Name = "TXT_CUST_CD";
+            this.TXT_CUST_CD.Size = new System.Drawing.Size(27, 22);
+            this.TXT_CUST_CD.TabIndex = 792;
+            this.TXT_CUST_CD.Visible = false;
+            // 
+            // TXT_TO_CUR_INV
+            // 
+            this.TXT_TO_CUR_INV.Location = new System.Drawing.Point(679, 46);
+            this.TXT_TO_CUR_INV.Name = "TXT_TO_CUR_INV";
+            this.TXT_TO_CUR_INV.Size = new System.Drawing.Size(62, 22);
+            this.TXT_TO_CUR_INV.TabIndex = 791;
+            this.TXT_TO_CUR_INV.Visible = false;
             // 
             // TXT_CUT_TIME
             // 
@@ -787,20 +803,23 @@
             // tcpMsg2
             // 
             this.tcpMsg2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tcpMsg2.Location = new System.Drawing.Point(119, 32);
+            this.tcpMsg2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tcpMsg2.Location = new System.Drawing.Point(119, 29);
             this.tcpMsg2.Name = "tcpMsg2";
-            this.tcpMsg2.Size = new System.Drawing.Size(180, 23);
+            this.tcpMsg2.Size = new System.Drawing.Size(180, 28);
             this.tcpMsg2.TabIndex = 5;
             this.tcpMsg2.UseVisualStyleBackColor = true;
             // 
             // tcpMsg
             // 
+            this.tcpMsg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.tcpMsg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tcpMsg.Location = new System.Drawing.Point(119, 4);
+            this.tcpMsg.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tcpMsg.Location = new System.Drawing.Point(119, 1);
             this.tcpMsg.Name = "tcpMsg";
-            this.tcpMsg.Size = new System.Drawing.Size(180, 23);
+            this.tcpMsg.Size = new System.Drawing.Size(180, 31);
             this.tcpMsg.TabIndex = 4;
-            this.tcpMsg.UseVisualStyleBackColor = true;
+            this.tcpMsg.UseVisualStyleBackColor = false;
             // 
             // tcpStatus2
             // 
@@ -1053,24 +1072,9 @@
             // 
             // Timer1
             // 
+            this.Timer1.Enabled = true;
             this.Timer1.Interval = 3000;
             this.Timer1.Tick += new System.EventHandler(this.Timer1_Tick);
-            // 
-            // TXT_TO_CUR_INV
-            // 
-            this.TXT_TO_CUR_INV.Location = new System.Drawing.Point(679, 46);
-            this.TXT_TO_CUR_INV.Name = "TXT_TO_CUR_INV";
-            this.TXT_TO_CUR_INV.Size = new System.Drawing.Size(62, 22);
-            this.TXT_TO_CUR_INV.TabIndex = 791;
-            this.TXT_TO_CUR_INV.Visible = false;
-            // 
-            // TXT_CUST_CD
-            // 
-            this.TXT_CUST_CD.Location = new System.Drawing.Point(748, 18);
-            this.TXT_CUST_CD.Name = "TXT_CUST_CD";
-            this.TXT_CUST_CD.Size = new System.Drawing.Size(27, 22);
-            this.TXT_CUST_CD.TabIndex = 792;
-            this.TXT_CUST_CD.Visible = false;
             // 
             // CGD2080C
             // 

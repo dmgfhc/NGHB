@@ -1463,7 +1463,7 @@ namespace CG
 
             string PaintStr;
             short PaintStr_CD;
-            string[] Paint = new string[3];//48个字符
+            string[] Paint = new string[4];//48个字符
 
             string PunchStr;
             string[] Punch = new string[2];//32个字符
@@ -1527,7 +1527,7 @@ namespace CG
 
             sPaint = ss1.ActiveSheet.Cells[row,SPD_MARK_YN].Text == "True"?(byte)1:(byte)0;
             sPunch = ss1.ActiveSheet.Cells[row,SPD_STAMP_YN].Text == "True"?(byte)1:(byte)0;
-            sEdge = sPunch = ss1.ActiveSheet.Cells[row,SPD_BAR_YN].Text == "True"?(byte)1:(byte)0;
+            sEdge = ss1.ActiveSheet.Cells[row,SPD_BAR_YN].Text == "True"?(byte)1:(byte)0;
 
             sSpec_ALL = ss1.ActiveSheet.Cells[row,SPD_APLY_STDSPEC_NEW].Text;
             if (sSpec_ALL == "")
