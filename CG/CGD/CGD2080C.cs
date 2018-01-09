@@ -295,6 +295,9 @@ namespace CG
             opt_line1.Checked = true;
             opt_line3.Checked = true;
 
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_LINE1, false);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_LINE2, true);
+
             TXT_ORD_REMARK.Width = 598;
             TXT_ORD_REMARK.Height = 48;
 
@@ -320,7 +323,7 @@ namespace CG
 
             if (txt_rec_sts.Text == "1")
             {
-                p_Pro(1, 1, true, false);
+              //  p_Pro(1, 1, true, false);
             }
 
             for (iRow = 1; iRow <= ss1.ActiveSheet.RowCount; iRow++)
@@ -336,19 +339,20 @@ namespace CG
                     {
                         sMark_no = ss1.ActiveSheet.Cells[iRow - 1, SPD_LOT_NO].Text;
                     }
-                    sThk = ss1.ActiveSheet.Cells[iRow-1, SPD_THK].Text.Trim();
-                    sWid = ss1.ActiveSheet.Cells[iRow - 1, SPD_WID].Text.Trim();
-                    sLen = ss1.ActiveSheet.Cells[iRow - 1, SPD_LEN].Text.Trim();
-                    sWgt = ss1.ActiveSheet.Cells[iRow - 1, SPD_WGT].Text.Trim();
+                    sThk = ss1.ActiveSheet.Cells[iRow - 1, SPD_THK].Text.Trim().Replace(",", "");
+                    sThk = substr(sThk, 0, sThk.IndexOf("."));
+                    sWid = ss1.ActiveSheet.Cells[iRow - 1, SPD_WID].Text.Trim().Replace(",", "");
+                    sLen = ss1.ActiveSheet.Cells[iRow - 1, SPD_LEN].Text.Trim().Replace(",", "");
+                    sWgt = ss1.ActiveSheet.Cells[iRow - 1, SPD_WGT].Text.Trim().Replace(",", "");
                     if (substr(sWgt, 0, 1) == ".")
                     {
                         sWgt = "0" + sWgt;
                     }
                     sStdspec_YY = ss1.ActiveSheet.Cells[iRow - 1, SPD_STDSPEC_YY].Text;
                     sSpec = ss1.ActiveSheet.Cells[iRow - 1, SPD_STLGRD].Text;
-                    if ((chk_Cond[0].Checked || chk_Cond[8].Checked) & ss1.ActiveSheet.RowHeader.Cells[iRow-1,0].Text!= "删除")
+                    if ((chk_Cond0.Checked || chk_Cond8.Checked) & ss1.ActiveSheet.RowHeader.Cells[iRow-1,0].Text!= "删除")
                     {
-                        //Cmd_SEND(sMark_no, sThk, sWid, sLen, sWgt, sSpec, sStdspec_YY, sPlate_no);
+                        Cmd_SEND(iRow-1,sMark_no, sThk, sWid, sLen, sWgt, sSpec, sStdspec_YY, sPlate_no);
                     }
                     break; // TODO: might not be correct. Was : Exit For
                 }
@@ -946,6 +950,15 @@ namespace CG
             return 0;
         }
 
+        public short convertS(string value)
+        {
+            if (value != "")
+            {
+                return Convert.ToInt16(value);
+            }
+            return 0;
+        }
+
         //重写了框架的颜色方法，原来的框架在解锁方面有点问题，不方便在框架直接修改，所以重新写了一个
         public void Gp_Sp_BlockColor(FpSpread oSpread, int iCol1, int iCol2, int iRow1, int iRow2, Color fColor, Color bColor)
         {
@@ -1092,7 +1105,7 @@ namespace CG
             //           ss1.Value = 0
             //        End If
 
-            //Cmd_SEND_SET(e.Row);
+            Cmd_SEND_SET(e.Row);
         }
 
         private void ss1_CellClick(object sender, CellClickEventArgs e)
@@ -1135,6 +1148,791 @@ namespace CG
                 ss1.ActiveSheet.Cells[e.Row, SPD_PROD_DATE].Text = TXT_CUT_TIME.RawDate;
             }
         }
+
+        private void ss1_EditModeOn(object sender, EventArgs e)
+        {
+            int iCol;
+            int iRow;
+            int iMode;
+
+            int iRowNum;
+            int iRowfr;
+            int iRowto;
+
+            if (ss1.ActiveSheet.RowCount <= 0) return;
+
+            iCol = ss1.ActiveSheet.ActiveColumnIndex;
+            iRow = ss1.ActiveSheet.ActiveRowIndex;
+
+
+            if (GeneralCommon.Gf_Sc_Authority(sAuthority, "U") && ss1.ActiveSheet.ActiveColumnIndex > SPD_LINE2)
+            {
+                iRowto = iRow - 1;
+                iRowfr = iRow + 1;
+
+                if (iRowto >= 0)
+                {
+
+                    for (iRowNum = 0; iRowNum <= iRowto; iRowNum++)
+                    {
+                        if (ss1.ActiveSheet.RowHeader.Cells[iRowNum, 0].Text != "")
+                        {
+                            ss1.ActiveSheet.Cells[iRowNum, SPD_LINE1].Text = "False";
+                            ss1.ActiveSheet.Cells[iRowNum, SPD_LINE2].Text = "False";
+                            ss1.ActiveSheet.RowHeader.Cells[iRowNum, 0].Text = "";
+                            //break; // TODO: might not be correct. Was : Exit For
+                        }
+                    }
+                }
+
+                if (iRowfr <= ss1.ActiveSheet.RowCount - 1)
+                {
+
+                    for (iRowNum = iRowfr; iRowNum <= ss1.ActiveSheet.RowCount - 1; iRowNum++)
+                    {
+                        if (ss1.ActiveSheet.RowHeader.Cells[iRowNum, 0].Text != "")
+                        {
+                            ss1.ActiveSheet.Cells[iRowNum, SPD_LINE1].Text = "False";
+                            ss1.ActiveSheet.Cells[iRowNum, SPD_LINE2].Text = "False";
+                            ss1.ActiveSheet.RowHeader.Cells[iRowNum, 0].Text = "";
+                            //break; // TODO: might not be correct. Was : Exit For
+                        }
+                    }
+                }
+
+                if (iCol == SPD_THK | iCol == SPD_WID | iCol == SPD_LEN)
+                {
+                    ss1.ActiveSheet.Cells[iRow, iCol].Text = "0";
+                }
+
+                //SpreadCommon.Gp_Sp_UpdateMake(Proc_Sc("SC")("Spread"), iMode);
+
+                ss1.ActiveSheet.RowHeader.Cells[iRow, 0].Text = "修改";
+
+                //ss1.ActiveRow
+                ss1.ActiveSheet.Cells[iRow, SPD_EMP_CD].Text = GeneralCommon.sUserID;
+
+                if (chk_Cond[1].Checked)
+                {
+                    ss1.ActiveSheet.Cells[iRow, SPD_LABEL].Text = "True";
+                }
+                else
+                {
+                    ss1.ActiveSheet.Cells[iRow, SPD_LABEL].Text = "False";
+                }
+
+                if (chk_Cond[0].Checked)
+                {
+                    ss1.ActiveSheet.Cells[iRow, SPD_PAINT].Text = "True";
+                }
+                else
+                {
+                    ss1.ActiveSheet.Cells[iRow, SPD_PAINT].Text = "False";
+                }
+
+                if (opt_line6.Checked)
+                {
+                    ss1.ActiveSheet.Cells[iRow, SPD_LOTCD].Text = "True";
+                }
+                else
+                {
+                    ss1.ActiveSheet.Cells[iRow, SPD_LOTCD].Text = "False";
+                }
+
+                if (opt_line1.Checked)
+                {
+                    ss1.ActiveSheet.Cells[iRow, SPD_LINE1].Text = "True";
+                }
+                else
+                {
+                    ss1.ActiveSheet.Cells[iRow, SPD_LINE1].Text = "False";
+                }
+                if (opt_line2.Checked)
+                {
+                    ss1.ActiveSheet.Cells[iRow, SPD_LINE2].Text = "True";
+                }
+                else
+                {
+                    ss1.ActiveSheet.Cells[iRow, SPD_LINE2].Text = "False";
+                }
+
+                //        ss1.Col = SPD_MARK_YN
+                //        If chk_Cond(2) Then
+                //           ss1.Value = 1
+                //        Else
+                //           ss1.Value = 0
+                //        End If
+                //        ss1.Col = SPD_STAMP_YN
+                //        If chk_Cond(3) Then
+                //           ss1.Value = 1
+                //        Else
+                //           ss1.Value = 0
+                //        End If
+                //        ss1.Col = SPD_BAR_YN
+                //        If chk_Cond(4) Then
+                //           ss1.Value = 1
+                //        Else
+                //           ss1.Value = 0
+                //        End If
+
+                Cmd_SEND_SET(iRow);
+
+            }
+        }
+
+        private void Cmd_SEND_SET(int ROW)
+        {
+            //Dim Header As String * 2
+            string[] Header = new string[2];
+            string Nisco;
+            string sFlag;
+            string sNull;
+
+            string sPlate_no;
+            string sThk;
+            string sWid;
+            string sLen;
+            string sSpec;
+            string sSpec_ALL;
+            string sSpec1;
+            string sSpec2;
+            string sSpec_Str;
+            string sStdspec_YY;
+            int sNum;
+            string sNumFL;
+            string sUST;
+            string sCUST_CD_SHORT;
+
+            if (opt_line5.Checked)
+            {
+                TXT_MAT_NO.Text = ss1.ActiveSheet.Cells[ROW, SPD_PLATE_NO].Text;
+            }
+            else
+            {
+                TXT_MAT_NO.Text = ss1.ActiveSheet.Cells[ROW, SPD_LOT_NO].Text;
+            }
+            TXT_THK.Text = ss1.ActiveSheet.Cells[ROW, SPD_THK].Text.Replace(",","");
+            TXT_THK.Text = substr(TXT_THK.Text, 0, TXT_THK.Text.IndexOf("."));
+            TXT_WID.Text = ss1.ActiveSheet.Cells[ROW, SPD_WID].Text.Replace(",", "");
+            TXT_LEN.Text = ss1.ActiveSheet.Cells[ROW, SPD_LEN].Text.Replace(",", "");
+            TXT_WGT.Text = ss1.ActiveSheet.Cells[ROW, SPD_WGT].Text.Replace(",", "");
+            if (substr(TXT_WGT.Text, 0, 1) == ".")
+            {
+                TXT_WGT.Text = "0" + TXT_WGT.Text;
+            }
+            TXT_SPEC.Text = ss1.ActiveSheet.Cells[ROW, SPD_STDSPEC_YY].Text;
+            TXT_SPEC_DATE.Text = ss1.ActiveSheet.Cells[ROW, SPD_STLGRD].Text;
+            TXT_ORD_REMARK.Text = ss1.ActiveSheet.Cells[ROW, SPD_ORD_REMARK].Text;
+            TXT_VESSEL_NO.Text = ss1.ActiveSheet.Cells[ROW, SPD_VESSEL_NO].Text.Trim();
+            sSpec_ALL = ss1.ActiveSheet.Cells[ROW, SPD_APLY_STDSPEC_NEW].Text;
+            sUST = ss1.ActiveSheet.Cells[ROW, SPD_UST].Text;
+            TXT_CUST_CD.Text = ss1.ActiveSheet.Cells[ROW, SPD_CUST_CD].Text;
+            TXT_TO_CUR_INV.Text = ss1.ActiveSheet.Cells[ROW, SPD_TO_CUR_INV].Text;
+            sCUST_CD_SHORT = ss1.ActiveSheet.Cells[ROW, SPD_CUST_CD_SHORT].Text;
+            if (sSpec_ALL == "")
+            {
+                sSpec_ALL = ss1.ActiveSheet.Cells[ROW, SPD_APLY_STDSPEC].Text;
+            }
+
+            if (sUST == "" | sUST == "X")
+            {
+                sUST = "";
+            }
+            //ss1.Col = 0;
+
+            Nisco = "NG";
+            sFlag = "X";
+            sNull = " ";
+
+            sPlate_no = TXT_MAT_NO.Text;
+            sThk = TXT_THK.Text;
+            sWid = TXT_WID.Text;
+            sLen = TXT_LEN.Text;
+            sSpec = TXT_SPEC_DATE.Text;
+            sSpec1 = sSpec;
+            sSpec2 = sSpec;
+            sStdspec_YY = TXT_SPEC.Text;
+
+            sNum = sSpec_ALL.IndexOf("-");
+            if (sNum == -1)
+            {
+                sNumFL = "Y";
+                sNum = sSpec_ALL.Length;
+            }
+
+            sSpec_Str = substr(sSpec_ALL, 0, (sNum - 1));
+
+            sSpec1 = sStdspec_YY;
+            sSpec2 = sStdspec_YY;
+
+            switch (sSpec_Str)
+            {
+
+                case "BV":
+
+                    break;
+                case "CCS":
+
+                    break;
+                case "DNV":
+                    break;
+
+                case "VL":
+
+                    break;
+                case "GL":
+
+                    break;
+                case "KR":
+
+                    break;
+                case "LR":
+
+                    break;
+                case "NK":
+                    break;
+
+                case "RINA":
+
+                    break;
+                case "ABS":
+                    break;
+
+                case "RS":
+                    break;
+
+                default:
+                    sSpec1 = sSpec + " " + sStdspec_YY;
+                    sSpec2 = sSpec;
+                    break;
+            }
+
+            //TXT_Paint1 = Nisco & sNull & sPlate_no
+            TXT_Paint1.Text = sPlate_no;
+            TXT_Paint2.Text = sSpec1;
+            TXT_Paint3.Text = sThk + sFlag + sWid + sFlag + sLen;
+            TXT_Paint4.Text = sUST + sNull + TXT_VESSEL_NO.Text;
+            TXT_Paint4.Text = TXT_Paint4.Text.Trim();
+            TXT_Paint4.Text = sCUST_CD_SHORT + "  " + TXT_Paint4.Text;
+            TXT_Paint4.Text = TXT_Paint4.Text.Trim();
+
+            TXT_Punch1.Text = sSpec2 + sNull + sPlate_no;
+            TXT_Punch2.Text = sPlate_no;
+
+            //TXT_Edge = sPlate_no & sNull & sThk & sFlag & sWid & sFlag & sLen & sNull & sSpec2 & sNull & TXT_VESSEL_NO & sNull & TXT_CUST_CD & TXT_TO_CUR_INV
+            TXT_Edge.Text = sPlate_no + sNull + sSpec2 + sNull + sThk + sFlag + sWid + sFlag + sLen + sNull + TXT_VESSEL_NO.Text + sNull + TXT_CUST_CD.Text + TXT_TO_CUR_INV.Text;
+            TXT_Bar.Text = TXT_MAT_NO.Text;
+
+        }
+
+        private void Cmd_SEND(int row,string iMark_no, string iThk, string iWid, string iLen, string iWGT, string iSpec, string iStdspec_yy, string iPlate_no)
+        {
+            string SMESG;
+
+            int i;
+
+            string sMark_no;//16个字符
+            string sPlate_no;//16个字符
+            string sThk;
+            string sWid;
+            string sLen;
+            string sWgt;
+            string sSpec;
+            string sSpec_ALL;
+            string sSpec1;
+            string sSpec2;
+            string sStdspec_YY;
+            string sUser;//10个字符
+            string Header;//2个字符
+            string Nisco_Logo;
+            string Nisco;
+            string sFlag;
+            byte sPaint;
+            byte sPunch;
+            byte sEdge;
+            string sNull;
+            string sNullstr;
+
+            string sSpec_Str;
+            string sSpec_Logo;
+            string sSpec_IRS_Logo = "";
+            string sProd_Date;
+            string sGroup;
+            int sNum;
+            string sNumFL;
+
+            string PaintStr;
+            short PaintStr_CD;
+            string[] Paint = new string[3];//48个字符
+
+            string PunchStr;
+            string[] Punch = new string[2];//32个字符
+
+            string EdgeStr;
+            short EdgeStr_CD;
+            string Edge;//48个字符
+            string Bar;//18个字符
+            string sNisco;
+
+            string[] StrSend = new string[10];
+
+            string sUST;
+
+            string sEdgeString;
+            //2012-03-01  modify by liqian 侧标位数扩展50->65
+            //2012-07-16  modify by liqian 侧标位数扩展65->90
+            //Dim sEdgeStr As String * 90
+            string sEdgeStr;//90
+            string sVESSEL_NO;
+            string sideMark;
+            string sCUST_CD;
+            string sCUST_CD_SHORT;
+            string sTO_CUR_INV;
+
+            string sJIT_FLAG;
+
+            sUST = "T";
+
+            sMark_no = iMark_no;
+            sPlate_no = iPlate_no;
+            sThk = iThk;
+            sWid = iWid;
+            sLen = iLen;
+            sWgt = iWGT;
+            sSpec = iSpec;
+            sSpec1 = iSpec;
+            sSpec2 = iSpec;
+            sStdspec_YY = iStdspec_yy;
+            sUser = GeneralCommon.sUserID;
+
+            Header = "MD";
+            Nisco_Logo = Chr(127);
+            Nisco = "NG";
+            sFlag = "X";
+            sNumFL = "N";
+
+            //    sPaint = 1
+            //    sPunch = 1
+            //    sEdge = 1
+
+            sProd_Date = udt_date_fr.RawDate;
+            sGroup = cbo_group.Text.Trim();
+
+            if (sGroup != "A" & sGroup != "B" & sGroup != "C" & sGroup != "D")
+            {
+                SMESG = " 班别错误，请确认是否正确输入班别";
+                GeneralCommon.Gp_MsgBoxDisplay(SMESG, "I", "");
+                return;
+            }
+
+            sPaint = ss1.ActiveSheet.Cells[row,SPD_MARK_YN].Text == "True"?(byte)1:(byte)0;
+            sPunch = ss1.ActiveSheet.Cells[row,SPD_STAMP_YN].Text == "True"?(byte)1:(byte)0;
+            sEdge = sPunch = ss1.ActiveSheet.Cells[row,SPD_BAR_YN].Text == "True"?(byte)1:(byte)0;
+
+            sSpec_ALL = ss1.ActiveSheet.Cells[row,SPD_APLY_STDSPEC_NEW].Text;
+            if (sSpec_ALL == "")
+            {
+                sSpec_ALL = ss1.ActiveSheet.Cells[row,SPD_APLY_STDSPEC].Text;
+            }
+
+            PRODSPECNOA = convertI(ss1.ActiveSheet.Cells[row,SS2_PRODSPECNOA].Text);
+            PRODSPECNOB = convertI(ss1.ActiveSheet.Cells[row,SS2_PRODSPECNOB].Text);
+            PRODSPECNOC = convertI(ss1.ActiveSheet.Cells[row,SS2_PRODSPECNOC].Text);
+            PRODSPECNOA1 = convertI(ss1.ActiveSheet.Cells[row,SS2_PRODSPECNOA1].Text);
+            PRODSPECNOB1 = convertI(ss1.ActiveSheet.Cells[row,SS2_PRODSPECNOB1].Text);
+            PRODSPECNOC1 = convertI(ss1.ActiveSheet.Cells[row,SS2_PRODSPECNOC1].Text);
+
+            sNum = sSpec_ALL.IndexOf("-");
+            if (sNum == -1)
+            {
+                sNumFL = "Y";
+                sNum = sSpec_ALL.Length;
+            }
+            sSpec_Str = substr(sSpec_ALL, 0, sNum);
+
+            sSpec1 = sStdspec_YY + " " + PRODSPECNOA1 + " " + PRODSPECNOB1 + " " + PRODSPECNOC1;
+            sSpec2 = sStdspec_YY + " " + PRODSPECNOA1 + " " + PRODSPECNOB1 + " " + PRODSPECNOC1;
+
+            switch (sSpec_Str)
+            {
+                case "BV":
+                    sSpec_Logo = Chr(44);
+                    //ChrW(174)
+                    break;
+                case "CCS":
+                    sSpec_Logo = Chr(33);
+                    //ChrW(151)
+                    break;
+                case "DNV":
+                    sSpec_Logo = Chr(39);
+                    //ChrW(155)
+                    break;
+                case "VL":
+                    sSpec_Logo = Chr(39);
+                    //ChrW(155)
+                    break;
+                case "GL":
+                    sSpec_Logo = Chr(39);
+                    //ChrW(171) 36->39 20160127 LICHAO
+                    break;
+                case "KR":
+                    sSpec_Logo = Chr(94);
+                    //ChrW(176)
+                    break;
+                case "LR":
+                    sSpec_Logo = Chr(96);
+                    //ChrW(172)
+                    break;
+                case "NK":
+                    sSpec_Logo = Chr(95);
+                    //ChrW(224)
+                    break;
+                case "RINA":
+                    sSpec_Logo = Chr(63);
+                    //ChrW(166)
+                    break;
+                case "ABS":
+                    sSpec_Logo = Chr(34);
+                    //ChrW(225)    'CE 126
+                    break;
+                case "RS":
+                    //俄罗斯船级社
+                    sSpec_Logo = Chr(36);
+                    //" "-> 36 20161118 LICHAO
+                    break;
+                case "IRS":
+                    sSpec_Logo = " ";
+                    sSpec_IRS_Logo = " ";
+                    break;
+                default:
+                    sSpec_Logo = " ";
+                    sSpec_IRS_Logo = " ";
+                    sSpec1 = sSpec + " " + sStdspec_YY + " " + PRODSPECNOA1 + " " + PRODSPECNOB1 + " " + PRODSPECNOC1;
+                    sSpec2 = sSpec + " " + PRODSPECNOA1 + " " + PRODSPECNOB1 + " " + PRODSPECNOC1;
+                    break;
+            }
+
+            sSpec1 = sSpec1.Trim();
+            sSpec2 = sSpec2.Trim();
+
+            StrSend[0] = Chr(46);
+            StrSend[1] = Chr(46);
+            sNull = StrSend[0] + StrSend[1];
+            sNullstr = " ";
+
+            //2012-10-22  modify by liqian 标印第一行加 NISCO
+            sNisco = sNullstr + "NISCO";
+
+            //有重量标识要求的编辑重量信息
+            if (iStdspec_yy == "GB 713-2008" | iStdspec_yy == "GB 3531-2008" | iStdspec_yy == "GB 19189-2011" | iStdspec_yy == "GB 713-2014" | iStdspec_yy == "GB 3531-2014")
+            {
+                sWgt = "  T.W. " + sWgt + " t";
+            }
+            else
+            {
+                sWgt = "";
+            }
+
+            //ss1.ROW = ss1.ActiveRow;
+            //编辑探伤信息
+            //如果钢板要求探伤，喷印第一行末尾加探伤内容
+            sUST = ss1.ActiveSheet.Cells[row,SPD_CUR_UST].Text;
+            if (sUST == "")
+            {
+                sUST = ss1.ActiveSheet.Cells[row,SPD_UST].Text;
+            }
+
+            //    Paint(0) = sNull & Nisco_Logo & sNullstr & sMark_no & sNisco & sWgt
+            Paint[0] = sNull + Nisco_Logo + sNullstr + sMark_no + sWgt + " " + sUST;
+            Paint[1] = sNull + Nisco_Logo + sSpec_Logo + PRODSPECNOA + PRODSPECNOB + PRODSPECNOC + sSpec1;
+            Paint[2] = sNull + sNisco + "  " + sThk + sFlag + sWid + sFlag + sLen + sNullstr + sProd_Date + sNullstr + sGroup;
+
+            //    ss1.ROW = ss1.ActiveRow
+            //    '编辑探伤信息
+            //    '如果钢板要求探伤，喷印第四行加喷 T
+            //    ss1.Col = SPD_CUR_UST:    sUST = ss1.Text
+            //    If sUST = "" Then
+            //       ss1.Col = SPD_UST:    sUST = ss1.Text
+            //    End If
+            //
+            //    If sUST = "" Or sUST = "X" Then
+            //       sUST = ""
+            //    Else
+            //       sUST = "T"
+            //    End If
+
+            if (ss1.ActiveSheet.Cells[row,SPD_JIT_FLAG].Text == "Y")
+            {
+                sJIT_FLAG = "DZ";
+                // 17-DZ
+            }
+            else
+            {
+                sJIT_FLAG = "";
+            }
+
+            sVESSEL_NO = ss1.ActiveSheet.Cells[row,SPD_VESSEL_NO].Text;
+            sideMark = ss1.ActiveSheet.Cells[row,SPD_SIDE_MARK].Text;
+            sCUST_CD = ss1.ActiveSheet.Cells[row,SPD_CUST_CD].Text;
+            sTO_CUR_INV = ss1.ActiveSheet.Cells[row,SPD_TO_CUR_INV].Text;
+            sCUST_CD_SHORT = ss1.ActiveSheet.Cells[row,SPD_CUST_CD_SHORT].Text;
+
+            //编辑喷印第四行
+            //如果钢板为子公司产品，喷印第四行首位喷子公司简码+（探伤标识）+（用户加喷信息）
+            if (opt_line5.Checked)
+            {
+                //            Paint(3) = sCUST_CD_SHORT & "  " & sUST & " " & sVESSEL_NO
+                Paint[3] = sCUST_CD_SHORT + " " + sVESSEL_NO;
+            }
+            else
+            {
+                //            Paint(3) = sPlate_no & " " & sCUST_CD_SHORT & "  " & sUST & " " & sVESSEL_NO
+                Paint[3] = sPlate_no + " " + sCUST_CD_SHORT + " " + sVESSEL_NO;
+            }
+
+            if (sJIT_FLAG == "")
+            {
+                Paint[3] = sNull + "        " + Paint[3];
+            }
+            else
+            {
+                Paint[3] = sNull + "        " + sJIT_FLAG + "  " + Paint[3];
+            }
+
+            PaintStr = Paint[0] + Paint[1] + Paint[2] + Paint[3];
+
+            StrSend[2] = Chr(30);
+            StrSend[3] = Chr(30);
+            sNull = StrSend[2] + StrSend[3];
+
+            PaintStr_CD = convertS(TXT_P.Text);
+            Punch[0] = sNull + sSpec_Logo + sSpec_IRS_Logo + sSpec2 + sNullstr + sMark_no;
+            Punch[1] = sNull;
+            //& sMark_no
+            PunchStr = Punch[0] + Punch[1];
+
+            StrSend[4] = Chr(46);
+            StrSend[5] = Chr(46);
+            sNull = StrSend[4] + StrSend[5];
+            EdgeStr_CD = convertS(TXT_H.Text);
+            Edge = sNull + sSpec2 + sNullstr + sMark_no + sThk + sFlag + sWid + sFlag + sLen;
+
+            StrSend[6] = Chr(16);
+            StrSend[7] = Chr(16);
+            sNull = StrSend[6] + StrSend[7];
+            Bar = sNull + sMark_no;
+            EdgeStr = Bar + Edge;
+
+            //编辑侧喷信息
+            //钢板号 + 尺寸 + 钢种 + （用户加喷信息） + （客户代码）+（目的库）
+
+            //编辑侧喷信息
+            //钢板号 + 尺寸 + 钢种 + （用户加喷信息） + （客户代码）+（目的库）
+
+            
+                if (chk_Cond8.Checked && sEdge == 1)
+                {
+
+                    //            sEdgeStr = sMark_no & " " & sThk & "X" & sWid & "X" & sLen & " " & sSpec2 & "  " & TXT_Paint4.Text & " " & TXT_CUST_CD.Text & " " & TXT_TO_CUR_INV.Text
+                    sEdgeString = sMark_no;
+                    //sEdgeString = Trim(sEdgeString) & " " & Trim(sThk) & "X" & Trim(sWid) & "X" & Trim(sLen) & " " & Trim(sSpec2)
+                    sEdgeString = sEdgeString.Trim() + " " + sSpec2.Trim() + " " + sThk.Trim() + "X" + sWid.Trim() + "X" + sLen.Trim();
+                    sEdgeString = sEdgeString + " " + sideMark;
+                    sEdgeString = sEdgeString.Trim() + " " + sCUST_CD + " " + sTO_CUR_INV;
+                    sEdgeStr = sEdgeString.Trim();
+                    Winsock2.SendData(sEdgeStr);
+                }
+
+                if (chk_Cond0.Checked)
+                {
+                                Winsock1.SendData(Header + "  " + Chr(16) + Chr(14) + sMark_no + Chr(10) + Chr(10) + sUser);
+                                Winsock1.SendData(HiByte(convertS(sWid)));
+                                Winsock1.SendData(LoByte(convertS(sWid)));
+                                Winsock1.SendData(HiByte(sPaint));
+                                Winsock1.SendData(LoByte(sPaint));
+                                Winsock1.SendData(HiByte(sPunch));
+                                Winsock1.SendData(LoByte(sPunch));
+                                Winsock1.SendData(HiByte(sEdge));
+                                Winsock1.SendData(LoByte(sEdge));
+                            
+                                Winsock1.SendData(PaintStr);
+                                
+                                Winsock1.SendData(HiByte(PaintStr_CD));
+                                Winsock1.SendData(LoByte(PaintStr_CD));
+                                Winsock1.SendData(PunchStr);
+                                
+                                Winsock1.SendData(HiByte(EdgeStr_CD));
+                                Winsock1.SendData(LoByte(EdgeStr_CD));
+                                Winsock1.SendData(EdgeStr);
+
+                }
+
+        }
+
+        public static string Chr(int asciiCode)
+        {
+            if (asciiCode >= 0 && asciiCode <= 255)
+            {
+                System.Text.ASCIIEncoding asciiEncoding = new System.Text.ASCIIEncoding();
+                byte[] byteArray = new byte[] { (byte)asciiCode };
+                string strCharacter = asciiEncoding.GetString(byteArray);
+                return (strCharacter);
+            }
+            else
+            {
+                throw new Exception("ASCII Code is not valid.");
+            }
+        }
+
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            //sckClosed            0 缺省的。--关闭 没有的
+            //sckOpen              1 打开 --打开的
+            //sckListening         2 侦听 --察看有没有请求进入的
+            //sckConnectionPending 3 连接挂起
+            //sckResolvingHost     4 识别主机
+            //sckHostResolved      5 已识别主机
+            //sckConnecting        6 正在连接
+            //sckConnected         7 已连接
+            //sckClosing           8 同级人员正在关闭连接 -说明对方关闭了你连接
+            //sckError             9 错误
+
+                string strState;
+                string strState2;
+
+                if (!chk_Cond0.Checked && !chk_Cond8.Checked)
+                {
+                    return;
+                }
+                else
+                {
+
+                    if (chk_Cond0.Checked)
+                    {
+
+                        switch (Winsock1.State)
+                        {
+                            case 0:
+                                strState = "连接关闭";
+                                tcpStatus.BackColor = Color.Red;
+                                chk_Cond0.ForeColor = Color.Red;
+                                break;
+                            //                    Winsock1.Connect
+                            case 1:
+                                strState = "连接打开";
+                                break;
+                            case 2:
+                                strState = "连接保留";
+                                break;
+                            case 3:
+                                strState = "Close";
+                                tcpStatus.BackColor = Color.Red;
+                                chk_Cond0.ForeColor = Color.Red;
+                                break;
+                            case 4:
+                                strState = "Find Host....";
+                                break;
+                            case 5:
+                                strState = "Finded Host";
+                                break;
+                            case 6:
+                                strState = "正在连接";
+                                break;
+                            case 7:
+                                strState = "连接正常";
+                                tcpStatus.BackColor = Color.Green;
+                                chk_Cond0.ForeColor = Color.Green;
+                                break;
+                            case 8:
+                                strState = "连接断线";
+                                //                    Winsock1.Close
+                                tcpStatus.BackColor = Color.Red;
+                                chk_Cond0.ForeColor = Color.Red;
+                                break;
+                            case 9:
+                                strState = "连接错误";
+                                //                    Winsock1.Close
+                                tcpStatus.BackColor = Color.Red;
+                                chk_Cond0.ForeColor = Color.Red;
+                                break;
+                            //        '            Winsock1.Connect
+                            default:
+                                strState = "StateNum:" + Winsock1.State;
+                                tcpStatus.BackColor = Color.Red;
+                                chk_Cond0.ForeColor = Color.Red;
+                                break;
+                        }
+
+                        tcpMsg.Text = "标印机状态 : " + strState;
+
+                    }
+
+
+                    if (chk_Cond8.Checked)
+                    {
+                        switch (Winsock2.State)
+                        {
+                            case 0:
+                                strState2 = "连接关闭";
+                                tcpStatus2.BackColor = Color.Red;
+                                chk_Cond8.ForeColor = Color.Red;
+                                break;
+                            //            Winsock2.Close
+                            //                    Winsock2.Connect
+                            case 1:
+                                strState2 = "连接打开";
+                                break;
+                            case 2:
+                                strState2 = "连接保留";
+                                break;
+                            case 3:
+                                strState2 = "Close";
+                                tcpStatus2.BackColor = Color.Red;
+                                chk_Cond8.ForeColor = Color.Red;
+                                break;
+                            case 4:
+                                strState2 = "Find Host....";
+                                break;
+                            case 5:
+                                strState2 = "找到主机";
+                                break;
+                            case 6:
+                                strState2 = "正在连接";
+                                break;
+                            case 7:
+                                strState2 = "连接正常";
+                                tcpStatus2.BackColor = Color.Green;
+                                chk_Cond8.ForeColor = Color.Green;
+                                break;
+                            case 8:
+                                strState2 = "连接断线";
+                                //                    Winsock2.Close
+                                tcpStatus2.BackColor = Color.Red;
+                                chk_Cond8.ForeColor = Color.Red;
+                                break;
+                            case 9:
+                                strState2 = "连接错误";
+                                //                    Winsock2.Close
+                                tcpStatus2.BackColor = Color.Red;
+                                chk_Cond8.ForeColor = Color.Red;
+                                break;
+                            //        '            Winsock2.Connect
+                            default:
+                                strState2 = "StateNum:" + Winsock2.State;
+                                tcpStatus2.BackColor = Color.Red;
+                                chk_Cond8.ForeColor = Color.Red;
+                                break;
+                        }
+
+                        tcpMsg2.Text = "侧喷机状态 : " + strState2;
+
+                    }
+
+                }
+
+        }
+
+       
 
 
 

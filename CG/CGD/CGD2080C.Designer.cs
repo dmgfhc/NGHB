@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            CommonClass.BControlFiledSetting bControlFiledSetting1 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting2 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting6 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting3 = new CommonClass.BControlFiledSetting();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CGD2080C));
             CommonClass.BControlFiledSetting bControlFiledSetting4 = new CommonClass.BControlFiledSetting();
@@ -54,6 +54,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.TXT_CUT_TIME = new CommonClass.CeriUDate();
             this.TXT_SPEC_DATE = new System.Windows.Forms.TextBox();
             this.TXT_SPEC = new System.Windows.Forms.TextBox();
             this.TXT_VESSEL_NO = new System.Windows.Forms.TextBox();
@@ -118,7 +119,8 @@
             this.ss1 = new FarPoint.Win.Spread.FpSpread();
             this.fpSpread1_Sheet1 = new FarPoint.Win.Spread.SheetView();
             this.Timer1 = new System.Windows.Forms.Timer(this.components);
-            this.TXT_CUT_TIME = new CommonClass.CeriUDate();
+            this.TXT_TO_CUR_INV = new System.Windows.Forms.TextBox();
+            this.TXT_CUST_CD = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -132,12 +134,12 @@
             // 
             // txt_plt
             // 
-            bControlFiledSetting1.ColumnID = "CD";
-            bControlFiledSetting1.TargetControl = this.txt_plt;
-            bControlFiledSetting2.ColumnID = "CD_SHORT_NAME";
-            bControlFiledSetting2.TargetControl = this.txt_plt_name;
-            this.txt_plt.CustomSetting.Add(bControlFiledSetting1);
+            bControlFiledSetting2.ColumnID = "CD";
+            bControlFiledSetting2.TargetControl = this.txt_plt;
+            bControlFiledSetting6.ColumnID = "CD_SHORT_NAME";
+            bControlFiledSetting6.TargetControl = this.txt_plt_name;
             this.txt_plt.CustomSetting.Add(bControlFiledSetting2);
+            this.txt_plt.CustomSetting.Add(bControlFiledSetting6);
             this.txt_plt.InputControl = this.txt_plt;
             this.txt_plt.Location = new System.Drawing.Point(99, 18);
             this.txt_plt.MaxLength = 2;
@@ -367,6 +369,8 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox2.Controls.Add(this.TXT_CUST_CD);
+            this.groupBox2.Controls.Add(this.TXT_TO_CUR_INV);
             this.groupBox2.Controls.Add(this.TXT_CUT_TIME);
             this.groupBox2.Controls.Add(this.TXT_SPEC_DATE);
             this.groupBox2.Controls.Add(this.TXT_SPEC);
@@ -420,6 +424,19 @@
             this.groupBox2.Size = new System.Drawing.Size(1239, 260);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
+            // 
+            // TXT_CUT_TIME
+            // 
+            this.TXT_CUT_TIME.Font = new System.Drawing.Font("宋体", 9.75F);
+            this.TXT_CUT_TIME.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.TXT_CUT_TIME.Location = new System.Drawing.Point(679, 17);
+            this.TXT_CUT_TIME.Margin = new System.Windows.Forms.Padding(4);
+            this.TXT_CUT_TIME.Name = "TXT_CUT_TIME";
+            this.TXT_CUT_TIME.RawDate = "";
+            this.TXT_CUT_TIME.Size = new System.Drawing.Size(62, 21);
+            this.TXT_CUT_TIME.TabIndex = 790;
+            this.TXT_CUT_TIME.Tag = "开始时间";
+            this.TXT_CUT_TIME.Visible = false;
             // 
             // TXT_SPEC_DATE
             // 
@@ -837,6 +854,8 @@
             // chk_Cond4
             // 
             this.chk_Cond4.AutoSize = true;
+            this.chk_Cond4.Checked = true;
+            this.chk_Cond4.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_Cond4.Location = new System.Drawing.Point(182, 4);
             this.chk_Cond4.Name = "chk_Cond4";
             this.chk_Cond4.Size = new System.Drawing.Size(52, 17);
@@ -847,6 +866,8 @@
             // chk_Cond3
             // 
             this.chk_Cond3.AutoSize = true;
+            this.chk_Cond3.Checked = true;
+            this.chk_Cond3.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_Cond3.Location = new System.Drawing.Point(98, 5);
             this.chk_Cond3.Name = "chk_Cond3";
             this.chk_Cond3.Size = new System.Drawing.Size(52, 17);
@@ -857,6 +878,8 @@
             // chk_Cond2
             // 
             this.chk_Cond2.AutoSize = true;
+            this.chk_Cond2.Checked = true;
+            this.chk_Cond2.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chk_Cond2.Location = new System.Drawing.Point(11, 5);
             this.chk_Cond2.Name = "chk_Cond2";
             this.chk_Cond2.Size = new System.Drawing.Size(52, 17);
@@ -889,6 +912,7 @@
             // opt_line5
             // 
             this.opt_line5.AutoSize = true;
+            this.opt_line5.Checked = true;
             this.opt_line5.Location = new System.Drawing.Point(14, 2);
             this.opt_line5.Name = "opt_line5";
             this.opt_line5.Size = new System.Drawing.Size(64, 17);
@@ -1018,6 +1042,7 @@
             this.fpSpread1_Sheet1});
             this.ss1.Size = new System.Drawing.Size(1239, 282);
             this.ss1.TabIndex = 2;
+            this.ss1.EditModeOn += new System.EventHandler(this.ss1_EditModeOn);
             this.ss1.CellClick += new FarPoint.Win.Spread.CellClickEventHandler(this.ss1_CellClick);
             this.ss1.ButtonClicked += new FarPoint.Win.Spread.EditorNotifyEventHandler(this.ss1_ButtonClicked);
             // 
@@ -1026,18 +1051,26 @@
             this.fpSpread1_Sheet1.Reset();
             this.fpSpread1_Sheet1.SheetName = "Sheet1";
             // 
-            // TXT_CUT_TIME
+            // Timer1
             // 
-            this.TXT_CUT_TIME.Font = new System.Drawing.Font("宋体", 9.75F);
-            this.TXT_CUT_TIME.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.TXT_CUT_TIME.Location = new System.Drawing.Point(679, 17);
-            this.TXT_CUT_TIME.Margin = new System.Windows.Forms.Padding(4);
-            this.TXT_CUT_TIME.Name = "TXT_CUT_TIME";
-            this.TXT_CUT_TIME.RawDate = "";
-            this.TXT_CUT_TIME.Size = new System.Drawing.Size(62, 21);
-            this.TXT_CUT_TIME.TabIndex = 790;
-            this.TXT_CUT_TIME.Tag = "开始时间";
-            this.TXT_CUT_TIME.Visible = false;
+            this.Timer1.Interval = 3000;
+            this.Timer1.Tick += new System.EventHandler(this.Timer1_Tick);
+            // 
+            // TXT_TO_CUR_INV
+            // 
+            this.TXT_TO_CUR_INV.Location = new System.Drawing.Point(679, 46);
+            this.TXT_TO_CUR_INV.Name = "TXT_TO_CUR_INV";
+            this.TXT_TO_CUR_INV.Size = new System.Drawing.Size(62, 22);
+            this.TXT_TO_CUR_INV.TabIndex = 791;
+            this.TXT_TO_CUR_INV.Visible = false;
+            // 
+            // TXT_CUST_CD
+            // 
+            this.TXT_CUST_CD.Location = new System.Drawing.Point(748, 18);
+            this.TXT_CUST_CD.Name = "TXT_CUST_CD";
+            this.TXT_CUST_CD.Size = new System.Drawing.Size(27, 22);
+            this.TXT_CUST_CD.TabIndex = 792;
+            this.TXT_CUST_CD.Visible = false;
             // 
             // CGD2080C
             // 
@@ -1155,5 +1188,7 @@
         private System.Windows.Forms.TextBox TXT_SPEC_DATE;
         private System.Windows.Forms.TextBox TXT_SPEC;
         public CommonClass.CeriUDate TXT_CUT_TIME;
+        private System.Windows.Forms.TextBox TXT_TO_CUR_INV;
+        private System.Windows.Forms.TextBox TXT_CUST_CD;
     }
 }
