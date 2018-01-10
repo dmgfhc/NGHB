@@ -49,9 +49,9 @@ using CommonClass;
 
 namespace CG
 {
-    public partial class CGD2080C : CommonClass.FORMBASE
+    public partial class CGD2082C : CommonClass.FORMBASE
     {
-        public CGD2080C()
+        public CGD2082C()
         {
             InitializeComponent();
         }
@@ -66,7 +66,7 @@ namespace CG
 
         const int SPD_LINE1 = 0;
         const int SPD_LINE2 = 1;
-        const int SPD_PLATE_NO = 2;
+        const int SPD_PLATE_NO = 3;
         const int SPD_LOT_NO = 4;
         const int SPD_CUT_NO = 5;
         const int SPD_THK = 6;
@@ -77,11 +77,11 @@ namespace CG
         const int SPD_SIZE_KND = 11;
         const int SPD_TRIM_FL = 12;
         const int SPD_APLY_STDSPEC = 13;
-        const int SPD_APLY_STDSPEC_NEW = 14;
-        const int SPD_SURF_GRD = 15;
-        const int SPD_MARK_YN = 16;
-        const int SPD_STAMP_YN = 17;
-        const int SPD_BAR_YN = 18;
+        const int SPD_SURF_GRD = 14;
+        const int SPD_MARK_YN = 15;
+        const int SPD_STAMP_YN = 16;
+        const int SPD_BAR_YN = 17;
+        const int SPD_PROD_REMARK = 18;
         const int SPD_PROD_DATE = 19;
         const int SPD_EMP_CD = 20;
         const int SPD_PAINT = 21;
@@ -93,46 +93,32 @@ namespace CG
         const int SPD_UST = 27;
         const int SPD_CUR_UST = 28;
         const int SPD_VESSEL_NO = 29;
-        const int SPD_DEL_TO_DATE = 37;
-        const int SPD_CUST_CD = 38;
-        const int SPD_TO_CUR_INV = 39;
-        const int SPD_CUST_CD_SHORT = 40;
-        const int SPD_URGNT_FL = 41;
-        const int SPD_IMP_CONT = 43;
+        const int SPD_CUST_CD = 36;
+        const int SPD_TO_CUR_INV = 37;
+        const int SPD_CUST_CD_SHORT = 38;
+        const int SPD_ORD_CNT = 39;
+        //一坯多订单  2011-08-23  by  LiQian
+        const int SPD_ORD_NO = 40;
+        const int SPD_DEL_TO_DATE = 41;
+        const int SPD_HTM_METH = 42;
+        const int SPD_URGNT_FL = 43;
+        //紧急订单绿色标记  2012-08-16  by  LiQian
         const int SPD_SIDE_MARK = 44;
-        const int SPD_JIT_FLAG = 45;
+        const int SPD_SEALMEMO = 45;
+        //加冲钢印 20150119
+        const int SPD_JIT_FLAG = 46;
+        const int SPD_PAINTNUM = 47;
+        const int SPD_CE = 48;
 
-        const int SS2_PRODSPECNOA_STD = 50;
-        //多船级社标准一
-        const int SS2_PRODSPECNOB_STD = 51;
-        //多船级社标准二
-        const int SS2_PRODSPECNOC_STD = 52;
-        //多船级社标准三
-        const int SS2_PRODSPECNOA = 53;
-        //多船级社牌号一
-        const int SS2_PRODSPECNOB = 54;
-        //多船级社牌号二
-        const int SS2_PRODSPECNOC = 55;
-        //多船级社牌号三
-        const int SS2_PRODSPECNOA1 = 56;
-        //多船级社牌号一
-        const int SS2_PRODSPECNOB1 = 57;
-        //多船级社牌号二
-        const int SS2_PRODSPECNOC1 = 58;
-        //多船级社牌号三
+        const int SPD_PRODSPECNOA_STD = 49;
+        const int SPD_PRODSPECNOB_STD = 50;
+        const int SPD_PRODSPECNOC_STD = 51;
+        const int SPD_PRODSPECNOA = 52;
+        const int SPD_PRODSPECNOB = 53;
+        const int SPD_PRODSPECNOC = 54;
 
-        int PRODSPECNOA;
-        //牌号一
-        int PRODSPECNOB;
-        //牌号二
-        int PRODSPECNOC;
-        //牌号三
-        int PRODSPECNOA1;
-        //牌号一
-        int PRODSPECNOB1;
-        //牌号二
-        //牌号三
-        int PRODSPECNOC1;
+        const int SPD_CLASS_CD = 55;
+        const int SPD_CLASS_LVL = 56;
 
         public byte LoByte(short Word)
         {
@@ -168,68 +154,63 @@ namespace CG
             iheadrow = 0;
             iscseq = 1;
 
-            p_SetSc("#1", "C", "", "I", "", "", "", iscseq, iheadrow, "M");//0
-            p_SetSc("#2", "C", "", "I", "", "", "", iscseq, iheadrow, "M");//1
-            p_SetSc("钢板号", "E", "14", "PIL", "", "", "", iscseq, iheadrow, "M");//2
-            p_SetSc("锁定原因", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//3
+            p_SetSc("#1", "C", "", "", "", "", "", iscseq, iheadrow, "M");//0
+            p_SetSc("#2", "C", "", "", "", "", "", iscseq, iheadrow, "M");//1
+            p_SetSc("超量余材", "C", "", "", "", "", "", iscseq, iheadrow, "M");//2
+            p_SetSc("钢板号", "E", "14", "PI", "", "", "", iscseq, iheadrow, "M");//3
             p_SetSc("轧批号", "E", "20", "L", "", "", "", iscseq, iheadrow, "M");//4
             p_SetSc("分段号", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//5
-            p_SetSc("厚度", "N", "9,2", "I", "", "", "", iscseq, iheadrow, "R");//6
-            p_SetSc("宽度", "N", "9", "I", "", "", "", iscseq, iheadrow, "M");//7
-            p_SetSc("长度", "N", "9", "I", "", "", "", iscseq, iheadrow, "M");//8
+            p_SetSc("厚度", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R");//6
+            p_SetSc("宽度", "N", "9", "L", "", "", "", iscseq, iheadrow, "M");//7
+            p_SetSc("长度", "N", "9", "L", "", "", "", iscseq, iheadrow, "M");//8
             p_SetSc("重量", "E", "10", "L", "", "", "", iscseq, iheadrow, "R");//9
-            p_SetSc("尾板", "C", "", "I", "", "", "", iscseq, iheadrow, "M");//10
-            p_SetSc("定尺", "C", "", "I", "", "", "", iscseq, iheadrow, "M");//11
-            p_SetSc("切边", "C", "", "I", "", "", "", iscseq, iheadrow, "M");//12
-            p_SetSc("标准号", "E", "30", "IL", "", "", "", iscseq, iheadrow, "L");//13
-            p_SetSc("改判标准号", "E", "30", "I", "", "", "", iscseq, iheadrow, "L");//14
-            p_SetSc("合格", "C", "", "I", "", "", "", iscseq, iheadrow, "M");//15
-            p_SetSc("喷印", "C", "", "I", "", "", "", iscseq, iheadrow, "M");//16
-            p_SetSc("冲印", "C", "", "I", "", "", "", iscseq, iheadrow, "M");//17
-            p_SetSc("侧喷", "C", "", "I", "", "", "", iscseq, iheadrow, "M");//18
-            p_SetSc("生产日期", "DT", "", "I", "", "", "", iscseq, iheadrow, "M");//19
-            p_SetSc("作业人员", "E", "10", "IL", "", "", "", iscseq, iheadrow, "M");//20
-            p_SetSc("标印", "C", "", "IL", "", "", "", iscseq, iheadrow, "M");//21
-            p_SetSc("标签", "C", "", "IL", "", "", "", iscseq, iheadrow, "M");//22
-            p_SetSc("轧批", "C", "", "IL", "", "", "", iscseq, iheadrow, "M");//23
+            p_SetSc("尾板", "C", "", "L", "", "", "", iscseq, iheadrow, "M");//10
+            p_SetSc("定尺", "E", "10", "L", "", "", "", iscseq, iheadrow, "M");//11
+            p_SetSc("切边", "C", "", "L", "", "", "", iscseq, iheadrow, "M");//12
+            p_SetSc("标准号", "E", "30", "L", "", "", "", iscseq, iheadrow, "L");//13
+            p_SetSc("表面等级", "E", "10", "L", "", "", "", iscseq, iheadrow, "M");//14
+            p_SetSc("喷印", "C", "", "I", "", "", "", iscseq, iheadrow, "M");//15
+            p_SetSc("冲印", "C", "", "I", "", "", "", iscseq, iheadrow, "M");//16
+            p_SetSc("侧喷", "C", "", "I", "", "", "", iscseq, iheadrow, "M");//17
+            p_SetSc("生产备注", "E", "200", "L", "", "", "", iscseq, iheadrow, "L");//18
+            p_SetSc("生产日期", "DT", "", "IL", "", "", "", iscseq, iheadrow, "M");//19
+            p_SetSc("作业人员", "E", "10", "L", "", "", "", iscseq, iheadrow, "M");//20
+            p_SetSc("标印", "C", "", "L", "", "", "", iscseq, iheadrow, "M");//21
+            p_SetSc("标签", "C", "", "L", "", "", "", iscseq, iheadrow, "M");//22
+            p_SetSc("轧批", "C", "", "L", "", "", "", iscseq, iheadrow, "M");//23
             p_SetSc("打印标准", "E", "40", "L", "", "", "", iscseq, iheadrow, "L");//24
             p_SetSc("钢种", "E", "40", "L", "", "", "", iscseq, iheadrow, "L");//25
             p_SetSc("订单备注", "E", "400", "L", "", "", "", iscseq, iheadrow, "L");//26
             p_SetSc("UST", "E", "20", "L", "", "", "", iscseq, iheadrow, "L");//27
             p_SetSc("CUR_UST", "E", "20", "L", "", "", "", iscseq, iheadrow, "L");//28
             p_SetSc("加喷", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//29
-            p_SetSc("厚度下限", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R");//30
-            p_SetSc("厚度上限", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "R");//31
+            p_SetSc("厚度下限", "N", "9,1", "L", "", "", "", iscseq, iheadrow, "R");//30
+            p_SetSc("厚度上限", "N", "9,1", "L", "", "", "", iscseq, iheadrow, "R");//31
             p_SetSc("宽度下限", "N", "9,1", "L", "", "", "", iscseq, iheadrow, "R");//32
             p_SetSc("宽度上限", "N", "9,1", "L", "", "", "", iscseq, iheadrow, "R");//33
             p_SetSc("长度下限", "N", "9,1", "L", "", "", "", iscseq, iheadrow, "R");//34
             p_SetSc("长度上限", "N", "9,1", "L", "", "", "", iscseq, iheadrow, "R");//35
-            p_SetSc("交货期开始", "E", "8", "L", "", "", "", iscseq, iheadrow, "M");//36
-            p_SetSc("交货期结束", "E", "8", "L", "", "", "", iscseq, iheadrow, "M");//37
-            p_SetSc("客户代码", "E", "20", "L", "", "", "", iscseq, iheadrow, "M");//38
-            p_SetSc("目的库", "E", "20", "L", "", "", "", iscseq, iheadrow, "M");//39
-            p_SetSc("子公司代码", "E", "10", "L", "", "", "", iscseq, iheadrow, "M");//40
-            p_SetSc("是否紧急订单", "E", "1", "L", "", "", "", iscseq, iheadrow, "M");//41
-            p_SetSc("轧制班别", "E", "2", "L", "", "", "", iscseq, iheadrow, "M");//42
-            p_SetSc("重点订单", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//43
+            p_SetSc("客户代码", "E", "10", "L", "", "", "", iscseq, iheadrow, "M");//36
+            p_SetSc("目的库", "E", "10", "L", "", "", "", iscseq, iheadrow, "M");//37
+            p_SetSc("子公司代码", "E", "10", "L", "", "", "", iscseq, iheadrow, "M");//38
+            p_SetSc("订单数量", "E", "2", "L", "", "", "", iscseq, iheadrow, "M");//39
+            p_SetSc("订单号", "E", "20", "L", "", "", "", iscseq, iheadrow, "L");//40
+            p_SetSc("交货期", "E", "8", "L", "", "", "", iscseq, iheadrow, "L");//41
+            p_SetSc("热处理", "E", "10", "L", "", "", "", iscseq, iheadrow, "M");//42
+            p_SetSc("是否紧急订单", "E", "1", "L", "", "", "", iscseq, iheadrow, "M");//43
             p_SetSc("侧喷加喷", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//44
-            p_SetSc("是否定制配送", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//45
-            p_SetSc("试样备注", "E", "200", "L", "", "", "", iscseq, iheadrow, "L");//46
-            p_SetSc("尺寸备注", "E", "200", "L", "", "", "", iscseq, iheadrow, "L");//47
-            p_SetSc("打包备注", "E", "200", "L", "", "", "", iscseq, iheadrow, "L");//48
-            p_SetSc("表面客户要求", "E", "200", "L", "", "", "", iscseq, iheadrow, "L");//49
-            p_SetSc("多认证1", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//50
-            p_SetSc("多认证2", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//51
-            p_SetSc("多认证3", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//52
-            p_SetSc("牌号1", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//53
-            p_SetSc("牌号2", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//54
-            p_SetSc("牌号3", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//55
-            p_SetSc("牌号一", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//56
-            p_SetSc("牌号二", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//57
-            p_SetSc("牌号三", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//58
-            p_SetSc("订单号", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//59
-            p_SetSc("订单项次", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//60
-           
+            p_SetSc("加冲钢印", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//45
+            p_SetSc("是否定制配送", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//46
+            p_SetSc("标识次数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//47
+            p_SetSc("CE标识", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//48
+            p_SetSc("检查机关1", "N", "9", "L", "", "", "", iscseq, iheadrow, "R");//49
+            p_SetSc("检查机关2", "N", "9", "L", "", "", "", iscseq, iheadrow, "R");//50
+            p_SetSc("检查机关3", "N", "9", "L", "", "", "", iscseq, iheadrow, "R");//51
+            p_SetSc("牌号1", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//52
+            p_SetSc("牌号2", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//53
+            p_SetSc("牌号3", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//54
+            p_SetSc("是否机械用钢", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//55
+            p_SetSc("机械等级", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//56
 
             //iheadrow = 0;
             //p_spanSpread("板坯规格", 10, 12, iscseq, iheadrow, 1);
@@ -276,27 +257,25 @@ namespace CG
 
         }
 
-
-
-        private void CGD2080C_Load(object sender, EventArgs e)
+        private void CGD2082C_Load(object sender, EventArgs e)
         {
-            base.sSvrPgmPkgName = "CGD2080NC";
+            base.sSvrPgmPkgName = "CGD2082NC";
             Form_Define();
 
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_LAST_YN, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_TRIM_FL, true);
             SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_PAINT, true);
             SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_LABEL, true);
             SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_LOTCD, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_CE, true);
             SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_LINE2, true);
             txt_plt.Text = "C3";
 
             txt_line.Text = "1";
-            txt_rec_sts.Text = "1";
-            
-            opt_line1.Checked = true;
-            opt_line3.Checked = true;
+            txt_rec_sts.Text = "2";
 
-            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_LINE1, false);
-            SpreadCommon.Gp_Sp_ColHidden(ss1, SPD_LINE2, true);
+            opt_line1.Checked = true;
+            opt_line4.Checked = true;
 
             TXT_ORD_REMARK.Width = 598;
             TXT_ORD_REMARK.Height = 48;
@@ -304,7 +283,7 @@ namespace CG
             chk_Cond.Add(chk_Cond0);
             chk_Cond.Add(chk_Cond1);
             chk_Cond.Add(chk_Cond2);
-            chk_Cond.Add(chk_Cond3); 
+            chk_Cond.Add(chk_Cond3);
             chk_Cond.Add(chk_Cond4);
 
             udt_date_fr.RawDate = DateTime.Now.ToString("yyyyMMdd");
@@ -329,14 +308,11 @@ namespace CG
             string sSpec;
             string sStdspec_YY;
 
-            if (txt_rec_sts.Text == "1")
-            {
-              //  p_Pro(1, 1, true, false);
-            }
+            int iCount;
 
             for (iRow = 1; iRow <= ss1.ActiveSheet.RowCount; iRow++)
             {
-                if (ss1.ActiveSheet.RowHeader.Cells[iRow - 1, 0].Text == "修改" || ss1.ActiveSheet.RowHeader.Cells[iRow - 1, 0].Text == "增加" | ss1.ActiveSheet.RowHeader.Cells[iRow - 1, 0].Text == "删除")
+                if (ss1.ActiveSheet.RowHeader.Cells[iRow - 1, 0].Text == "修改" || ss1.ActiveSheet.RowHeader.Cells[iRow - 1, 0].Text == "增加" || ss1.ActiveSheet.RowHeader.Cells[iRow - 1, 0].Text == "删除")
                 {
                     sPlate_no = ss1.ActiveSheet.Cells[iRow - 1, SPD_PLATE_NO].Text;
                     if (opt_line5.Checked)
@@ -358,15 +334,23 @@ namespace CG
                     }
                     sStdspec_YY = ss1.ActiveSheet.Cells[iRow - 1, SPD_STDSPEC_YY].Text;
                     sSpec = ss1.ActiveSheet.Cells[iRow - 1, SPD_STLGRD].Text;
-                    if ((chk_Cond0.Checked || chk_Cond8.Checked) & ss1.ActiveSheet.RowHeader.Cells[iRow-1,0].Text!= "删除")
-                    {
-                        Cmd_SEND(iRow-1,sMark_no, sThk, sWid, sLen, sWgt, sSpec, sStdspec_YY, sPlate_no);
-                    }
+                    //if ((chk_Cond0.Checked || chk_Cond8.Checked) & ss1.ActiveSheet.RowHeader.Cells[iRow-1,0].Text!= "删除")
+                    //{
+                    Cmd_SEND(iRow - 1, sMark_no, sThk, sWid, sLen, sWgt, sSpec, sStdspec_YY, sPlate_no);
+                    //}
                     break; // TODO: might not be correct. Was : Exit For
                 }
             }
 
-            Form_Ref();
+            //p_Pro(1, 1, true, false);
+
+            for (iCount = 1; iCount <= ss1.ActiveSheet.RowCount; iCount++)
+            {
+                if (ss1.ActiveSheet.Cells[iCount - 1, SPD_MARK_YN].Text == "True")
+                {
+                    Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, iCount - 1, iCount - 1, Color.Black, SSP1.BackColor);
+                }
+            }
 
             iRow = iRow + 10;
             if (iRow > ss1.ActiveSheet.RowCount)
@@ -383,12 +367,10 @@ namespace CG
             txt_plt.Text = "C3";
 
             txt_line.Text = "1";
-            txt_rec_sts.Text = "1";
+            txt_rec_sts.Text = "2";
 
             opt_line1.Checked = true;
-            opt_line3.Checked = true;
-
-            txt_stdspec_chg.Text = "";
+            opt_line4.Checked = true;
 
             return true;
 
@@ -397,48 +379,45 @@ namespace CG
         public override void Form_Ref()
         {
             int iCount;
-            int iCol;
-            string sCurDate;
-            string sDel_To_Date;
             string sPlateNo;
+            Color sCnt_color;
             string sUrgnt_Fl;
-            string simpcont;
+
+            int inum;
+            int lRow;
 
             //    If Gf_Sp_ProceExist(sc1.Item("Spread")) Then Exit Sub
 
-            sCurDate = DateTime.Now.ToString("yyyyMM");
-
             p_Ref(1, 1, true, true);
 
-                for (iCount = 1; iCount <= ss1.ActiveSheet.RowCount; iCount++)
+            for (iCount = 1; iCount <= ss1.ActiveSheet.RowCount; iCount++)
+            {
+                // 一坯多订单,字体显示红色  2011-08-23  by  LiQian
+                if (ss1.ActiveSheet.Cells[iCount - 1, SPD_ORD_CNT].Text != "")
                 {
-                    sPlateNo = ss1.ActiveSheet.Cells[iCount - 1, SPD_PLATE_NO].Text;
-                    if (substr(ss1.ActiveSheet.Cells[iCount - 1, SPD_PLATE_NO].Text, 0, 12) == substr(sPlateNo, 0,12))
+                    if (ss1.ActiveSheet.Cells[iCount - 1, SPD_ORD_CNT].Text == "2")
                     {
+                        sCnt_color = Color.Red;
                     }
                     else
                     {
-                        ss1.ActiveSheet.Cells[iCount - 2, SPD_LAST_YN].Text = "True";
+                        sCnt_color = Color.Black;
                     }
-                    sDel_To_Date = substr(ss1.ActiveSheet.Cells[iCount-1,SPD_DEL_TO_DATE].Text,0,6) ;
-                    if (convertX(sDel_To_Date) < convertX(sCurDate))
-                    {
-                        Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount-1, iCount-1, iCount-1, Color.Red,Color.White);
-                    }
-                    //紧急订单绿色显示 add by liqian 2012-08-16
-                    sUrgnt_Fl = ss1.ActiveSheet.Cells[iCount - 1, SPD_URGNT_FL].Text.Trim();
-                    if (sUrgnt_Fl == "Y")
-                    {
-                        Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount-1, iCount-1, iCount-1, Color.DarkGreen,Color.White);
-                    }
-
-                    simpcont = ss1.ActiveSheet.Cells[iCount - 1, SPD_IMP_CONT].Text.Trim();
-                    if (simpcont == "Y")
-                    {
-                        Gp_Sp_BlockColor(ss1, SPD_PLATE_NO, SPD_PLATE_NO, iCount-1, iCount-1, SSP4.BackColor,Color.White);
-                        Gp_Sp_BlockColor(ss1, SPD_IMP_CONT, SPD_IMP_CONT, iCount-1, iCount-1, SSP4.BackColor,Color.White);
-                    }
+                    Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, iCount - 1, iCount - 1, sCnt_color, Color.White);
                 }
+
+                if (ss1.ActiveSheet.Cells[iCount - 1, SPD_MARK_YN].Text == "True")
+                {
+                    Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount-1, iCount-1, iCount-1, Color.Black, SSP1.BackColor);
+                }
+
+                //紧急订单绿色显示 add by liqian 2012-08-16
+                sUrgnt_Fl = ss1.ActiveSheet.Cells[iCount - 1, SPD_URGNT_FL].Text;
+                if (sUrgnt_Fl == "Y")
+                {
+                    Gp_Sp_BlockColor(ss1, 0, ss1.ActiveSheet.ColumnCount - 1, iCount - 1, iCount - 1, Color.Green, Color.White);
+                }
+            }
         }
 
         public override void Spread_Ins()
@@ -1116,47 +1095,6 @@ namespace CG
             Cmd_SEND_SET(e.Row);
         }
 
-        private void ss1_CellClick(object sender, CellClickEventArgs e)
-        {
-            //  Dim sStdspec As String
-            //  Dim sStdspec_YY As String
-
-            if (ss1.ActiveSheet.RowCount <= 0) return;
-
-            if (e.Column == SPD_APLY_STDSPEC_NEW)
-            {
-                if (ss1.ActiveSheet.Cells[e.Row, e.Column].Text == "")
-                {
-                    ss1.ActiveSheet.Cells[e.Row, e.Column].Text = txt_stdspec_chg.Text;
-                    if (txt_stdspec_chg.Text != "")
-                    {
-                        //            sStdspec = txt_stdspec_chg
-                        //            sStdspec_YY = "%"
-                        ss1.ActiveSheet.Cells[e.Row, SPD_SURF_GRD].Text = "False";
-                        //            ss1.Col = SPD_STDSPEC_YY:          ss1.Text = Gf_qp_std_headFind(M_CN1, sStdspec, sStdspec_YY, 1)
-                        //            ss1.Col = SPD_STLGRD:              ss1.Text = Gf_qp_std_headFind(M_CN1, sStdspec, sStdspec_YY, 2)
-                        ss1.ActiveSheet.Cells[e.Row, SPD_CUR_UST].Text = "X";
-                    }
-                }
-                else
-                {
-                    //            sStdspec = ss1.Text
-                    //            sStdspec_YY = "%"
-                    ss1.ActiveSheet.Cells[e.Row, SPD_APLY_STDSPEC_NEW].Text = "";
-                    ss1.ActiveSheet.Cells[e.Row, SPD_SURF_GRD].Text = "True";
-                    //            ss1.Col = SPD_STDSPEC_YY:          ss1.Text = Gf_qp_std_headFind(M_CN1, sStdspec, sStdspec_YY, 1)
-                    //            ss1.Col = SPD_STLGRD:              ss1.Text = Gf_qp_std_headFind(M_CN1, sStdspec, sStdspec_YY, 2)
-                    ss1.ActiveSheet.Cells[e.Row, SPD_CUR_UST].Text = "";
-                }
-            }
-
-            if (e.Column == SPD_PROD_DATE)
-            {
-                TXT_CUT_TIME.RawDate = Gf_DTSet("", "X");
-                ss1.ActiveSheet.Cells[e.Row, SPD_PROD_DATE].Text = TXT_CUT_TIME.RawDate;
-            }
-        }
-
         private void ss1_EditModeOn(object sender, EventArgs e)
         {
             int iCol;
@@ -1301,15 +1239,28 @@ namespace CG
             string sWid;
             string sLen;
             string sSpec;
-            string sSpec_ALL;
+            string sSpec_ALL = "";
             string sSpec1;
             string sSpec2;
             string sSpec_Str;
             string sStdspec_YY;
             int sNum;
             string sNumFL;
-            string sUST;
+
+            string sCurDate;
+            string sOrderNo;
+            string sDel_To_Date;
+
+            string sAdd_W = "";
+            string sAdd_S = "";
+            string sAdd_T;
+            string sAdd_H;
+            string iPaint_Add;
+
             string sCUST_CD_SHORT;
+            string sideMark;
+
+            sCurDate = DateTime.Now.ToString("yyyyMM");
 
             if (opt_line5.Checked)
             {
@@ -1332,20 +1283,50 @@ namespace CG
             TXT_SPEC_DATE.Text = ss1.ActiveSheet.Cells[ROW, SPD_STLGRD].Text;
             TXT_ORD_REMARK.Text = ss1.ActiveSheet.Cells[ROW, SPD_ORD_REMARK].Text;
             TXT_VESSEL_NO.Text = ss1.ActiveSheet.Cells[ROW, SPD_VESSEL_NO].Text.Trim();
-            sSpec_ALL = ss1.ActiveSheet.Cells[ROW, SPD_APLY_STDSPEC_NEW].Text;
-            sUST = ss1.ActiveSheet.Cells[ROW, SPD_UST].Text;
-            TXT_CUST_CD.Text = ss1.ActiveSheet.Cells[ROW, SPD_CUST_CD].Text;
+            sAdd_T = ss1.ActiveSheet.Cells[ROW, SPD_UST].Text;
+            TXT_CUST_CD.Text = ss1.ActiveSheet.Cells[ROW, SPD_CUST_CD].Text.Trim();
             TXT_TO_CUR_INV.Text = ss1.ActiveSheet.Cells[ROW, SPD_TO_CUR_INV].Text;
             sCUST_CD_SHORT = ss1.ActiveSheet.Cells[ROW, SPD_CUST_CD_SHORT].Text;
+            TXT_PAINTNUM.Text = ss1.ActiveSheet.Cells[ROW, SPD_PAINTNUM].Text;
+            sideMark = ss1.ActiveSheet.Cells[ROW, SPD_SIDE_MARK].Text;
+            TXT_CE.Text = ss1.ActiveSheet.Cells[ROW, SPD_CE].Text;
+
             if (sSpec_ALL == "")
             {
                 sSpec_ALL = ss1.ActiveSheet.Cells[ROW, SPD_APLY_STDSPEC].Text;
             }
 
-            if (sUST == "" | sUST == "X")
+            sOrderNo = substr(ss1.ActiveSheet.Cells[ROW, SPD_ORD_NO].Text,0,3);
+
+            if (sOrderNo == "OB5")
             {
-                sUST = "";
+                sAdd_W = "W";
             }
+
+            sDel_To_Date = substr(ss1.ActiveSheet.Cells[ROW, SPD_DEL_TO_DATE].Text, 0, 6);
+
+            if (convertX(sDel_To_Date) < convertX(sCurDate))
+            {
+                sAdd_S = "S";
+            }
+
+            sAdd_T = ss1.ActiveSheet.Cells[ROW, SPD_CUR_UST].Text;
+
+            if (sAdd_T == "")
+            {
+                sAdd_T = ss1.ActiveSheet.Cells[ROW, SPD_UST].Text;
+            }
+
+            if (sAdd_T == "" | sAdd_T == "X")
+            {
+                sAdd_T = "";
+            }
+
+            sAdd_H = ss1.ActiveSheet.Cells[ROW, SPD_HTM_METH].Text;
+
+            iPaint_Add = sAdd_W + sAdd_S + sAdd_T + sAdd_H;
+
+
             //ss1.Col = 0;
 
             Nisco = "NG";
@@ -1419,7 +1400,7 @@ namespace CG
             TXT_Paint1.Text = sPlate_no;
             TXT_Paint2.Text = sSpec1;
             TXT_Paint3.Text = sThk + sFlag + sWid + sFlag + sLen;
-            TXT_Paint4.Text = sUST + sNull + TXT_VESSEL_NO.Text;
+            TXT_Paint4.Text = iPaint_Add + sNull + TXT_VESSEL_NO.Text;
             TXT_Paint4.Text = TXT_Paint4.Text.Trim();
             TXT_Paint4.Text = sCUST_CD_SHORT + "  " + TXT_Paint4.Text;
             TXT_Paint4.Text = TXT_Paint4.Text.Trim();
@@ -1428,7 +1409,7 @@ namespace CG
             TXT_Punch2.Text = sPlate_no;
 
             //TXT_Edge = sPlate_no & sNull & sThk & sFlag & sWid & sFlag & sLen & sNull & sSpec2 & sNull & TXT_VESSEL_NO & sNull & TXT_CUST_CD & TXT_TO_CUR_INV
-            TXT_Edge.Text = sPlate_no + sNull + sSpec2 + sNull + sThk + sFlag + sWid + sFlag + sLen + sNull + TXT_VESSEL_NO.Text + sNull + TXT_CUST_CD.Text + TXT_TO_CUR_INV.Text;
+            TXT_Edge.Text = sPlate_no + sNull + sSpec2 + sNull + sThk + sFlag + sWid + sFlag + sLen + sNull + sideMark + sNull + TXT_CUST_CD.Text + TXT_TO_CUR_INV.Text;
             TXT_Bar.Text = TXT_MAT_NO.Text;
 
         }
@@ -1450,7 +1431,7 @@ namespace CG
             string sSpec1;
             string sSpec2;
             string sStdspec_YY;
-            string sUser;//10个字符
+            string sUser;//6个字符
             string Header;//2个字符
             string Nisco_Logo;
             string Nisco;
@@ -1462,8 +1443,16 @@ namespace CG
             string sNullstr;
 
             string sSpec_Str;
-            string sSpec_Logo;
-            string sSpec_IRS_Logo = "";
+            string sSpec_Logo = "";
+            string sPaint_Logo1;
+            string sPaint_Logo2;
+            string sPaint_Logo3;
+            string sPaint_Logo4;
+            string sPunch_Logo1;
+            string sPunch_Logo2;
+            string sPunch_Logo3;
+            string sPunch_Logo4;
+            string sSpec_IRS_Logo;
             string sProd_Date;
             string sGroup;
             int sNum;
@@ -1471,7 +1460,7 @@ namespace CG
 
             string PaintStr;
             short PaintStr_CD;
-            string[] Paint = new string[4];//48个字符
+            string[] Paint = new string[4];//78个字符
 
             string PunchStr;
             string[] Punch = new string[2];//32个字符
@@ -1480,11 +1469,20 @@ namespace CG
             short EdgeStr_CD;
             string Edge;//48个字符
             string Bar;//18个字符
-            string sNisco;
 
             string[] StrSend = new string[10];
 
-            string sUST;
+            string sCurDate;
+            string sOrderNo;
+            string sDel_To_Date;
+
+            string sAdd_W = "";
+            string sAdd_S = "";
+            string sAdd_T = "";
+            string sAdd_H = "";
+            string iPaint_Add;
+
+            string sNisco;
 
             string sEdgeString;
             //2012-03-01  modify by liqian 侧标位数扩展50->65
@@ -1498,8 +1496,33 @@ namespace CG
             string sTO_CUR_INV;
 
             string sJIT_FLAG;
+            string sEALMEMO;
 
-            sUST = "T";
+            string sPAINTNUM;
+
+            string sSce_Str;
+            string sSce_Logo;
+            int sStr_Len;
+
+            string sSinspunita;
+            string sSinspunitb;
+            string sSinspunitc;
+
+
+            int PRODSPECNOA;
+            int PRODSPECNOB;
+            int PRODSPECNOC;
+
+            string sSpec_Punch_Logo;
+
+            string sClasscd;
+            string sClasslvl;
+
+            string sClass;
+
+
+            sCurDate = DateTime.Now.ToString("yyyyMM");
+            sAdd_T = "T";
 
             sMark_no = iMark_no;
             sMark_no = sMark_no.PadRight(16, ' ');
@@ -1515,14 +1538,14 @@ namespace CG
             sSpec2 = iSpec;
             sStdspec_YY = iStdspec_yy;
             sUser = GeneralCommon.sUserID;
-            sUser = sUser.PadRight(10, ' ');
+            sUser = sUser.PadRight(6, ' ');
 
             Header = "MD";
-            Header = Header.PadRight(2, ' ');
-            Nisco_Logo = Chr(127);
+            Nisco_Logo = Chr(1);
             Nisco = "NG";
             sFlag = "X";
             sNumFL = "N";
+           
 
             //    sPaint = 1
             //    sPunch = 1
@@ -1542,18 +1565,32 @@ namespace CG
             sPunch = ss1.ActiveSheet.Cells[row,SPD_STAMP_YN].Text == "True"?(byte)1:(byte)0;
             sEdge = ss1.ActiveSheet.Cells[row,SPD_BAR_YN].Text == "True"?(byte)1:(byte)0;
 
-            sSpec_ALL = ss1.ActiveSheet.Cells[row,SPD_APLY_STDSPEC_NEW].Text;
-            if (sSpec_ALL == "")
+            sPAINTNUM = ss1.ActiveSheet.Cells[row, SPD_PAINTNUM].Text;
+            if (sPAINTNUM == "" || sPAINTNUM == "0")
             {
-                sSpec_ALL = ss1.ActiveSheet.Cells[row,SPD_APLY_STDSPEC].Text;
+                sPAINTNUM = "1";
             }
 
-            PRODSPECNOA = convertI(ss1.ActiveSheet.Cells[row,SS2_PRODSPECNOA].Text);
-            PRODSPECNOB = convertI(ss1.ActiveSheet.Cells[row,SS2_PRODSPECNOB].Text);
-            PRODSPECNOC = convertI(ss1.ActiveSheet.Cells[row,SS2_PRODSPECNOC].Text);
-            PRODSPECNOA1 = convertI(ss1.ActiveSheet.Cells[row,SS2_PRODSPECNOA1].Text);
-            PRODSPECNOB1 = convertI(ss1.ActiveSheet.Cells[row,SS2_PRODSPECNOB1].Text);
-            PRODSPECNOC1 = convertI(ss1.ActiveSheet.Cells[row,SS2_PRODSPECNOC1].Text);
+            sSpec_ALL = ss1.ActiveSheet.Cells[row, SPD_APLY_STDSPEC].Text;
+
+            PRODSPECNOA = convertI(ss1.ActiveSheet.Cells[row, SPD_PRODSPECNOA_STD].Text);
+            PRODSPECNOB = convertI(ss1.ActiveSheet.Cells[row, SPD_PRODSPECNOB_STD].Text);
+            PRODSPECNOC = convertI(ss1.ActiveSheet.Cells[row, SPD_PRODSPECNOC_STD].Text);
+            sSinspunita = ss1.ActiveSheet.Cells[row, SPD_PRODSPECNOA].Text;
+            sSinspunitb = ss1.ActiveSheet.Cells[row, SPD_PRODSPECNOB].Text;
+            sSinspunitc = ss1.ActiveSheet.Cells[row, SPD_PRODSPECNOC].Text;
+
+            sClasscd = ss1.ActiveSheet.Cells[row, SPD_CLASS_CD].Text;
+            sClasslvl = ss1.ActiveSheet.Cells[row, SPD_CLASS_LVL].Text;
+            if (sClasscd == "Y")
+            {
+                sClass = sClasslvl;
+            }
+            else
+            {
+                sClass = "";
+            }
+
 
             sNum = sSpec_ALL.IndexOf("-");
             if (sNum == -1)
@@ -1563,122 +1600,196 @@ namespace CG
             }
             sSpec_Str = substr(sSpec_ALL, 0, sNum);
 
-            sSpec1 = sStdspec_YY + " " + PRODSPECNOA1 + " " + PRODSPECNOB1 + " " + PRODSPECNOC1;
-            sSpec2 = sStdspec_YY + " " + PRODSPECNOA1 + " " + PRODSPECNOB1 + " " + PRODSPECNOC1;
+            sSpec1 = sStdspec_YY;
+            sSpec2 = sStdspec_YY;
+
+            sSce_Str = TXT_CE.Text;
+
+            //喷印logo、冲印logo初始化。喷印logo1为双锤给1，logo2为船徽，logo3、4给0；冲印logo1为船徽，logo2、3、4给0
+            sPaint_Logo1 = Chr(1);
+            sPaint_Logo2 = Chr(0);
+            sPaint_Logo3 = Chr(0);
+            sPaint_Logo4 = Chr(0);
+            sPunch_Logo1 = Chr(0);
+            sPunch_Logo2 = Chr(0);
+            sPunch_Logo3 = Chr(0);
+            sPunch_Logo4 = Chr(0);
 
             switch (sSpec_Str)
             {
                 case "BV":
-                    sSpec_Logo = Chr(44);
-                    //ChrW(174)
+                    sPaint_Logo2 = Chr(134 - 126);
+                    //44--134
+                    sPunch_Logo1 = Chr(134 - 126);
+                    //44--134
+                    sSpec_IRS_Logo = "  ";
                     break;
                 case "CCS":
-                    sSpec_Logo = Chr(33);
-                    //ChrW(151)
+                    sPaint_Logo2 = Chr(140 - 126);
+                    //33--140
+                    sPunch_Logo1 = Chr(140 - 126);
+                    //33--140
+                    sSpec_IRS_Logo = "  ";
                     break;
                 case "DNV":
-                    sSpec_Logo = Chr(39);
-                    //ChrW(155)
+                    sPaint_Logo2 = Chr(159 - 126);
+                    //39--159
+                    sPunch_Logo1 = Chr(159 - 126);
+                    //39--159
+                    sSpec_IRS_Logo = "  ";
                     break;
                 case "VL":
-                    sSpec_Logo = Chr(39);
-                    //ChrW(155)
+                    sPaint_Logo2 = Chr(159 - 126);
+                    //39--159
+                    sPunch_Logo1 = Chr(159 - 126);
+                    //39--159
+                    sSpec_IRS_Logo = "  ";
                     break;
                 case "GL":
-                    sSpec_Logo = Chr(39);
-                    //ChrW(171) 36->39 20160127 LICHAO
+                    sPaint_Logo2 = Chr(159 - 126);
+                    //39--159
+                    sPunch_Logo1 = Chr(159 - 126);
+                    //39--159
+                    sSpec_IRS_Logo = "  ";
                     break;
                 case "KR":
-                    sSpec_Logo = Chr(94);
-                    //ChrW(176)
+                    sPaint_Logo2 = Chr(146 - 126);
+                    //94--146
+                    sPunch_Logo1 = Chr(146 - 126);
+                    //94--146
+                    sSpec_IRS_Logo = "  ";
                     break;
                 case "LR":
-                    sSpec_Logo = Chr(96);
-                    //ChrW(172)
+                    sPaint_Logo2 = Chr(145 - 126);
+                    //96--145
+                    sPunch_Logo1 = Chr(145 - 126);
+                    //96--145
+                    sSpec_IRS_Logo = "  ";
                     break;
                 case "NK":
-                    sSpec_Logo = Chr(95);
-                    //ChrW(224)
+                    sPaint_Logo2 = Chr(133 - 126);
+                    //95--133
+                    sPunch_Logo1 = Chr(133 - 126);
+                    //95--133
+                    sSpec_IRS_Logo = "  ";
                     break;
                 case "RINA":
-                    sSpec_Logo = Chr(63);
-                    //ChrW(166)
+                    sPaint_Logo2 = Chr(161 - 126);
+                    //63--161
+                    sPunch_Logo1 = Chr(161 - 126);
+                    //63--161
+                    sSpec_IRS_Logo = "  ";
                     break;
                 case "ABS":
-                    sSpec_Logo = Chr(34);
-                    //ChrW(225)    'CE 126
+                    sPaint_Logo2 = Chr(158 - 126);
+                    //34--158
+                    sPunch_Logo1 = Chr(158 - 126);
+                    //34--158
+                    sSpec_IRS_Logo = "  ";
                     break;
                 case "RS":
                     //俄罗斯船级社
-                    sSpec_Logo = Chr(36);
-                    //" "-> 36 20161118 LICHAO
+                    sPaint_Logo2 = Chr(142 - 126);
+                    //36--142
+                    sPunch_Logo1 = Chr(142 - 126);
+                    //36--142
+                    sSpec_IRS_Logo = "  ";
                     break;
                 case "IRS":
-                    sSpec_Logo = " ";
-                    sSpec_IRS_Logo = " ";
+                    sPaint_Logo2 = Chr(148 - 126);
+                    //""--148
+                    sPunch_Logo1 = Chr(148 - 126);
+                    //""--148
+                    sSpec_IRS_Logo = "  ";
                     break;
                 default:
-                    sSpec_Logo = " ";
-                    sSpec_IRS_Logo = " ";
-                    sSpec1 = sSpec + " " + sStdspec_YY + " " + PRODSPECNOA1 + " " + PRODSPECNOB1 + " " + PRODSPECNOC1;
-                    sSpec2 = sSpec + " " + PRODSPECNOA1 + " " + PRODSPECNOB1 + " " + PRODSPECNOC1;
+                    sSpec_IRS_Logo = "";
+                    sSpec1 = sSpec + " " + sStdspec_YY;
+                    sSpec2 = sSpec;
                     break;
             }
 
-            sSpec1 = sSpec1.Trim();
-            sSpec2 = sSpec2.Trim();
+            sPaint_Logo3 = Chr(PRODSPECNOA);
+            sPaint_Logo4 = Chr(PRODSPECNOB);
 
-            StrSend[0] = Chr(46);
-            StrSend[1] = Chr(46);
+            sPunch_Logo2 = Chr(PRODSPECNOA);
+            sPunch_Logo3 = Chr(PRODSPECNOB);
+
+            if (sSinspunita != "")
+            {
+                sSpec_Punch_Logo = "  ";
+            }
+            else
+            {
+                sSpec_Punch_Logo = "";
+            }
+
+            if (sSce_Str == "是")
+            {
+                sPaint_Logo2 = Chr(137 - 126);
+            }
+            else
+            {
+                sSce_Logo = "";
+            }
+
+            StrSend[0] = Chr(75);
+            //46-->75
+            StrSend[1] = Chr(75);
+            //46-->75
             sNull = StrSend[0] + StrSend[1];
             sNullstr = " ";
 
             //2012-10-22  modify by liqian 标印第一行加 NISCO
-            sNisco = sNullstr + "NISCO";
+            sNisco = sNullstr + "NISCO ";
+            //      sNisco = Chr(128)
 
             //有重量标识要求的编辑重量信息
-            if (iStdspec_yy == "GB 713-2008" | iStdspec_yy == "GB 3531-2008" | iStdspec_yy == "GB 19189-2011" | iStdspec_yy == "GB 713-2014" | iStdspec_yy == "GB 3531-2014")
+            if (iStdspec_yy == "GB 713-2008" | iStdspec_yy == "GB 3531-2008" | iStdspec_yy == "GB 19189-2011" | iStdspec_yy == "GB 713-2014" | iStdspec_yy == "GB 3531-2014" | iStdspec_yy == "GB/T 713-2014" | iStdspec_yy == "GB/T 3531-2014" | iStdspec_yy == "GB/T 19189-2011")
             {
-                sWgt = "  T.W. " + sWgt + " t";
+                sWgt = "  T.W." + sWgt + "t";
             }
             else
             {
                 sWgt = "";
             }
 
-            //ss1.ROW = ss1.ActiveRow;
             //编辑探伤信息
-            //如果钢板要求探伤，喷印第一行末尾加探伤内容
-            sUST = ss1.ActiveSheet.Cells[row,SPD_CUR_UST].Text;
-            if (sUST == "")
+            //如果钢板要求探伤，喷印第四行加喷 T
+
+            sAdd_T = ss1.ActiveSheet.Cells[row, SPD_CUR_UST].Text;
+            if (sAdd_T == "")
             {
-                sUST = ss1.ActiveSheet.Cells[row,SPD_UST].Text;
+                sAdd_T = ss1.ActiveSheet.Cells[row, SPD_UST].Text;
             }
 
-            //    Paint(0) = sNull & Nisco_Logo & sNullstr & sMark_no & sNisco & sWgt
-            Paint[0] = sNull + Nisco_Logo + sNullstr + sMark_no + sWgt + " " + sUST;
-            Paint[0] = Paint[0].PadRight(48, ' ');
-            Paint[1] = sNull + Nisco_Logo + sSpec_Logo + PRODSPECNOA + PRODSPECNOB + PRODSPECNOC + sSpec1;
-            Paint[1] = Paint[1].PadRight(48, ' ');
-            Paint[2] = sNull + sNisco + "  " + sThk + sFlag + sWid + sFlag + sLen + sNullstr + sProd_Date + sNullstr + sGroup;
-            Paint[2] = Paint[2].PadRight(48, ' ');
-            
+            sStr_Len = ("   " + sMark_no + sWgt + " " + sAdd_T + " " + sClass).Length;
+            Paint[0] = Chr(75) + Chr(sStr_Len) + "   " + sMark_no + sWgt + " " + sAdd_T + " " + sClass;
+            Paint[0] = Paint[0].PadRight(78, ' ');
 
-            //    ss1.ROW = ss1.ActiveRow
-            //    '编辑探伤信息
-            //    '如果钢板要求探伤，喷印第四行加喷 T
-            //    ss1.Col = SPD_CUR_UST:    sUST = ss1.Text
-            //    If sUST = "" Then
-            //       ss1.Col = SPD_UST:    sUST = ss1.Text
-            //    End If
-            //
-            //    If sUST = "" Or sUST = "X" Then
-            //       sUST = ""
-            //    Else
-            //       sUST = "T"
-            //    End If
+            sStr_Len = ("   " + sSpec1 + " " + sSinspunita).Length;
+            Paint[1] = Chr(75) + Chr(sStr_Len) + "   " + sSpec1 + " " + sSinspunita;
+            Paint[1] = Paint[1].PadRight(78, ' ');
 
-            if (ss1.ActiveSheet.Cells[row,SPD_JIT_FLAG].Text == "Y")
+            sStr_Len = ("   " + sThk + sFlag + sWid + sFlag + sLen + sNullstr + sProd_Date + sNullstr + sGroup).Length;
+            Paint[2] = Chr(75) + Chr(sStr_Len) + "   " + sThk + sFlag + sWid + sFlag + sLen + sNullstr + sProd_Date + sNullstr + sGroup;
+            Paint[2] = Paint[2].PadRight(78, ' ');
+
+            sOrderNo = substr(ss1.ActiveSheet.Cells[row, SPD_ORD_NO].Text, 0, 3);
+
+            if (sOrderNo == "OB5")
+            {
+                sAdd_W = "W";
+            }
+
+            sDel_To_Date = substr(ss1.ActiveSheet.Cells[row, SPD_DEL_TO_DATE].Text, 0, 6);
+
+            if (convertX(sDel_To_Date) < convertX(sCurDate))
+            {
+                sAdd_S = "S";
+            }
+
+            if (ss1.ActiveSheet.Cells[row, SPD_JIT_FLAG].Text == "Y")
             {
                 sJIT_FLAG = "DZ";
                 // 17-DZ
@@ -1688,35 +1799,40 @@ namespace CG
                 sJIT_FLAG = "";
             }
 
-            sVESSEL_NO = ss1.ActiveSheet.Cells[row,SPD_VESSEL_NO].Text;
-            sideMark = ss1.ActiveSheet.Cells[row,SPD_SIDE_MARK].Text;
-            sCUST_CD = ss1.ActiveSheet.Cells[row,SPD_CUST_CD].Text;
-            sTO_CUR_INV = ss1.ActiveSheet.Cells[row,SPD_TO_CUR_INV].Text;
-            sCUST_CD_SHORT = ss1.ActiveSheet.Cells[row,SPD_CUST_CD_SHORT].Text;
+            sAdd_H = ss1.ActiveSheet.Cells[row, SPD_HTM_METH].Text.Trim();
+
+            iPaint_Add = sAdd_W + sAdd_S + sAdd_H;
+
+            sVESSEL_NO = ss1.ActiveSheet.Cells[row,SPD_VESSEL_NO].Text.Trim();
+            sideMark = ss1.ActiveSheet.Cells[row,SPD_SIDE_MARK].Text.Trim();
+            sCUST_CD = ss1.ActiveSheet.Cells[row,SPD_CUST_CD].Text.Trim();
+            sTO_CUR_INV = ss1.ActiveSheet.Cells[row,SPD_TO_CUR_INV].Text.Trim();
+            sCUST_CD_SHORT = ss1.ActiveSheet.Cells[row,SPD_CUST_CD_SHORT].Text.Trim();
+            sEALMEMO = ss1.ActiveSheet.Cells[row, SPD_SEALMEMO].Text.Trim();
 
             //编辑喷印第四行
             //如果钢板为子公司产品，喷印第四行首位喷子公司简码+（探伤标识）+（用户加喷信息）
             if (opt_line5.Checked)
             {
-                //            Paint(3) = sCUST_CD_SHORT & "  " & sUST & " " & sVESSEL_NO
-                Paint[3] = sCUST_CD_SHORT + " " + sVESSEL_NO;
+                Paint[3] = sCUST_CD_SHORT + "  " + iPaint_Add + " " + sVESSEL_NO;
+                sStr_Len = (sCUST_CD_SHORT + "  " + iPaint_Add + " " + sVESSEL_NO).Length;
             }
             else
             {
-                //            Paint(3) = sPlate_no & " " & sCUST_CD_SHORT & "  " & sUST & " " & sVESSEL_NO
-                Paint[3] = sPlate_no + " " + sCUST_CD_SHORT + " " + sVESSEL_NO;
+                Paint[3] = sPlate_no + " " + sCUST_CD_SHORT + "  " + iPaint_Add + " " + sVESSEL_NO;
+                sStr_Len = (sPlate_no + " " + sCUST_CD_SHORT + "  " + iPaint_Add + " " + sVESSEL_NO).Length;
             }
 
             if (sJIT_FLAG == "")
             {
-                Paint[3] = sNull + "        " + Paint[3];
+                Paint[3] = Chr(75) + Chr(sStr_Len) + Paint[3];
             }
             else
             {
-                Paint[3] = sNull + "        " + sJIT_FLAG + "  " + Paint[3];
+                Paint[3] = Chr(75) + Chr(sStr_Len + 4) + sJIT_FLAG + "  " + Paint[3];
             }
 
-            Paint[3] = Paint[3].PadRight(48, ' ');
+            Paint[3] = Paint[3].PadRight(78, ' ');
 
             PaintStr = Paint[0] + Paint[1] + Paint[2] + Paint[3];
 
@@ -1725,11 +1841,32 @@ namespace CG
             sNull = StrSend[2] + StrSend[3];
 
             PaintStr_CD = convertS(TXT_P.Text);
-            Punch[0] = sNull + sSpec_Logo + sSpec_IRS_Logo + sSpec2 + sNullstr + sMark_no;
+
+            if ((sSpec_IRS_Logo + sSpec2 + sNullstr + sMark_no + sNullstr).Length > 30)
+            {
+                sStr_Len = (sSpec_IRS_Logo + sSpec2 + sNullstr).Length;
+                Punch[0] = Chr(30) + Chr(sStr_Len) + sSpec_IRS_Logo + sSpec2 + sNullstr;
+
+                sStr_Len = (sSpec_Punch_Logo + sSinspunita + sMark_no + sNullstr + sEALMEMO).Length;
+                Punch[1] = Chr(30) + Chr(sStr_Len) + sSpec_Punch_Logo + sSinspunita + sMark_no + sNullstr + sEALMEMO;
+
+                //       sStr_Len = Len(sMark_no & sNullstr & sEALMEMO)
+                //       Punch(1) = Chr(30) & Chr(sStr_Len) & sMark_no & sNullstr & sEALMEMO
+            }
+            else
+            {
+                sStr_Len = (sSpec_IRS_Logo + sSpec2 + sNullstr + sMark_no + sNullstr).Length;
+                Punch[0] = Chr(30) + Chr(sStr_Len) + sSpec_IRS_Logo + sSpec2 + sNullstr + sMark_no + sNullstr;
+
+                sStr_Len = (sSpec_Punch_Logo + sSinspunita + sEALMEMO).Length;
+                Punch[1] = Chr(30) + Chr(sStr_Len) + sSpec_Punch_Logo + sSinspunita + sEALMEMO;
+
+                //       sStr_Len = Len(sEALMEMO)
+                //       Punch(1) = Chr(30) & Chr(sStr_Len) & sEALMEMO
+            }
+
             Punch[0] = Punch[0].PadRight(32, ' ');
-            Punch[1] = sNull;
             Punch[1] = Punch[1].PadRight(32, ' ');
-            //& sMark_no
             PunchStr = Punch[0] + Punch[1];
 
             StrSend[4] = Chr(46);
@@ -1746,47 +1883,43 @@ namespace CG
             Bar = Bar.PadRight(18, ' ');
             EdgeStr = Bar + Edge;
 
-            //编辑侧喷信息
-            //钢板号 + 尺寸 + 钢种 + （用户加喷信息） + （客户代码）+（目的库）
-
-            //编辑侧喷信息
-            //钢板号 + 尺寸 + 钢种 + （用户加喷信息） + （客户代码）+（目的库）
-
             
                 if (chk_Cond8.Checked && sEdge == 1)
                 {
-
-                    //            sEdgeStr = sMark_no & " " & sThk & "X" & sWid & "X" & sLen & " " & sSpec2 & "  " & TXT_Paint4.Text & " " & TXT_CUST_CD.Text & " " & TXT_TO_CUR_INV.Text
                     sEdgeString = sMark_no;
-                    //sEdgeString = Trim(sEdgeString) & " " & Trim(sThk) & "X" & Trim(sWid) & "X" & Trim(sLen) & " " & Trim(sSpec2)
-                    sEdgeString = sEdgeString.Trim() + " " + sSpec2.Trim() + " " + sThk.Trim() + "X" + sWid.Trim() + "X" + sLen.Trim();
+                    sEdgeString = sEdgeString.Trim() + " " + sSpec2.Trim() + " " + sSinspunita + " " + sThk.Trim() + "X" + sWid.Trim() + "X" + sLen.Trim();
+                    //            sEdgeString = Trim(sEdgeString) & " " & Trim(sSpec2) & " " & Trim(sThk) & "X" & Trim(sWid) & "X" & Trim(sLen)
+                    //            sEdgeString = Trim(sEdgeString) & " " & Trim(sSpec2) & " " & Trim(sThk) & "X" & Trim(sWid) & "X" & Trim(sLen)
                     sEdgeString = sEdgeString + " " + sideMark;
-                    sEdgeString = sEdgeString.Trim() + " " + sCUST_CD + " " + sTO_CUR_INV;
+                    sEdgeString = sEdgeString.Trim() + " " + sCUST_CD + " " + sTO_CUR_INV + " " + sClass;
                     sEdgeStr = sEdgeString.Trim();
+
                     Winsock2.SendData(sEdgeStr);
                 }
 
                 if (chk_Cond0.Checked)
                 {
-                                Winsock1.SendData(Header + "  " + Chr(16) + Chr(14) + sMark_no + Chr(10) + Chr(10) + sUser);
-                                Winsock1.SendData(HiByte(convertS(sWid)));
-                                Winsock1.SendData(LoByte(convertS(sWid)));
-                                Winsock1.SendData(HiByte(sPaint));
-                                Winsock1.SendData(LoByte(sPaint));
-                                Winsock1.SendData(HiByte(sPunch));
-                                Winsock1.SendData(LoByte(sPunch));
-                                Winsock1.SendData(HiByte(sEdge));
-                                Winsock1.SendData(LoByte(sEdge));
+                    Winsock1.SendData(Header + "  " + Chr(16) + Chr(14) + sMark_no);
+                    Winsock1.SendData(sPaint_Logo1 + sPaint_Logo2 + sPaint_Logo3 + sPaint_Logo4 + sPunch_Logo1 + sPunch_Logo2 + sPunch_Logo3 + sPunch_Logo4);
+                    Winsock1.SendData(HiByte(convertS(sPAINTNUM)));
+                    Winsock1.SendData(LoByte(convertS(sPAINTNUM)));
+                    Winsock1.SendData(HiByte(0));
+                    Winsock1.SendData(LoByte(0));
+                    Winsock1.SendData(HiByte(convertS(sWid)));
+                    Winsock1.SendData(LoByte(convertS(sWid)));
+                    Winsock1.SendData(HiByte(convertS(sLen)));
+                    Winsock1.SendData(LoByte(convertS(sLen)));
+
+                    Winsock1.SendData(HiByte(sPaint));
+                    Winsock1.SendData(LoByte(sPaint));
+                    Winsock1.SendData(HiByte(sPunch));
+                    Winsock1.SendData(LoByte(sPunch));
                             
-                                Winsock1.SendData(PaintStr);
+                    Winsock1.SendData(PaintStr);
                                 
-                                Winsock1.SendData(HiByte(PaintStr_CD));
-                                Winsock1.SendData(LoByte(PaintStr_CD));
-                                Winsock1.SendData(PunchStr);
-                                
-                                Winsock1.SendData(HiByte(EdgeStr_CD));
-                                Winsock1.SendData(LoByte(EdgeStr_CD));
-                                Winsock1.SendData(EdgeStr);
+                    Winsock1.SendData(HiByte(PaintStr_CD));
+                    Winsock1.SendData(LoByte(PaintStr_CD));
+                    Winsock1.SendData(PunchStr);
 
                 }
 
@@ -1796,9 +1929,18 @@ namespace CG
         {
             if (asciiCode >= 0 && asciiCode <= 255)
             {
+                if (asciiCode == 0)
+                {
+                    return "";
+                }
                 System.Text.ASCIIEncoding asciiEncoding = new System.Text.ASCIIEncoding();
                 byte[] byteArray = new byte[] { (byte)asciiCode };
                 string strCharacter = asciiEncoding.GetString(byteArray);
+                if (strCharacter == "\r" || strCharacter == "\t" || strCharacter == "\n")
+                {
+                    strCharacter = "";
+                }
+
                 return (strCharacter);
             }
             else
@@ -1993,10 +2135,6 @@ namespace CG
                 }
 
         }
-
-       
-
-
 
 
     }

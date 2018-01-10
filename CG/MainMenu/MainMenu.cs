@@ -220,6 +220,7 @@ namespace CG
         private MenuItem menuItem30;
         private MenuItem CGT2090C;
         private MenuItem CGD2080C;
+        private MenuItem CGD2082C;
         //private MenuItem menuItem4;
         //private MenuItem menuItem7;
 		///'''fdfdsfdsfds
@@ -390,6 +391,7 @@ namespace CG
             this.menuItem7 = new System.Windows.Forms.MenuItem();
             this.WGB1010C = new System.Windows.Forms.MenuItem();
             this.menuItem10 = new System.Windows.Forms.MenuItem();
+            this.CGD2080C = new System.Windows.Forms.MenuItem();
             this.CGD2050C = new System.Windows.Forms.MenuItem();
             this.CGD2041C = new System.Windows.Forms.MenuItem();
             this.AGC2430C = new System.Windows.Forms.MenuItem();
@@ -569,7 +571,7 @@ namespace CG
             this.MenuItem22 = new System.Windows.Forms.MenuItem();
             this.ImageList2 = new System.Windows.Forms.ImageList(this.components);
             this.ImageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.CGD2080C = new System.Windows.Forms.MenuItem();
+            this.CGD2082C = new System.Windows.Forms.MenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.StatusBarPanel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatusBarPanel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatusBarPanel3)).BeginInit();
@@ -863,6 +865,7 @@ namespace CG
             this.CGC2071C,
             this.CGC2072C,
             this.CGD2081C,
+            this.CGD2082C,
             this.CGZ2031C,
             this.CGD2060C,
             this.CGC2050C,
@@ -886,6 +889,12 @@ namespace CG
             this.menuItem46,
             this.WGC2035C});
             resources.ApplyResources(this.menuItem10, "menuItem10");
+            // 
+            // CGD2080C
+            // 
+            this.CGD2080C.Index = 0;
+            resources.ApplyResources(this.CGD2080C, "CGD2080C");
+            this.CGD2080C.Click += new System.EventHandler(this.CGD2080C_Click);
             // 
             // CGD2050C
             // 
@@ -955,133 +964,133 @@ namespace CG
             // 
             // CGZ2031C
             // 
-            this.CGZ2031C.Index = 12;
+            this.CGZ2031C.Index = 13;
             resources.ApplyResources(this.CGZ2031C, "CGZ2031C");
             this.CGZ2031C.Click += new System.EventHandler(this.CGZ2031C_Click);
             // 
             // CGD2060C
             // 
-            this.CGD2060C.Index = 13;
+            this.CGD2060C.Index = 14;
             resources.ApplyResources(this.CGD2060C, "CGD2060C");
             this.CGD2060C.Click += new System.EventHandler(this.CGD2060C_Click);
             // 
             // CGC2050C
             // 
-            this.CGC2050C.Index = 14;
+            this.CGC2050C.Index = 15;
             resources.ApplyResources(this.CGC2050C, "CGC2050C");
             this.CGC2050C.Click += new System.EventHandler(this.CGC2050C_Click);
             // 
             // CGD2042C
             // 
-            this.CGD2042C.Index = 15;
+            this.CGD2042C.Index = 16;
             resources.ApplyResources(this.CGD2042C, "CGD2042C");
             this.CGD2042C.Click += new System.EventHandler(this.CGD2042C_Click);
             // 
             // AGC2051C
             // 
-            this.AGC2051C.Index = 16;
+            this.AGC2051C.Index = 17;
             resources.ApplyResources(this.AGC2051C, "AGC2051C");
             this.AGC2051C.Click += new System.EventHandler(this.AGC2051C_Click);
             // 
             // WGC1010C
             // 
-            this.WGC1010C.Index = 17;
+            this.WGC1010C.Index = 18;
             resources.ApplyResources(this.WGC1010C, "WGC1010C");
             this.WGC1010C.Click += new System.EventHandler(this.WGC1010C_Click);
             // 
             // WGC1020C
             // 
-            this.WGC1020C.Index = 18;
+            this.WGC1020C.Index = 19;
             resources.ApplyResources(this.WGC1020C, "WGC1020C");
             this.WGC1020C.Click += new System.EventHandler(this.WGC1020C_Click);
             // 
             // WGC1030C
             // 
-            this.WGC1030C.Index = 19;
+            this.WGC1030C.Index = 20;
             resources.ApplyResources(this.WGC1030C, "WGC1030C");
             this.WGC1030C.Click += new System.EventHandler(this.WGC1030C_Click);
             // 
             // WGC2010C
             // 
-            this.WGC2010C.Index = 20;
+            this.WGC2010C.Index = 21;
             resources.ApplyResources(this.WGC2010C, "WGC2010C");
             this.WGC2010C.Click += new System.EventHandler(this.WGC2010C_Click);
             // 
             // WGC2020C
             // 
-            this.WGC2020C.Index = 21;
+            this.WGC2020C.Index = 22;
             resources.ApplyResources(this.WGC2020C, "WGC2020C");
             this.WGC2020C.Click += new System.EventHandler(this.WGC2020C_Click);
             // 
             // WGC2030C
             // 
-            this.WGC2030C.Index = 22;
+            this.WGC2030C.Index = 23;
             resources.ApplyResources(this.WGC2030C, "WGC2030C");
             this.WGC2030C.Click += new System.EventHandler(this.WGC2030C_Click);
             // 
             // WGC2040C
             // 
-            this.WGC2040C.Index = 23;
+            this.WGC2040C.Index = 24;
             resources.ApplyResources(this.WGC2040C, "WGC2040C");
             this.WGC2040C.Click += new System.EventHandler(this.WGC2040C_Click);
             // 
             // WGC2050C
             // 
-            this.WGC2050C.Index = 24;
+            this.WGC2050C.Index = 25;
             resources.ApplyResources(this.WGC2050C, "WGC2050C");
             this.WGC2050C.Click += new System.EventHandler(this.WGC2050C_Click);
             // 
             // WGC2051C
             // 
-            this.WGC2051C.Index = 25;
+            this.WGC2051C.Index = 26;
             resources.ApplyResources(this.WGC2051C, "WGC2051C");
             this.WGC2051C.Click += new System.EventHandler(this.WGC2051C_Click);
             // 
             // WGC2052C
             // 
-            this.WGC2052C.Index = 26;
+            this.WGC2052C.Index = 27;
             resources.ApplyResources(this.WGC2052C, "WGC2052C");
             this.WGC2052C.Click += new System.EventHandler(this.WGC2052C_Click);
             // 
             // WGC2060C
             // 
-            this.WGC2060C.Index = 27;
+            this.WGC2060C.Index = 28;
             resources.ApplyResources(this.WGC2060C, "WGC2060C");
             this.WGC2060C.Click += new System.EventHandler(this.WGC2060C_Click);
             // 
             // WGC2070C
             // 
-            this.WGC2070C.Index = 28;
+            this.WGC2070C.Index = 29;
             resources.ApplyResources(this.WGC2070C, "WGC2070C");
             this.WGC2070C.Click += new System.EventHandler(this.WGC2070C_Click);
             // 
             // WGC3010C
             // 
-            this.WGC3010C.Index = 29;
+            this.WGC3010C.Index = 30;
             resources.ApplyResources(this.WGC3010C, "WGC3010C");
             this.WGC3010C.Click += new System.EventHandler(this.WGC3010C_Click);
             // 
             // WGC3020C
             // 
-            this.WGC3020C.Index = 30;
+            this.WGC3020C.Index = 31;
             resources.ApplyResources(this.WGC3020C, "WGC3020C");
             this.WGC3020C.Click += new System.EventHandler(this.WGC3020C_Click);
             // 
             // WGC3030C
             // 
-            this.WGC3030C.Index = 31;
+            this.WGC3030C.Index = 32;
             resources.ApplyResources(this.WGC3030C, "WGC3030C");
             this.WGC3030C.Click += new System.EventHandler(this.WGC3030C_Click);
             // 
             // menuItem46
             // 
-            this.menuItem46.Index = 32;
+            this.menuItem46.Index = 33;
             resources.ApplyResources(this.menuItem46, "menuItem46");
             this.menuItem46.Click += new System.EventHandler(this.menuItem46_Click);
             // 
             // WGC2035C
             // 
-            this.WGC2035C.Index = 33;
+            this.WGC2035C.Index = 34;
             resources.ApplyResources(this.WGC2035C, "WGC2035C");
             this.WGC2035C.Click += new System.EventHandler(this.WGC2035C_Click);
             // 
@@ -2065,11 +2074,11 @@ namespace CG
             this.ImageList1.Images.SetKeyName(10, "M11_1.gif");
             this.ImageList1.Images.SetKeyName(11, "M12_1.gif");
             // 
-            // CGD2080C
+            // CGD2082C
             // 
-            this.CGD2080C.Index = 0;
-            resources.ApplyResources(this.CGD2080C, "CGD2080C");
-            this.CGD2080C.Click += new System.EventHandler(this.CGD2080C_Click);
+            this.CGD2082C.Index = 12;
+            resources.ApplyResources(this.CGD2082C, "CGD2082C");
+            this.CGD2082C.Click += new System.EventHandler(this.CGD2082C_Click);
             // 
             // MainMenu
             // 
@@ -4204,6 +4213,17 @@ namespace CG
                 CGD2080C.MdiParent = this;
                 CGD2080C.Show();
                 CGD2080C.WindowState = FormWindowState.Maximized;
+            }
+        }
+
+        private void CGD2082C_Click(object sender, EventArgs e)
+        {
+            if (!GeneralCommon.Gf_IsFormLoad("CGD2082C"))
+            {
+                CGD2082C CGD2082C = new CGD2082C();
+                CGD2082C.MdiParent = this;
+                CGD2082C.Show();
+                CGD2082C.WindowState = FormWindowState.Maximized;
             }
         }
 

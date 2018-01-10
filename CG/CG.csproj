@@ -404,6 +404,12 @@
     <Compile Include="CGD\CGD2050C.Designer.cs">
       <DependentUpon>CGD2050C.cs</DependentUpon>
     </Compile>
+    <Compile Include="CGD\CGD2080C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CGD\CGD2080C.Designer.cs">
+      <DependentUpon>CGD2080C.cs</DependentUpon>
+    </Compile>
     <Compile Include="CGD\CGD2081C.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -422,11 +428,11 @@
     <Compile Include="CGD\CGD2070C.Designer.cs">
       <DependentUpon>CGD2070C.cs</DependentUpon>
     </Compile>
-    <Compile Include="CGD\CGD2080C.cs">
+    <Compile Include="CGD\CGD2082C.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CGD\CGD2080C.Designer.cs">
-      <DependentUpon>CGD2080C.cs</DependentUpon>
+    <Compile Include="CGD\CGD2082C.Designer.cs">
+      <DependentUpon>CGD2082C.cs</DependentUpon>
     </Compile>
     <Compile Include="CGE\CGE2020C.cs">
       <SubType>Form</SubType>
@@ -1093,6 +1099,9 @@
     <EmbeddedResource Include="CGD\CGD2050C.resx">
       <DependentUpon>CGD2050C.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CGD\CGD2080C.resx">
+      <DependentUpon>CGD2080C.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CGD\CGD2081C.resx">
       <DependentUpon>CGD2081C.cs</DependentUpon>
     </EmbeddedResource>
@@ -1102,8 +1111,8 @@
     <EmbeddedResource Include="CGD\CGD2070C.resx">
       <DependentUpon>CGD2070C.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CGD\CGD2080C.resx">
-      <DependentUpon>CGD2080C.cs</DependentUpon>
+    <EmbeddedResource Include="CGD\CGD2082C.resx">
+      <DependentUpon>CGD2082C.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CGE\CGE2020C.resx">
       <DependentUpon>CGE2020C.cs</DependentUpon>

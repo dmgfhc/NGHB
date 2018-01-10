@@ -1,6 +1,6 @@
 ﻿namespace CG
 {
-    partial class CGD2080C
+    partial class CGD2082C
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -32,13 +32,13 @@
             CommonClass.BControlFiledSetting bControlFiledSetting1 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting2 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting3 = new CommonClass.BControlFiledSetting();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CGD2080C));
-            CommonClass.BControlFiledSetting bControlFiledSetting4 = new CommonClass.BControlFiledSetting();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CGD2082C));
             this.txt_plt = new CommonClass.F4ETCR();
             this.txt_plt_name = new System.Windows.Forms.TextBox();
             this.txt_stdspec = new CommonClass.F4ETCR();
-            this.txt_stdspec_chg = new CommonClass.F4ETCR();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.SSP2 = new System.Windows.Forms.Button();
+            this.SSP1 = new System.Windows.Forms.Button();
             this.cbo_group = new System.Windows.Forms.ComboBox();
             this.CBO_SHIFT = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -54,6 +54,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.TXT_CE = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.TXT_PAINTNUM = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
             this.TXT_CUST_CD = new System.Windows.Forms.TextBox();
             this.TXT_TO_CUR_INV = new System.Windows.Forms.TextBox();
             this.TXT_CUT_TIME = new CommonClass.CeriUDate();
@@ -61,7 +65,6 @@
             this.TXT_SPEC = new System.Windows.Forms.TextBox();
             this.TXT_VESSEL_NO = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.SSPpdt = new System.Windows.Forms.Button();
             this.TXT_Bar = new System.Windows.Forms.TextBox();
             this.TXT_Edge = new System.Windows.Forms.TextBox();
             this.TXT_Punch2 = new System.Windows.Forms.TextBox();
@@ -92,7 +95,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.TXT_MAT_NO = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.SSP4 = new System.Windows.Forms.Button();
             this.chk_Cond1 = new System.Windows.Forms.CheckBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.tcpMsg2 = new System.Windows.Forms.Button();
@@ -170,32 +172,18 @@
             this.txt_stdspec.Location = new System.Drawing.Point(552, 51);
             this.txt_stdspec.MaxLength = 9999;
             this.txt_stdspec.Name = "txt_stdspec";
-            this.txt_stdspec.Size = new System.Drawing.Size(152, 22);
+            this.txt_stdspec.Size = new System.Drawing.Size(189, 22);
             this.txt_stdspec.sJoin = "";
             this.txt_stdspec.sSqletc = resources.GetString("txt_stdspec.sSqletc");
             this.txt_stdspec.TabIndex = 745;
             // 
-            // txt_stdspec_chg
-            // 
-            bControlFiledSetting4.ColumnID = "CD_SHORT_NAME";
-            bControlFiledSetting4.TargetControl = this.txt_stdspec_chg;
-            this.txt_stdspec_chg.CustomSetting.Add(bControlFiledSetting4);
-            this.txt_stdspec_chg.InputControl = this.txt_stdspec_chg;
-            this.txt_stdspec_chg.Location = new System.Drawing.Point(710, 51);
-            this.txt_stdspec_chg.MaxLength = 9999;
-            this.txt_stdspec_chg.Name = "txt_stdspec_chg";
-            this.txt_stdspec_chg.Size = new System.Drawing.Size(152, 22);
-            this.txt_stdspec_chg.sJoin = "";
-            this.txt_stdspec_chg.sSqletc = "SELECT CD_SHORT_NAME \"标准代号\", CD_NAME \"标准中文名\" FROM ZP_CD WHERE CD_MANA_NO = \'G0030" +
-    "\'";
-            this.txt_stdspec_chg.TabIndex = 746;
-            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.SSP2);
+            this.groupBox1.Controls.Add(this.SSP1);
             this.groupBox1.Controls.Add(this.cbo_group);
             this.groupBox1.Controls.Add(this.CBO_SHIFT);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.txt_stdspec_chg);
             this.groupBox1.Controls.Add(this.txt_stdspec);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.udt_date_to);
@@ -216,6 +204,34 @@
             this.groupBox1.Size = new System.Drawing.Size(1239, 80);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // SSP2
+            // 
+            this.SSP2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.SSP2.FlatAppearance.BorderSize = 0;
+            this.SSP2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SSP2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.SSP2.ForeColor = System.Drawing.Color.Blue;
+            this.SSP2.Location = new System.Drawing.Point(843, 50);
+            this.SSP2.Name = "SSP2";
+            this.SSP2.Size = new System.Drawing.Size(90, 24);
+            this.SSP2.TabIndex = 754;
+            this.SSP2.Text = "已选择";
+            this.SSP2.UseVisualStyleBackColor = false;
+            // 
+            // SSP1
+            // 
+            this.SSP1.BackColor = System.Drawing.Color.Aqua;
+            this.SSP1.FlatAppearance.BorderSize = 0;
+            this.SSP1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SSP1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.SSP1.ForeColor = System.Drawing.Color.Blue;
+            this.SSP1.Location = new System.Drawing.Point(747, 50);
+            this.SSP1.Name = "SSP1";
+            this.SSP1.Size = new System.Drawing.Size(90, 24);
+            this.SSP1.TabIndex = 753;
+            this.SSP1.Text = "已喷印";
+            this.SSP1.UseVisualStyleBackColor = false;
             // 
             // cbo_group
             // 
@@ -262,7 +278,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(100, 22);
             this.label7.TabIndex = 744;
-            this.label7.Text = "标准号/改判";
+            this.label7.Text = "标准号";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // udt_date_to
@@ -370,6 +386,10 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox2.Controls.Add(this.TXT_CE);
+            this.groupBox2.Controls.Add(this.label27);
+            this.groupBox2.Controls.Add(this.TXT_PAINTNUM);
+            this.groupBox2.Controls.Add(this.label26);
             this.groupBox2.Controls.Add(this.TXT_CUST_CD);
             this.groupBox2.Controls.Add(this.TXT_TO_CUR_INV);
             this.groupBox2.Controls.Add(this.TXT_CUT_TIME);
@@ -377,7 +397,6 @@
             this.groupBox2.Controls.Add(this.TXT_SPEC);
             this.groupBox2.Controls.Add(this.TXT_VESSEL_NO);
             this.groupBox2.Controls.Add(this.label25);
-            this.groupBox2.Controls.Add(this.SSPpdt);
             this.groupBox2.Controls.Add(this.TXT_Bar);
             this.groupBox2.Controls.Add(this.TXT_Edge);
             this.groupBox2.Controls.Add(this.TXT_Punch2);
@@ -408,7 +427,6 @@
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.TXT_MAT_NO);
             this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.SSP4);
             this.groupBox2.Controls.Add(this.chk_Cond1);
             this.groupBox2.Controls.Add(this.panel5);
             this.groupBox2.Controls.Add(this.panel4);
@@ -425,6 +443,40 @@
             this.groupBox2.Size = new System.Drawing.Size(1239, 260);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
+            // 
+            // TXT_CE
+            // 
+            this.TXT_CE.Location = new System.Drawing.Point(1079, 232);
+            this.TXT_CE.Name = "TXT_CE";
+            this.TXT_CE.Size = new System.Drawing.Size(42, 22);
+            this.TXT_CE.TabIndex = 796;
+            // 
+            // label27
+            // 
+            this.label27.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label27.Location = new System.Drawing.Point(959, 232);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(114, 22);
+            this.label27.TabIndex = 795;
+            this.label27.Text = "是否CE标识";
+            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TXT_PAINTNUM
+            // 
+            this.TXT_PAINTNUM.Location = new System.Drawing.Point(886, 232);
+            this.TXT_PAINTNUM.Name = "TXT_PAINTNUM";
+            this.TXT_PAINTNUM.Size = new System.Drawing.Size(67, 22);
+            this.TXT_PAINTNUM.TabIndex = 794;
+            // 
+            // label26
+            // 
+            this.label26.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label26.Location = new System.Drawing.Point(766, 232);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(114, 22);
+            this.label26.TabIndex = 793;
+            this.label26.Text = "标识次数";
+            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // TXT_CUST_CD
             // 
@@ -473,7 +525,7 @@
             // 
             // TXT_VESSEL_NO
             // 
-            this.TXT_VESSEL_NO.Location = new System.Drawing.Point(886, 220);
+            this.TXT_VESSEL_NO.Location = new System.Drawing.Point(886, 206);
             this.TXT_VESSEL_NO.Name = "TXT_VESSEL_NO";
             this.TXT_VESSEL_NO.Size = new System.Drawing.Size(303, 22);
             this.TXT_VESSEL_NO.TabIndex = 787;
@@ -481,26 +533,12 @@
             // label25
             // 
             this.label25.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label25.Location = new System.Drawing.Point(766, 220);
+            this.label25.Location = new System.Drawing.Point(766, 206);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(114, 22);
             this.label25.TabIndex = 786;
             this.label25.Text = "加 喷";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // SSPpdt
-            // 
-            this.SSPpdt.BackColor = System.Drawing.Color.White;
-            this.SSPpdt.FlatAppearance.BorderSize = 0;
-            this.SSPpdt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SSPpdt.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.SSPpdt.ForeColor = System.Drawing.Color.Red;
-            this.SSPpdt.Location = new System.Drawing.Point(1061, 177);
-            this.SSPpdt.Name = "SSPpdt";
-            this.SSPpdt.Size = new System.Drawing.Size(128, 24);
-            this.SSPpdt.TabIndex = 785;
-            this.SSPpdt.Text = "当月以前交货订单";
-            this.SSPpdt.UseVisualStyleBackColor = false;
             // 
             // TXT_Bar
             // 
@@ -763,20 +801,6 @@
             this.label11.Text = "物料号";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // SSP4
-            // 
-            this.SSP4.BackColor = System.Drawing.Color.Blue;
-            this.SSP4.FlatAppearance.BorderSize = 0;
-            this.SSP4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SSP4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.SSP4.ForeColor = System.Drawing.Color.Red;
-            this.SSP4.Location = new System.Drawing.Point(1137, 54);
-            this.SSP4.Name = "SSP4";
-            this.SSP4.Size = new System.Drawing.Size(90, 24);
-            this.SSP4.TabIndex = 752;
-            this.SSP4.Text = "重点订单";
-            this.SSP4.UseVisualStyleBackColor = false;
-            // 
             // chk_Cond1
             // 
             this.chk_Cond1.AutoSize = true;
@@ -878,6 +902,7 @@
             this.chk_Cond4.AutoSize = true;
             this.chk_Cond4.Checked = true;
             this.chk_Cond4.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chk_Cond4.ForeColor = System.Drawing.Color.Blue;
             this.chk_Cond4.Location = new System.Drawing.Point(182, 4);
             this.chk_Cond4.Name = "chk_Cond4";
             this.chk_Cond4.Size = new System.Drawing.Size(52, 17);
@@ -890,6 +915,7 @@
             this.chk_Cond3.AutoSize = true;
             this.chk_Cond3.Checked = true;
             this.chk_Cond3.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chk_Cond3.ForeColor = System.Drawing.Color.Blue;
             this.chk_Cond3.Location = new System.Drawing.Point(98, 5);
             this.chk_Cond3.Name = "chk_Cond3";
             this.chk_Cond3.Size = new System.Drawing.Size(52, 17);
@@ -902,6 +928,7 @@
             this.chk_Cond2.AutoSize = true;
             this.chk_Cond2.Checked = true;
             this.chk_Cond2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chk_Cond2.ForeColor = System.Drawing.Color.Blue;
             this.chk_Cond2.Location = new System.Drawing.Point(11, 5);
             this.chk_Cond2.Name = "chk_Cond2";
             this.chk_Cond2.Size = new System.Drawing.Size(52, 17);
@@ -935,6 +962,7 @@
             // 
             this.opt_line5.AutoSize = true;
             this.opt_line5.Checked = true;
+            this.opt_line5.ForeColor = System.Drawing.Color.Red;
             this.opt_line5.Location = new System.Drawing.Point(14, 2);
             this.opt_line5.Name = "opt_line5";
             this.opt_line5.Size = new System.Drawing.Size(64, 17);
@@ -977,7 +1005,7 @@
             // opt_line4
             // 
             this.opt_line4.AutoSize = true;
-            this.opt_line4.Location = new System.Drawing.Point(69, 2);
+            this.opt_line4.Location = new System.Drawing.Point(13, 1);
             this.opt_line4.Name = "opt_line4";
             this.opt_line4.Size = new System.Drawing.Size(51, 17);
             this.opt_line4.TabIndex = 1;
@@ -989,13 +1017,15 @@
             // opt_line3
             // 
             this.opt_line3.AutoSize = true;
-            this.opt_line3.Location = new System.Drawing.Point(14, 2);
+            this.opt_line3.ForeColor = System.Drawing.Color.Red;
+            this.opt_line3.Location = new System.Drawing.Point(68, 1);
             this.opt_line3.Name = "opt_line3";
             this.opt_line3.Size = new System.Drawing.Size(51, 17);
             this.opt_line3.TabIndex = 0;
             this.opt_line3.TabStop = true;
             this.opt_line3.Text = "计划";
             this.opt_line3.UseVisualStyleBackColor = true;
+            this.opt_line3.Visible = false;
             this.opt_line3.Click += new System.EventHandler(this.opt_line3_Click);
             // 
             // label9
@@ -1034,6 +1064,7 @@
             // opt_line1
             // 
             this.opt_line1.AutoSize = true;
+            this.opt_line1.ForeColor = System.Drawing.Color.Red;
             this.opt_line1.Location = new System.Drawing.Point(14, 2);
             this.opt_line1.Name = "opt_line1";
             this.opt_line1.Size = new System.Drawing.Size(39, 17);
@@ -1065,7 +1096,6 @@
             this.ss1.Size = new System.Drawing.Size(1239, 282);
             this.ss1.TabIndex = 2;
             this.ss1.EditModeOn += new System.EventHandler(this.ss1_EditModeOn);
-            this.ss1.CellClick += new FarPoint.Win.Spread.CellClickEventHandler(this.ss1_CellClick);
             this.ss1.ButtonClicked += new FarPoint.Win.Spread.EditorNotifyEventHandler(this.ss1_ButtonClicked);
             // 
             // fpSpread1_Sheet1
@@ -1079,15 +1109,15 @@
             this.Timer1.Interval = 3000;
             this.Timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
-            // CGD2080C
+            // CGD2082C
             // 
             this.ClientSize = new System.Drawing.Size(1239, 622);
             this.Controls.Add(this.ss1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "CGD2080C";
-            this.Text = "标识（标印、标签）打印信息发送界面_CGD2080C";
-            this.Load += new System.EventHandler(this.CGD2080C_Load);
+            this.Name = "CGD2082C";
+            this.Text = "钢板标识信息发送界面_CGD2082C";
+            this.Load += new System.EventHandler(this.CGD2082C_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -1125,7 +1155,6 @@
         private System.Windows.Forms.Label label4;
         private CommonClass.F4ETCR txt_stdspec;
         private System.Windows.Forms.Label label7;
-        private CommonClass.F4ETCR txt_stdspec_chg;
         private System.Windows.Forms.ComboBox cbo_group;
         private System.Windows.Forms.ComboBox CBO_SHIFT;
         private System.Windows.Forms.Label label8;
@@ -1157,7 +1186,6 @@
         private System.Windows.Forms.Button tcpMsg;
         private System.Windows.Forms.Button tcpStatus2;
         private System.Windows.Forms.CheckBox chk_Cond1;
-        private System.Windows.Forms.Button SSP4;
         private System.Windows.Forms.TextBox TXT_WGT;
         private System.Windows.Forms.TextBox TXT_LEN;
         private System.Windows.Forms.TextBox TXT_WID;
@@ -1186,7 +1214,6 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox TXT_Punch2;
         private System.Windows.Forms.TextBox TXT_Punch1;
-        private System.Windows.Forms.Button SSPpdt;
         private System.Windows.Forms.TextBox TXT_Bar;
         private System.Windows.Forms.TextBox TXT_Edge;
         private System.Windows.Forms.TextBox TXT_VESSEL_NO;
@@ -1197,5 +1224,11 @@
         public CommonClass.CeriUDate TXT_CUT_TIME;
         private System.Windows.Forms.TextBox TXT_TO_CUR_INV;
         private System.Windows.Forms.TextBox TXT_CUST_CD;
+        private System.Windows.Forms.TextBox TXT_CE;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox TXT_PAINTNUM;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Button SSP2;
+        private System.Windows.Forms.Button SSP1;
     }
 }
