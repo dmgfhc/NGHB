@@ -60,7 +60,7 @@
             this.chk_Cond2 = new System.Windows.Forms.RadioButton();
             this.chk_Cond1 = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TXT_COM = new System.Windows.Forms.TextBox();
             this.opt_line9 = new System.Windows.Forms.RadioButton();
             this.opt_line8 = new System.Windows.Forms.RadioButton();
             this.opt_line6 = new System.Windows.Forms.RadioButton();
@@ -82,6 +82,14 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.ss2 = new FarPoint.Win.Spread.FpSpread();
             this.ss2_Sheet1 = new FarPoint.Win.Spread.SheetView();
+            this.SSP5 = new System.Windows.Forms.Button();
+            this.SSP6 = new System.Windows.Forms.Button();
+            this.SSP4 = new System.Windows.Forms.Button();
+            this.SSP3 = new System.Windows.Forms.Button();
+            this.SSP2 = new System.Windows.Forms.Button();
+            this.SSP1 = new System.Windows.Forms.Button();
+            this.opt_cut_no = new System.Windows.Forms.RadioButton();
+            this.opt_slab_no = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -181,6 +189,7 @@
             this.chk_Cond3.Size = new System.Drawing.Size(15, 14);
             this.chk_Cond3.TabIndex = 756;
             this.chk_Cond3.UseVisualStyleBackColor = true;
+            this.chk_Cond3.CheckedChanged += new System.EventHandler(this.chk_Cond3_CheckedChanged);
             // 
             // tcpMsg
             // 
@@ -224,6 +233,7 @@
             this.chk_Cond0.Size = new System.Drawing.Size(15, 14);
             this.chk_Cond0.TabIndex = 0;
             this.chk_Cond0.UseVisualStyleBackColor = true;
+            this.chk_Cond0.CheckedChanged += new System.EventHandler(this.chk_Cond0_CheckedChanged);
             // 
             // groupBox2
             // 
@@ -266,7 +276,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 22);
             this.label3.TabIndex = 690;
-            this.label3.Text = "检验工(头部)";
+            this.label3.Text = "轧件温度";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // TXT_PAINT_CNT
@@ -321,6 +331,7 @@
             this.TXT_WGT.Size = new System.Drawing.Size(49, 22);
             this.TXT_WGT.TabIndex = 684;
             this.TXT_WGT.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TXT_WGT.Visible = false;
             // 
             // TXT_LEN
             // 
@@ -353,7 +364,7 @@
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(96, 22);
             this.label52.TabIndex = 680;
-            this.label52.Text = "检验工(头部)";
+            this.label52.Text = "厚/宽/长";
             this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel3
@@ -396,6 +407,7 @@
             this.chk_Cond2.TabIndex = 1;
             this.chk_Cond2.Text = "Bottom Selected";
             this.chk_Cond2.UseVisualStyleBackColor = true;
+            this.chk_Cond2.CheckedChanged += new System.EventHandler(this.chk_Cond2_CheckedChanged);
             // 
             // chk_Cond1
             // 
@@ -409,11 +421,12 @@
             this.chk_Cond1.TabStop = true;
             this.chk_Cond1.Text = "Top Selected";
             this.chk_Cond1.UseVisualStyleBackColor = true;
+            this.chk_Cond1.CheckedChanged += new System.EventHandler(this.chk_Cond1_CheckedChanged);
             // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.TXT_COM);
             this.panel2.Controls.Add(this.opt_line9);
             this.panel2.Controls.Add(this.opt_line8);
             this.panel2.Controls.Add(this.opt_line6);
@@ -427,14 +440,14 @@
             this.panel2.Size = new System.Drawing.Size(439, 63);
             this.panel2.TabIndex = 1;
             // 
-            // textBox1
+            // TXT_COM
             // 
-            this.textBox1.Location = new System.Drawing.Point(26, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(30, 22);
-            this.textBox1.TabIndex = 8;
-            this.textBox1.Text = "5";
-            this.textBox1.Visible = false;
+            this.TXT_COM.Location = new System.Drawing.Point(26, 32);
+            this.TXT_COM.Name = "TXT_COM";
+            this.TXT_COM.Size = new System.Drawing.Size(30, 22);
+            this.TXT_COM.TabIndex = 8;
+            this.TXT_COM.Text = "5";
+            this.TXT_COM.Visible = false;
             // 
             // opt_line9
             // 
@@ -446,6 +459,7 @@
             this.opt_line9.TabIndex = 7;
             this.opt_line9.Text = "200%";
             this.opt_line9.UseVisualStyleBackColor = true;
+            this.opt_line9.Click += new System.EventHandler(this.opt_line9_Click);
             // 
             // opt_line8
             // 
@@ -457,6 +471,7 @@
             this.opt_line8.TabIndex = 6;
             this.opt_line8.Text = "150%";
             this.opt_line8.UseVisualStyleBackColor = true;
+            this.opt_line8.Click += new System.EventHandler(this.opt_line8_Click);
             // 
             // opt_line6
             // 
@@ -468,6 +483,7 @@
             this.opt_line6.TabIndex = 5;
             this.opt_line6.Text = "116%";
             this.opt_line6.UseVisualStyleBackColor = true;
+            this.opt_line6.Click += new System.EventHandler(this.opt_line6_Click);
             // 
             // opt_line4
             // 
@@ -479,6 +495,7 @@
             this.opt_line4.TabIndex = 4;
             this.opt_line4.Text = "84%";
             this.opt_line4.UseVisualStyleBackColor = true;
+            this.opt_line4.Click += new System.EventHandler(this.opt_line4_Click);
             // 
             // opt_line7
             // 
@@ -490,6 +507,7 @@
             this.opt_line7.TabIndex = 3;
             this.opt_line7.Text = "130%";
             this.opt_line7.UseVisualStyleBackColor = true;
+            this.opt_line7.Click += new System.EventHandler(this.opt_line7_Click);
             // 
             // opt_line5
             // 
@@ -501,6 +519,7 @@
             this.opt_line5.TabIndex = 2;
             this.opt_line5.Text = "94%";
             this.opt_line5.UseVisualStyleBackColor = true;
+            this.opt_line5.Click += new System.EventHandler(this.opt_line5_Click);
             // 
             // opt_line3
             // 
@@ -512,6 +531,7 @@
             this.opt_line3.TabIndex = 1;
             this.opt_line3.Text = "75%";
             this.opt_line3.UseVisualStyleBackColor = true;
+            this.opt_line3.Click += new System.EventHandler(this.opt_line3_Click);
             // 
             // opt_line10
             // 
@@ -525,6 +545,7 @@
             this.opt_line10.TabStop = true;
             this.opt_line10.Text = " No compression";
             this.opt_line10.UseVisualStyleBackColor = true;
+            this.opt_line10.Click += new System.EventHandler(this.opt_line10_Click);
             // 
             // panel1
             // 
@@ -556,6 +577,7 @@
             this.opt_line2.TabIndex = 1;
             this.opt_line2.Text = " 270 (Left-hand) Orientation of marking";
             this.opt_line2.UseVisualStyleBackColor = true;
+            this.opt_line2.Click += new System.EventHandler(this.opt_line2_Click);
             // 
             // opt_line1
             // 
@@ -569,6 +591,7 @@
             this.opt_line1.TabStop = true;
             this.opt_line1.Text = " 90  (Right-hand) Orientation of marking";
             this.opt_line1.UseVisualStyleBackColor = true;
+            this.opt_line1.Click += new System.EventHandler(this.opt_line1_Click);
             // 
             // Timer1
             // 
@@ -591,7 +614,7 @@
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox3.Location = new System.Drawing.Point(0, 192);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1239, 178);
+            this.groupBox3.Size = new System.Drawing.Size(1239, 175);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             // 
@@ -603,8 +626,9 @@
             this.ss1.Name = "ss1";
             this.ss1.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
             this.ss1_Sheet1});
-            this.ss1.Size = new System.Drawing.Size(1233, 157);
+            this.ss1.Size = new System.Drawing.Size(1233, 154);
             this.ss1.TabIndex = 6;
+            this.ss1.ButtonClicked += new FarPoint.Win.Spread.EditorNotifyEventHandler(this.ss1_ButtonClicked);
             // 
             // ss1_Sheet1
             // 
@@ -614,9 +638,9 @@
             // splitter2
             // 
             this.splitter2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitter2.Location = new System.Drawing.Point(0, 370);
+            this.splitter2.Location = new System.Drawing.Point(0, 367);
             this.splitter2.Name = "splitter2";
-            this.splitter2.Size = new System.Drawing.Size(1239, 3);
+            this.splitter2.Size = new System.Drawing.Size(1239, 32);
             this.splitter2.TabIndex = 4;
             this.splitter2.TabStop = false;
             // 
@@ -624,9 +648,9 @@
             // 
             this.groupBox4.Controls.Add(this.ss2);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox4.Location = new System.Drawing.Point(0, 373);
+            this.groupBox4.Location = new System.Drawing.Point(0, 399);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1239, 249);
+            this.groupBox4.Size = new System.Drawing.Size(1239, 223);
             this.groupBox4.TabIndex = 5;
             this.groupBox4.TabStop = false;
             // 
@@ -638,7 +662,7 @@
             this.ss2.Name = "ss2";
             this.ss2.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
             this.ss2_Sheet1});
-            this.ss2.Size = new System.Drawing.Size(1233, 228);
+            this.ss2.Size = new System.Drawing.Size(1233, 202);
             this.ss2.TabIndex = 6;
             // 
             // ss2_Sheet1
@@ -646,9 +670,125 @@
             this.ss2_Sheet1.Reset();
             this.ss2_Sheet1.SheetName = "Sheet1";
             // 
+            // SSP5
+            // 
+            this.SSP5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.SSP5.FlatAppearance.BorderSize = 0;
+            this.SSP5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SSP5.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.SSP5.ForeColor = System.Drawing.Color.White;
+            this.SSP5.Location = new System.Drawing.Point(532, 370);
+            this.SSP5.Name = "SSP5";
+            this.SSP5.Size = new System.Drawing.Size(90, 24);
+            this.SSP5.TabIndex = 754;
+            this.SSP5.Text = "定制配送";
+            this.SSP5.UseVisualStyleBackColor = false;
+            // 
+            // SSP6
+            // 
+            this.SSP6.BackColor = System.Drawing.Color.Fuchsia;
+            this.SSP6.FlatAppearance.BorderSize = 0;
+            this.SSP6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SSP6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.SSP6.ForeColor = System.Drawing.Color.White;
+            this.SSP6.Location = new System.Drawing.Point(628, 370);
+            this.SSP6.Name = "SSP6";
+            this.SSP6.Size = new System.Drawing.Size(90, 24);
+            this.SSP6.TabIndex = 755;
+            this.SSP6.Text = "出口订单";
+            this.SSP6.UseVisualStyleBackColor = false;
+            // 
+            // SSP4
+            // 
+            this.SSP4.BackColor = System.Drawing.Color.Red;
+            this.SSP4.FlatAppearance.BorderSize = 0;
+            this.SSP4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SSP4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.SSP4.ForeColor = System.Drawing.Color.White;
+            this.SSP4.Location = new System.Drawing.Point(723, 370);
+            this.SSP4.Name = "SSP4";
+            this.SSP4.Size = new System.Drawing.Size(90, 24);
+            this.SSP4.TabIndex = 756;
+            this.SSP4.Text = "重点订单";
+            this.SSP4.UseVisualStyleBackColor = false;
+            // 
+            // SSP3
+            // 
+            this.SSP3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.SSP3.FlatAppearance.BorderSize = 0;
+            this.SSP3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SSP3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.SSP3.ForeColor = System.Drawing.Color.Blue;
+            this.SSP3.Location = new System.Drawing.Point(1125, 370);
+            this.SSP3.Name = "SSP3";
+            this.SSP3.Size = new System.Drawing.Size(90, 24);
+            this.SSP3.TabIndex = 759;
+            this.SSP3.Text = "钢板";
+            this.SSP3.UseVisualStyleBackColor = false;
+            // 
+            // SSP2
+            // 
+            this.SSP2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.SSP2.FlatAppearance.BorderSize = 0;
+            this.SSP2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SSP2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.SSP2.ForeColor = System.Drawing.Color.Blue;
+            this.SSP2.Location = new System.Drawing.Point(1029, 370);
+            this.SSP2.Name = "SSP2";
+            this.SSP2.Size = new System.Drawing.Size(90, 24);
+            this.SSP2.TabIndex = 758;
+            this.SSP2.Text = "母板";
+            this.SSP2.UseVisualStyleBackColor = false;
+            // 
+            // SSP1
+            // 
+            this.SSP1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.SSP1.FlatAppearance.BorderSize = 0;
+            this.SSP1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SSP1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.SSP1.ForeColor = System.Drawing.Color.Blue;
+            this.SSP1.Location = new System.Drawing.Point(933, 370);
+            this.SSP1.Name = "SSP1";
+            this.SSP1.Size = new System.Drawing.Size(90, 24);
+            this.SSP1.TabIndex = 757;
+            this.SSP1.Text = "轧件";
+            this.SSP1.UseVisualStyleBackColor = false;
+            // 
+            // opt_cut_no
+            // 
+            this.opt_cut_no.AutoSize = true;
+            this.opt_cut_no.Checked = true;
+            this.opt_cut_no.Location = new System.Drawing.Point(24, 373);
+            this.opt_cut_no.Name = "opt_cut_no";
+            this.opt_cut_no.Size = new System.Drawing.Size(64, 17);
+            this.opt_cut_no.TabIndex = 760;
+            this.opt_cut_no.TabStop = true;
+            this.opt_cut_no.Text = "分段号";
+            this.opt_cut_no.UseVisualStyleBackColor = true;
+            this.opt_cut_no.Click += new System.EventHandler(this.opt_cut_no_Click);
+            // 
+            // opt_slab_no
+            // 
+            this.opt_slab_no.AutoSize = true;
+            this.opt_slab_no.Location = new System.Drawing.Point(94, 373);
+            this.opt_slab_no.Name = "opt_slab_no";
+            this.opt_slab_no.Size = new System.Drawing.Size(64, 17);
+            this.opt_slab_no.TabIndex = 761;
+            this.opt_slab_no.Text = "板坯号";
+            this.opt_slab_no.UseVisualStyleBackColor = true;
+            this.opt_slab_no.Click += new System.EventHandler(this.opt_slab_no_Click);
+            // 
             // CGC2021C
             // 
             this.ClientSize = new System.Drawing.Size(1239, 622);
+            this.Controls.Add(this.opt_slab_no);
+            this.Controls.Add(this.opt_cut_no);
+            this.Controls.Add(this.SSP3);
+            this.Controls.Add(this.SSP2);
+            this.Controls.Add(this.SSP1);
+            this.Controls.Add(this.SSP4);
+            this.Controls.Add(this.SSP6);
+            this.Controls.Add(this.SSP5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.splitter2);
             this.Controls.Add(this.groupBox3);
@@ -657,7 +797,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "CGC2021C";
             this.Text = "热喷信息发送界面_CGC2021C";
-            this.Load += new System.EventHandler(this.CGD2082C_Load);
+            this.Load += new System.EventHandler(this.CGC2021C_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -675,6 +815,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ss2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ss2_Sheet1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -711,7 +852,7 @@
         private System.Windows.Forms.RadioButton opt_line4;
         private System.Windows.Forms.RadioButton opt_line7;
         private System.Windows.Forms.RadioButton opt_line5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TXT_COM;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox TXT_BOT;
         private System.Windows.Forms.TextBox TXT_TOP;
@@ -733,5 +874,13 @@
         private System.Windows.Forms.TextBox TXT_SLAB_NO;
         private System.Windows.Forms.TextBox TXT_STLGRD;
         private System.Windows.Forms.TextBox TXT_RL;
+        private System.Windows.Forms.Button SSP5;
+        private System.Windows.Forms.Button SSP6;
+        private System.Windows.Forms.Button SSP4;
+        private System.Windows.Forms.Button SSP3;
+        private System.Windows.Forms.Button SSP2;
+        private System.Windows.Forms.Button SSP1;
+        private System.Windows.Forms.RadioButton opt_cut_no;
+        private System.Windows.Forms.RadioButton opt_slab_no;
     }
 }

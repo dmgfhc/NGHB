@@ -921,6 +921,7 @@
             // SSP2
             // 
             this.SSP2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.SSP2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SSP2.Font = new System.Drawing.Font("宋体", 10.75F);
             this.SSP2.ForeColor = System.Drawing.Color.White;
             this.SSP2.Location = new System.Drawing.Point(975, 69);
@@ -1119,6 +1120,7 @@
             // SSP1
             // 
             this.SSP1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.SSP1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SSP1.Font = new System.Drawing.Font("宋体", 10.75F);
             this.SSP1.ForeColor = System.Drawing.Color.White;
             this.SSP1.Location = new System.Drawing.Point(870, 67);
@@ -1133,6 +1135,7 @@
             // SSP5
             // 
             this.SSP5.BackColor = System.Drawing.Color.Magenta;
+            this.SSP5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SSP5.Font = new System.Drawing.Font("宋体", 10.75F);
             this.SSP5.ForeColor = System.Drawing.Color.White;
             this.SSP5.Location = new System.Drawing.Point(975, 42);
@@ -1147,6 +1150,7 @@
             // SSP4
             // 
             this.SSP4.BackColor = System.Drawing.Color.Blue;
+            this.SSP4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SSP4.Font = new System.Drawing.Font("宋体", 10.75F);
             this.SSP4.ForeColor = System.Drawing.Color.White;
             this.SSP4.Location = new System.Drawing.Point(870, 42);
