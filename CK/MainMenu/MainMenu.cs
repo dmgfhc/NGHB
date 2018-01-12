@@ -1,7 +1,31 @@
+using System.Collections;
 using System.Windows.Forms;
+using System.Diagnostics;
+using FarPoint.Win.Spread.CellType;
+using System.Xml.Xsl;
+//using FarPoint.PluginCalendar;
+//using InDate;
+using FarPoint.Win.Spread;
+using FarPoint.Win.Spread.Model;
+//using FarPoint.CalcEngine;
+using FarPoint.Win.SuperEdit;
+using ADODB;
+using System.Data;
+//using FarPoint.Excel;
 using System;
 using Microsoft.VisualBasic;
+using System.Drawing;
+using FarPoint.Win.Spread.DrawingSpace;
+using FarPoint.Win.Spread.DrawingSpace.Internal;
+//using FarPoint.PluginCalendar.WinForms;
+using FarPoint;
+using System.Collections.Generic;
+using FarPoint.Win.Text;
+using FarPoint.Win.Spread.UndoRedo;
+using FarPoint.Win.Spread.Design;
+using FarPoint.Win;
 using CommonClass;
+using System.Reflection;
 
 //-------------------------------------------------------------------------------
 //-- PROGRAM HEADER  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -56,40 +80,28 @@ namespace CK
 		}
 		
 		#endregion
-		
-		public string Toolbar_St;
-		internal System.Windows.Forms.MenuItem MenuItem3;
-		internal System.Windows.Forms.MenuItem mnu_ABA001OC;
-		internal System.Windows.Forms.MenuItem mnu_ABA002OC;
-		internal System.Windows.Forms.MenuItem mnu_WZA0030C;
-        internal System.Windows.Forms.MenuItem mnu_WZA0040C;
-        private MenuItem menuItem27;
-        internal Timer tme_current;
-        public ToolBar MenuTool;
-        public ToolBarButton Btn_Clear;
-        public ToolBarButton Btn_Refer;
-        internal ToolBarButton Sep1;
-        public ToolBarButton Btn_Save;
-        public ToolBarButton Btn_Delete;
-        internal ToolBarButton Sep2;
-        public ToolBarButton Btn_RowIns;
-        public ToolBarButton Btn_RowDel;
-        public ToolBarButton Btn_RowCan;
-        internal ToolBarButton Sep3;
-        public ToolBarButton Btn_Copy;
-        public ToolBarButton Btn_Paste;
-        internal ToolBarButton Sep4;
-        public ToolBarButton Btn_Excel;
-        public ToolBarButton Btn_Print;
-        internal ToolBarButton Sep5;
-        public ToolBarButton Btn_Exit;
-        public StatusBar StatusBar1;
-        public StatusBarPanel StatusBarPanel1;
-        public StatusBarPanel StatusBarPanel2;
-        public StatusBarPanel StatusBarPanel3;
-        internal StatusBarPanel StatusBarPanel4;
+
+        public string Toolbar_St;
+        internal System.Windows.Forms.MenuItem MenuItem8;
+        private MenuItem menuItem4;
+        private MenuItem WKA1010C;
+        private MenuItem WKA1020C;
+        private MenuItem WKA1030C;
+        private MenuItem menuItem12;
+        private MenuItem WKB1010C;
+        private MenuItem WKB1020C;
+        private MenuItem menuItem24;
         private StatusBarPanel statusBarPanel5;
-        private MenuItem menuItem48;
+        private MenuItem menuItem3;
+        private MenuItem menuItem6;
+        private MenuItem menuItem7;
+        private MenuItem menuItem9;
+        private MenuItem menuItem10;
+        private MenuItem menuItem21;
+        private MenuItem menuItem23;
+        private MenuItem WKA1050C;
+        //private MenuItem menuItem4;
+        //private MenuItem menuItem7;
 		///'''fdfdsfdsfds
 		//Friend WithEvents DefaultLookAndFeel1 As DevExpress.LookAndFeel.DefaultLookAndFeel
 		//Active Form ToolBar Setting
@@ -132,10 +144,12 @@ namespace CK
 		//可以使用 Windows 窗体设计器修改此过程。
 		//不要使用代码编辑器修改它。
 		internal System.Windows.Forms.MainMenu MainMenu1;
-        internal System.Windows.Forms.MenuItem MenuItem1;
+		internal System.Windows.Forms.MenuItem MenuItem1;
+		internal System.Windows.Forms.Timer tme_current;
 		public System.Windows.Forms.ImageList ImageList0;
 		public System.Windows.Forms.ContextMenu ContextMenu1;
-        public System.Windows.Forms.ContextMenu ContextMenu2;
+		public System.Windows.Forms.ContextMenu ContextMenu2;
+		public System.Windows.Forms.StatusBar StatusBar1;
 		public System.Windows.Forms.ContextMenu ContextMenu3;
 		internal System.Windows.Forms.MenuItem MenuItem11;
 		internal System.Windows.Forms.MenuItem Mnu_Horiz;
@@ -180,11 +194,33 @@ namespace CK
 		public System.Windows.Forms.MenuItem Mnu_Scopy;
 		public System.Windows.Forms.MenuItem Mnu_Apaste;
 		public System.Windows.Forms.MenuItem Mnu_Mpaste;
-        public System.Windows.Forms.MenuItem Mnu_Spaste;
+		public System.Windows.Forms.MenuItem Mnu_Spaste;
+		public System.Windows.Forms.StatusBarPanel StatusBarPanel2;
+		public System.Windows.Forms.StatusBarPanel StatusBarPanel1;
+		public System.Windows.Forms.StatusBarPanel StatusBarPanel3;
+		public System.Windows.Forms.ToolBar MenuTool;
+		public System.Windows.Forms.ToolBarButton Btn_Clear;
+		public System.Windows.Forms.ToolBarButton Btn_Refer;
+		internal System.Windows.Forms.ToolBarButton Sep1;
+		public System.Windows.Forms.ToolBarButton Btn_Save;
+		public System.Windows.Forms.ToolBarButton Btn_Delete;
+		internal System.Windows.Forms.ToolBarButton Sep2;
+		public System.Windows.Forms.ToolBarButton Btn_RowIns;
+		public System.Windows.Forms.ToolBarButton Btn_RowDel;
+		public System.Windows.Forms.ToolBarButton Btn_RowCan;
+		internal System.Windows.Forms.ToolBarButton Sep3;
+		public System.Windows.Forms.ToolBarButton Btn_Copy;
+		public System.Windows.Forms.ToolBarButton Btn_Paste;
+		internal System.Windows.Forms.ToolBarButton Sep4;
+		public System.Windows.Forms.ToolBarButton Btn_Excel;
+		public System.Windows.Forms.ToolBarButton Btn_Print;
+		internal System.Windows.Forms.ToolBarButton Sep5;
+		public System.Windows.Forms.ToolBarButton Btn_Exit;
 		internal System.Windows.Forms.MenuItem MenuItem17;
 		internal System.Windows.Forms.MenuItem MenuItem20;
 		internal System.Windows.Forms.MainMenu MainMenu2;
-        internal System.Windows.Forms.MenuItem MenuItem22;
+		internal System.Windows.Forms.MenuItem MenuItem22;
+		internal System.Windows.Forms.StatusBarPanel StatusBarPanel4;
 		internal System.Windows.Forms.MenuItem MenuItem2;
 		internal System.Windows.Forms.MenuItem MenuItem5;
 		public System.Windows.Forms.ImageList ImageList2;
@@ -203,6 +239,22 @@ namespace CK
             this.Mnu_Spaste = new System.Windows.Forms.MenuItem();
             this.ImageList0 = new System.Windows.Forms.ImageList(this.components);
             this.MainMenu1 = new System.Windows.Forms.MainMenu(this.components);
+            this.menuItem4 = new System.Windows.Forms.MenuItem();
+            this.WKA1010C = new System.Windows.Forms.MenuItem();
+            this.WKA1020C = new System.Windows.Forms.MenuItem();
+            this.WKA1030C = new System.Windows.Forms.MenuItem();
+            this.menuItem6 = new System.Windows.Forms.MenuItem();
+            this.WKA1050C = new System.Windows.Forms.MenuItem();
+            this.menuItem12 = new System.Windows.Forms.MenuItem();
+            this.WKB1010C = new System.Windows.Forms.MenuItem();
+            this.WKB1020C = new System.Windows.Forms.MenuItem();
+            this.menuItem3 = new System.Windows.Forms.MenuItem();
+            this.menuItem24 = new System.Windows.Forms.MenuItem();
+            this.menuItem21 = new System.Windows.Forms.MenuItem();
+            this.menuItem10 = new System.Windows.Forms.MenuItem();
+            this.menuItem23 = new System.Windows.Forms.MenuItem();
+            this.menuItem7 = new System.Windows.Forms.MenuItem();
+            this.menuItem9 = new System.Windows.Forms.MenuItem();
             this.Mnu_Control = new System.Windows.Forms.MenuItem();
             this.Mnu_Clear = new System.Windows.Forms.MenuItem();
             this.Mnu_Refer = new System.Windows.Forms.MenuItem();
@@ -232,17 +284,16 @@ namespace CK
             this.MenuItem2 = new System.Windows.Forms.MenuItem();
             this.MenuItem20 = new System.Windows.Forms.MenuItem();
             this.MenuItem5 = new System.Windows.Forms.MenuItem();
-            this.MenuItem3 = new System.Windows.Forms.MenuItem();
-            this.mnu_ABA001OC = new System.Windows.Forms.MenuItem();
-            this.mnu_ABA002OC = new System.Windows.Forms.MenuItem();
-            this.mnu_WZA0030C = new System.Windows.Forms.MenuItem();
-            this.mnu_WZA0040C = new System.Windows.Forms.MenuItem();
-            this.menuItem27 = new System.Windows.Forms.MenuItem();
-            this.menuItem48 = new System.Windows.Forms.MenuItem();
             this.Mnu_Windows = new System.Windows.Forms.MenuItem();
             this.Mnu_Horiz = new System.Windows.Forms.MenuItem();
             this.Mnu_Vertical = new System.Windows.Forms.MenuItem();
             this.Mnu_Cascade = new System.Windows.Forms.MenuItem();
+            this.StatusBar1 = new System.Windows.Forms.StatusBar();
+            this.StatusBarPanel1 = new System.Windows.Forms.StatusBarPanel();
+            this.StatusBarPanel2 = new System.Windows.Forms.StatusBarPanel();
+            this.StatusBarPanel3 = new System.Windows.Forms.StatusBarPanel();
+            this.StatusBarPanel4 = new System.Windows.Forms.StatusBarPanel();
+            this.statusBarPanel5 = new System.Windows.Forms.StatusBarPanel();
             this.tme_current = new System.Windows.Forms.Timer(this.components);
             this.ContextMenu3 = new System.Windows.Forms.ContextMenu();
             this.Mnu_ColumnSort = new System.Windows.Forms.MenuItem();
@@ -255,10 +306,6 @@ namespace CK
             this.MenuItem16 = new System.Windows.Forms.MenuItem();
             this.MenuItem18 = new System.Windows.Forms.MenuItem();
             this.MenuItem19 = new System.Windows.Forms.MenuItem();
-            this.MainMenu2 = new System.Windows.Forms.MainMenu(this.components);
-            this.MenuItem22 = new System.Windows.Forms.MenuItem();
-            this.ImageList2 = new System.Windows.Forms.ImageList(this.components);
-            this.ImageList1 = new System.Windows.Forms.ImageList(this.components);
             this.MenuTool = new System.Windows.Forms.ToolBar();
             this.Btn_Clear = new System.Windows.Forms.ToolBarButton();
             this.Btn_Refer = new System.Windows.Forms.ToolBarButton();
@@ -277,12 +324,10 @@ namespace CK
             this.Btn_Print = new System.Windows.Forms.ToolBarButton();
             this.Sep5 = new System.Windows.Forms.ToolBarButton();
             this.Btn_Exit = new System.Windows.Forms.ToolBarButton();
-            this.StatusBar1 = new System.Windows.Forms.StatusBar();
-            this.StatusBarPanel1 = new System.Windows.Forms.StatusBarPanel();
-            this.StatusBarPanel2 = new System.Windows.Forms.StatusBarPanel();
-            this.StatusBarPanel3 = new System.Windows.Forms.StatusBarPanel();
-            this.StatusBarPanel4 = new System.Windows.Forms.StatusBarPanel();
-            this.statusBarPanel5 = new System.Windows.Forms.StatusBarPanel();
+            this.MainMenu2 = new System.Windows.Forms.MainMenu(this.components);
+            this.MenuItem22 = new System.Windows.Forms.MenuItem();
+            this.ImageList2 = new System.Windows.Forms.ImageList(this.components);
+            this.ImageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.StatusBarPanel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatusBarPanel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatusBarPanel3)).BeginInit();
@@ -360,15 +405,126 @@ namespace CK
             // MainMenu1
             // 
             this.MainMenu1.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.menuItem4,
+            this.menuItem12,
+            this.menuItem24,
+            this.menuItem7,
             this.Mnu_Control,
             this.MenuItem1,
-            this.MenuItem3,
             this.Mnu_Windows});
             resources.ApplyResources(this.MainMenu1, "MainMenu1");
             // 
+            // menuItem4
+            // 
+            this.menuItem4.Index = 0;
+            this.menuItem4.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.WKA1010C,
+            this.WKA1020C,
+            this.WKA1030C,
+            this.menuItem6,
+            this.WKA1050C});
+            resources.ApplyResources(this.menuItem4, "menuItem4");
+            // 
+            // WKA1010C
+            // 
+            this.WKA1010C.Index = 0;
+            resources.ApplyResources(this.WKA1010C, "WKA1010C");
+            this.WKA1010C.Click += new System.EventHandler(this.WKA1010C_Click);
+            // 
+            // WKA1020C
+            // 
+            this.WKA1020C.Index = 1;
+            resources.ApplyResources(this.WKA1020C, "WKA1020C");
+            this.WKA1020C.Click += new System.EventHandler(this.WKA1020C_Click);
+            // 
+            // WKA1030C
+            // 
+            this.WKA1030C.Index = 2;
+            resources.ApplyResources(this.WKA1030C, "WKA1030C");
+            this.WKA1030C.Click += new System.EventHandler(this.WKA1030C_Click);
+            // 
+            // menuItem6
+            // 
+            this.menuItem6.Index = 3;
+            resources.ApplyResources(this.menuItem6, "menuItem6");
+            this.menuItem6.Click += new System.EventHandler(this.menuItem6_Click_1);
+            // 
+            // WKA1050C
+            // 
+            this.WKA1050C.Index = 4;
+            resources.ApplyResources(this.WKA1050C, "WKA1050C");
+            this.WKA1050C.Click += new System.EventHandler(this.WKA1050C_Click);
+            // 
+            // menuItem12
+            // 
+            this.menuItem12.Index = 1;
+            this.menuItem12.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.WKB1010C,
+            this.WKB1020C,
+            this.menuItem3});
+            resources.ApplyResources(this.menuItem12, "menuItem12");
+            // 
+            // WKB1010C
+            // 
+            this.WKB1010C.Index = 0;
+            resources.ApplyResources(this.WKB1010C, "WKB1010C");
+            this.WKB1010C.Click += new System.EventHandler(this.WKB1010C_Click);
+            // 
+            // WKB1020C
+            // 
+            this.WKB1020C.Index = 1;
+            resources.ApplyResources(this.WKB1020C, "WKB1020C");
+            this.WKB1020C.Click += new System.EventHandler(this.WKB1020C_Click);
+            // 
+            // menuItem3
+            // 
+            this.menuItem3.Index = 2;
+            resources.ApplyResources(this.menuItem3, "menuItem3");
+            this.menuItem3.Click += new System.EventHandler(this.WKB1030C_Click);
+            // 
+            // menuItem24
+            // 
+            this.menuItem24.Index = 2;
+            this.menuItem24.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.menuItem21,
+            this.menuItem10,
+            this.menuItem23});
+            resources.ApplyResources(this.menuItem24, "menuItem24");
+            // 
+            // menuItem21
+            // 
+            this.menuItem21.Index = 0;
+            resources.ApplyResources(this.menuItem21, "menuItem21");
+            this.menuItem21.Click += new System.EventHandler(this.menuItem21_Click);
+            // 
+            // menuItem10
+            // 
+            this.menuItem10.Index = 1;
+            resources.ApplyResources(this.menuItem10, "menuItem10");
+            this.menuItem10.Click += new System.EventHandler(this.menuItem10_Click);
+            // 
+            // menuItem23
+            // 
+            this.menuItem23.Index = 2;
+            resources.ApplyResources(this.menuItem23, "menuItem23");
+            this.menuItem23.Click += new System.EventHandler(this.menuItem23_Click_1);
+            // 
+            // menuItem7
+            // 
+            this.menuItem7.Index = 3;
+            this.menuItem7.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.menuItem9});
+            resources.ApplyResources(this.menuItem7, "menuItem7");
+            // 
+            // menuItem9
+            // 
+            this.menuItem9.Index = 0;
+            resources.ApplyResources(this.menuItem9, "menuItem9");
+            this.menuItem9.Click += new System.EventHandler(this.menuItem9_Click_1);
+            // 
             // Mnu_Control
             // 
-            this.Mnu_Control.Index = 0;
+            this.Mnu_Control.Index = 4;
             this.Mnu_Control.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.Mnu_Clear,
             this.Mnu_Refer,
@@ -524,7 +680,7 @@ namespace CK
             // 
             // MenuItem1
             // 
-            this.MenuItem1.Index = 1;
+            this.MenuItem1.Index = 5;
             this.MenuItem1.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.MenuItem17,
             this.MenuItem2,
@@ -552,52 +708,9 @@ namespace CK
             this.MenuItem5.Index = 3;
             resources.ApplyResources(this.MenuItem5, "MenuItem5");
             // 
-            // MenuItem3
-            // 
-            this.MenuItem3.Index = 2;
-            this.MenuItem3.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-            this.mnu_ABA001OC,
-            this.mnu_ABA002OC,
-            this.mnu_WZA0030C,
-            this.mnu_WZA0040C,
-            this.menuItem27,
-            this.menuItem48});
-            resources.ApplyResources(this.MenuItem3, "MenuItem3");
-            // 
-            // mnu_ABA001OC
-            // 
-            this.mnu_ABA001OC.Index = 0;
-            resources.ApplyResources(this.mnu_ABA001OC, "mnu_ABA001OC");
-            this.mnu_ABA001OC.Click += new System.EventHandler(this.mnu_ABA001OC_Click);
-            // 
-            // mnu_ABA002OC
-            // 
-            this.mnu_ABA002OC.Index = 1;
-            resources.ApplyResources(this.mnu_ABA002OC, "mnu_ABA002OC");
-            // 
-            // mnu_WZA0030C
-            // 
-            this.mnu_WZA0030C.Index = 2;
-            resources.ApplyResources(this.mnu_WZA0030C, "mnu_WZA0030C");
-            // 
-            // mnu_WZA0040C
-            // 
-            this.mnu_WZA0040C.Index = 3;
-            resources.ApplyResources(this.mnu_WZA0040C, "mnu_WZA0040C");
-            // 
-            // menuItem27
-            // 
-            this.menuItem27.Index = 4;
-            resources.ApplyResources(this.menuItem27, "menuItem27");
-            // 
-            // menuItem48
-            // 
-            this.menuItem48.Index = 5;
-            resources.ApplyResources(this.menuItem48, "menuItem48");
-            // 
             // Mnu_Windows
             // 
-            this.Mnu_Windows.Index = 3;
+            this.Mnu_Windows.Index = 6;
             this.Mnu_Windows.MdiList = true;
             this.Mnu_Windows.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.Mnu_Horiz,
@@ -623,6 +736,39 @@ namespace CK
             this.Mnu_Cascade.Index = 2;
             resources.ApplyResources(this.Mnu_Cascade, "Mnu_Cascade");
             this.Mnu_Cascade.Click += new System.EventHandler(this.Mnu_Horiz_Click);
+            // 
+            // StatusBar1
+            // 
+            resources.ApplyResources(this.StatusBar1, "StatusBar1");
+            this.StatusBar1.Name = "StatusBar1";
+            this.StatusBar1.Panels.AddRange(new System.Windows.Forms.StatusBarPanel[] {
+            this.StatusBarPanel1,
+            this.StatusBarPanel2,
+            this.StatusBarPanel3,
+            this.StatusBarPanel4,
+            this.statusBarPanel5});
+            this.StatusBar1.ShowPanels = true;
+            // 
+            // StatusBarPanel1
+            // 
+            resources.ApplyResources(this.StatusBarPanel1, "StatusBarPanel1");
+            // 
+            // StatusBarPanel2
+            // 
+            resources.ApplyResources(this.StatusBarPanel2, "StatusBarPanel2");
+            // 
+            // StatusBarPanel3
+            // 
+            resources.ApplyResources(this.StatusBarPanel3, "StatusBarPanel3");
+            // 
+            // StatusBarPanel4
+            // 
+            this.StatusBarPanel4.AutoSize = System.Windows.Forms.StatusBarPanelAutoSize.Contents;
+            resources.ApplyResources(this.StatusBarPanel4, "StatusBarPanel4");
+            // 
+            // statusBarPanel5
+            // 
+            resources.ApplyResources(this.statusBarPanel5, "statusBarPanel5");
             // 
             // tme_current
             // 
@@ -690,52 +836,6 @@ namespace CK
             // 
             this.MenuItem19.Index = -1;
             resources.ApplyResources(this.MenuItem19, "MenuItem19");
-            // 
-            // MainMenu2
-            // 
-            this.MainMenu2.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-            this.MenuItem22});
-            resources.ApplyResources(this.MainMenu2, "MainMenu2");
-            // 
-            // MenuItem22
-            // 
-            this.MenuItem22.Index = 0;
-            resources.ApplyResources(this.MenuItem22, "MenuItem22");
-            // 
-            // ImageList2
-            // 
-            this.ImageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ImageList2.ImageStream")));
-            this.ImageList2.TransparentColor = System.Drawing.Color.Transparent;
-            this.ImageList2.Images.SetKeyName(0, "M1_2.gif");
-            this.ImageList2.Images.SetKeyName(1, "M2_2.gif");
-            this.ImageList2.Images.SetKeyName(2, "M3_2.gif");
-            this.ImageList2.Images.SetKeyName(3, "M4_2.gif");
-            this.ImageList2.Images.SetKeyName(4, "M5_2.gif");
-            this.ImageList2.Images.SetKeyName(5, "M6_2.gif");
-            this.ImageList2.Images.SetKeyName(6, "M7_2.gif");
-            this.ImageList2.Images.SetKeyName(7, "M8_2.gif");
-            this.ImageList2.Images.SetKeyName(8, "M9_2.gif");
-            this.ImageList2.Images.SetKeyName(9, "M10_2.gif");
-            this.ImageList2.Images.SetKeyName(10, "M11_2.gif");
-            this.ImageList2.Images.SetKeyName(11, "M11_2.gif");
-            this.ImageList2.Images.SetKeyName(12, "M12_2.gif");
-            // 
-            // ImageList1
-            // 
-            this.ImageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ImageList1.ImageStream")));
-            this.ImageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.ImageList1.Images.SetKeyName(0, "M1_1.gif");
-            this.ImageList1.Images.SetKeyName(1, "M2_1.gif");
-            this.ImageList1.Images.SetKeyName(2, "M3_1.gif");
-            this.ImageList1.Images.SetKeyName(3, "M4_1.gif");
-            this.ImageList1.Images.SetKeyName(4, "M5_1.gif");
-            this.ImageList1.Images.SetKeyName(5, "M6_1.gif");
-            this.ImageList1.Images.SetKeyName(6, "M7_1.gif");
-            this.ImageList1.Images.SetKeyName(7, "M8_1.gif");
-            this.ImageList1.Images.SetKeyName(8, "M9_1.gif");
-            this.ImageList1.Images.SetKeyName(9, "M10_1.gif");
-            this.ImageList1.Images.SetKeyName(10, "M11_1.gif");
-            this.ImageList1.Images.SetKeyName(11, "M12_1.gif");
             // 
             // MenuTool
             // 
@@ -852,44 +952,56 @@ namespace CK
             resources.ApplyResources(this.Btn_Exit, "Btn_Exit");
             this.Btn_Exit.Name = "Btn_Exit";
             // 
-            // StatusBar1
+            // MainMenu2
             // 
-            resources.ApplyResources(this.StatusBar1, "StatusBar1");
-            this.StatusBar1.Name = "StatusBar1";
-            this.StatusBar1.Panels.AddRange(new System.Windows.Forms.StatusBarPanel[] {
-            this.StatusBarPanel1,
-            this.StatusBarPanel2,
-            this.StatusBarPanel3,
-            this.StatusBarPanel4,
-            this.statusBarPanel5});
-            this.StatusBar1.ShowPanels = true;
+            this.MainMenu2.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.MenuItem22});
+            resources.ApplyResources(this.MainMenu2, "MainMenu2");
             // 
-            // StatusBarPanel1
+            // MenuItem22
             // 
-            resources.ApplyResources(this.StatusBarPanel1, "StatusBarPanel1");
+            this.MenuItem22.Index = 0;
+            resources.ApplyResources(this.MenuItem22, "MenuItem22");
             // 
-            // StatusBarPanel2
+            // ImageList2
             // 
-            resources.ApplyResources(this.StatusBarPanel2, "StatusBarPanel2");
+            this.ImageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ImageList2.ImageStream")));
+            this.ImageList2.TransparentColor = System.Drawing.Color.Transparent;
+            this.ImageList2.Images.SetKeyName(0, "M1_2.gif");
+            this.ImageList2.Images.SetKeyName(1, "M2_2.gif");
+            this.ImageList2.Images.SetKeyName(2, "M3_2.gif");
+            this.ImageList2.Images.SetKeyName(3, "M4_2.gif");
+            this.ImageList2.Images.SetKeyName(4, "M5_2.gif");
+            this.ImageList2.Images.SetKeyName(5, "M6_2.gif");
+            this.ImageList2.Images.SetKeyName(6, "M7_2.gif");
+            this.ImageList2.Images.SetKeyName(7, "M8_2.gif");
+            this.ImageList2.Images.SetKeyName(8, "M9_2.gif");
+            this.ImageList2.Images.SetKeyName(9, "M10_2.gif");
+            this.ImageList2.Images.SetKeyName(10, "M11_2.gif");
+            this.ImageList2.Images.SetKeyName(11, "M12_2.gif");
             // 
-            // StatusBarPanel3
+            // ImageList1
             // 
-            resources.ApplyResources(this.StatusBarPanel3, "StatusBarPanel3");
-            // 
-            // StatusBarPanel4
-            // 
-            this.StatusBarPanel4.AutoSize = System.Windows.Forms.StatusBarPanelAutoSize.Contents;
-            resources.ApplyResources(this.StatusBarPanel4, "StatusBarPanel4");
-            // 
-            // statusBarPanel5
-            // 
-            resources.ApplyResources(this.statusBarPanel5, "statusBarPanel5");
+            this.ImageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ImageList1.ImageStream")));
+            this.ImageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.ImageList1.Images.SetKeyName(0, "M1_1.gif");
+            this.ImageList1.Images.SetKeyName(1, "M2_1.gif");
+            this.ImageList1.Images.SetKeyName(2, "M3_1.gif");
+            this.ImageList1.Images.SetKeyName(3, "M4_1.gif");
+            this.ImageList1.Images.SetKeyName(4, "M5_1.gif");
+            this.ImageList1.Images.SetKeyName(5, "M6_1.gif");
+            this.ImageList1.Images.SetKeyName(6, "M7_1.gif");
+            this.ImageList1.Images.SetKeyName(7, "M8_1.gif");
+            this.ImageList1.Images.SetKeyName(8, "M9_1.gif");
+            this.ImageList1.Images.SetKeyName(9, "M10_1.gif");
+            this.ImageList1.Images.SetKeyName(10, "M11_1.gif");
+            this.ImageList1.Images.SetKeyName(11, "M12_1.gif");
             // 
             // MainMenu
             // 
             resources.ApplyResources(this, "$this");
-            this.Controls.Add(this.StatusBar1);
             this.Controls.Add(this.MenuTool);
+            this.Controls.Add(this.StatusBar1);
             this.IsMdiContainer = true;
             this.KeyPreview = true;
             this.Menu = this.MainMenu1;
@@ -944,31 +1056,30 @@ namespace CK
             //    GeneralCommon.Gp_MsgBoxDisplay(ex.Message, "", "");
             //}
 			
-			// 启动时，不弹出登录窗口
-            /*       */
-            //if ((args.Length - 1) < 1)
-            //{
-            //    Login.ShowDialog();
-            //    if (GeneralCommon.bPassCheck == false)
-            //    {
-            //        this.Dispose();
-            //        return;
-            //    }
-            //}
-            //else
-            //{
-            //    if (GeneralCommon.GF_DbConnect() == false)
-            //    {
-            //        this.Dispose();
-            //        return;
-            //    }
+			/* 启动时，不弹出登录窗口
+			if ((args.Length - 1) < 1)
+			{
+				Login.ShowDialog();
+				if (GeneralCommon.bPassCheck == false)
+				{
+					this.Dispose();
+					return;
+				}
+			}
+			else
+			{
+				if (GeneralCommon.GF_DbConnect() == false)
+				{
+					this.Dispose();
+					return;
+				}
 				
-            //    GeneralCommon.sUserID = args[0];
-            //    GeneralCommon.sUsername = args[1];			
+				GeneralCommon.sUserID = args[0];
+				GeneralCommon.sUsername = args[1];			
 				
-            //}
+			}*/
 
-            GeneralCommon.sUserID = "0017505";
+            GeneralCommon.sUserID = "X000006";
             GeneralCommon.sUsername = "耿朝雷";	
 			//If Not GeneralCommon.Gp_GetGravity() Then
 			//    Me.Dispose()
@@ -989,10 +1100,8 @@ namespace CK
 			//
 			//B0025 部门编码
 			//
-            //sQuery = "SELECT CD_NAME FROM ZP_CD WHERE CD_MANA_NO = \'B0025\' AND CD = \'" + GeneralCommon.sDeptid + "\'";
-            //GeneralCommon.sDeptname = GeneralCommon.Gf_CodeFind(GeneralCommon.M_CN1, sQuery);
-            sQuery = "SELECT CD_NAME FROM ZP_CD WHERE CD_MANA_NO = \'Z0002\' AND CD = \'" + GeneralCommon.sDeptid + "\'";
-            GeneralCommon.sDeptname = GeneralCommon.Gf_CodeFind(GeneralCommon.M_CN1, sQuery);
+			sQuery = "SELECT CD_NAME FROM ZP_CD WHERE CD_MANA_NO = \'Z0002\' AND CD = \'" + GeneralCommon.sDeptid + "\'";
+			GeneralCommon.sDeptname = GeneralCommon.Gf_CodeFind(GeneralCommon.M_CN1, sQuery);
 			
 			this.StatusBar1.Panels[1].Text = GeneralCommon.sDeptname + " " + GeneralCommon.sUserID + " " + GeneralCommon.sUsername;
 			this.Text += Application.ProductName + " Ver." + Interaction.GetSetting("NGMES", "VERSION", Application.ProductName + ".exe", "1.0.0");
@@ -1006,9 +1115,6 @@ namespace CK
 			GeneralCommon.Gp_DateSetting();
             //GeneralCommon.Gp_FormMenuSetting(this, "Start", Toolbar_St, "");
             GeneralCommon.Gp_FormMenuSetting("Start", Toolbar_St, "");
-
-
-
             ////更改状态栏显示服务器类型：正式环境、测试环境 BEGIN 2012-11-28 耿朝雷
             System.Drawing.Size CRT_SIZE = SystemInformation.PrimaryMonitorSize;
 
@@ -1043,9 +1149,8 @@ namespace CK
             ////更改状态栏显示服务器类型：正式环境、测试环境 END 2012-11-28 耿朝雷
 
 
+            this.KeyPreview = true;
 
-			this.KeyPreview = true;
-			
 		}
 		
 		private void MainMenu_Closed(object sender, System.EventArgs e)
@@ -1113,7 +1218,7 @@ namespace CK
 			try
 			{
 				
-				StatusBar1.Panels[0].Text = " 提示信息 : ";
+				StatusBar1.Panels[0].Text = " Message : ";
 				
 				if (frmActive == null)
 				{
@@ -1233,7 +1338,7 @@ namespace CK
 			
 			frmActive = this.ActiveMdiChild;
 			((FORMBASE)frmActive).Form_Cpy();
-            StatusBar1.Panels[0].Text = " 提示信息 : ";
+			StatusBar1.Panels[0].Text = " Message : ";
             //GeneralCommon.Gp_FormMenuSetting(this, "", "Acopy", "");
             GeneralCommon.Gp_FormMenuSetting("", "Acopy", "");
 			
@@ -1246,7 +1351,7 @@ namespace CK
 			
 			frmActive = this.ActiveMdiChild;
 			((FORMBASE)frmActive).Master_Cpy();
-            StatusBar1.Panels[0].Text = " 提示信息 : ";
+			StatusBar1.Panels[0].Text = " Message : ";
             //GeneralCommon.Gp_FormMenuSetting(this, "", "Mcopy", "");
             GeneralCommon.Gp_FormMenuSetting( "", "Mcopy", "");
 			
@@ -1259,7 +1364,7 @@ namespace CK
 			
 			frmActive = this.ActiveMdiChild;
             ((FORMBASE)frmActive).Spread_Cpy();
-            StatusBar1.Panels[0].Text = " 提示信息 : ";
+			StatusBar1.Panels[0].Text = " Message : ";
             //GeneralCommon.Gp_FormMenuSetting(this, "", "Scopy", "");
             GeneralCommon.Gp_FormMenuSetting( "", "Scopy", "");
             
@@ -1315,7 +1420,7 @@ namespace CK
 				
             //    frmActive = this.ActiveMdiChild;
             //    ((FORMBASE)frmActive).Spread_ColumnsSort();
-            //    StatusBar1.Panels[0].Text = " 提示信息 : ";
+            //    StatusBar1.Panels[0].Text = " Message : ";
 				
             //}
             //catch (Exception ex)
@@ -1340,7 +1445,7 @@ namespace CK
 				
             //    frmActive = this.ActiveMdiChild;
             //    ((FORMBASE)frmActive).Spread_Frozens_Setting();
-            //    StatusBar1.Panels[0].Text = " 提示信息 : ";
+            //    StatusBar1.Panels[0].Text = " Message : ";
 				
             //}
             //catch (Exception ex)
@@ -1365,7 +1470,7 @@ namespace CK
 				
             //    frmActive = this.ActiveMdiChild;
             //    ((FORMBASE)frmActive).Spread_Frozens_Cancel();
-            //    StatusBar1.Panels[0].Text = " 提示信息 : ";
+            //    StatusBar1.Panels[0].Text = " Message : ";
 				
             //}
             //catch (Exception ex)
@@ -1513,26 +1618,191 @@ namespace CK
 		}
 		
 		#endregion
+
+
+      
+
+      
 		
-		#region MENU CLICE
+		#region MENU CLICK
 
-
-        private void mnu_ABA001OC_Click(System.Object sender, System.EventArgs e)
+        private void WKA1010C_Click(object sender, EventArgs e)
         {
-            if (!GeneralCommon.Gf_IsFormLode("CKA0010C"))
+            if (!GeneralCommon.Gf_IsFormLoad("WKA1010C"))
             {
-                CKA0010C CKA0010C = new CKA0010C();
-                CKA0010C.MdiParent = this;
-                CKA0010C.Show();
-                CKA0010C.WindowState = FormWindowState.Maximized;
+                CKG2010C WKA1010C = new CKG2010C();
+                WKA1010C.MdiParent = this;
+                WKA1010C.Show();
+                WKA1010C.WindowState = FormWindowState.Maximized;
+
             }
         }
-	
+
+        private void WKA1020C_Click(object sender, EventArgs e)
+        {
+            if (!GeneralCommon.Gf_IsFormLoad("WKA1020C"))
+            {
+                WKA1020C WKA1020C = new WKA1020C();
+                WKA1020C.MdiParent = this;
+                WKA1020C.Show();
+                WKA1020C.WindowState = FormWindowState.Maximized;
+
+            }
+        }
+
+        private void WKA1030C_Click(object sender, EventArgs e)
+        {
+            if (!GeneralCommon.Gf_IsFormLoad("WKA1030C"))
+            {
+                WKA1030C WKA1030C = new WKA1030C();
+                WKA1030C.MdiParent = this;
+                WKA1030C.Show();
+                WKA1030C.WindowState = FormWindowState.Maximized;
+
+            }
+        }
+
+        private void WKA1050C_Click(object sender, EventArgs e)
+        {
+            WKA1050C WKA1050C = new WKA1050C();
+            WKA1050C.MdiParent = this;
+            WKA1050C.Show();
+            WKA1050C.WindowState = FormWindowState.Maximized;
+        }
+
+
+        private void WKB1010C_Click(object sender, EventArgs e)
+        {
+            if (!GeneralCommon.Gf_IsFormLoad("WKB1010C"))
+            {
+                WKB1010C WKB1010C = new WKB1010C();
+                WKB1010C.MdiParent = this;
+                WKB1010C.Show();
+                WKB1010C.WindowState = FormWindowState.Maximized;
+
+            }
+        }
+
+        private void WKB1020C_Click(object sender, EventArgs e)
+        {
+            if (!GeneralCommon.Gf_IsFormLoad("WKB1020C"))
+            {
+                WKB1020C WKB1020C = new WKB1020C();
+                WKB1020C.MdiParent = this;
+                WKB1020C.Show();
+                WKB1020C.WindowState = FormWindowState.Maximized;
+
+            }
+        }
+        private void WKB1030C_Click(object sender, EventArgs e)
+        {
+            if (!GeneralCommon.Gf_IsFormLoad("WKB1030C"))
+            {
+                WKB1030C WKB1030C = new WKB1030C();
+                WKB1030C.MdiParent = this;
+                WKB1030C.Show();
+                WKB1030C.WindowState = FormWindowState.Maximized;
+
+            }
+        }
+
+        private void menuItem9_Click_1(object sender, EventArgs e)
+        {
+            if (!GeneralCommon.Gf_IsFormLoad("WKD1010C"))
+            {
+                WKD1010C WKD1010C = new WKD1010C();
+                WKD1010C.MdiParent = this;
+                WKD1010C.Show();
+                WKD1010C.WindowState = FormWindowState.Maximized;
+
+            }
+        }
+
+        private void menuItem6_Click_1(object sender, EventArgs e)
+        {
+            if (!GeneralCommon.Gf_IsFormLoad("WKA1040C"))
+            {
+                WKA1040C WKA1040C = new WKA1040C();
+                WKA1040C.MdiParent = this;
+                WKA1040C.Show();
+                WKA1040C.WindowState = FormWindowState.Maximized;
+
+            }
+        }
+
+        private void menuItem10_Click(object sender, EventArgs e)
+        {
+            if (!GeneralCommon.Gf_IsFormLoad("WKC1020C"))
+            {
+                WKC1020C WKC1020C = new WKC1020C();
+                WKC1020C.MdiParent = this;
+                WKC1020C.Show();
+                WKC1020C.WindowState = FormWindowState.Maximized;
+
+            }
+        }
+
+        private void menuItem21_Click(object sender, EventArgs e)
+        {
+            if (!GeneralCommon.Gf_IsFormLoad("WKC1010C"))
+            {
+                WKC1010C WKC1010C = new WKC1010C();
+                WKC1010C.MdiParent = this;
+                WKC1010C.Show();
+                WKC1010C.WindowState = FormWindowState.Maximized;
+
+            }
+        }
+
+        private void menuItem23_Click(object sender, EventArgs e)
+        {
+          
+        }
+        private void menuItem23_Click_1(object sender, EventArgs e)
+        {
+            if (!GeneralCommon.Gf_IsFormLoad("WKC1030C"))
+            {
+                WKC1030C WKC1030C = new WKC1030C();
+                WKC1030C.MdiParent = this;
+                WKC1030C.Show();
+                WKC1030C.WindowState = FormWindowState.Maximized;
+            }
+        }
 		#endregion
 
+       
+
+       
+
+     
+        
+
+       
 
      
 
+      
+
+      
+
+        
+
+   
+
+
+       
+
+        
+
+
+
+
+       
+       
+
+       
+
+
        
 
         
@@ -1540,6 +1810,18 @@ namespace CK
        
 
         
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

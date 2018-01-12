@@ -212,14 +212,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BDM.exe" size="689664">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BDM.exe" size="183296">
       <assemblyIdentity name="BDM" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>U5GwXWn0wDU6emKf3x2SgLfd1uU=</dsig:DigestValue>
+        <dsig:DigestValue>Jc4dwvwWR3EcpDrqBxd9+SN8fP8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -231,7 +231,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>V8uVEKm6Yz6Bogu/EtGt+NXxXG8=</dsig:DigestValue>
+        <dsig:DigestValue>d5OsqwL8WqiKSziIpYm+WuVOO04=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

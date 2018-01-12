@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{47D7C419-2EC5-4FAA-9151-8DDEA3DCF4F8}</ProjectGuid>
+    <ProjectGuid>{273CD6FB-ABB0-4034-8747-BC09F7CBCB57}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <StartupObject>BDM.My.MyApplication</StartupObject>
     <RootNamespace>CK</RootNamespace>
@@ -51,10 +51,11 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>WZ.xml</DocumentationFile>
+    <DocumentationFile>BDM.xml</DocumentationFile>
     <NOWARN>1591</NOWARN>
     <WarningLevel>0</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -126,6 +127,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>D:\Program Files\GrapeCity\Spread.WinForms.5.dotNet35\v5.0.3522\Bin\FarPoint.Win.TextRenderer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\anzhuangmulu\vs2010\Visual Studio Tools for Office\PIA\Office14\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="mscorlib" />
@@ -146,12 +153,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CKA\CKA0010C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CKA\CKA0010C.Designer.cs">
-      <DependentUpon>CKA0010C.cs</DependentUpon>
-    </Compile>
     <Compile Include="MainMenu\MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,11 +171,80 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="CKG\CKG2010C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CKG\CKG2010C.Designer.cs">
+      <DependentUpon>CKG2010C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CKG\WKA1020C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CKG\WKA1020C.Designer.cs">
+      <DependentUpon>WKA1020C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CKG\WKA1030C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CKG\WKA1030C.Designer.cs">
+      <DependentUpon>WKA1030C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CKG\WKA1040C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CKG\WKA1040C.Designer.cs">
+      <DependentUpon>WKA1040C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CKG\WKA1050C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CKG\WKA1050C.Designer.cs">
+      <DependentUpon>WKA1050C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WKB\WKB1010C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WKB\WKB1010C.Designer.cs">
+      <DependentUpon>WKB1010C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WKB\WKB1020C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WKB\WKB1020C.Designer.cs">
+      <DependentUpon>WKB1020C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WKB\WKB1030C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WKB\WKB1030C.Designer.cs">
+      <DependentUpon>WKB1030C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WKC\WKC1010C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WKC\WKC1010C.Designer.cs">
+      <DependentUpon>WKC1010C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WKC\WKC1020C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WKC\WKC1020C.Designer.cs">
+      <DependentUpon>WKC1020C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WKC\WKC1030C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WKC\WKC1030C.Designer.cs">
+      <DependentUpon>WKC1030C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WKD\WKD1010C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WKD\WKD1010C.Designer.cs">
+      <DependentUpon>WKD1010C.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="CKA\CKA0010C.resx">
-      <DependentUpon>CKA0010C.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MainMenu\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -186,9 +256,46 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="CKG\CKG2010C.resx">
+      <DependentUpon>CKG2010C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CKG\WKA1020C.resx">
+      <DependentUpon>WKA1020C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CKG\WKA1030C.resx">
+      <DependentUpon>WKA1030C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CKG\WKA1040C.resx">
+      <DependentUpon>WKA1040C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CKG\WKA1050C.resx">
+      <DependentUpon>WKA1050C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WKB\WKB1010C.resx">
+      <DependentUpon>WKB1010C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WKB\WKB1020C.resx">
+      <DependentUpon>WKB1020C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WKB\WKB1030C.resx">
+      <DependentUpon>WKB1030C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WKC\WKC1010C.resx">
+      <DependentUpon>WKC1010C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WKC\WKC1020C.resx">
+      <DependentUpon>WKC1020C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WKC\WKC1030C.resx">
+      <DependentUpon>WKC1030C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WKD\WKD1010C.resx">
+      <DependentUpon>WKD1010C.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="BDM_TemporaryKey.pfx" />
     <None Include="Properties\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.cs</LastGenOutput>
@@ -238,6 +345,7 @@
       <Name>CommonClass</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

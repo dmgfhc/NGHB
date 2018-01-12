@@ -231,37 +231,6 @@
             <param name="MsgChk"></param>
             <returns></returns>
         </member>
-        <member name="M:CommonClass.SpreadCommon.Gf_Sp_Process(ADODB.Connection,Microsoft.VisualBasic.Collection,Microsoft.VisualBasic.Collection,System.Boolean)">
-            <summary>
-            1、将属性为a的控件值传递到属性为a的列中。
-            2、进行必输项及maxlength检查。
-            3、进行insert,update,delete检查，如果有insert,update,delete操作则调用后台程序将操作结果传递到后台。
-            4、操作结束后首先检查后台是否执行成功，其次根据RefChek值，检查是否刷新画面。
-            </summary>
-            <param name="Conn"></param>
-            <param name="Sc"></param>
-            <param name="Mc"></param>
-            <param name="RefChek"></param>
-            <returns></returns>
-        </member>
-        <member name="M:CommonClass.SpreadCommon.Gf_Sp_NeceCheck2(FarPoint.Win.Spread.FpSpread,Microsoft.VisualBasic.Collection,System.Int32,Microsoft.VisualBasic.Collection)">
-            <summary>
-            必输项及MAXlength检查:
-            1、必须项检查，内容为空时返回列头标题。
-            2、MAXlength检查，内容长度小于MAXLENGTH时，返回FALSE+列头标题。
-            </summary>
-            <param name="oSpread"></param>
-            <param name="mColumn"></param>
-            <param name="iRow"></param>
-            <param name="nColumn"></param>
-            <returns></returns>
-        </member>
-        <member name="M:CommonClass.SpreadCommon.Gp_Sp_Excel(FarPoint.Win.Spread.FpSpread)">
-            <summary>
-            将oSpread当前内容保存到用当前时间作文件名的excel文件中。
-            </summary>
-            <param name="oSpread"></param>
-        </member>
         <member name="M:CommonClass.SpreadCommon.Gp_Sp_SendData(FarPoint.Win.Spread.FpSpread,System.String,System.Int32,System.Int32,System.Int32)">
             <summary>
             根据oSpread的iCol列的类型，将Indata写入oSpread中第iSheetIndex个sheet的Cell【iRow，iCol】。
@@ -303,11 +272,6 @@
             <summary>
               使用此强类型资源类，为所有资源查找
               重写当前线程的 CurrentUICulture 属性。
-            </summary>
-        </member>
-        <member name="F:CommonClass.DataDic.sAuthority">
-            <summary>
-            2012-10-23 新增为满足f4写UPDATE标志及操作者
             </summary>
         </member>
         <member name="F:CommonClass.DataDic.m_isSpreadCaller">
@@ -374,45 +338,6 @@
             ResultSpread的初始化设置
             </summary>
             <remarks></remarks>
-        </member>
-        <member name="M:CommonClass.DataDicCommon.Gf_Spread_DD(System.Windows.Forms.Control,Microsoft.VisualBasic.Collection,Microsoft.VisualBasic.Collection,System.String,System.String,System.Int32,System.String,System.Int32,Microsoft.VisualBasic.Collection,System.String)">
-            <summary>
-            2012-10-23 新增为满足f4写UPDATE标志及操作者
-            </summary>
-            <param name="spreadObj"></param>
-            <param name="rControl"></param>
-            <param name="fControl"></param>
-            <param name="sQuery"></param>
-            <param name="sProcName"></param>
-            <param name="iParaCount"></param>
-            <param name="sFilter"></param>
-            <param name="iActiveColumn"></param>
-            <param name="Sc"></param>
-            <param name="sAuthority"></param>
-        </member>
-        <member name="M:CommonClass.DataDicCommon.Gf_CommonCode_DD_SP(System.Windows.Forms.Control,System.Int32,System.Int32,System.String,System.String,Microsoft.VisualBasic.Collection,System.String)">
-            <summary>
-            2012-10-23 新增为满足f4写UPDATE标志及操作者
-            </summary>
-            <param name="oSpread"></param>
-            <param name="code_col"></param>
-            <param name="name_col"></param>
-            <param name="cd_mana_no"></param>
-            <param name="sFilter"></param>
-            <param name="Sc"></param>
-            <param name="sAuthority"></param>
-        </member>
-        <member name="M:CommonClass.DataDicCommon.Gf_EtcCommon_DD_SP(System.Windows.Forms.Control,Microsoft.VisualBasic.Collection,Microsoft.VisualBasic.Collection,System.String,System.String,Microsoft.VisualBasic.Collection,System.String)">
-            <summary>
-            2012-10-23 新增为满足f4写UPDATE标志及操作者
-            </summary>
-            <param name="oSpread"></param>
-            <param name="rc"></param>
-            <param name="fc"></param>
-            <param name="sQuery"></param>
-            <param name="sFilter"></param>
-            <param name="Sc"></param>
-            <param name="sAuthority"></param>
         </member>
         <member name="F:CommonClass.CeriUDate.components">
             <summary> 

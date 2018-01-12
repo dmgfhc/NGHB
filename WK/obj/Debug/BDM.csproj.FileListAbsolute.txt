@@ -1,2 +1,0 @@
-E:\厚板最新前台程序\BDM\CS\bin\Debug\BDM.exe.config
-E:\厚板最新前台程序\BDM\CS\obj\Debug\BDM.csproj.ResolveComReference.cache

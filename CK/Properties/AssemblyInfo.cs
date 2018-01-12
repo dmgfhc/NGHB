@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Windows.Forms;
 using System.Diagnostics;
 using FarPoint.Win.Spread.CellType;
