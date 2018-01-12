@@ -35,3 +35,7 @@ C:\Users\HAN\Desktop\github\NGHB\WK\obj\Debug\CK.exe.manifest
 C:\Users\HAN\Desktop\github\NGHB\WK\obj\Debug\CK.application
 C:\Users\HAN\Desktop\github\NGHB\WK\obj\Debug\CK.exe
 C:\Users\HAN\Desktop\github\NGHB\WK\obj\Debug\CK.pdb
+C:\Users\HAN\Desktop\github\NGHB\CK\bin\Debug\CK.exe.config
+C:\Users\HAN\Desktop\github\NGHB\CK\obj\Debug\CK.csproj.ResolveComReference.cache
+C:\Users\HAN\Desktop\github\NGHB\CK\obj\Debug\CK.exe
+C:\Users\HAN\Desktop\github\NGHB\CK\obj\Debug\CK.pdb
