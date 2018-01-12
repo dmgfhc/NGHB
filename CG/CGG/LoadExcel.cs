@@ -70,6 +70,13 @@ namespace CG
 
         private void LoadExcel_Load(object sender, EventArgs e)
         {
+            //保存图片到目录  
+            if (!Directory.Exists(currentReportPath))
+            {
+                //当前目录不存在，则创建
+                Directory.CreateDirectory(currentReportPath);
+            }
+            
             open(currentReportPath);
         }
 

@@ -313,9 +313,10 @@
             // SSP4
             // 
             this.SSP4.BackColor = System.Drawing.Color.Yellow;
+            this.SSP4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SSP4.Location = new System.Drawing.Point(1042, 18);
             this.SSP4.Name = "SSP4";
-            this.SSP4.Size = new System.Drawing.Size(85, 23);
+            this.SSP4.Size = new System.Drawing.Size(85, 26);
             this.SSP4.TabIndex = 595;
             this.SSP4.Text = "可修改项";
             this.SSP4.UseVisualStyleBackColor = false;
@@ -323,9 +324,10 @@
             // SSP3
             // 
             this.SSP3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.SSP3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SSP3.Location = new System.Drawing.Point(951, 18);
             this.SSP3.Name = "SSP3";
-            this.SSP3.Size = new System.Drawing.Size(85, 23);
+            this.SSP3.Size = new System.Drawing.Size(85, 26);
             this.SSP3.TabIndex = 594;
             this.SSP3.Text = "切割计划";
             this.SSP3.UseVisualStyleBackColor = false;
@@ -333,9 +335,11 @@
             // SSP1
             // 
             this.SSP1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.SSP1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SSP1.Font = new System.Drawing.Font("宋体", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.SSP1.Location = new System.Drawing.Point(860, 18);
             this.SSP1.Name = "SSP1";
-            this.SSP1.Size = new System.Drawing.Size(85, 23);
+            this.SSP1.Size = new System.Drawing.Size(85, 26);
             this.SSP1.TabIndex = 593;
             this.SSP1.Text = "待切割";
             this.SSP1.UseVisualStyleBackColor = false;
