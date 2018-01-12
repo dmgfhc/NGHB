@@ -260,18 +260,6 @@
     <Compile Include="CGB\CGB2010C.Designer.cs">
       <DependentUpon>CGB2010C.cs</DependentUpon>
     </Compile>
-    <Compile Include="CGB\WGB1010C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGB\WGB1010C.designer.cs">
-      <DependentUpon>WGB1010C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGB\WGB1050C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGB\WGB1050C.Designer.cs">
-      <DependentUpon>WGB1050C.cs</DependentUpon>
-    </Compile>
     <Compile Include="CGC\AGC2051C.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -325,36 +313,6 @@
     </Compile>
     <Compile Include="CGC\CGC2021C.Designer.cs">
       <DependentUpon>CGC2021C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGC\WGC2040C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGC\WGC2040C.Designer.cs">
-      <DependentUpon>WGC2040C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGC\WGC3010C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGC\WGC3010C.Designer.cs">
-      <DependentUpon>WGC3010C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGC\WGC3020C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGC\WGC3020C.Designer.cs">
-      <DependentUpon>WGC3020C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGC\WGC3030C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGC\WGC3030C.Designer.cs">
-      <DependentUpon>WGC3030C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGC\WGC3031C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGC\WGC3031C.Designer.cs">
-      <DependentUpon>WGC3031C.cs</DependentUpon>
     </Compile>
     <Compile Include="CGC\CGC2072C.cs">
       <SubType>Form</SubType>
@@ -458,23 +416,11 @@
     <Compile Include="CGE\CGE2030C.Designer.cs">
       <DependentUpon>CGE2030C.cs</DependentUpon>
     </Compile>
-    <Compile Include="CGE\WGE1020C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGE\WGE1020C.Designer.cs">
-      <DependentUpon>WGE1020C.cs</DependentUpon>
-    </Compile>
     <Compile Include="CGE\CGE2040C.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CGE\CGE2040C.Designer.cs">
       <DependentUpon>CGE2040C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGE\WGE4030C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGE\WGE4030C.Designer.cs">
-      <DependentUpon>WGE4030C.cs</DependentUpon>
     </Compile>
     <Compile Include="CGF\CGF2010C.cs">
       <SubType>Form</SubType>
@@ -529,12 +475,6 @@
     </Compile>
     <Compile Include="CGF\CGF2090C.Designer.cs">
       <DependentUpon>CGF2090C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGF\WGF1010C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGF\WGF1010C.Designer.cs">
-      <DependentUpon>WGF1010C.cs</DependentUpon>
     </Compile>
     <Compile Include="CGF\CGF2050C.cs">
       <SubType>Form</SubType>
@@ -620,24 +560,6 @@
     <Compile Include="CGT\CGT2200C.Designer.cs">
       <DependentUpon>CGT2200C.cs</DependentUpon>
     </Compile>
-    <Compile Include="CGT\WGT3010C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGT\WGT3010C.Designer.cs">
-      <DependentUpon>WGT3010C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGT\WGT3020C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGT\WGT3020C.Designer.cs">
-      <DependentUpon>WGT3020C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGT\WGT3030C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGT\WGT3030C.Designer.cs">
-      <DependentUpon>WGT3030C.cs</DependentUpon>
-    </Compile>
     <Compile Include="CGT\CGT2040C.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -722,263 +644,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="CGB\WGB1020C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGB\WGB1020C.Designer.cs">
-      <DependentUpon>WGB1020C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGB\WGB1030C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGB\WGB1030C.Designer.cs">
-      <DependentUpon>WGB1030C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGB\WGB1040C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGB\WGB1040C.Designer.cs">
-      <DependentUpon>WGB1040C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGB\WGB1060C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGB\WGB1060C.Designer.cs">
-      <DependentUpon>WGB1060C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGC\WGC1010C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGC\WGC1010C.Designer.cs">
-      <DependentUpon>WGC1010C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGC\WGC1020C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGC\WGC1020C.Designer.cs">
-      <DependentUpon>WGC1020C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGC\WGC1030C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGC\WGC1030C.Designer.cs">
-      <DependentUpon>WGC1030C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGC\WGC2010C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGC\WGC2010C.Designer.cs">
-      <DependentUpon>WGC2010C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGC\WGC2020C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGC\WGC2020C.Designer.cs">
-      <DependentUpon>WGC2020C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGC\WGC2030C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGC\WGC2030C.Designer.cs">
-      <DependentUpon>WGC2030C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGC\WGC2035C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGC\WGC2035C.Designer.cs">
-      <DependentUpon>WGC2035C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGC\WGC2050C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGC\WGC2050C.Designer.cs">
-      <DependentUpon>WGC2050C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGC\WGC2052C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGC\WGC2052C.Designer.cs">
-      <DependentUpon>WGC2052C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGC\WGC2060C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGC\WGC2060C.Designer.cs">
-      <DependentUpon>WGC2060C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGC\WGC2070C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGC\WGC2070C.designer.cs">
-      <DependentUpon>WGC2070C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGE\WGE1030C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGE\WGE1030C.Designer.cs">
-      <DependentUpon>WGE1030C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGE\WGE1040C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGE\WGE1040C.Designer.cs">
-      <DependentUpon>WGE1040C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGE\WGE2010C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGE\WGE2010C.Designer.cs">
-      <DependentUpon>WGE2010C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGE\WGE2020C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGE\WGE2020C.Designer.cs">
-      <DependentUpon>WGE2020C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGE\WGE2030C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGE\WGE2030C.Designer.cs">
-      <DependentUpon>WGE2030C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGE\WGE3010C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGE\WGE3010C.Designer.cs">
-      <DependentUpon>WGE3010C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGE\WGE4040C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGE\WGE4040C.Designer.cs">
-      <DependentUpon>WGE4040C.cs</DependentUpon>
-    </Compile>
     <Compile Include="CGE\YardDetail.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CGE\YardDetail.Designer.cs">
       <DependentUpon>YardDetail.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGF\WGF1020C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGF\WGF1020C.Designer.cs">
-      <DependentUpon>WGF1020C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGF\WGF1030C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGF\WGF1030C.Designer.cs">
-      <DependentUpon>WGF1030C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGF\WGF1040C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGF\WGF1040C.Designer.cs">
-      <DependentUpon>WGF1040C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGF\WGF1050C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGF\WGF1050C.Designer.cs">
-      <DependentUpon>WGF1050C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGF\WGF1060C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGF\WGF1060C.Designer.cs">
-      <DependentUpon>WGF1060C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGF\WGF1070C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGF\WGF1070C.Designer.cs">
-      <DependentUpon>WGF1070C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGF\WGF1080C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGF\WGF1080C.Designer.cs">
-      <DependentUpon>WGF1080C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGT\WGT1010C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGT\WGT1010C.Designer.cs">
-      <DependentUpon>WGT1010C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGT\WGT1020C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGT\WGT1020C.Designer.cs">
-      <DependentUpon>WGT1020C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGT\WGT1030C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGT\WGT1030C.Designer.cs">
-      <DependentUpon>WGT1030C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGT\WGT1040C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGT\WGT1040C.Designer.cs">
-      <DependentUpon>WGT1040C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGT\WGT1050C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGT\WGT1050C.Designer.cs">
-      <DependentUpon>WGT1050C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGT\WGT1060C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGT\WGT1060C.Designer.cs">
-      <DependentUpon>WGT1060C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGT\WGT1070C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGT\WGT1070C.Designer.cs">
-      <DependentUpon>WGT1070C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGT\WGT2010C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGT\WGT2010C.Designer.cs">
-      <DependentUpon>WGT2010C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGT\WGT2011C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGT\WGT2011C.Designer.cs">
-      <DependentUpon>WGT2011C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGT\WGT2012C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGT\WGT2012C.Designer.cs">
-      <DependentUpon>WGT2012C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGT\WGT2021C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGT\WGT2021C.Designer.cs">
-      <DependentUpon>WGT2021C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGT\WGT2030C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGT\WGT2030C.Designer.cs">
-      <DependentUpon>WGT2030C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CGT\WGT2040C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CGT\WGT2040C.Designer.cs">
-      <DependentUpon>WGT2040C.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -1033,12 +703,6 @@
     <EmbeddedResource Include="CGB\CGB2010C.resx">
       <DependentUpon>CGB2010C.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CGB\WGB1010C.resx">
-      <DependentUpon>WGB1010C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGB\WGB1050C.resx">
-      <DependentUpon>WGB1050C.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CGC\AGC2051C.resx">
       <DependentUpon>AGC2051C.cs</DependentUpon>
     </EmbeddedResource>
@@ -1065,21 +729,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CGC\CGC2021C.resx">
       <DependentUpon>CGC2021C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGC\WGC2040C.resx">
-      <DependentUpon>WGC2040C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGC\WGC3010C.resx">
-      <DependentUpon>WGC3010C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGC\WGC3020C.resx">
-      <DependentUpon>WGC3020C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGC\WGC3030C.resx">
-      <DependentUpon>WGC3030C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGC\WGC3031C.resx">
-      <DependentUpon>WGC3031C.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CGC\CGC2072C.resx">
       <DependentUpon>CGC2072C.cs</DependentUpon>
@@ -1132,14 +781,8 @@
     <EmbeddedResource Include="CGE\CGE2030C.resx">
       <DependentUpon>CGE2030C.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CGE\WGE1020C.resx">
-      <DependentUpon>WGE1020C.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CGE\CGE2040C.resx">
       <DependentUpon>CGE2040C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGE\WGE4030C.resx">
-      <DependentUpon>WGE4030C.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CGF\CGF2010C.resx">
       <DependentUpon>CGF2010C.cs</DependentUpon>
@@ -1167,9 +810,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CGF\CGF2090C.resx">
       <DependentUpon>CGF2090C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGF\WGF1010C.resx">
-      <DependentUpon>WGF1010C.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CGF\CGF2050C.resx">
       <DependentUpon>CGF2050C.cs</DependentUpon>
@@ -1212,15 +852,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CGT\CGT2200C.resx">
       <DependentUpon>CGT2200C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGT\WGT3010C.resx">
-      <DependentUpon>WGT3010C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGT\WGT3020C.resx">
-      <DependentUpon>WGT3020C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGT\WGT3030C.resx">
-      <DependentUpon>WGT3030C.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CGT\CGT2040C.resx">
       <DependentUpon>CGT2040C.cs</DependentUpon>
@@ -1265,134 +896,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="CGB\WGB1020C.resx">
-      <DependentUpon>WGB1020C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGB\WGB1030C.resx">
-      <DependentUpon>WGB1030C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGB\WGB1040C.resx">
-      <DependentUpon>WGB1040C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGB\WGB1060C.resx">
-      <DependentUpon>WGB1060C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGC\WGC1010C.resx">
-      <DependentUpon>WGC1010C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGC\WGC1020C.resx">
-      <DependentUpon>WGC1020C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGC\WGC1030C.resx">
-      <DependentUpon>WGC1030C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGC\WGC2010C.resx">
-      <DependentUpon>WGC2010C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGC\WGC2020C.resx">
-      <DependentUpon>WGC2020C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGC\WGC2030C.resx">
-      <DependentUpon>WGC2030C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGC\WGC2035C.resx">
-      <DependentUpon>WGC2035C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGC\WGC2050C.resx">
-      <DependentUpon>WGC2050C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGC\WGC2052C.resx">
-      <DependentUpon>WGC2052C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGC\WGC2060C.resx">
-      <DependentUpon>WGC2060C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGC\WGC2070C.resx">
-      <DependentUpon>WGC2070C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGE\WGE1030C.resx">
-      <DependentUpon>WGE1030C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGE\WGE1040C.resx">
-      <DependentUpon>WGE1040C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGE\WGE2010C.resx">
-      <DependentUpon>WGE2010C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGE\WGE2020C.resx">
-      <DependentUpon>WGE2020C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGE\WGE2030C.resx">
-      <DependentUpon>WGE2030C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGE\WGE3010C.resx">
-      <DependentUpon>WGE3010C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGE\WGE4040C.resx">
-      <DependentUpon>WGE4040C.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CGE\YardDetail.resx">
       <DependentUpon>YardDetail.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGF\WGF1020C.resx">
-      <DependentUpon>WGF1020C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGF\WGF1030C.resx">
-      <DependentUpon>WGF1030C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGF\WGF1040C.resx">
-      <DependentUpon>WGF1040C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGF\WGF1050C.resx">
-      <DependentUpon>WGF1050C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGF\WGF1060C.resx">
-      <DependentUpon>WGF1060C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGF\WGF1070C.resx">
-      <DependentUpon>WGF1070C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGF\WGF1080C.resx">
-      <DependentUpon>WGF1080C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGT\WGT1010C.resx">
-      <DependentUpon>WGT1010C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGT\WGT1020C.resx">
-      <DependentUpon>WGT1020C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGT\WGT1030C.resx">
-      <DependentUpon>WGT1030C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGT\WGT1040C.resx">
-      <DependentUpon>WGT1040C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGT\WGT1050C.resx">
-      <DependentUpon>WGT1050C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGT\WGT1060C.resx">
-      <DependentUpon>WGT1060C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGT\WGT1070C.resx">
-      <DependentUpon>WGT1070C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGT\WGT2010C.resx">
-      <DependentUpon>WGT2010C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGT\WGT2011C.resx">
-      <DependentUpon>WGT2011C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGT\WGT2012C.resx">
-      <DependentUpon>WGT2012C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGT\WGT2021C.resx">
-      <DependentUpon>WGT2021C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGT\WGT2030C.resx">
-      <DependentUpon>WGT2030C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CGT\WGT2040C.resx">
-      <DependentUpon>WGT2040C.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

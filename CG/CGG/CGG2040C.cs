@@ -93,7 +93,7 @@ namespace CG
 
             int iheadrow;
             int iscseq;
-            p_ScIni(ss1, Sc1, 0, false, true);
+            p_ScIni(ss1, Sc1, 0, false, false);
             iheadrow = 0;
             iscseq = 1;
 
@@ -124,7 +124,7 @@ namespace CG
             p_SetSc("INS_DATE", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//24
 
 
-            p_ScIni(ss2, Sc2, 0, false, true);
+            p_ScIni(ss2, Sc2, 0, false, false);
             iheadrow = 1;
             iscseq = 2;
             p_SetSc("计划日期", "E", "50", "I", "", "", "", iscseq, iheadrow, "L");//0  
@@ -155,7 +155,7 @@ namespace CG
             p_spanSpread("客户", 11, 12, iscseq, iheadrow, 1);
             p_spanSpread("产品", 14, 16, iscseq, iheadrow, 1);
 
-            p_ScIni(ss3, Sc3, 0, false, true);
+            p_ScIni(ss3, Sc3, 0, false, false);
             iheadrow = 1;
             iscseq = 3;
             p_SetSc("计划日期", "E", "50", "I", "", "", "", iscseq, iheadrow, "L");//0

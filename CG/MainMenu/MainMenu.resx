@@ -149,7 +149,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAC2
-        GwAAAk1TRnQBSQFMAgEBDAEAARQBCAEUAQgBKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        GwAAAk1TRnQBSQFMAgEBDAEAARwBCAEcAQgBKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABoAMAAXgDAAEBAQABCAYAAUsYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -273,6 +273,13 @@
   <metadata name="MainMenu1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>551, 17</value>
   </metadata>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="MainMenu1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="menuItem27.Text" xml:space="preserve">
+    <value>板坯库管理</value>
+  </data>
   <data name="CGA2010C.Text" xml:space="preserve">
     <value>板坯库库存修改及查询界面_CGA2010C</value>
   </data>
@@ -315,8 +322,8 @@
   <data name="CGA3000C.Text" xml:space="preserve">
     <value>板坯检验录入界面_CGA3000C</value>
   </data>
-  <data name="menuItem27.Text" xml:space="preserve">
-    <value>板坯库管理</value>
+  <data name="menuItem9.Text" xml:space="preserve">
+    <value>轧钢作业实绩管理</value>
   </data>
   <data name="CGB2010C.Text" xml:space="preserve">
     <value>加热炉装炉作业实绩查询及修改界面_CGB2010C</value>
@@ -339,20 +346,8 @@
   <data name="CGC2060C.Text" xml:space="preserve">
     <value>母板分段剪实绩处理_CGC2060C</value>
   </data>
-  <data name="WGB1030C.Text" xml:space="preserve">
-    <value>矫直实绩管理界面_WGB1030C</value>
-  </data>
-  <data name="WGB1040C.Text" xml:space="preserve">
-    <value>DQ/ACC实绩管理界面_WGB1040C</value>
-  </data>
-  <data name="WGB1050C.Text" xml:space="preserve">
-    <value>冷床实绩管理界面_WGB1050C</value>
-  </data>
-  <data name="menuItem7.Text" xml:space="preserve">
-    <value>三号冷床实绩管理界面_WGB1060C</value>
-  </data>
-  <data name="menuItem9.Text" xml:space="preserve">
-    <value>轧钢作业实绩管理</value>
+  <data name="menuItem10.Text" xml:space="preserve">
+    <value>精整作业实绩管理</value>
   </data>
   <data name="CGD2080C.Text" xml:space="preserve">
     <value>标识（标印、标签）打印信息发送界面_CGD2080C</value>
@@ -408,59 +403,8 @@
   <data name="AGC2051C.Text" xml:space="preserve">
     <value>钢板分板实绩修改界面_AGC2051C</value>
   </data>
-  <data name="WGC1010C.Text" xml:space="preserve">
-    <value>母板作业指示管理界面_WGC1010C</value>
-  </data>
-  <data name="WGC1020C.Text" xml:space="preserve">
-    <value>钢板作业指示管理界面_WGC1020C</value>
-  </data>
-  <data name="WGC1030C.Text" xml:space="preserve">
-    <value>钢板火切作业指示管理界面_WGC1030C</value>
-  </data>
-  <data name="WGC2010C.Text" xml:space="preserve">
-    <value>母板分段实绩管理界面_WGC2010C</value>
-  </data>
-  <data name="WGC2020C.Text" xml:space="preserve">
-    <value>双边剪实绩管理界面_WGC2020C</value>
-  </data>
-  <data name="WGC2030C.Text" xml:space="preserve">
-    <value>定尺剪实绩管理界面_WGC2030C</value>
-  </data>
-  <data name="WGC2040C.Text" xml:space="preserve">
-    <value>钢板探伤实绩管理界面_WGC2040C</value>
-  </data>
-  <data name="WGC2050C.Text" xml:space="preserve">
-    <value>钢板火切实绩管理界面_WGC2050C</value>
-  </data>
-  <data name="WGC2051C.Text" xml:space="preserve">
-    <value>钢板分板实绩管理界面_WGC2051C</value>
-  </data>
-  <data name="WGC2052C.Text" xml:space="preserve">
-    <value>钢板取消分板管理界面_WGC2052C</value>
-  </data>
-  <data name="WGC2060C.Text" xml:space="preserve">
-    <value>精整上下线实绩管理界面_WGC2060C</value>
-  </data>
-  <data name="WGC2070C.Text" xml:space="preserve">
-    <value>钢板矫直实绩管理界面_WGC2070C</value>
-  </data>
-  <data name="WGC3010C.Text" xml:space="preserve">
-    <value>钢板表面判定管理界面_WGC3010C</value>
-  </data>
-  <data name="WGC3020C.Text" xml:space="preserve">
-    <value>钢板取样实绩管理界面_WGC3020C</value>
-  </data>
-  <data name="WGC3030C.Text" xml:space="preserve">
-    <value>钢板取样委托管理界面_WGC3030C</value>
-  </data>
-  <data name="menuItem46.Text" xml:space="preserve">
-    <value>钢板取样委托管理界面-PWHT_WGC3031C</value>
-  </data>
-  <data name="WGC2035C.Text" xml:space="preserve">
-    <value>标印实绩管理画面_WGC2035C</value>
-  </data>
-  <data name="menuItem10.Text" xml:space="preserve">
-    <value>精整作业实绩管理</value>
+  <data name="menuItem21.Text" xml:space="preserve">
+    <value>钢板库管理</value>
   </data>
   <data name="CGE2020C.Text" xml:space="preserve">
     <value>在线钢板入库界面_CGE2020C</value>
@@ -474,29 +418,8 @@
   <data name="AGC3020C.Text" xml:space="preserve">
     <value>产品退判查询_AGC3020C</value>
   </data>
-  <data name="WGE1010C.Text" xml:space="preserve">
-    <value>钢板半成品指定垛位管理界面_WGE1010C</value>
-  </data>
-  <data name="WGE1020C.Text" xml:space="preserve">
-    <value>钢板半成品垛位管理界面_WGE1020C</value>
-  </data>
-  <data name="WGE2010C.Text" xml:space="preserve">
-    <value>钢板成品入库界面_WGE2010C</value>
-  </data>
-  <data name="WGE2020C.Text" xml:space="preserve">
-    <value>钢板成品垛位管理界面_WGE2020C</value>
-  </data>
-  <data name="menuItem3.Text" xml:space="preserve">
-    <value>宽厚板库区区位查询和维护界面_WGE3010C</value>
-  </data>
-  <data name="menuItem4.Text" xml:space="preserve">
-    <value>宽厚板库区垛位图形化显示_WGE4030C</value>
-  </data>
-  <data name="menuItem6.Text" xml:space="preserve">
-    <value>钢板库库图管理_WGE4040C</value>
-  </data>
-  <data name="menuItem21.Text" xml:space="preserve">
-    <value>钢板库管理</value>
+  <data name="menuItem12.Text" xml:space="preserve">
+    <value>轧辊管理</value>
   </data>
   <data name="CGF2010C.Text" xml:space="preserve">
     <value>轧辊、轴承座和轴承的入库、查询及修改界面_CGF2010C</value>
@@ -531,35 +454,11 @@
   <data name="CGF2040C.Text" xml:space="preserve">
     <value>轧辊/轴承座和轴承的库存管理界面_CGF2040C</value>
   </data>
-  <data name="WGF1010C.Text" xml:space="preserve">
-    <value>轧辊入库管理界面_WGF1010C</value>
-  </data>
-  <data name="WGF1020C.Text" xml:space="preserve">
-    <value>轧辊磨削实绩管理界面_WGF1020C</value>
-  </data>
-  <data name="WGF1030C.Text" xml:space="preserve">
-    <value>轧辊装配实绩管理界面_WGF1030C</value>
-  </data>
-  <data name="WGF1040C.Text" xml:space="preserve">
-    <value>轧辊使用实绩管理界面_WGF1040C</value>
-  </data>
-  <data name="WGF1050C.Text" xml:space="preserve">
-    <value>轧辊报废实绩管理界面_WGF1050C</value>
-  </data>
-  <data name="WGF1070C.Text" xml:space="preserve">
-    <value>轧辊磨削实绩查询（按时间）_WGF1070C</value>
-  </data>
-  <data name="WGF1080C.Text" xml:space="preserve">
-    <value>轧辊库存管理界面_WGF1080C</value>
-  </data>
-  <data name="menuItem24.Text" xml:space="preserve">
-    <value>轧辊装配实绩查询及发送界面_WGF1060C</value>
-  </data>
   <data name="CGF2090C.Text" xml:space="preserve">
     <value>轧辊堆焊实绩查询及修改界面_CGF2090C</value>
   </data>
-  <data name="menuItem12.Text" xml:space="preserve">
-    <value>轧辊管理</value>
+  <data name="menuItem28.Text" xml:space="preserve">
+    <value>作业指示管理</value>
   </data>
   <data name="CGG2040C.Text" xml:space="preserve">
     <value>轧钢计划查询界面_CGG2040C</value>
@@ -570,8 +469,8 @@
   <data name="CGD2070C.Text" xml:space="preserve">
     <value>录入精整作业指示_CGD2070C</value>
   </data>
-  <data name="menuItem28.Text" xml:space="preserve">
-    <value>作业指示管理</value>
+  <data name="menuItem23.Text" xml:space="preserve">
+    <value>各种实绩查询</value>
   </data>
   <data name="CGT2000C.Text" xml:space="preserve">
     <value>加热炉实绩查询_CGT2000C</value>
@@ -615,61 +514,8 @@
   <data name="CGT2200C.Text" xml:space="preserve">
     <value>中板图像识别实绩查询_CGT2200C</value>
   </data>
-  <data name="WGT1010C.Text" xml:space="preserve">
-    <value>加热炉实绩查询界面_WGT1010C</value>
-  </data>
-  <data name="WGT1020C.Text" xml:space="preserve">
-    <value>轧制实绩查询界面_WGT1020C</value>
-  </data>
-  <data name="WGT1030C.Text" xml:space="preserve">
-    <value>矫直实绩查询界面_WGT1030C
-</value>
-  </data>
-  <data name="menuItem26.Text" xml:space="preserve">
-    <value>DQ/ACC实绩查询界面_WGT1040C</value>
-  </data>
-  <data name="WGT1050C.Text" xml:space="preserve">
-    <value>母板分段实绩查询_WGT1050C</value>
-  </data>
-  <data name="WGT1060C.Text" xml:space="preserve">
-    <value>剪切前当班取样项目查询界面_WGT1060C</value>
-  </data>
-  <data name="WGT1070C.Text" xml:space="preserve">
-    <value>堆冷下线实绩查询_WGT1070C</value>
-  </data>
-  <data name="WGT2010C.Text" xml:space="preserve">
-    <value>钢板实绩查询界面_WGT2010C</value>
-  </data>
-  <data name="menuItem34.Text" xml:space="preserve">
-    <value>钢板标印实绩查询界面_WGT2011C</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="menuItem34.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="menuItem43.Text" xml:space="preserve">
-    <value>钢板标印信息查询界面_WGT2012C</value>
-  </data>
-  <data name="menuItem35.Text" xml:space="preserve">
-    <value>探伤实绩查询界面_WGT2020C</value>
-  </data>
-  <data name="menuItem33.Text" xml:space="preserve">
-    <value>探伤日报表查询界面_WGT2021C</value>
-  </data>
-  <data name="menuItem25.Text" xml:space="preserve">
-    <value>火切实绩查询及修改界面_WGT2030C</value>
-  </data>
-  <data name="menuItem44.Text" xml:space="preserve">
-    <value>返矫板实绩查询界面_WGT2040C</value>
-  </data>
-  <data name="menuItem37.Text" xml:space="preserve">
-    <value>综合查询界面_WGT3010C</value>
-  </data>
-  <data name="menuItem36.Text" xml:space="preserve">
-    <value>物料全息查询界面_WGT3020C</value>
-  </data>
-  <data name="menuItem23.Text" xml:space="preserve">
-    <value>统计分析管理</value>
+  <data name="menuItem29.Text" xml:space="preserve">
+    <value>轧线运行实绩</value>
   </data>
   <data name="CGH2020C.Text" xml:space="preserve">
     <value>轧钢生产线停机实绩查询及修改界面_CGH2020C</value>
@@ -677,14 +523,18 @@
   <data name="CGH2030C.Text" xml:space="preserve">
     <value>公辅材料使用实绩查询及修改界面_CGH2030C</value>
   </data>
-  <data name="menuItem29.Text" xml:space="preserve">
-    <value>轧线运行实绩</value>
+  <data name="menuItem30.Text" xml:space="preserve">
+    <value>其他</value>
   </data>
   <data name="CGT2090C.Text" xml:space="preserve">
     <value>板坯未热装原因查询及录入_CGT2090C</value>
   </data>
-  <data name="menuItem30.Text" xml:space="preserve">
-    <value>其他</value>
+  <data name="Mnu_Control.Text" xml:space="preserve">
+    <value>Control_Key</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Mnu_Control.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="Mnu_Clear.Text" xml:space="preserve">
     <value>Clear</value>
@@ -716,6 +566,9 @@
   <data name="MenuItem40.Text" xml:space="preserve">
     <value>-</value>
   </data>
+  <data name="Mnu_Copy.Text" xml:space="preserve">
+    <value>Copy</value>
+  </data>
   <data name="Mnu_ScreenCopy.Text" xml:space="preserve">
     <value>Screen Copy</value>
   </data>
@@ -725,8 +578,8 @@
   <data name="Mnu_SheetCopy.Text" xml:space="preserve">
     <value>Sheet Copy</value>
   </data>
-  <data name="Mnu_Copy.Text" xml:space="preserve">
-    <value>Copy</value>
+  <data name="Mnu_Paste.Text" xml:space="preserve">
+    <value>Paste</value>
   </data>
   <data name="Mnu_ScreenPaste.Text" xml:space="preserve">
     <value>Screen Paste</value>
@@ -736,9 +589,6 @@
   </data>
   <data name="Mnu_SheetPaste.Text" xml:space="preserve">
     <value>Sheet Paste</value>
-  </data>
-  <data name="Mnu_Paste.Text" xml:space="preserve">
-    <value>Paste</value>
   </data>
   <data name="MenuItem41.Text" xml:space="preserve">
     <value>-</value>
@@ -755,10 +605,10 @@
   <data name="Mnu_Exit.Text" xml:space="preserve">
     <value>Exit</value>
   </data>
-  <data name="Mnu_Control.Text" xml:space="preserve">
-    <value>Control_Key</value>
+  <data name="MenuItem1.Text" xml:space="preserve">
+    <value>Prototype</value>
   </data>
-  <data name="Mnu_Control.Visible" type="System.Boolean, mscorlib">
+  <data name="MenuItem1.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="MenuItem17.Text" xml:space="preserve">
@@ -773,11 +623,8 @@
   <data name="MenuItem5.Text" xml:space="preserve">
     <value>FORMBASE</value>
   </data>
-  <data name="MenuItem1.Text" xml:space="preserve">
-    <value>Prototype</value>
-  </data>
-  <data name="MenuItem1.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="Mnu_Windows.Text" xml:space="preserve">
+    <value>窗口管理</value>
   </data>
   <data name="Mnu_Horiz.Text" xml:space="preserve">
     <value>水平排列</value>
@@ -788,13 +635,6 @@
   <data name="Mnu_Cascade.Text" xml:space="preserve">
     <value>层叠排列</value>
   </data>
-  <data name="Mnu_Windows.Text" xml:space="preserve">
-    <value>窗口管理</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="MainMenu1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="StatusBar1.Font" type="System.Drawing.Font, System.Drawing">
     <value>宋体, 9.75pt, style=Bold</value>
@@ -803,7 +643,28 @@
     <value>NoControl</value>
   </data>
   <data name="StatusBar1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 419</value>
+    <value>0, 399</value>
+  </data>
+  <data name="StatusBar1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1024, 22</value>
+  </data>
+  <data name="StatusBar1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="StatusBar1.Text" xml:space="preserve">
+    <value>StatusBar1</value>
+  </data>
+  <data name="&gt;&gt;StatusBar1.Name" xml:space="preserve">
+    <value>StatusBar1</value>
+  </data>
+  <data name="&gt;&gt;StatusBar1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;StatusBar1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;StatusBar1.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="StatusBarPanel1.Name" xml:space="preserve">
     <value>StatusBarPanel1</value>
@@ -887,27 +748,6 @@
   </data>
   <data name="statusBarPanel5.Name" xml:space="preserve">
     <value>statusBarPanel5</value>
-  </data>
-  <data name="StatusBar1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1024, 22</value>
-  </data>
-  <data name="StatusBar1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="StatusBar1.Text" xml:space="preserve">
-    <value>StatusBar1</value>
-  </data>
-  <data name="&gt;&gt;StatusBar1.Name" xml:space="preserve">
-    <value>StatusBar1</value>
-  </data>
-  <data name="&gt;&gt;StatusBar1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.StatusBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;StatusBar1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;StatusBar1.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <metadata name="tme_current.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>658, 17</value>
@@ -1056,11 +896,11 @@
   <metadata name="MainMenu2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 54</value>
   </metadata>
-  <data name="MenuItem22.Text" xml:space="preserve">
-    <value>标准</value>
-  </data>
   <data name="MainMenu2.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
+  </data>
+  <data name="MenuItem22.Text" xml:space="preserve">
+    <value>标准</value>
   </data>
   <metadata name="ImageList2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>250, 54</value>
@@ -1070,7 +910,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAC2
-        GwAAAk1TRnQBSQFMAgEBDAEAARQBCAEUAQgBKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        GwAAAk1TRnQBSQFMAgEBDAEAARwBCAEcAQgBKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABoAMAAXgDAAEBAQABCAYAAUsYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -1199,7 +1039,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABi
-        GwAAAk1TRnQBSQFMAgEBDAEAARQBCAEUAQgBKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        GwAAAk1TRnQBSQFMAgEBDAEAARwBCAEcAQgBKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABoAMAAXgDAAEBAQABCAYAAUsYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -1325,7 +1165,7 @@
     <value>75</value>
   </metadata>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1024, 441</value>
+    <value>1024, 421</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>宋体, 9.75pt</value>
@@ -1390,7 +1230,7 @@
 </value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>南钢厚板MES-宽厚板轧钢</value>
+    <value>中板轧钢作业管理</value>
   </data>
   <data name="&gt;&gt;ContextMenu1.Name" xml:space="preserve">
     <value>ContextMenu1</value>
@@ -1578,34 +1418,16 @@
   <data name="&gt;&gt;CGC2020C.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;CGC2021C.Name" xml:space="preserve">
+    <value>CGC2021C</value>
+  </data>
+  <data name="&gt;&gt;CGC2021C.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;CGC2060C.Name" xml:space="preserve">
     <value>CGC2060C</value>
   </data>
   <data name="&gt;&gt;CGC2060C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGB1030C.Name" xml:space="preserve">
-    <value>WGB1030C</value>
-  </data>
-  <data name="&gt;&gt;WGB1030C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGB1040C.Name" xml:space="preserve">
-    <value>WGB1040C</value>
-  </data>
-  <data name="&gt;&gt;WGB1040C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGB1050C.Name" xml:space="preserve">
-    <value>WGB1050C</value>
-  </data>
-  <data name="&gt;&gt;WGB1050C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuItem7.Name" xml:space="preserve">
-    <value>menuItem7</value>
-  </data>
-  <data name="&gt;&gt;menuItem7.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;menuItem10.Name" xml:space="preserve">
@@ -1722,108 +1544,6 @@
   <data name="&gt;&gt;AGC2051C.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;WGC1010C.Name" xml:space="preserve">
-    <value>WGC1010C</value>
-  </data>
-  <data name="&gt;&gt;WGC1010C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGC1020C.Name" xml:space="preserve">
-    <value>WGC1020C</value>
-  </data>
-  <data name="&gt;&gt;WGC1020C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGC1030C.Name" xml:space="preserve">
-    <value>WGC1030C</value>
-  </data>
-  <data name="&gt;&gt;WGC1030C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGC2010C.Name" xml:space="preserve">
-    <value>WGC2010C</value>
-  </data>
-  <data name="&gt;&gt;WGC2010C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGC2020C.Name" xml:space="preserve">
-    <value>WGC2020C</value>
-  </data>
-  <data name="&gt;&gt;WGC2020C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGC2030C.Name" xml:space="preserve">
-    <value>WGC2030C</value>
-  </data>
-  <data name="&gt;&gt;WGC2030C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGC2040C.Name" xml:space="preserve">
-    <value>WGC2040C</value>
-  </data>
-  <data name="&gt;&gt;WGC2040C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGC2050C.Name" xml:space="preserve">
-    <value>WGC2050C</value>
-  </data>
-  <data name="&gt;&gt;WGC2050C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGC2051C.Name" xml:space="preserve">
-    <value>WGC2051C</value>
-  </data>
-  <data name="&gt;&gt;WGC2051C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGC2052C.Name" xml:space="preserve">
-    <value>WGC2052C</value>
-  </data>
-  <data name="&gt;&gt;WGC2052C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGC2060C.Name" xml:space="preserve">
-    <value>WGC2060C</value>
-  </data>
-  <data name="&gt;&gt;WGC2060C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGC2070C.Name" xml:space="preserve">
-    <value>WGC2070C</value>
-  </data>
-  <data name="&gt;&gt;WGC2070C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGC3010C.Name" xml:space="preserve">
-    <value>WGC3010C</value>
-  </data>
-  <data name="&gt;&gt;WGC3010C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGC3020C.Name" xml:space="preserve">
-    <value>WGC3020C</value>
-  </data>
-  <data name="&gt;&gt;WGC3020C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGC3030C.Name" xml:space="preserve">
-    <value>WGC3030C</value>
-  </data>
-  <data name="&gt;&gt;WGC3030C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuItem46.Name" xml:space="preserve">
-    <value>menuItem46</value>
-  </data>
-  <data name="&gt;&gt;menuItem46.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGC2035C.Name" xml:space="preserve">
-    <value>WGC2035C</value>
-  </data>
-  <data name="&gt;&gt;WGC2035C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;menuItem21.Name" xml:space="preserve">
     <value>menuItem21</value>
   </data>
@@ -1852,48 +1572,6 @@
     <value>AGC3020C</value>
   </data>
   <data name="&gt;&gt;AGC3020C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGE1010C.Name" xml:space="preserve">
-    <value>WGE1010C</value>
-  </data>
-  <data name="&gt;&gt;WGE1010C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGE1020C.Name" xml:space="preserve">
-    <value>WGE1020C</value>
-  </data>
-  <data name="&gt;&gt;WGE1020C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGE2010C.Name" xml:space="preserve">
-    <value>WGE2010C</value>
-  </data>
-  <data name="&gt;&gt;WGE2010C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGE2020C.Name" xml:space="preserve">
-    <value>WGE2020C</value>
-  </data>
-  <data name="&gt;&gt;WGE2020C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuItem3.Name" xml:space="preserve">
-    <value>menuItem3</value>
-  </data>
-  <data name="&gt;&gt;menuItem3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuItem4.Name" xml:space="preserve">
-    <value>menuItem4</value>
-  </data>
-  <data name="&gt;&gt;menuItem4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuItem6.Name" xml:space="preserve">
-    <value>menuItem6</value>
-  </data>
-  <data name="&gt;&gt;menuItem6.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;menuItem12.Name" xml:space="preserve">
@@ -1966,54 +1644,6 @@
     <value>CGF2040C</value>
   </data>
   <data name="&gt;&gt;CGF2040C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGF1010C.Name" xml:space="preserve">
-    <value>WGF1010C</value>
-  </data>
-  <data name="&gt;&gt;WGF1010C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGF1020C.Name" xml:space="preserve">
-    <value>WGF1020C</value>
-  </data>
-  <data name="&gt;&gt;WGF1020C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGF1030C.Name" xml:space="preserve">
-    <value>WGF1030C</value>
-  </data>
-  <data name="&gt;&gt;WGF1030C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGF1040C.Name" xml:space="preserve">
-    <value>WGF1040C</value>
-  </data>
-  <data name="&gt;&gt;WGF1040C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGF1050C.Name" xml:space="preserve">
-    <value>WGF1050C</value>
-  </data>
-  <data name="&gt;&gt;WGF1050C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGF1070C.Name" xml:space="preserve">
-    <value>WGF1070C</value>
-  </data>
-  <data name="&gt;&gt;WGF1070C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGF1080C.Name" xml:space="preserve">
-    <value>WGF1080C</value>
-  </data>
-  <data name="&gt;&gt;WGF1080C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuItem24.Name" xml:space="preserve">
-    <value>menuItem24</value>
-  </data>
-  <data name="&gt;&gt;menuItem24.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;CGF2090C.Name" xml:space="preserve">
@@ -2134,102 +1764,6 @@
     <value>CGT2200C</value>
   </data>
   <data name="&gt;&gt;CGT2200C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGT1010C.Name" xml:space="preserve">
-    <value>WGT1010C</value>
-  </data>
-  <data name="&gt;&gt;WGT1010C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGT1020C.Name" xml:space="preserve">
-    <value>WGT1020C</value>
-  </data>
-  <data name="&gt;&gt;WGT1020C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGT1030C.Name" xml:space="preserve">
-    <value>WGT1030C</value>
-  </data>
-  <data name="&gt;&gt;WGT1030C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuItem26.Name" xml:space="preserve">
-    <value>menuItem26</value>
-  </data>
-  <data name="&gt;&gt;menuItem26.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGT1050C.Name" xml:space="preserve">
-    <value>WGT1050C</value>
-  </data>
-  <data name="&gt;&gt;WGT1050C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGT1060C.Name" xml:space="preserve">
-    <value>WGT1060C</value>
-  </data>
-  <data name="&gt;&gt;WGT1060C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGT1070C.Name" xml:space="preserve">
-    <value>WGT1070C</value>
-  </data>
-  <data name="&gt;&gt;WGT1070C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WGT2010C.Name" xml:space="preserve">
-    <value>WGT2010C</value>
-  </data>
-  <data name="&gt;&gt;WGT2010C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuItem34.Name" xml:space="preserve">
-    <value>menuItem34</value>
-  </data>
-  <data name="&gt;&gt;menuItem34.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuItem43.Name" xml:space="preserve">
-    <value>menuItem43</value>
-  </data>
-  <data name="&gt;&gt;menuItem43.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuItem35.Name" xml:space="preserve">
-    <value>menuItem35</value>
-  </data>
-  <data name="&gt;&gt;menuItem35.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuItem33.Name" xml:space="preserve">
-    <value>menuItem33</value>
-  </data>
-  <data name="&gt;&gt;menuItem33.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuItem25.Name" xml:space="preserve">
-    <value>menuItem25</value>
-  </data>
-  <data name="&gt;&gt;menuItem25.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuItem44.Name" xml:space="preserve">
-    <value>menuItem44</value>
-  </data>
-  <data name="&gt;&gt;menuItem44.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuItem37.Name" xml:space="preserve">
-    <value>menuItem37</value>
-  </data>
-  <data name="&gt;&gt;menuItem37.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuItem36.Name" xml:space="preserve">
-    <value>menuItem36</value>
-  </data>
-  <data name="&gt;&gt;menuItem36.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;menuItem29.Name" xml:space="preserve">
@@ -2687,12 +2221,6 @@
   </data>
   <data name="&gt;&gt;ImageList1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CGC2021C.Name" xml:space="preserve">
-    <value>CGC2021C</value>
-  </data>
-  <data name="&gt;&gt;CGC2021C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainMenu</value>

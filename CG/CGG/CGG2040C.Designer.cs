@@ -223,6 +223,7 @@
             // 
             // SCmd2
             // 
+            this.SCmd2.Enabled = false;
             this.SCmd2.Location = new System.Drawing.Point(547, 18);
             this.SCmd2.Name = "SCmd2";
             this.SCmd2.Size = new System.Drawing.Size(104, 23);
@@ -346,6 +347,7 @@
             // 
             // SCmd3
             // 
+            this.SCmd3.Enabled = false;
             this.SCmd3.Location = new System.Drawing.Point(671, 18);
             this.SCmd3.Name = "SCmd3";
             this.SCmd3.Size = new System.Drawing.Size(104, 23);

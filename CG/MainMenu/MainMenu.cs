@@ -91,63 +91,11 @@ namespace CG
         private MenuItem menuItem23;
         private MenuItem CGB2010C;
         private MenuItem CGB2020C;
-        private MenuItem WGB1030C;
-        private MenuItem WGB1040C;
-        private MenuItem WGB1050C;
-        private MenuItem WGC1010C;
-        private MenuItem WGC1020C;
-        private MenuItem WGC2060C;
-        private MenuItem WGC2010C;
-        private MenuItem WGC2020C;
-        private MenuItem WGC2030C;
-        private MenuItem WGC2051C;
-        private MenuItem WGC2040C;
-        private MenuItem WGC1030C;
-        private MenuItem WGC2050C;
-        private MenuItem WGC3020C;
-        private MenuItem WGC3030C;
-        private MenuItem WGC3010C;
-        private MenuItem WGF1010C;
-        private MenuItem WGF1020C;
-        private MenuItem WGF1030C;
-        private MenuItem WGF1040C;
-        private MenuItem WGF1050C;
-        private MenuItem WGF1080C;
-        private MenuItem WGE2020C;
-        private MenuItem WGT1010C;
-        private MenuItem WGT1020C;
-        private MenuItem WGT2010C;
-        private MenuItem WGE2010C;
-        private MenuItem WGE1010C;
-        private MenuItem WGE1020C;
-        private MenuItem menuItem3;
-        private MenuItem WGC2035C;
         private StatusBarPanel statusBarPanel5;
-        private MenuItem menuItem4;
-        private MenuItem menuItem7;
-        private MenuItem menuItem24;
-        private MenuItem menuItem6;
-        private MenuItem menuItem25;
-        private MenuItem WGT1050C;
-        private MenuItem WGT1060C;
-        private MenuItem WGC2070C;
         private MenuItem menuItem27;
         private MenuItem CGA2010C;
         private MenuItem CGA2020C;
         private MenuItem CGA2080C;
-        private MenuItem menuItem33;
-        private MenuItem menuItem26;
-        private MenuItem WGT1030C;
-        private MenuItem menuItem34;
-        private MenuItem menuItem35;
-        private MenuItem menuItem37;
-        private MenuItem menuItem36;
-        private MenuItem menuItem43;
-        private MenuItem menuItem44;
-        private MenuItem WGF1070C;
-        private MenuItem WGT1070C;
-        private MenuItem WGC2052C;
-        private MenuItem menuItem46;
         private MenuItem CGA2011C;
         private MenuItem CGA2030C;
         private MenuItem CGA2060C;
@@ -384,11 +332,8 @@ namespace CG
             this.CGC2000C = new System.Windows.Forms.MenuItem();
             this.CGC2010C = new System.Windows.Forms.MenuItem();
             this.CGC2020C = new System.Windows.Forms.MenuItem();
+            this.CGC2021C = new System.Windows.Forms.MenuItem();
             this.CGC2060C = new System.Windows.Forms.MenuItem();
-            this.WGB1030C = new System.Windows.Forms.MenuItem();
-            this.WGB1040C = new System.Windows.Forms.MenuItem();
-            this.WGB1050C = new System.Windows.Forms.MenuItem();
-            this.menuItem7 = new System.Windows.Forms.MenuItem();
             this.menuItem10 = new System.Windows.Forms.MenuItem();
             this.CGD2080C = new System.Windows.Forms.MenuItem();
             this.CGD2050C = new System.Windows.Forms.MenuItem();
@@ -408,35 +353,11 @@ namespace CG
             this.CGC2050C = new System.Windows.Forms.MenuItem();
             this.CGD2042C = new System.Windows.Forms.MenuItem();
             this.AGC2051C = new System.Windows.Forms.MenuItem();
-            this.WGC1010C = new System.Windows.Forms.MenuItem();
-            this.WGC1020C = new System.Windows.Forms.MenuItem();
-            this.WGC1030C = new System.Windows.Forms.MenuItem();
-            this.WGC2010C = new System.Windows.Forms.MenuItem();
-            this.WGC2020C = new System.Windows.Forms.MenuItem();
-            this.WGC2030C = new System.Windows.Forms.MenuItem();
-            this.WGC2040C = new System.Windows.Forms.MenuItem();
-            this.WGC2050C = new System.Windows.Forms.MenuItem();
-            this.WGC2051C = new System.Windows.Forms.MenuItem();
-            this.WGC2052C = new System.Windows.Forms.MenuItem();
-            this.WGC2060C = new System.Windows.Forms.MenuItem();
-            this.WGC2070C = new System.Windows.Forms.MenuItem();
-            this.WGC3010C = new System.Windows.Forms.MenuItem();
-            this.WGC3020C = new System.Windows.Forms.MenuItem();
-            this.WGC3030C = new System.Windows.Forms.MenuItem();
-            this.menuItem46 = new System.Windows.Forms.MenuItem();
-            this.WGC2035C = new System.Windows.Forms.MenuItem();
             this.menuItem21 = new System.Windows.Forms.MenuItem();
             this.CGE2020C = new System.Windows.Forms.MenuItem();
             this.CGE2030C = new System.Windows.Forms.MenuItem();
             this.CGE2040C = new System.Windows.Forms.MenuItem();
             this.AGC3020C = new System.Windows.Forms.MenuItem();
-            this.WGE1010C = new System.Windows.Forms.MenuItem();
-            this.WGE1020C = new System.Windows.Forms.MenuItem();
-            this.WGE2010C = new System.Windows.Forms.MenuItem();
-            this.WGE2020C = new System.Windows.Forms.MenuItem();
-            this.menuItem3 = new System.Windows.Forms.MenuItem();
-            this.menuItem4 = new System.Windows.Forms.MenuItem();
-            this.menuItem6 = new System.Windows.Forms.MenuItem();
             this.menuItem12 = new System.Windows.Forms.MenuItem();
             this.CGF2010C = new System.Windows.Forms.MenuItem();
             this.CGF2020C = new System.Windows.Forms.MenuItem();
@@ -449,14 +370,6 @@ namespace CG
             this.CGF2060C = new System.Windows.Forms.MenuItem();
             this.CGF2070C = new System.Windows.Forms.MenuItem();
             this.CGF2040C = new System.Windows.Forms.MenuItem();
-            this.WGF1010C = new System.Windows.Forms.MenuItem();
-            this.WGF1020C = new System.Windows.Forms.MenuItem();
-            this.WGF1030C = new System.Windows.Forms.MenuItem();
-            this.WGF1040C = new System.Windows.Forms.MenuItem();
-            this.WGF1050C = new System.Windows.Forms.MenuItem();
-            this.WGF1070C = new System.Windows.Forms.MenuItem();
-            this.WGF1080C = new System.Windows.Forms.MenuItem();
-            this.menuItem24 = new System.Windows.Forms.MenuItem();
             this.CGF2090C = new System.Windows.Forms.MenuItem();
             this.menuItem28 = new System.Windows.Forms.MenuItem();
             this.CGG2040C = new System.Windows.Forms.MenuItem();
@@ -477,22 +390,6 @@ namespace CG
             this.CGT2001C = new System.Windows.Forms.MenuItem();
             this.CGT2110C = new System.Windows.Forms.MenuItem();
             this.CGT2200C = new System.Windows.Forms.MenuItem();
-            this.WGT1010C = new System.Windows.Forms.MenuItem();
-            this.WGT1020C = new System.Windows.Forms.MenuItem();
-            this.WGT1030C = new System.Windows.Forms.MenuItem();
-            this.menuItem26 = new System.Windows.Forms.MenuItem();
-            this.WGT1050C = new System.Windows.Forms.MenuItem();
-            this.WGT1060C = new System.Windows.Forms.MenuItem();
-            this.WGT1070C = new System.Windows.Forms.MenuItem();
-            this.WGT2010C = new System.Windows.Forms.MenuItem();
-            this.menuItem34 = new System.Windows.Forms.MenuItem();
-            this.menuItem43 = new System.Windows.Forms.MenuItem();
-            this.menuItem35 = new System.Windows.Forms.MenuItem();
-            this.menuItem33 = new System.Windows.Forms.MenuItem();
-            this.menuItem25 = new System.Windows.Forms.MenuItem();
-            this.menuItem44 = new System.Windows.Forms.MenuItem();
-            this.menuItem37 = new System.Windows.Forms.MenuItem();
-            this.menuItem36 = new System.Windows.Forms.MenuItem();
             this.menuItem29 = new System.Windows.Forms.MenuItem();
             this.CGH2020C = new System.Windows.Forms.MenuItem();
             this.CGH2030C = new System.Windows.Forms.MenuItem();
@@ -571,7 +468,6 @@ namespace CG
             this.MenuItem22 = new System.Windows.Forms.MenuItem();
             this.ImageList2 = new System.Windows.Forms.ImageList(this.components);
             this.ImageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.CGC2021C = new System.Windows.Forms.MenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.StatusBarPanel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatusBarPanel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatusBarPanel3)).BeginInit();
@@ -777,11 +673,7 @@ namespace CG
             this.CGC2010C,
             this.CGC2020C,
             this.CGC2021C,
-            this.CGC2060C,
-            this.WGB1030C,
-            this.WGB1040C,
-            this.WGB1050C,
-            this.menuItem7});
+            this.CGC2060C});
             resources.ApplyResources(this.menuItem9, "menuItem9");
             // 
             // CGB2010C
@@ -814,34 +706,17 @@ namespace CG
             resources.ApplyResources(this.CGC2020C, "CGC2020C");
             this.CGC2020C.Click += new System.EventHandler(this.CGC2020C_Click);
             // 
+            // CGC2021C
+            // 
+            this.CGC2021C.Index = 5;
+            resources.ApplyResources(this.CGC2021C, "CGC2021C");
+            this.CGC2021C.Click += new System.EventHandler(this.CGC2021C_Click);
+            // 
             // CGC2060C
             // 
             this.CGC2060C.Index = 6;
             resources.ApplyResources(this.CGC2060C, "CGC2060C");
             this.CGC2060C.Click += new System.EventHandler(this.CGC2060C_Click);
-            // 
-            // WGB1030C
-            // 
-            this.WGB1030C.Index = 7;
-            resources.ApplyResources(this.WGB1030C, "WGB1030C");
-            // 
-            // WGB1040C
-            // 
-            this.WGB1040C.Index = 8;
-            resources.ApplyResources(this.WGB1040C, "WGB1040C");
-            this.WGB1040C.Click += new System.EventHandler(this.WGB1040C_Click);
-            // 
-            // WGB1050C
-            // 
-            this.WGB1050C.Index = 9;
-            resources.ApplyResources(this.WGB1050C, "WGB1050C");
-            this.WGB1050C.Click += new System.EventHandler(this.WGB1050C_Click);
-            // 
-            // menuItem7
-            // 
-            this.menuItem7.Index = 10;
-            resources.ApplyResources(this.menuItem7, "menuItem7");
-            this.menuItem7.Click += new System.EventHandler(this.menuItem7_Click);
             // 
             // menuItem10
             // 
@@ -864,24 +739,7 @@ namespace CG
             this.CGD2060C,
             this.CGC2050C,
             this.CGD2042C,
-            this.AGC2051C,
-            this.WGC1010C,
-            this.WGC1020C,
-            this.WGC1030C,
-            this.WGC2010C,
-            this.WGC2020C,
-            this.WGC2030C,
-            this.WGC2040C,
-            this.WGC2050C,
-            this.WGC2051C,
-            this.WGC2052C,
-            this.WGC2060C,
-            this.WGC2070C,
-            this.WGC3010C,
-            this.WGC3020C,
-            this.WGC3030C,
-            this.menuItem46,
-            this.WGC2035C});
+            this.AGC2051C});
             resources.ApplyResources(this.menuItem10, "menuItem10");
             // 
             // CGD2080C
@@ -992,108 +850,6 @@ namespace CG
             resources.ApplyResources(this.AGC2051C, "AGC2051C");
             this.AGC2051C.Click += new System.EventHandler(this.AGC2051C_Click);
             // 
-            // WGC1010C
-            // 
-            this.WGC1010C.Index = 18;
-            resources.ApplyResources(this.WGC1010C, "WGC1010C");
-            this.WGC1010C.Click += new System.EventHandler(this.WGC1010C_Click);
-            // 
-            // WGC1020C
-            // 
-            this.WGC1020C.Index = 19;
-            resources.ApplyResources(this.WGC1020C, "WGC1020C");
-            this.WGC1020C.Click += new System.EventHandler(this.WGC1020C_Click);
-            // 
-            // WGC1030C
-            // 
-            this.WGC1030C.Index = 20;
-            resources.ApplyResources(this.WGC1030C, "WGC1030C");
-            this.WGC1030C.Click += new System.EventHandler(this.WGC1030C_Click);
-            // 
-            // WGC2010C
-            // 
-            this.WGC2010C.Index = 21;
-            resources.ApplyResources(this.WGC2010C, "WGC2010C");
-            this.WGC2010C.Click += new System.EventHandler(this.WGC2010C_Click);
-            // 
-            // WGC2020C
-            // 
-            this.WGC2020C.Index = 22;
-            resources.ApplyResources(this.WGC2020C, "WGC2020C");
-            this.WGC2020C.Click += new System.EventHandler(this.WGC2020C_Click);
-            // 
-            // WGC2030C
-            // 
-            this.WGC2030C.Index = 23;
-            resources.ApplyResources(this.WGC2030C, "WGC2030C");
-            this.WGC2030C.Click += new System.EventHandler(this.WGC2030C_Click);
-            // 
-            // WGC2040C
-            // 
-            this.WGC2040C.Index = 24;
-            resources.ApplyResources(this.WGC2040C, "WGC2040C");
-            this.WGC2040C.Click += new System.EventHandler(this.WGC2040C_Click);
-            // 
-            // WGC2050C
-            // 
-            this.WGC2050C.Index = 25;
-            resources.ApplyResources(this.WGC2050C, "WGC2050C");
-            this.WGC2050C.Click += new System.EventHandler(this.WGC2050C_Click);
-            // 
-            // WGC2051C
-            // 
-            this.WGC2051C.Index = 26;
-            resources.ApplyResources(this.WGC2051C, "WGC2051C");
-            this.WGC2051C.Click += new System.EventHandler(this.WGC2051C_Click);
-            // 
-            // WGC2052C
-            // 
-            this.WGC2052C.Index = 27;
-            resources.ApplyResources(this.WGC2052C, "WGC2052C");
-            this.WGC2052C.Click += new System.EventHandler(this.WGC2052C_Click);
-            // 
-            // WGC2060C
-            // 
-            this.WGC2060C.Index = 28;
-            resources.ApplyResources(this.WGC2060C, "WGC2060C");
-            this.WGC2060C.Click += new System.EventHandler(this.WGC2060C_Click);
-            // 
-            // WGC2070C
-            // 
-            this.WGC2070C.Index = 29;
-            resources.ApplyResources(this.WGC2070C, "WGC2070C");
-            this.WGC2070C.Click += new System.EventHandler(this.WGC2070C_Click);
-            // 
-            // WGC3010C
-            // 
-            this.WGC3010C.Index = 30;
-            resources.ApplyResources(this.WGC3010C, "WGC3010C");
-            this.WGC3010C.Click += new System.EventHandler(this.WGC3010C_Click);
-            // 
-            // WGC3020C
-            // 
-            this.WGC3020C.Index = 31;
-            resources.ApplyResources(this.WGC3020C, "WGC3020C");
-            this.WGC3020C.Click += new System.EventHandler(this.WGC3020C_Click);
-            // 
-            // WGC3030C
-            // 
-            this.WGC3030C.Index = 32;
-            resources.ApplyResources(this.WGC3030C, "WGC3030C");
-            this.WGC3030C.Click += new System.EventHandler(this.WGC3030C_Click);
-            // 
-            // menuItem46
-            // 
-            this.menuItem46.Index = 33;
-            resources.ApplyResources(this.menuItem46, "menuItem46");
-            this.menuItem46.Click += new System.EventHandler(this.menuItem46_Click);
-            // 
-            // WGC2035C
-            // 
-            this.WGC2035C.Index = 34;
-            resources.ApplyResources(this.WGC2035C, "WGC2035C");
-            this.WGC2035C.Click += new System.EventHandler(this.WGC2035C_Click);
-            // 
             // menuItem21
             // 
             this.menuItem21.Index = 3;
@@ -1101,14 +857,7 @@ namespace CG
             this.CGE2020C,
             this.CGE2030C,
             this.CGE2040C,
-            this.AGC3020C,
-            this.WGE1010C,
-            this.WGE1020C,
-            this.WGE2010C,
-            this.WGE2020C,
-            this.menuItem3,
-            this.menuItem4,
-            this.menuItem6});
+            this.AGC3020C});
             resources.ApplyResources(this.menuItem21, "menuItem21");
             // 
             // CGE2020C
@@ -1135,48 +884,6 @@ namespace CG
             resources.ApplyResources(this.AGC3020C, "AGC3020C");
             this.AGC3020C.Click += new System.EventHandler(this.AGC3020C_Click);
             // 
-            // WGE1010C
-            // 
-            this.WGE1010C.Index = 4;
-            resources.ApplyResources(this.WGE1010C, "WGE1010C");
-            this.WGE1010C.Click += new System.EventHandler(this.WGE1010C_Click);
-            // 
-            // WGE1020C
-            // 
-            this.WGE1020C.Index = 5;
-            resources.ApplyResources(this.WGE1020C, "WGE1020C");
-            this.WGE1020C.Click += new System.EventHandler(this.WGE1020C_Click);
-            // 
-            // WGE2010C
-            // 
-            this.WGE2010C.Index = 6;
-            resources.ApplyResources(this.WGE2010C, "WGE2010C");
-            this.WGE2010C.Click += new System.EventHandler(this.WGE2010C_Click);
-            // 
-            // WGE2020C
-            // 
-            this.WGE2020C.Index = 7;
-            resources.ApplyResources(this.WGE2020C, "WGE2020C");
-            this.WGE2020C.Click += new System.EventHandler(this.WGE2020C_Click);
-            // 
-            // menuItem3
-            // 
-            this.menuItem3.Index = 8;
-            resources.ApplyResources(this.menuItem3, "menuItem3");
-            this.menuItem3.Click += new System.EventHandler(this.menuItem3_Click);
-            // 
-            // menuItem4
-            // 
-            this.menuItem4.Index = 9;
-            resources.ApplyResources(this.menuItem4, "menuItem4");
-            this.menuItem4.Click += new System.EventHandler(this.menuItem4_Click);
-            // 
-            // menuItem6
-            // 
-            this.menuItem6.Index = 10;
-            resources.ApplyResources(this.menuItem6, "menuItem6");
-            this.menuItem6.Click += new System.EventHandler(this.menuItem6_Click_1);
-            // 
             // menuItem12
             // 
             this.menuItem12.Index = 4;
@@ -1192,14 +899,6 @@ namespace CG
             this.CGF2060C,
             this.CGF2070C,
             this.CGF2040C,
-            this.WGF1010C,
-            this.WGF1020C,
-            this.WGF1030C,
-            this.WGF1040C,
-            this.WGF1050C,
-            this.WGF1070C,
-            this.WGF1080C,
-            this.menuItem24,
             this.CGF2090C});
             resources.ApplyResources(this.menuItem12, "menuItem12");
             // 
@@ -1269,57 +968,9 @@ namespace CG
             resources.ApplyResources(this.CGF2040C, "CGF2040C");
             this.CGF2040C.Click += new System.EventHandler(this.CGF2040C_Click);
             // 
-            // WGF1010C
-            // 
-            this.WGF1010C.Index = 11;
-            resources.ApplyResources(this.WGF1010C, "WGF1010C");
-            this.WGF1010C.Click += new System.EventHandler(this.WGF1010C_Click);
-            // 
-            // WGF1020C
-            // 
-            this.WGF1020C.Index = 12;
-            resources.ApplyResources(this.WGF1020C, "WGF1020C");
-            this.WGF1020C.Click += new System.EventHandler(this.WGF1020C_Click);
-            // 
-            // WGF1030C
-            // 
-            this.WGF1030C.Index = 13;
-            resources.ApplyResources(this.WGF1030C, "WGF1030C");
-            this.WGF1030C.Click += new System.EventHandler(this.WGF1030C_Click);
-            // 
-            // WGF1040C
-            // 
-            this.WGF1040C.Index = 14;
-            resources.ApplyResources(this.WGF1040C, "WGF1040C");
-            this.WGF1040C.Click += new System.EventHandler(this.WGF1040C_Click);
-            // 
-            // WGF1050C
-            // 
-            this.WGF1050C.Index = 15;
-            resources.ApplyResources(this.WGF1050C, "WGF1050C");
-            this.WGF1050C.Click += new System.EventHandler(this.WGF1050C_Click);
-            // 
-            // WGF1070C
-            // 
-            this.WGF1070C.Index = 16;
-            resources.ApplyResources(this.WGF1070C, "WGF1070C");
-            this.WGF1070C.Click += new System.EventHandler(this.WGF1070C_Click);
-            // 
-            // WGF1080C
-            // 
-            this.WGF1080C.Index = 17;
-            resources.ApplyResources(this.WGF1080C, "WGF1080C");
-            this.WGF1080C.Click += new System.EventHandler(this.WGF1080C_Click);
-            // 
-            // menuItem24
-            // 
-            this.menuItem24.Index = 18;
-            resources.ApplyResources(this.menuItem24, "menuItem24");
-            this.menuItem24.Click += new System.EventHandler(this.menuItem24_Click);
-            // 
             // CGF2090C
             // 
-            this.CGF2090C.Index = 19;
+            this.CGF2090C.Index = 11;
             resources.ApplyResources(this.CGF2090C, "CGF2090C");
             this.CGF2090C.Click += new System.EventHandler(this.CGF2090C_Click);
             // 
@@ -1367,23 +1018,7 @@ namespace CG
             this.CGT2102C,
             this.CGT2001C,
             this.CGT2110C,
-            this.CGT2200C,
-            this.WGT1010C,
-            this.WGT1020C,
-            this.WGT1030C,
-            this.menuItem26,
-            this.WGT1050C,
-            this.WGT1060C,
-            this.WGT1070C,
-            this.WGT2010C,
-            this.menuItem34,
-            this.menuItem43,
-            this.menuItem35,
-            this.menuItem33,
-            this.menuItem25,
-            this.menuItem44,
-            this.menuItem37,
-            this.menuItem36});
+            this.CGT2200C});
             resources.ApplyResources(this.menuItem23, "menuItem23");
             // 
             // CGT2000C
@@ -1469,102 +1104,6 @@ namespace CG
             this.CGT2200C.Index = 13;
             resources.ApplyResources(this.CGT2200C, "CGT2200C");
             this.CGT2200C.Click += new System.EventHandler(this.CGT2200C_Click);
-            // 
-            // WGT1010C
-            // 
-            this.WGT1010C.Index = 14;
-            resources.ApplyResources(this.WGT1010C, "WGT1010C");
-            this.WGT1010C.Click += new System.EventHandler(this.WGT1010C_Click);
-            // 
-            // WGT1020C
-            // 
-            this.WGT1020C.Index = 15;
-            resources.ApplyResources(this.WGT1020C, "WGT1020C");
-            this.WGT1020C.Click += new System.EventHandler(this.WGT1020C_Click);
-            // 
-            // WGT1030C
-            // 
-            this.WGT1030C.Index = 16;
-            resources.ApplyResources(this.WGT1030C, "WGT1030C");
-            this.WGT1030C.Click += new System.EventHandler(this.WGT1030C_Click);
-            // 
-            // menuItem26
-            // 
-            this.menuItem26.Index = 17;
-            resources.ApplyResources(this.menuItem26, "menuItem26");
-            this.menuItem26.Click += new System.EventHandler(this.WGT1040C_Click);
-            // 
-            // WGT1050C
-            // 
-            this.WGT1050C.Index = 18;
-            resources.ApplyResources(this.WGT1050C, "WGT1050C");
-            this.WGT1050C.Click += new System.EventHandler(this.WGT1050C_Click);
-            // 
-            // WGT1060C
-            // 
-            this.WGT1060C.Index = 19;
-            resources.ApplyResources(this.WGT1060C, "WGT1060C");
-            this.WGT1060C.Click += new System.EventHandler(this.menuItem26_Click);
-            // 
-            // WGT1070C
-            // 
-            this.WGT1070C.Index = 20;
-            resources.ApplyResources(this.WGT1070C, "WGT1070C");
-            this.WGT1070C.Click += new System.EventHandler(this.WGT1070C_Click);
-            // 
-            // WGT2010C
-            // 
-            this.WGT2010C.Index = 21;
-            resources.ApplyResources(this.WGT2010C, "WGT2010C");
-            this.WGT2010C.Click += new System.EventHandler(this.WGT2010C_Click);
-            // 
-            // menuItem34
-            // 
-            this.menuItem34.Index = 22;
-            resources.ApplyResources(this.menuItem34, "menuItem34");
-            this.menuItem34.Click += new System.EventHandler(this.WGT2011C_Click);
-            // 
-            // menuItem43
-            // 
-            this.menuItem43.Index = 23;
-            resources.ApplyResources(this.menuItem43, "menuItem43");
-            this.menuItem43.Click += new System.EventHandler(this.menuItem43_Click);
-            // 
-            // menuItem35
-            // 
-            this.menuItem35.Index = 24;
-            resources.ApplyResources(this.menuItem35, "menuItem35");
-            this.menuItem35.Click += new System.EventHandler(this.WGT2020C_Click);
-            // 
-            // menuItem33
-            // 
-            this.menuItem33.Index = 25;
-            resources.ApplyResources(this.menuItem33, "menuItem33");
-            this.menuItem33.Click += new System.EventHandler(this.menuItem33_Click);
-            // 
-            // menuItem25
-            // 
-            this.menuItem25.Index = 26;
-            resources.ApplyResources(this.menuItem25, "menuItem25");
-            this.menuItem25.Click += new System.EventHandler(this.menuItem25_Click);
-            // 
-            // menuItem44
-            // 
-            this.menuItem44.Index = 27;
-            resources.ApplyResources(this.menuItem44, "menuItem44");
-            this.menuItem44.Click += new System.EventHandler(this.WGT2040C_Click);
-            // 
-            // menuItem37
-            // 
-            this.menuItem37.Index = 28;
-            resources.ApplyResources(this.menuItem37, "menuItem37");
-            this.menuItem37.Click += new System.EventHandler(this.WGT3010C_Click);
-            // 
-            // menuItem36
-            // 
-            this.menuItem36.Index = 29;
-            resources.ApplyResources(this.menuItem36, "menuItem36");
-            this.menuItem36.Click += new System.EventHandler(this.WGT3020C_Click);
             // 
             // menuItem29
             // 
@@ -2073,12 +1612,6 @@ namespace CG
             this.ImageList1.Images.SetKeyName(9, "M10_1.gif");
             this.ImageList1.Images.SetKeyName(10, "M11_1.gif");
             this.ImageList1.Images.SetKeyName(11, "M12_1.gif");
-            // 
-            // CGC2021C
-            // 
-            this.CGC2021C.Index = 5;
-            resources.ApplyResources(this.CGC2021C, "CGC2021C");
-            this.CGC2021C.Click += new System.EventHandler(this.CGC2021C_Click);
             // 
             // MainMenu
             // 
@@ -2708,658 +2241,31 @@ namespace CG
 		
 		#region MENU CLICK
 
-        #region //轧钢作业管理菜单
-        private void WGB1010C_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void WGB1020C_Click(object sender, EventArgs e)
-        {
-
-        }
+      
+       
 
 
-
-        private void WGB1040C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGB1040C"))
-            {
-                WGB1040C WGB1040C = new WGB1040C();
-                WGB1040C.MdiParent = this;
-                WGB1040C.Show();
-                WGB1040C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
-
-        private void WGB1050C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGB1050C"))
-            {
-                WGB1050C WGB1050C = new WGB1050C();
-                WGB1050C.MdiParent = this;
-                WGB1050C.Show();
-                WGB1050C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
+ 
 
 
-        private void menuItem7_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGB1060C"))
-            {
-                WGB1060C WGB1060C = new WGB1060C();
-                WGB1060C.MdiParent = this;
-                WGB1060C.Show();
-                WGB1060C.WindowState = FormWindowState.Maximized;
+       
 
-            }
-        }
-        #endregion
-
-        #region //精整作业管理菜单
-        private void WGC1010C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGC1010C"))
-            {
-                WGC1010C WGC1010C = new WGC1010C();
-                WGC1010C.MdiParent = this;
-                WGC1010C.Show();
-                WGC1010C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
-
-        private void WGC1020C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGC1020C"))
-            {
-                WGC1020C WGC1020C = new WGC1020C();
-                WGC1020C.MdiParent = this;
-                WGC1020C.Show();
-                WGC1020C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
-
-        private void WGC1030C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGC1030C"))
-            {
-                WGC1030C WGC1030C = new WGC1030C();
-                WGC1030C.MdiParent = this;
-                WGC1030C.Show();
-                WGC1030C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
-
-        private void WGC2010C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGC2010C"))
-            {
-                WGC2010C WGC2010C = new WGC2010C();
-                WGC2010C.MdiParent = this;
-                WGC2010C.Show();
-                WGC2010C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
-
-        private void WGC2020C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGC2020C"))
-            {
-                WGC2020C WGC2020C = new WGC2020C();
-                WGC2020C.MdiParent = this;
-                WGC2020C.Show();
-                WGC2020C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
-
-        private void WGC2030C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGC2030C"))
-            {
-                WGC2030C WGC2030C = new WGC2030C();
-                WGC2030C.MdiParent = this;
-                WGC2030C.Show();
-                WGC2030C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
-        private void WGC2035C_Click(object sender, EventArgs e)
-        {
-            WGC2035C WGC2035C = new WGC2035C();
-            WGC2035C.MdiParent = this;
-            WGC2035C.Show();
-            WGC2035C.WindowState = FormWindowState.Maximized;
-        }
-
-        private void WGC2040C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGC2040C"))
-            {
-                WGC2040C WGC2040C = new WGC2040C();
-                WGC2040C.MdiParent = this;
-                WGC2040C.Show();
-                WGC2040C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
-
-        private void WGC2050C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGC2050C"))
-            {
-                WGC2050C WGC2050C = new WGC2050C();
-                WGC2050C.MdiParent = this;
-                WGC2050C.Show();
-                WGC2050C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
-
-        private void WGC2051C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGC2051C"))
-            {
-                AGC2051C WGC2051C = new AGC2051C();
-                WGC2051C.MdiParent = this;
-                WGC2051C.Show();
-                WGC2051C.WindowState = FormWindowState.Maximized;
-            }
-        }
-        private void WGC2052C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGC2052C"))
-            {
-                WGC2052C WGC2052C = new WGC2052C();
-                WGC2052C.MdiParent = this;
-                WGC2052C.Show();
-                WGC2052C.WindowState = FormWindowState.Maximized;
-            }
-        }
-
-        private void WGC2060C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGC2060C"))
-            {
-                WGC2060C WGC2060C = new WGC2060C();
-                WGC2060C.MdiParent = this;
-                WGC2060C.Show();
-                WGC2060C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
-
-        private void WGC2070C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGC2070C"))
-            {
-                WGC2070C WGC2070C = new WGC2070C();
-                WGC2070C.MdiParent = this;
-                WGC2070C.Show();
-                WGC2070C.WindowState = FormWindowState.Maximized;
-
-            }
-
-        }
-
-        private void WGC3010C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGC3010C"))
-            {
-                WGC3010C WGC3010C = new WGC3010C();
-                WGC3010C.MdiParent = this;
-                WGC3010C.Show();
-                WGC3010C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
-
-        private void WGC3020C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGC3020C"))
-            {
-                WGC3020C WGC3020C = new WGC3020C();
-                WGC3020C.MdiParent = this;
-                WGC3020C.Show();
-                WGC3020C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
-
-        private void WGC3030C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGC3030C"))
-            {
-                WGC3030C WGC3030C = new WGC3030C();
-                WGC3030C.MdiParent = this;
-                WGC3030C.Show();
-                WGC3030C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
+       
 
         
 
-   
-        #endregion
        
-        #region //轧辊管理菜单
-        private void WGF1010C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGF1010C"))
-            {
-                WGF1010C WGF1010C = new WGF1010C();
-                WGF1010C.MdiParent = this;
-                WGF1010C.Show();
-                WGF1010C.WindowState = FormWindowState.Maximized;
 
-            }
-        }
+       
 
-        private void WGF1020C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGF1020C"))
-            {
-                WGF1020C WGF1020C = new WGF1020C();
-                WGF1020C.MdiParent = this;
-                WGF1020C.Show();
-                WGF1020C.WindowState = FormWindowState.Maximized;
+       
 
-            }
-        }
-
-        private void WGF1030C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGF1030C"))
-            {
-                WGF1030C WGF1030C = new WGF1030C();
-                WGF1030C.MdiParent = this;
-                WGF1030C.Show();
-                WGF1030C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
-
-        private void WGF1040C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGF1040C"))
-            {
-                WGF1040C WGF1040C = new WGF1040C();
-                WGF1040C.MdiParent = this;
-                WGF1040C.Show();
-                WGF1040C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
-
-        private void WGF1050C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGF1050C"))
-            {
-                WGF1050C WGF1050C = new WGF1050C();
-                WGF1050C.MdiParent = this;
-                WGF1050C.Show();
-                WGF1050C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
-        private void WGF1070C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGF1070C"))
-            {
-                WGF1070C WGF1070C = new WGF1070C();
-                WGF1070C.MdiParent = this;
-                WGF1070C.Show();
-                WGF1070C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
-        private void WGF1080C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGF1080C"))
-            {
-                WGF1080C WGF1080C = new WGF1080C();
-                WGF1080C.MdiParent = this;
-                WGF1080C.Show();
-                WGF1080C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
-
-        private void menuItem24_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGF1060C"))
-            {
-                WGF1060C WGF1060C = new WGF1060C();
-                WGF1060C.MdiParent = this;
-                WGF1060C.Show();
-                WGF1060C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
-        #endregion
-
-        #region //库管理菜单
-        private void WGE1010C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGE1010C"))
-            {
-                CGE2021C WGE1010C = new CGE2021C();
-                WGE1010C.MdiParent = this;
-                WGE1010C.Show();
-                WGE1010C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
-
-        private void WGE1020C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGE1020C"))
-            {
-                WGE1020C WGE1020C = new WGE1020C();
-                WGE1020C.MdiParent = this;
-                WGE1020C.Show();
-                WGE1020C.WindowState = FormWindowState.Maximized;
-            }
-        }
-
-        private void WGE2010C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGE2010C"))
-            {
-                WGE2010C WGE2010C = new WGE2010C();
-                WGE2010C.MdiParent = this;
-                WGE2010C.Show();
-                WGE2010C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
-
-        private void WGE2020C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGE2020C"))
-            {
-                WGE2020C WGE2020C = new WGE2020C();
-                WGE2020C.MdiParent = this;
-                WGE2020C.Show();
-                WGE2020C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
-        private void WGE2030C_Click(object sender, EventArgs e)
-        {
-            //if (!GeneralCommon.Gf_IsFormLoad("WGE2030C"))
-            //{
-            //    WGE2030C WGE2030C = new WGE2030C();
-            //    WGE2030C.MdiParent = this;
-            //    WGE2030C.Show();
-            //    WGE2030C.WindowState = FormWindowState.Maximized;
-
-            //}
-        }
-        #endregion
-
-        #region //统计分析管理菜单
-        private void WGT1010C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGT1010C"))
-            {
-                WGT1010C WGT1010C = new WGT1010C();
-                WGT1010C.MdiParent = this;
-                WGT1010C.Show();
-                WGT1010C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
-
-        private void WGT1020C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGT1020C"))
-            {
-                WGT1020C WGT1020C = new WGT1020C();
-                WGT1020C.MdiParent = this;
-                WGT1020C.Show();
-                WGT1020C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
-
-        private void WGT1040C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGT1040C"))
-            {
-                WGT1040C WGT1040C = new WGT1040C();
-                WGT1040C.MdiParent = this;
-                WGT1040C.Show();
-                WGT1040C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
-
-        private void WGT1030C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGT1030C"))
-            {
-                WGT1030C WGT1030C = new WGT1030C();
-                WGT1030C.MdiParent = this;
-                WGT1030C.Show();
-                WGT1030C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
-
-        private void WGT1050C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGT1050C"))
-            {
-                WGT1050C WGT1050C = new WGT1050C();
-                WGT1050C.MdiParent = this;
-                WGT1050C.Show();
-                WGT1050C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
-
-        private void WGT2010C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGT2010C"))
-            {
-                WGT2010C WGT2010C = new WGT2010C();
-                WGT2010C.MdiParent = this;
-                WGT2010C.Show();
-                WGT2010C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
-
-        private void WGT2011C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGT2011C"))
-            {
-                WGT2011C WGT2011C = new WGT2011C();
-                WGT2011C.MdiParent = this;
-                WGT2011C.Show();
-                WGT2011C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
-
-        private void WGT2020C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGT2020C"))
-            {
-                CGD2061C WGT2020C = new CGD2061C();
-                WGT2020C.MdiParent = this;
-                WGT2020C.Show();
-                WGT2020C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
-
-        private void WGT2040C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGT2040C"))
-            {
-                WGT2040C WGT2040C = new WGT2040C();
-                WGT2040C.MdiParent = this;
-                WGT2040C.Show();
-                WGT2040C.WindowState = FormWindowState.Maximized;
-
-            }
-
-        }
-
-        private void WGT3010C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGT3010C"))
-            {
-                WGT3010C WGT3010C = new WGT3010C();
-                WGT3010C.MdiParent = this;
-                WGT3010C.Show();
-                WGT3010C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
-
-        private void WGT3020C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGT3020C"))
-            {
-                WGT3020C WGT3020C = new WGT3020C();
-                WGT3020C.MdiParent = this;
-                WGT3020C.Show();
-                WGT3020C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
-
-        private void menuItem3_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGE3010C"))
-            {
-                WGE3010C WGE3010C = new WGE3010C();
-                WGE3010C.MdiParent = this;
-                WGE3010C.Show();
-                WGE3010C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
-        private void menuItem4_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGE4030C"))
-            {
-                WGE4030C WGE4030C = new WGE4030C();
-                WGE4030C.MdiParent = this;
-                WGE4030C.Show();
-                WGE4030C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
-        #endregion
-
-        private void menuItem6_Click(object sender, EventArgs e)
-        {
-            //if (!GeneralCommon.Gf_IsFormLoad("WGE4020C"))
-            //{
-            //    WGE4020C WGE4020C = new WGE4020C();
-            //    WGE4020C.MdiParent = this;
-            //    WGE4020C.Show();
-            //    WGE4020C.WindowState = FormWindowState.Maximized;
-
-            //}
-        }
-
-        private void menuItem6_Click_1(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGE4040C"))
-            {
-                WGE4040C WGE4040C = new WGE4040C();
-                WGE4040C.MdiParent = this;
-                WGE4040C.Show();
-                WGE4040C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
-
-        private void menuItem43_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGT2012C"))
-            {
-                WGT2012C WGT2012C = new WGT2012C();
-                WGT2012C.MdiParent = this;
-                WGT2012C.Show();
-                WGT2012C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
-
-        private void menuItem25_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGT2030C"))
-            {
-                WGT2030C WGT2030C = new WGT2030C();
-                WGT2030C.MdiParent = this;
-                WGT2030C.Show();
-                WGT2030C.WindowState = FormWindowState.Maximized;
-
-            }
-        }
-
-        private void menuItem26_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGT1060C"))
-            {
-                WGT1060C WGT1060C = new WGT1060C();
-                WGT1060C.MdiParent = this;
-                WGT1060C.Show();
-                WGT1060C.WindowState = FormWindowState.Maximized;
-
-            }
-
-        }
-
-        private void WGT1070C_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGT1070C"))
-            {
-                WGT1070C WGT1070C = new WGT1070C();
-                WGT1070C.MdiParent = this;
-                WGT1070C.Show();
-                WGT1070C.WindowState = FormWindowState.Maximized;
-
-            }
-
-        }
-
-        private void menuItem29_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void menuItem30_Click(object sender, EventArgs e)
-        {
-
-        }
+        
        
         
 
 
-        private void menuItem33_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGT2021C"))
-            {
-                WGT2021C WGT2021C = new WGT2021C();
-                WGT2021C.MdiParent = this;
-                WGT2021C.Show();
-                WGT2021C.WindowState = FormWindowState.Maximized;
-            }
-        }
+        
 
 
         //板坯库管理
@@ -3432,16 +2338,7 @@ namespace CG
 
         #endregion
 
-        private void menuItem46_Click(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGC3031C"))
-            {
-                WGC3031C WGC3031C = new WGC3031C();
-                WGC3031C.MdiParent = this;
-                WGC3031C.Show();
-                WGC3031C.WindowState = FormWindowState.Maximized;
-            }
-        }
+        
 
         private void CGA2080C_Click(object sender, EventArgs e)
         {
@@ -3994,17 +2891,6 @@ namespace CG
                 CGD2070C.MdiParent = this;
                 CGD2070C.Show();
                 CGD2070C.WindowState = FormWindowState.Maximized;
-            }
-        }
-
-        private void WGB1010C_Click_1(object sender, EventArgs e)
-        {
-            if (!GeneralCommon.Gf_IsFormLoad("WGB1010C"))
-            {
-                WGB1010C WGB1010C = new WGB1010C();
-                WGB1010C.MdiParent = this;
-                WGB1010C.Show();
-                WGB1010C.WindowState = FormWindowState.Maximized;
             }
         }
 
