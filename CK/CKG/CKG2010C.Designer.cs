@@ -33,6 +33,12 @@
             this.TXT_PLT = new CommonClass.F4ETCR();
             this.TXT_PLT_NAME = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TXT_MPLATE_NO = new System.Windows.Forms.TextBox();
+            this.target_y = new System.Windows.Forms.TextBox();
+            this.to_y = new System.Windows.Forms.TextBox();
+            this.from_y = new System.Windows.Forms.TextBox();
+            this.SDB_MPLATE_EDT_SEQ = new System.Windows.Forms.TextBox();
+            this.SDB_SLAB_EDT_SEQ = new System.Windows.Forms.TextBox();
             this.cmd_roll_mana = new System.Windows.Forms.Button();
             this.cmd_abnormal_send = new System.Windows.Forms.Button();
             this.opt_target = new System.Windows.Forms.RadioButton();
@@ -57,26 +63,27 @@
             this.txt_from = new System.Windows.Forms.TextBox();
             this.SSTab1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.ss1 = new FarPoint.Win.Spread.FpSpread();
             this.ss1_Sheet1 = new FarPoint.Win.Spread.SheetView();
-            this.ss3 = new FarPoint.Win.Spread.FpSpread();
-            this.ss3_Sheet1 = new FarPoint.Win.Spread.SheetView();
-            this.splitter1 = new System.Windows.Forms.Splitter();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.ss4 = new FarPoint.Win.Spread.FpSpread();
             this.ss4_Sheet1 = new FarPoint.Win.Spread.SheetView();
+            this.splitter1 = new System.Windows.Forms.Splitter();
+            this.ss3 = new FarPoint.Win.Spread.FpSpread();
+            this.ss3_Sheet1 = new FarPoint.Win.Spread.SheetView();
+            this.SSOrd = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SSTab1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ss1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ss1_Sheet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ss3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ss3_Sheet1)).BeginInit();
+            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ss4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ss4_Sheet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ss3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ss3_Sheet1)).BeginInit();
             this.SuspendLayout();
             // 
             // TXT_PLT
@@ -109,6 +116,12 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.TXT_MPLATE_NO);
+            this.groupBox1.Controls.Add(this.target_y);
+            this.groupBox1.Controls.Add(this.to_y);
+            this.groupBox1.Controls.Add(this.from_y);
+            this.groupBox1.Controls.Add(this.SDB_MPLATE_EDT_SEQ);
+            this.groupBox1.Controls.Add(this.SDB_SLAB_EDT_SEQ);
             this.groupBox1.Controls.Add(this.cmd_roll_mana);
             this.groupBox1.Controls.Add(this.cmd_abnormal_send);
             this.groupBox1.Controls.Add(this.opt_target);
@@ -118,9 +131,57 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1224, 52);
+            this.groupBox1.Size = new System.Drawing.Size(1362, 52);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // TXT_MPLATE_NO
+            // 
+            this.TXT_MPLATE_NO.Location = new System.Drawing.Point(889, 12);
+            this.TXT_MPLATE_NO.Name = "TXT_MPLATE_NO";
+            this.TXT_MPLATE_NO.Size = new System.Drawing.Size(22, 22);
+            this.TXT_MPLATE_NO.TabIndex = 25;
+            this.TXT_MPLATE_NO.Visible = false;
+            // 
+            // target_y
+            // 
+            this.target_y.Location = new System.Drawing.Point(861, 12);
+            this.target_y.Name = "target_y";
+            this.target_y.Size = new System.Drawing.Size(22, 22);
+            this.target_y.TabIndex = 24;
+            this.target_y.Visible = false;
+            // 
+            // to_y
+            // 
+            this.to_y.Location = new System.Drawing.Point(833, 12);
+            this.to_y.Name = "to_y";
+            this.to_y.Size = new System.Drawing.Size(22, 22);
+            this.to_y.TabIndex = 23;
+            this.to_y.Visible = false;
+            // 
+            // from_y
+            // 
+            this.from_y.Location = new System.Drawing.Point(803, 12);
+            this.from_y.Name = "from_y";
+            this.from_y.Size = new System.Drawing.Size(24, 22);
+            this.from_y.TabIndex = 22;
+            this.from_y.Visible = false;
+            // 
+            // SDB_MPLATE_EDT_SEQ
+            // 
+            this.SDB_MPLATE_EDT_SEQ.Location = new System.Drawing.Point(589, 15);
+            this.SDB_MPLATE_EDT_SEQ.Name = "SDB_MPLATE_EDT_SEQ";
+            this.SDB_MPLATE_EDT_SEQ.Size = new System.Drawing.Size(46, 22);
+            this.SDB_MPLATE_EDT_SEQ.TabIndex = 21;
+            this.SDB_MPLATE_EDT_SEQ.Visible = false;
+            // 
+            // SDB_SLAB_EDT_SEQ
+            // 
+            this.SDB_SLAB_EDT_SEQ.Location = new System.Drawing.Point(535, 15);
+            this.SDB_SLAB_EDT_SEQ.Name = "SDB_SLAB_EDT_SEQ";
+            this.SDB_SLAB_EDT_SEQ.Size = new System.Drawing.Size(46, 22);
+            this.SDB_SLAB_EDT_SEQ.TabIndex = 20;
+            this.SDB_SLAB_EDT_SEQ.Visible = false;
             // 
             // cmd_roll_mana
             // 
@@ -149,7 +210,7 @@
             this.cmd_abnormal_send.Text = "强制发送";
             this.cmd_abnormal_send.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.cmd_abnormal_send.UseVisualStyleBackColor = true;
-            this.cmd_abnormal_send.Click += new System.EventHandler(this.btn_abnormal_send_Click);
+            this.cmd_abnormal_send.Click += new System.EventHandler(this.cmd_abnormal_send_Click);
             // 
             // opt_target
             // 
@@ -264,7 +325,7 @@
             this.SSPpdt.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.SSPpdt.Font = new System.Drawing.Font("宋体", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.SSPpdt.ForeColor = System.Drawing.Color.Blue;
-            this.SSPpdt.Location = new System.Drawing.Point(1092, 14);
+            this.SSPpdt.Location = new System.Drawing.Point(1098, 14);
             this.SSPpdt.Name = "SSPpdt";
             this.SSPpdt.Size = new System.Drawing.Size(124, 22);
             this.SSPpdt.TabIndex = 15;
@@ -288,6 +349,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.SSOrd);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.TXT_PLT_NAME);
@@ -303,7 +365,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox2.Location = new System.Drawing.Point(0, 52);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1224, 42);
+            this.groupBox2.Size = new System.Drawing.Size(1362, 42);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
@@ -389,7 +451,7 @@
             this.SSTab1.Name = "SSTab1";
             this.SSTab1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.SSTab1.SelectedIndex = 0;
-            this.SSTab1.Size = new System.Drawing.Size(1224, 528);
+            this.SSTab1.Size = new System.Drawing.Size(1362, 528);
             this.SSTab1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.SSTab1.TabIndex = 2;
             // 
@@ -400,9 +462,25 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 23);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1216, 501);
+            this.tabPage1.Size = new System.Drawing.Size(1354, 501);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "轧制指示";
+            // 
+            // ss1
+            // 
+            this.ss1.AccessibleDescription = "";
+            this.ss1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ss1.Location = new System.Drawing.Point(3, 3);
+            this.ss1.Name = "ss1";
+            this.ss1.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
+            this.ss1_Sheet1});
+            this.ss1.Size = new System.Drawing.Size(1348, 495);
+            this.ss1.TabIndex = 1;
+            // 
+            // ss1_Sheet1
+            // 
+            this.ss1_Sheet1.Reset();
+            this.ss1_Sheet1.SheetName = "Sheet1";
             // 
             // tabPage2
             // 
@@ -416,54 +494,6 @@
             this.tabPage2.Size = new System.Drawing.Size(1216, 501);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "母板、钢板指示";
-            // 
-            // ss1
-            // 
-            this.ss1.AccessibleDescription = "";
-            this.ss1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ss1.Location = new System.Drawing.Point(3, 3);
-            this.ss1.Name = "ss1";
-            this.ss1.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
-            this.ss1_Sheet1});
-            this.ss1.Size = new System.Drawing.Size(1210, 495);
-            this.ss1.TabIndex = 1;
-            // 
-            // ss1_Sheet1
-            // 
-            this.ss1_Sheet1.Reset();
-            this.ss1_Sheet1.SheetName = "Sheet1";
-            // Formulas and custom names must be loaded with R1C1 reference style
-            this.ss1_Sheet1.ReferenceStyle = FarPoint.Win.Spread.Model.ReferenceStyle.R1C1;
-            this.ss1_Sheet1.ColumnFooterSheetCornerStyle.NoteIndicatorColor = System.Drawing.Color.Red;
-            this.ss1_Sheet1.ReferenceStyle = FarPoint.Win.Spread.Model.ReferenceStyle.A1;
-            // 
-            // ss3
-            // 
-            this.ss3.AccessibleDescription = "";
-            this.ss3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ss3.Location = new System.Drawing.Point(3, 3);
-            this.ss3.Name = "ss3";
-            this.ss3.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
-            this.ss3_Sheet1});
-            this.ss3.Size = new System.Drawing.Size(607, 495);
-            this.ss3.TabIndex = 1;
-            // 
-            // ss3_Sheet1
-            // 
-            this.ss3_Sheet1.Reset();
-            this.ss3_Sheet1.SheetName = "Sheet1";
-            // Formulas and custom names must be loaded with R1C1 reference style
-            this.ss3_Sheet1.ReferenceStyle = FarPoint.Win.Spread.Model.ReferenceStyle.R1C1;
-            this.ss3_Sheet1.ColumnFooterSheetCornerStyle.NoteIndicatorColor = System.Drawing.Color.Red;
-            this.ss3_Sheet1.ReferenceStyle = FarPoint.Win.Spread.Model.ReferenceStyle.A1;
-            // 
-            // splitter1
-            // 
-            this.splitter1.Location = new System.Drawing.Point(610, 3);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 495);
-            this.splitter1.TabIndex = 2;
-            this.splitter1.TabStop = false;
             // 
             // ss4
             // 
@@ -480,33 +510,68 @@
             // 
             this.ss4_Sheet1.Reset();
             this.ss4_Sheet1.SheetName = "Sheet1";
-            // Formulas and custom names must be loaded with R1C1 reference style
-            this.ss4_Sheet1.ReferenceStyle = FarPoint.Win.Spread.Model.ReferenceStyle.R1C1;
-            this.ss4_Sheet1.ColumnFooterSheetCornerStyle.NoteIndicatorColor = System.Drawing.Color.Red;
-            this.ss4_Sheet1.ReferenceStyle = FarPoint.Win.Spread.Model.ReferenceStyle.A1;
+            // 
+            // splitter1
+            // 
+            this.splitter1.Location = new System.Drawing.Point(610, 3);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(3, 495);
+            this.splitter1.TabIndex = 2;
+            this.splitter1.TabStop = false;
+            // 
+            // ss3
+            // 
+            this.ss3.AccessibleDescription = "";
+            this.ss3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ss3.Location = new System.Drawing.Point(3, 3);
+            this.ss3.Name = "ss3";
+            this.ss3.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
+            this.ss3_Sheet1});
+            this.ss3.Size = new System.Drawing.Size(607, 495);
+            this.ss3.TabIndex = 1;
+            // 
+            // ss3_Sheet1
+            // 
+            this.ss3_Sheet1.Reset();
+            this.ss3_Sheet1.SheetName = "Sheet1";
+            // 
+            // SSOrd
+            // 
+            this.SSOrd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.SSOrd.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.SSOrd.Font = new System.Drawing.Font("宋体", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.SSOrd.ForeColor = System.Drawing.Color.White;
+            this.SSOrd.Location = new System.Drawing.Point(1228, 14);
+            this.SSOrd.Name = "SSOrd";
+            this.SSOrd.Size = new System.Drawing.Size(124, 22);
+            this.SSOrd.TabIndex = 26;
+            this.SSOrd.Tag = "USER";
+            this.SSOrd.Text = "多订单";
+            this.SSOrd.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // CKG2010C
             // 
-            this.ClientSize = new System.Drawing.Size(1224, 622);
+            this.ClientSize = new System.Drawing.Size(1362, 622);
             this.Controls.Add(this.SSTab1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "CKG2010C";
             this.Text = "指示调整_CKG2010C";
-            this.Load += new System.EventHandler(this.WKA1010C_Load);
+            this.Load += new System.EventHandler(this.CKG2010C_Load);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.SSTab1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ss1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ss1_Sheet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ss3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ss3_Sheet1)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ss4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ss4_Sheet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ss3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ss3_Sheet1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -548,6 +613,13 @@
         private System.Windows.Forms.Splitter splitter1;
         private FarPoint.Win.Spread.FpSpread ss3;
         private FarPoint.Win.Spread.SheetView ss3_Sheet1;
+        private System.Windows.Forms.TextBox SDB_SLAB_EDT_SEQ;
+        private System.Windows.Forms.TextBox SDB_MPLATE_EDT_SEQ;
+        private System.Windows.Forms.TextBox from_y;
+        private System.Windows.Forms.TextBox target_y;
+        private System.Windows.Forms.TextBox to_y;
+        private System.Windows.Forms.TextBox TXT_MPLATE_NO;
+        private System.Windows.Forms.Label SSOrd;
 
 
     }
