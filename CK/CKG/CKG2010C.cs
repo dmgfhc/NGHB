@@ -378,9 +378,20 @@ namespace CK
         public override void Form_Pro()
         {
 
-            string sRtn_Msg = "";              // 操作类型:L 发送,C 取消,M 调整,X 删除,B 返送,A 强制下达,R 辊期编制
+            bool mResult;
+            string sMsg;
 
-            //指示发送
+            Mode = "";
+
+            if (opt_move.Checked)
+            {
+                if (!((from_y.Text == "Y" & to_y.Text == "Y" & target_y.Text == "Y") || (from_y.Text == "" & to_y.Text == "" & target_y.Text == "")))
+                {
+                    GeneralCommon.Gp_MsgBoxDisplay("已下达的指示和未下达的指示不能混在一起调整！", "I", "提示");
+                    return;
+                }
+            }
+
             if (opt_sent.Checked)
             {
 
@@ -388,27 +399,23 @@ namespace CK
 
                 if (txt_to.Text != "")
                 {
-                    if (GeneralCommon.Gf_MessConfirm("确定要下达到 '" + txt_to.Text + "' 的作业指示吗？", "Q", "指示下达确定"))
+                    if (GeneralCommon.Gf_MessConfirm("确定要下达到 '" + txt_to.Text + "' 的作业指示吗？", "I", "指示下达确定"))
                     {
-                        sRtn_Msg = Gp_Process_Exec(Mode);
-                        if (sRtn_Msg == "")
+                        if (Gp_Process_Exec("") == "")
                         {
-                            GeneralCommon.Gp_MsgBoxDisplay("作业指示下达完毕 ！", "I", this.Text);
+                            GeneralCommon.Gp_MsgBoxDisplay("作业指示下达完毕 ！", "I", "提示");
                             Form_Ref();
                         }
-                        else
-                        {
-                            GeneralCommon.Gp_MsgBoxDisplay(sRtn_Msg, "I", this.Text);
-                        }
                     }
+
                 }
                 else
                 {
-                    GeneralCommon.Gp_MsgBoxDisplay("请选择目标板坯号 ！", "I", this.Text);
+                    GeneralCommon.Gp_MsgBoxDisplay("请选择目标板坯号 ！", "I", "提示");
                 }
+
             }
 
-            //指示取消
             if (opt_cancel.Checked)
             {
 
@@ -416,65 +423,51 @@ namespace CK
 
                 if (txt_from.Text != "")
                 {
-                    if (GeneralCommon.Gf_MessConfirm("确定取消从 '" + txt_from.Text + "' 的作业指示吗？", "Q", "指示取消确定"))
+                    if (GeneralCommon.Gf_MessConfirm("确定取消从'" + txt_from.Text + "'的作业指示吗？", "I", "指示取消确定"))
                     {
-
-                        sRtn_Msg = Gp_Process_Exec(Mode);
-                        if (sRtn_Msg == "")
+                        if (Gp_Process_Exec("") == "")
                         {
-                            GeneralCommon.Gp_MsgBoxDisplay("取消指示完毕 ！", "I", this.Text);
+                            GeneralCommon.Gp_MsgBoxDisplay("取消指示完毕 ！", "I", "提示");
                             Form_Ref();
-                        }
-                        else
-                        {
-                            GeneralCommon.Gp_MsgBoxDisplay(sRtn_Msg, "I", this.Text);
                         }
                     }
                 }
                 else
                 {
-                    GeneralCommon.Gp_MsgBoxDisplay("请选择目标板坯号 ！", "I", this.Text);
+                    GeneralCommon.Gp_MsgBoxDisplay("请选择起始板坯号 ！", "I", "提示");
                 }
             }
 
-            //指示调整
             if (opt_move.Checked)
             {
 
                 Mode = "M";
-                string sMsg = "";
-                sMsg = "确定要把板坯从(" + txt_from.Text + ")->(" + txt_to.Text + ")" + "调整到板坯(" + txt_target.Text + ")后边吗？ ";
 
-                if (txt_from.Text != "")
+                //顺序变更
+                if (txt_from.Text != "" & txt_to.Text != "" & txt_target.Text != "")
                 {
+                    sMsg = "确定要把板坯从(" + txt_from.Text + ")->(" + txt_to.Text + ")" + "调整到板坯(" + txt_target.Text + ")后边吗？";
+                }
+                else
+                {
+                    sMsg = "必须输入起始板坯号、终止板坯号和目标板坯号！";
+                    GeneralCommon.Gp_MsgBoxDisplay(sMsg, "I", "提示");
+                    return;
+                }
 
-                    if (txt_from.Text != "" && txt_to.Text != "" && txt_target.Text != "")
-                    {
-                        GeneralCommon.Gf_MessConfirm(sMsg, "Q", "");
-                    }
-                    else
-                    {
-                        GeneralCommon.Gp_MsgBoxDisplay("必须输入起始、终止和目标板坯号！", "I", this.Text);
-                    }
-                    sMsg = sMsg + "调整后相应的作业指示将被取消！";
-                    if (GeneralCommon.Gf_MessConfirm(sMsg, "Q", ""))
-                    {
+                mResult = GeneralCommon.Gf_MessConfirm(sMsg, "I", "提示");
 
-                        sRtn_Msg = Gp_Process_Exec(Mode);
-                        if (sRtn_Msg == "")
-                        {
-                            GeneralCommon.Gp_MsgBoxDisplay("作业指示调整完毕 ！", "I", this.Text);
-                            Form_Ref();
-                        }
-                        else
-                        {
-                            GeneralCommon.Gp_MsgBoxDisplay(sRtn_Msg, "I", this.Text);
-                        }
+                if (mResult)
+                {
+                    if (Gp_Process_Exec("") == "")
+                    {
+                        GeneralCommon.Gp_MsgBoxDisplay("作业指示调整完毕 ！", "I", "提示");
+                        Form_Ref();
                     }
                 }
+
             }
 
-            //指示删除
             if (opt_delete.Checked)
             {
 
@@ -482,56 +475,59 @@ namespace CK
 
                 if (txt_from.Text == "")
                 {
-                    GeneralCommon.Gp_MsgBoxDisplay("必须输入起始板坯号！", "I", this.Text);
+                    sMsg = "必须输入起始板坯号！";
+                    GeneralCommon.Gp_MsgBoxDisplay(sMsg, "I", "提示");
+                    return;
                 }
+
+                sMsg = "确定要删除选定板坯(" + txt_from.Text + ")" + ")吗？";
+
                 if (txt_to.Text != "")
                 {
-                    if (GeneralCommon.Gf_MessConfirm("确定要删除选定板坯(" + txt_from.Text + ")->(" + txt_to.Text + ")吗？", "Q", ""))
-                    {
+                    sMsg = "确定要删除选定板坯(" + txt_from.Text + ")->(" + txt_to.Text + ")吗？";
+                }
 
-                        sRtn_Msg = Gp_Process_Exec(Mode);
-                        if (sRtn_Msg == "")
-                        {
-                            GeneralCommon.Gp_MsgBoxDisplay("作业指示删除完毕 ！", "I", this.Text);
-                            Form_Ref();
-                        }
-                        else
-                        {
-                            GeneralCommon.Gp_MsgBoxDisplay(sRtn_Msg, "I", this.Text);
-                        }
+                mResult = GeneralCommon.Gf_MessConfirm(sMsg, "I", "提示");
+
+                if (mResult)
+                {
+                    if (Gp_Process_Exec("") == "")
+                    {
+                        GeneralCommon.Gp_MsgBoxDisplay("作业指示删除完毕 ！", "I", "提示");
+                        Form_Ref();
                     }
                 }
             }
 
-            //指示返送
             if (opt_return.Checked)
             {
 
                 Mode = "B";
+
                 if (txt_from.Text == "")
                 {
-                    GeneralCommon.Gp_MsgBoxDisplay("必须输入起始板坯号！", "I", this.Text);
+                    sMsg = "必须输入起始板坯号！";
+                    GeneralCommon.Gp_MsgBoxDisplay(sMsg, "I", "提示");
                     return;
-                }
-                if (txt_to.Text == "")
-                {
-                    GeneralCommon.Gp_MsgBoxDisplay("必须输入终止板坯号！", "I", this.Text);
-                    return;
-                }
-                if (GeneralCommon.Gf_MessConfirm("确定要返送选定板坯(" + txt_from.Text + ")->(" + txt_to.Text + ")吗？", "Q", ""))
-                {
-                    sRtn_Msg = Gp_Process_Exec(Mode);
-                    if (sRtn_Msg == "")
-                    {
-                        GeneralCommon.Gp_MsgBoxDisplay("作业指示返送完毕 ！", "I", this.Text);
-                        Form_Ref();
-                    }
-                    else
-                    {
-                        GeneralCommon.Gp_MsgBoxDisplay(sRtn_Msg, "I", this.Text);
-                    }
                 }
 
+                sMsg = "确定要返送选定板坯(" + txt_from.Text + ")" + ")吗？";
+
+                if (txt_to.Text != "")
+                {
+                    sMsg = "确定要返送选定板坯(" + txt_from.Text + ")->(" + txt_to.Text + ")吗？";
+                }
+
+                mResult = GeneralCommon.Gf_MessConfirm(sMsg, "I", "提示");
+
+                if (mResult)
+                {
+                    if (Gp_Process_Exec("") == "")
+                    {
+                        GeneralCommon.Gp_MsgBoxDisplay("作业指示返送完毕 ！", "I", "提示");
+                        Form_Ref();
+                    }
+                }
             }
         }
 
@@ -545,128 +541,122 @@ namespace CK
             sSlab_Seq_To = sSlab_Edt_Seq_To;
             sSlab_Seq_Tg = sSlab_Edt_Seq_Tg;
 
-            string[] Para1 = new string[2];
+            string[] Para1 = new string[1];
             string[] Para2 = new string[3];
-            string[] Para3 = new string[4];
-            string[] Para4 = new string[4];
-            string[] Para5 = new string[3];
-            string[] Para6 = new string[2];
+            string[] Para3 = new string[2];
+            string[] Para4 = new string[2];
+            string[] Para5 = new string[4];
+            string[] Para6 = new string[6];
             string[] Para7 = new string[3];
 
-            // 发送
-            Para1[0] = "A";
-            Para1[1] = sSlab_Seq_To;
-            if (Process_Type == "L") {
-                if (GeneralCommon.Gf_ExecProcedure(GeneralCommon.M_CN1, "WKA1010P", Para1))
-                {
-                    return "";
-                }
-                else
-                {
-                    return "作业指示下达失败";
-                }
-            }
+            switch (Process_Type)
+            {
 
-            // 取消
-            Para2[0] = sSlab_Seq_Fr;
-            Para2[1] = "M";
-            if (Process_Type == "C")
-            {
-                if (GeneralCommon.Gf_ExecProcedure(GeneralCommon.M_CN1, "WKA1011P", Para2))
-                {
-                    return "";
-                }
-                else
-                {
-                    return "作业指示取消失败";
-                }
-            }
+                case "A":
+                    Para1[0] = sSlab_Seq_To;
+                    if (GeneralCommon.Gf_ExecProcedure(GeneralCommon.M_CN1, "CGG2046P", Para1))
+                    {
+                        return "";
+                    }
+                    else
+                    {
+                        return "作业指示强制下达失败";
+                    }
+                    break;
+                case "R":
+                    Para2[0] = "C3";
+                    Para2[1] = "1";
+                    Para2[2] = sSlab_Seq_Tg;
+                    if (GeneralCommon.Gf_ExecProcedure(GeneralCommon.M_CN1, "BKG2050P", Para2))
+                    {
+                        return "";
+                    }
+                    else
+                    {
+                        return "辊期编制失败";
+                    }
+                    break;
+                default:
 
-            // 调整
-            Para3[0] = "M";
-            Para3[1] = sSlab_Seq_Fr;
-            Para3[2] = sSlab_Seq_To;
-            Para3[3] = sSlab_Seq_Tg;
-            if (Process_Type == "M")
-            {
-                if (GeneralCommon.Gf_ExecProcedure(GeneralCommon.M_CN1, "WKA1012P", Para3))
-                {
-                    return "";
-                }
-                else
-                {
-                    return "作业指示调整失败";
-                }
-            }
+                    switch (Mode)
+                    {
 
-            // 删除
-            Para4[0] = sSlab_Seq_Fr;
-            Para4[1] = sSlab_Seq_To;
-            Para4[2] = "A";
-            Para4[3] = "M";
-            if (Process_Type == "X")
-            {
-                if (GeneralCommon.Gf_ExecProcedure(GeneralCommon.M_CN1, "WKA1013P", Para4))
-                {
-                    return "";
-                }
-                else
-                {
-                    return "作业指示删除失败";
-                }
-            }
+                        case "L":
+                            Para3[0] = "A";
+                            Para3[1] = sSlab_Seq_To;
+                            if (GeneralCommon.Gf_ExecProcedure(GeneralCommon.M_CN1, "CGG2042P", Para3))
+                            {
+                                return "";
+                            }
+                            else
+                            {
+                                return "作业指示下达失败";
+                            }
+                            break;
 
-            // 返送
-            Para5[0] = "C2";
-            Para5[1] = sSlab_Seq_Fr;
-            Para5[2] = sSlab_Seq_To;
-            if (Process_Type == "B")
-            {
-                if (GeneralCommon.Gf_ExecProcedure(GeneralCommon.M_CN1, "AFZ1300P", Para5))
-                {
-                    return "";
-                }
-                else
-                {
-                    return "作业指示返送失败";
-                }
-            }
+                        case "C":
+                            Para4[0] = sSlab_Seq_Fr;
+                            Para4[1] = "M";
+                            if (GeneralCommon.Gf_ExecProcedure(GeneralCommon.M_CN1, "CGG2041P", Para3))
+                            {
+                                return "";
+                            }
+                            else
+                            {
+                                return "作业指示取消失败";
+                            }
+                            break;
+                        case "M":
+                            Para5[0] = "M";
+                            Para5[1] = sSlab_Seq_Fr;
+                            Para5[2] = sSlab_Seq_To;
+                            Para5[3] = sSlab_Seq_Tg;
+                            if (GeneralCommon.Gf_ExecProcedure(GeneralCommon.M_CN1, "CGG2044P", Para5))
+                            {
+                                return "";
+                            }
+                            else
+                            {
+                                return "作业指示调整失败";
+                            }
+                            
+                            break;
 
-            // 作业指示强制下达
-            if (sSlab_Seq_Fr == "") 
-            {
-                sSlab_Seq_Fr = sSlab_Seq_To;
-            }
-            Para6[0] = sSlab_Seq_Fr;
-            Para6[1] = sSlab_Seq_To;
-            if (Process_Type == "A")
-            {
-                if (GeneralCommon.Gf_ExecProcedure(GeneralCommon.M_CN1, "WKA1015P", Para6))
-                {
-                    return "";
-                }
-                else
-                {
-                    return "作业指示强制下达失败";
-                }
-            }
+                        case "X":
+                            Para6[0] = "X";
+                            Para6[1] = "M";
+                            Para6[2] = sSlab_Seq_Fr;
+                            Para6[3] = sSlab_Seq_To;
+                            Para6[4] = sSlab_Seq_Tg;
+                            Para6[5] = GeneralCommon.sUserID;
+                            if (GeneralCommon.Gf_ExecProcedure(GeneralCommon.M_CN1, "AFZ1000P", Para6))
+                            {
+                                return "";
+                            }
+                            else
+                            {
+                                return "作业指示删除失败";
+                            }
+                            break;
 
-            // 辊期编制
-            if (Process_Type == "R")
-            {
-                if (GeneralCommon.Gf_ExecProcedure(GeneralCommon.M_CN1, "WKA0000P", Para7))
-                {
-                    return "";
-                }
-                else
-                {
-                    return "辊期编制失败";
-                }
+                        case "B":
+                            Para7[0] = "C3";
+                            Para7[1] = sSlab_Seq_Fr;
+                            Para7[2] = sSlab_Seq_To;
+                            if (GeneralCommon.Gf_ExecProcedure(GeneralCommon.M_CN1, "AFZ1301P", Para7))
+                            {
+                                return "";
+                            }
+                            else
+                            {
+                                return "作业指示返送失败";
+                            }
+                            break;
+
+                    }
+                    break;
             }
-            else {
-                return "";
-            }            
-            return "";
+            return "数据错误";
         }
 
         private void rdo_send_Click(object sender, EventArgs e)
