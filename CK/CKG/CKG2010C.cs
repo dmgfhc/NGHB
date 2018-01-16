@@ -84,7 +84,7 @@ namespace CK
         string sSlab_Edt_Seq_To = "";
         string sSlab_Edt_Seq_Tg = "";
 
-        string Mode = "";              // 操作类型:L 发送,C 取消,M 调整,X 删除,B 返送,A 强制下达,R 辊期编制
+        string Mode = "";              // 
 
         #region 界面初始化
 
