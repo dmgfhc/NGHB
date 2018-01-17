@@ -57,7 +57,6 @@ namespace CK
         Collection Sc1 = new Collection();
         Collection Sc2 = new Collection();
         Collection Sc3 = new Collection();
-        Collection Sc4 = new Collection();
 
         const int SS1_PRC_STS = 4;
         const int SS1_SLAB_NO = 5;
@@ -86,7 +85,6 @@ namespace CK
 
         string Mode = "";              // 
 
-        #region 界面初始化
 
         protected override void p_SubFormInit()
         {
@@ -185,7 +183,7 @@ namespace CK
 
 
 
-            p_ScIni(ss3, Sc3, 0, false, false);
+            p_ScIni(ss2, Sc2, 0, false, false);
             iheadrow = 0;
             iscseq = 2;
             //0-5
@@ -199,10 +197,10 @@ namespace CK
             p_SetSc("板坯编制号", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//7
             p_SetSc("母板编制号", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//8
 
-            SpreadCommon.Gp_Sp_ColHidden(ss3, 7, true);
-            SpreadCommon.Gp_Sp_ColHidden(ss3, 8, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss2, 7, true);
+            SpreadCommon.Gp_Sp_ColHidden(ss2, 8, true);
 
-            p_ScIni(ss4, Sc4, 0, false, false);
+            p_ScIni(ss3, Sc3, 0, false, false);
             iheadrow = 0;
             iscseq = 3;
             //0-5
@@ -219,8 +217,9 @@ namespace CK
 
         private void CKG2010C_Load(object sender, EventArgs e)
         {
-            Form_Define();
             base.sSvrPgmPkgName = "CKG2010NC";
+            Form_Define();
+            
             TXT_PLT.Text = "C3";
 
             opt_from.Enabled = false;
@@ -229,6 +228,7 @@ namespace CK
             txt_search_slabno.Text = "检索板坯号";
 
             TXT_PLT.Text = "C3";
+            TXT_PLT_NAME.Text = "中板厂";
             opt_sent.Checked = false;
             opt_cancel.Checked = false;
             opt_move.Checked = false;
@@ -259,6 +259,9 @@ namespace CK
             sSlab_Edt_Seq_To = "0";
             sSlab_Edt_Seq_Tg = "0";
 
+            label1.BackColor = Color.Transparent;
+            label1.BorderStyle = BorderStyle.None;
+
         }
 
         private void cmd_abnormal_send_Click(object sender, EventArgs e)
@@ -273,10 +276,10 @@ namespace CK
                         Form_Ref();
                     }
                 }
-                else
-                {
-                    GeneralCommon.Gp_MsgBoxDisplay("请选择要强制下达的板坯号 ！", "I", this.Text);
-                }
+            }
+            else
+            {
+                GeneralCommon.Gp_MsgBoxDisplay("请选择要强制下达的板坯号 ！", "I", this.Text);
             }
         }
 
@@ -302,8 +305,8 @@ namespace CK
 
             if (p_Ref(1, 1, false, false))
             {
+                SpreadCommon.Gf_Sp_Cls(Sc2);
                 SpreadCommon.Gf_Sp_Cls(Sc3);
-                SpreadCommon.Gf_Sp_Cls(Sc4);
 
                 sSlab_Edt_Seq_Fr = "0";
                 sSlab_Edt_Seq_To = "0";
@@ -659,113 +662,29 @@ namespace CK
             return "数据错误";
         }
 
-        private void rdo_send_Click(object sender, EventArgs e)
+        private void opt_cancel_Click(object sender, EventArgs e)
         {
-            if (opt_sent.Checked == true)
-            {
-                opt_sent.ForeColor = System.Drawing.Color.Red;
-                opt_cancel.ForeColor = System.Drawing.Color.Black;
-                opt_move.ForeColor = System.Drawing.Color.Black;
-                opt_delete.ForeColor = System.Drawing.Color.Black;
-                opt_return.ForeColor = System.Drawing.Color.Black;
-                rdo_from.Enabled = true;
-                rdo_from.ForeColor = System.Drawing.Color.Black;
-                rdo_to.Enabled = true;
-                rdo_to.Checked = true;
-                rdo_to.ForeColor = System.Drawing.Color.Red;
-                rdo_target.Enabled = false;
-            }
-            else{ 
-                opt_sent.ForeColor = System.Drawing.Color.Black; 
-            }
-            txt_from.Text = "";
-            txt_to.Text = "";
-            txt_target.Text = "";
-    
-            sSlab_Edt_Seq_Fr = "0";
-            sSlab_Edt_Seq_To = "0";
-            sSlab_Edt_Seq_Tg = "0";
-        }
-        private void rdo_from_Click(object sender, EventArgs e)
-        {
-            if (rdo_from.Checked == true)
-            {
-                rdo_from.ForeColor = System.Drawing.Color.Red;
-                rdo_to.ForeColor = System.Drawing.Color.Black;
-                rdo_target.ForeColor = System.Drawing.Color.Black;
-            }
-            else
-                rdo_from.ForeColor = System.Drawing.Color.Black;
-        }
-        private void rdo_target_Click(object sender, EventArgs e)
-        {
-            if (rdo_target.Checked == true)
-            {
-                rdo_target.ForeColor = System.Drawing.Color.Red;
-                rdo_from.ForeColor = System.Drawing.Color.Black;
-                rdo_to.ForeColor = System.Drawing.Color.Black;
-            }
-            else
-                rdo_target.ForeColor = System.Drawing.Color.Black;
-        }
-        private void rdo_to_Click(object sender, EventArgs e)
-        {
-            if (rdo_to.Checked == true)
-            {
-                rdo_to.ForeColor = System.Drawing.Color.Red;
-                rdo_from.ForeColor = System.Drawing.Color.Black;
-                rdo_target.ForeColor = System.Drawing.Color.Black;
-            }
-            else
-                rdo_to.ForeColor = System.Drawing.Color.Black;
-        }
-        private void rdo_cancel_Click(object sender, EventArgs e)
-        {
+
+            int iRow;
+            string sTemp;
+
             if (opt_cancel.Checked == true)
             {
-                opt_cancel.ForeColor = System.Drawing.Color.Red;
-                opt_sent.ForeColor = System.Drawing.Color.Black;
-                opt_move.ForeColor = System.Drawing.Color.Black;
-                opt_delete.ForeColor = System.Drawing.Color.Black;
-                opt_return.ForeColor = System.Drawing.Color.Black;
-                rdo_from.Enabled = true;
-                rdo_from.Checked = true;
-                rdo_from.ForeColor = System.Drawing.Color.Red;
-                rdo_to.Enabled = false;
-                rdo_target.Enabled = false;
+                opt_cancel.ForeColor = Color.Red;
+                opt_sent.ForeColor = Color.Black;
+                opt_move.ForeColor = Color.Black;
+                opt_delete.ForeColor = Color.Black;
+                opt_return.ForeColor = Color.Black;
+                opt_from.Enabled = true;
+                opt_from.Checked = true;
+                opt_to.Enabled = false;
+                opt_target.Enabled = false;
             }
             else
             {
-                opt_cancel.ForeColor = System.Drawing.Color.Black;
+                opt_cancel.ForeColor = Color.Black;
             }
-            txt_from.Text = "";
-            txt_to.Text = "";
-            txt_target.Text = "";
-    
-            sSlab_Edt_Seq_Fr = "0";
-            sSlab_Edt_Seq_To = "0";
-            sSlab_Edt_Seq_Tg = "0";
-        }
-        private void rdo_move_Click(object sender, EventArgs e)
-        {
-            if (opt_move.Checked == true)
-            {
-                opt_move.ForeColor = System.Drawing.Color.Red;
-                opt_sent.ForeColor = System.Drawing.Color.Black;
-                opt_cancel.ForeColor = System.Drawing.Color.Black;
-                opt_delete.ForeColor = System.Drawing.Color.Black;
-                opt_return.ForeColor = System.Drawing.Color.Black;
-                rdo_from.Enabled = true;
-                rdo_from.Checked = true;
-                rdo_from.ForeColor = System.Drawing.Color.Red;
-                rdo_to.Enabled = true;
-                rdo_to.ForeColor = System.Drawing.Color.Black;
-                rdo_target.Enabled = true;
-            }
-            else
-            {
-                opt_move.ForeColor = System.Drawing.Color.Black;
-            }
+
             txt_from.Text = "";
             txt_to.Text = "";
             txt_target.Text = "";
@@ -775,119 +694,337 @@ namespace CK
             sSlab_Edt_Seq_Tg = "0";
 
         }
-        private void rdo_delete_Click(object sender, EventArgs e)
+
+        private void opt_delete_Click(object sender, EventArgs e)
         {
+
+            int iRow;
+            string sTemp;
+
             if (opt_delete.Checked == true)
             {
-                opt_delete.ForeColor = System.Drawing.Color.Red;
-                opt_sent.ForeColor = System.Drawing.Color.Black;
-                opt_cancel.ForeColor = System.Drawing.Color.Black;
-                opt_move.ForeColor = System.Drawing.Color.Black;
-                opt_return.ForeColor = System.Drawing.Color.Black;
-                rdo_from.Enabled = true;
-                rdo_from.Checked = true;
-                rdo_from.ForeColor = System.Drawing.Color.Red;
-                rdo_to.Enabled = true;
-                rdo_to.ForeColor = System.Drawing.Color.Black;
-                rdo_target.Enabled = false;
+
+                opt_delete.ForeColor = Color.Red;
+                opt_sent.ForeColor = Color.Black;
+                opt_cancel.ForeColor = Color.Black;
+                opt_move.ForeColor = Color.Black;
+                opt_return.ForeColor = Color.Black;
+                opt_from.Enabled = true;
+                opt_from.Checked = true;
+                opt_to.Enabled = true;
+                opt_target.Enabled = false;
             }
             else
             {
-                opt_delete.ForeColor = System.Drawing.Color.Black;
+                opt_delete.ForeColor = Color.Black;
             }
+
             txt_from.Text = "";
             txt_to.Text = "";
             txt_target.Text = "";
-    
+
             sSlab_Edt_Seq_Fr = "0";
             sSlab_Edt_Seq_To = "0";
             sSlab_Edt_Seq_Tg = "0";
+
         }
-        private void rdo_return_Click(object sender, EventArgs e)
+
+
+        private void opt_from_Click(object sender, EventArgs e)
         {
+            int iRow;
+            string sTemp;
+
+            if (opt_from.Checked == true)
+            {
+                opt_from.ForeColor = Color.Red;
+                opt_to.ForeColor = Color.Black;
+                opt_target.ForeColor = Color.Black;
+            }
+            else
+            {
+                opt_from.ForeColor = Color.Black;
+            }
+
+        }
+
+        private void opt_move_Click(object sender, EventArgs e)
+        {
+
+            int iRow;
+            string sTemp;
+
+            if (opt_move.Checked == true)
+            {
+                opt_move.ForeColor = Color.Red;
+                opt_sent.ForeColor = Color.Black;
+                opt_cancel.ForeColor = Color.Black;
+                opt_delete.ForeColor = Color.Black;
+                opt_return.ForeColor = Color.Black;
+                opt_from.Enabled = true;
+                opt_from.Checked = true;
+                opt_to.Enabled = true;
+                opt_target.Enabled = true;
+            }
+            else
+            {
+                opt_move.ForeColor = Color.Black;
+            }
+
+            txt_from.Text = "";
+            txt_to.Text = "";
+            txt_target.Text = "";
+
+            sSlab_Edt_Seq_Fr = "0";
+            sSlab_Edt_Seq_To = "0";
+            sSlab_Edt_Seq_Tg = "0";
+
+        }
+
+
+        private void opt_return_Click(object sender, EventArgs e)
+        {
+            int iRow;
+            string sTemp;
+
             if (opt_return.Checked == true)
             {
-                opt_return.ForeColor = System.Drawing.Color.Red;
-                opt_sent.ForeColor = System.Drawing.Color.Black;
-                opt_cancel.ForeColor = System.Drawing.Color.Black;
-                opt_move.ForeColor = System.Drawing.Color.Black;
-                opt_delete.ForeColor = System.Drawing.Color.Black;
-                rdo_from.Enabled = true;
-                rdo_from.Checked = true;
-                rdo_to.Enabled = true;
-                rdo_target.Enabled = false;
+
+                opt_return.ForeColor = Color.Red;
+                opt_sent.ForeColor = Color.Black;
+                opt_cancel.ForeColor = Color.Black;
+                opt_move.ForeColor = Color.Black;
+                opt_delete.ForeColor = Color.Black;
+                opt_from.Enabled = true;
+                opt_from.Checked = true;
+                opt_to.Enabled = true;
+                opt_target.Enabled = false;
             }
             else
             {
-                opt_return.ForeColor = System.Drawing.Color.Black;
+                opt_return.ForeColor = Color.Black;
             }
+
             txt_from.Text = "";
             txt_to.Text = "";
             txt_target.Text = "";
-    
+
             sSlab_Edt_Seq_Fr = "0";
             sSlab_Edt_Seq_To = "0";
             sSlab_Edt_Seq_Tg = "0";
-        }
-        #endregion
 
-        private void btn_roll_mana_Click(object sender, EventArgs e)
+        }
+
+        private void opt_sent_Click(object sender, EventArgs e)
         {
-            if (txt_target.Text.Trim() != "")
+
+            int iRow;
+            string sTemp;
+
+            if (opt_sent.Checked == true)
             {
-                if (GeneralCommon.Gf_MessConfirm("确定从板坯（ '" + txt_to.Text + "'）进行辊期编制吗？", "Q", "辊期编制确定"))
-                {
-                    if (Gp_Process_Exec("R") == "")
-                    {
-                        GeneralCommon.Gp_MsgBoxDisplay("辊期编制完毕 ！", "I", this.Text);
-                        Form_Ref();
-                    }
-                }
+                opt_sent.ForeColor = Color.Red;
+                opt_cancel.ForeColor = Color.Black;
+                opt_move.ForeColor = Color.Black;
+                opt_delete.ForeColor = Color.Black;
+                opt_return.ForeColor = Color.Black;
+                opt_from.Enabled = false;
+                opt_to.Enabled = true;
+                opt_to.Checked = true;
+                opt_target.Enabled = false;
             }
+            else
+            {
+                opt_sent.ForeColor = Color.Black;
+            }
+
+            txt_from.Text = "";
+            txt_to.Text = "";
+            txt_target.Text = "";
+
+            sSlab_Edt_Seq_Fr = "0";
+            sSlab_Edt_Seq_To = "0";
+            sSlab_Edt_Seq_Tg = "0";
+
         }
 
-        protected override void ss_CellClickEvent(object sender, CellClickEventArgs e)
+        private void opt_target_Click(object sender, EventArgs e)
         {
-            base.ss_CellClickEvent(sender, e);
-            if (e.ColumnHeader) return;
-            if (e.RowHeader) return;
-            string SE = "";
-            int C, M;
+
+            int iRow;
+            string sTemp;
+
+            if (opt_target.Checked == true)
+            {
+                opt_target.ForeColor = Color.Red;
+                opt_from.ForeColor = Color.Black;
+                opt_to.ForeColor = Color.Black;
+            }
+            else
+            {
+                opt_target.ForeColor = Color.Black;
+            }
+
+        }
+
+
+        private void opt_to_Click(object sender, EventArgs e)
+        {
+            int iRow;
+            string sTemp;
+
+            if (opt_to.Checked == true)
+            {
+                opt_to.ForeColor = Color.Red;
+                opt_from.ForeColor = Color.Black;
+                opt_target.ForeColor = Color.Black;
+            }
+            else
+            {
+                opt_to.ForeColor = Color.Black;
+            }
+
+        }
+
+        private void ss1_Click(int Col, int ROW)
+        {
+            int C;
+            int M;
             int iRow;
             int iCol;
-            string SEND_SLAB = "";
+            string SEND_SLAB;
 
-            if (rdo_from.Checked)
+            if (ss1.ActiveSheet.RowCount <= 0)
             {
-                txt_from.Text = ss1.ActiveSheet.Cells[e.Row, iSs1_Slab_No].Text;
-                sSlab_Edt_Seq_Fr = ss1.ActiveSheet.Cells[e.Row, iSs1_Slab_Edt_Seq].Text;
+                SpreadCommon.Gf_Sp_Cls(Sc2);
+                SpreadCommon.Gf_Sp_Cls(Sc3);
+                return;
             }
 
-            if (rdo_to.Checked)
+            if (opt_from.Checked == true)
             {
-                txt_to.Text = ss1.ActiveSheet.Cells[e.Row, iSs1_Slab_No].Text;
-                sSlab_Edt_Seq_To = ss1.ActiveSheet.Cells[e.Row, iSs1_Slab_Edt_Seq].Text;
+                txt_from.Text = ss1.ActiveSheet.Cells[ROW, SS1_SLAB_NO].Text;
+                from_y.Text = ss1.ActiveSheet.Cells[ROW, SS1_L2_SEND].Text;
+
+                sSlab_Edt_Seq_Fr = ss1.ActiveSheet.Cells[ROW, SS1_SLAB_EDT_SEQ].Text;
+
+            }
+            else if (opt_to.Checked == true)
+            {
+                txt_to.Text = ss1.ActiveSheet.Cells[ROW, SS1_SLAB_NO].Text;
+                to_y.Text = ss1.ActiveSheet.Cells[ROW, SS1_L2_SEND].Text;
+                sSlab_Edt_Seq_To = ss1.ActiveSheet.Cells[ROW, SS1_SLAB_EDT_SEQ].Text;
+
+            }
+            else if (opt_target.Checked == true)
+            {
+                txt_target.Text = ss1.ActiveSheet.Cells[ROW, SS1_SLAB_NO].Text;
+                target_y.Text = ss1.ActiveSheet.Cells[ROW, SS1_L2_SEND].Text;
+                sSlab_Edt_Seq_Tg = ss1.ActiveSheet.Cells[ROW, SS1_SLAB_EDT_SEQ].Text;
+
             }
 
-            if (rdo_target.Checked)
+            //检查L2_SEND是否已为'Y'
+            if ((opt_sent.Checked == true | opt_delete.Checked == true))
             {
-                txt_target.Text = ss1.ActiveSheet.Cells[e.Row, iSs1_Slab_No].Text;
-                sSlab_Edt_Seq_Tg = ss1.ActiveSheet.Cells[e.Row, iSs1_Slab_Edt_Seq].Text;
-            }
-
-            SE = ss1.ActiveSheet.Cells[e.Row, 15].Text;//13--15
-
-            if (e.Column == iSs1_Slab_No)
-            {
-
-                txt_search_slabno.Text = ss1.ActiveSheet.Cells[e.Row, iSs1_Slab_Edt_Seq].Text;
-
-                if ((txt_search_slabno.Text).Trim().Length > 0)
+                if (ss1.ActiveSheet.Cells[ROW, SS1_L2_SEND].Text == "Y")
                 {
-                    base.p_Ref(2, 2, true, false);
+                    GeneralCommon.Gp_MsgBoxDisplay("板坯号 " + ss1.ActiveSheet.Cells[ROW, SS1_SLAB_NO].Text + " 作业指示已下达！", "I", "提示");
+
+                    if (opt_from.Checked == true)
+                    {
+                        txt_from.Text = "";
+                        from_y.Text = "";
+                        sSlab_Edt_Seq_Fr = "0";
+
+                    }
+                    else if (opt_to.Checked == true)
+                    {
+                        txt_to.Text = "";
+                        to_y.Text = "";
+                        sSlab_Edt_Seq_To = "0";
+
+                    }
+                    else if (opt_target.Checked == true)
+                    {
+                        txt_target.Text = "";
+                        target_y.Text = "";
+                        sSlab_Edt_Seq_Tg = "0";
+
+                    }
+                    return;
                 }
             }
+
+            //检查是否已入炉
+            if (ss1.ActiveSheet.Cells[ROW, SS1_PRC_STS].Text == "B" & (opt_sent.Checked == true | opt_move.Checked == true | opt_cancel.Checked == true | opt_delete.Checked == true))
+            {
+                GeneralCommon.Gp_MsgBoxDisplay("板坯号 " + ss1.ActiveSheet.Cells[ROW, SS1_SLAB_NO].Text + " 已入炉，不能调整！", "I", "提示");
+                if (opt_from.Checked == true)
+                {
+                    txt_from.Text = "";
+                    from_y.Text = "";
+                    sSlab_Edt_Seq_Fr = "0";
+
+                }
+                else if (opt_to.Checked == true)
+                {
+                    txt_to.Text = "";
+                    to_y.Text = "";
+                    sSlab_Edt_Seq_To = "0";
+
+                }
+                else if (opt_target.Checked == true)
+                {
+                    txt_target.Text = "";
+                    target_y.Text = "";
+                    sSlab_Edt_Seq_Tg = "0";
+
+                }
+
+                return;
+            }
+
+            if (opt_sent.Checked == false & opt_cancel.Checked == false & opt_move.Checked == false & opt_delete.Checked == false & opt_return.Checked == false)
+            {
+
+                txt_to.Text = ss1.ActiveSheet.Cells[ROW, SS1_SLAB_NO].Text;
+
+                if (txt_to.Text.Trim().Length == 10)
+                {
+                    SDB_SLAB_EDT_SEQ.Text = ss1.ActiveSheet.Cells[ROW, SS1_SLAB_EDT_SEQ].Text;
+                    p_Ref(2, 2, false, false);
+                }
+
+                txt_to.Text = "";
+
+            }
+
         }
+
+
+        private void ss3_Click(int Col, int ROW)
+        {
+            int P;
+            int iRow;
+            int iCol;
+
+            if (ss2.ActiveSheet.RowCount <= 0)
+            {
+                TXT_MPLATE_NO.Text = "";
+                SpreadCommon.Gf_Sp_Cls(Sc3);
+                return;
+            }
+
+            SDB_SLAB_EDT_SEQ.Text = ss2.ActiveSheet.Cells[ROW, SS3_SLAB_EDT_SEQ].Text;
+            SDB_MPLATE_EDT_SEQ.Text = ss2.ActiveSheet.Cells[ROW, SS3_MPLATE_EDT_SEQ].Text;
+
+            p_Ref(3, 3, false, false);
+
+        }
+
+
+        
 
         # region 公共方法
 
@@ -955,6 +1092,80 @@ namespace CK
 
         #endregion
 
+        private void ss1_CellClick(object sender, CellClickEventArgs e)
+        {
+            ss1_Click(e.Column, e.Row);
+        }
+
+        private void ss2_CellClick(object sender, CellClickEventArgs e)
+        {
+            ss3_Click(e.Column, e.Row);
+        }
+
+
+
+        private void panel1_Click(object sender, EventArgs e)
+        {
+            opt_sent.Checked = false;
+            opt_cancel.Checked = false;
+            opt_move.Checked = false;
+            opt_delete.Checked = false;
+            opt_from.Checked = false;
+            opt_to.Checked = false;
+            opt_target.Checked = false;
+            opt_sent.ForeColor = Color.Black;
+            opt_move.ForeColor = Color.Black;
+            opt_delete.ForeColor = Color.Black;
+            opt_cancel.ForeColor = Color.Black;
+            opt_from.ForeColor = Color.Black;
+            opt_to.ForeColor = Color.Black;
+            opt_target.ForeColor = Color.Black;
+        }
+
+        private void cmd_roll_mana_Click(object sender, EventArgs e)
+        {
+            string sMsg;
+            bool mResult;
+
+            if (txt_target.Text != "")
+            {
+                sMsg = "确定从板坯（" + txt_target.Text + "）进行辊期编制吗？";
+                mResult = GeneralCommon.Gf_MessConfirm(sMsg, "I", "提示");
+
+                if (mResult)
+                {
+                    if (Gp_Process_Exec("R") == "")
+                    {
+                        GeneralCommon.Gp_MsgBoxDisplay("辊期编制完毕 ！", "I", "提示");
+                        Form_Ref();
+                    }
+                }
+
+            }
+        }
+
+        private void txt_search_slabno_Click(object sender, EventArgs e)
+        {
+            if (txt_search_slabno.Text == "检索板坯号")
+            {
+                txt_search_slabno.Text = "";
+            }
+        }
+
+        private void txt_search_slabno_KeyDown(object sender, KeyEventArgs e)
+        {
+            int i;
+            if (e.KeyCode == Keys.Enter)
+            {
+                for (i = 1; i <= ss1.ActiveSheet.RowCount; i++)
+                {
+                    if (ss1.ActiveSheet.Cells[i - 1, SS1_SLAB_NO].Text == txt_search_slabno.Text.Trim())
+                    {
+                        ss1.ActiveSheet.SetActiveCell(i-1, SS1_SLAB_NO);
+                    }
+                }
+            }
+        }
 
     }
 }

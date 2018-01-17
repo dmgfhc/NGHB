@@ -53,6 +53,7 @@
             this.SSPpdt = new System.Windows.Forms.Label();
             this.SSPsend = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.SSOrd = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -66,12 +67,11 @@
             this.ss1 = new FarPoint.Win.Spread.FpSpread();
             this.ss1_Sheet1 = new FarPoint.Win.Spread.SheetView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.ss4 = new FarPoint.Win.Spread.FpSpread();
-            this.ss4_Sheet1 = new FarPoint.Win.Spread.SheetView();
-            this.splitter1 = new System.Windows.Forms.Splitter();
             this.ss3 = new FarPoint.Win.Spread.FpSpread();
             this.ss3_Sheet1 = new FarPoint.Win.Spread.SheetView();
-            this.SSOrd = new System.Windows.Forms.Label();
+            this.splitter1 = new System.Windows.Forms.Splitter();
+            this.ss2 = new FarPoint.Win.Spread.FpSpread();
+            this.ss2_Sheet1 = new FarPoint.Win.Spread.SheetView();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -80,10 +80,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.ss1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ss1_Sheet1)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ss4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ss4_Sheet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ss3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ss3_Sheet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ss2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ss2_Sheet1)).BeginInit();
             this.SuspendLayout();
             // 
             // TXT_PLT
@@ -195,8 +195,7 @@
             this.cmd_roll_mana.Text = "辊期编制";
             this.cmd_roll_mana.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.cmd_roll_mana.UseVisualStyleBackColor = true;
-            this.cmd_roll_mana.Visible = false;
-            this.cmd_roll_mana.Click += new System.EventHandler(this.btn_roll_mana_Click);
+            this.cmd_roll_mana.Click += new System.EventHandler(this.cmd_roll_mana_Click);
             // 
             // cmd_abnormal_send
             // 
@@ -225,6 +224,7 @@
             this.opt_target.Text = "目标板坯号";
             this.opt_target.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.opt_target.UseVisualStyleBackColor = true;
+            this.opt_target.Click += new System.EventHandler(this.opt_target_Click);
             // 
             // opt_to
             // 
@@ -237,6 +237,7 @@
             this.opt_to.TabIndex = 18;
             this.opt_to.Text = "->";
             this.opt_to.UseVisualStyleBackColor = true;
+            this.opt_to.Click += new System.EventHandler(this.opt_to_Click);
             // 
             // opt_from
             // 
@@ -251,6 +252,7 @@
             this.opt_from.Text = "起始板坯号";
             this.opt_from.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.opt_from.UseVisualStyleBackColor = true;
+            this.opt_from.Click += new System.EventHandler(this.opt_from_Click);
             // 
             // panel1
             // 
@@ -263,6 +265,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(289, 33);
             this.panel1.TabIndex = 16;
+            this.panel1.Click += new System.EventHandler(this.panel1_Click);
             // 
             // opt_return
             // 
@@ -274,6 +277,7 @@
             this.opt_return.Text = "返送";
             this.opt_return.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.opt_return.UseVisualStyleBackColor = true;
+            this.opt_return.Click += new System.EventHandler(this.opt_return_Click);
             // 
             // opt_delete
             // 
@@ -285,6 +289,7 @@
             this.opt_delete.Text = "删除";
             this.opt_delete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.opt_delete.UseVisualStyleBackColor = true;
+            this.opt_delete.Click += new System.EventHandler(this.opt_delete_Click);
             // 
             // opt_move
             // 
@@ -296,6 +301,7 @@
             this.opt_move.Text = "调整";
             this.opt_move.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.opt_move.UseVisualStyleBackColor = true;
+            this.opt_move.Click += new System.EventHandler(this.opt_move_Click);
             // 
             // opt_cancel
             // 
@@ -307,6 +313,7 @@
             this.opt_cancel.Text = "取消";
             this.opt_cancel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.opt_cancel.UseVisualStyleBackColor = true;
+            this.opt_cancel.Click += new System.EventHandler(this.opt_cancel_Click);
             // 
             // opt_sent
             // 
@@ -318,6 +325,7 @@
             this.opt_sent.Text = "发送";
             this.opt_sent.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.opt_sent.UseVisualStyleBackColor = true;
+            this.opt_sent.Click += new System.EventHandler(this.opt_sent_Click);
             // 
             // SSPpdt
             // 
@@ -369,6 +377,20 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
+            // SSOrd
+            // 
+            this.SSOrd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.SSOrd.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.SSOrd.Font = new System.Drawing.Font("宋体", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.SSOrd.ForeColor = System.Drawing.Color.White;
+            this.SSOrd.Location = new System.Drawing.Point(1228, 14);
+            this.SSOrd.Name = "SSOrd";
+            this.SSOrd.Size = new System.Drawing.Size(124, 22);
+            this.SSOrd.TabIndex = 26;
+            this.SSOrd.Tag = "USER";
+            this.SSOrd.Text = "多订单";
+            this.SSOrd.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
             // label4
             // 
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -415,7 +437,8 @@
             this.txt_search_slabno.Name = "txt_search_slabno";
             this.txt_search_slabno.Size = new System.Drawing.Size(85, 22);
             this.txt_search_slabno.TabIndex = 18;
-            this.txt_search_slabno.Visible = false;
+            this.txt_search_slabno.Click += new System.EventHandler(this.txt_search_slabno_Click);
+            this.txt_search_slabno.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_search_slabno_KeyDown);
             // 
             // txt_target
             // 
@@ -476,6 +499,7 @@
             this.ss1_Sheet1});
             this.ss1.Size = new System.Drawing.Size(1348, 495);
             this.ss1.TabIndex = 1;
+            this.ss1.CellClick += new FarPoint.Win.Spread.CellClickEventHandler(this.ss1_CellClick);
             // 
             // ss1_Sheet1
             // 
@@ -485,31 +509,31 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Transparent;
-            this.tabPage2.Controls.Add(this.ss4);
-            this.tabPage2.Controls.Add(this.splitter1);
             this.tabPage2.Controls.Add(this.ss3);
+            this.tabPage2.Controls.Add(this.splitter1);
+            this.tabPage2.Controls.Add(this.ss2);
             this.tabPage2.Location = new System.Drawing.Point(4, 23);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1216, 501);
+            this.tabPage2.Size = new System.Drawing.Size(1354, 501);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "母板、钢板指示";
             // 
-            // ss4
+            // ss3
             // 
-            this.ss4.AccessibleDescription = "";
-            this.ss4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ss4.Location = new System.Drawing.Point(613, 3);
-            this.ss4.Name = "ss4";
-            this.ss4.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
-            this.ss4_Sheet1});
-            this.ss4.Size = new System.Drawing.Size(726, 495);
-            this.ss4.TabIndex = 3;
+            this.ss3.AccessibleDescription = "";
+            this.ss3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ss3.Location = new System.Drawing.Point(613, 3);
+            this.ss3.Name = "ss3";
+            this.ss3.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
+            this.ss3_Sheet1});
+            this.ss3.Size = new System.Drawing.Size(726, 495);
+            this.ss3.TabIndex = 3;
             // 
-            // ss4_Sheet1
+            // ss3_Sheet1
             // 
-            this.ss4_Sheet1.Reset();
-            this.ss4_Sheet1.SheetName = "Sheet1";
+            this.ss3_Sheet1.Reset();
+            this.ss3_Sheet1.SheetName = "Sheet1";
             // 
             // splitter1
             // 
@@ -519,35 +543,22 @@
             this.splitter1.TabIndex = 2;
             this.splitter1.TabStop = false;
             // 
-            // ss3
+            // ss2
             // 
-            this.ss3.AccessibleDescription = "";
-            this.ss3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ss3.Location = new System.Drawing.Point(3, 3);
-            this.ss3.Name = "ss3";
-            this.ss3.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
-            this.ss3_Sheet1});
-            this.ss3.Size = new System.Drawing.Size(607, 495);
-            this.ss3.TabIndex = 1;
+            this.ss2.AccessibleDescription = "";
+            this.ss2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ss2.Location = new System.Drawing.Point(3, 3);
+            this.ss2.Name = "ss2";
+            this.ss2.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
+            this.ss2_Sheet1});
+            this.ss2.Size = new System.Drawing.Size(607, 495);
+            this.ss2.TabIndex = 1;
+            this.ss2.CellClick += new FarPoint.Win.Spread.CellClickEventHandler(this.ss2_CellClick);
             // 
-            // ss3_Sheet1
+            // ss2_Sheet1
             // 
-            this.ss3_Sheet1.Reset();
-            this.ss3_Sheet1.SheetName = "Sheet1";
-            // 
-            // SSOrd
-            // 
-            this.SSOrd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.SSOrd.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.SSOrd.Font = new System.Drawing.Font("宋体", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.SSOrd.ForeColor = System.Drawing.Color.White;
-            this.SSOrd.Location = new System.Drawing.Point(1228, 14);
-            this.SSOrd.Name = "SSOrd";
-            this.SSOrd.Size = new System.Drawing.Size(124, 22);
-            this.SSOrd.TabIndex = 26;
-            this.SSOrd.Tag = "USER";
-            this.SSOrd.Text = "多订单";
-            this.SSOrd.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ss2_Sheet1.Reset();
+            this.ss2_Sheet1.SheetName = "Sheet1";
             // 
             // CKG2010C
             // 
@@ -568,10 +579,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.ss1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ss1_Sheet1)).EndInit();
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ss4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ss4_Sheet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ss3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ss3_Sheet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ss2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ss2_Sheet1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -608,11 +619,11 @@
         private System.Windows.Forms.TabPage tabPage2;
         private FarPoint.Win.Spread.FpSpread ss1;
         private FarPoint.Win.Spread.SheetView ss1_Sheet1;
-        private FarPoint.Win.Spread.FpSpread ss4;
-        private FarPoint.Win.Spread.SheetView ss4_Sheet1;
-        private System.Windows.Forms.Splitter splitter1;
         private FarPoint.Win.Spread.FpSpread ss3;
         private FarPoint.Win.Spread.SheetView ss3_Sheet1;
+        private System.Windows.Forms.Splitter splitter1;
+        private FarPoint.Win.Spread.FpSpread ss2;
+        private FarPoint.Win.Spread.SheetView ss2_Sheet1;
         private System.Windows.Forms.TextBox SDB_SLAB_EDT_SEQ;
         private System.Windows.Forms.TextBox SDB_MPLATE_EDT_SEQ;
         private System.Windows.Forms.TextBox from_y;
