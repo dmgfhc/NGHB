@@ -153,6 +153,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CKG\CKG2010C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CKG\CKG2010C.Designer.cs">
+      <DependentUpon>CKG2010C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CKG\CKG2020C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CKG\CKG2020C.Designer.cs">
+      <DependentUpon>CKG2020C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CKG\CKG2030C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CKG\CKG2030C.Designer.cs">
+      <DependentUpon>CKG2030C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CKG\CKG2040C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CKG\CKG2040C.Designer.cs">
+      <DependentUpon>CKG2040C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CKH\CKH2010C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CKH\CKH2010C.Designer.cs">
+      <DependentUpon>CKH2010C.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu\MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,24 +200,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <Compile Include="CKG\CKG2010C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CKG\CKG2010C.Designer.cs">
-      <DependentUpon>CKG2010C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CKG\WKA1020C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CKG\WKA1020C.Designer.cs">
-      <DependentUpon>WKA1020C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CKG\WKA1030C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CKG\WKA1030C.Designer.cs">
-      <DependentUpon>WKA1030C.cs</DependentUpon>
     </Compile>
     <Compile Include="CKG\WKA1040C.cs">
       <SubType>Form</SubType>
@@ -245,6 +257,21 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CKG\CKG2010C.resx">
+      <DependentUpon>CKG2010C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CKG\CKG2020C.resx">
+      <DependentUpon>CKG2020C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CKG\CKG2030C.resx">
+      <DependentUpon>CKG2030C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CKG\CKG2040C.resx">
+      <DependentUpon>CKG2040C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CKH\CKH2010C.resx">
+      <DependentUpon>CKH2010C.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainMenu\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -255,15 +282,6 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CKG\CKG2010C.resx">
-      <DependentUpon>CKG2010C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CKG\WKA1020C.resx">
-      <DependentUpon>WKA1020C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CKG\WKA1030C.resx">
-      <DependentUpon>WKA1030C.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CKG\WKA1040C.resx">
       <DependentUpon>WKA1040C.cs</DependentUpon>
@@ -345,7 +363,12 @@
       <Name>CommonClass</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\L2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L3.png" />
+  </ItemGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

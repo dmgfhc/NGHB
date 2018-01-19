@@ -4,6 +4,57 @@
         <name>CK</name>
     </assembly>
     <members>
+        <member name="F:CK.CKG2040C.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:CK.CKG2040C.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:CK.CKG2040C.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="F:CK.CKG2020C.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:CK.CKG2020C.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:CK.CKG2020C.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="F:CK.CKG2030C.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:CK.CKG2030C.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:CK.CKG2030C.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
         <member name="F:CK.MainMenu.sAuthority">
             '''fdfdsfdsfds
         </member>
@@ -40,40 +91,6 @@
             <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
         </member>
         <member name="M:CK.CKG2010C.InitializeComponent">
-            <summary>
-            设计器支持所需的方法 - 不要
-            使用代码编辑器修改此方法的内容。
-            </summary>
-        </member>
-        <member name="F:CK.WKA1020C.components">
-            <summary>
-            必需的设计器变量。
-            </summary>
-        </member>
-        <member name="M:CK.WKA1020C.Dispose(System.Boolean)">
-            <summary>
-            清理所有正在使用的资源。
-            </summary>
-            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
-        </member>
-        <member name="M:CK.WKA1020C.InitializeComponent">
-            <summary>
-            设计器支持所需的方法 - 不要
-            使用代码编辑器修改此方法的内容。
-            </summary>
-        </member>
-        <member name="F:CK.WKA1030C.components">
-            <summary>
-            必需的设计器变量。
-            </summary>
-        </member>
-        <member name="M:CK.WKA1030C.Dispose(System.Boolean)">
-            <summary>
-            清理所有正在使用的资源。
-            </summary>
-            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
-        </member>
-        <member name="M:CK.WKA1030C.InitializeComponent">
             <summary>
             设计器支持所需的方法 - 不要
             使用代码编辑器修改此方法的内容。

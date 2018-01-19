@@ -101,6 +101,9 @@ namespace CK
         private MenuItem menuItem23;
         private MenuItem WKA1050C;
         private MenuItem CKG2010C;
+        private MenuItem CKG2040C;
+        private MenuItem CKG2020C;
+        private MenuItem CKG2030C;
         //private MenuItem menuItem4;
         //private MenuItem menuItem7;
 		///'''fdfdsfdsfds
@@ -241,6 +244,9 @@ namespace CK
             this.ImageList0 = new System.Windows.Forms.ImageList(this.components);
             this.MainMenu1 = new System.Windows.Forms.MainMenu(this.components);
             this.menuItem4 = new System.Windows.Forms.MenuItem();
+            this.CKG2010C = new System.Windows.Forms.MenuItem();
+            this.CKG2040C = new System.Windows.Forms.MenuItem();
+            this.CKG2020C = new System.Windows.Forms.MenuItem();
             this.WKA1010C = new System.Windows.Forms.MenuItem();
             this.WKA1020C = new System.Windows.Forms.MenuItem();
             this.WKA1030C = new System.Windows.Forms.MenuItem();
@@ -329,7 +335,7 @@ namespace CK
             this.MenuItem22 = new System.Windows.Forms.MenuItem();
             this.ImageList2 = new System.Windows.Forms.ImageList(this.components);
             this.ImageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.CKG2010C = new System.Windows.Forms.MenuItem();
+            this.CKG2030C = new System.Windows.Forms.MenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.StatusBarPanel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatusBarPanel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatusBarPanel3)).BeginInit();
@@ -421,6 +427,9 @@ namespace CK
             this.menuItem4.Index = 0;
             this.menuItem4.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.CKG2010C,
+            this.CKG2040C,
+            this.CKG2020C,
+            this.CKG2030C,
             this.WKA1010C,
             this.WKA1020C,
             this.WKA1030C,
@@ -428,33 +437,51 @@ namespace CK
             this.WKA1050C});
             resources.ApplyResources(this.menuItem4, "menuItem4");
             // 
+            // CKG2010C
+            // 
+            this.CKG2010C.Index = 0;
+            resources.ApplyResources(this.CKG2010C, "CKG2010C");
+            this.CKG2010C.Click += new System.EventHandler(this.CKG2010C_Click);
+            // 
+            // CKG2040C
+            // 
+            this.CKG2040C.Index = 1;
+            resources.ApplyResources(this.CKG2040C, "CKG2040C");
+            this.CKG2040C.Click += new System.EventHandler(this.CKG2040C_Click);
+            // 
+            // CKG2020C
+            // 
+            this.CKG2020C.Index = 2;
+            resources.ApplyResources(this.CKG2020C, "CKG2020C");
+            this.CKG2020C.Click += new System.EventHandler(this.CKG2020C_Click);
+            // 
             // WKA1010C
             // 
-            this.WKA1010C.Index = 1;
+            this.WKA1010C.Index = 4;
             resources.ApplyResources(this.WKA1010C, "WKA1010C");
             this.WKA1010C.Click += new System.EventHandler(this.WKA1010C_Click);
             // 
             // WKA1020C
             // 
-            this.WKA1020C.Index = 2;
+            this.WKA1020C.Index = 5;
             resources.ApplyResources(this.WKA1020C, "WKA1020C");
             this.WKA1020C.Click += new System.EventHandler(this.WKA1020C_Click);
             // 
             // WKA1030C
             // 
-            this.WKA1030C.Index = 3;
+            this.WKA1030C.Index = 6;
             resources.ApplyResources(this.WKA1030C, "WKA1030C");
             this.WKA1030C.Click += new System.EventHandler(this.WKA1030C_Click);
             // 
             // menuItem6
             // 
-            this.menuItem6.Index = 4;
+            this.menuItem6.Index = 7;
             resources.ApplyResources(this.menuItem6, "menuItem6");
             this.menuItem6.Click += new System.EventHandler(this.menuItem6_Click_1);
             // 
             // WKA1050C
             // 
-            this.WKA1050C.Index = 5;
+            this.WKA1050C.Index = 8;
             resources.ApplyResources(this.WKA1050C, "WKA1050C");
             this.WKA1050C.Click += new System.EventHandler(this.WKA1050C_Click);
             // 
@@ -1000,11 +1027,11 @@ namespace CK
             this.ImageList1.Images.SetKeyName(10, "M11_1.gif");
             this.ImageList1.Images.SetKeyName(11, "M12_1.gif");
             // 
-            // CKG2010C
+            // CKG2030C
             // 
-            this.CKG2010C.Index = 0;
-            resources.ApplyResources(this.CKG2010C, "CKG2010C");
-            this.CKG2010C.Click += new System.EventHandler(this.CKG2010C_Click);
+            this.CKG2030C.Index = 3;
+            resources.ApplyResources(this.CKG2030C, "CKG2030C");
+            this.CKG2030C.Click += new System.EventHandler(this.CKG2030C_Click);
             // 
             // MainMenu
             // 
@@ -1651,7 +1678,7 @@ namespace CK
         {
             if (!GeneralCommon.Gf_IsFormLoad("WKA1020C"))
             {
-                WKA1020C WKA1020C = new WKA1020C();
+                CKG2020C WKA1020C = new CKG2020C();
                 WKA1020C.MdiParent = this;
                 WKA1020C.Show();
                 WKA1020C.WindowState = FormWindowState.Maximized;
@@ -1663,7 +1690,7 @@ namespace CK
         {
             if (!GeneralCommon.Gf_IsFormLoad("WKA1030C"))
             {
-                WKA1030C WKA1030C = new WKA1030C();
+                CKH2010C WKA1030C = new CKH2010C();
                 WKA1030C.MdiParent = this;
                 WKA1030C.Show();
                 WKA1030C.WindowState = FormWindowState.Maximized;
@@ -1787,6 +1814,42 @@ namespace CK
                 CKG2010C.MdiParent = this;
                 CKG2010C.Show();
                 CKG2010C.WindowState = FormWindowState.Maximized;
+
+            }
+        }
+
+        private void CKG2040C_Click(object sender, EventArgs e)
+        {
+            if (!GeneralCommon.Gf_IsFormLoad("CKG2040C"))
+            {
+                CKG2040C CKG2040C = new CKG2040C();
+                CKG2040C.MdiParent = this;
+                CKG2040C.Show();
+                CKG2040C.WindowState = FormWindowState.Maximized;
+
+            }
+        }
+
+        private void CKG2020C_Click(object sender, EventArgs e)
+        {
+            if (!GeneralCommon.Gf_IsFormLoad("CKG2020C"))
+            {
+                CKG2020C CKG2020C = new CKG2020C();
+                CKG2020C.MdiParent = this;
+                CKG2020C.Show();
+                CKG2020C.WindowState = FormWindowState.Maximized;
+
+            }
+        }
+
+        private void CKG2030C_Click(object sender, EventArgs e)
+        {
+            if (!GeneralCommon.Gf_IsFormLoad("CKG2030C"))
+            {
+                CKH2010C CKG2030C = new CKH2010C();
+                CKG2030C.MdiParent = this;
+                CKG2030C.Show();
+                CKG2030C.WindowState = FormWindowState.Maximized;
 
             }
         }

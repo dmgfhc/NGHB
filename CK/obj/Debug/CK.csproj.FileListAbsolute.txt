@@ -57,8 +57,6 @@ C:\Users\HAN\Desktop\github\NGHB\CK\obj\Debug\CK.csprojResolveAssemblyReference.
 C:\Users\HAN\Desktop\github\NGHB\CK\obj\Debug\CK.MainMenu.resources
 C:\Users\HAN\Desktop\github\NGHB\CK\obj\Debug\CK.Properties.Resources.resources
 C:\Users\HAN\Desktop\github\NGHB\CK\obj\Debug\CK.CKG2010C.resources
-C:\Users\HAN\Desktop\github\NGHB\CK\obj\Debug\CK.WKA1020C.resources
-C:\Users\HAN\Desktop\github\NGHB\CK\obj\Debug\CK.WKA1030C.resources
 C:\Users\HAN\Desktop\github\NGHB\CK\obj\Debug\CK.WKA1040C.resources
 C:\Users\HAN\Desktop\github\NGHB\CK\obj\Debug\CK.WKA1050C.resources
 C:\Users\HAN\Desktop\github\NGHB\CK\obj\Debug\CK.WKB1010C.resources
@@ -72,3 +70,6 @@ C:\Users\HAN\Desktop\github\NGHB\CK\obj\Debug\CK.csproj.GenerateResource.Cache
 C:\Users\HAN\Desktop\github\NGHB\CK\obj\Debug\CK.exe.licenses
 C:\Users\HAN\Desktop\github\NGHB\CK\obj\Debug\CK.exe.manifest
 C:\Users\HAN\Desktop\github\NGHB\CK\obj\Debug\CK.application
+C:\Users\HAN\Desktop\github\NGHB\CK\obj\Debug\CK.CKG2040C.resources
+C:\Users\HAN\Desktop\github\NGHB\CK\obj\Debug\CK.CKG2020C.resources
+C:\Users\HAN\Desktop\github\NGHB\CK\obj\Debug\CK.CKG2030C.resources

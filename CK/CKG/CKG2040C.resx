@@ -120,13 +120,16 @@
   <metadata name="sCMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="ss1_Sheet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>106, 17</value>
-  </metadata>
-  <metadata name="ss1_Sheet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>106, 17</value>
+  <data name="txt_plt.sSqletc" xml:space="preserve">
+    <value>SELECT CD "代码", CD_SHORT_NAME "代码简称", CD_NAME "代码名称",        CD_SHORT_ENG "代码英文简称", CD_FULL_ENG "代码英文名称" FROM NISCO.ZP_CD  WHERE CD_MANA_NO =    'C0001'    AND CD         like '%'  AND NVL(CD_NAME,'%')       like '%'  ORDER  BY  CD  ASC</value>
+  </data>
+  <data name="txt_InPlt.sSqletc" xml:space="preserve">
+    <value>SELECT CD "代码", CD_SHORT_NAME "代码简称", CD_NAME "代码名称",        CD_SHORT_ENG "代码英文简称", CD_FULL_ENG "代码英文名称" FROM NISCO.ZP_CD  WHERE CD_MANA_NO =    'C0001'    AND CD         like '%'  AND NVL(CD_NAME,'%')       like '%'  ORDER  BY  CD  ASC</value>
+  </data>
+  <metadata name="fpSpread1_Sheet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>117, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>79</value>
+    <value>65</value>
   </metadata>
 </root>
