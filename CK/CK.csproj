@@ -153,6 +153,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CKG\CKG2070C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CKG\CKG2070C.Designer.cs">
+      <DependentUpon>CKG2070C.cs</DependentUpon>
+    </Compile>
     <Compile Include="CKG\CKG2010C.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,6 +263,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CKG\CKG2070C.resx">
+      <DependentUpon>CKG2070C.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CKG\CKG2010C.resx">
       <DependentUpon>CKG2010C.cs</DependentUpon>
     </EmbeddedResource>
