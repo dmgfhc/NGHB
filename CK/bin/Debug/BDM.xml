@@ -4,18 +4,18 @@
         <name>CK</name>
     </assembly>
     <members>
-        <member name="F:CK.CKG2040C.components">
+        <member name="F:CK.CKG2010C.components">
             <summary>
             必需的设计器变量。
             </summary>
         </member>
-        <member name="M:CK.CKG2040C.Dispose(System.Boolean)">
+        <member name="M:CK.CKG2010C.Dispose(System.Boolean)">
             <summary>
             清理所有正在使用的资源。
             </summary>
             <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
         </member>
-        <member name="M:CK.CKG2040C.InitializeComponent">
+        <member name="M:CK.CKG2010C.InitializeComponent">
             <summary>
             设计器支持所需的方法 - 不要
             使用代码编辑器修改此方法的内容。
@@ -55,6 +55,40 @@
             使用代码编辑器修改此方法的内容。
             </summary>
         </member>
+        <member name="F:CK.CKG2040C.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:CK.CKG2040C.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:CK.CKG2040C.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="F:CK.CKH2010C.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:CK.CKH2010C.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:CK.CKH2010C.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
         <member name="F:CK.MainMenu.sAuthority">
             '''fdfdsfdsfds
         </member>
@@ -79,21 +113,14 @@
               重写当前线程的 CurrentUICulture 属性。
             </summary>
         </member>
-        <member name="F:CK.CKG2010C.components">
+        <member name="P:My.Resources.Resources.L2">
             <summary>
-            必需的设计器变量。
+              查找 System.Drawing.Bitmap 类型的本地化资源。
             </summary>
         </member>
-        <member name="M:CK.CKG2010C.Dispose(System.Boolean)">
+        <member name="P:My.Resources.Resources.L3">
             <summary>
-            清理所有正在使用的资源。
-            </summary>
-            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
-        </member>
-        <member name="M:CK.CKG2010C.InitializeComponent">
-            <summary>
-            设计器支持所需的方法 - 不要
-            使用代码编辑器修改此方法的内容。
+              查找 System.Drawing.Bitmap 类型的本地化资源。
             </summary>
         </member>
         <member name="F:CK.WKA1040C.components">
