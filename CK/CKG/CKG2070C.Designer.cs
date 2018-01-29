@@ -28,41 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            CommonClass.BControlFiledSetting bControlFiledSetting4 = new CommonClass.BControlFiledSetting();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CKG2070C));
             CommonClass.BControlFiledSetting bControlFiledSetting1 = new CommonClass.BControlFiledSetting();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CKG2070C));
+            CommonClass.BControlFiledSetting bControlFiledSetting2 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting5 = new CommonClass.BControlFiledSetting();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.TXT_SLAB_NO = new System.Windows.Forms.TextBox();
-            this.SDT_IN_DATE_TO = new CommonClass.CeriUDate();
-            this.SDT_IN_DATE_FROM = new CommonClass.CeriUDate();
-            this.label2 = new System.Windows.Forms.Label();
-            this.ULabel5 = new System.Windows.Forms.Label();
-            this.ss1 = new FarPoint.Win.Spread.FpSpread();
-            this.fpSpread1_Sheet1 = new FarPoint.Win.Spread.SheetView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.TXT_ORD_NO = new System.Windows.Forms.TextBox();
-            this.CBO_ORD_ITEM = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.TXT_MILL_STLGRD = new CommonClass.F4ETCR();
-            this.label3 = new System.Windows.Forms.Label();
             this.TXT_STLGRD = new CommonClass.F4ETCR();
             this.TXT_STLGRD_NAME = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.COB_FL = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.SDB_SLAB_LEN_TO = new CommonClass.NumBox();
-            this.SDB_SLAB_WID_TO = new CommonClass.NumBox();
-            this.SDB_SLAB_THK_TO = new CommonClass.NumBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.SDB_SLAB_LEN = new CommonClass.NumBox();
-            this.SDB_SLAB_WID = new CommonClass.NumBox();
-            this.SDB_SLAB_THK = new CommonClass.NumBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TXT_COUNT = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.TXT_ALL_COUNT = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.SSP1 = new System.Windows.Forms.Button();
+            this.TXT_FL_DATE = new System.Windows.Forms.TextBox();
+            this.CMD_CARD = new System.Windows.Forms.Button();
+            this.TXT_FL = new System.Windows.Forms.TextBox();
+            this.TXT_SIZE = new System.Windows.Forms.TextBox();
+            this.Check1 = new System.Windows.Forms.CheckBox();
+            this.opt_no_fl = new System.Windows.Forms.RadioButton();
+            this.opt_cancel_fl = new System.Windows.Forms.RadioButton();
+            this.opt_fl = new System.Windows.Forms.RadioButton();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.SDB_LEN_TO = new CommonClass.NumBox();
@@ -75,23 +61,77 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.opt_fl = new System.Windows.Forms.RadioButton();
-            this.opt_cancel_fl = new System.Windows.Forms.RadioButton();
-            this.opt_no_fl = new System.Windows.Forms.RadioButton();
-            this.Check1 = new System.Windows.Forms.CheckBox();
-            this.TXT_SIZE = new System.Windows.Forms.TextBox();
-            this.TXT_FL = new System.Windows.Forms.TextBox();
-            this.CMD_CARD = new System.Windows.Forms.Button();
-            this.TXT_FL_DATE = new System.Windows.Forms.TextBox();
-            this.SSP1 = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
-            this.TXT_ALL_COUNT = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.TXT_COUNT = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.SDB_SLAB_LEN_TO = new CommonClass.NumBox();
+            this.SDB_SLAB_WID_TO = new CommonClass.NumBox();
+            this.SDB_SLAB_THK_TO = new CommonClass.NumBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.SDB_SLAB_LEN = new CommonClass.NumBox();
+            this.SDB_SLAB_WID = new CommonClass.NumBox();
+            this.SDB_SLAB_THK = new CommonClass.NumBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.COB_FL = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.CBO_ORD_ITEM = new System.Windows.Forms.ComboBox();
+            this.TXT_ORD_NO = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.TXT_SLAB_NO = new System.Windows.Forms.TextBox();
+            this.SDT_IN_DATE_TO = new CommonClass.CeriUDate();
+            this.SDT_IN_DATE_FROM = new CommonClass.CeriUDate();
+            this.label2 = new System.Windows.Forms.Label();
+            this.ULabel5 = new System.Windows.Forms.Label();
+            this.ss1 = new FarPoint.Win.Spread.FpSpread();
+            this.fpSpread1_Sheet1 = new FarPoint.Win.Spread.SheetView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ss1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fpSpread1_Sheet1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // TXT_MILL_STLGRD
+            // 
+            bControlFiledSetting1.ColumnID = "StdSPEC";
+            bControlFiledSetting1.TargetControl = this.TXT_MILL_STLGRD;
+            this.TXT_MILL_STLGRD.CustomSetting.Add(bControlFiledSetting1);
+            this.TXT_MILL_STLGRD.InputControl = this.TXT_MILL_STLGRD;
+            this.TXT_MILL_STLGRD.Location = new System.Drawing.Point(398, 45);
+            this.TXT_MILL_STLGRD.MaxLength = 12;
+            this.TXT_MILL_STLGRD.Name = "TXT_MILL_STLGRD";
+            this.TXT_MILL_STLGRD.Size = new System.Drawing.Size(204, 22);
+            this.TXT_MILL_STLGRD.sJoin = "";
+            this.TXT_MILL_STLGRD.sSqletc = resources.GetString("TXT_MILL_STLGRD.sSqletc");
+            this.TXT_MILL_STLGRD.TabIndex = 227;
+            // 
+            // TXT_STLGRD
+            // 
+            bControlFiledSetting2.ColumnID = "STLGRD";
+            bControlFiledSetting2.TargetControl = this.TXT_STLGRD;
+            bControlFiledSetting5.ColumnID = "STEEL_GRD_DETAIL";
+            bControlFiledSetting5.TargetControl = this.TXT_STLGRD_NAME;
+            this.TXT_STLGRD.CustomSetting.Add(bControlFiledSetting2);
+            this.TXT_STLGRD.CustomSetting.Add(bControlFiledSetting5);
+            this.TXT_STLGRD.InputControl = this.TXT_STLGRD;
+            this.TXT_STLGRD.Location = new System.Drawing.Point(398, 14);
+            this.TXT_STLGRD.MaxLength = 12;
+            this.TXT_STLGRD.Name = "TXT_STLGRD";
+            this.TXT_STLGRD.Size = new System.Drawing.Size(97, 22);
+            this.TXT_STLGRD.sJoin = "";
+            this.TXT_STLGRD.sSqletc = "SELECT STLGRD \"钢种\", STEEL_GRD_DETAIL \"目标说明\" FROM  NISCO.QP_NISCO_CHMC  WHERE STLG" +
+    "RD like \'%\'  AND NVL(STEEL_GRD_DETAIL,\'%\')   like \'%\'  ORDER  BY  STLGRD  ASC ";
+            this.TXT_STLGRD.TabIndex = 225;
+            // 
+            // TXT_STLGRD_NAME
+            // 
+            this.TXT_STLGRD_NAME.Location = new System.Drawing.Point(502, 15);
+            this.TXT_STLGRD_NAME.MaxLength = 50;
+            this.TXT_STLGRD_NAME.Name = "TXT_STLGRD_NAME";
+            this.TXT_STLGRD_NAME.Size = new System.Drawing.Size(100, 22);
+            this.TXT_STLGRD_NAME.TabIndex = 229;
             // 
             // groupBox1
             // 
@@ -155,317 +195,134 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // label8
+            // TXT_COUNT
             // 
-            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label8.Location = new System.Drawing.Point(29, 16);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(80, 22);
-            this.label8.TabIndex = 221;
-            this.label8.Text = "板坯号";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.TXT_COUNT.Location = new System.Drawing.Point(1005, 113);
+            this.TXT_COUNT.MaxLength = 7;
+            this.TXT_COUNT.Name = "TXT_COUNT";
+            this.TXT_COUNT.Size = new System.Drawing.Size(53, 22);
+            this.TXT_COUNT.TabIndex = 268;
             // 
-            // TXT_SLAB_NO
+            // label20
             // 
-            this.TXT_SLAB_NO.Location = new System.Drawing.Point(115, 16);
-            this.TXT_SLAB_NO.MaxLength = 10;
-            this.TXT_SLAB_NO.Name = "TXT_SLAB_NO";
-            this.TXT_SLAB_NO.Size = new System.Drawing.Size(97, 22);
-            this.TXT_SLAB_NO.TabIndex = 220;
+            this.label20.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label20.Location = new System.Drawing.Point(927, 113);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(71, 22);
+            this.label20.TabIndex = 267;
+            this.label20.Text = "备料块数";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // SDT_IN_DATE_TO
+            // TXT_ALL_COUNT
             // 
-            this.SDT_IN_DATE_TO.Location = new System.Drawing.Point(218, 78);
-            this.SDT_IN_DATE_TO.Name = "SDT_IN_DATE_TO";
-            this.SDT_IN_DATE_TO.RawDate = "";
-            this.SDT_IN_DATE_TO.Size = new System.Drawing.Size(97, 21);
-            this.SDT_IN_DATE_TO.TabIndex = 4;
+            this.TXT_ALL_COUNT.Location = new System.Drawing.Point(866, 113);
+            this.TXT_ALL_COUNT.MaxLength = 7;
+            this.TXT_ALL_COUNT.Name = "TXT_ALL_COUNT";
+            this.TXT_ALL_COUNT.Size = new System.Drawing.Size(53, 22);
+            this.TXT_ALL_COUNT.TabIndex = 266;
             // 
-            // SDT_IN_DATE_FROM
+            // label19
             // 
-            this.SDT_IN_DATE_FROM.Location = new System.Drawing.Point(115, 78);
-            this.SDT_IN_DATE_FROM.Name = "SDT_IN_DATE_FROM";
-            this.SDT_IN_DATE_FROM.RawDate = "";
-            this.SDT_IN_DATE_FROM.Size = new System.Drawing.Size(97, 21);
-            this.SDT_IN_DATE_FROM.TabIndex = 4;
+            this.label19.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label19.Location = new System.Drawing.Point(789, 113);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(71, 22);
+            this.label19.TabIndex = 265;
+            this.label19.Text = "总块数";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // SSP1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(205, 27);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(14, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Tag = "user";
-            this.label2.Text = "~";
+            this.SSP1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.SSP1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SSP1.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.SSP1.Location = new System.Drawing.Point(639, 107);
+            this.SSP1.Name = "SSP1";
+            this.SSP1.Size = new System.Drawing.Size(86, 27);
+            this.SSP1.TabIndex = 264;
+            this.SSP1.Text = "紧急订单";
+            this.SSP1.UseVisualStyleBackColor = false;
             // 
-            // ULabel5
+            // TXT_FL_DATE
             // 
-            this.ULabel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.ULabel5.Location = new System.Drawing.Point(29, 78);
-            this.ULabel5.Name = "ULabel5";
-            this.ULabel5.Size = new System.Drawing.Size(80, 21);
-            this.ULabel5.TabIndex = 0;
-            this.ULabel5.Text = "浇料时间";
-            this.ULabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.TXT_FL_DATE.Location = new System.Drawing.Point(431, 112);
+            this.TXT_FL_DATE.Name = "TXT_FL_DATE";
+            this.TXT_FL_DATE.Size = new System.Drawing.Size(119, 22);
+            this.TXT_FL_DATE.TabIndex = 263;
+            this.TXT_FL_DATE.Visible = false;
             // 
-            // ss1
+            // CMD_CARD
             // 
-            this.ss1.AccessibleDescription = "";
-            this.ss1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ss1.Location = new System.Drawing.Point(0, 147);
-            this.ss1.Name = "ss1";
-            this.ss1.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
-            this.fpSpread1_Sheet1});
-            this.ss1.Size = new System.Drawing.Size(1221, 475);
-            this.ss1.TabIndex = 1;
+            this.CMD_CARD.Location = new System.Drawing.Point(345, 106);
+            this.CMD_CARD.Name = "CMD_CARD";
+            this.CMD_CARD.Size = new System.Drawing.Size(80, 29);
+            this.CMD_CARD.TabIndex = 262;
+            this.CMD_CARD.Text = "打印导出";
+            this.CMD_CARD.UseVisualStyleBackColor = true;
+            this.CMD_CARD.Click += new System.EventHandler(this.CMD_CARD_Click);
             // 
-            // fpSpread1_Sheet1
+            // TXT_FL
             // 
-            this.fpSpread1_Sheet1.Reset();
-            this.fpSpread1_Sheet1.SheetName = "Sheet1";
+            this.TXT_FL.Location = new System.Drawing.Point(321, 112);
+            this.TXT_FL.Name = "TXT_FL";
+            this.TXT_FL.Size = new System.Drawing.Size(18, 22);
+            this.TXT_FL.TabIndex = 261;
+            this.TXT_FL.Visible = false;
             // 
-            // label1
+            // TXT_SIZE
             // 
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Location = new System.Drawing.Point(29, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 22);
-            this.label1.TabIndex = 222;
-            this.label1.Text = "订单号";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.TXT_SIZE.Location = new System.Drawing.Point(297, 112);
+            this.TXT_SIZE.Name = "TXT_SIZE";
+            this.TXT_SIZE.Size = new System.Drawing.Size(18, 22);
+            this.TXT_SIZE.TabIndex = 260;
+            this.TXT_SIZE.Visible = false;
             // 
-            // TXT_ORD_NO
+            // Check1
             // 
-            this.TXT_ORD_NO.Location = new System.Drawing.Point(115, 47);
-            this.TXT_ORD_NO.MaxLength = 11;
-            this.TXT_ORD_NO.Name = "TXT_ORD_NO";
-            this.TXT_ORD_NO.Size = new System.Drawing.Size(97, 22);
-            this.TXT_ORD_NO.TabIndex = 223;
+            this.Check1.AutoSize = true;
+            this.Check1.Location = new System.Drawing.Point(218, 112);
+            this.Check1.Name = "Check1";
+            this.Check1.Size = new System.Drawing.Size(78, 17);
+            this.Check1.TabIndex = 259;
+            this.Check1.Text = "是否定尺";
+            this.Check1.UseVisualStyleBackColor = true;
+            this.Check1.Visible = false;
             // 
-            // CBO_ORD_ITEM
+            // opt_no_fl
             // 
-            this.CBO_ORD_ITEM.FormattingEnabled = true;
-            this.CBO_ORD_ITEM.Location = new System.Drawing.Point(218, 47);
-            this.CBO_ORD_ITEM.Name = "CBO_ORD_ITEM";
-            this.CBO_ORD_ITEM.Size = new System.Drawing.Size(50, 21);
-            this.CBO_ORD_ITEM.TabIndex = 224;
+            this.opt_no_fl.AutoSize = true;
+            this.opt_no_fl.Location = new System.Drawing.Point(143, 112);
+            this.opt_no_fl.Name = "opt_no_fl";
+            this.opt_no_fl.Size = new System.Drawing.Size(64, 17);
+            this.opt_no_fl.TabIndex = 258;
+            this.opt_no_fl.TabStop = true;
+            this.opt_no_fl.Text = "不备料";
+            this.opt_no_fl.UseVisualStyleBackColor = true;
+            this.opt_no_fl.Click += new System.EventHandler(this.opt_no_fl_Click);
             // 
-            // label5
+            // opt_cancel_fl
             // 
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label5.ForeColor = System.Drawing.Color.Blue;
-            this.label5.Location = new System.Drawing.Point(321, 45);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 22);
-            this.label5.TabIndex = 228;
-            this.label5.Text = "轧制钢种";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.opt_cancel_fl.AutoSize = true;
+            this.opt_cancel_fl.Location = new System.Drawing.Point(86, 112);
+            this.opt_cancel_fl.Name = "opt_cancel_fl";
+            this.opt_cancel_fl.Size = new System.Drawing.Size(51, 17);
+            this.opt_cancel_fl.TabIndex = 257;
+            this.opt_cancel_fl.TabStop = true;
+            this.opt_cancel_fl.Text = "剔除";
+            this.opt_cancel_fl.UseVisualStyleBackColor = true;
+            this.opt_cancel_fl.Click += new System.EventHandler(this.opt_cancel_fl_Click);
             // 
-            // TXT_MILL_STLGRD
+            // opt_fl
             // 
-            bControlFiledSetting4.ColumnID = "StdSPEC";
-            bControlFiledSetting4.TargetControl = this.TXT_MILL_STLGRD;
-            this.TXT_MILL_STLGRD.CustomSetting.Add(bControlFiledSetting4);
-            this.TXT_MILL_STLGRD.InputControl = this.TXT_MILL_STLGRD;
-            this.TXT_MILL_STLGRD.Location = new System.Drawing.Point(398, 45);
-            this.TXT_MILL_STLGRD.MaxLength = 12;
-            this.TXT_MILL_STLGRD.Name = "TXT_MILL_STLGRD";
-            this.TXT_MILL_STLGRD.Size = new System.Drawing.Size(204, 22);
-            this.TXT_MILL_STLGRD.sJoin = "";
-            this.TXT_MILL_STLGRD.sSqletc = resources.GetString("TXT_MILL_STLGRD.sSqletc");
-            this.TXT_MILL_STLGRD.TabIndex = 227;
-            // 
-            // label3
-            // 
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label3.ForeColor = System.Drawing.Color.Blue;
-            this.label3.Location = new System.Drawing.Point(321, 14);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 22);
-            this.label3.TabIndex = 226;
-            this.label3.Text = "板坯钢种";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // TXT_STLGRD
-            // 
-            bControlFiledSetting1.ColumnID = "STLGRD";
-            bControlFiledSetting1.TargetControl = this.TXT_STLGRD;
-            bControlFiledSetting5.ColumnID = "STEEL_GRD_DETAIL";
-            bControlFiledSetting5.TargetControl = this.TXT_STLGRD_NAME;
-            this.TXT_STLGRD.CustomSetting.Add(bControlFiledSetting1);
-            this.TXT_STLGRD.CustomSetting.Add(bControlFiledSetting5);
-            this.TXT_STLGRD.InputControl = this.TXT_STLGRD;
-            this.TXT_STLGRD.Location = new System.Drawing.Point(398, 14);
-            this.TXT_STLGRD.MaxLength = 12;
-            this.TXT_STLGRD.Name = "TXT_STLGRD";
-            this.TXT_STLGRD.Size = new System.Drawing.Size(97, 22);
-            this.TXT_STLGRD.sJoin = "";
-            this.TXT_STLGRD.sSqletc = "SELECT STLGRD \"钢种\", STEEL_GRD_DETAIL \"目标说明\" FROM  NISCO.QP_NISCO_CHMC  WHERE STLG" +
-    "RD like \'%\'  AND NVL(STEEL_GRD_DETAIL,\'%\')   like \'%\'  ORDER  BY  STLGRD  ASC ";
-            this.TXT_STLGRD.TabIndex = 225;
-            // 
-            // TXT_STLGRD_NAME
-            // 
-            this.TXT_STLGRD_NAME.Location = new System.Drawing.Point(502, 15);
-            this.TXT_STLGRD_NAME.MaxLength = 50;
-            this.TXT_STLGRD_NAME.Name = "TXT_STLGRD_NAME";
-            this.TXT_STLGRD_NAME.Size = new System.Drawing.Size(100, 22);
-            this.TXT_STLGRD_NAME.TabIndex = 229;
-            // 
-            // label4
-            // 
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label4.Location = new System.Drawing.Point(345, 78);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 21);
-            this.label4.TabIndex = 230;
-            this.label4.Text = "是否备料";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // COB_FL
-            // 
-            this.COB_FL.FormattingEnabled = true;
-            this.COB_FL.Items.AddRange(new object[] {
-            "Y：已备料",
-            "N：未备料",
-            "X：不备料"});
-            this.COB_FL.Location = new System.Drawing.Point(431, 78);
-            this.COB_FL.Name = "COB_FL";
-            this.COB_FL.Size = new System.Drawing.Size(119, 21);
-            this.COB_FL.TabIndex = 231;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(795, 84);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(14, 13);
-            this.label16.TabIndex = 243;
-            this.label16.Tag = "user";
-            this.label16.Text = "~";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(795, 53);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(14, 13);
-            this.label15.TabIndex = 242;
-            this.label15.Tag = "user";
-            this.label15.Text = "~";
-            // 
-            // SDB_SLAB_LEN_TO
-            // 
-            this.SDB_SLAB_LEN_TO.Location = new System.Drawing.Point(815, 79);
-            this.SDB_SLAB_LEN_TO.Name = "SDB_SLAB_LEN_TO";
-            this.SDB_SLAB_LEN_TO.NumValue = 0D;
-            this.SDB_SLAB_LEN_TO.Scale = 1;
-            this.SDB_SLAB_LEN_TO.ShowZero = true;
-            this.SDB_SLAB_LEN_TO.Size = new System.Drawing.Size(84, 22);
-            this.SDB_SLAB_LEN_TO.TabIndex = 241;
-            this.SDB_SLAB_LEN_TO.Text = "0.0";
-            this.SDB_SLAB_LEN_TO.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // SDB_SLAB_WID_TO
-            // 
-            this.SDB_SLAB_WID_TO.Location = new System.Drawing.Point(815, 48);
-            this.SDB_SLAB_WID_TO.Name = "SDB_SLAB_WID_TO";
-            this.SDB_SLAB_WID_TO.NumValue = 0D;
-            this.SDB_SLAB_WID_TO.Scale = 2;
-            this.SDB_SLAB_WID_TO.ShowZero = true;
-            this.SDB_SLAB_WID_TO.Size = new System.Drawing.Size(84, 22);
-            this.SDB_SLAB_WID_TO.TabIndex = 240;
-            this.SDB_SLAB_WID_TO.Text = "0.00";
-            this.SDB_SLAB_WID_TO.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // SDB_SLAB_THK_TO
-            // 
-            this.SDB_SLAB_THK_TO.Location = new System.Drawing.Point(815, 15);
-            this.SDB_SLAB_THK_TO.Name = "SDB_SLAB_THK_TO";
-            this.SDB_SLAB_THK_TO.NumValue = 0D;
-            this.SDB_SLAB_THK_TO.Scale = 2;
-            this.SDB_SLAB_THK_TO.ShowZero = true;
-            this.SDB_SLAB_THK_TO.Size = new System.Drawing.Size(84, 22);
-            this.SDB_SLAB_THK_TO.TabIndex = 239;
-            this.SDB_SLAB_THK_TO.Text = "0.00";
-            this.SDB_SLAB_THK_TO.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(795, 24);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(14, 13);
-            this.label14.TabIndex = 238;
-            this.label14.Tag = "user";
-            this.label14.Text = "~";
-            // 
-            // SDB_SLAB_LEN
-            // 
-            this.SDB_SLAB_LEN.Location = new System.Drawing.Point(717, 79);
-            this.SDB_SLAB_LEN.Name = "SDB_SLAB_LEN";
-            this.SDB_SLAB_LEN.NumValue = 0D;
-            this.SDB_SLAB_LEN.Scale = 1;
-            this.SDB_SLAB_LEN.ShowZero = true;
-            this.SDB_SLAB_LEN.Size = new System.Drawing.Size(72, 22);
-            this.SDB_SLAB_LEN.TabIndex = 237;
-            this.SDB_SLAB_LEN.Text = "0.0";
-            this.SDB_SLAB_LEN.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // SDB_SLAB_WID
-            // 
-            this.SDB_SLAB_WID.Location = new System.Drawing.Point(717, 48);
-            this.SDB_SLAB_WID.Name = "SDB_SLAB_WID";
-            this.SDB_SLAB_WID.NumValue = 0D;
-            this.SDB_SLAB_WID.Scale = 2;
-            this.SDB_SLAB_WID.ShowZero = true;
-            this.SDB_SLAB_WID.Size = new System.Drawing.Size(72, 22);
-            this.SDB_SLAB_WID.TabIndex = 236;
-            this.SDB_SLAB_WID.Text = "0.00";
-            this.SDB_SLAB_WID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // SDB_SLAB_THK
-            // 
-            this.SDB_SLAB_THK.Location = new System.Drawing.Point(717, 15);
-            this.SDB_SLAB_THK.Name = "SDB_SLAB_THK";
-            this.SDB_SLAB_THK.NumValue = 0D;
-            this.SDB_SLAB_THK.Scale = 2;
-            this.SDB_SLAB_THK.ShowZero = true;
-            this.SDB_SLAB_THK.Size = new System.Drawing.Size(72, 22);
-            this.SDB_SLAB_THK.TabIndex = 235;
-            this.SDB_SLAB_THK.Text = "0.00";
-            this.SDB_SLAB_THK.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label12
-            // 
-            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label12.Location = new System.Drawing.Point(639, 79);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(71, 22);
-            this.label12.TabIndex = 234;
-            this.label12.Text = "板坯长度";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label11
-            // 
-            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label11.Location = new System.Drawing.Point(639, 48);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(71, 22);
-            this.label11.TabIndex = 233;
-            this.label11.Text = "板坯宽度";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label6.Location = new System.Drawing.Point(639, 15);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 22);
-            this.label6.TabIndex = 232;
-            this.label6.Text = "板坯厚度";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.opt_fl.AutoSize = true;
+            this.opt_fl.Location = new System.Drawing.Point(29, 112);
+            this.opt_fl.Name = "opt_fl";
+            this.opt_fl.Size = new System.Drawing.Size(51, 17);
+            this.opt_fl.TabIndex = 256;
+            this.opt_fl.TabStop = true;
+            this.opt_fl.Text = "备料";
+            this.opt_fl.UseVisualStyleBackColor = true;
+            this.opt_fl.Click += new System.EventHandler(this.opt_fl_Click);
             // 
             // label7
             // 
@@ -599,130 +456,277 @@
             this.label18.Text = "厚度";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // opt_fl
+            // label16
             // 
-            this.opt_fl.AutoSize = true;
-            this.opt_fl.Location = new System.Drawing.Point(29, 112);
-            this.opt_fl.Name = "opt_fl";
-            this.opt_fl.Size = new System.Drawing.Size(51, 17);
-            this.opt_fl.TabIndex = 256;
-            this.opt_fl.TabStop = true;
-            this.opt_fl.Text = "备料";
-            this.opt_fl.UseVisualStyleBackColor = true;
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(795, 84);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(14, 13);
+            this.label16.TabIndex = 243;
+            this.label16.Tag = "user";
+            this.label16.Text = "~";
             // 
-            // opt_cancel_fl
+            // label15
             // 
-            this.opt_cancel_fl.AutoSize = true;
-            this.opt_cancel_fl.Location = new System.Drawing.Point(86, 112);
-            this.opt_cancel_fl.Name = "opt_cancel_fl";
-            this.opt_cancel_fl.Size = new System.Drawing.Size(51, 17);
-            this.opt_cancel_fl.TabIndex = 257;
-            this.opt_cancel_fl.TabStop = true;
-            this.opt_cancel_fl.Text = "剔除";
-            this.opt_cancel_fl.UseVisualStyleBackColor = true;
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(795, 53);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(14, 13);
+            this.label15.TabIndex = 242;
+            this.label15.Tag = "user";
+            this.label15.Text = "~";
             // 
-            // opt_no_fl
+            // SDB_SLAB_LEN_TO
             // 
-            this.opt_no_fl.AutoSize = true;
-            this.opt_no_fl.Location = new System.Drawing.Point(143, 112);
-            this.opt_no_fl.Name = "opt_no_fl";
-            this.opt_no_fl.Size = new System.Drawing.Size(64, 17);
-            this.opt_no_fl.TabIndex = 258;
-            this.opt_no_fl.TabStop = true;
-            this.opt_no_fl.Text = "不备料";
-            this.opt_no_fl.UseVisualStyleBackColor = true;
+            this.SDB_SLAB_LEN_TO.Location = new System.Drawing.Point(815, 79);
+            this.SDB_SLAB_LEN_TO.Name = "SDB_SLAB_LEN_TO";
+            this.SDB_SLAB_LEN_TO.NumValue = 0D;
+            this.SDB_SLAB_LEN_TO.Scale = 1;
+            this.SDB_SLAB_LEN_TO.ShowZero = true;
+            this.SDB_SLAB_LEN_TO.Size = new System.Drawing.Size(84, 22);
+            this.SDB_SLAB_LEN_TO.TabIndex = 241;
+            this.SDB_SLAB_LEN_TO.Text = "0.0";
+            this.SDB_SLAB_LEN_TO.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // Check1
+            // SDB_SLAB_WID_TO
             // 
-            this.Check1.AutoSize = true;
-            this.Check1.Location = new System.Drawing.Point(218, 112);
-            this.Check1.Name = "Check1";
-            this.Check1.Size = new System.Drawing.Size(78, 17);
-            this.Check1.TabIndex = 259;
-            this.Check1.Text = "是否定尺";
-            this.Check1.UseVisualStyleBackColor = true;
-            this.Check1.Visible = false;
+            this.SDB_SLAB_WID_TO.Location = new System.Drawing.Point(815, 48);
+            this.SDB_SLAB_WID_TO.Name = "SDB_SLAB_WID_TO";
+            this.SDB_SLAB_WID_TO.NumValue = 0D;
+            this.SDB_SLAB_WID_TO.Scale = 2;
+            this.SDB_SLAB_WID_TO.ShowZero = true;
+            this.SDB_SLAB_WID_TO.Size = new System.Drawing.Size(84, 22);
+            this.SDB_SLAB_WID_TO.TabIndex = 240;
+            this.SDB_SLAB_WID_TO.Text = "0.00";
+            this.SDB_SLAB_WID_TO.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // TXT_SIZE
+            // SDB_SLAB_THK_TO
             // 
-            this.TXT_SIZE.Location = new System.Drawing.Point(297, 112);
-            this.TXT_SIZE.Name = "TXT_SIZE";
-            this.TXT_SIZE.Size = new System.Drawing.Size(18, 22);
-            this.TXT_SIZE.TabIndex = 260;
-            this.TXT_SIZE.Visible = false;
+            this.SDB_SLAB_THK_TO.Location = new System.Drawing.Point(815, 15);
+            this.SDB_SLAB_THK_TO.Name = "SDB_SLAB_THK_TO";
+            this.SDB_SLAB_THK_TO.NumValue = 0D;
+            this.SDB_SLAB_THK_TO.Scale = 2;
+            this.SDB_SLAB_THK_TO.ShowZero = true;
+            this.SDB_SLAB_THK_TO.Size = new System.Drawing.Size(84, 22);
+            this.SDB_SLAB_THK_TO.TabIndex = 239;
+            this.SDB_SLAB_THK_TO.Text = "0.00";
+            this.SDB_SLAB_THK_TO.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // TXT_FL
+            // label14
             // 
-            this.TXT_FL.Location = new System.Drawing.Point(321, 112);
-            this.TXT_FL.Name = "TXT_FL";
-            this.TXT_FL.Size = new System.Drawing.Size(18, 22);
-            this.TXT_FL.TabIndex = 261;
-            this.TXT_FL.Visible = false;
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(795, 24);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(14, 13);
+            this.label14.TabIndex = 238;
+            this.label14.Tag = "user";
+            this.label14.Text = "~";
             // 
-            // CMD_CARD
+            // SDB_SLAB_LEN
             // 
-            this.CMD_CARD.Location = new System.Drawing.Point(345, 106);
-            this.CMD_CARD.Name = "CMD_CARD";
-            this.CMD_CARD.Size = new System.Drawing.Size(80, 29);
-            this.CMD_CARD.TabIndex = 262;
-            this.CMD_CARD.Text = "打印导出";
-            this.CMD_CARD.UseVisualStyleBackColor = true;
+            this.SDB_SLAB_LEN.Location = new System.Drawing.Point(717, 79);
+            this.SDB_SLAB_LEN.Name = "SDB_SLAB_LEN";
+            this.SDB_SLAB_LEN.NumValue = 0D;
+            this.SDB_SLAB_LEN.Scale = 1;
+            this.SDB_SLAB_LEN.ShowZero = true;
+            this.SDB_SLAB_LEN.Size = new System.Drawing.Size(72, 22);
+            this.SDB_SLAB_LEN.TabIndex = 237;
+            this.SDB_SLAB_LEN.Text = "0.0";
+            this.SDB_SLAB_LEN.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // TXT_FL_DATE
+            // SDB_SLAB_WID
             // 
-            this.TXT_FL_DATE.Location = new System.Drawing.Point(431, 112);
-            this.TXT_FL_DATE.Name = "TXT_FL_DATE";
-            this.TXT_FL_DATE.Size = new System.Drawing.Size(119, 22);
-            this.TXT_FL_DATE.TabIndex = 263;
-            this.TXT_FL_DATE.Visible = false;
+            this.SDB_SLAB_WID.Location = new System.Drawing.Point(717, 48);
+            this.SDB_SLAB_WID.Name = "SDB_SLAB_WID";
+            this.SDB_SLAB_WID.NumValue = 0D;
+            this.SDB_SLAB_WID.Scale = 2;
+            this.SDB_SLAB_WID.ShowZero = true;
+            this.SDB_SLAB_WID.Size = new System.Drawing.Size(72, 22);
+            this.SDB_SLAB_WID.TabIndex = 236;
+            this.SDB_SLAB_WID.Text = "0.00";
+            this.SDB_SLAB_WID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // SSP1
+            // SDB_SLAB_THK
             // 
-            this.SSP1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.SSP1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SSP1.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.SSP1.Location = new System.Drawing.Point(639, 107);
-            this.SSP1.Name = "SSP1";
-            this.SSP1.Size = new System.Drawing.Size(86, 27);
-            this.SSP1.TabIndex = 264;
-            this.SSP1.Text = "紧急订单";
-            this.SSP1.UseVisualStyleBackColor = false;
+            this.SDB_SLAB_THK.Location = new System.Drawing.Point(717, 15);
+            this.SDB_SLAB_THK.Name = "SDB_SLAB_THK";
+            this.SDB_SLAB_THK.NumValue = 0D;
+            this.SDB_SLAB_THK.Scale = 2;
+            this.SDB_SLAB_THK.ShowZero = true;
+            this.SDB_SLAB_THK.Size = new System.Drawing.Size(72, 22);
+            this.SDB_SLAB_THK.TabIndex = 235;
+            this.SDB_SLAB_THK.Text = "0.00";
+            this.SDB_SLAB_THK.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // label19
+            // label12
             // 
-            this.label19.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label19.Location = new System.Drawing.Point(789, 113);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(71, 22);
-            this.label19.TabIndex = 265;
-            this.label19.Text = "总块数";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label12.Location = new System.Drawing.Point(639, 79);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(71, 22);
+            this.label12.TabIndex = 234;
+            this.label12.Text = "板坯长度";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // TXT_ALL_COUNT
+            // label11
             // 
-            this.TXT_ALL_COUNT.Location = new System.Drawing.Point(866, 113);
-            this.TXT_ALL_COUNT.MaxLength = 7;
-            this.TXT_ALL_COUNT.Name = "TXT_ALL_COUNT";
-            this.TXT_ALL_COUNT.Size = new System.Drawing.Size(53, 22);
-            this.TXT_ALL_COUNT.TabIndex = 266;
+            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label11.Location = new System.Drawing.Point(639, 48);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(71, 22);
+            this.label11.TabIndex = 233;
+            this.label11.Text = "板坯宽度";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label20
+            // label6
             // 
-            this.label20.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label20.Location = new System.Drawing.Point(927, 113);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(71, 22);
-            this.label20.TabIndex = 267;
-            this.label20.Text = "备料块数";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label6.Location = new System.Drawing.Point(639, 15);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(71, 22);
+            this.label6.TabIndex = 232;
+            this.label6.Text = "板坯厚度";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // TXT_COUNT
+            // COB_FL
             // 
-            this.TXT_COUNT.Location = new System.Drawing.Point(1005, 113);
-            this.TXT_COUNT.MaxLength = 7;
-            this.TXT_COUNT.Name = "TXT_COUNT";
-            this.TXT_COUNT.Size = new System.Drawing.Size(53, 22);
-            this.TXT_COUNT.TabIndex = 268;
+            this.COB_FL.FormattingEnabled = true;
+            this.COB_FL.Items.AddRange(new object[] {
+            "Y：已备料",
+            "N：未备料",
+            "X：不备料"});
+            this.COB_FL.Location = new System.Drawing.Point(431, 78);
+            this.COB_FL.Name = "COB_FL";
+            this.COB_FL.Size = new System.Drawing.Size(119, 21);
+            this.COB_FL.TabIndex = 231;
+            // 
+            // label4
+            // 
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label4.Location = new System.Drawing.Point(345, 78);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 21);
+            this.label4.TabIndex = 230;
+            this.label4.Text = "是否备料";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label5.ForeColor = System.Drawing.Color.Blue;
+            this.label5.Location = new System.Drawing.Point(321, 45);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 22);
+            this.label5.TabIndex = 228;
+            this.label5.Text = "轧制钢种";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label3.ForeColor = System.Drawing.Color.Blue;
+            this.label3.Location = new System.Drawing.Point(321, 14);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 22);
+            this.label3.TabIndex = 226;
+            this.label3.Text = "板坯钢种";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // CBO_ORD_ITEM
+            // 
+            this.CBO_ORD_ITEM.FormattingEnabled = true;
+            this.CBO_ORD_ITEM.Location = new System.Drawing.Point(218, 47);
+            this.CBO_ORD_ITEM.Name = "CBO_ORD_ITEM";
+            this.CBO_ORD_ITEM.Size = new System.Drawing.Size(50, 21);
+            this.CBO_ORD_ITEM.TabIndex = 224;
+            // 
+            // TXT_ORD_NO
+            // 
+            this.TXT_ORD_NO.Location = new System.Drawing.Point(115, 47);
+            this.TXT_ORD_NO.MaxLength = 11;
+            this.TXT_ORD_NO.Name = "TXT_ORD_NO";
+            this.TXT_ORD_NO.Size = new System.Drawing.Size(97, 22);
+            this.TXT_ORD_NO.TabIndex = 223;
+            // 
+            // label1
+            // 
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.Location = new System.Drawing.Point(29, 47);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 22);
+            this.label1.TabIndex = 222;
+            this.label1.Text = "订单号";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label8
+            // 
+            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label8.Location = new System.Drawing.Point(29, 16);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(80, 22);
+            this.label8.TabIndex = 221;
+            this.label8.Text = "板坯号";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TXT_SLAB_NO
+            // 
+            this.TXT_SLAB_NO.Location = new System.Drawing.Point(115, 16);
+            this.TXT_SLAB_NO.MaxLength = 10;
+            this.TXT_SLAB_NO.Name = "TXT_SLAB_NO";
+            this.TXT_SLAB_NO.Size = new System.Drawing.Size(97, 22);
+            this.TXT_SLAB_NO.TabIndex = 220;
+            // 
+            // SDT_IN_DATE_TO
+            // 
+            this.SDT_IN_DATE_TO.Location = new System.Drawing.Point(218, 78);
+            this.SDT_IN_DATE_TO.Name = "SDT_IN_DATE_TO";
+            this.SDT_IN_DATE_TO.RawDate = "";
+            this.SDT_IN_DATE_TO.Size = new System.Drawing.Size(97, 21);
+            this.SDT_IN_DATE_TO.TabIndex = 4;
+            // 
+            // SDT_IN_DATE_FROM
+            // 
+            this.SDT_IN_DATE_FROM.Location = new System.Drawing.Point(115, 78);
+            this.SDT_IN_DATE_FROM.Name = "SDT_IN_DATE_FROM";
+            this.SDT_IN_DATE_FROM.RawDate = "";
+            this.SDT_IN_DATE_FROM.Size = new System.Drawing.Size(97, 21);
+            this.SDT_IN_DATE_FROM.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(205, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(14, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Tag = "user";
+            this.label2.Text = "~";
+            // 
+            // ULabel5
+            // 
+            this.ULabel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.ULabel5.Location = new System.Drawing.Point(29, 78);
+            this.ULabel5.Name = "ULabel5";
+            this.ULabel5.Size = new System.Drawing.Size(80, 21);
+            this.ULabel5.TabIndex = 0;
+            this.ULabel5.Text = "浇料时间";
+            this.ULabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ss1
+            // 
+            this.ss1.AccessibleDescription = "";
+            this.ss1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ss1.Location = new System.Drawing.Point(0, 147);
+            this.ss1.Name = "ss1";
+            this.ss1.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
+            this.fpSpread1_Sheet1});
+            this.ss1.Size = new System.Drawing.Size(1221, 475);
+            this.ss1.TabIndex = 1;
+            // 
+            // fpSpread1_Sheet1
+            // 
+            this.fpSpread1_Sheet1.Reset();
+            this.fpSpread1_Sheet1.SheetName = "Sheet1";
             // 
             // CKG2070C
             // 

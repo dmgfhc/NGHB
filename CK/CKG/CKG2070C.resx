@@ -120,15 +120,15 @@
   <metadata name="sCMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="fpSpread1_Sheet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>117, 17</value>
-  </metadata>
-  <metadata name="fpSpread1_Sheet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>117, 17</value>
-  </metadata>
   <data name="TXT_MILL_STLGRD.sSqletc" xml:space="preserve">
     <value>SELECT StdSPEC "标准代号", StdSPEC_YY "发布年度", STDSPEC_CHR_CD "标准特性代码",        Gf_ComnNameFind('Q0025',STDSPEC_CHR_CD) "标准特性名称",        STDSPEC_NAME_ENG "标准英文名", STDSPEC_NAME_CHN "标准中文名" FROM  NISCO.QP_STD_HEAD WHERE StdSPEC like '%'  AND NVL(STDSPEC_CHR_CD,'Y') &lt;&gt;'N'  ORDER  BY  StdSPEC  ASC</value>
   </data>
+  <metadata name="fpSpread1_Sheet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>117, 17</value>
+  </metadata>
+  <metadata name="fpSpread1_Sheet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>117, 17</value>
+  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>65</value>
   </metadata>

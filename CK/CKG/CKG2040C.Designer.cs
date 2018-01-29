@@ -306,7 +306,7 @@
             this.cmd_mill_exc.ForeColor = System.Drawing.Color.Red;
             this.cmd_mill_exc.Location = new System.Drawing.Point(752, 18);
             this.cmd_mill_exc.Name = "cmd_mill_exc";
-            this.cmd_mill_exc.Size = new System.Drawing.Size(106, 22);
+            this.cmd_mill_exc.Size = new System.Drawing.Size(106, 32);
             this.cmd_mill_exc.TabIndex = 762;
             this.cmd_mill_exc.Text = "轧制单导出";
             this.cmd_mill_exc.UseVisualStyleBackColor = true;

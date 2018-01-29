@@ -189,6 +189,12 @@
     <Compile Include="CKH\CKH2010C.Designer.cs">
       <DependentUpon>CKH2010C.cs</DependentUpon>
     </Compile>
+    <Compile Include="CKP\CKP1010C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CKP\CKP1010C.Designer.cs">
+      <DependentUpon>CKP1010C.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu\MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,18 +212,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <Compile Include="CKG\WKA1040C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CKG\WKA1040C.Designer.cs">
-      <DependentUpon>WKA1040C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CKG\WKA1050C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CKG\WKA1050C.Designer.cs">
-      <DependentUpon>WKA1050C.cs</DependentUpon>
     </Compile>
     <Compile Include="WKB\WKB1010C.cs">
       <SubType>Form</SubType>
@@ -281,6 +275,9 @@
     <EmbeddedResource Include="CKH\CKH2010C.resx">
       <DependentUpon>CKH2010C.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CKP\CKP1010C.resx">
+      <DependentUpon>CKP1010C.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainMenu\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -291,12 +288,6 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CKG\WKA1040C.resx">
-      <DependentUpon>WKA1040C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CKG\WKA1050C.resx">
-      <DependentUpon>WKA1050C.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WKB\WKB1010C.resx">
       <DependentUpon>WKB1010C.cs</DependentUpon>

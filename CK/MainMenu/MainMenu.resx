@@ -149,7 +149,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAC2
-        GwAAAk1TRnQBSQFMAgEBDAEAAawBAAGsAQABKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        GwAAAk1TRnQBSQFMAgEBDAEAAcwBAAHMAQABKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABoAMAAXgDAAEBAQABCAYAAUsYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -288,23 +288,14 @@
   <data name="CKH2010C.Text" xml:space="preserve">
     <value>轧钢生产线进程现状界面_CKH2010C</value>
   </data>
-  <data name="WKA1010C.Text" xml:space="preserve">
-    <value>轧钢作业指示调整下达界面_WKA1010C</value>
-  </data>
-  <data name="WKA1020C.Text" xml:space="preserve">
-    <value>轧钢作业指示查询界面_WKA1020C</value>
-  </data>
-  <data name="WKA1030C.Text" xml:space="preserve">
-    <value>精整作业指示查询界面_WKA1030C</value>
-  </data>
-  <data name="menuItem6.Text" xml:space="preserve">
-    <value>轧钢计划查询页面_WKA1040C</value>
-  </data>
-  <data name="WKA1050C.Text" xml:space="preserve">
-    <value>轧钢台车炉指示下达界面_WKA1050C</value>
+  <data name="CKG2070C.Text" xml:space="preserve">
+    <value>轧钢计划查询界面_CKG2070C</value>
   </data>
   <data name="menuItem4.Text" xml:space="preserve">
     <value>作业指示管理</value>
+  </data>
+  <data name="CKP1010C.Text" xml:space="preserve">
+    <value>中板厂生产简报_CKP1010C</value>
   </data>
   <data name="WKB1010C.Text" xml:space="preserve">
     <value>生产线停机实绩管理界面_WKB1010C</value>
@@ -316,7 +307,7 @@
     <value>废钢实绩查询及修改界面_WKB1030C</value>
   </data>
   <data name="menuItem12.Text" xml:space="preserve">
-    <value>生产运行实绩管理</value>
+    <value>生产统计查询</value>
   </data>
   <data name="menuItem21.Text" xml:space="preserve">
     <value>宽厚板厂月作业计划查询及修改界面_WKC1010C</value>
@@ -718,7 +709,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAC2
-        GwAAAk1TRnQBSQFMAgEBDAEAAawBAAGsAQABKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        GwAAAk1TRnQBSQFMAgEBDAEAAcwBAAHMAQABKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABoAMAAXgDAAEBAQABCAYAAUsYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -847,7 +838,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABi
-        GwAAAk1TRnQBSQFMAgEBDAEAAawBAAGsAQABKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        GwAAAk1TRnQBSQFMAgEBDAEAAcwBAAHMAQABKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABoAMAAXgDAAEBAQABCAYAAUsYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -1136,40 +1127,22 @@
   <data name="&gt;&gt;CKH2010C.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;WKA1010C.Name" xml:space="preserve">
-    <value>WKA1010C</value>
+  <data name="&gt;&gt;CKG2070C.Name" xml:space="preserve">
+    <value>CKG2070C</value>
   </data>
-  <data name="&gt;&gt;WKA1010C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WKA1020C.Name" xml:space="preserve">
-    <value>WKA1020C</value>
-  </data>
-  <data name="&gt;&gt;WKA1020C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WKA1030C.Name" xml:space="preserve">
-    <value>WKA1030C</value>
-  </data>
-  <data name="&gt;&gt;WKA1030C.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuItem6.Name" xml:space="preserve">
-    <value>menuItem6</value>
-  </data>
-  <data name="&gt;&gt;menuItem6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WKA1050C.Name" xml:space="preserve">
-    <value>WKA1050C</value>
-  </data>
-  <data name="&gt;&gt;WKA1050C.Type" xml:space="preserve">
+  <data name="&gt;&gt;CKG2070C.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;menuItem12.Name" xml:space="preserve">
     <value>menuItem12</value>
   </data>
   <data name="&gt;&gt;menuItem12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CKP1010C.Name" xml:space="preserve">
+    <value>CKP1010C</value>
+  </data>
+  <data name="&gt;&gt;CKP1010C.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;WKB1010C.Name" xml:space="preserve">
