@@ -237,8 +237,11 @@ namespace CK
 
         public override void Form_Ref()
         {
-            p_Ref(1, 1, true, true);
-            ss1_ref();
+            if (p_Ref(1, 1, true, true))
+            {
+                ss1_ref();
+                Gf_Sp_Display2(GeneralCommon.M_CN1, ss2, MasterCommon.Gf_Ms_MakeQuery((string)(Sc2["P-R"]), "R", (Collection)Mc1["pControl"]), (Collection)Sc2["pColumn"], false);
+            }
         }
 
         public void ss1_ref()
@@ -326,6 +329,111 @@ namespace CK
             ss1.ActiveSheet.RowHeader.Cells[8, 0].Text = "全厂";
             ss1.ActiveSheet.RowHeader.Cells[8, 1].Text = "当日";
             ss1.ActiveSheet.RowHeader.Cells[9, 1].Text = "累计";
+        }
+
+        public bool Gf_Sp_Display2(ADODB.Connection Conn, FarPoint.Win.Spread.FpSpread oSpread, string sQuery, Collection lColumn, bool MsgChk)
+        {
+            bool returnValue = false;
+
+            int iCount;
+            int iRowCount;
+            int iColcount;
+            object[,] ArrayRecords;
+            ADODB.Recordset AdoRs;
+            if (Conn.State == 0)
+            {
+                if (GeneralCommon.GF_DbConnect() == false)
+                {
+                    return false;
+                }
+            }
+
+            AdoRs = new ADODB.Recordset();
+            try
+            {
+                returnValue = true;
+
+                if (oSpread.ActiveSheet.RowCount > 0)
+                {
+                    //
+                    //'Hux,修改。
+                    //'解决:Spread有两条数据时，点击列头排序后，再点击Spread插入，Spread行清除时报错。
+                    oSpread.ActiveSheet.AutoSortColumn(0);
+                    oSpread.ActiveSheet.RowCount = 0;
+                }
+
+                FarPoint.Win.Spread.FpSpread with_1 = oSpread;
+
+                iCount = 0;
+
+                Cursor.Current = Cursors.WaitCursor;
+                /////////20130606begin解决保存失败后，第一次查询提示算数运算符溢出的问题
+                AdoRs.CursorLocation = ADODB.CursorLocationEnum.adUseClient;
+                AdoRs.CursorType = ADODB.CursorTypeEnum.adOpenStatic;
+                //AdoRs.CursorType = 
+                //AdoRs.CursorLocation = ADODB.CursorLocationEnum.adUseServer;
+
+
+                //AdoRs.Open(sQuery, Conn, ADODB.CursorTypeEnum.adOpenDynamic, ADODB.LockTypeEnum.adLockReadOnly, 1);
+                AdoRs.Open(sQuery, Conn);
+                /////////20130606end
+
+
+                if (AdoRs.BOF || AdoRs.EOF)
+                {
+
+                    if (MsgChk)
+                    {
+                        GeneralCommon.Gp_MsgBoxDisplay("无法找到该资料..!!!", "I", "");
+                    }
+
+                    returnValue = false;
+                    AdoRs.Close();
+                    AdoRs = null;
+
+                    Cursor.Current = Cursors.Default;
+                    return returnValue;
+
+                }
+
+                int RsRowCount = AdoRs.RecordCount;
+                int RsColCount = AdoRs.Fields.Count;
+                ArrayRecords = new object[RsRowCount, RsColCount];
+                int i = 0;
+                while (!AdoRs.EOF)
+                {
+                    for (int j = 0; j < AdoRs.Fields.Count; j++)
+                    {
+                        ArrayRecords[i, j] = AdoRs.Fields[j].Value;
+                    }
+                    i++;
+                    AdoRs.MoveNext();
+                }
+
+                AdoRs.Close();
+                AdoRs = null;
+                with_1.ActiveSheet.RowCount = RsRowCount;
+
+                //此处填写代码
+               
+
+                Cursor.Current = Cursors.Default;
+                ArrayRecords = null;
+
+            }
+            catch (Exception ex)
+            {
+                AdoRs = null;
+                returnValue = false;
+                GeneralCommon.Gp_MsgBoxDisplay((string)("Gf_Sp_Display Error : " + ex.Message), "", "");
+                Cursor.Current = Cursors.Default;
+                if (Information.Err().Number == 438 || Information.Err().Number == -2147467259)
+                {
+                    Conn.Close();
+                }
+            }
+
+            return returnValue;
         }
 
 

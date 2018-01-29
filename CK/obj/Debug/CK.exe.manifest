@@ -117,14 +117,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CK.exe" size="413696">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CK.exe" size="414720">
       <assemblyIdentity name="CK" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>VpGZ8jP2OpCm11D3WXahLostNew=</dsig:DigestValue>
+        <dsig:DigestValue>eNeq/YpB/5JyOs4NbPwmv/vc1oo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
