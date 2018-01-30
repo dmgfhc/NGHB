@@ -215,11 +215,6 @@ namespace CK
             ss2.ActiveSheet.Cells[3, 21].Text = "累计";
             ss2.ActiveSheet.Cells[4, 21].Text = "当日";
             ss2.ActiveSheet.Cells[5, 21].Text = "累计";
-
-            
-
-          
-
         }
 
         public override void Form_Pro()
@@ -241,6 +236,7 @@ namespace CK
             {
                 ss1_ref();
                 Gf_Sp_Display2(GeneralCommon.M_CN1, ss2, MasterCommon.Gf_Ms_MakeQuery((string)(Sc2["P-R"]), "R", (Collection)Mc1["pControl"]), (Collection)Sc2["pColumn"], false);
+                SearchStlGrdData();
             }
         }
 
@@ -353,16 +349,16 @@ namespace CK
             {
                 returnValue = true;
 
-                if (oSpread.ActiveSheet.RowCount > 0)
-                {
-                    //
-                    //'Hux,修改。
-                    //'解决:Spread有两条数据时，点击列头排序后，再点击Spread插入，Spread行清除时报错。
-                    oSpread.ActiveSheet.AutoSortColumn(0);
-                    oSpread.ActiveSheet.RowCount = 0;
-                }
+                //if (oSpread.ActiveSheet.RowCount > 0)
+                //{
+                //    //
+                //    //'Hux,修改。
+                //    //'解决:Spread有两条数据时，点击列头排序后，再点击Spread插入，Spread行清除时报错。
+                //    oSpread.ActiveSheet.AutoSortColumn(0);
+                //    oSpread.ActiveSheet.RowCount = 0;
+                //}
 
-                FarPoint.Win.Spread.FpSpread with_1 = oSpread;
+                //FarPoint.Win.Spread.FpSpread with_1 = oSpread;
 
                 iCount = 0;
 
@@ -412,11 +408,230 @@ namespace CK
 
                 AdoRs.Close();
                 AdoRs = null;
-                with_1.ActiveSheet.RowCount = RsRowCount;
 
-                //此处填写代码
-               
+                //此处进行表单数据录入
 
+                int ROW = 0;
+                if (ArrayRecords.GetLength(0) != 0)
+                {
+                    for (iRowCount = 0; iRowCount < ArrayRecords.GetLength(0); iRowCount++)
+                    {
+                        switch (substr(ArrayRecords[iRowCount, 0].ToString(), 0, 1))
+                        {
+                            case "A":
+                                ROW = 0;
+                                break;
+                            case "B":
+                                ROW = 1;
+                                break;
+                            case "C":
+                                ROW = 2;
+                                break;
+                            case "D":
+                                ROW = 3;
+                                break;
+                            case "T":
+                                ROW = 4;
+                                break;
+                        }
+
+                        //            .ROW = iRowCount + 1
+                        int Col = 0;
+                        //10 --> 9 by guhf 2011.5.12 删除压力空气
+                        for (iColcount = 1; iColcount <= 10; iColcount++)
+                        {
+
+                            if (substr(ArrayRecords[iRowCount, 0].ToString(), 1, 1) == "0")
+                            {
+                                Col = (iColcount - 1) * 2;    //偶数列 
+                            }
+                            else if (substr(ArrayRecords[iRowCount, 0].ToString(), 1, 1) == "1")
+                            {
+                                Col = (iColcount - 1) * 2 + 1;    //奇数列
+                            }
+
+                            if (ArrayRecords[iRowCount, iColcount].ToString() == "" || ArrayRecords[iRowCount, iColcount].ToString() == "0")
+                            {
+                                ss2.ActiveSheet.Cells[ROW, Col].Text = "";
+                            }
+                            else
+                            {
+                                ss2.ActiveSheet.Cells[ROW, Col].Text = ArrayRecords[iRowCount, iColcount].ToString();
+                            }
+
+                        }
+
+                        if (ArrayRecords[iRowCount, 0].ToString() == "A0")
+                        {
+                            //29 --> 46 by guhf 2011.5.12
+                            if (ArrayRecords[iRowCount, 47].ToString() == "" || convertX(ArrayRecords[iRowCount, 47].ToString()) == 0)
+                            {
+                                ss3.ActiveSheet.Cells[27, 19].Text = "";
+                            }
+                            else
+                            {
+                                ss3.ActiveSheet.Cells[27, 19].Text = ArrayRecords[iRowCount, 47].ToString().Trim();
+                                //29 --> 46 by guhf 2011.5.12
+                            }
+                        }
+                        else if (ArrayRecords[iRowCount, 0].ToString() == "B0")
+                        {
+                            //29 --> 46 by guhf 2011.5.12
+                            if (ArrayRecords[iRowCount, 47].ToString() == "" | convertX(ArrayRecords[iRowCount, 47].ToString()) == 0)
+                            {
+                                ss3.ActiveSheet.Cells[27, 20].Text = "";
+                            }
+                            else
+                            {
+                                ss3.ActiveSheet.Cells[27, 20].Text = ArrayRecords[iRowCount, 47].ToString().Trim();
+                                //29 --> 46 by guhf 2011.5.12
+                            }
+                        }
+                        else if (ArrayRecords[iRowCount, 0].ToString() == "C0")
+                        {
+                            //29 --> 46 by guhf 2011.5.12
+                            if (ArrayRecords[iRowCount, 47].ToString() == "" | convertX(ArrayRecords[iRowCount, 47].ToString()) == 0)
+                            {
+                                ss3.ActiveSheet.Cells[27, 21].Text = "";
+                            }
+                            else
+                            {
+                                ss3.ActiveSheet.Cells[27, 21].Text = ArrayRecords[iRowCount, 47].ToString().Trim();
+                                //29 --> 46 by guhf 2011.5.12
+                            }
+                        }
+                        else if (ArrayRecords[iRowCount, 0].ToString() == "D0")
+                        {
+                            //29 --> 46 by guhf 2011.5.12
+                            if (ArrayRecords[iRowCount, 47].ToString() == "" | convertX(ArrayRecords[iRowCount, 47].ToString()) == 0)
+                            {
+                                ss3.ActiveSheet.Cells[27, 22].Text = "";
+                            }
+                            else
+                            {
+                                ss3.ActiveSheet.Cells[27, 22].Text = ArrayRecords[iRowCount, 47].ToString().Trim();
+                                //29 --> 46 by guhf 2011.5.12
+                            }
+                        }
+
+                        if (ArrayRecords[iRowCount, 0].ToString() == "T0")
+                        {
+                            // 30 --> 47 ,35-->52 by guhf 2011.5.12
+                            for (iCount = 48; iCount <= 53; iCount++)
+                            {
+                                //6 --> 23 by guhf 2011.5.12
+                                if (ArrayRecords[iRowCount, iCount].ToString() == "" || convertX(ArrayRecords[iRowCount, iCount].ToString()) == 0)
+                                {
+                                    ss3.ActiveSheet.Cells[27, iCount - 24].Text = "";
+                                }
+                                else
+                                {
+                                    ss3.ActiveSheet.Cells[27, iCount - 24].Text = ArrayRecords[iRowCount, iCount].ToString().Trim();
+                                }
+                            }
+                        }
+
+                        //由于后台SQL不是按照查询顺序写的，所以这段代码的主要含义是将不同的SQL值按照顺序排列到表单之中，需要到后台一列列的去读取顺序并在前台做相应的顺序处理。20161222 ADD HAN
+                        if (substr(ArrayRecords[iRowCount, 0].ToString(), 0, 1) == "T")
+                        {
+                            //11-->10 ,28-->45 by guhf 2011.5.12
+                            for (iCount = 11; iCount <= 46; iCount++)
+                            {
+                                if (ArrayRecords[iRowCount, 0].ToString() == "T0")
+                                {
+                                    if (iCount <= 18)
+                                    {
+                                        ROW = 0;
+                                        Col = iCount + 11;
+                                        //第一行23列开始共8列
+                                        //总累计待切割量
+                                    }
+                                    else if (iCount >= 19 & iCount < 23)
+                                    {
+                                        ROW = 1;
+                                        Col = iCount + 11;
+                                        //17-->22 ,23-->30 by guhf
+                                    }
+                                    else if (iCount >= 23 & iCount < 31)
+                                    {
+                                        ROW = 2;
+                                        Col = iCount - 1;
+                                        //+6 --> -1 by guhf 2011.5.12
+                                        //add by guhf 2011.5.12 增加总累计待探伤量
+                                    }
+                                    else if (iCount >= 31 & iCount < 35)
+                                    {
+                                        ROW = 3;
+                                        //add by guhf 2011.5.12
+                                        Col = iCount - 1;
+                                        //add by guhf 2011.5.12
+                                        //'MODIFIED BY GUOLI AT 20100318180800 FOR 避免SS2最后一列不显示数据,原来没有=
+                                    }
+                                    else if (iCount >= 35 & iCount <= 42)
+                                    {
+                                        //23-->34, 28-->41 by guhf
+                                        ROW = 4;
+                                        Col = iCount - 13;
+                                        // 又减了12
+                                        //add by guhf 2011.5.12 增加总累计待切割两
+                                    }
+                                    else if (iCount >= 43 & iCount < 47)
+                                    {
+                                        ROW = 5;
+                                        //add by guhf 2011.5.12
+                                        Col = iCount - 13;
+                                        //add by guhf 2011.5.12
+                                    }
+                                    //
+                                }
+                                else if (ArrayRecords[iRowCount, 0].ToString() == "T1")
+                                {
+                                    //17-->18  by guhf 2011.5.12
+                                    if (iCount <= 18)
+                                    {
+                                        ROW = 1;
+                                        Col = iCount + 11;
+                                        //12--> 11 by guhf 2011.5.12
+                                        //17-->22 ,23-->30 by guhf
+                                    }
+                                    else if (iCount >= 23 & iCount < 31)
+                                    {
+                                        ROW = 3;
+                                        Col = iCount - 1;
+                                        //+6 --> -1 by guhf 2011.5.12
+                                        //'MODIFIED BY GUOLI AT 20100318180800 FOR 避免SS2最后一列不显示数据,原来没有=
+                                    }
+                                    else if (iCount >= 35 & iCount <= 42)
+                                    {
+                                        //23-->34, 28-->41 by guhf
+                                        ROW = 5;
+                                        Col = iCount - 13;
+                                        // add - 13 by guhf
+                                        //                           If iCount < 17 Then
+                                        //                              .ROW = 2
+                                        //                              .Col = iCount + 12
+                                        //                           ElseIf iCount >= 17 And iCount < 23 Then
+                                        //                              .ROW = 4
+                                        //                              .Col = iCount + 6
+                                        //                           ElseIf iCount >= 23 And iCount <= 28 Then  ''MODIFIED BY GUOLI AT 20100318180800 FOR 避免SS2最后一列不显示数据,原来没有=
+                                        //                              .ROW = 6
+                                        //                              .Col = iCount
+                                    }
+                                }
+                                if (ArrayRecords[iRowCount, iColcount].ToString() == "" || convertX(ArrayRecords[iRowCount, iCount].ToString()) == 0)
+                                {
+                                    ss2.ActiveSheet.Cells[ROW, Col].Text = "";
+                                }
+                                else
+                                {
+                                    ss2.ActiveSheet.Cells[ROW, Col].Text = ArrayRecords[iRowCount, iCount].ToString();
+                                }
+                            }
+                        }
+
+	}
+
+}
                 Cursor.Current = Cursors.Default;
                 ArrayRecords = null;
 
@@ -434,6 +649,51 @@ namespace CK
             }
 
             return returnValue;
+        }
+
+        private void SearchStlGrdData()
+        {
+            string sQuery;
+            object[,] ArrayRecords;
+
+            sQuery = "SELECT 1 FROM DUAL";
+
+            if (GeneralCommon.M_CN1.State == 0)
+                if (!GeneralCommon.GF_DbConnect()) return;
+
+            ADODB.Recordset AdoRs = new ADODB.Recordset();
+            try
+            {
+                AdoRs.Open(sQuery, GeneralCommon.M_CN1, ADODB.CursorTypeEnum.adOpenStatic, ADODB.LockTypeEnum.adLockReadOnly);
+
+                int RsRowCount = AdoRs.RecordCount;
+                int RsColCount = AdoRs.Fields.Count;
+                ArrayRecords = new object[RsRowCount, RsColCount];
+
+                int i = 0;
+                while (!AdoRs.EOF)
+                {
+                    for (int j = 0; j < AdoRs.Fields.Count; j++)
+                    {
+                        ArrayRecords[i, j] = AdoRs.Fields[j].Value;
+                    }
+                    i++;
+                    AdoRs.MoveNext();
+                }
+
+                AdoRs.Close();
+                AdoRs = null;
+
+                //判断是不是需要关闭连接对象，有时候该方法是在查询过程中调用，关闭对象会导致框架查询报错 韩超
+
+                //GeneralCommon.M_CN1.Close();
+            }
+            catch (Exception ex)
+            {
+                // if (GeneralCommon.M_CN1.State != 0) GeneralCommon.M_CN1.Close();
+                AdoRs.Close();
+                AdoRs = null;
+            }
         }
 
 
@@ -454,7 +714,14 @@ namespace CK
         {
             if (value != "")
             {
-                return Convert.ToDouble(value);
+                try
+                {
+                    return Convert.ToDouble(value);
+                }
+                catch
+                {
+                    return 1;
+                }
             }
             return 0;
         }
