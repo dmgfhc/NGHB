@@ -31,18 +31,18 @@ using CommonClass;
 //-------------------------------------------------------------------------------
 //-- System Name       中板轧钢作业
 //-- Sub_System Name   统计分析管理
-//-- Program Name      加热炉实绩查询界面
-//-- Program ID        CGT2000C
+//-- Program Name      中板厂生产简报_CKP1010C
+//-- Program ID        CKP1010C
 //-- Document No       Q-00-0010(Specification)
 //-- Designer          韩超
 //-- Coder             韩超
-//-- Date              2017.11.01
+//-- Date              2018.01.31
 //-- Description
 //-------------------------------------------------------------------------------
 //-- UPDATE HISTORY  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //-------------------------------------------------------------------------------
 //-- VER       DATE          EDITOR       DESCRIPTION
-//-- 1.00    2017.11.01       韩超        中板轧钢作业
+//-- 1.00    2018.01.31       韩超        中板厂生产简报_CKP1010C
 //-------------------------------------------------------------------------------
 //-- DECLARATION     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //-------------------------------------------------------------------------------
@@ -78,29 +78,29 @@ namespace CK
             iscseq = 1;
 
             p_SetSc("类型", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//0
-            p_SetSc("计划产量", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//1
-            p_SetSc("轧制产量", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//2
-            p_SetSc("原料量", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//3
-            p_SetSc("轧制块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//4
-            p_SetSc("剪切产量", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//5
-            p_SetSc("1#", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//6
-            p_SetSc("2#", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//7
-            p_SetSc("合计", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//8
-            p_SetSc("轧制废", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//9
-            p_SetSc("在线", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//10
-            p_SetSc("切割", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//11
-            p_SetSc("探伤", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//12
-            p_SetSc("待判", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//13
-            p_SetSc("合格率", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//14
-            p_SetSc("单定尺", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//15
-            p_SetSc("双定尺", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//16
-            p_SetSc("设定", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//17
-            p_SetSc("综合", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//18
-            p_SetSc("一次合格率", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//19
-            p_SetSc("热装量", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//20
-            p_SetSc("热送量", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//21
-            p_SetSc("负公差", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//22
-            p_SetSc("实设成材率", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//23
+            p_SetSc("计划产量", "N", "9", "L", "", "", "", iscseq, iheadrow, "M");//1
+            p_SetSc("轧制产量", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "M");//2
+            p_SetSc("原料量", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "M");//3
+            p_SetSc("轧制块数", "N", "9", "L", "", "", "", iscseq, iheadrow, "M");//4
+            p_SetSc("剪切产量", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "M");//5
+            p_SetSc("1#", "N", "15", "L", "", "", "", iscseq, iheadrow, "M");//6
+            p_SetSc("2#", "N", "15", "L", "", "", "", iscseq, iheadrow, "M");//7
+            p_SetSc("合计", "N", "15", "L", "", "", "", iscseq, iheadrow, "M");//8
+            p_SetSc("轧制废", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "M");//9
+            p_SetSc("在线", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "M");//10
+            p_SetSc("切割", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "M");//11
+            p_SetSc("探伤", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "M");//12
+            p_SetSc("待判", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "M");//13
+            p_SetSc("合格率", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "M");//14
+            p_SetSc("单定尺", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "M");//15
+            p_SetSc("双定尺", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "M");//16
+            p_SetSc("设定", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "M");//17
+            p_SetSc("综合", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "M");//18
+            p_SetSc("一次合格率", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "M");//19
+            p_SetSc("热装量", "N", "15,3", "L", "", "", "", iscseq, iheadrow, "M");//20
+            p_SetSc("热送量", "N", "15,3", "L", "", "", "", iscseq, iheadrow, "M");//21
+            p_SetSc("负公差", "N", "15,3", "L", "", "", "", iscseq, iheadrow, "M");//22
+            p_SetSc("实设成材率", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "M");//23
 
             iheadrow = 0;
             p_spanSpread("剪切块数", 6, 8, iscseq, iheadrow, 1);
@@ -110,40 +110,40 @@ namespace CK
             p_ScIni(ss2, Sc2, 0, false, false);
             iheadrow = 1;
             iscseq = 2;
-            p_SetSc("当日", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//0
-            p_SetSc("累计", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//1
-            p_SetSc("当日", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//2
-            p_SetSc("累计", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//3
-            p_SetSc("当日", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//4
-            p_SetSc("累计", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//5
-            p_SetSc("当日", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//6
-            p_SetSc("累计", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//7
-            p_SetSc("当日", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//8
-            p_SetSc("累计", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//9
-            p_SetSc("当日", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//10
-            p_SetSc("累计", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//11
-            p_SetSc("当日", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//12
-            p_SetSc("累计", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//13
-            p_SetSc("当日", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//14
-            p_SetSc("累计", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//15
-            p_SetSc("当日", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//16
-            p_SetSc("累计", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//17
-            p_SetSc("当日", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//18
-            p_SetSc("累计", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//19
+            p_SetSc("当日", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "M");//0
+            p_SetSc("累计", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "M");//1
+            p_SetSc("当日", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "M");//2
+            p_SetSc("累计", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "M");//3
+            p_SetSc("当日", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "M");//4
+            p_SetSc("累计", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "M");//5
+            p_SetSc("当日", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "M");//6
+            p_SetSc("累计", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "M");//7
+            p_SetSc("当日", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "M");//8
+            p_SetSc("累计", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "M");//9
+            p_SetSc("当日", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "M");//10
+            p_SetSc("累计", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "M");//11
+            p_SetSc("当日", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "M");//12
+            p_SetSc("累计", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "M");//13
+            p_SetSc("当日", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "M");//14
+            p_SetSc("累计", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "M");//15
+            p_SetSc("当日", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "M");//16
+            p_SetSc("累计", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "M");//17
+            p_SetSc("当日", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "M");//18
+            p_SetSc("累计", "N", "9,2", "L", "", "", "", iscseq, iheadrow, "M");//19
             p_SetSc("厚板生产", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//20
             p_SetSc("厚板生产", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//21
-            p_SetSc("块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//22
-            p_SetSc("吨位", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//23
-            p_SetSc("块数", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//24
-            p_SetSc("吨位", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//25
-            p_SetSc("块数（厚板）", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//26
-            p_SetSc("吨位（厚板）", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//27
-            p_SetSc("块数（在线）", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//28
-            p_SetSc("吨位（在线）", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//29
-            p_SetSc("块数（厚板）", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//30
-            p_SetSc("吨位（厚板）", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//31
-            p_SetSc("块数（在线）", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//32
-            p_SetSc("吨位（在线）", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//33
+            p_SetSc("块数", "N", "9", "L", "", "", "", iscseq, iheadrow, "M");//22
+            p_SetSc("吨位", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "M");//23
+            p_SetSc("块数", "N", "9", "L", "", "", "", iscseq, iheadrow, "M");//24
+            p_SetSc("吨位", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "M");//25
+            p_SetSc("块数（厚板）", "N", "9", "L", "", "", "", iscseq, iheadrow, "M");//26
+            p_SetSc("吨位（厚板）", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "M");//27
+            p_SetSc("块数（在线）", "N", "9", "L", "", "", "", iscseq, iheadrow, "M");//28
+            p_SetSc("吨位（在线）", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "M");//29
+            p_SetSc("块数（厚板）", "N", "9", "L", "", "", "", iscseq, iheadrow, "M");//30
+            p_SetSc("吨位（厚板）", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "M");//31
+            p_SetSc("块数（在线）", "N", "9", "L", "", "", "", iscseq, iheadrow, "M");//32
+            p_SetSc("吨位（在线）", "N", "9,3", "L", "", "", "", iscseq, iheadrow, "M");//33
 
             iheadrow = 0;
             p_spanSpread("日历作业率", 0, 1, iscseq, iheadrow, 1);
@@ -170,6 +170,7 @@ namespace CK
             base.sSvrPgmPkgName = "CKP1010NC";
             Form_Define();
             SpreadCommon.Gp_Sp_ColHidden(ss1, 0, true);
+            txt_DATE.RawDate = DateTime.Now.AddDays(-1).ToString("yyyyMMdd");
 
             ss1.ActiveSheet.RowCount = 10;
             ss1.ActiveSheet.RowHeader.ColumnCount = 2;//设置两行
@@ -237,6 +238,7 @@ namespace CK
                 ss1_ref();
                 Gf_Sp_Display2(GeneralCommon.M_CN1, ss2, MasterCommon.Gf_Ms_MakeQuery((string)(Sc2["P-R"]), "R", (Collection)Mc1["pControl"]), (Collection)Sc2["pColumn"], false);
                 SearchStlGrdData();
+                SearchCommentsData();
             }
         }
 
@@ -651,12 +653,70 @@ namespace CK
             return returnValue;
         }
 
-        private void SearchStlGrdData()
+        public void SearchStlGrdData()
         {
             string sQuery;
             object[,] ArrayRecords;
 
-            sQuery = "SELECT 1 FROM DUAL";
+
+            string sql;
+            string sDate;
+            int istlknd;
+            int iRow = 0;
+            int iCol;
+
+            if (txt_DATE.RawDate == "")
+            {
+                sDate = DateTime.Now.AddDays(-1).ToString("yyyyMMdd");
+            }
+            else
+            {
+                sDate = txt_DATE.RawDate;
+            }
+
+            sql = "       SELECT  PROD_GROUP || '0' PROD_GROUP,                                             ";
+            sql = sql + "         TO_NUMBER(STLGRD_KND) STLGRD_KND,                                         ";
+            sql = sql + "         SUM(PROD_WGT)         PROD_WGT  ,                                         ";
+            sql = sql + "         DECODE(SUM(SLAB_WGT),0,0,ROUND(SUM(PROD_WGT) * 100/SUM(SLAB_WGT),2)) PROD_RATE,       ";
+            sql = sql + "         DECODE((SUM(PLATE_WGT)-SUM(INSP_READY_WGT)),0,0,ROUND(SUM(PROD_OK_WGT) * 100/(SUM(PLATE_WGT)-SUM(INSP_READY_WGT)),2)) MILL_OK_RATE, ";
+            sql = sql + "         DECODE(SUM(WORK_TIME),0,0,ROUND(SUM(PROD_WGT)*3600/SUM(WORK_TIME),3)) TON_HOUR       ";
+            sql = sql + "   From  GP_ZBRPT_DAILY_STDSPEC                                                    ";
+            sql = sql + "  Where  PROD_DATE = '" + sDate + "'                                               ";
+            sql = sql + "  GROUP  BY PROD_GROUP, STLGRD_KND                                                 ";
+            sql = sql + "  Union  All                                                                       ";
+            sql = sql + " SELECT  PROD_GROUP || '1' PROD_GROUP,                                             ";
+            sql = sql + "         TO_NUMBER(STLGRD_KND)  STLGRD_KND ,                                       ";
+            sql = sql + "         SUM(PROD_WGT)          PROD_WGT   ,                                       ";
+            sql = sql + "         DECODE(SUM(PROD_WGT),0,0,ROUND(SUM(PROD_WGT) * 100/SUM(SLAB_WGT),2)) PROD_RATE,      ";
+            sql = sql + "         DECODE((SUM(PLATE_WGT)-SUM(INSP_READY_WGT)),0,0,ROUND(SUM(PROD_OK_WGT) * 100/(SUM(PLATE_WGT)-SUM(INSP_READY_WGT)),2)) MILL_OK_RATE,";
+            sql = sql + "         DECODE(SUM(WORK_TIME),0,0,ROUND(SUM(PROD_WGT)*3600/SUM(WORK_TIME),3)) TON_HOUR      ";
+            sql = sql + "   From  GP_ZBRPT_DAILY_STDSPEC                                                    ";
+            sql = sql + "  Where  PROD_DATE <= '" + sDate + "'                                              ";
+            sql = sql + "    AND  SUBSTR(PROD_DATE, 1, 6) = '" + substr(sDate, 0, 6) + "'                        ";
+            sql = sql + "  GROUP  BY PROD_GROUP, STLGRD_KND                                                 ";
+            sql = sql + "  Union  All                                                                       ";
+            sql = sql + " SELECT  'T0'    PROD_GROUP,                                                       ";
+            sql = sql + "         TO_NUMBER(STLGRD_KND)  STLGRD_KND ,                                       ";
+            sql = sql + "         SUM(PROD_WGT)          PROD_WGT   ,                                       ";
+            sql = sql + "         DECODE(SUM(PROD_WGT),0,0,ROUND(SUM(PROD_WGT) * 100/SUM(SLAB_WGT),2)) PROD_RATE,      ";
+            sql = sql + "         DECODE((SUM(PLATE_WGT)-SUM(INSP_READY_WGT)),0,0,ROUND(SUM(PROD_OK_WGT) * 100/(SUM(PLATE_WGT)-SUM(INSP_READY_WGT)),2)) MILL_OK_RATE,";
+            sql = sql + "         DECODE(SUM(WORK_TIME),0,0,ROUND(SUM(PROD_WGT)*3600/SUM(WORK_TIME),3)) TON_HOUR      ";
+            sql = sql + "   From  GP_ZBRPT_DAILY_STDSPEC                                                    ";
+            sql = sql + "  Where  PROD_DATE = '" + sDate + "'                                               ";
+            sql = sql + "  GROUP  BY STLGRD_KND                                                             ";
+            sql = sql + "  Union  All                                                                       ";
+            sql = sql + " SELECT  'T1'    PROD_GROUP,                                                       ";
+            sql = sql + "         TO_NUMBER(STLGRD_KND)  STLGRD_KND ,                                       ";
+            sql = sql + "         SUM(PROD_WGT)          PROD_WGT   ,                                       ";
+            sql = sql + "         DECODE(SUM(PROD_WGT),0,0,ROUND(SUM(PROD_WGT) * 100/SUM(SLAB_WGT),2)) PROD_RATE,      ";
+            sql = sql + "         DECODE((SUM(PLATE_WGT)-SUM(INSP_READY_WGT)),0,0,ROUND(SUM(PROD_OK_WGT) * 100/(SUM(PLATE_WGT)-SUM(INSP_READY_WGT)),2)) MILL_OK_RATE,";
+            sql = sql + "         DECODE(SUM(WORK_TIME),0,0,ROUND(SUM(PROD_WGT)*3600/SUM(WORK_TIME),3)) TON_HOUR      ";
+            sql = sql + "   From  GP_ZBRPT_DAILY_STDSPEC                                                    ";
+            sql = sql + "  Where  PROD_DATE <= '" + sDate + "'                                              ";
+            sql = sql + "    AND  SUBSTR(PROD_DATE, 1, 6) = '" + substr(sDate, 0, 6) + "'                       ";
+            sql = sql + "  GROUP  BY STLGRD_KND                                                             ";
+
+            sQuery = sql;
 
             if (GeneralCommon.M_CN1.State == 0)
                 if (!GeneralCommon.GF_DbConnect()) return;
@@ -673,11 +733,122 @@ namespace CK
                 int i = 0;
                 while (!AdoRs.EOF)
                 {
-                    for (int j = 0; j < AdoRs.Fields.Count; j++)
+                    switch (substr(AdoRs.Fields["PROD_GROUP"].Value.ToString(), 0, 1))
                     {
-                        ArrayRecords[i, j] = AdoRs.Fields[j].Value;
+                        case "A":
+                            if (convertD(AdoRs.Fields["STLGRD_KND"].Value.ToString()) <= 7)
+                            {
+                                iRow = 2;
+                            }
+                            else if (convertD(AdoRs.Fields["STLGRD_KND"].Value.ToString()) > 7 & convertD(AdoRs.Fields["STLGRD_KND"].Value.ToString()) <= 14)
+                            {
+                                iRow = 14;
+                            }
+                            else if (convertD(AdoRs.Fields["STLGRD_KND"].Value.ToString()) > 14 & convertD(AdoRs.Fields["STLGRD_KND"].Value.ToString()) <= 18)
+                            {
+                                iRow = 26;
+                            }
+                            break;
+                        case "B":
+                            if (convertD(AdoRs.Fields["STLGRD_KND"].Value.ToString()) <= 7)
+                            {
+                                iRow = 4;
+                            }
+                            else if (convertD(AdoRs.Fields["STLGRD_KND"].Value.ToString()) > 7 & convertD(AdoRs.Fields["STLGRD_KND"].Value.ToString()) <= 14)
+                            {
+                                iRow = 16;
+                            }
+                            else if (convertD(AdoRs.Fields["STLGRD_KND"].Value.ToString()) > 14 & convertD(AdoRs.Fields["STLGRD_KND"].Value.ToString()) <= 18)
+                            {
+                                iRow = 28;
+                            }
+                            break;
+                        case "C":
+                            if (convertD(AdoRs.Fields["STLGRD_KND"].Value.ToString()) <= 7)
+                            {
+                                iRow = 6;
+                            }
+                            else if (convertD(AdoRs.Fields["STLGRD_KND"].Value.ToString()) > 7 & convertD(AdoRs.Fields["STLGRD_KND"].Value.ToString()) <= 14)
+                            {
+                                iRow = 18;
+                            }
+                            else if (convertD(AdoRs.Fields["STLGRD_KND"].Value.ToString()) > 14 & convertD(AdoRs.Fields["STLGRD_KND"].Value.ToString()) <= 18)
+                            {
+                                iRow = 30;
+                            }
+                            break;
+                        case "D":
+                            if (convertD(AdoRs.Fields["STLGRD_KND"].Value.ToString()) <= 7)
+                            {
+                                iRow = 8;
+                            }
+                            else if (convertD(AdoRs.Fields["STLGRD_KND"].Value.ToString()) > 7 & convertD(AdoRs.Fields["STLGRD_KND"].Value.ToString()) <= 14)
+                            {
+                                iRow = 20;
+                            }
+                            else if (convertD(AdoRs.Fields["STLGRD_KND"].Value.ToString()) > 14 & convertD(AdoRs.Fields["STLGRD_KND"].Value.ToString()) <= 18)
+                            {
+                                iRow = 32;
+                            }
+                            break;
+                        case "T":
+                            if (convertD(AdoRs.Fields["STLGRD_KND"].Value.ToString()) <= 7)
+                            {
+                                iRow = 10;
+                            }
+                            else if (convertD(AdoRs.Fields["STLGRD_KND"].Value.ToString()) > 7 & convertD(AdoRs.Fields["STLGRD_KND"].Value.ToString()) <= 14)
+                            {
+                                iRow = 22;
+                            }
+                            else if (convertD(AdoRs.Fields["STLGRD_KND"].Value.ToString()) > 14 & convertD(AdoRs.Fields["STLGRD_KND"].Value.ToString()) <= 18)
+                            {
+                                iRow = 34;
+                            }
+                            break;
                     }
-                    i++;
+
+                    iRow = iRow + convertI(substr(AdoRs.Fields["PROD_GROUP"].Value.ToString(), 1, 1));
+
+                    if (convertI(AdoRs.Fields["STLGRD_KND"].Value.ToString()) <= 7)
+                    {
+                        iCol = convertI(AdoRs.Fields["STLGRD_KND"].Value.ToString()) * 4 - 2;
+                    }
+                    else if (convertI(AdoRs.Fields["STLGRD_KND"].Value.ToString()) > 7 & convertI(AdoRs.Fields["STLGRD_KND"].Value.ToString()) <= 14)
+                    {
+                        iCol = (convertI(AdoRs.Fields["STLGRD_KND"].Value.ToString()) - 7) * 4 - 2;
+                    }
+                    else if (convertI(AdoRs.Fields["STLGRD_KND"].Value.ToString()) > 14 & convertI(AdoRs.Fields["STLGRD_KND"].Value.ToString()) <= 18)
+                    {
+                        iCol = (convertI(AdoRs.Fields["STLGRD_KND"].Value.ToString()) - 14) * 4 - 2;
+                    }
+                    else
+                    {
+                        iCol = 0;
+                    }
+
+                    if (!(AdoRs.Fields["PROD_WGT"].Value == null || convertD(AdoRs.Fields["PROD_WGT"].Value.ToString()) == 0))
+                    {
+                        ss3.ActiveSheet.Cells[iRow, iCol].Text = AdoRs.Fields["PROD_WGT"].Value.ToString();
+                    }
+                    if (!(AdoRs.Fields["PROD_RATE"].Value == null || convertD(AdoRs.Fields["PROD_RATE"].Value.ToString()) == 0))
+                    {
+                        ss3.ActiveSheet.Cells[iRow, iCol + 1].Text = AdoRs.Fields["PROD_RATE"].Value.ToString();
+                    }
+
+                    if (!(AdoRs.Fields["MILL_OK_RATE"] == null || convertD(AdoRs.Fields["MILL_OK_RATE"].Value.ToString()) == 0))
+                    {
+                        ss3.ActiveSheet.Cells[iRow, iCol + 2].Text = AdoRs.Fields["MILL_OK_RATE"].Value.ToString();
+                    }
+
+                    if (!(AdoRs.Fields["TON_HOUR"].Value == null || convertD(AdoRs.Fields["TON_HOUR"].Value.ToString()) == 0))
+                    {
+                        ss3.ActiveSheet.Cells[iRow, iCol + 3].Text = AdoRs.Fields["TON_HOUR"].Value.ToString();
+                    }
+
+                    iRow = 0;
+                    iCol = 0;
+
+
                     AdoRs.MoveNext();
                 }
 
@@ -687,6 +858,76 @@ namespace CK
                 //判断是不是需要关闭连接对象，有时候该方法是在查询过程中调用，关闭对象会导致框架查询报错 韩超
 
                 //GeneralCommon.M_CN1.Close();
+            }
+            catch (Exception ex)
+            {
+                // if (GeneralCommon.M_CN1.State != 0) GeneralCommon.M_CN1.Close();
+                AdoRs.Close();
+                AdoRs = null;
+            }
+        }
+
+        public void SearchCommentsData()
+        {
+            string sql;
+            string sDate;
+            string sQuery;
+            int i;
+            sDate = DateTime.Now.AddDays(-1).ToString("yyyyMMdd");
+
+            sql = "      SELECT  MONTH_PLAN_WGT  ,   MONTH_FIN_WGT   , MONTH_AVE_WGT    ,  ";
+            sql = sql + "        MONTH_FOR_WGT   ,   MONTH_LEFT_DAY  , MONTH_AVE_NEED   ,  ";
+            sql = sql + "        MONTH_PROG      ,   MONTH_PROD_PROG , MONTH_DAY_BED_WGT,  ";
+            sql = sql + "        MONTH_BED_WGT   ,   YEAR_PLAN_WGT   , YEAR_FIN_WGT     ,  ";
+            sql = sql + "        YEAR_AVE_WGT    ,   YEAR_FOR_WGT    , YEAR_LEFT_DAY    ,  ";
+            sql = sql + "        YEAR_AVE_NEED   ,   YEAR_PROG       , YEAR_PROD_PROG   ,  ";
+            sql = sql + "        COMMENT1                                                  ";
+            sql = sql + "  FROM  gp_zbrpt_mon                                              ";
+            sql = sql + " WHERE  PLT                     = 'C3'                            ";
+            sql = sql + "   AND  PROD_DATE               = '" + sDate + "'                 ";
+
+            sQuery = sql;
+
+            if (GeneralCommon.M_CN1.State == 0)
+                if (!GeneralCommon.GF_DbConnect()) return;
+
+            ADODB.Recordset AdoRs = new ADODB.Recordset();
+            try
+            {
+                AdoRs.Open(sQuery, GeneralCommon.M_CN1, ADODB.CursorTypeEnum.adOpenStatic, ADODB.LockTypeEnum.adLockReadOnly);
+
+                while (!AdoRs.EOF)
+                {
+                    for (i = 39; i <= 48; i++)
+                    {
+                        if (!(AdoRs.Fields[i - 39].Value == null || convertD(AdoRs.Fields[i - 39].Value.ToString()) == 0))
+                        {
+                            ss3.ActiveSheet.Cells[i-1,24].Text = AdoRs.Fields[i - 39].Value.ToString();
+                        }
+                    }
+
+                    for (i = 39; i <= 46; i++)
+                    {
+                        if (!(AdoRs.Fields[i - 29] == null || convertD(AdoRs.Fields[i - 29].Value.ToString()) == 0))
+                        {
+                            ss3.ActiveSheet.Cells[i-1, 28].Text = AdoRs.Fields[i - 29].Value.ToString();
+                        }
+                    }
+                    if (!(AdoRs.Fields[18] == null || convertD(AdoRs.Fields[18].Value.ToString()) == 0))
+                    {
+                        ss3.ActiveSheet.Cells[48, 1].Text = AdoRs.Fields[18].Value.ToString();
+                    }
+
+
+                    AdoRs.MoveNext();
+                }
+
+                AdoRs.Close();
+                AdoRs = null;
+
+                //判断是不是需要关闭连接对象，有时候该方法是在查询过程中调用，关闭对象会导致框架查询报错 韩超
+
+                GeneralCommon.M_CN1.Close();
             }
             catch (Exception ex)
             {
@@ -722,6 +963,14 @@ namespace CK
                 {
                     return 1;
                 }
+            }
+            return 0;
+        }
+        public double convertD(string value)
+        {
+            if (value != "")
+            {
+             return Convert.ToDouble(value);
             }
             return 0;
         }
@@ -771,5 +1020,35 @@ namespace CK
         }
 
         #endregion
+
+        private void Cmd_Edit_Click(object sender, EventArgs e)
+        {
+            string sDate;
+
+            if (txt_DATE.RawDate == "")
+            {
+                sDate = DateTime.Now.AddDays(-1).ToString("yyyyMMdd");
+            }
+            else
+            {
+                sDate = txt_DATE.RawDate;
+            }
+
+            string[] Para1 = new string[1];
+
+            Para1[0] = sDate;
+
+
+            if (GeneralCommon.Gf_ExecProcedure(GeneralCommon.M_CN1, "CKP1010NP", Para1))
+            {
+
+                GeneralCommon.Gp_MsgBoxDisplay("更新成功", "I", "系统提示信息");
+
+            }
+            else
+            {
+                GeneralCommon.Gp_MsgBoxDisplay("更新失败", "I", "系统提示信息");
+            }
+        }
     }
 }
