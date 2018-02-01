@@ -1724,7 +1724,7 @@ namespace CK
         {
             if (!GeneralCommon.Gf_IsFormLoad("WKC1030C"))
             {
-                WKC1030C WKC1030C = new WKC1030C();
+                CKG2060C WKC1030C = new CKG2060C();
                 WKC1030C.MdiParent = this;
                 WKC1030C.Show();
                 WKC1030C.WindowState = FormWindowState.Maximized;

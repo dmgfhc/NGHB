@@ -1499,6 +1499,7 @@
             FarPoint.Win.ComplexBorder complexBorder4409 = new FarPoint.Win.ComplexBorder(new FarPoint.Win.ComplexBorderSide(FarPoint.Win.ComplexBorderSideStyle.ThinLine));
             FarPoint.Win.ComplexBorder complexBorder4410 = new FarPoint.Win.ComplexBorder(new FarPoint.Win.ComplexBorderSide(FarPoint.Win.ComplexBorderSideStyle.ThinLine));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Cmd_Edit = new System.Windows.Forms.Button();
             this.txt_DATE = new CommonClass.CeriUDate();
             this.TXT_CH_CD = new System.Windows.Forms.TextBox();
             this.ULabel5 = new System.Windows.Forms.Label();
@@ -1513,7 +1514,6 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.ss3 = new FarPoint.Win.Spread.FpSpread();
             this.ss3_Sheet1 = new FarPoint.Win.Spread.SheetView();
-            this.Cmd_Edit = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ss1)).BeginInit();
@@ -1538,6 +1538,17 @@
             this.groupBox1.Size = new System.Drawing.Size(1009, 47);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // Cmd_Edit
+            // 
+            this.Cmd_Edit.Font = new System.Drawing.Font("宋体", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Cmd_Edit.Location = new System.Drawing.Point(526, 18);
+            this.Cmd_Edit.Name = "Cmd_Edit";
+            this.Cmd_Edit.Size = new System.Drawing.Size(87, 28);
+            this.Cmd_Edit.TabIndex = 5;
+            this.Cmd_Edit.Text = "更新数据";
+            this.Cmd_Edit.UseVisualStyleBackColor = true;
+            this.Cmd_Edit.Click += new System.EventHandler(this.Cmd_Edit_Click);
             // 
             // txt_DATE
             // 
@@ -3852,17 +3863,6 @@
             this.ss3_Sheet1.RowHeader.Visible = false;
             this.ss3_Sheet1.Rows.Get(48).Height = 51F;
             this.ss3_Sheet1.ReferenceStyle = FarPoint.Win.Spread.Model.ReferenceStyle.A1;
-            // 
-            // Cmd_Edit
-            // 
-            this.Cmd_Edit.Font = new System.Drawing.Font("宋体", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Cmd_Edit.Location = new System.Drawing.Point(526, 18);
-            this.Cmd_Edit.Name = "Cmd_Edit";
-            this.Cmd_Edit.Size = new System.Drawing.Size(87, 28);
-            this.Cmd_Edit.TabIndex = 5;
-            this.Cmd_Edit.Text = "更新数据";
-            this.Cmd_Edit.UseVisualStyleBackColor = true;
-            this.Cmd_Edit.Click += new System.EventHandler(this.Cmd_Edit_Click);
             // 
             // CKP1010C
             // 

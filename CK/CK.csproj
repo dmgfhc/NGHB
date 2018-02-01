@@ -183,6 +183,12 @@
     <Compile Include="CKG\CKG2040C.Designer.cs">
       <DependentUpon>CKG2040C.cs</DependentUpon>
     </Compile>
+    <Compile Include="CKG\CKG2060C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CKG\CKG2060C.Designer.cs">
+      <DependentUpon>CKG2060C.cs</DependentUpon>
+    </Compile>
     <Compile Include="CKH\CKH2010C.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -271,6 +277,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CKG\CKG2040C.resx">
       <DependentUpon>CKG2040C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CKG\CKG2060C.resx">
+      <DependentUpon>CKG2060C.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CKH\CKH2010C.resx">
       <DependentUpon>CKH2010C.cs</DependentUpon>

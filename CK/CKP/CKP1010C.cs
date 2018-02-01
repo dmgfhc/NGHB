@@ -937,6 +937,185 @@ namespace CK
             }
         }
 
+        public override void Spread_Exc()
+        {
+            try
+            {
+                setExcel();
+            }
+            catch (Exception ex)
+            {
+                GeneralCommon.Gp_MsgBoxDisplay("导出数据错误...!!" + ex.Message, "W", "警告");
+            }
+        }
+
+        private void setExcel()
+        {
+            if (ss1.ActiveSheet.RowCount <= 0) return;
+            string modelName = "CKP1010C.xls";
+            GeneralCommon.Gp_CopyModel(modelName);
+            string fileName = AppDomain.CurrentDomain.BaseDirectory.ToString() + "report" + "\\" + modelName;
+            Microsoft.Office.Interop.Excel.Application appExcel = null;
+            appExcel = new Microsoft.Office.Interop.Excel.Application();
+            appExcel.DisplayAlerts = true;
+            appExcel.AlertBeforeOverwriting = true;
+            Microsoft.Office.Interop.Excel.Workbook workbook = appExcel.Workbooks.Open(fileName,
+                Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+                Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+                Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+                Type.Missing, Type.Missing);
+            Microsoft.Office.Interop.Excel.Range range = null;
+
+            appExcel.Cells[2, 1] = "报表日期：" + txt_DATE.RawDate.Substring(0, 4) + "年" + txt_DATE.RawDate.Substring(4, 2) + "月" + txt_DATE.RawDate.Substring(6, 2) + "日";
+
+
+            for (int i = 0; i < ss1.ActiveSheet.RowCount; i++)
+            {
+                appExcel.Cells[5 + i, 3] = ss1.ActiveSheet.Cells[i, 1].Text;
+                appExcel.Cells[5 + i, 4] = ss1.ActiveSheet.Cells[i, 2].Text;
+                appExcel.Cells[5 + i, 5] = ss1.ActiveSheet.Cells[i, 3].Text;
+                appExcel.Cells[5 + i, 6] = ss1.ActiveSheet.Cells[i, 4].Text;
+                appExcel.Cells[5 + i, 7] = ss1.ActiveSheet.Cells[i, 5].Text;
+                appExcel.Cells[5 + i, 8] = ss1.ActiveSheet.Cells[i, 6].Text;
+                appExcel.Cells[5 + i, 9] = ss1.ActiveSheet.Cells[i, 7].Text;
+                appExcel.Cells[5 + i, 10] = ss1.ActiveSheet.Cells[i, 8].Text;
+                appExcel.Cells[5 + i, 11] = ss1.ActiveSheet.Cells[i, 9].Text;
+                appExcel.Cells[5 + i, 12] = ss1.ActiveSheet.Cells[i, 10].Text;
+                appExcel.Cells[5 + i, 13] = ss1.ActiveSheet.Cells[i, 11].Text;
+                appExcel.Cells[5 + i, 14] = ss1.ActiveSheet.Cells[i, 12].Text;
+                appExcel.Cells[5 + i, 15] = ss1.ActiveSheet.Cells[i, 13].Text;
+                appExcel.Cells[5 + i, 16] = ss1.ActiveSheet.Cells[i, 14].Text;
+                appExcel.Cells[5 + i, 17] = ss1.ActiveSheet.Cells[i, 15].Text;
+                appExcel.Cells[5 + i, 18] = ss1.ActiveSheet.Cells[i, 16].Text;
+                appExcel.Cells[5 + i, 19] = ss1.ActiveSheet.Cells[i, 17].Text;
+                appExcel.Cells[5 + i, 20] = ss1.ActiveSheet.Cells[i, 18].Text;
+                appExcel.Cells[5 + i, 21] = ss1.ActiveSheet.Cells[i, 19].Text;
+                appExcel.Cells[5 + i, 22] = ss1.ActiveSheet.Cells[i, 20].Text;
+                appExcel.Cells[5 + i, 23] = ss1.ActiveSheet.Cells[i, 21].Text;
+                appExcel.Cells[5 + i, 24] = ss1.ActiveSheet.Cells[i, 22].Text;
+                appExcel.Cells[5 + i, 25] = ss1.ActiveSheet.Cells[i, 23].Text;
+                //appExcel.Cells[5 + i, 26] = ss1.ActiveSheet.Cells[i, 23].Text;
+                //appExcel.Cells[5 + i, 27] = ss1.ActiveSheet.Cells[i, 24].Text;
+                //appExcel.Cells[5 + i, 28] = ss1.ActiveSheet.Cells[i, 25].Text;
+            }
+
+            for (int i = 0; i < ss2.ActiveSheet.RowCount; i++)
+            {
+                appExcel.Cells[17 + i, 2] = ss2.ActiveSheet.Cells[i, 0].Text;
+                appExcel.Cells[17 + i, 3] = ss2.ActiveSheet.Cells[i, 1].Text;
+                appExcel.Cells[17 + i, 4] = ss2.ActiveSheet.Cells[i, 2].Text;
+                appExcel.Cells[17 + i, 5] = ss2.ActiveSheet.Cells[i, 3].Text;
+                appExcel.Cells[17 + i, 6] = ss2.ActiveSheet.Cells[i, 4].Text;
+                appExcel.Cells[17 + i, 7] = ss2.ActiveSheet.Cells[i, 5].Text;
+                appExcel.Cells[17 + i, 8] = ss2.ActiveSheet.Cells[i, 6].Text;
+                appExcel.Cells[17 + i, 9] = ss2.ActiveSheet.Cells[i, 7].Text;
+                appExcel.Cells[17 + i, 10] = ss2.ActiveSheet.Cells[i, 8].Text;
+                appExcel.Cells[17 + i, 11] = ss2.ActiveSheet.Cells[i, 9].Text;
+                appExcel.Cells[17 + i, 12] = ss2.ActiveSheet.Cells[i, 10].Text;
+                appExcel.Cells[17 + i, 13] = ss2.ActiveSheet.Cells[i, 11].Text;
+                appExcel.Cells[17 + i, 14] = ss2.ActiveSheet.Cells[i, 12].Text;
+                appExcel.Cells[17 + i, 15] = ss2.ActiveSheet.Cells[i, 13].Text;
+                appExcel.Cells[17 + i, 16] = ss2.ActiveSheet.Cells[i, 14].Text;
+                appExcel.Cells[17 + i, 17] = ss2.ActiveSheet.Cells[i, 15].Text;
+                appExcel.Cells[17 + i, 18] = ss2.ActiveSheet.Cells[i, 16].Text;
+                appExcel.Cells[17 + i, 19] = ss2.ActiveSheet.Cells[i, 17].Text;
+                appExcel.Cells[17 + i, 20] = ss2.ActiveSheet.Cells[i, 18].Text;
+                appExcel.Cells[17 + i, 21] = ss2.ActiveSheet.Cells[i, 19].Text;
+
+                appExcel.Cells[17 + i, 24] = ss2.ActiveSheet.Cells[i, 22].Text;
+                appExcel.Cells[17 + i, 25] = ss2.ActiveSheet.Cells[i, 23].Text;
+                appExcel.Cells[17 + i, 26] = ss2.ActiveSheet.Cells[i, 24].Text;
+                appExcel.Cells[17 + i, 27] = ss2.ActiveSheet.Cells[i, 25].Text;
+                appExcel.Cells[17 + i, 28] = ss2.ActiveSheet.Cells[i, 26].Text;
+                appExcel.Cells[17 + i, 29] = ss2.ActiveSheet.Cells[i, 27].Text;
+                appExcel.Cells[17 + i, 30] = ss2.ActiveSheet.Cells[i, 28].Text;
+                appExcel.Cells[17 + i, 31] = ss2.ActiveSheet.Cells[i, 29].Text;
+                appExcel.Cells[17 + i, 32] = ss2.ActiveSheet.Cells[i, 30].Text;
+                appExcel.Cells[17 + i, 33] = ss2.ActiveSheet.Cells[i, 31].Text;
+                appExcel.Cells[17 + i, 34] = ss2.ActiveSheet.Cells[i, 32].Text;
+                appExcel.Cells[17 + i, 35] = ss2.ActiveSheet.Cells[i, 33].Text;
+            }
+
+            for (int i = 0; i < ss3.ActiveSheet.RowCount; i++)
+            {
+                if ((i >= 2 && i <= 11) || (i >= 14 && i <= 23))
+                    appExcel.Cells[23 + i, 3] = ss3.ActiveSheet.Cells[i, 2].Text;
+                    appExcel.Cells[23 + i, 4] = ss3.ActiveSheet.Cells[i, 3].Text;
+                    appExcel.Cells[23 + i, 5] = ss3.ActiveSheet.Cells[i, 4].Text;
+                    appExcel.Cells[23 + i, 6] = ss3.ActiveSheet.Cells[i, 5].Text;
+                    appExcel.Cells[23 + i, 7] = ss3.ActiveSheet.Cells[i, 6].Text;
+                    appExcel.Cells[23 + i, 8] = ss3.ActiveSheet.Cells[i, 7].Text;
+                    appExcel.Cells[23 + i, 9] = ss3.ActiveSheet.Cells[i, 8].Text;
+                    appExcel.Cells[23 + i, 10] = ss3.ActiveSheet.Cells[i, 9].Text;
+                    appExcel.Cells[23 + i, 11] = ss3.ActiveSheet.Cells[i, 10].Text;
+                    appExcel.Cells[23 + i, 12] = ss3.ActiveSheet.Cells[i, 11].Text;
+                    appExcel.Cells[23 + i, 13] = ss3.ActiveSheet.Cells[i, 12].Text;
+                    appExcel.Cells[23 + i, 14] = ss3.ActiveSheet.Cells[i, 13].Text;
+                    appExcel.Cells[23 + i, 15] = ss3.ActiveSheet.Cells[i, 14].Text;
+                    appExcel.Cells[23 + i, 16] = ss3.ActiveSheet.Cells[i, 15].Text;
+                    appExcel.Cells[23 + i, 17] = ss3.ActiveSheet.Cells[i, 16].Text;
+                    appExcel.Cells[23 + i, 18] = ss3.ActiveSheet.Cells[i, 17].Text;
+                    appExcel.Cells[23 + i, 19] = ss3.ActiveSheet.Cells[i, 18].Text;
+                    appExcel.Cells[23 + i, 20] = ss3.ActiveSheet.Cells[i, 19].Text;
+                    appExcel.Cells[23 + i, 21] = ss3.ActiveSheet.Cells[i, 20].Text;
+                    appExcel.Cells[23 + i, 22] = ss3.ActiveSheet.Cells[i, 21].Text;
+                    appExcel.Cells[23 + i, 23] = ss3.ActiveSheet.Cells[i, 22].Text;
+                    appExcel.Cells[23 + i, 24] = ss3.ActiveSheet.Cells[i, 23].Text;
+                    appExcel.Cells[23 + i, 25] = ss3.ActiveSheet.Cells[i, 24].Text;
+                    appExcel.Cells[23 + i, 26] = ss3.ActiveSheet.Cells[i, 25].Text;
+                    appExcel.Cells[23 + i, 27] = ss3.ActiveSheet.Cells[i, 26].Text;
+                    appExcel.Cells[23 + i, 28] = ss3.ActiveSheet.Cells[i, 27].Text;
+                    appExcel.Cells[23 + i, 29] = ss3.ActiveSheet.Cells[i, 28].Text;
+                    appExcel.Cells[23 + i, 30] = ss3.ActiveSheet.Cells[i, 29].Text;
+
+
+                    if (i >= 26 && i <= 35)
+                    {
+                        appExcel.Cells[23 + i, 3] = ss3.ActiveSheet.Cells[i, 2].Text;
+                        appExcel.Cells[23 + i, 4] = ss3.ActiveSheet.Cells[i, 3].Text;
+                        appExcel.Cells[23 + i, 5] = ss3.ActiveSheet.Cells[i, 4].Text;
+                        appExcel.Cells[23 + i, 6] = ss3.ActiveSheet.Cells[i, 5].Text;
+                        appExcel.Cells[23 + i, 7] = ss3.ActiveSheet.Cells[i, 6].Text;
+                        appExcel.Cells[23 + i, 8] = ss3.ActiveSheet.Cells[i, 7].Text;
+                        appExcel.Cells[23 + i, 9] = ss3.ActiveSheet.Cells[i, 8].Text;
+                        appExcel.Cells[23 + i, 10] = ss3.ActiveSheet.Cells[i, 9].Text;
+                        appExcel.Cells[23 + i, 11] = ss3.ActiveSheet.Cells[i, 10].Text;
+                        appExcel.Cells[23 + i, 12] = ss3.ActiveSheet.Cells[i, 11].Text;
+                        appExcel.Cells[23 + i, 13] = ss3.ActiveSheet.Cells[i, 12].Text;
+                        appExcel.Cells[23 + i, 14] = ss3.ActiveSheet.Cells[i, 13].Text;
+                        appExcel.Cells[23 + i, 15] = ss3.ActiveSheet.Cells[i, 14].Text;
+                        appExcel.Cells[23 + i, 16] = ss3.ActiveSheet.Cells[i, 15].Text;
+                        appExcel.Cells[23 + i, 17] = ss3.ActiveSheet.Cells[i, 16].Text;
+                        appExcel.Cells[23 + i, 18] = ss3.ActiveSheet.Cells[i, 17].Text;
+
+                        appExcel.Cells[23 + i, 20] = ss3.ActiveSheet.Cells[i, 19].Text;
+                        appExcel.Cells[23 + i, 21] = ss3.ActiveSheet.Cells[i, 20].Text;
+                        appExcel.Cells[23 + i, 22] = ss3.ActiveSheet.Cells[i, 21].Text;
+                        appExcel.Cells[23 + i, 23] = ss3.ActiveSheet.Cells[i, 22].Text;
+                        appExcel.Cells[23 + i, 24] = ss3.ActiveSheet.Cells[i, 23].Text;
+                        appExcel.Cells[23 + i, 25] = ss3.ActiveSheet.Cells[i, 24].Text;
+                        appExcel.Cells[23 + i, 26] = ss3.ActiveSheet.Cells[i, 25].Text;
+                        appExcel.Cells[23 + i, 27] = ss3.ActiveSheet.Cells[i, 26].Text;
+                        appExcel.Cells[23 + i, 28] = ss3.ActiveSheet.Cells[i, 27].Text;
+                        appExcel.Cells[23 + i, 29] = ss3.ActiveSheet.Cells[i, 28].Text; 
+                    }
+                    if (i >= 38 && i <= 47)
+                    {
+                        appExcel.Cells[23 + i, 25] = ss3.ActiveSheet.Cells[i, 24].Text;
+                        appExcel.Cells[23 + i, 29] = ss3.ActiveSheet.Cells[i, 28].Text; 
+
+                    }
+            }
+
+
+            appExcel.Cells[72, 2] = "制表日期: " + DateTime.Now.ToString("yyyy") + "年" + DateTime.Now.ToString("MM") + "月" + DateTime.Now.ToString("dd") + "日"; 
+            // appExcel.Cells[83, 12] = "制表人：" + GeneralCommon.sUserID;
+            appExcel.Cells[72, 23] = "制表人：" + GeneralCommon.sUserID;
+            appExcel.Visible = true;
+            appExcel = null;
+
+        }
+
 
 
 
