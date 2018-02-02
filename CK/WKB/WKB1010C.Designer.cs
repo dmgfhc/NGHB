@@ -259,7 +259,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 73);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1200, 573);
+            this.groupBox2.Size = new System.Drawing.Size(1200, 561);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
@@ -271,7 +271,7 @@
             this.ss1.Name = "ss1";
             this.ss1.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
             this.ss1_Sheet1});
-            this.ss1.Size = new System.Drawing.Size(1194, 552);
+            this.ss1.Size = new System.Drawing.Size(1194, 540);
             this.ss1.TabIndex = 0;
             this.ss1.CellClick += new FarPoint.Win.Spread.CellClickEventHandler(this.ss1_CellClick);
             this.ss1.CellDoubleClick += new FarPoint.Win.Spread.CellClickEventHandler(this.ss_CellDoubleClick);
@@ -283,7 +283,7 @@
             // 
             // WKB1010C
             // 
-            this.ClientSize = new System.Drawing.Size(1200, 646);
+            this.ClientSize = new System.Drawing.Size(1200, 634);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "WKB1010C";
