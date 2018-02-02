@@ -334,7 +334,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "CKG2060C";
             this.Text = "中板厂生产工作记录表_CKG2060C";
-            this.Load += new System.EventHandler(this.WKC1030C_Load);
+            this.Load += new System.EventHandler(this.CKG2060C_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ss2)).EndInit();
