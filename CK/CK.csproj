@@ -201,8 +201,11 @@
     <Compile Include="CKP\CKP1010C.Designer.cs">
       <DependentUpon>CKP1010C.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainMenu\MainMenu.cs">
+    <Compile Include="CKP\CKP1310C.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CKP\CKP1310C.Designer.cs">
+      <DependentUpon>CKP1310C.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Application.Designer.cs">
@@ -287,9 +290,8 @@
     <EmbeddedResource Include="CKP\CKP1010C.resx">
       <DependentUpon>CKP1010C.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainMenu\MainMenu.resx">
-      <DependentUpon>MainMenu.cs</DependentUpon>
-      <SubType>Designer</SubType>
+    <EmbeddedResource Include="CKP\CKP1310C.resx">
+      <DependentUpon>CKP1310C.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -377,6 +379,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\L3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MainMenu\" />
   </ItemGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
