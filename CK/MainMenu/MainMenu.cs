@@ -103,6 +103,8 @@ namespace CK
         private MenuItem CKG2070C;
         private MenuItem CKP1010C;
         private MenuItem CKG2060C;
+        private MenuItem CKP1310C;
+        private MenuItem CKP1312C;
         //private MenuItem menuItem4;
         //private MenuItem menuItem7;
 		///'''fdfdsfdsfds
@@ -252,6 +254,8 @@ namespace CK
             this.menuItem12 = new System.Windows.Forms.MenuItem();
             this.CKP1010C = new System.Windows.Forms.MenuItem();
             this.CKG2060C = new System.Windows.Forms.MenuItem();
+            this.CKP1310C = new System.Windows.Forms.MenuItem();
+            this.CKP1312C = new System.Windows.Forms.MenuItem();
             this.WKB1010C = new System.Windows.Forms.MenuItem();
             this.WKB1020C = new System.Windows.Forms.MenuItem();
             this.menuItem3 = new System.Windows.Forms.MenuItem();
@@ -474,6 +478,8 @@ namespace CK
             this.menuItem12.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.CKP1010C,
             this.CKG2060C,
+            this.CKP1310C,
+            this.CKP1312C,
             this.WKB1010C,
             this.WKB1020C,
             this.menuItem3});
@@ -491,21 +497,33 @@ namespace CK
             resources.ApplyResources(this.CKG2060C, "CKG2060C");
             this.CKG2060C.Click += new System.EventHandler(this.CKG2060C_Click);
             // 
+            // CKP1310C
+            // 
+            this.CKP1310C.Index = 2;
+            resources.ApplyResources(this.CKP1310C, "CKP1310C");
+            this.CKP1310C.Click += new System.EventHandler(this.CKP1310C_Click);
+            // 
+            // CKP1312C
+            // 
+            this.CKP1312C.Index = 3;
+            resources.ApplyResources(this.CKP1312C, "CKP1312C");
+            this.CKP1312C.Click += new System.EventHandler(this.CKP1312C_Click);
+            // 
             // WKB1010C
             // 
-            this.WKB1010C.Index = 2;
+            this.WKB1010C.Index = 4;
             resources.ApplyResources(this.WKB1010C, "WKB1010C");
             this.WKB1010C.Click += new System.EventHandler(this.WKB1010C_Click);
             // 
             // WKB1020C
             // 
-            this.WKB1020C.Index = 3;
+            this.WKB1020C.Index = 5;
             resources.ApplyResources(this.WKB1020C, "WKB1020C");
             this.WKB1020C.Click += new System.EventHandler(this.WKB1020C_Click);
             // 
             // menuItem3
             // 
-            this.menuItem3.Index = 4;
+            this.menuItem3.Index = 6;
             resources.ApplyResources(this.menuItem3, "menuItem3");
             this.menuItem3.Click += new System.EventHandler(this.WKB1030C_Click);
             // 
@@ -1835,6 +1853,31 @@ namespace CK
                 CKG2060C.WindowState = FormWindowState.Maximized;
 
             }
+        }
+
+        private void CKP1310C_Click(object sender, EventArgs e)
+        {
+            if (!GeneralCommon.Gf_IsFormLoad("CKP1310C"))
+            {
+                CKP1310C CKP1310C = new CKP1310C();
+                CKP1310C.MdiParent = this;
+                CKP1310C.Show();
+                CKP1310C.WindowState = FormWindowState.Maximized;
+
+            }
+        }
+
+        private void CKP1312C_Click(object sender, EventArgs e)
+        {
+            if (!GeneralCommon.Gf_IsFormLoad("CKP1312C"))
+            {
+                CKP1312C CKP1312C = new CKP1312C();
+                CKP1312C.MdiParent = this;
+                CKP1312C.Show();
+                CKP1312C.WindowState = FormWindowState.Maximized;
+
+            }
+
         }
 
        
