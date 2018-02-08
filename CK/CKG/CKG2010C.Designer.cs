@@ -185,6 +185,7 @@
             // 
             // cmd_roll_mana
             // 
+            this.cmd_roll_mana.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmd_roll_mana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmd_roll_mana.Font = new System.Drawing.Font("宋体", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmd_roll_mana.ForeColor = System.Drawing.Color.Blue;
@@ -199,6 +200,7 @@
             // 
             // cmd_abnormal_send
             // 
+            this.cmd_abnormal_send.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmd_abnormal_send.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmd_abnormal_send.Font = new System.Drawing.Font("宋体", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmd_abnormal_send.ForeColor = System.Drawing.Color.Red;

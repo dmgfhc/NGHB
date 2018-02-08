@@ -160,6 +160,7 @@
             // 
             // Cmd_Edit
             // 
+            this.Cmd_Edit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cmd_Edit.Location = new System.Drawing.Point(932, 10);
             this.Cmd_Edit.Name = "Cmd_Edit";
             this.Cmd_Edit.Size = new System.Drawing.Size(75, 31);

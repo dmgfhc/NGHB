@@ -118,4 +118,3 @@ C:\Users\HAN\Desktop\github\NGHB\CommonClass\obj\Debug\CommonClass.csproj.Genera
 C:\Users\HAN\Desktop\github\NGHB\CommonClass\obj\Debug\CommonClass.dll.licenses
 C:\Users\HAN\Desktop\github\NGHB\CommonClass\obj\Debug\CommonClass.dll
 C:\Users\HAN\Desktop\github\NGHB\CommonClass\obj\Debug\CommonClass.pdb
-C:\Users\HAN\Desktop\github\NGHB\CommonClass\obj\Debug\CommonClass.csprojResolveAssemblyReference.cache

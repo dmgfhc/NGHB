@@ -846,24 +846,14 @@ namespace CG
 
         private void SCmd2_Click(object sender, EventArgs e)
         {
-            if (!GeneralCommon.Gf_IsFormLoad("LoadExcel"))
-            {
-                LoadExcel LoadExcel = new LoadExcel();
-                LoadExcel.MdiParent = GeneralCommon.MDIMain;
-                LoadExcel.Show();
-                LoadExcel.WindowState = FormWindowState.Normal;
-            }
+            LoadExcel LoadExcel = new LoadExcel();
+            LoadExcel.ShowDialog();
         }
 
         private void SCmd3_Click(object sender, EventArgs e)
         {
-            if (!GeneralCommon.Gf_IsFormLoad("LoadExcel"))
-            {
-                LoadExcel LoadExcel = new LoadExcel();
-                LoadExcel.MdiParent = GeneralCommon.MDIMain;
-                LoadExcel.Show();
-                LoadExcel.WindowState = FormWindowState.Normal;
-            }
+            LoadExcel LoadExcel = new LoadExcel();
+            LoadExcel.ShowDialog();
         }
 
         private void Cmd_Edit_Click(object sender, EventArgs e)

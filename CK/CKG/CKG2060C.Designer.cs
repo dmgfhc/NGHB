@@ -82,6 +82,7 @@
             // 
             // Cmd_Edit
             // 
+            this.Cmd_Edit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cmd_Edit.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.Cmd_Edit.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Cmd_Edit.Location = new System.Drawing.Point(484, 2);

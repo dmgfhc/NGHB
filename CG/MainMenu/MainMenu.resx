@@ -149,7 +149,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAC2
-        GwAAAk1TRnQBSQFMAgEBDAEAARwBCAEcAQgBKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        GwAAAk1TRnQBSQFMAgEBDAEAASQBCAEkAQgBKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABoAMAAXgDAAEBAQABCAYAAUsYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -273,13 +273,6 @@
   <metadata name="MainMenu1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>551, 17</value>
   </metadata>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="MainMenu1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="menuItem27.Text" xml:space="preserve">
-    <value>板坯库管理</value>
-  </data>
   <data name="CGA2010C.Text" xml:space="preserve">
     <value>板坯库库存修改及查询界面_CGA2010C</value>
   </data>
@@ -322,8 +315,8 @@
   <data name="CGA3000C.Text" xml:space="preserve">
     <value>板坯检验录入界面_CGA3000C</value>
   </data>
-  <data name="menuItem9.Text" xml:space="preserve">
-    <value>轧钢作业实绩管理</value>
+  <data name="menuItem27.Text" xml:space="preserve">
+    <value>板坯库管理</value>
   </data>
   <data name="CGB2010C.Text" xml:space="preserve">
     <value>加热炉装炉作业实绩查询及修改界面_CGB2010C</value>
@@ -346,8 +339,8 @@
   <data name="CGC2060C.Text" xml:space="preserve">
     <value>母板分段剪实绩处理_CGC2060C</value>
   </data>
-  <data name="menuItem10.Text" xml:space="preserve">
-    <value>精整作业实绩管理</value>
+  <data name="menuItem9.Text" xml:space="preserve">
+    <value>轧钢作业实绩管理</value>
   </data>
   <data name="CGD2080C.Text" xml:space="preserve">
     <value>标识（标印、标签）打印信息发送界面_CGD2080C</value>
@@ -403,8 +396,8 @@
   <data name="AGC2051C.Text" xml:space="preserve">
     <value>钢板分板实绩修改界面_AGC2051C</value>
   </data>
-  <data name="menuItem21.Text" xml:space="preserve">
-    <value>钢板库管理</value>
+  <data name="menuItem10.Text" xml:space="preserve">
+    <value>精整作业实绩管理</value>
   </data>
   <data name="CGE2020C.Text" xml:space="preserve">
     <value>在线钢板入库界面_CGE2020C</value>
@@ -418,8 +411,8 @@
   <data name="AGC3020C.Text" xml:space="preserve">
     <value>产品退判查询_AGC3020C</value>
   </data>
-  <data name="menuItem12.Text" xml:space="preserve">
-    <value>轧辊管理</value>
+  <data name="menuItem21.Text" xml:space="preserve">
+    <value>钢板库管理</value>
   </data>
   <data name="CGF2010C.Text" xml:space="preserve">
     <value>轧辊、轴承座和轴承的入库、查询及修改界面_CGF2010C</value>
@@ -457,8 +450,8 @@
   <data name="CGF2090C.Text" xml:space="preserve">
     <value>轧辊堆焊实绩查询及修改界面_CGF2090C</value>
   </data>
-  <data name="menuItem28.Text" xml:space="preserve">
-    <value>作业指示管理</value>
+  <data name="menuItem12.Text" xml:space="preserve">
+    <value>轧辊管理</value>
   </data>
   <data name="CGG2040C.Text" xml:space="preserve">
     <value>轧钢计划查询界面_CGG2040C</value>
@@ -469,8 +462,8 @@
   <data name="CGD2070C.Text" xml:space="preserve">
     <value>录入精整作业指示_CGD2070C</value>
   </data>
-  <data name="menuItem23.Text" xml:space="preserve">
-    <value>各种实绩查询</value>
+  <data name="menuItem28.Text" xml:space="preserve">
+    <value>作业指示管理</value>
   </data>
   <data name="CGT2000C.Text" xml:space="preserve">
     <value>加热炉实绩查询_CGT2000C</value>
@@ -514,8 +507,8 @@
   <data name="CGT2200C.Text" xml:space="preserve">
     <value>中板图像识别实绩查询_CGT2200C</value>
   </data>
-  <data name="menuItem29.Text" xml:space="preserve">
-    <value>轧线运行实绩</value>
+  <data name="menuItem23.Text" xml:space="preserve">
+    <value>各种实绩查询</value>
   </data>
   <data name="CGH2020C.Text" xml:space="preserve">
     <value>轧钢生产线停机实绩查询及修改界面_CGH2020C</value>
@@ -523,18 +516,14 @@
   <data name="CGH2030C.Text" xml:space="preserve">
     <value>公辅材料使用实绩查询及修改界面_CGH2030C</value>
   </data>
-  <data name="menuItem30.Text" xml:space="preserve">
-    <value>其他</value>
+  <data name="menuItem29.Text" xml:space="preserve">
+    <value>轧线运行实绩</value>
   </data>
   <data name="CGT2090C.Text" xml:space="preserve">
     <value>板坯未热装原因查询及录入_CGT2090C</value>
   </data>
-  <data name="Mnu_Control.Text" xml:space="preserve">
-    <value>Control_Key</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Mnu_Control.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="menuItem30.Text" xml:space="preserve">
+    <value>其他</value>
   </data>
   <data name="Mnu_Clear.Text" xml:space="preserve">
     <value>Clear</value>
@@ -566,9 +555,6 @@
   <data name="MenuItem40.Text" xml:space="preserve">
     <value>-</value>
   </data>
-  <data name="Mnu_Copy.Text" xml:space="preserve">
-    <value>Copy</value>
-  </data>
   <data name="Mnu_ScreenCopy.Text" xml:space="preserve">
     <value>Screen Copy</value>
   </data>
@@ -578,8 +564,8 @@
   <data name="Mnu_SheetCopy.Text" xml:space="preserve">
     <value>Sheet Copy</value>
   </data>
-  <data name="Mnu_Paste.Text" xml:space="preserve">
-    <value>Paste</value>
+  <data name="Mnu_Copy.Text" xml:space="preserve">
+    <value>Copy</value>
   </data>
   <data name="Mnu_ScreenPaste.Text" xml:space="preserve">
     <value>Screen Paste</value>
@@ -589,6 +575,9 @@
   </data>
   <data name="Mnu_SheetPaste.Text" xml:space="preserve">
     <value>Sheet Paste</value>
+  </data>
+  <data name="Mnu_Paste.Text" xml:space="preserve">
+    <value>Paste</value>
   </data>
   <data name="MenuItem41.Text" xml:space="preserve">
     <value>-</value>
@@ -605,10 +594,11 @@
   <data name="Mnu_Exit.Text" xml:space="preserve">
     <value>Exit</value>
   </data>
-  <data name="MenuItem1.Text" xml:space="preserve">
-    <value>Prototype</value>
+  <data name="Mnu_Control.Text" xml:space="preserve">
+    <value>Control_Key</value>
   </data>
-  <data name="MenuItem1.Visible" type="System.Boolean, mscorlib">
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Mnu_Control.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="MenuItem17.Text" xml:space="preserve">
@@ -623,8 +613,11 @@
   <data name="MenuItem5.Text" xml:space="preserve">
     <value>FORMBASE</value>
   </data>
-  <data name="Mnu_Windows.Text" xml:space="preserve">
-    <value>窗口管理</value>
+  <data name="MenuItem1.Text" xml:space="preserve">
+    <value>Prototype</value>
+  </data>
+  <data name="MenuItem1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="Mnu_Horiz.Text" xml:space="preserve">
     <value>水平排列</value>
@@ -635,6 +628,13 @@
   <data name="Mnu_Cascade.Text" xml:space="preserve">
     <value>层叠排列</value>
   </data>
+  <data name="Mnu_Windows.Text" xml:space="preserve">
+    <value>窗口管理</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="MainMenu1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="StatusBar1.Font" type="System.Drawing.Font, System.Drawing">
     <value>宋体, 9.75pt, style=Bold</value>
@@ -643,28 +643,7 @@
     <value>NoControl</value>
   </data>
   <data name="StatusBar1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 399</value>
-  </data>
-  <data name="StatusBar1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1024, 22</value>
-  </data>
-  <data name="StatusBar1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="StatusBar1.Text" xml:space="preserve">
-    <value>StatusBar1</value>
-  </data>
-  <data name="&gt;&gt;StatusBar1.Name" xml:space="preserve">
-    <value>StatusBar1</value>
-  </data>
-  <data name="&gt;&gt;StatusBar1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.StatusBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;StatusBar1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;StatusBar1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0, 379</value>
   </data>
   <data name="StatusBarPanel1.Name" xml:space="preserve">
     <value>StatusBarPanel1</value>
@@ -748,6 +727,27 @@
   </data>
   <data name="statusBarPanel5.Name" xml:space="preserve">
     <value>statusBarPanel5</value>
+  </data>
+  <data name="StatusBar1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1024, 22</value>
+  </data>
+  <data name="StatusBar1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="StatusBar1.Text" xml:space="preserve">
+    <value>StatusBar1</value>
+  </data>
+  <data name="&gt;&gt;StatusBar1.Name" xml:space="preserve">
+    <value>StatusBar1</value>
+  </data>
+  <data name="&gt;&gt;StatusBar1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;StatusBar1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;StatusBar1.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <metadata name="tme_current.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>658, 17</value>
@@ -896,11 +896,11 @@
   <metadata name="MainMenu2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 54</value>
   </metadata>
-  <data name="MainMenu2.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
   <data name="MenuItem22.Text" xml:space="preserve">
     <value>标准</value>
+  </data>
+  <data name="MainMenu2.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
   </data>
   <metadata name="ImageList2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>250, 54</value>
@@ -910,7 +910,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAC2
-        GwAAAk1TRnQBSQFMAgEBDAEAARwBCAEcAQgBKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        GwAAAk1TRnQBSQFMAgEBDAEAASQBCAEkAQgBKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABoAMAAXgDAAEBAQABCAYAAUsYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -1039,7 +1039,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABi
-        GwAAAk1TRnQBSQFMAgEBDAEAARwBCAEcAQgBKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        GwAAAk1TRnQBSQFMAgEBDAEAASQBCAEkAQgBKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABoAMAAXgDAAEBAQABCAYAAUsYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -1165,7 +1165,7 @@
     <value>75</value>
   </metadata>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1024, 421</value>
+    <value>1024, 401</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>宋体, 9.75pt</value>

@@ -201,6 +201,12 @@
     <Compile Include="CKP\CKP1010C.Designer.cs">
       <DependentUpon>CKP1010C.cs</DependentUpon>
     </Compile>
+    <Compile Include="CKP\CKP1020C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CKP\CKP1020C.Designer.cs">
+      <DependentUpon>CKP1020C.cs</DependentUpon>
+    </Compile>
     <Compile Include="CKP\CKP1310C.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +225,12 @@
     <Compile Include="CKP\CKP1313C.Designer.cs">
       <DependentUpon>CKP1313C.cs</DependentUpon>
     </Compile>
+    <Compile Include="CKP\CKP1311C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CKP\CKP1311C.Designer.cs">
+      <DependentUpon>CKP1311C.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu\MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,48 +248,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <Compile Include="WKB\WKB1010C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WKB\WKB1010C.Designer.cs">
-      <DependentUpon>WKB1010C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="WKB\WKB1020C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WKB\WKB1020C.Designer.cs">
-      <DependentUpon>WKB1020C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="WKB\WKB1030C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WKB\WKB1030C.Designer.cs">
-      <DependentUpon>WKB1030C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="WKC\WKC1010C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WKC\WKC1010C.Designer.cs">
-      <DependentUpon>WKC1010C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="WKC\WKC1020C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WKC\WKC1020C.Designer.cs">
-      <DependentUpon>WKC1020C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="WKC\WKC1030C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WKC\WKC1030C.Designer.cs">
-      <DependentUpon>WKC1030C.cs</DependentUpon>
-    </Compile>
-    <Compile Include="WKD\WKD1010C.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WKD\WKD1010C.Designer.cs">
-      <DependentUpon>WKD1010C.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -305,6 +275,9 @@
     <EmbeddedResource Include="CKP\CKP1010C.resx">
       <DependentUpon>CKP1010C.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CKP\CKP1020C.resx">
+      <DependentUpon>CKP1020C.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CKP\CKP1310C.resx">
       <DependentUpon>CKP1310C.cs</DependentUpon>
     </EmbeddedResource>
@@ -313,6 +286,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CKP\CKP1313C.resx">
       <DependentUpon>CKP1313C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CKP\CKP1311C.resx">
+      <DependentUpon>CKP1311C.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
@@ -323,27 +299,6 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WKB\WKB1010C.resx">
-      <DependentUpon>WKB1010C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WKB\WKB1020C.resx">
-      <DependentUpon>WKB1020C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WKB\WKB1030C.resx">
-      <DependentUpon>WKB1030C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WKC\WKC1010C.resx">
-      <DependentUpon>WKC1010C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WKC\WKC1020C.resx">
-      <DependentUpon>WKC1020C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WKC\WKC1030C.resx">
-      <DependentUpon>WKC1030C.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WKD\WKD1010C.resx">
-      <DependentUpon>WKD1010C.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

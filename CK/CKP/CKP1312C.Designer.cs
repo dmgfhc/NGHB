@@ -76,6 +76,7 @@
             // 
             // Cmd_Edit
             // 
+            this.Cmd_Edit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Cmd_Edit.Font = new System.Drawing.Font("宋体", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Cmd_Edit.Location = new System.Drawing.Point(524, 9);
             this.Cmd_Edit.Name = "Cmd_Edit";
@@ -138,7 +139,6 @@
             this.ss1_Sheet1.SheetName = "Sheet1";
             // Formulas and custom names must be loaded with R1C1 reference style
             this.ss1_Sheet1.ReferenceStyle = FarPoint.Win.Spread.Model.ReferenceStyle.R1C1;
-            this.ss1_Sheet1.ColumnFooterSheetCornerStyle.NoteIndicatorColor = System.Drawing.Color.Red;
             this.ss1_Sheet1.DefaultStyle.ForeColor = System.Drawing.Color.White;
             this.ss1_Sheet1.DefaultStyle.NoteIndicatorColor = System.Drawing.Color.Red;
             this.ss1_Sheet1.DefaultStyle.Parent = "DataAreaDefault";
@@ -170,7 +170,6 @@
             this.ss2_Sheet1.SheetName = "Sheet1";
             // Formulas and custom names must be loaded with R1C1 reference style
             this.ss2_Sheet1.ReferenceStyle = FarPoint.Win.Spread.Model.ReferenceStyle.R1C1;
-            this.ss2_Sheet1.ColumnFooterSheetCornerStyle.NoteIndicatorColor = System.Drawing.Color.Red;
             this.ss2_Sheet1.DefaultStyle.ForeColor = System.Drawing.Color.White;
             this.ss2_Sheet1.DefaultStyle.NoteIndicatorColor = System.Drawing.Color.Red;
             this.ss2_Sheet1.DefaultStyle.Parent = "DataAreaDefault";
@@ -202,7 +201,6 @@
             this.ss3_Sheet1.SheetName = "Sheet1";
             // Formulas and custom names must be loaded with R1C1 reference style
             this.ss3_Sheet1.ReferenceStyle = FarPoint.Win.Spread.Model.ReferenceStyle.R1C1;
-            this.ss3_Sheet1.ColumnFooterSheetCornerStyle.NoteIndicatorColor = System.Drawing.Color.Red;
             this.ss3_Sheet1.DefaultStyle.ForeColor = System.Drawing.Color.White;
             this.ss3_Sheet1.DefaultStyle.NoteIndicatorColor = System.Drawing.Color.Red;
             this.ss3_Sheet1.DefaultStyle.Parent = "DataAreaDefault";
@@ -234,7 +232,6 @@
             this.ss4_Sheet1.SheetName = "Sheet1";
             // Formulas and custom names must be loaded with R1C1 reference style
             this.ss4_Sheet1.ReferenceStyle = FarPoint.Win.Spread.Model.ReferenceStyle.R1C1;
-            this.ss4_Sheet1.ColumnFooterSheetCornerStyle.NoteIndicatorColor = System.Drawing.Color.Red;
             this.ss4_Sheet1.DefaultStyle.ForeColor = System.Drawing.Color.White;
             this.ss4_Sheet1.DefaultStyle.NoteIndicatorColor = System.Drawing.Color.Red;
             this.ss4_Sheet1.DefaultStyle.Parent = "DataAreaDefault";
@@ -266,7 +263,6 @@
             this.ss5_Sheet1.SheetName = "Sheet1";
             // Formulas and custom names must be loaded with R1C1 reference style
             this.ss5_Sheet1.ReferenceStyle = FarPoint.Win.Spread.Model.ReferenceStyle.R1C1;
-            this.ss5_Sheet1.ColumnFooterSheetCornerStyle.NoteIndicatorColor = System.Drawing.Color.Red;
             this.ss5_Sheet1.DefaultStyle.ForeColor = System.Drawing.Color.White;
             this.ss5_Sheet1.DefaultStyle.NoteIndicatorColor = System.Drawing.Color.Red;
             this.ss5_Sheet1.DefaultStyle.Parent = "DataAreaDefault";

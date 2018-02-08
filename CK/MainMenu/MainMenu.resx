@@ -149,7 +149,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAC2
-        GwAAAk1TRnQBSQFMAgEBDAEAASQBAQEkAQEBKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        GwAAAk1TRnQBSQFMAgEBDAEAAVQBAQFUAQEBKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABoAMAAXgDAAEBAQABCAYAAUsYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -292,7 +292,7 @@
     <value>轧钢计划查询界面_CKG2070C</value>
   </data>
   <data name="menuItem4.Text" xml:space="preserve">
-    <value>作业指示管理</value>
+    <value>轧钢查询</value>
   </data>
   <data name="CKP1010C.Text" xml:space="preserve">
     <value>中板厂生产简报_CKP1010C</value>
@@ -306,32 +306,17 @@
   <data name="CKP1312C.Text" xml:space="preserve">
     <value>中板厂质量日报_CKP1312C</value>
   </data>
-  <data name="WKB1010C.Text" xml:space="preserve">
-    <value>生产线停机实绩管理界面_WKB1010C</value>
+  <data name="CKP1313C.Text" xml:space="preserve">
+    <value>中板厂生产质量简报_CKP1313C</value>
   </data>
-  <data name="WKB1020C.Text" xml:space="preserve">
-    <value>生产线公辅材料使用实绩管理界面_WKB1020C</value>
+  <data name="CKP1020C.Text" xml:space="preserve">
+    <value>中板厂订单完成情况简报_CKP1020C</value>
   </data>
-  <data name="menuItem3.Text" xml:space="preserve">
-    <value>废钢实绩查询及修改界面_WKB1030C</value>
+  <data name="CKP1311C.Text" xml:space="preserve">
+    <value>目标产量/作业时间录入界面_CKP1311C</value>
   </data>
   <data name="menuItem12.Text" xml:space="preserve">
     <value>生产统计查询</value>
-  </data>
-  <data name="menuItem21.Text" xml:space="preserve">
-    <value>宽厚板厂月作业计划查询及修改界面_WKC1010C</value>
-  </data>
-  <data name="menuItem10.Text" xml:space="preserve">
-    <value>宽厚板厂生产日报_WKC1020C</value>
-  </data>
-  <data name="menuItem23.Text" xml:space="preserve">
-    <value>宽厚板生产工作记录__WKC1030C</value>
-  </data>
-  <data name="menuItem24.Text" xml:space="preserve">
-    <value>生产报表管理</value>
-  </data>
-  <data name="menuItem9.Text" xml:space="preserve">
-    <value>钢种组维护_WKD1010C</value>
   </data>
   <data name="menuItem7.Text" xml:space="preserve">
     <value>其它</value>
@@ -718,7 +703,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAC2
-        GwAAAk1TRnQBSQFMAgEBDAEAASQBAQEkAQEBKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        GwAAAk1TRnQBSQFMAgEBDAEAAVQBAQFUAQEBKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABoAMAAXgDAAEBAQABCAYAAUsYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -847,7 +832,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABi
-        GwAAAk1TRnQBSQFMAgEBDAEAASQBAQEkAQEBKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        GwAAAk1TRnQBSQFMAgEBDAEAAVQBAQFUAQEBKAEAAR4BAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABoAMAAXgDAAEBAQABCAYAAUsYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -1172,58 +1157,28 @@
   <data name="&gt;&gt;CKP1312C.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;WKB1010C.Name" xml:space="preserve">
-    <value>WKB1010C</value>
+  <data name="&gt;&gt;CKP1313C.Name" xml:space="preserve">
+    <value>CKP1313C</value>
   </data>
-  <data name="&gt;&gt;WKB1010C.Type" xml:space="preserve">
+  <data name="&gt;&gt;CKP1313C.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;WKB1020C.Name" xml:space="preserve">
-    <value>WKB1020C</value>
+  <data name="&gt;&gt;CKP1020C.Name" xml:space="preserve">
+    <value>CKP1020C</value>
   </data>
-  <data name="&gt;&gt;WKB1020C.Type" xml:space="preserve">
+  <data name="&gt;&gt;CKP1020C.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;menuItem3.Name" xml:space="preserve">
-    <value>menuItem3</value>
+  <data name="&gt;&gt;CKP1311C.Name" xml:space="preserve">
+    <value>CKP1311C</value>
   </data>
-  <data name="&gt;&gt;menuItem3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuItem24.Name" xml:space="preserve">
-    <value>menuItem24</value>
-  </data>
-  <data name="&gt;&gt;menuItem24.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuItem21.Name" xml:space="preserve">
-    <value>menuItem21</value>
-  </data>
-  <data name="&gt;&gt;menuItem21.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuItem10.Name" xml:space="preserve">
-    <value>menuItem10</value>
-  </data>
-  <data name="&gt;&gt;menuItem10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuItem23.Name" xml:space="preserve">
-    <value>menuItem23</value>
-  </data>
-  <data name="&gt;&gt;menuItem23.Type" xml:space="preserve">
+  <data name="&gt;&gt;CKP1311C.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;menuItem7.Name" xml:space="preserve">
     <value>menuItem7</value>
   </data>
   <data name="&gt;&gt;menuItem7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuItem9.Name" xml:space="preserve">
-    <value>menuItem9</value>
-  </data>
-  <data name="&gt;&gt;menuItem9.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Mnu_Control.Name" xml:space="preserve">

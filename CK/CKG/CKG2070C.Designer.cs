@@ -31,7 +31,7 @@
             CommonClass.BControlFiledSetting bControlFiledSetting1 = new CommonClass.BControlFiledSetting();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CKG2070C));
             CommonClass.BControlFiledSetting bControlFiledSetting2 = new CommonClass.BControlFiledSetting();
-            CommonClass.BControlFiledSetting bControlFiledSetting5 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting3 = new CommonClass.BControlFiledSetting();
             this.TXT_MILL_STLGRD = new CommonClass.F4ETCR();
             this.TXT_STLGRD = new CommonClass.F4ETCR();
             this.TXT_STLGRD_NAME = new System.Windows.Forms.TextBox();
@@ -111,10 +111,10 @@
             // 
             bControlFiledSetting2.ColumnID = "STLGRD";
             bControlFiledSetting2.TargetControl = this.TXT_STLGRD;
-            bControlFiledSetting5.ColumnID = "STEEL_GRD_DETAIL";
-            bControlFiledSetting5.TargetControl = this.TXT_STLGRD_NAME;
+            bControlFiledSetting3.ColumnID = "STEEL_GRD_DETAIL";
+            bControlFiledSetting3.TargetControl = this.TXT_STLGRD_NAME;
             this.TXT_STLGRD.CustomSetting.Add(bControlFiledSetting2);
-            this.TXT_STLGRD.CustomSetting.Add(bControlFiledSetting5);
+            this.TXT_STLGRD.CustomSetting.Add(bControlFiledSetting3);
             this.TXT_STLGRD.InputControl = this.TXT_STLGRD;
             this.TXT_STLGRD.Location = new System.Drawing.Point(398, 14);
             this.TXT_STLGRD.MaxLength = 12;
@@ -253,6 +253,7 @@
             // 
             // CMD_CARD
             // 
+            this.CMD_CARD.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CMD_CARD.Location = new System.Drawing.Point(345, 106);
             this.CMD_CARD.Name = "CMD_CARD";
             this.CMD_CARD.Size = new System.Drawing.Size(80, 29);

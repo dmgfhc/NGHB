@@ -424,23 +424,35 @@ namespace CK
             ss2.ActiveSheet.RowHeader.Cells[1, 0].Text = "乙";
             ss2.ActiveSheet.RowHeader.Cells[2, 0].Text = "丙";
             ss2.ActiveSheet.RowHeader.Cells[3, 0].Text = "丁";
-            ss2.ActiveSheet.RowHeader.Cells[4, 0].Text = "合计";
+            ss2.ActiveSheet.RowHeader.Cells[4, 0].Text = "全厂";
 
             ss3.ActiveSheet.RowCount = 5;
             ss3.ActiveSheet.RowHeader.Cells[0, 0].Text = "甲";
             ss3.ActiveSheet.RowHeader.Cells[1, 0].Text = "乙";
             ss3.ActiveSheet.RowHeader.Cells[2, 0].Text = "丙";
             ss3.ActiveSheet.RowHeader.Cells[3, 0].Text = "丁";
-            ss3.ActiveSheet.RowHeader.Cells[4, 0].Text = "合计";
+            ss3.ActiveSheet.RowHeader.Cells[4, 0].Text = "全厂";
 
             ss4.ActiveSheet.RowCount = 5;
             ss4.ActiveSheet.RowHeader.Cells[0, 0].Text = "甲";
             ss4.ActiveSheet.RowHeader.Cells[1, 0].Text = "乙";
             ss4.ActiveSheet.RowHeader.Cells[2, 0].Text = "丙";
             ss4.ActiveSheet.RowHeader.Cells[3, 0].Text = "丁";
-            ss4.ActiveSheet.RowHeader.Cells[4, 0].Text = "合计";
+            ss4.ActiveSheet.RowHeader.Cells[4, 0].Text = "全厂";
 
-            ss5.ActiveSheet.RowCount = 1;
+            ss5.ActiveSheet.RowCount = 5;
+            ss5.ActiveSheet.RowHeader.Cells[0, 0].Text = "甲";
+            ss5.ActiveSheet.RowHeader.Cells[1, 0].Text = "乙";
+            ss5.ActiveSheet.RowHeader.Cells[2, 0].Text = "丙";
+            ss5.ActiveSheet.RowHeader.Cells[3, 0].Text = "丁";
+            ss5.ActiveSheet.RowHeader.Cells[4, 0].Text = "全厂";
+
+            ss6.ActiveSheet.RowCount = 5;
+            ss6.ActiveSheet.RowHeader.Cells[0, 0].Text = "甲";
+            ss6.ActiveSheet.RowHeader.Cells[1, 0].Text = "乙";
+            ss6.ActiveSheet.RowHeader.Cells[2, 0].Text = "丙";
+            ss6.ActiveSheet.RowHeader.Cells[3, 0].Text = "丁";
+            ss6.ActiveSheet.RowHeader.Cells[4, 0].Text = "全厂";
 
 
 
@@ -462,8 +474,6 @@ namespace CK
             {
                 Gf_Sp_Display2(GeneralCommon.M_CN1, ss2, MasterCommon.Gf_Ms_MakeQuery((string)(Sc2["P-R"]), "R", (Collection)Mc1["pControl"]), (Collection)Sc2["pColumn"], false);
                 Gf_Sp_Display2(GeneralCommon.M_CN1, ss3, MasterCommon.Gf_Ms_MakeQuery((string)(Sc3["P-R"]), "R", (Collection)Mc1["pControl"]), (Collection)Sc3["pColumn"], false);
-                Gf_Sp_Display2(GeneralCommon.M_CN1, ss4, MasterCommon.Gf_Ms_MakeQuery((string)(Sc4["P-R"]), "R", (Collection)Mc1["pControl"]), (Collection)Sc4["pColumn"], false);
-                Gf_Sp_Display3(GeneralCommon.M_CN1, ss5, MasterCommon.Gf_Ms_MakeQuery((string)(Sc5["P-R"]), "R", (Collection)Mc1["pControl"]), (Collection)Sc5["pColumn"], false);
             }
         }
 
@@ -996,6 +1006,12 @@ namespace CK
                 appExcel.Cells[6 + i, 22] = ss1.ActiveSheet.Cells[i, 19].Text;
                 appExcel.Cells[6 + i, 23] = ss1.ActiveSheet.Cells[i, 20].Text;
                 appExcel.Cells[6 + i, 24] = ss1.ActiveSheet.Cells[i, 21].Text;
+                appExcel.Cells[6 + i, 25] = ss1.ActiveSheet.Cells[i, 22].Text;
+                appExcel.Cells[6 + i, 26] = ss1.ActiveSheet.Cells[i, 23].Text;
+                appExcel.Cells[6 + i, 27] = ss1.ActiveSheet.Cells[i, 24].Text;
+                appExcel.Cells[6 + i, 28] = ss1.ActiveSheet.Cells[i, 25].Text;
+                appExcel.Cells[6 + i, 29] = ss1.ActiveSheet.Cells[i, 26].Text;
+                appExcel.Cells[6 + i, 30] = ss1.ActiveSheet.Cells[i, 27].Text;
             }
 
             for (int i = 0; i < ss2.ActiveSheet.RowCount; i++)
@@ -1022,6 +1038,15 @@ namespace CK
                 appExcel.Cells[18 + i, 21] = ss2.ActiveSheet.Cells[i, 19].Text;
                 appExcel.Cells[18 + i, 22] = ss2.ActiveSheet.Cells[i, 20].Text;
                 appExcel.Cells[18 + i, 23] = ss2.ActiveSheet.Cells[i, 21].Text;
+                appExcel.Cells[18 + i, 24] = ss2.ActiveSheet.Cells[i, 22].Text;
+                appExcel.Cells[18 + i, 25] = ss2.ActiveSheet.Cells[i, 23].Text;
+                appExcel.Cells[18 + i, 26] = ss2.ActiveSheet.Cells[i, 24].Text;
+                appExcel.Cells[18 + i, 27] = ss2.ActiveSheet.Cells[i, 25].Text;
+                appExcel.Cells[18 + i, 28] = ss2.ActiveSheet.Cells[i, 26].Text;
+                appExcel.Cells[18 + i, 29] = ss2.ActiveSheet.Cells[i, 27].Text;
+                appExcel.Cells[18 + i, 30] = ss2.ActiveSheet.Cells[i, 28].Text;
+                appExcel.Cells[18 + i, 31] = ss2.ActiveSheet.Cells[i, 29].Text;
+                appExcel.Cells[18 + i, 32] = ss2.ActiveSheet.Cells[i, 30].Text;
             }
 
             for (int i = 0; i < ss3.ActiveSheet.RowCount; i++)
@@ -1048,6 +1073,14 @@ namespace CK
                 appExcel.Cells[25 + i, 21] = ss3.ActiveSheet.Cells[i, 19].Text;
                 appExcel.Cells[25 + i, 22] = ss3.ActiveSheet.Cells[i, 20].Text;
                 appExcel.Cells[25 + i, 23] = ss3.ActiveSheet.Cells[i, 21].Text;
+                appExcel.Cells[25 + i, 24] = ss3.ActiveSheet.Cells[i, 22].Text;
+                appExcel.Cells[25 + i, 25] = ss3.ActiveSheet.Cells[i, 23].Text;
+                appExcel.Cells[25 + i, 26] = ss3.ActiveSheet.Cells[i, 24].Text;
+                appExcel.Cells[25 + i, 27] = ss3.ActiveSheet.Cells[i, 25].Text;
+                appExcel.Cells[25 + i, 28] = ss3.ActiveSheet.Cells[i, 26].Text;
+                appExcel.Cells[25 + i, 29] = ss3.ActiveSheet.Cells[i, 27].Text;
+                appExcel.Cells[25 + i, 30] = ss3.ActiveSheet.Cells[i, 28].Text;
+                appExcel.Cells[25 + i, 31] = ss3.ActiveSheet.Cells[i, 29].Text;
 
             }
 
@@ -1075,6 +1108,14 @@ namespace CK
                 appExcel.Cells[32 + i, 21] = ss4.ActiveSheet.Cells[i, 19].Text;
                 appExcel.Cells[32 + i, 22] = ss4.ActiveSheet.Cells[i, 20].Text;
                 appExcel.Cells[32 + i, 23] = ss4.ActiveSheet.Cells[i, 21].Text;
+                appExcel.Cells[32 + i, 24] = ss4.ActiveSheet.Cells[i, 22].Text;
+                appExcel.Cells[32 + i, 25] = ss4.ActiveSheet.Cells[i, 23].Text;
+                appExcel.Cells[32 + i, 26] = ss4.ActiveSheet.Cells[i, 24].Text;
+                appExcel.Cells[32 + i, 27] = ss4.ActiveSheet.Cells[i, 25].Text;
+                appExcel.Cells[32 + i, 28] = ss4.ActiveSheet.Cells[i, 26].Text;
+                appExcel.Cells[32 + i, 29] = ss4.ActiveSheet.Cells[i, 27].Text;
+                appExcel.Cells[32 + i, 30] = ss4.ActiveSheet.Cells[i, 28].Text;
+                appExcel.Cells[32 + i, 31] = ss4.ActiveSheet.Cells[i, 29].Text;
 
             }
 
@@ -1098,6 +1139,18 @@ namespace CK
                 appExcel.Cells[39 + i, 17] = ss5.ActiveSheet.Cells[i, 15].Text;
                 appExcel.Cells[39 + i, 18] = ss5.ActiveSheet.Cells[i, 16].Text;
                 appExcel.Cells[39 + i, 19] = ss5.ActiveSheet.Cells[i, 17].Text;
+                appExcel.Cells[39 + i, 20] = ss5.ActiveSheet.Cells[i, 18].Text;
+                appExcel.Cells[39 + i, 21] = ss5.ActiveSheet.Cells[i, 19].Text;
+                appExcel.Cells[39 + i, 22] = ss5.ActiveSheet.Cells[i, 20].Text;
+                appExcel.Cells[39 + i, 23] = ss5.ActiveSheet.Cells[i, 21].Text;
+                appExcel.Cells[39 + i, 24] = ss5.ActiveSheet.Cells[i, 22].Text;
+                appExcel.Cells[39 + i, 25] = ss5.ActiveSheet.Cells[i, 23].Text;
+                appExcel.Cells[39 + i, 26] = ss5.ActiveSheet.Cells[i, 24].Text;
+                appExcel.Cells[39 + i, 27] = ss5.ActiveSheet.Cells[i, 25].Text;
+                appExcel.Cells[39 + i, 28] = ss5.ActiveSheet.Cells[i, 26].Text;
+                appExcel.Cells[39 + i, 29] = ss5.ActiveSheet.Cells[i, 27].Text;
+                appExcel.Cells[39 + i, 30] = ss5.ActiveSheet.Cells[i, 28].Text;
+                appExcel.Cells[39 + i, 31] = ss5.ActiveSheet.Cells[i, 29].Text;
 
             }
 

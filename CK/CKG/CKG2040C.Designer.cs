@@ -301,6 +301,7 @@
             // 
             // cmd_mill_exc
             // 
+            this.cmd_mill_exc.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmd_mill_exc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmd_mill_exc.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmd_mill_exc.ForeColor = System.Drawing.Color.Red;
