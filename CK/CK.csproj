@@ -195,6 +195,18 @@
     <Compile Include="CKH\CKH2010C.Designer.cs">
       <DependentUpon>CKH2010C.cs</DependentUpon>
     </Compile>
+    <Compile Include="CKP\AKT1030C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CKP\AKT1030C.Designer.cs">
+      <DependentUpon>AKT1030C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CKP\AKW2080C.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CKP\AKW2080C.Designer.cs">
+      <DependentUpon>AKW2080C.cs</DependentUpon>
+    </Compile>
     <Compile Include="CKP\CKP1010C.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -271,6 +283,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CKH\CKH2010C.resx">
       <DependentUpon>CKH2010C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CKP\AKT1030C.resx">
+      <DependentUpon>AKT1030C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CKP\AKW2080C.resx">
+      <DependentUpon>AKW2080C.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CKP\CKP1010C.resx">
       <DependentUpon>CKP1010C.cs</DependentUpon>

@@ -299,7 +299,6 @@ namespace CG
 		public System.Windows.Forms.ImageList ImageList1;
 		[System.Diagnostics.DebuggerStepThrough()]private void InitializeComponent()
 		{
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.ContextMenu1 = new System.Windows.Forms.ContextMenu();
             this.Mnu_Acopy = new System.Windows.Forms.MenuItem();
@@ -309,8 +308,8 @@ namespace CG
             this.Mnu_Apaste = new System.Windows.Forms.MenuItem();
             this.Mnu_Mpaste = new System.Windows.Forms.MenuItem();
             this.Mnu_Spaste = new System.Windows.Forms.MenuItem();
-            this.ImageList0 = new System.Windows.Forms.ImageList(this.components);
-            this.MainMenu1 = new System.Windows.Forms.MainMenu(this.components);
+            this.ImageList0 = new System.Windows.Forms.ImageList();
+            this.MainMenu1 = new System.Windows.Forms.MainMenu();
             this.menuItem27 = new System.Windows.Forms.MenuItem();
             this.CGA2010C = new System.Windows.Forms.MenuItem();
             this.CGA2011C = new System.Windows.Forms.MenuItem();
@@ -434,7 +433,7 @@ namespace CG
             this.StatusBarPanel3 = new System.Windows.Forms.StatusBarPanel();
             this.StatusBarPanel4 = new System.Windows.Forms.StatusBarPanel();
             this.statusBarPanel5 = new System.Windows.Forms.StatusBarPanel();
-            this.tme_current = new System.Windows.Forms.Timer(this.components);
+            this.tme_current = new System.Windows.Forms.Timer();
             this.ContextMenu3 = new System.Windows.Forms.ContextMenu();
             this.Mnu_ColumnSort = new System.Windows.Forms.MenuItem();
             this.MenuItem11 = new System.Windows.Forms.MenuItem();
@@ -464,10 +463,10 @@ namespace CG
             this.Btn_Print = new System.Windows.Forms.ToolBarButton();
             this.Sep5 = new System.Windows.Forms.ToolBarButton();
             this.Btn_Exit = new System.Windows.Forms.ToolBarButton();
-            this.MainMenu2 = new System.Windows.Forms.MainMenu(this.components);
+            this.MainMenu2 = new System.Windows.Forms.MainMenu();
             this.MenuItem22 = new System.Windows.Forms.MenuItem();
-            this.ImageList2 = new System.Windows.Forms.ImageList(this.components);
-            this.ImageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.ImageList2 = new System.Windows.Forms.ImageList();
+            this.ImageList1 = new System.Windows.Forms.ImageList();
             ((System.ComponentModel.ISupportInitialize)(this.StatusBarPanel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatusBarPanel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatusBarPanel3)).BeginInit();

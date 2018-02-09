@@ -100,6 +100,8 @@ namespace CK
         private MenuItem CKP1313C;
         private MenuItem CKP1020C;
         private MenuItem CKP1311C;
+        private MenuItem AKT1030C;
+        private MenuItem AKW2080C;
         //private MenuItem menuItem4;
         //private MenuItem menuItem7;
 		///'''fdfdsfdsfds
@@ -328,6 +330,8 @@ namespace CK
             this.MenuItem22 = new System.Windows.Forms.MenuItem();
             this.ImageList2 = new System.Windows.Forms.ImageList(this.components);
             this.ImageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.AKT1030C = new System.Windows.Forms.MenuItem();
+            this.AKW2080C = new System.Windows.Forms.MenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.StatusBarPanel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatusBarPanel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatusBarPanel3)).BeginInit();
@@ -519,6 +523,9 @@ namespace CK
             // menuItem7
             // 
             this.menuItem7.Index = 2;
+            this.menuItem7.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.AKT1030C,
+            this.AKW2080C});
             resources.ApplyResources(this.menuItem7, "menuItem7");
             // 
             // Mnu_Control
@@ -995,6 +1002,18 @@ namespace CK
             this.ImageList1.Images.SetKeyName(9, "M10_1.gif");
             this.ImageList1.Images.SetKeyName(10, "M11_1.gif");
             this.ImageList1.Images.SetKeyName(11, "M12_1.gif");
+            // 
+            // AKT1030C
+            // 
+            this.AKT1030C.Index = 0;
+            resources.ApplyResources(this.AKT1030C, "AKT1030C");
+            this.AKT1030C.Click += new System.EventHandler(this.AKT1030C_Click);
+            // 
+            // AKW2080C
+            // 
+            this.AKW2080C.Index = 1;
+            resources.ApplyResources(this.AKW2080C, "AKW2080C");
+            this.AKW2080C.Click += new System.EventHandler(this.AKW2080C_Click);
             // 
             // MainMenu
             // 
@@ -1776,6 +1795,28 @@ namespace CK
                 CKP1311C.WindowState = FormWindowState.Maximized;
             }
 
+        }
+
+        private void AKT1030C_Click(object sender, EventArgs e)
+        {
+            if (!GeneralCommon.Gf_IsFormLoad("AKT1030C"))
+            {
+                AKT1030C AKT1030C = new AKT1030C();
+                AKT1030C.MdiParent = this;
+                AKT1030C.Show();
+                AKT1030C.WindowState = FormWindowState.Maximized;
+            }
+        }
+
+        private void AKW2080C_Click(object sender, EventArgs e)
+        {
+            if (!GeneralCommon.Gf_IsFormLoad("AKW2080C"))
+            {
+                AKW2080C AKW2080C = new AKW2080C();
+                AKW2080C.MdiParent = this;
+                AKW2080C.Show();
+                AKW2080C.WindowState = FormWindowState.Maximized;
+            }
         }
 
 

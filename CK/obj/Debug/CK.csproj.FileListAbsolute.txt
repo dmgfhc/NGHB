@@ -73,3 +73,5 @@ C:\Users\HAN\Desktop\github\NGHB\CK\obj\Debug\CK.CKP1312C.resources
 C:\Users\HAN\Desktop\github\NGHB\CK\obj\Debug\CK.CKP1313C.resources
 C:\Users\HAN\Desktop\github\NGHB\CK\obj\Debug\CK.CKP1020C.resources
 C:\Users\HAN\Desktop\github\NGHB\CK\obj\Debug\CK.CKP1311C.resources
+C:\Users\HAN\Desktop\github\NGHB\CK\obj\Debug\CK.AKT1030C.resources
+C:\Users\HAN\Desktop\github\NGHB\CK\obj\Debug\CK.AKW2080C.resources
