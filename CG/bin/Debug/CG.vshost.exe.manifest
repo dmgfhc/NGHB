@@ -117,14 +117,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CG.exe" size="1681920">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CG.exe" size="1691648">
       <assemblyIdentity name="CG" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>o1RoeUwKE5uVHOJ8HvL5ghmenkQ=</dsig:DigestValue>
+        <dsig:DigestValue>SJhC2RlrNEiCsdjg7rhVEnMUpMQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -136,7 +136,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>0Zvj8INfIcXyFACUjFvu+xrTxTw=</dsig:DigestValue>
+        <dsig:DigestValue>Z7TIEjOvORJyTLQ3WkM0oImr8HY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -172,7 +172,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>IIxTbxNAItBLRv5ra4B0Zjgrh+U=</dsig:DigestValue>
+        <dsig:DigestValue>HvbQUMVac/z6ByNidfvF/s8Cbsw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

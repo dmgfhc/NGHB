@@ -108,23 +108,7 @@ namespace CG
                     return;
                 }
             }
-            if (txt_f_addr.Text != "" && txt_f_addr.Text != "S0A0101" && txt_f_addr.Text != "S0Q0101")
-            {
-                if (GeneralCommon.Gf_CodeFind(GeneralCommon.M_CN1, "SELECT LOCATION FROM FP_STDYARD WHERE LOCATION = '" + txt_f_addr.Text + "' AND YARD_KND = '" + CBO_CUR_INV.Text + "'") == "")
-                {
-                    GeneralCommon.Gp_MsgBoxDisplay(txt_f_addr.Text + "垛位不正确...!!", "W", "警告");
-                    return;
-                }
-            }
-
-            if (txt_t_addr.Text != "" && txt_t_addr.Text != "S0A0101" && txt_t_addr.Text != "S0Q0101")
-            {
-                if (GeneralCommon.Gf_CodeFind(GeneralCommon.M_CN1, "SELECT LOCATION FROM FP_STDYARD WHERE LOCATION = '" + txt_t_addr.Text + "' AND YARD_KND = '" + CBO_CUR_INV.Text + "'") == "")
-                {
-                    GeneralCommon.Gp_MsgBoxDisplay(txt_t_addr.Text + "垛位不正确...!!", "W", "警告");
-                    return;
-                }
-            }
+           
 
    
 
@@ -492,41 +476,25 @@ namespace CG
         {
             if (txt_f_addr.Text != "")
             {
-                if (txt_f_addr.Text.Length == 7 && txt_f_addr.Text != "S0A0101" && txt_f_addr.Text != "S0Q0101")
+                if (txt_f_addr.Text.Length != 7)
                 {
-                    if (GeneralCommon.Gf_CodeFind(GeneralCommon.M_CN1, "SELECT LOCATION FROM FP_STDYARD WHERE LOCATION = '" + txt_f_addr.Text + "' AND YARD_KND = '" + CBO_CUR_INV.Text + "'") == "")
-                    {
-                        GeneralCommon.Gp_MsgBoxDisplay(txt_f_addr.Text + "垛位不正确...!!", "W", "警告");
-                        return;
-                    }
+                    GeneralCommon.Gp_MsgBoxDisplay(txt_f_addr.Text + "垛位不正确...!!", "W", "警告");
+                    return;
                 }
                 cbo_ccm_line.Visible = false;
-                if (txt_f_addr.Text == "S0A0101")
-                {
-                    cbo_ccm_line.Visible = true;
-                }
-                else if (txt_f_addr.Text != "S0A0101")
-                {
-                    cbo_ccm_line.Visible = false;
-                }
+                cbo_ccm_line.Visible = true;
             }
-            else
-                cbo_ccm_line.Visible = false;
-
         }
 
         private void txt_t_addr_TextChanged(object sender, EventArgs e)
         {
             if (txt_t_addr.Text != "")
             {
-                if (txt_t_addr.Text.Length == 7 && txt_t_addr.Text != "S0A0101" && txt_t_addr.Text != "S0Q0101")
+                if (txt_t_addr.Text.Length != 7)
                 {
-                    if (GeneralCommon.Gf_CodeFind(GeneralCommon.M_CN1, "SELECT LOCATION FROM FP_STDYARD WHERE LOCATION = '" + txt_t_addr.Text + "' AND YARD_KND = '" + CBO_CUR_INV.Text + "'") == "")
-                    {
                         GeneralCommon.Gp_MsgBoxDisplay(txt_f_addr.Text + "垛位不正确...!!", "W", "警告");
                         return;
-                    }
-                    txt_slab_no.Text = "";
+                        txt_slab_no.Text = "";
                 }
             }
         }

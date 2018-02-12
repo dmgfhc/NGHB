@@ -406,7 +406,7 @@
             this.txt_f_addr.Size = new System.Drawing.Size(71, 22);
             this.txt_f_addr.sJoin = "";
             this.txt_f_addr.sSqletc = "SELECT CD            \"代码\", CD_SHORT_NAME \"代码简称\",  CD_NAME       \"代码名称\", CD_SHORT_" +
-    "ENG  \"代码英文简称\", CD_FULL_ENG   \"代码英文名称\" FROM NISCO.ZP_CD WHERE CD_MANA_NO = \'F0043" +
+    "ENG  \"代码英文简称\", CD_FULL_ENG   \"代码英文名称\" FROM NISCO.ZP_CD WHERE CD_MANA_NO = \'F0033" +
     "\' AND CD like \'S%\'ORDER BY CD ASC";
             this.txt_f_addr.TabIndex = 552;
             this.txt_f_addr.TextChanged += new System.EventHandler(this.txt_f_addr_TextChanged);

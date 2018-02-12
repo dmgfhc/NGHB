@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            CommonClass.BControlFiledSetting bControlFiledSetting1 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting2 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting3 = new CommonClass.BControlFiledSetting();
+            CommonClass.BControlFiledSetting bControlFiledSetting4 = new CommonClass.BControlFiledSetting();
             this.txt_plt = new CommonClass.F4ETCR();
             this.txt_plt_dec = new System.Windows.Forms.TextBox();
             this.txt_act_stlgrd = new CommonClass.F4ETCR();
@@ -41,13 +45,12 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.SSP6 = new System.Windows.Forms.Button();
+            this.SSP4 = new System.Windows.Forms.Button();
+            this.SSP3 = new System.Windows.Forms.Button();
+            this.SSP1 = new System.Windows.Forms.Button();
             this.txt_tmpPLT = new System.Windows.Forms.TextBox();
             this.txt_IST_DATE = new System.Windows.Forms.TextBox();
             this.txt_Status = new System.Windows.Forms.TextBox();
@@ -128,6 +131,12 @@
             // 
             // txt_plt
             // 
+            bControlFiledSetting1.ColumnID = "CD";
+            bControlFiledSetting1.TargetControl = this.txt_plt;
+            bControlFiledSetting2.ColumnID = "CD_SHORT_NAME";
+            bControlFiledSetting2.TargetControl = this.txt_plt_dec;
+            this.txt_plt.CustomSetting.Add(bControlFiledSetting1);
+            this.txt_plt.CustomSetting.Add(bControlFiledSetting2);
             this.txt_plt.InputControl = this.txt_plt;
             this.txt_plt.Location = new System.Drawing.Point(97, 35);
             this.txt_plt.MaxLength = 2;
@@ -150,6 +159,12 @@
             // 
             // txt_act_stlgrd
             // 
+            bControlFiledSetting3.ColumnID = "STLGRD";
+            bControlFiledSetting3.TargetControl = this.txt_act_stlgrd;
+            bControlFiledSetting4.ColumnID = "STEEL_GRD_DETAIL";
+            bControlFiledSetting4.TargetControl = this.txt_act_stlgrd_dec;
+            this.txt_act_stlgrd.CustomSetting.Add(bControlFiledSetting3);
+            this.txt_act_stlgrd.CustomSetting.Add(bControlFiledSetting4);
             this.txt_act_stlgrd.InputControl = this.txt_act_stlgrd;
             this.txt_act_stlgrd.Location = new System.Drawing.Point(374, 35);
             this.txt_act_stlgrd.MaxLength = 11;
@@ -255,16 +270,6 @@
             this.label5.Text = "厚度";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label6
-            // 
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label6.Location = new System.Drawing.Point(296, 84);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 22);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "厚度";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // panel5
             // 
             this.panel5.Controls.Add(this.panel6);
@@ -285,10 +290,10 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.button4);
-            this.panel6.Controls.Add(this.button3);
-            this.panel6.Controls.Add(this.button2);
-            this.panel6.Controls.Add(this.button1);
+            this.panel6.Controls.Add(this.SSP6);
+            this.panel6.Controls.Add(this.SSP4);
+            this.panel6.Controls.Add(this.SSP3);
+            this.panel6.Controls.Add(this.SSP1);
             this.panel6.Controls.Add(this.txt_tmpPLT);
             this.panel6.Controls.Add(this.txt_IST_DATE);
             this.panel6.Controls.Add(this.txt_Status);
@@ -321,52 +326,61 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1298, 87);
+            this.panel6.Size = new System.Drawing.Size(1298, 117);
             this.panel6.TabIndex = 11;
             // 
-            // button4
+            // SSP6
             // 
-            this.button4.BackColor = System.Drawing.Color.Red;
-            this.button4.Enabled = false;
-            this.button4.Location = new System.Drawing.Point(1152, 46);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 39);
-            this.button4.TabIndex = 529;
-            this.button4.Text = "跨月合同";
-            this.button4.UseVisualStyleBackColor = false;
+            this.SSP6.BackColor = System.Drawing.Color.Red;
+            this.SSP6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SSP6.Enabled = false;
+            this.SSP6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SSP6.Location = new System.Drawing.Point(1152, 46);
+            this.SSP6.Name = "SSP6";
+            this.SSP6.Size = new System.Drawing.Size(75, 39);
+            this.SSP6.TabIndex = 529;
+            this.SSP6.Text = "跨月合同";
+            this.SSP6.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // SSP4
             // 
-            this.button3.BackColor = System.Drawing.Color.Blue;
-            this.button3.Enabled = false;
-            this.button3.Location = new System.Drawing.Point(1152, 1);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 41);
-            this.button3.TabIndex = 528;
-            this.button3.Text = "重点订单";
-            this.button3.UseVisualStyleBackColor = false;
+            this.SSP4.BackColor = System.Drawing.Color.Blue;
+            this.SSP4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SSP4.Enabled = false;
+            this.SSP4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SSP4.Location = new System.Drawing.Point(1152, 1);
+            this.SSP4.Name = "SSP4";
+            this.SSP4.Size = new System.Drawing.Size(75, 41);
+            this.SSP4.TabIndex = 528;
+            this.SSP4.Text = "重点订单";
+            this.SSP4.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // SSP3
             // 
-            this.button2.BackColor = System.Drawing.Color.SpringGreen;
-            this.button2.Enabled = false;
-            this.button2.Location = new System.Drawing.Point(1067, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(80, 40);
-            this.button2.TabIndex = 527;
-            this.button2.Text = "切割计划";
-            this.button2.UseVisualStyleBackColor = false;
+            this.SSP3.BackColor = System.Drawing.Color.MistyRose;
+            this.SSP3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SSP3.Enabled = false;
+            this.SSP3.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.SSP3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SSP3.Location = new System.Drawing.Point(1066, 46);
+            this.SSP3.Name = "SSP3";
+            this.SSP3.Size = new System.Drawing.Size(80, 40);
+            this.SSP3.TabIndex = 527;
+            this.SSP3.Text = "切割计划";
+            this.SSP3.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // SSP1
             // 
-            this.button1.BackColor = System.Drawing.Color.MistyRose;
-            this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(1067, 46);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(79, 40);
-            this.button1.TabIndex = 526;
-            this.button1.Text = "待切割";
-            this.button1.UseVisualStyleBackColor = false;
+            this.SSP1.BackColor = System.Drawing.Color.SpringGreen;
+            this.SSP1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SSP1.Enabled = false;
+            this.SSP1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SSP1.Location = new System.Drawing.Point(1067, 3);
+            this.SSP1.Name = "SSP1";
+            this.SSP1.Size = new System.Drawing.Size(79, 40);
+            this.SSP1.TabIndex = 526;
+            this.SSP1.Text = "待切割";
+            this.SSP1.UseVisualStyleBackColor = false;
             // 
             // txt_tmpPLT
             // 
@@ -397,6 +411,8 @@
             // 
             // cmd_Cancel
             // 
+            this.cmd_Cancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmd_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmd_Cancel.Font = new System.Drawing.Font("宋体", 12.75F);
             this.cmd_Cancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.cmd_Cancel.Location = new System.Drawing.Point(943, 3);
@@ -609,10 +625,12 @@
             this.opt_prc_status2.TabStop = true;
             this.opt_prc_status2.Text = "查询与修改";
             this.opt_prc_status2.UseVisualStyleBackColor = true;
+            this.opt_prc_status2.Click += new System.EventHandler(this.opt_prc_status2_Click);
             // 
             // opt_prc_status1
             // 
             this.opt_prc_status1.AutoSize = true;
+            this.opt_prc_status1.Checked = true;
             this.opt_prc_status1.Location = new System.Drawing.Point(103, 13);
             this.opt_prc_status1.Name = "opt_prc_status1";
             this.opt_prc_status1.Size = new System.Drawing.Size(77, 17);
@@ -620,6 +638,7 @@
             this.opt_prc_status1.TabStop = true;
             this.opt_prc_status1.Text = "板坯切割";
             this.opt_prc_status1.UseVisualStyleBackColor = true;
+            this.opt_prc_status1.Click += new System.EventHandler(this.opt_prc_status1_Click);
             // 
             // ULabel7
             // 
@@ -722,7 +741,6 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.textBox1);
@@ -735,13 +753,13 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1298, 88);
+            this.panel1.Size = new System.Drawing.Size(1298, 93);
             this.panel1.TabIndex = 0;
             // 
             // splitter1
             // 
             this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitter1.Location = new System.Drawing.Point(0, 88);
+            this.splitter1.Location = new System.Drawing.Point(0, 93);
             this.splitter1.Name = "splitter1";
             this.splitter1.Size = new System.Drawing.Size(1298, 3);
             this.splitter1.TabIndex = 2;
@@ -753,10 +771,10 @@
             this.SSTab1.Controls.Add(this.tabPage2);
             this.SSTab1.Controls.Add(this.tabPage3);
             this.SSTab1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SSTab1.Location = new System.Drawing.Point(0, 91);
+            this.SSTab1.Location = new System.Drawing.Point(0, 96);
             this.SSTab1.Name = "SSTab1";
             this.SSTab1.SelectedIndex = 0;
-            this.SSTab1.Size = new System.Drawing.Size(1298, 531);
+            this.SSTab1.Size = new System.Drawing.Size(1298, 526);
             this.SSTab1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.SSTab1.TabIndex = 3;
             // 
@@ -768,7 +786,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 23);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1290, 504);
+            this.tabPage1.Size = new System.Drawing.Size(1290, 499);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "板坯切割";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -781,7 +799,7 @@
             this.ss2.Name = "ss2";
             this.ss2.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
             this.ss2_Sheet1});
-            this.ss2.Size = new System.Drawing.Size(1284, 296);
+            this.ss2.Size = new System.Drawing.Size(1284, 291);
             this.ss2.TabIndex = 7;
             // 
             // ss2_Sheet1
@@ -845,11 +863,11 @@
             this.txt_scrap_wgt.Location = new System.Drawing.Point(651, 5);
             this.txt_scrap_wgt.Name = "txt_scrap_wgt";
             this.txt_scrap_wgt.NumValue = 0D;
-            this.txt_scrap_wgt.Scale = 0;
+            this.txt_scrap_wgt.Scale = 3;
             this.txt_scrap_wgt.ShowZero = true;
             this.txt_scrap_wgt.Size = new System.Drawing.Size(60, 22);
             this.txt_scrap_wgt.TabIndex = 520;
-            this.txt_scrap_wgt.Text = "0";
+            this.txt_scrap_wgt.Text = "0.000";
             this.txt_scrap_wgt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txt_total_wgt
@@ -857,11 +875,11 @@
             this.txt_total_wgt.Location = new System.Drawing.Point(473, 5);
             this.txt_total_wgt.Name = "txt_total_wgt";
             this.txt_total_wgt.NumValue = 0D;
-            this.txt_total_wgt.Scale = 0;
+            this.txt_total_wgt.Scale = 3;
             this.txt_total_wgt.ShowZero = true;
             this.txt_total_wgt.Size = new System.Drawing.Size(60, 22);
             this.txt_total_wgt.TabIndex = 519;
-            this.txt_total_wgt.Text = "0";
+            this.txt_total_wgt.Text = "0.000";
             this.txt_total_wgt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txt_total_len
@@ -925,6 +943,7 @@
             this.cbo_cutcnt.Name = "cbo_cutcnt";
             this.cbo_cutcnt.Size = new System.Drawing.Size(45, 21);
             this.cbo_cutcnt.TabIndex = 514;
+            this.cbo_cutcnt.Click += new System.EventHandler(this.cbo_cutcnt_Click);
             // 
             // ULabel4
             // 
@@ -947,6 +966,7 @@
             this.ss1_Sheet1});
             this.ss1.Size = new System.Drawing.Size(1284, 170);
             this.ss1.TabIndex = 5;
+            this.ss1.CellClick += new FarPoint.Win.Spread.CellClickEventHandler(this.ss1_CellClick);
             // 
             // ss1_Sheet1
             // 
@@ -959,7 +979,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 23);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1290, 504);
+            this.tabPage2.Size = new System.Drawing.Size(1290, 499);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "切割计划";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -972,7 +992,7 @@
             this.ss3.Name = "ss3";
             this.ss3.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
             this.ss3_Sheet1});
-            this.ss3.Size = new System.Drawing.Size(1284, 498);
+            this.ss3.Size = new System.Drawing.Size(1284, 493);
             this.ss3.TabIndex = 6;
             // 
             // ss3_Sheet1
@@ -985,7 +1005,7 @@
             this.tabPage3.Controls.Add(this.ss4);
             this.tabPage3.Location = new System.Drawing.Point(4, 23);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1290, 504);
+            this.tabPage3.Size = new System.Drawing.Size(1290, 499);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "轧钢计划";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -998,7 +1018,7 @@
             this.ss4.Name = "ss4";
             this.ss4.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
             this.ss4_Sheet1});
-            this.ss4.Size = new System.Drawing.Size(1290, 504);
+            this.ss4.Size = new System.Drawing.Size(1290, 499);
             this.ss4.TabIndex = 6;
             // 
             // ss4_Sheet1
@@ -1050,7 +1070,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox txt_tmpPLT;
@@ -1093,10 +1112,10 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Splitter splitter1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button SSP1;
+        private System.Windows.Forms.Button SSP6;
+        private System.Windows.Forms.Button SSP4;
+        private System.Windows.Forms.Button SSP3;
         private System.Windows.Forms.TabControl SSTab1;
         private System.Windows.Forms.TabPage tabPage1;
         private FarPoint.Win.Spread.FpSpread ss2;

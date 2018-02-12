@@ -127,6 +127,6 @@
     <value>117, 17</value>
   </metadata>
   <data name="txt_t_addr.sSqletc" xml:space="preserve">
-    <value>SELECT CD "代码", CD_SHORT_NAME "代码简称", CD_NAME "代码名称",        CD_SHORT_ENG "代码英文简称", CD_FULL_ENG "代码英文名称" FROM NISCO.ZP_CD  WHERE CD_MANA_NO =    'F0043'    AND CD         like 'S%'  ORDER  BY  CD  ASC </value>
+    <value>SELECT CD "代码", CD_SHORT_NAME "代码简称", CD_NAME "代码名称",        CD_SHORT_ENG "代码英文简称", CD_FULL_ENG "代码英文名称" FROM NISCO.ZP_CD  WHERE CD_MANA_NO =    'F0033'    AND CD         like 'S%'  ORDER  BY  CD  ASC </value>
   </data>
 </root>
