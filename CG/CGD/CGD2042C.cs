@@ -292,6 +292,13 @@ namespace CG
             }
             sLoopChk = "";
 
+            if (ss2.ActiveSheet.RowCount <= 0) return;
+
+            for (int i = 0; i < ss2.ActiveSheet.RowCount; i++)
+            {
+                ss2.ActiveSheet.RowHeader.Cells[i, 0].Text = "修改";
+            }
+
         }
 
         private void CGD2042C_Load(object sender, EventArgs e)

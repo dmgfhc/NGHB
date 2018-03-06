@@ -86,6 +86,7 @@
             // SSP3
             // 
             this.SSP3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.SSP3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SSP3.Location = new System.Drawing.Point(905, 40);
             this.SSP3.Name = "SSP3";
             this.SSP3.Size = new System.Drawing.Size(75, 28);
@@ -97,6 +98,7 @@
             // SSP2
             // 
             this.SSP2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.SSP2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SSP2.Location = new System.Drawing.Point(824, 40);
             this.SSP2.Name = "SSP2";
             this.SSP2.Size = new System.Drawing.Size(75, 28);
@@ -108,6 +110,7 @@
             // SSP1
             // 
             this.SSP1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.SSP1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SSP1.Location = new System.Drawing.Point(743, 40);
             this.SSP1.Name = "SSP1";
             this.SSP1.Size = new System.Drawing.Size(75, 28);
@@ -119,6 +122,7 @@
             // SSP4
             // 
             this.SSP4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.SSP4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SSP4.Location = new System.Drawing.Point(662, 40);
             this.SSP4.Name = "SSP4";
             this.SSP4.Size = new System.Drawing.Size(75, 28);

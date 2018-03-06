@@ -1040,6 +1040,7 @@
             // SSP1
             // 
             this.SSP1.BackColor = System.Drawing.Color.Magenta;
+            this.SSP1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SSP1.Font = new System.Drawing.Font("宋体", 8.75F);
             this.SSP1.ForeColor = System.Drawing.Color.White;
             this.SSP1.Location = new System.Drawing.Point(396, 12);
@@ -1054,14 +1055,15 @@
             // SSP2
             // 
             this.SSP2.BackColor = System.Drawing.Color.Yellow;
-            this.SSP2.Font = new System.Drawing.Font("宋体", 8.75F);
+            this.SSP2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SSP2.Font = new System.Drawing.Font("宋体", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.SSP2.ForeColor = System.Drawing.Color.Black;
-            this.SSP2.Location = new System.Drawing.Point(396, 59);
+            this.SSP2.Location = new System.Drawing.Point(397, 59);
             this.SSP2.Margin = new System.Windows.Forms.Padding(0);
             this.SSP2.Name = "SSP2";
-            this.SSP2.Size = new System.Drawing.Size(70, 24);
+            this.SSP2.Size = new System.Drawing.Size(69, 24);
             this.SSP2.TabIndex = 618;
-            this.SSP2.Text = "堆冷标识";
+            this.SSP2.Text = "一坯多订单";
             this.SSP2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.SSP2.UseVisualStyleBackColor = false;
             // 
@@ -1098,6 +1100,7 @@
             // SSP4
             // 
             this.SSP4.BackColor = System.Drawing.Color.Blue;
+            this.SSP4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SSP4.Font = new System.Drawing.Font("宋体", 8.75F);
             this.SSP4.ForeColor = System.Drawing.Color.White;
             this.SSP4.Location = new System.Drawing.Point(396, 36);
@@ -1337,6 +1340,7 @@
             // label8
             // 
             this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label8.ForeColor = System.Drawing.Color.Red;
             this.label8.Location = new System.Drawing.Point(5, 15);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(87, 22);

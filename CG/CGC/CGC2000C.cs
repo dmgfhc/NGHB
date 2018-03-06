@@ -167,7 +167,7 @@ namespace CG {
             p_SetMc("班次", TXT_SHIFT, "NIR", "", "", "", "", imcseq); //34
             p_SetMc("班别", TXT_GROUP, "NIR", "", "", "", "", imcseq); //35
             p_SetMc("作业人员", TXT_EMP1, "NIR", "", "", "", "", imcseq); //36
-            p_SetMc(TXT_EMP2, "IR", "", "", "", imcseq, ""); //37
+            p_SetMc(TXT_EMP2, "NIR", "", "", "", imcseq, ""); //37
             p_SetMc(txt_Roll_Stlgrd, "R", "", "", "", imcseq, ""); //38
             p_SetMc(cal_thk, "LR", "", "", "", imcseq, ""); //39
             p_SetMc(cal_thk2, "LR", "", "", "", imcseq, ""); //40
@@ -177,7 +177,7 @@ namespace CG {
 
             int iheadrow;
             int iscseq;
-            p_ScIni(ss1, Sc1, 0, false, true);
+            p_ScIni(ss1, Sc1, 0, false, false);
             iheadrow = 0;
             iscseq = 1;
             p_SetSc("厚度公差", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //0
@@ -187,7 +187,7 @@ namespace CG {
             p_SetSc("钢板号码", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //4
             p_SetSc("钢板规格", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //5
 
-            p_ScIni(ss2, Sc2, 0, false, true);
+            p_ScIni(ss2, Sc2, 0, false, false);
             iheadrow = 0;
             iscseq = 2;
 
@@ -226,7 +226,7 @@ namespace CG {
             p_SetSc("表面客户要求", "E", "200", "L", "", "", "", iscseq, iheadrow, "L"); //32
             p_SetSc("订单特殊要求", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //33
 
-            p_ScIni(ss3, Sc3, 0, false, true);
+            p_ScIni(ss3, Sc3, 0, false, false);
             iheadrow = 0;
             iscseq = 3;
             p_SetSc("板坯号", "E", "10", "L", "", "", "", iscseq, iheadrow, "M"); //0
@@ -246,7 +246,7 @@ namespace CG {
 
 
 
-            p_ScIni(ss4, Sc4, 0, false, true);
+            p_ScIni(ss4, Sc4, 0, false, false);
             iheadrow = 0;
             iscseq = 4;
             p_SetSc("炉座号", "E", "10", "L", "", "", "", iscseq, iheadrow, "M"); //0

@@ -308,6 +308,7 @@ namespace CG
             {
                 if (ss1.ActiveSheet.RowHeader.Cells[iCount - 1, 0].Text == "修改")
                 {
+                    if (ss1.ActiveSheet.Cells[iCount - 1, 9].Text == "") ss1.ActiveSheet.Cells[iCount - 1, 9].Text = TXT_CUT_TIME.Text;
                     if (!Gp_DateCheck(ss1.ActiveSheet.Cells[iCount - 1, 9].Text, "X"))
                     {
 
@@ -333,7 +334,7 @@ namespace CG
 
             for (iCount = 1; iCount <= ss1.ActiveSheet.RowCount; iCount++)
             {
-                if (ss1.ActiveSheet.Cells[iCount - 1, SPD_PLATE_NO].Text.Substring(0, 12) == sPlateNo.Substring(0, 12) || sPlateNo == "")
+                if (substr(ss1.ActiveSheet.Cells[iCount - 1, SPD_PLATE_NO].Text,0,12) == substr(sPlateNo,0,12) || sPlateNo == "")
                 {
                     sPlateNo = ss1.ActiveSheet.Cells[iCount - 1, SPD_PLATE_NO].Text;
                     if (ss1.ActiveSheet.Cells[iCount - 1, SPD_DS_LAST_YN].Text == "True")
@@ -342,7 +343,7 @@ namespace CG
                         inum = inum + 1;
                         if (inum > 1)
                         {
-                            GeneralCommon.Gp_MsgBoxDisplay("一块母板只能有一块尾板.." + sPlateNo.Substring(0, 12), "I", "");
+                            GeneralCommon.Gp_MsgBoxDisplay("一块母板只能有一块尾板.." + substr(sPlateNo, 0, 12), "I", "");
                             return;
                         }
                     }
@@ -367,7 +368,7 @@ namespace CG
                         inum = inum + 1;
                         if (inum > 1)
                         {
-                            GeneralCommon.Gp_MsgBoxDisplay("一块母板只能有一块尾板.." + sPlateNo.Substring(0, 12), "I", "");
+                            GeneralCommon.Gp_MsgBoxDisplay("一块母板只能有一块尾板.." + substr(sPlateNo, 0, 12), "I", "");
                             return;
                         }
                     }
@@ -405,7 +406,7 @@ namespace CG
                                 return;
                             }
 
-                            if (convertX(sDateFrom) > convertX(sDateTo))
+                            if (convertX(sDateFrom.Replace("-", "").Replace(" ", "").Replace(":", "")) > convertX(sDateTo.Replace("-", "").Replace(" ", "").Replace(":", "")))
                             {
                                 GeneralCommon.Gp_MsgBoxDisplay("请正确输入开始时间还是结束时间.." + sPlateNo, "I", "");
                                 return;
@@ -415,7 +416,8 @@ namespace CG
                     }
                 }
             }
-            p_pro(1, 1, true, true);
+            p_pro(1, 1, true, false);
+            ss2_DblClk(0, ss2.ActiveSheet.ActiveRowIndex);
         }
 
         public override void Spread_Ins()
@@ -630,6 +632,7 @@ namespace CG
 
             ss1.ActiveSheet.Cells[ROW, SPD_DS_CUT_STA_DATE].Text = TXT_CUT_TIME.Text;
             ss1.ActiveSheet.Cells[ROW, SPD_DS_CUT_END_DATE].Text = TXT_CUT_TIME.Text;
+            ss1.ActiveSheet.RowHeader.Cells[ROW, 0].Text = "修改";
 
             //ss1_Row_Edit(ROW);
         }
@@ -767,9 +770,9 @@ namespace CG
 
         public override bool Form_Cls()
         {
-            CBO_PLT.SelectedItem = "C3";
-            CBO_LINE.SelectedItem = "1";
             base.Form_Cls();
+            CBO_PLT.Text = "C3";
+            CBO_LINE.Text = "1";
             return true;
 
         }
@@ -780,7 +783,10 @@ namespace CG
 
         public bool Gp_DateCheck(string DateCheck, string sDTChk)
         {
-            sDTChk = "M";
+            if (sDTChk != "X" && sDTChk != "S")
+            {
+                sDTChk = "M";
+            }
             string iDateCheck;
             string iDateMatch;
             string iDate;
@@ -806,15 +812,15 @@ namespace CG
             {
                 case 8:
                     iDate = iDateCheck.Substring(0, 4) + "-" + iDateCheck.Substring(4, 2) + "-" + iDateCheck.Substring(6, 2);
-                    iCheck = Convert.ToDateTime(iDate.Substring(1, 10));
+                    iCheck = Convert.ToDateTime(iDate);
                     break;
                 case 12:
                     iDate = iDateCheck.Substring(0, 4) + "-" + iDateCheck.Substring(4, 2) + "-" + iDateCheck.Substring(6, 2) + " " + iDateCheck.Substring(8, 2) + ":" + iDateCheck.Substring(10, 2);
-                    iCheck = Convert.ToDateTime(iDate.Substring(1, 16));
+                    iCheck = Convert.ToDateTime(iDate);
                     break;
                 case 14:
                     iDate = iDateCheck.Substring(0, 4) + "-" + iDateCheck.Substring(4, 2) + "-" + iDateCheck.Substring(6, 2) + " " + iDateCheck.Substring(8, 2) + ":" + iDateCheck.Substring(10, 2) + ":" + iDateCheck.Substring(12, 2);
-                    iCheck = Convert.ToDateTime(iDate.Substring(1, 19));
+                    iCheck = Convert.ToDateTime(iDate);
                     break;
                 default:
                     return false;
@@ -823,7 +829,7 @@ namespace CG
 
             iDateMatch = iCheck.ToString("yyyyMM");
 
-            if (iDateMatch != iDateCheck.Substring(0, 8))
+            if (iDateMatch != iDateCheck.Substring(0, 6))
             {
                 return false;
             }
@@ -1092,6 +1098,15 @@ namespace CG
             return 0;
         }
 
+        public string substr(string x, int y, int z)
+        {
+            if (x != "")
+            {
+                return x.Substring(y, z);
+            }
+            return "";
+        }
+
         #endregion
 
         private void ss1_CellDoubleClick(object sender, CellClickEventArgs e)
@@ -1119,6 +1134,7 @@ namespace CG
         {
             TXT_CUT_TIME_DblClk();
         }
+
 
     }
 }

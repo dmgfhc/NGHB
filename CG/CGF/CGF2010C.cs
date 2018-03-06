@@ -84,6 +84,7 @@ namespace CG
             p_SetMc("轧辊重量", SDB_ROLL_WGT, "NIR", "", "", "", "", imcseq); //12
             p_SetMc("", SDB_ROLL_IN_W_HARD, "IR", "", "", "", "", imcseq); //13
             p_SetMc("", SDB_ROLL_W_DIA2, "IR", "", "", "", "", imcseq); //14
+
             p_SetMc("", SDB_ROLL_IN_C_HARD, "IR", "", "", "", "", imcseq); //15
             p_SetMc("", SDB_ROLL_IN_D_HARD, "IR", "", "", "", "", imcseq); //16
             p_SetMc("", SDB_ROLL_D_DIA2, "IR", "", "", "", "", imcseq); //17
@@ -505,6 +506,7 @@ namespace CG
             ULabel16.Text = "轴承座号";
             sQuery_load = "SELECT CHOCK_ID FROM GP_CHOCK3    ";
             GeneralCommon.Gf_ComboAdd(CBO_ROLL_NO, sQuery_load);
+            
         }
 
 

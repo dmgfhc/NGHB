@@ -32,8 +32,8 @@ using System.Threading;
 //-------------------------------------------------------------------------------
 //-- System Name       中板轧钢作业
 //-- Sub_System Name   板坯库管理
-//-- Program Name      板坯垛位修改及查询
-//-- Program ID        CGA2011C
+//-- Program Name      母板分产线处理作业_CGC2070C
+//-- Program ID        CGC2070C
 //-- Document No       Q-00-0010(Specification)
 //-- Designer          韩超
 //-- Coder             韩超
@@ -43,7 +43,7 @@ using System.Threading;
 //-- UPDATE HISTORY  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //-------------------------------------------------------------------------------
 //-- VER         DATE         EDITOR       DESCRIPTION
-//   1.00     2017.03.01       韩超        板坯垛位修改及查询
+//   1.00     2017.03.01       韩超        母板分产线处理作业_CGC2070C
 //-------------------------------------------------------------------------------
 //-- DECLARATION     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //-------------------------------------------------------------------------------
@@ -60,19 +60,19 @@ namespace CG {
         const int SS1_SMP_YN = 0;
         const int SS1_MPLATE_NO = 1;
         const int SS1_TRNS_CMPY_CD = 2;
-        const int SS1_LINE1 = 13;
-        const int SS1_LINE2 = 14;
-        const int SS1_LINE3 = 15;
-        const int SS1_LINE4 = 16;
-        const int SS1_OFFLINE_DATE = 17;
-        const int SS1_USERID = 24;
-        const int SS1_PLAN_SMP = 25;
-        const int SS1_PRC_LINE = 26;
-        const int SS1_ORD_CNT = 27;
+        const int SS1_LINE1 = 14;
+        const int SS1_LINE2 = 15;
+        const int SS1_LINE3 = 16;
+        const int SS1_LINE4 = 17;
+        const int SS1_OFFLINE_DATE = 18;
+        const int SS1_USERID = 25;
+        const int SS1_PLAN_SMP = 26;
+        const int SS1_PRC_LINE = 27;
+        const int SS1_ORD_CNT = 28;
         //一坯多订单  2011-08-18  by  LiQian
-        const int SS1_URGNT_FL = 28;
+        const int SS1_URGNT_FL = 29;
         //紧急订单绿色标记 2012-08-16  by  LiQian
-        const int SS1_IMP_CONT = 29;
+        const int SS1_IMP_CONT = 30;
 
         //const int SPD_PLAN_PROD_WGT = 33,
 
@@ -93,7 +93,7 @@ namespace CG {
             p_SetMc("已分线母板", CBO_NUM, "P", "", "", "", "", imcseq);
 
 
-            p_ScIni(ss1, Sc1, 24, true, true);
+            p_ScIni(ss1, Sc1, 25, true, false);
             iheadrow = 1;
             iscseq = 1;
 
@@ -107,30 +107,31 @@ namespace CG {
             p_SetSc("长度", "E", "60", "L", "", "", "", iscseq, iheadrow, "R"); //7
             p_SetSc("重量", "E", "60", "L", "", "", "", iscseq, iheadrow, "R"); //8
             p_SetSc("计划切边", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //9
-            p_SetSc("标准号", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //10
-            p_SetSc("是否探伤", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //11
-            p_SetSc("是否真空", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //12
-            p_SetSc("1#线", "C", "", "I", "", "", "", iscseq, iheadrow, "M"); //13
-            p_SetSc("2#线", "C", "", "I", "", "", "", iscseq, iheadrow, "M"); //14
-            p_SetSc("3#线", "C", "", "I", "", "", "", iscseq, iheadrow, "M"); //15
-            p_SetSc("4#线", "C", "", "I", "", "", "", iscseq, iheadrow, "M"); //16
-            p_SetSc("下线时间", "DT", "", "I", "", "", "", iscseq, iheadrow, "M"); //17
-            p_SetSc("计划/实绩", "E", "10", "L", "", "", "", iscseq, iheadrow, "M"); //18
-            p_SetSc("母板分段时间", "DT", "", "L", "", "", "", iscseq, iheadrow, "M"); //19
-            p_SetSc("宽度", "E", "60", "L", "", "", "", iscseq, iheadrow, "R"); //20
-            p_SetSc("宽度放尺范围", "E", "60", "L", "", "", "", iscseq, iheadrow, "R"); //21
-            p_SetSc("长度", "E", "60", "L", "", "", "", iscseq, iheadrow, "R"); //22
-            p_SetSc("长度放尺范围", "E", "60", "L", "", "", "", iscseq, iheadrow, "R"); //23
-            p_SetSc("作业人员", "E", "20", "IL", "", "", "", iscseq, iheadrow, "L"); //24
-            p_SetSc("计划取样", "E", "10", "L", "", "", "", iscseq, iheadrow, "M"); //25
-            p_SetSc("作业线", "E", "1", "L", "", "", "", iscseq, iheadrow, "M"); //26
-            p_SetSc("订单数量", "E", "2", "L", "", "", "", iscseq, iheadrow, "M"); //27
-            p_SetSc("是否紧急订单", "E", "1", "L", "", "", "", iscseq, iheadrow, "M"); //28
-            p_SetSc("重点订单", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //29
+            p_SetSc("原始坯料钢种", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //10
+            p_SetSc("标准号", "E", "60", "L", "", "", "", iscseq, iheadrow, "L"); //11
+            p_SetSc("是否探伤", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //12
+            p_SetSc("是否真空", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //13
+            p_SetSc("1#线", "C", "", "I", "", "", "", iscseq, iheadrow, "M"); //14
+            p_SetSc("2#线", "C", "", "I", "", "", "", iscseq, iheadrow, "M"); //15
+            p_SetSc("3#线", "C", "", "I", "", "", "", iscseq, iheadrow, "M"); //16
+            p_SetSc("4#线", "C", "", "I", "", "", "", iscseq, iheadrow, "M"); //17
+            p_SetSc("下线时间", "DT", "", "I", "", "", "", iscseq, iheadrow, "M"); //18
+            p_SetSc("计划/实绩", "E", "10", "L", "", "", "", iscseq, iheadrow, "M"); //19
+            p_SetSc("母板分段时间", "DT", "", "L", "", "", "", iscseq, iheadrow, "M"); //20
+            p_SetSc("宽度", "E", "60", "L", "", "", "", iscseq, iheadrow, "R"); //21
+            p_SetSc("宽度放尺范围", "E", "60", "L", "", "", "", iscseq, iheadrow, "R"); //22
+            p_SetSc("长度", "E", "60", "L", "", "", "", iscseq, iheadrow, "R"); //23
+            p_SetSc("长度放尺范围", "E", "60", "L", "", "", "", iscseq, iheadrow, "R"); //24
+            p_SetSc("作业人员", "E", "20", "IL", "", "", "", iscseq, iheadrow, "L"); //25
+            p_SetSc("计划取样", "E", "10", "L", "", "", "", iscseq, iheadrow, "M"); //26
+            p_SetSc("作业线", "E", "1", "L", "", "", "", iscseq, iheadrow, "M"); //27
+            p_SetSc("订单数量", "E", "2", "L", "", "", "", iscseq, iheadrow, "M"); //28
+            p_SetSc("是否紧急订单", "E", "1", "L", "", "", "", iscseq, iheadrow, "M"); //29
+            p_SetSc("重点订单", "E", "60", "L", "", "", "", iscseq, iheadrow, "M"); //30
 
 
             iheadrow = 0;
-            p_spanSpread("成品尺寸", 20, 23, iscseq, iheadrow, 1);
+            p_spanSpread("成品尺寸", 21, 24, iscseq, iheadrow, 1);
 
             //SpreadCommon.Gp_Sp_ColHidden(ss1, 16, true);
             //SpreadCommon.Gp_Sp_ColHidden(ss1, 17, true);
@@ -200,7 +201,6 @@ namespace CG {
 
             ss1.ActiveSheet.FrozenColumnCount = 3;
 
-            unlockSpread(ss1);
 
         }
 

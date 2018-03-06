@@ -230,6 +230,7 @@
             this.CBO_SHIFT.Name = "CBO_SHIFT";
             this.CBO_SHIFT.Size = new System.Drawing.Size(49, 21);
             this.CBO_SHIFT.TabIndex = 1;
+            this.CBO_SHIFT.Text = "3";
             // 
             // CBO_ROLL_NO
             // 
@@ -378,6 +379,7 @@
             this.txt_sec_treat_mtd.Name = "txt_sec_treat_mtd";
             this.txt_sec_treat_mtd.Size = new System.Drawing.Size(62, 22);
             this.txt_sec_treat_mtd.TabIndex = 609;
+            this.txt_sec_treat_mtd.Visible = false;
             // 
             // label51
             // 

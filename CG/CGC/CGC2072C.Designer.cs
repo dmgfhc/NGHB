@@ -36,6 +36,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txt_in_car_no = new System.Windows.Forms.TextBox();
             this.CBO_CAR_NO = new System.Windows.Forms.ComboBox();
             this.CBO_LINE = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -62,7 +63,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.ss2 = new FarPoint.Win.Spread.FpSpread();
             this.ss2_Sheet1 = new FarPoint.Win.Spread.SheetView();
-            this.txt_in_car_no = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -141,6 +141,7 @@
             // SSP5
             // 
             this.SSP5.BackColor = System.Drawing.Color.Red;
+            this.SSP5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SSP5.Font = new System.Drawing.Font("宋体", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.SSP5.ForeColor = System.Drawing.Color.Black;
             this.SSP5.Location = new System.Drawing.Point(956, 52);
@@ -185,6 +186,15 @@
             this.groupBox4.Size = new System.Drawing.Size(253, 83);
             this.groupBox4.TabIndex = 594;
             this.groupBox4.TabStop = false;
+            // 
+            // txt_in_car_no
+            // 
+            this.txt_in_car_no.Location = new System.Drawing.Point(208, 49);
+            this.txt_in_car_no.MaxLength = 12;
+            this.txt_in_car_no.Name = "txt_in_car_no";
+            this.txt_in_car_no.Size = new System.Drawing.Size(28, 22);
+            this.txt_in_car_no.TabIndex = 689;
+            this.txt_in_car_no.Visible = false;
             // 
             // CBO_CAR_NO
             // 
@@ -263,6 +273,7 @@
             // SSP1
             // 
             this.SSP1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.SSP1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SSP1.Font = new System.Drawing.Font("宋体", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.SSP1.ForeColor = System.Drawing.Color.Blue;
             this.SSP1.Location = new System.Drawing.Point(956, 15);
@@ -276,6 +287,7 @@
             // SSP2
             // 
             this.SSP2.BackColor = System.Drawing.Color.Blue;
+            this.SSP2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SSP2.Font = new System.Drawing.Font("宋体", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.SSP2.ForeColor = System.Drawing.Color.Black;
             this.SSP2.Location = new System.Drawing.Point(1056, 51);
@@ -289,6 +301,7 @@
             // SSP4
             // 
             this.SSP4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.SSP4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SSP4.Font = new System.Drawing.Font("宋体", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.SSP4.ForeColor = System.Drawing.Color.Black;
             this.SSP4.Location = new System.Drawing.Point(1056, 16);
@@ -449,15 +462,6 @@
             // 
             this.ss2_Sheet1.Reset();
             this.ss2_Sheet1.SheetName = "Sheet1";
-            // 
-            // txt_in_car_no
-            // 
-            this.txt_in_car_no.Location = new System.Drawing.Point(208, 49);
-            this.txt_in_car_no.MaxLength = 12;
-            this.txt_in_car_no.Name = "txt_in_car_no";
-            this.txt_in_car_no.Size = new System.Drawing.Size(28, 22);
-            this.txt_in_car_no.TabIndex = 689;
-            this.txt_in_car_no.Visible = false;
             // 
             // CGC2072C
             // 

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            CommonClass.BControlFiledSetting bControlFiledSetting4 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting1 = new CommonClass.BControlFiledSetting();
             CommonClass.BControlFiledSetting bControlFiledSetting2 = new CommonClass.BControlFiledSetting();
-            CommonClass.BControlFiledSetting bControlFiledSetting3 = new CommonClass.BControlFiledSetting();
             this.TXT_EMP2 = new CommonClass.F4ETCR();
             this.TXT_EMP1 = new CommonClass.F4ETCR();
             this.TXT_EMP3 = new CommonClass.F4ETCR();
@@ -176,9 +176,9 @@
             // 
             // TXT_EMP2
             // 
-            bControlFiledSetting1.ColumnID = "EMP_ID";
-            bControlFiledSetting1.TargetControl = this.TXT_EMP2;
-            this.TXT_EMP2.CustomSetting.Add(bControlFiledSetting1);
+            bControlFiledSetting4.ColumnID = "EMP_ID";
+            bControlFiledSetting4.TargetControl = this.TXT_EMP2;
+            this.TXT_EMP2.CustomSetting.Add(bControlFiledSetting4);
             this.TXT_EMP2.InputControl = this.TXT_EMP2;
             this.TXT_EMP2.Location = new System.Drawing.Point(972, 44);
             this.TXT_EMP2.MaxLength = 8;
@@ -192,9 +192,9 @@
             // 
             // TXT_EMP1
             // 
-            bControlFiledSetting2.ColumnID = "EMP_ID";
-            bControlFiledSetting2.TargetControl = this.TXT_EMP1;
-            this.TXT_EMP1.CustomSetting.Add(bControlFiledSetting2);
+            bControlFiledSetting1.ColumnID = "EMP_ID";
+            bControlFiledSetting1.TargetControl = this.TXT_EMP1;
+            this.TXT_EMP1.CustomSetting.Add(bControlFiledSetting1);
             this.TXT_EMP1.InputControl = this.TXT_EMP1;
             this.TXT_EMP1.Location = new System.Drawing.Point(912, 44);
             this.TXT_EMP1.MaxLength = 8;
@@ -208,9 +208,9 @@
             // 
             // TXT_EMP3
             // 
-            bControlFiledSetting3.ColumnID = "EMP_ID";
-            bControlFiledSetting3.TargetControl = this.TXT_EMP3;
-            this.TXT_EMP3.CustomSetting.Add(bControlFiledSetting3);
+            bControlFiledSetting2.ColumnID = "EMP_ID";
+            bControlFiledSetting2.TargetControl = this.TXT_EMP3;
+            this.TXT_EMP3.CustomSetting.Add(bControlFiledSetting2);
             this.TXT_EMP3.InputControl = this.TXT_EMP3;
             this.TXT_EMP3.Location = new System.Drawing.Point(1032, 44);
             this.TXT_EMP3.MaxLength = 8;
@@ -1133,6 +1133,7 @@
             // SSP1
             // 
             this.SSP1.BackColor = System.Drawing.Color.Magenta;
+            this.SSP1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SSP1.Font = new System.Drawing.Font("宋体", 8.75F);
             this.SSP1.ForeColor = System.Drawing.Color.White;
             this.SSP1.Location = new System.Drawing.Point(457, 15);
@@ -1147,14 +1148,15 @@
             // SSP2
             // 
             this.SSP2.BackColor = System.Drawing.Color.Yellow;
-            this.SSP2.Font = new System.Drawing.Font("宋体", 8.75F);
+            this.SSP2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SSP2.Font = new System.Drawing.Font("宋体", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.SSP2.ForeColor = System.Drawing.Color.Black;
             this.SSP2.Location = new System.Drawing.Point(457, 76);
             this.SSP2.Margin = new System.Windows.Forms.Padding(0);
             this.SSP2.Name = "SSP2";
             this.SSP2.Size = new System.Drawing.Size(70, 24);
             this.SSP2.TabIndex = 618;
-            this.SSP2.Text = "堆冷标识";
+            this.SSP2.Text = "一坯多订单";
             this.SSP2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.SSP2.UseVisualStyleBackColor = false;
             // 
@@ -1191,6 +1193,7 @@
             // SSP4
             // 
             this.SSP4.BackColor = System.Drawing.Color.Blue;
+            this.SSP4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SSP4.Font = new System.Drawing.Font("宋体", 8.75F);
             this.SSP4.ForeColor = System.Drawing.Color.White;
             this.SSP4.Location = new System.Drawing.Point(457, 46);
