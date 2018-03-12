@@ -102,7 +102,7 @@ namespace CG
             iheadrow = 1;
             iscseq = 1;
 
-            p_SetSc("板坯号", "E", "10", "IL", "", "", "", iscseq, iheadrow, "M");//0
+            p_SetSc("板坯号", "E", "10", "PIL", "", "", "", iscseq, iheadrow, "M");//0
             p_SetSc("首件标识", "C", "", "I", "", "", "", iscseq, iheadrow, "M");//1
             p_SetSc("坯料类别", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//2
             p_SetSc("超量标记", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//3
@@ -150,26 +150,26 @@ namespace CG
             p_SetSc("订单数量", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//45
             p_SetSc("是否紧急订单", "E", "1", "L", "", "", "", iscseq, iheadrow, "M");//46
             p_SetSc("订单探伤要求", "E", "12", "L", "", "", "", iscseq, iheadrow, "M");//47
-            p_SetSc("加热段驻段时间", "E", "10", "L", "", "", "", iscseq, iheadrow, "L");//48
+            p_SetSc("加热段时间", "E", "10", "I", "", "", "", iscseq, iheadrow, "L");//48
             p_SetSc("均热段驻段时间", "E", "10", "L", "", "", "", iscseq, iheadrow, "L");//49
             p_SetSc("重点订单", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//50
             p_SetSc("交货期结束", "D", "", "L", "", "", "", iscseq, iheadrow, "M");//51
             p_SetSc("宽度差", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//52
             p_SetSc("下限", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//53
             p_SetSc("上限", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//54
-            p_SetSc("实绩", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//55
-            p_SetSc("下限", "E", "60", "I", "", "", "", iscseq, iheadrow, "R");//56
+            p_SetSc("实绩", "E", "60", "I", "", "", "", iscseq, iheadrow, "R");//55
+            p_SetSc("下限", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//56
             p_SetSc("上限", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//57
-            p_SetSc("实绩", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//58
-            p_SetSc("下限", "E", "60", "I", "", "", "", iscseq, iheadrow, "R");//59
+            p_SetSc("实绩", "E", "60", "I", "", "", "", iscseq, iheadrow, "R");//58
+            p_SetSc("下限", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//59
             p_SetSc("上限", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//60
-            p_SetSc("实绩", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//61
+            p_SetSc("实绩", "E", "60", "I", "", "", "", iscseq, iheadrow, "R");//61
             p_SetSc("除鳞箱前路压力", "E", "60", "I", "", "", "", iscseq, iheadrow, "R");//62
-            p_SetSc("除鳞箱后路压力", "E", "60", "I", "", "", "", iscseq, iheadrow, "R");//63
+            p_SetSc("除鳞箱后路压力", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//63
             p_SetSc("粗除鳞道次", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//64
             p_SetSc("下限", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//65
             p_SetSc("上限", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//66
-            p_SetSc("实绩", "E", "60", "L", "", "", "", iscseq, iheadrow, "R");//67
+            p_SetSc("实绩", "E", "60", "I", "", "", "", iscseq, iheadrow, "R");//67
 
             iheadrow = 0;
             p_spanSpread("板坯规格", 10, 12, iscseq, iheadrow, 1);
@@ -197,7 +197,7 @@ namespace CG
 
         public override void Form_Pro()
         {
-            p_pro(1, 1, false, true);
+            p_pro(1, 1, false, false);
         }
 
         public override bool Form_Cls()

@@ -97,6 +97,9 @@ namespace CG
         const int SS1_STD_FLAG = 56; //牌号
         const int SS1_APLY_STDPEC = 57; //标准号
 
+        const int SS1_UST_STD = 58; //检测标准
+        const int SS1_UST_LEV = 59; //验收级别
+
         //ftp同步下载文件功能设置
         static private string path = @"ftp://" + "191.168.160.11" + @"/nisco_develop/vb_exe/";    //目标路径
         static private string ftpip = "191.168.160.11";    //ftp IP地址
@@ -158,7 +161,7 @@ namespace CG
             p_SetSc("探头方式", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//19
             p_SetSc("探伤灵敏度", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//20
             p_SetSc("检查标准", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//21
-            p_SetSc("探伤日", "DT", "", "L", "", "", "", iscseq, iheadrow, "M");//22
+            p_SetSc("探伤日", "E", "", "L", "", "", "", iscseq, iheadrow, "M");//22
             p_SetSc("探伤人员", "E", "20", "L", "", "", "", iscseq, iheadrow, "M");//23
             p_SetSc("录入人员", "E", "60", "L", "", "", "", iscseq, iheadrow, "L");//24
             p_SetSc("生产时间", "DT", "", "L", "", "", "", iscseq, iheadrow, "M");//25
@@ -194,6 +197,8 @@ namespace CG
             p_SetSc("订单号", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//55
             p_SetSc("牌号", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//56
             p_SetSc("标准号", "E", "60", "L", "", "", "", iscseq, iheadrow, "M");//57
+            p_SetSc("检测标准", "E", "30", "L", "", "", "", iscseq, iheadrow, "M");//58
+            p_SetSc("验收级别", "E", "30", "L", "", "", "", iscseq, iheadrow, "M");//59
            
             //iheadrow = 0;
             //p_spanSpread("作业指示/实绩", 31, 33, iscseq, iheadrow, 1);
@@ -297,75 +302,96 @@ namespace CG
             Microsoft.Office.Interop.Excel.Worksheet worksheet = (Microsoft.Office.Interop.Excel.Worksheet)workbook.Sheets.get_Item(1);
 
             string sDate;
-            sDate = SDT_PROD_DATE_FROM.RawDate;
+            string sDate1;
+            string sDate2;
+            string sDateC = "";
+            string sDateE = "";
+            sDate1 = getMinDate(ss1);
+            sDate2 = getMaxDate(ss1);
             int COUNT;
             string cellMerge;
             string cellBold;
             Microsoft.Office.Interop.Excel.Range range;
 
+            sDate = DateTime.Now.ToString("yyyyMMdd");
             //如果用户没有选择时间，则自动获取当前系统时间
-            if (sDate == "" || sDate.Length < 8)
+            if (sDate1 == "" || sDate1.Length < 8)
             {
-                sDate = DateTime.Now.ToString("yyyyMMdd");
+                sDateC = sDate.Substring(0, 4) + "年" + sDate.Substring(4, 2) + "月" + sDate.Substring(6, 2) + "日";
+                sDateE = sDate.Substring(0, 4) + sDate.Substring(4, 2) + sDate.Substring(6, 2);
             }
+            else if (sDate1 != "" && sDate2 != "" && sDate1 != sDate2)
+            {
+
+                sDateC = sDate1.Substring(0, 4) + "年" + sDate1.Substring(4, 2) + "月" + sDate1.Substring(6, 2) + "日" + " - " + sDate2.Substring(0, 4) + "年" + sDate2.Substring(4, 2) + "月" + sDate2.Substring(6, 2) + "日";
+                sDateE = sDate1.Substring(0, 4) + sDate1.Substring(4, 2) + sDate1.Substring(6, 2) + " - " + sDate2.Substring(0, 4) + sDate2.Substring(4, 2) + sDate2.Substring(6, 2);
+            }
+            else
+            {
+                sDateC = sDate1.Substring(0, 4) + "年" + sDate1.Substring(4, 2) + "月" + sDate1.Substring(6, 2) + "日";
+                sDateE = sDate1.Substring(0, 4) + sDate1.Substring(4, 2) + sDate1.Substring(6, 2);
+
+            }
+
             //写入日期
-            appExcel.Cells[6, 5] = sDate.Substring(0, 4) + "年" + sDate.Substring(4, 2) + "月" + sDate.Substring(6, 2) + "日";
-            appExcel.Cells[7, 5] = sDate.Substring(0, 4) + sDate.Substring(4, 2) + sDate.Substring(6, 2);
+            appExcel.Cells[6, 6] = sDateC;
+            appExcel.Cells[7, 6] = sDateE;
 
             //EXCEL检测单位中文
-            appExcel.Cells[6, 2] = cbx_plt.Text;
+            appExcel.Cells[6, 3] = cbx_plt.Text;
+
             //EXCEL检测单位英文
             if (cbx_plt.Text == "中板厂")
             {
-                appExcel.Cells[7, 2] = "Medium Plate Plant";
+                appExcel.Cells[7, 3] = "Medium Plate Plant";
             }
             else if (cbx_plt.Text == "中厚板卷厂")
             {
-                appExcel.Cells[7, 2] = "Plate/coil Plant";
+                appExcel.Cells[7, 3] = "Plate/coil Plant";
             }
             else if (cbx_plt.Text == "宽厚板厂")
             {
-                appExcel.Cells[7, 2] = "Heavy Plate Plant";
+                appExcel.Cells[7, 3] = "Heavy Plate Plant";
             }
             //报告编号
             //appExcel.Cells[6, 6] = "JL321106/B";
             //appExcel.Cells[7, 6] = "JL321106/B";
             //仪器型号
-            appExcel.Cells[8, 2] = cbx_ins.Text;
+            appExcel.Cells[8, 3] = cbx_ins.Text;
             //探头型号
-            appExcel.Cells[8, 4] = cbx_probe.Text;
+            appExcel.Cells[8, 5] = cbx_probe.Text;
             //晶片尺寸
-            appExcel.Cells[8, 6] = cbx_chip.Text;
+            appExcel.Cells[8, 7] = cbx_chip.Text;
             //探头频率
-            appExcel.Cells[8, 8] = cbx_rate.Text;
+            appExcel.Cells[8, 9] = cbx_rate.Text;
             //探头焦距
-            appExcel.Cells[9, 2] = cbx_focus.Text;
+            appExcel.Cells[9, 3] = cbx_focus.Text;
             //试块型号
-            appExcel.Cells[9, 4] = cbx_type.Text;
+            appExcel.Cells[9, 5] = cbx_type.Text;
             //试块尺寸
-            appExcel.Cells[9, 6] = cbx_size.Text;
+            appExcel.Cells[9, 7] = cbx_size.Text;
             //耦合剂
-            appExcel.Cells[9, 8] = txt_couplant.Text;
+            appExcel.Cells[9, 9] = txt_couplant.Text;
             //耦合方式
-            appExcel.Cells[10, 2] = cbx_style.Text;
+            appExcel.Cells[10, 3] = cbx_style.Text;
             //检测方法
-            appExcel.Cells[10, 4] = cbx_test.Text;
+            appExcel.Cells[10, 5] = cbx_test.Text;
             //检测比例
-            appExcel.Cells[10, 6] = cbx_scale.Text;
+            appExcel.Cells[10, 7] = cbx_scale.Text;
             //扫查方向
-            appExcel.Cells[10, 8] = cbx_direction.Text;
+            appExcel.Cells[10, 9] = cbx_direction.Text;
             //灵敏度
-            appExcel.Cells[11, 2] = txt_sens.Text;
+            appExcel.Cells[11, 3] = txt_sens.Text;
             //表面补偿
-            appExcel.Cells[11, 4] = txt_comp.Text;
+            appExcel.Cells[11, 5] = txt_comp.Text;
             //检测标准
-            appExcel.Cells[11, 6] = TXT_UST_STAND_REPORT.Text;
+            //appExcel.Cells[11, 6] = TXT_UST_STAND_REPORT.Text;
             //验收级别
-            appExcel.Cells[11, 8] = TXT_UST_GRADE.Text;
+            //appExcel.Cells[11, 8] = TXT_UST_GRADE.Text;
             //签发员
-            appExcel.Cells[7, 10] = cbx_sign.Text;
+            appExcel.Cells[7, 11] = cbx_sign.Text;
             //等级
-            appExcel.Cells[7, 11] = cbx_level.Text;
+            appExcel.Cells[7, 12] = cbx_level.Text;
 
             for (int i = 0; i < ss1.ActiveSheet.RowCount; i++)
             {
@@ -375,24 +401,22 @@ namespace CG
                 appExcel.Cells[COUNT, 2] = ss1.ActiveSheet.Cells[i, SS1_PLATE_NO].Text;//产品编号 钢板号
                 appExcel.Cells[COUNT, 3] = ss1.ActiveSheet.Cells[i, SS1_PROD_SIZE].Text;//规格
                 appExcel.Cells[COUNT, 4] = ss1.ActiveSheet.Cells[i, SS1_APLY_STDPEC].Text;//牌号
-                appExcel.Cells[COUNT, 5] = TXT_UST_GRADE.Text;//评定结果
-                appExcel.Cells[COUNT, 6] = cbx_result.Text;//检查结论
-                appExcel.Cells[COUNT, 7] = ss1.ActiveSheet.Cells[i, SS1_EMP_CD].Text;//检测员
+                appExcel.Cells[COUNT, 5] = ss1.ActiveSheet.Cells[i, SS1_UST_STD].Text;//检测标准
+                appExcel.Cells[COUNT, 6] = ss1.ActiveSheet.Cells[i, SS1_UST_LEV].Text;//验收级别
+                if (cbx_result.Text == "OK")
+                {
+                    appExcel.Cells[COUNT, 7] = ss1.ActiveSheet.Cells[i, SS1_UST_LEV].Text;//评定结果
+                }
 
-                //合并单元格
-                range = worksheet.Range[worksheet.Cells[COUNT, 7], worksheet.Cells[COUNT, 8]];
+                appExcel.Cells[COUNT, 8] = cbx_result.Text;//检查结论
+                appExcel.Cells[COUNT, 9] = ss1.ActiveSheet.Cells[i, SS1_EMP_CD].Text;//检测员
 
-                //range.ClearContents(); //先把Range内容清除，合并才不会出错
-                range.MergeCells = true;
-
-                range.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
-                range.VerticalAlignment = Microsoft.Office.Interop.Excel.XlVAlign.xlVAlignCenter;
-
-                range = worksheet.Range[worksheet.Cells[COUNT, 1], worksheet.Cells[COUNT, 8]];
+                range = worksheet.Range[worksheet.Cells[COUNT, 1], worksheet.Cells[COUNT, 9]];
 
                 //边框设定
                 range.Borders.LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous;//设置边框
                 range.Borders.Weight = Microsoft.Office.Interop.Excel.XlBorderWeight.xlThin;//设置粗细
+                range.Cells.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlVAlign.xlVAlignCenter;
 
             }
             appExcel.Visible = true;
@@ -700,6 +724,43 @@ namespace CG
                 }
             }
 
+        }
+
+        public string getMaxDate(FpSpread e)
+        {
+            string date = "";
+            double temp = 0;
+
+            if (e.ActiveSheet.RowCount <= 0) return "";
+
+            for (int i = 0; i < e.ActiveSheet.RowCount; i++)
+            {
+                date = substr(e.ActiveSheet.Cells[i, SS1_UST_END_DATE].Text, 0, 8);
+                if (convertX(date) > temp)
+                {
+                    temp = convertX(date);
+                }
+            }
+            return temp.ToString();
+        }
+
+        public string getMinDate(FpSpread e)
+        {
+            string date = "";
+            double temp = convertX(DateTime.Now.ToString("yyyyMMdd"));
+
+            if (e.ActiveSheet.RowCount <= 0) return "";
+
+            for (int i = 0; i < e.ActiveSheet.RowCount; i++)
+            {
+                date = substr(e.ActiveSheet.Cells[i, SS1_UST_END_DATE].Text, 0, 8);
+
+                if (convertX(date) < temp && convertX(date) != 0)
+                {
+                    temp = convertX(date);
+                }
+            }
+            return temp.ToString();
         }
 
         # region 公共方法
