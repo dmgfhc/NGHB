@@ -219,3 +219,9 @@ C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\Interop.MSWinsockLib.dll
 C:\Users\HAN\Desktop\github\NGHB\CG\bin\Debug\Interop.MSWinsockLib.dll
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGD2082C.resources
 C:\Users\HAN\Desktop\github\NGHB\CG\obj\Debug\CG.CGC2021C.resources
+D:\SVN\平台MES升级\NGHB\CG\bin\Debug\CG.exe.config
+D:\SVN\平台MES升级\NGHB\CG\obj\Debug\Interop.MSWinsockLib.dll
+D:\SVN\平台MES升级\NGHB\CG\obj\Debug\Interop.VBIDE.dll
+D:\SVN\平台MES升级\NGHB\CG\obj\Debug\CG.csproj.ResolveComReference.cache
+D:\SVN\平台MES升级\NGHB\CG\obj\Debug\CG.exe
+D:\SVN\平台MES升级\NGHB\CG\obj\Debug\CG.pdb
